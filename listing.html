@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="aquaParadise">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Aqua Paradise</title>
+<link rel="shortcut icon" type="image/png" href="images/favicon.jpg"/>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    
+<!-- Bootstrap core CSS -->
+<link href="styles/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom styles for this template -->
+<link href="styles/mainstyle.css" rel="stylesheet">
+</head>
+<body class="white-bg">
+	<header class="blue-bg white-clr animation">
+		<div class="container">
+			<div class="row text-center">
+				<div class="col-lg-2 col-md-2 col-sm-9 col-xs-6">
+					<a id="logo" href="index.html" class="text-left brand">
+						<span class="big-text aqua-clr">AQUA</span>
+						<span class="mid-text white-clr">PARADISE</span>
+					</a>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-3 col-xs-6 pull-right text-right social-icons">
+				    <div class="row">
+                        <a class="btn" href="#"><img src="images/fb-social-icon.png"/></a>
+                        <a class="btn" href="#"><img src="images/insta-social-icon.png"/></a>
+                        <a class="btn visible-xs" href="#"><img src="images/manu-icon.png"/></a>
+					</div>
+				</div>
+				<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+					<div class="navigation">
+						<a class="white-clr" href="index.html#aboutus">About Us</a>
+						<a class="white-clr" href="#/fish">Fish</a>
+						<a class="white-clr" href="#/products">products</a>
+						<a class="white-clr" href="index.html#services">Services</a>
+						<a class="white-clr" onClick="goTosection('contact')" href="javascript:void(0);">Contact Us</a>	
+					</div>
+				</div>
+			</div>
+		</div>	
+	</header>
+    
+    <section class="listing">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <input type="text" class="search-field form-control" placeholder="Search..." ng-model="searchTxt">
+                </div>
+                
+                <div ng-view class="listing-data"></div>      
+            </div>
+        </div>
+    </section>        
+    
+    <footer id="contact" class="footer white-clr blue-bg text-center">
+        <div class="half-bg blue-bg col-lg-7 col-md-7 col-sm-6 col-xs-12 hidden-xs"></div>  
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3734.937177606116!2d72.95256131437789!3d20.590622986237353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0c26777a66dc5%3A0x8b16f052e804ae6!2sAqua+Paradise!5e0!3m2!1sen!2sin!4v1500918362238" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+   		<div class="contect-info col-lg-6 col-md-6 col-sm-6 col-xs-12 pull-right h100">
+            <h1 class="big-title white-clr text-center">
+                <span>Contact Us</span>
+            </h1> 
+            <p>Aqua Paradise,<br>Shop No 3 and 4 Navchetan Soc,<br>Dharampur Road, Atakpardi,<br>Near RTO Office, Valsad, Gujarat 396001
+            <br><br>
+            MON - SAT<br>10AM - 7PM
+            <br><br>
+            PHONE<br>
+            +91-987654321</p>    
+        </div>  
+		<div class="dark-bg white-clr copyright">&copy; 2017 Aqua Paradise</div>
+	</footer>
+
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/angular-route.min.js"></script>
+<script src="js/angular-animate.min.js"></script>
+<script src="js/underscore-min.js"></script>
+<script src="js/angular-filter-panel.js"></script>
+<script src="js/script.js"></script>
+<script> 
+function goTosection(elm){
+    $('html, body').stop().animate({
+       scrollTop : $('#'+elm).offset().top - 100 
+    }, 500, 'linear');        
+};    
+</script>
+</body>
+</html>

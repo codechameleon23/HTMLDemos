@@ -1,0 +1,57 @@
+/*=========================		header 		===========================*/
+
+header{
+	padding: 17px 0;
+	position: fixed;
+	left: 0;right:0;top:0;bottom:auto;z-index: 999;
+	font-family: $lemonMilklight;
+	
+	.container{
+		
+		#logo {
+			
+			span{
+				display: block;
+			}
+			
+			.big-text{
+				font-size:		$font18 + 20px;
+				line-height: 	$font18 + 20px;
+				font-family: $lemonMilk;
+				@include text-shadow(1px,1px,1px,rgba(0,0,0,0.5));
+			}
+			
+			.mid-text{
+				font-size:		$font18 + 10px;
+				line-height: 	$font18 + 10px;
+			}
+		}
+		
+		.social-icons{
+			margin-top:10px;
+		}
+		
+		.navigation{
+			font-size: $font18;
+			margin-top: 7px; 
+			text-transform: uppercase;
+			
+			a{
+				text-decoration: none; 
+				padding:15px;
+				display: inline-block;
+			}
+			
+		}
+		
+		@-moz-document url-prefix() { 
+			.navigation {
+				font-family: $Arial;
+			}
+		}
+		
+	}
+	
+}
+
+

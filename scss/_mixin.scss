@@ -1,0 +1,33 @@
+$vendors: "-moz-", "-webkit-", ""; 
+
+@mixin skewX($deg){
+	transform:			skewX($deg);
+	-webkit-transform:	skewX($deg);
+	-moz-transform: 	skewX($deg);
+	-ms-transform: 		skewX($deg);
+	-o-transform: 		skewX($deg);
+}
+
+@mixin box-shadow($top, $left, $blur, $size, $color, $inset: false) {
+    @if $inset {
+		@each $vendor in $vendors {
+			#{$vendor}box-shadow:inset $top $left $blur $size $color;
+		}
+    } @else {
+		@each $vendor in $vendors {
+			#{$vendor}box-shadow: $top $left $blur $size $color;
+		}
+    }
+}
+
+@mixin text-shadow($top, $left, $blur, $color) {
+	@each $vendor in $vendors {
+    	#{$vendor}text-shadow: 	$top $left $blur $color;
+	}
+}
+
+@mixin rounded($radius: 0.5em) {
+	@each $vendor in $vendors {
+		#{$vendor}border-radius: $radius;
+	}
+}

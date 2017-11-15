@@ -1,0 +1,125 @@
+@charset "utf-8";
+@font-face {
+	font-family: 'lemonMilk';
+	src: url(../fonts/LemonMilk.eot);
+	src: url(../fonts/LemonMilk.eot?#iefix) format("embedded-opentype"),
+		 url(../fonts/LemonMilk.ttf) format("truetype"), 
+		 url(../fonts/LemonMilk.otf) format("truetype"), 
+		 url(../fonts/LemonMilk.svg#svgFontName) format("svg");
+}
+@font-face {
+	font-family: 'lemonMilklight';
+	src: url(../fonts/LemonMilklight.eot);
+	src: url(../fonts/LemonMilklight.eot?#iefix) format("embedded-opentype"),
+		 url(../fonts/LemonMilklight.ttf) format("truetype"),
+		url(../fonts/LemonMilklight.otf) format("truetype"),
+		 url(../fonts/LemonMilklight.svg#svgFontName) format("svg");
+}
+
+.animation{
+    transition: all 330ms ease-in;
+}
+
+body{font-family: $Roboto, sans-serif; color: darken($primaryColor, 20%);}
+
+a{
+	&:focus, &:hover{
+		text-decoration: none;
+	}
+}
+
+.h100{height:100%;}
+
+
+.flex-wraper{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	
+	display:-webkit-flex;
+	-webkit-box-orient:vertical;
+	-webkit-align-items: center;
+	-webkit-justify-content: center;
+	-webkit-flex-direction: row;	
+}
+
+
+.v-alignM{
+	display: inline-block;
+	vertical-align: middle;
+	width: 98%;
+	width: -webkit-calc(100% - 7px); 
+    width:    -moz-calc(100% - 7px); 
+    width:      -o-calc(100% - 7px);
+}
+.v-alignMC{
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
+	width:1px;
+}
+
+.big-title{
+	text-transform: uppercase;
+	
+	span{
+		position: relative;
+		padding:0 30px;
+		font-family: $lemonMilklight;
+		
+		&:before{
+			content: "";
+			position: absolute;
+			top:50%;right:0;bottom: 0;left:0;z-index: -1;
+			background-color: $secondaryColor;
+			
+			@include skewX(-30deg);
+			
+		}
+	}
+}
+
+/*Color classes*/
+.aqua-clr,
+a.aqua-clr:link,
+a.aqua-clr:visited,
+a.aqua-clr:hover,
+a.aqua-clr:active{color: $secondaryColor;}
+.aqua-bg{background-color: $secondaryColor;}
+
+.white-clr,
+a.white-clr:link,
+a.white-clr:visited,
+a.white-clr:hover,
+a.white-clr:active{color: $white;}
+.white-bg{background-color: $white;}
+
+
+.blue-clr,
+a.blue-clr:link,
+a.blue-clr:visited,
+a.blue-clr:hover,
+a.blue-clr:active{color:$primaryColor;}
+.blue-bg{background-color:$primaryColor;}
+
+
+.dark-clr,
+a.dark-clr:link,
+a.dark-clr:visited,
+a.dark-clr:hover,
+a.dark-clr:active{color: darken($primaryColor, 20%);}
+
+.nav-pills>li.active>a, 
+.nav-pills>li.active>a:focus, 
+.nav-pills>li.active>a:hover{
+	background-color: darken($primaryColor, 10%);
+	@include rounded(2px);
+}
+
+.dark-bg{background-color: darken($primaryColor, 20%);}
+
+.btn{
+	@include rounded(2px);
+}
+

@@ -1,0 +1,29 @@
+<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+	<filter-panel source="fishpond" filtered-source="filteredfishpond" filter-props="category,brand"></filter-panel>
+</div>
+<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+	<div class="row">
+		  
+		 <div ng-repeat="fish in filteredfishpond | filter : searchTxt" class="col-lg-4 col-md-4 col-sm-4 col-xs-12 animation animate-repeat">
+			<div class="col">
+				<div class="fishtank">
+					<img src="images/blank.png" class="blank-img"/>
+					<a ng-click="info-popup" href="#/detail#{{fish.id}}" class="tank-bowl" ng-class="">
+						<img ng-src="images/{{fish.image}}" class="img-responsive static-img"/>
+						<img ng-if="fish.video" ng-src="images/{{fish.video}}" class="img-responsive live-img"/>
+					</a>
+				</div>
+				<div class="info text-center white-bg">
+					<p class="name">{{fish.name}}</p>
+					<p><span class="strike" ng-show="{{fish.OldPrice}}">Rs.{{fish.OldPrice}}</span> <span class="price">Rs.{{fish.price}}</span></p>
+					<!--<p>
+						<a class="btn blue-bg white-clr">Call Now</a>
+						<a class="btn blue-bg white-clr">!</a>
+					</p>-->
+				</div>
+			</div>
+		</div>
+		<p ng-if="fishpond.lenght === 0">Sorry! No Result found.</p>
+	
+	</div>
+</div>
