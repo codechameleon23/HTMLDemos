@@ -1,0 +1,201 @@
+body{
+	//font-family: 'Raleway', sans-serif;
+	font-family: 'Quicksand', sans-serif;
+	color: $secondaryBlue;
+	font-size: $font_14 + 2px;
+	font-weight: 400;
+}
+
+.nav-header{
+	background-color: $white;
+	color: $secondaryBlue;
+	
+	background-color: rgba( $primaryBlue, .1 );
+
+	padding: 5px 0;
+	font-size: $font_14;
+	line-height: normal;
+	
+	span{
+		padding: 0 5px;
+	}
+}
+
+/*HEADER Style*/
+.navbar {
+	margin-bottom: 0px;
+	
+	&.navbar-default{
+		background-color: $white;
+		//background-color: $secondaryBlue;
+		border: 0;
+		
+		ul.navbar-nav>li>a,
+		ul.navbar-nav>li>a:focus,
+		ul.navbar-nav>li>a:hover{
+			background-color: transparent;
+			color: $secondaryBlue;
+			font-size: $font_14 + 4px;
+		}
+		
+		ul.navbar-nav>.active>a, 
+		ul.navbar-nav>.active>a:focus, 
+		ul.navbar-nav>.active>a:hover{
+			background-color: $secondaryBlue;
+			color: $white;
+		}
+		
+		
+	} 
+	.navbar-brand{
+		height: auto;
+		
+		img{
+			height: 70px;
+		}
+	}
+	
+	.navbar-collapse{
+		
+		.navbar-nav{
+			float: right;
+			
+			&>li{
+				a{
+					padding: 41px 10px 40px;
+				}
+			}
+		}
+		
+		.dropdown-menu{
+			&>li{
+				
+				a{
+					padding:10px;
+					&:focus, 
+					&:hover{
+						background-color: $secondaryBlue;
+						color: $white;
+					}
+				}
+			}
+		}
+		
+	}
+}
+
+h1.title{
+	color: $primaryBlue;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+a, a:focus, a:hover{
+	color: $primaryBlue;
+	text-decoration: none;
+}
+
+.btn-primary{
+	background-color: $secondaryBlue;
+	border-color: $secondaryBlue;
+	color: $white;
+	font-weight: 700;
+}
+
+.btn-primary:hover,
+.btn-primary:focus{
+	background-color: $primaryBlue;
+	border-color: $primaryBlue;
+	color: $secondaryBlue;
+}
+
+.home-page ul.navbar-nav>li.home>a, 
+.home-page ul.navbar-nav>li.home>a:focus, 
+.home-page ul.navbar-nav>li.home>a:hover,
+
+.aboutus-page ul.navbar-nav>li.aboutus>a, 
+.aboutus-page ul.navbar-nav>li.aboutus>a:focus, 
+.aboutus-page ul.navbar-nav>li.aboutus>a:hover,
+
+.services-page ul.navbar-nav>li.services>a, 
+.services-page ul.navbar-nav>li.services>a:focus, 
+.services-page ul.navbar-nav>li.services>a:hover,
+
+.contactus-page ul.navbar-nav>li.contactus>a, 
+.contactus-page ul.navbar-nav>li.contactus>a:focus, 
+.contactus-page ul.navbar-nav>li.contactus>a:hover{
+	background-color: $primaryBlue;
+	color: $white;
+}
+
+.section{
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+footer{
+	margin-top: 30px;
+	background-color: $primaryBlue;
+	color: $white;
+	font-size: 12px;
+	padding: 30px 15px 0px;
+	
+	
+	.contact-detail{
+		h3.title{
+			color: $white;
+		}
+		
+		.footer_contact{
+		
+			text-align: left;
+			color: $secondaryBlue;
+			font-size: $font_14 + 4px;
+			display: inline-block;
+			margin-bottom: 10px;
+			font-weight: 500;
+
+			.faicon {
+				float: left;
+				width: 25px;
+				text-align: left;
+			}
+
+			.fatexts {
+				float: left;
+				margin-left: 10px;
+				//max-width: 85%;
+			}
+
+			a, a:hover, a:focus{
+				color: $secondaryBlue;
+			}
+		}
+		
+	}
+	
+	.social-media{
+		margin: 15px;
+		display: inline-block;
+		color: $secondaryBlue;
+		font-size: $font_14 + 20px;
+	}
+	
+	.nav{
+		
+		margin-top: 20px;
+		
+		.nav-link{
+			color: $secondaryBlue;
+			font-size: $font_14;
+			padding: 5px 10px;
+			font-weight: 500;
+			display: block;
+		}
+	}
+	.footer-bottom{
+		padding: 15px;
+		margin-top: 30px;
+		background-color: rgba($black, .3);
+	}
+}
