@@ -1,0 +1,374 @@
+/**/
+/*=====================================*/
+/*Common classes*/
+body{
+	font-family: $Raleway-Regular; 
+	@extend .font-sm;
+	color: $grey0;
+}
+*{
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+b{
+    font-family: $Raleway-Bold; 
+}
+
+.header + section .section-wrap{
+    padding-top: 236px;
+}
+.section-wrap {
+	padding: 100px 0;
+}
+.section-wrap-2{
+    padding: 30px 0;
+}
+.section-wrap-3{
+    padding: 0px 0 100px;
+}
+.wrapper{
+    max-width: 1000px;
+    margin: auto;
+
+    @media only screen and (max-width: 1000px) {
+        padding: 0 15px;
+    }
+}
+.btn{
+	display: inline-block;
+	font-size: $font-sm + 1;
+	padding: 12px 15px 10px;
+	font-family: $MuseoSans-700;
+	font-weight: 700;
+	border: 0;
+    min-height: 46px;
+    min-width: 204px;
+    text-align: center;
+    cursor: pointer;
+}
+
+input{
+    border: 1px solid $grey0;
+}
+
+.btn-primary{
+	text-transform: uppercase;
+}
+.input-field{
+	display: flex;
+    &.select-wrap{
+        overflow-x:hidden; 
+    }
+	input, select, textarea{
+		flex-grow: 2;
+		outline: none;
+		padding: 13px 3%;
+		border: 0;
+		background-color: $white;
+        color: $grey0;
+        @extend .font-sm;
+        font-family:  $Raleway-Regular;
+        resize: none;
+    }
+
+    select{
+        background-image: url(../images/select-drop-arrow.png);
+        background-repeat: no-repeat;
+        background-position: calc(100% - 40px) center;
+        margin:0 -30px;
+        padding: 13px 40px;
+
+        option{
+            color:$grey0;
+            padding: 13px 3%;
+
+            &:first-child{
+                color:#aaa;   
+            }
+        }
+    }
+    
+}
+.text-center{
+    text-align: center;
+}
+.text-right{
+    text-align: right;
+}
+.img-responsive{
+    display: inline-block;
+    max-width: 100%;
+}
+
+.owl-theme .owl-nav [class*="owl-"]:hover,
+.owl-theme .owl-nav [class*='owl-']{
+    background: transparent;
+    padding: 0;
+    margin: -23px 0 0;
+}
+
+/**/
+/*=====================================*/
+/*CSS Grid layout classes*/
+.grid-wrapper{
+    display: grid;
+    grid-column-gap: 40px;
+    grid-row-gap: 25px;
+
+
+    .grid-wrapper{
+        grid-row-gap: 25px;
+    }
+}
+
+.grid-wrapper-2{
+    grid-template-columns: 1fr 210px;
+}
+.grid-wrapper-2-rev{
+    grid-template-columns: 210px 1fr;
+}
+.col-1{
+    grid-template-columns: 1fr;
+}
+
+.col-2{
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.col-3{
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.col-4{
+    grid-template-columns: repeat(4, 1fr);
+}
+.col-5{
+    grid-template-columns: repeat(5, 1fr);
+}
+.col-6{
+    grid-template-columns: repeat(6, 1fr);
+}
+.span-2{
+    grid-column-end: span 2;
+}
+.span-3{
+    grid-column-end: span 3;
+}
+.span-4{
+    grid-column-end: span 4;
+}
+@media all and (max-width: 736px) {
+    .col-2{
+        grid-template-columns: 1fr;
+    }   
+}
+
+/**/
+/*=====================================*/
+/*Header*/
+.header{
+    position: absolute;
+    z-index: 999;
+    left: 0;top:0;
+    right: 0;bottom: auto;
+
+    background-color: rgba( $black, .75);
+    color: $white;
+    font-family: $Raleway-Light; 
+
+    .grid-wrapper{
+        grid-column-gap: 0px;
+        grid-row-gap: 15px;
+    }
+    a{
+       color: $white; 
+    }
+
+    .brand-logo{
+		color:$white;
+		font-family: $TrajanPro-Regular;
+		@extend .font-lg;
+		margin-top: 27px;
+		display: inline-block;
+		text-transform: uppercase;
+	}
+
+    .top-bar{
+       text-align: right;
+       align-self: end;
+       font-family: $MuseoSans-300; 
+
+       .tel-contact{
+            margin: 0px 25px 0 0;
+        }
+
+        a{
+            line-height: 32px;
+            display: inline-block;
+
+            &:first-child{
+                margin-left: 0;
+            }
+
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+        
+        .ico{
+            height: 32px;
+            margin: 0 6px;
+			display: inline-block;
+            vertical-align: middle;
+			background-size: 32px auto;
+			background-repeat: no-repeat;
+            background-position: 0 center;
+		}
+	
+		.cart-ico{
+			background-image: url('../images/cart-ico.png');
+			padding-left: 32px;
+			margin-left: 0;
+			
+			.cart-items{
+				margin-top: 2px;
+				display: inline-block;
+			}
+		}
+    }
+
+    .navbar{
+
+        .grid-wrapper{
+            grid-column-gap: 0px; 
+        }
+
+        ul{
+            text-align: center;
+        }
+
+        li{
+            text-align: center;
+            display: inline-block;
+
+            a{
+                padding: 14px 32px;
+                display: block;
+                @extend .font-sm;
+            }
+
+            &.active{
+
+                a{
+                    font-family: $Raleway-Bold;
+                }
+            }
+        }
+
+        @media all and (max-width: 980px) { 
+            li{
+                display: block;
+                text-align: left;
+
+                a{
+                    padding: 14px 15px;
+                }
+            }
+        }
+    }
+
+    @media all and (max-width: 736px) {
+
+        .grid-wrapper.col-2{
+            grid-template-columns: 1fr;
+        } 
+        .top-bar{
+            text-align: center;
+        }
+        .brand-logo{
+            font-size: $font-lg - 10 ;line-height: $font-lg + 6 - 10;
+        }
+    } 
+}
+/**/
+/*=====================================*/
+/*Footer*/
+.footer{
+    color: $white;
+    background-color: rgba( $black, .75);
+    background-image: url('../images/footer-bg-img.png');
+	background-repeat: no-repeat;
+	background-position: right top;
+
+	.grid-wrapper{
+		grid-row-gap: 40px;
+	}
+
+	a{
+		color: $white;
+	}
+
+	.brand-logo {
+		@extend .font-lg;
+		font-family: "TrajanPro-Regular";
+		display: inline-block;
+		text-transform: uppercase;
+	}
+
+	ul{
+        list-style: none;
+        a{
+            padding: 5px 0;
+            display: block;
+        }
+	}
+
+	address{
+        font-style: normal;
+        text-align: right;
+	}
+
+	.socials{
+        a{
+            margin: 0 6px;
+
+            &:first-child{
+                margin-left: 0;
+            }
+
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+	.copyright{
+		margin-top: 31px;
+    }
+    
+    .tel-contact{
+        font-family: $MuseoSans-300;
+    }
+
+	.physical-address{
+		a{
+			display: block;
+			margin: 15px 0;
+		}
+    }
+    
+    @media all and (max-width: 736px) {
+
+        .grid-wrapper.col-2{
+            grid-template-columns: 1fr;
+        } 
+
+        address{
+            text-align: left;
+        }
+        .brand-logo{
+            font-size: $font-lg - 10 ;line-height: $font-lg + 6 - 10;
+        }
+    }
+
+}
