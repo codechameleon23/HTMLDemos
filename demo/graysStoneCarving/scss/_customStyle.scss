@@ -30,10 +30,6 @@ b{
 .wrapper{
     max-width: 1000px;
     margin: auto;
-
-    @media only screen and (max-width: 1000px) {
-        padding: 0 15px;
-    }
 }
 .btn{
 	display: inline-block;
@@ -46,6 +42,9 @@ b{
     min-width: 204px;
     text-align: center;
     cursor: pointer;
+}
+.btn-auto{
+    min-width: 0px;
 }
 
 input{
@@ -75,9 +74,11 @@ input{
     select{
         background-image: url(../images/select-drop-arrow.png);
         background-repeat: no-repeat;
-        background-position: calc(100% - 40px) center;
-        margin:0 -30px;
-        padding: 13px 40px;
+        background-position: calc(100% - 30px) center;
+        margin:0 -20px 0 0;
+        padding: 13px 0 13px 3%;
+        display: block;
+        width: 100%;
 
         option{
             color:$grey0;
@@ -108,6 +109,129 @@ input{
     margin: -23px 0 0;
 }
 
+
+
+
+/**/
+/*=====================================*/
+/*Menu ico*/
+@media (min-width: 992px) {
+    .outer-menu .checkbox-toggle,
+    .outer-menu .hamburger{
+        display: none;
+    }
+}
+@media (max-width: 991px) {
+    .outer-menu{
+        position: relative;
+    }
+    .outer-menu .checkbox-toggle {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        margin: 0 0 0 -20px;
+        z-index: 999;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        opacity: 0;
+
+    }
+    .outer-menu .checkbox-toggle:checked + .hamburger > div {
+        -webkit-transform: rotate(135deg);
+                transform: rotate(135deg);
+    }
+    .outer-menu .checkbox-toggle:checked + .hamburger > div:before,
+    .outer-menu .checkbox-toggle:checked + .hamburger > div:after {
+        top: 0;
+        -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    }
+    .outer-menu .checkbox-toggle:checked + .hamburger > div:after {
+        opacity: 0;
+    }
+
+    .outer-menu .checkbox-toggle:hover + .hamburger {
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .outer-menu .hamburger {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    margin-left: -20px;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    padding: .5em .5em;
+
+    background: rgba($black, 0.6);
+    //border-radius: 0 0.12em 0.12em 0;
+    border-radius: 50px;
+    cursor: pointer;
+    -webkit-transition: box-shadow 0.4s ease;
+    transition: box-shadow 0.4s ease;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    }
+    .outer-menu .hamburger > div {
+    position: relative;
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    width: 80%;
+    height: 2px;
+    background: #FEFEFE;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    }
+    .outer-menu .hamburger > div:before,
+    .outer-menu .hamburger > div:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -8px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: inherit;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    }
+    .outer-menu .hamburger > div:after {
+        top: 8px;
+    }
+
+    .outer-menu .menu{
+        overflow: hidden;
+        max-height: 0;
+        transition: all 0.4s ease;
+    }
+    .outer-menu .checkbox-toggle:checked + .hamburger{
+        background: rgba($black, .3)
+    }
+    .outer-menu .checkbox-toggle:checked ~ .menu{
+        max-height: 1000px;
+    }
+}
 /**/
 /*=====================================*/
 /*CSS Grid layout classes*/
@@ -115,7 +239,7 @@ input{
     display: grid;
     grid-column-gap: 40px;
     grid-row-gap: 25px;
-
+    grid-template-rows: max-content;
 
     .grid-wrapper{
         grid-row-gap: 25px;
@@ -152,16 +276,14 @@ input{
 .span-2{
     grid-column-end: span 2;
 }
+.span-2-row{
+    grid-row: span 2;
+}
 .span-3{
     grid-column-end: span 3;
 }
 .span-4{
     grid-column-end: span 4;
-}
-@media all and (max-width: 736px) {
-    .col-2{
-        grid-template-columns: 1fr;
-    }   
 }
 
 /**/
@@ -265,31 +387,8 @@ input{
                 }
             }
         }
-
-        @media all and (max-width: 980px) { 
-            li{
-                display: block;
-                text-align: left;
-
-                a{
-                    padding: 14px 15px;
-                }
-            }
-        }
     }
 
-    @media all and (max-width: 736px) {
-
-        .grid-wrapper.col-2{
-            grid-template-columns: 1fr;
-        } 
-        .top-bar{
-            text-align: center;
-        }
-        .brand-logo{
-            font-size: $font-lg - 10 ;line-height: $font-lg + 6 - 10;
-        }
-    } 
 }
 /**/
 /*=====================================*/
@@ -343,7 +442,7 @@ input{
         }
     }
 	.copyright{
-		margin-top: 31px;
+		margin-top: 37px;
     }
     
     .tel-contact{
@@ -371,4 +470,96 @@ input{
         }
     }
 
+}
+
+
+/**/
+/*=====================================*/
+/*fancy box*/
+.fancybox-inner{
+    background-color: $white;
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+    position: relative;
+
+    // .fancybox-stage,{
+    //     position: relative;
+    //     width: 100%;
+    //     height: (960px * 0.56547619);
+        
+    // }
+    .fancybox-caption-wrap{
+        position: static;
+    }
+    .fancybox-navigation button:before{
+        display: none;
+    }
+    .fancybox-navigation button {
+        top:30%;
+    }
+        
+    .fancybox-button{
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: transparent;
+        background-size: auto;
+        padding: 0;
+        height: 47px;
+        width: 44px;
+        margin: 0 20px;
+    }
+    .fancybox-button--arrow_left{
+        background-image: url('../images/lightbox-btn-prev.png');
+    }
+    .fancybox-button--arrow_right{
+        background-image: url('../images/lightbox-btn-next.png')
+    }
+    .fancybox-button--close{
+        background-image: url('../images/lightbox-btn-close.png');
+        height: 16px;
+        width: 16px;
+        margin: 0;
+    }
+    .fancybox-toolbar{
+        text-align: right;
+        top: 30px;
+        position: relative;
+        float: right;
+    }
+    .fancybox-caption-wrap{
+        position: relative;
+        z-index: 0;
+    }
+    .fancybox-caption-wrap{
+        background: $white;
+        padding: 0;
+
+        .fancybox-caption{
+            padding: 0;
+            color:$grey0;
+            @extend .font-sm;
+
+            .content{
+                padding: 30px 0 0px;
+            }
+        }
+        
+    }
+    .fancybox-slide--iframe .fancybox-content{
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        margin: 0;
+    }
+
+    .fancybox-stage-ratio{
+        position: relative;
+        
+        img.ratio{
+            width: 100%;
+        }
+    }
 }

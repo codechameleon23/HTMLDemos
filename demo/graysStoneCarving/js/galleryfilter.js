@@ -28,7 +28,7 @@
             .addClass('active')
             .siblings()
             .removeClass('active');
-            $imgs.fadeIn('slow');
+            $imgs.fadeIn('slow').addClass('filterd');
         }
     }).appendTo($buttons);
 
@@ -44,8 +44,8 @@
                 .siblings()
                 .removeClass('active');
                 $imgs
-                .hide()
-                .filter(tagged[tagName])
+                .hide().removeClass('filterd')
+                .filter(tagged[tagName]).addClass('filterd')
                 .fadeIn('slow');
             }
         }).appendTo($buttons);

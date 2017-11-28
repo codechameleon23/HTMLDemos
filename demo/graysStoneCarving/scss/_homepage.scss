@@ -36,15 +36,6 @@
     .content.right{
         padding-left: 40px;
     }
-
-    @media all and (max-width: 736px) {
-        .content.left{
-            padding-right: 0px;
-        }
-        .content.right{
-            padding-left: 0px;
-        }
-    }
 }
 
 /**/
@@ -271,14 +262,18 @@
         grid-row-gap: 55px;
     }
 }
+
+.card.card-ftr-bottom {
+    grid-template-rows: auto 1fr 46px;
+}
 .card{
     padding: 30px;
     font-family: $Raleway-Regular;
 
     &.grid-wrapper{
-        grid-template-rows: auto 1fr 46px;
+        grid-template-rows: none;
     }
-
+    
     b{
         font-family: $Raleway-Bold;
         //display: block;
@@ -290,10 +285,7 @@
     p:not(:first-child){
         margin-top: 15px;
     }
-    
-    .btn{
-        min-width: 0;
-    }
+
 
     .card-img{
         img{
@@ -318,6 +310,9 @@
             }
         }
     }
+    .card-footer{
+        align-self: end;
+    }
 }
 
 .card-2{
@@ -328,10 +323,14 @@
 /*=====================================*/
 /*About - commission-section*/
 .commission-section{
-    .content-img{
-        grid-row-end: span 2;
-        grid-column-start: 2;
-        grid-row-start: 1;
+    .content-img.img-1{
+        grid-row: span 2;
+    }
+
+    .content{
+        h2{
+            text-transform: capitalize;
+        }
     }
 }
 

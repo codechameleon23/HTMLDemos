@@ -34,6 +34,9 @@
                     }
                 }
 
+                &:first-child{
+                    padding-left: 0;
+                }
                 &:last-child{
                     padding-right: 0;
                 }
@@ -71,7 +74,7 @@
 
         .gallery-thumb{
             img{
-                opacity: .8;
+                //opacity: .8;
             }
             a, img{
                 float: left;
@@ -79,10 +82,14 @@
                 background-color: $black;
             }
 
-            &:hover{
-                img{
-                    opacity: 1;
-                }
+            // &:hover{
+            //     img{
+            //         opacity: 1;
+            //     }
+            // }
+
+            figcaption{
+                display: none;    
             }
         }
     }
