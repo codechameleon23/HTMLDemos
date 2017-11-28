@@ -1,0 +1,118 @@
+/**/
+/*=====================================*/
+/*Content*/
+.content_type-1{
+    
+    .content-img{
+
+        &.big{
+            grid-row-start:1;
+            grid-row-end: span 3;
+        }
+
+        &.right{
+            grid-column-start:2;
+        }
+
+        &.left{
+            grid-column-start:1;
+        }
+    }
+
+    // @media all and (max-width: 736px) {
+    //     &.grid-wrapper.col-2{
+    //         grid-template-columns: 1fr;
+    //     }
+    //     .content-img{
+
+    //         grid-column-start: 1;
+    //         grid-row-start: 2;
+
+    //         &.big{
+    //              grid-column-start: 1;
+    //              grid-row-start: 2;
+    //         }
+    //     }
+    // }
+}
+
+.content-wrap{
+    padding: 30px;
+}
+.content{
+    //grid-template-rows: auto auto 1fr;
+
+    h1{
+        color:$hightlight-color;
+        @extend .font-lg;
+        font-family: $TrajanPro-Bold;
+        text-transform:uppercase;
+    }
+
+    h2{
+        @extend .font-md;
+        font-family: $Raleway-Bold;
+        text-transform:uppercase;
+        
+        //min-height: 60px;
+    }
+
+    &.content_type-2{
+        h2{
+            padding-right: 20%;
+        }
+    }
+
+    h3{
+        text-transform: uppercase;
+        font-family: $Raleway-Bold;
+    }
+
+    hr{
+        border-width: 0 0 3px 0;
+        width: 50%;
+        max-width: 100px;
+        margin: 20px 0 0;
+        display: inline-block;
+        border-style: solid;
+    }
+
+    p:not(:first-child){
+        margin-top: 15px;
+    }
+
+    img{
+        display: block;
+        width: 100%;
+    }
+                
+    .content-img{
+        text-align: center;
+    }
+
+}
+
+/**/
+/*=====================================*/
+/*Content*/
+.grid-box-wrpapper{
+    display: grid;
+    grid-gap: 40px;
+    
+    .span-2{
+        grid-column-end: span 2;
+    }
+
+    .grid-box{
+        
+        &.big{
+            grid-column-end: span 2;
+            grid-row-end: span 2;
+        }
+
+        // &.big.right{
+        //     grid-column: 3 / 5;
+        //     grid-row: 1 / 3;
+        // }
+    }
+}
