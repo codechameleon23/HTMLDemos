@@ -318,7 +318,7 @@
     <script>
 
         
-        function getViewportWidth(){if (window.innerWidth){return window.innerWidth;}else if (document.body && document.body.offsetWidth){return document.body.offsetWidth;}else{return 0;}}
+      
         $(function(){
 
             /*Navbar toggle*/
@@ -332,7 +332,9 @@
                 nav:false,
                 dots:false,
                 loop: true,
-		autoplay : ( getViewportWidth() < 991) ? true : false,
+		autoplay:true,
+    		autoplayHoverPause:true,
+		autoplayTimeout : 3500,
                 responsive:{
                     0:{
                         items:2
