@@ -334,7 +334,8 @@
                 loop: true,
 		autoplay:true,
     		autoplayHoverPause:true,
-		autoplayTimeout : 3500,
+                autoplayTimeout : 3000,
+                autoplaySpeed: 1000,
                 responsive:{
                     0:{
                         items:2
@@ -353,7 +354,11 @@
                     }
                 }
             });
-
+	owl.mouseleave(function(){
+                setTimeout(() => {
+                    owl.trigger('next.owl.carousel');    
+                }, 3000);
+            });
             $('.carousel-next').click(function() {
                 owl.trigger('next.owl.carousel');
             })
@@ -361,9 +366,7 @@
             $('.carousel-prev').click(function() {
                 owl.trigger('prev.owl.carousel');
             })
-		owl.mouseleave(function(){
-			owl.trigger('play.owl.autoplay',[3500])
-		});
+		
 
         })
     </script>
