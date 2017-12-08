@@ -1,0 +1,557 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/**/
+/*=====================================*/
+/*Include Fonts*/
+/**/
+/*=====================================*/
+/*Font classes*/
+.secondary-font {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.primary-font {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+}
+
+.font-xs {
+  font-size: 10pt;
+}
+
+.font-sm {
+  font-size: 11pt;
+}
+
+.font-md {
+  font-size: 15pt;
+}
+
+.font-lg {
+  font-size: 36pt;
+}
+
+.font-xl {
+  font-size: 48pt;
+}
+
+/**/
+/*=====================================*/
+/*Colors classes*/
+.primary-bg {
+  background-color: #ffffff;
+}
+
+.footer-bg {
+  background-color: #7db3dc;
+}
+
+.primary-text-color {
+  color: #3b3a3c;
+}
+
+.secondary-text-color {
+  color: #ffffff;
+}
+
+.hightlight-text-color {
+  color: #f26741;
+}
+
+/**/
+/*=====================================*/
+/*Custom CSS*/
+* {
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+  background-color: #ffffff;
+  color: #3b3a3c;
+  font-size: 15pt;
+  line-height: 21pt;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.colorfull-text {
+  color: #f26741;
+}
+
+.colorfull-text span:nth-child(3n + 1) {
+  color: #7db3dc;
+}
+
+.colorfull-text span:nth-child(3n) {
+  color: #51c4cf;
+}
+
+.colorfull-text span:nth-child(4n) {
+  color: #fbaf3a;
+}
+
+.colorfull-text span:nth-child(5n) {
+  color: #f04e42;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section, footer, .footer {
+  float: left;
+  width: 100%;
+  text-align: center;
+}
+
+.header {
+  float: left;
+  width: 100%;
+  text-align: center;
+}
+
+.header .grid-wrapper {
+  padding-top: 30px;
+  display: inline-block;
+  margin: auto;
+  position: relative;
+}
+
+.header .wrapper {
+  padding-top: 30px;
+}
+
+.header a {
+  color: #404041;
+}
+
+.header .brand-logo {
+  float: left;
+}
+
+.header .brand-logo .tag-line {
+  display: block;
+  font-size: 14pt;
+}
+
+.header .tel-contact, .header .social-contact {
+  width: 60%;
+  width: calc(100% - 250px);
+  text-align: right;
+  text-transform: uppercase;
+  float: right;
+}
+
+.header .tel-contact a, .header .social-contact a {
+  display: inline-block;
+  margin: 0 6px;
+  vertical-align: top;
+}
+
+.header .tel-contact a:first-child, .header .social-contact a:first-child {
+  margin-left: 0;
+}
+
+.header .tel-contact a:last-child, .header .social-contact a:last-child {
+  margin-right: 0;
+}
+
+.header .social-contact {
+  position: absolute;
+  right: 15px;
+  bottom: 0;
+}
+
+.header .btn-link {
+  background-color: #7db3dc;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 7px 15px;
+  font-size: 15pt;
+}
+
+.footer {
+  background-color: #7db3dc;
+  color: #ffffff;
+  font-size: 10pt;
+  position: relative;
+}
+
+.footer a {
+  color: #ffffff;
+}
+
+.footer .wrapper {
+  padding-top: 30px;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.footer .brand-logo {
+  float: left;
+}
+
+.footer .links {
+  width: 60%;
+  width: calc(100% - 250px);
+  float: right;
+  margin-top: 10px;
+}
+
+.wave-wrap {
+  height: 150px;
+  position: relative;
+  background-image: url("../images/ducks.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  overflow-x: hidden;
+}
+
+.wave-wrap .waves {
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  top: auto;
+  right: 0px;
+  height: 10px;
+}
+
+.wave-wrap .waves:before {
+  content: "";
+  position: relative;
+  display: block;
+  margin-left: -23px;
+  width: 150%;
+  height: 10px;
+  background-image: url("../images/wave.png");
+  background-repeat: repeat-x;
+  background-position: left bottom;
+  -webkit-animation: backdrop_roll linear 1.5s infinite;
+          animation: backdrop_roll linear 1.5s infinite;
+}
+
+@-webkit-keyframes backdrop_roll {
+  from {
+    right: -23px;
+  }
+  to {
+    right: 23px;
+  }
+}
+
+@keyframes backdrop_roll {
+  from {
+    right: -23px;
+  }
+  to {
+    right: 23px;
+  }
+}
+
+.hero-section {
+  margin-top: 70px;
+}
+
+.hero-section .product-line {
+  background-image: url("../images/products-line.png");
+  background-repeat: repeat-x;
+  background-position: bottom;
+  height: 50px;
+  border-bottom: 10px solid #f26741;
+}
+
+.hero-section .hero-text {
+  text-align: center;
+  margin: 50px auto 0;
+}
+
+.hero-section .hero-text h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #404041;
+  font-size: 36pt;
+  line-height: 42pt;
+}
+
+.hero-section .hero-text p {
+  margin: 70px auto 90px;
+  max-width: 70%;
+}
+
+.what-you-have-get {
+  text-align: left;
+}
+
+.what-you-have-get .grid-wrapper > .grid-item {
+  width: 47%;
+  width: calc(50% - 30px);
+  float: left;
+}
+
+.what-you-have-get .grid-wrapper > .grid-item:last-child {
+  float: right;
+}
+
+.what-you-have-get .title {
+  text-transform: uppercase;
+  font-size: 48pt;
+  line-height: 44pt;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.what-you-have-get ul {
+  margin-top: 30px;
+}
+
+.what-you-have-get li {
+  padding-left: 40px;
+  background-image: url(../images/check-ico.png);
+  background-repeat: no-repeat;
+  background-position: left top;
+  margin: 15px 0 0;
+  padding: 0px 0 7px 40px;
+}
+
+.form-section {
+  margin-top: 70px;
+  text-align: left;
+}
+
+.form-section .form-wrapper {
+  background-color: #fff4ef;
+}
+
+.form-section .form-header {
+  padding: 20px 50px 15px;
+  color: #ffffff;
+  background-color: #f26741;
+}
+
+.form-section .form-content {
+  padding: 20px 50px 10px;
+  font-size: 11pt;
+  line-height: 17pt;
+  font-weight: 600;
+  display: inline-block;
+  width: 100%;
+}
+
+.form-section .form-content.grid-wrapper > .grid-item {
+  width: 47%;
+  width: calc(50% - 30px);
+  float: left;
+}
+
+.form-section .form-content.grid-wrapper > .grid-item:last-child {
+  float: right;
+}
+
+.form-section .form-footer {
+  display: inline-block;
+  width: 100%;
+  padding: 5px 50px 50px;
+}
+
+.form-section .form-footer small {
+  font-size: 11pt;
+}
+
+.form-section .form-footer > .grid-item {
+  float: left;
+}
+
+.form-section .form-footer > .grid-item:last-child {
+  float: right;
+}
+
+.form-field .required {
+  color: #f26741;
+  font-size: 10pt;
+}
+
+.form-field .field-title {
+  text-transform: uppercase;
+  font-size: 10pt;
+}
+
+.form-field .field-input {
+  margin: 6px 0 8px;
+  max-height: 109px;
+}
+
+.form-field .field-input input, .form-field .field-input textarea {
+  width: 100%;
+  border: 1px solid #d5d7d8;
+  height: 36px;
+  padding: 10px 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10pt;
+  font-weight: 600;
+}
+
+.form-field .field-input textarea {
+  height: 109px;
+  resize: none;
+}
+
+.btn {
+  cursor: pointer;
+  border: 0;
+  background-color: #f26741;
+  color: #ffffff;
+  padding: 10px 40px;
+  text-transform: uppercase;
+  font-size: 11pt;
+  line-height: 11pt;
+  letter-spacing: 1pt;
+}
+
+@media (max-width: 1000px) {
+  .wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .hero-section .product-line {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  .hero-section .hero-text p {
+    max-width: 90%;
+  }
+  .what-you-have-get .title {
+    font-size: 36pt;
+    line-height: 32pt;
+  }
+  .form-section .form-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .form-section .form-header,
+  .form-section .form-content {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header .wrapper {
+    padding-top: 10px;
+  }
+  .header .tel-contact,
+  .header .brand-logo,
+  .header .social-contact {
+    width: 100%;
+    text-align: center;
+    position: static;
+  }
+  .header .brand-logo {
+    margin: 30px 0;
+  }
+  .what-you-have-get .grid-wrapper > .grid-item {
+    width: 100%;
+    margin-bottom: 70px;
+  }
+  .what-you-have-get .grid-wrapper > .grid-item:last-child {
+    margin-bottom: 0;
+  }
+  .what-you-have-get .title {
+    font-size: 30pt;
+    line-height: 34pt;
+  }
+  .form-section .form-header, .form-section .form-content, .form-section .form-footer {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+    display: inline-block;
+  }
+  .form-section .form-content.grid-wrapper > .grid-item {
+    width: 100%;
+  }
+  .form-section .form-footer.grid-wrapper > .grid-item {
+    width: 50%;
+    float: left;
+  }
+  .form-section .form-footer.grid-wrapper > .grid-item:last-child {
+    float: right;
+  }
+  .footer .grid-wrapper {
+    text-align: center;
+  }
+  .footer .brand-logo {
+    width: 100%;
+  }
+  .footer .devider {
+    display: none;
+  }
+  .footer .links {
+    text-align: center;
+    width: 100%;
+  }
+  .footer .links a, .footer .links span:not(.devider) {
+    display: block;
+    margin: 10px 0;
+  }
+}
