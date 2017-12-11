@@ -38,14 +38,14 @@
     <main>
         <section class="section-wrap content getStarted unfinished">
             <div class="wrapper">
-                <div class="item-grid">
+                <div class="grid-item">
                     <h1 class="title-big zilla not-completed">Get <span class="selima">Started</span></h1>
                     <h1 class="title-big zilla if-completed">Got it <span class="selima">Thanks</span></h1>
                 </div>   
-                <div class="item-grid not-completed">
+                <div class="grid-item not-completed">
                     <p>Ribus doluptatur rersper natquam, officia tiorepratur, sit laboriam que nusa con pellupti quates magnate solest, non plaut omni atis ditio doluptas volessus ditatem quia dolo oditium quisimi, ut quiatus quatessum re voluptatia ipsum rent.</p>
                 </div>
-                <div class="item-grid">
+                <div class="grid-item">
                     <div class="steps-wrap">
                         <div class="grid-item">
                             <a href="javascript:void(0);" onclick="goto('0')" class="step step-1"> <!-- you can add onclick function onclick="goto('0')" -->
@@ -67,7 +67,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="title item-grid if-completed intouch"><span class="selima">Lucy</span> will be in touch</div>
+                <div class="title grid-item if-completed intouch"><span class="selima">Lucy</span> will be in touch</div>
             </div>
         </section>
         <section class="input-forms">
@@ -270,7 +270,7 @@
 
             formowl.on('changed.owl.carousel', function(event) {
                 currentItem = event.item.index;
-                console.log(currentItem);
+                
                 //Add "completed" flag after each step complition
                 if(currentItem > 0){
                     $('.step-1').addClass('completed');

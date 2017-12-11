@@ -25,8 +25,9 @@ a{
 .wrapper{
     max-width: 1170px;
     padding: 0 15px;
-    margin: auto;
+    margin: 0 auto;
     width: 100%;
+    display: inline-block;
 }
 
 .btn{
@@ -48,6 +49,9 @@ a{
     display: block;
 }
 .input-field{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
 
 	input:not([type='radio']),
@@ -65,22 +69,25 @@ a{
     
 }
 
+
+.grid-2{
+    >.grid-item{
+        width: 50%;
+        float: left;
+    }
+}
 .grid-3{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap:40px;
+    > .grid-item, > .card{
+        width: 33.3333%;
+        float: left;
+    }
 }
 .grid-4{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap:40px;
+    >.grid-item{
+        width: 25%;
+        float: left;
+    }
 }
-.grid-2{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap:40px;
-}
-
 
 .icon-round{
     position: relative;
@@ -202,6 +209,10 @@ $colors-list: $grey3 $pink1 $pink2 $pink3 $aqua1 $aqua2 $aqua3 $aqua4 $aqua5 $bl
     transform: scale(1);
 }
 
+.header, .footer, main > section{
+    float: left;width: 100%;text-align: center;
+}
+
 /**/
 /*=====================================*/
 /*Header*/
@@ -209,11 +220,6 @@ $colors-list: $grey3 $pink1 $pink2 $pink3 $aqua1 $aqua2 $aqua3 $aqua4 $aqua5 $bl
     background-color: $white;
     text-align: center;
     
-    .wrapper{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-row-gap: 25px;
-    }
     .brand-logo{
         font-family: 'Selima', Helvetica;
         font-size: $font-84;
@@ -224,6 +230,8 @@ $colors-list: $grey3 $pink1 $pink2 $pink3 $aqua1 $aqua2 $aqua3 $aqua4 $aqua5 $bl
     }
 
     nav{
+        margin-top: 30px;
+
         a{
             padding: 12px 23px 24px 23px;
             display: inline-block;
@@ -258,34 +266,31 @@ $colors-list: $grey3 $pink1 $pink2 $pink3 $aqua1 $aqua2 $aqua3 $aqua4 $aqua5 $bl
     }
 
     .wrapper{
-        display: grid;
-        grid-column-gap: 20px;
-        grid-template-columns: 300px 1fr;
-        align-items: center;
         min-height: 90px;
     }
 
     .brand-logo{
         font-family: 'Selima';
         font-size: 54px;
-        margin: -10px 0 0 0;
+        margin-top: 5px;
+        float: left;
     }
     .footer-links{
-        display: grid;
-        grid-column-gap: 20px;
-        grid-template-columns: max-content max-content max-content max-content;
-        justify-content: end;
-        align-items: center;
-
+        float: right;
         text-transform: uppercase;
         text-align: right;
-        padding-top: 20px;
+        margin-top: 35px;
 
+        > a, > span{
+            margin: 0 10px;
+        }
         .social{
-            
+
             display: inline-block;
+            vertical-align: middle;
 
             a{
+                margin-top: 10px;
                 padding-left: 5px;
                 padding-right: 5px;
                 &:first-child{
@@ -324,6 +329,13 @@ $colors-list: $grey3 $pink1 $pink2 $pink3 $aqua1 $aqua2 $aqua3 $aqua4 $aqua5 $bl
     text-align: left;
     display: flex;
 
+
+    .wrapper{
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+    }
+
     &.home-banner{
         background-image: url('../images/home-banner.jpg');
         p{
@@ -353,16 +365,16 @@ $colors-list: $grey3 $pink1 $pink2 $pink3 $aqua1 $aqua2 $aqua3 $aqua4 $aqua5 $bl
         background-image: url('../images/iStock-622541866.jpg');
         background-position: center 25%;
         height: 415px;
-
+        align-items: flex-end;
         .wrapper{
             margin-bottom: 50px;
         }
     }
 
     .banner-content{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-row-gap:25px;
+        >.grid-item:not(:last-child){
+            margin-bottom: 25px;
+        }
     }
 
     .title, .sub-title{
@@ -404,9 +416,9 @@ $colors-list: $grey3 $pink1 $pink2 $pink3 $aqua1 $aqua2 $aqua3 $aqua4 $aqua5 $bl
     text-align: center;
 
     .wrapper{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-row-gap:25px;
+        >.grid-item:not(:last-child){
+            margin-bottom: 25px;
+        }
         max-width: 1000px;
     }
     
@@ -426,8 +438,8 @@ $colors-list: $grey3 $pink1 $pink2 $pink3 $aqua1 $aqua2 $aqua3 $aqua4 $aqua5 $bl
         font-weight: 300;
         font-size: $font-40;
     }   
-    p:not(:first-child){
-        margin-top: 20px;
+    p:not(:last-child){
+        margin-bottom: 20px;
     }
 }
 
@@ -465,21 +477,19 @@ $colors-list: $grey3 $pink1 $pink2 $pink3 $aqua1 $aqua2 $aqua3 $aqua4 $aqua5 $bl
             padding-bottom: 100px;
         }
         .wrapper{
-            grid-row-gap: 40px;
+            > .grid-item:not(:last-child){
+                margin-bottom: 40px;
+            }
         }
     }
 
-
-
-}
-.my-philosophy{
-    &.section-wrap{
-        //padding-top: 50px;
-        //padding-bottom: 0px;
+    .grid-4{
+        >.grid-item{
+            padding: 0 15px;
+        }
     }
 
 }
-
 
 .carousel-wrap{
     overflow-x: hidden;
@@ -493,6 +503,9 @@ $colors-list: $grey3 $pink1 $pink2 $pink3 $aqua1 $aqua2 $aqua3 $aqua4 $aqua5 $bl
 }
 
 .my-services{
+    &.about-page_my-services{
+        padding: 40px 0;
+    }
 
     &.content{
         .wrapper{
@@ -518,29 +531,32 @@ $colors-list: $grey3 $pink1 $pink2 $pink3 $aqua1 $aqua2 $aqua3 $aqua4 $aqua5 $bl
 
     
     .tab-content{
-        margin-bottom: 50px;
+        //margin-bottom: 50px;
         overflow: hidden;
         background-color: #f2f2f3;
     }
 }
 
 .services-brifs{
-    display: grid;
-    grid-template-columns: 1fr 164px;
-    grid-gap: 20px;
-    grid-auto-rows: max-content;
-
     padding: 20px;
     background-color: $grey4;
 
+    > .grid-item:not(:last-child){
+        margin-bottom: 20px;
+    }
     .brif-img{
-        grid-area: 1 / 2 / 2 / 3;
+        float: right;
+        max-width: 164px;
     }
 
     .brif-text{
         font-family: 'Zilla Slab', serif;
         font-size: $font-21 + 3;
         text-align: left;
+        max-width: 925px;
+        width: 100%;
+        width: calc(100% - 184px);
+
 
         .brif-title{
             font-family: 'Selima';
@@ -601,14 +617,21 @@ $colors-list: $grey3 $pink1 $pink2 $pink3 $aqua1 $aqua2 $aqua3 $aqua4 $aqua5 $bl
 /*=====================================*/
 /*Resouces*/
 .card{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-row-gap: 15px;
-
     text-align: center;
-    padding: 0 30px;
+    padding: 0 30px 40px;
     margin-top: 40px;
-    margin-bottom: 40px;    
+    margin-bottom: 40px; 
+    position: relative;
+
+    > .grid-item:last-child{
+        position: absolute;
+        bottom: 0;
+        left:0;right: 0;
+    }
+
+    > .grid-item:not(:last-child){
+        margin-bottom: 15px;
+    }   
 
     &.video-card .card-img:after,
     &.card[data-tags*="video"] .card-img:after {
@@ -663,6 +686,11 @@ $colors-list: $grey3 $pink1 $pink2 $pink3 $aqua1 $aqua2 $aqua3 $aqua4 $aqua5 $bl
 .resources-section{
     padding: 0 0 100px;
 
+    .wrapper{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
     .card-img{
         .img-tag{
             padding: 0px 10px 10px;
@@ -675,9 +703,9 @@ $colors-list: $grey3 $pink1 $pink2 $pink3 $aqua1 $aqua2 $aqua3 $aqua4 $aqua5 $bl
     padding-bottom: 50px;
 
     .wrapper{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-row-gap: 70px;
+        >.grid-item:not(:last-child){
+            margin-bottom: 70px;
+        }
     }    
 }
 
@@ -694,8 +722,16 @@ $colors-list: $grey3 $pink1 $pink2 $pink3 $aqua1 $aqua2 $aqua3 $aqua4 $aqua5 $bl
         font-family: 'Zilla Slab', serif;
 
         .wrapper{
-            display: grid;
-            grid-template-columns: 120px 1fr;
+            display: flex;
+
+            > span{
+                width: 120px;
+            }
+            
+            > #filterTab{
+                flex: 1;
+                text-align:left;
+            }
         }
 
         a{
@@ -732,18 +768,27 @@ $colors-list: $grey3 $pink1 $pink2 $pink3 $aqua1 $aqua2 $aqua3 $aqua4 $aqua5 $bl
     }
 
     .news-cards{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-row-gap: 20px;
-        grid-auto-rows: max-content;
+        
+        .grid-3{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        > .grid-item:not(:last-child){
+            margin-bottom: 20px;
+        }
 
         .card{
             margin-top: 50px;
             margin-bottom: 50px;
+            
+
         }
 
         .pagination{
             font-family:"brandon-grotesque";
+            display: inline-block;
+            width: 100%;
 
             a{
                 padding: 5px 10px;
@@ -762,14 +807,16 @@ $colors-list: $grey3 $pink1 $pink2 $pink3 $aqua1 $aqua2 $aqua3 $aqua4 $aqua5 $bl
     max-width: 340px;
 
     .popup-outer, .popup-content{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-row-gap: 5px;
+        > .grid-item:not(:last-child){
+            margin-bottom: 5px;
+        }
         
     }
 
     .popup-content{
-        grid-row-gap: 10px;
+        > .grid-item:not(:last-child){
+            margin-bottom: 10px;
+        }
 
         .input-field{
             margin: 6px 0;
@@ -815,11 +862,13 @@ $colors-list: $grey3 $pink1 $pink2 $pink3 $aqua1 $aqua2 $aqua3 $aqua4 $aqua5 $bl
 }
 .contact-section{
 
-    max-width: 1400px;
-    margin: auto;
+    //
 
     .grid-2{
         grid-column-gap: 0;
+        display: flex;
+        // max-width: 1400px;
+        // margin: auto;
     }
     .title{
         font-size: $font-62;
@@ -829,11 +878,12 @@ $colors-list: $grey3 $pink1 $pink2 $pink3 $aqua1 $aqua2 $aqua3 $aqua4 $aqua5 $bl
         }
     }
     .address{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-row-gap: 20px;
-
         padding: 20px 50px 50px 100px;
+        text-align: left;
+
+        h1, p, address{
+            margin-bottom: 20px;
+        }
 
         b{
             text-transform: uppercase;
@@ -842,29 +892,20 @@ $colors-list: $grey3 $pink1 $pink2 $pink3 $aqua1 $aqua2 $aqua3 $aqua4 $aqua5 $bl
         }
     }
 
-    .client-form{
-        position: relative;
-
-        &:after{
-            content: "";
-            position: absolute;
-            left: 0;
-            
-        }
-    }
+    
 
     .client-form{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-row-gap: 50px;
-        grid-auto-rows: max-content;
-
         background-image: url('../images/about-lucy-banner.jpg');
         background-repeat: no-repeat;
         background-position: 85% center;
         background-size: cover;
 
         padding: 50px 0 50px 50px;
+        text-align: left;
+
+        > .grid-item:not(:last-child){
+            margin-bottom: 50px;
+        }
 
         .title{
             .selima{
@@ -882,7 +923,7 @@ $colors-list: $grey3 $pink1 $pink2 $pink3 $aqua1 $aqua2 $aqua3 $aqua4 $aqua5 $bl
     padding: 70px 0;  
 
     .grid-2{
-        grid-column-gap: 0;
+        display: flex;
     }
 
     .newsletter-wrapper{
@@ -891,20 +932,19 @@ $colors-list: $grey3 $pink1 $pink2 $pink3 $aqua1 $aqua2 $aqua3 $aqua4 $aqua5 $bl
         background-position: center 25%;
         background-size: cover;
 
-        display: grid;
-        grid-template-columns: 1fr;
+        display: flex;
+        justify-content: flex-end;
 
         .newsletter{
             width: 50%;
             min-width: 670px;
-            justify-self: end;
+            //justify-self: end;
 
             padding: 130px 70px 30px 70px;
 
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-row-gap: 15px;
-            grid-auto-rows: max-content;
+            >.grid-item:not(:last-child){
+                margin-bottom: 15px;
+            }
             
 
             .title{
@@ -925,19 +965,12 @@ $colors-list: $grey3 $pink1 $pink2 $pink3 $aqua1 $aqua2 $aqua3 $aqua4 $aqua5 $bl
         background-size: cover;
         background-size: 120%;
 
-        display: grid;
-        grid-template-columns: 1fr;
 
         .resources{
             
             width: 100%;
             //min-width: 700px;
             justify-self: start;
-
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-row-gap: 20px;
-            grid-auto-rows: max-content;
 
             text-align: center;
             
@@ -946,10 +979,9 @@ $colors-list: $grey3 $pink1 $pink2 $pink3 $aqua1 $aqua2 $aqua3 $aqua4 $aqua5 $bl
                 max-width: 200px;
                 margin: 70px auto 0;
 
-                display: grid;
-                grid-template-columns: 1fr;
-                grid-row-gap: 20px;
-                grid-auto-rows: max-content;
+                >.grid-item:not(:last-child){
+                    margin-bottom: 20px;
+                }
 
                 .eat-Well-Plan{
                     font-size: $font-28;
@@ -975,10 +1007,9 @@ $colors-list: $grey3 $pink1 $pink2 $pink3 $aqua1 $aqua2 $aqua3 $aqua4 $aqua5 $bl
 
 
 .insta-feed{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-row-gap: 20px;
-    grid-auto-rows: max-content;
+    > .grid-item:not(:last-child){
+        margin-bottom: 20px;
+    }
 
     padding: 50px 0;
 
@@ -990,10 +1021,12 @@ $colors-list: $grey3 $pink1 $pink2 $pink3 $aqua1 $aqua2 $aqua3 $aqua4 $aqua5 $bl
     }
 
     .insta-img-wrap{
-        display: grid;
-        grid-template-columns: repeat(7, 1fr);
-        grid-column-gap: 10px;
-        grid-auto-rows: max-content;
+        
+        > .grid-item{
+            float: left;
+            width: 14.2857143%;
+            padding: 0 5px;
+        }
 
         img{
             width: 100%;
@@ -1007,14 +1040,14 @@ $colors-list: $grey3 $pink1 $pink2 $pink3 $aqua1 $aqua2 $aqua3 $aqua4 $aqua5 $bl
 .packages-list{
     background-color: $pink1;
     color: $white;
-    text-align: left;
     padding-bottom: 70px;
 
     .wrapper{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-row-gap: 30px;
-        grid-auto-rows: max-content;    
+        text-align: left;
+
+        > .grid-item:not(:last-child){
+            margin-bottom: 30px;
+        }  
     }
     
     .title{
@@ -1041,9 +1074,11 @@ $colors-list: $grey3 $pink1 $pink2 $pink3 $aqua1 $aqua2 $aqua3 $aqua4 $aqua5 $bl
 .fee-Structure{
 
     .wrapper{
-        display: grid;
-        grid-row-gap: 30px;
-        grid-auto-rows: max-content; 
+        text-align: left;
+
+        > .grid-item:not(:last-child){
+            margin-bottom: 30px;
+        }  
     }
 
     .content{
@@ -1051,28 +1086,47 @@ $colors-list: $grey3 $pink1 $pink2 $pink3 $aqua1 $aqua2 $aqua3 $aqua4 $aqua5 $bl
     }
 
     .fee-list-wrap{
+
         .fee-list{
-            display: grid;
-            grid-template-columns: 80px 1fr 120px;
-            //align-items: center;
+            padding:0 120px 0 80px;
+            position: relative;
+            display: block;
+
+            &:after{
+                content:"";
+                position: absolute;
+                bottom: 0;
+                right:0; left:80px;
+                border-bottom: 1px solid $grey1;
+            }
+            
+            
+            
 
             font-family:"museo-sans";
             font-weight: 100;
             font-size: 21px;
 
+            .fee-list-note{
+                
+            }
+            
             b{
                 font-weight: 700;
             }
 
             .fee-index{
-                display: grid;
-                align-items: center;
+                padding-top: 10px;
+                width: 80px;
+                position: absolute;
+                left: 0;    
 
                 span{
                     height: 60px;
                     width: 60px;
                     text-align: center;
-                    display: grid;
+                    display: flex;
+                    justify-content: center;
                     font-family: 'Zilla Slab', serif;
                     font-size: 34px;
                     align-items: center;
@@ -1083,27 +1137,23 @@ $colors-list: $grey3 $pink1 $pink2 $pink3 $aqua1 $aqua2 $aqua3 $aqua4 $aqua5 $bl
             }
             .fee-info{
                 padding: 20px 0;
-                border-bottom: 1px solid $grey1;
-                //display: grid;
-                //align-items: center;
+                min-height: 80px;
             }
             .fee-amount{
+                position: absolute;
+                right: 0;top:0;
                 padding: 20px 0;
                 text-align: right;
                 font-size: 23px;
                 font-weight: 700;
-                border-bottom: 1px solid $grey1;
-                display: grid;
-                align-items: center;
-
+                width: 120px;
                 span{
                     //margin: 15px 0 0;
                     display: inline-block;
                 }
             }
             .fee-text-wrap{
-                padding: 10px 80px 20px 0;
-                grid-column: span 2;
+                padding: 10px 0px 20px;
             }
             .fee-text{
                 font-size: $font-16 - 1;
@@ -1115,13 +1165,15 @@ $colors-list: $grey3 $pink1 $pink2 $pink3 $aqua1 $aqua2 $aqua3 $aqua4 $aqua5 $bl
 }
 
 .biography{
-    text-align: left;
+    
     background-color: $aqua4;
     
     .wrapper{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-row-gap: 20px;
+        text-align: left;
+
+        > .grid-item:not(:last-child){
+            margin-bottom: 20px;
+        }
     }
 
     .title{
@@ -1132,12 +1184,12 @@ $colors-list: $grey3 $pink1 $pink2 $pink3 $aqua1 $aqua2 $aqua3 $aqua4 $aqua5 $bl
         //padding-top: 0px;
     }
 
-    .bio-info{
-        display: grid;
-        grid-template-columns: 1fr 4px 1fr;
-        grid-column-gap: 50px;
+    .bio-info{        
+        display: flex;
+        flex: 1;
 
         .dots{
+            width: 4px;
             border-right: 4px dotted $grey2;
             border-style: dotted;
         }
@@ -1145,49 +1197,64 @@ $colors-list: $grey3 $pink1 $pink2 $pink3 $aqua1 $aqua2 $aqua3 $aqua4 $aqua5 $bl
 
     .bio-text{
         font-size: $font-16;
-
+        flex: 1;
+        padding-right: 50px;
+        
         p:not(:last-child){
             margin-bottom: 15px;
         }
     }
 
     .bio-points{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-row-gap: 20px;
-        //grid-auto-rows: max-content;
+        padding-left: 50px;
+        flex: 1;
         align-items: center;
 
         font-family: 'Zilla Slab', serif;
         font-size: $font-28 + 3;
+
+        > .grid-item:not(:last-child){
+            margin-bottom: 20px;
+        }
 
         b{
             font-weight: 600;
         }    
 
         .points{
-            grid-template-columns: 100px 1fr;
-            display: grid;
-            grid-column-gap: 20px;
-            align-items: center;
+            display: flex;
+            flex: 1;
+
+            // grid-template-columns: 100px 1fr;
+            // display: grid;
+            // grid-column-gap: 20px;
+            // align-items: center;
         }
 
         .number{
             font-size: $font-62;
             font-weight: 600;
-            display: grid;
-            align-items: center;
+            height: 100px;
+            width: 100px;
 
             span{
-                height: 100px;
-                width: 100px;
-                text-align: center;
-                display: grid;
+                height: 100%;
+                
+                display: flex;
+                justify-content: center;
                 align-items: center;
+
                 border-radius: 100%;
                 color: $white;
-                padding-bottom: 10%;
             }
+        }
+        .text{
+            flex: 1;
+            padding-left: 20px;
+            justify-content: center;
+            align-items: normal;
+            display: flex;
+            flex-flow: column;
         }
     }
 }
@@ -1200,10 +1267,8 @@ $colors-list: $grey3 $pink1 $pink2 $pink3 $aqua1 $aqua2 $aqua3 $aqua4 $aqua5 $bl
     background-size: cover;
 
     .banner-content{
-        display: grid;
-        grid-template-columns: 1fr 250px;
-        grid-column-gap: 70px;
-        grid-auto-rows: max-content;
+        display: flex;
+        width: 100%;
         align-items: center;
     }
 
@@ -1212,9 +1277,16 @@ $colors-list: $grey3 $pink1 $pink2 $pink3 $aqua1 $aqua2 $aqua3 $aqua4 $aqua5 $bl
         color: $white;
     }
 
+    .grid-item{
+        flex: 1;
+    }
     .special_interest-img{
-        grid-area: 1 / 2 / 2/ 3;
+        flex: none;
+        width: 250px;
         text-align: center;
+        float: right;
+        margin: 0;
+        order: 2;
         
         img{
             max-width: 185px;
@@ -1231,16 +1303,22 @@ $colors-list: $grey3 $pink1 $pink2 $pink3 $aqua1 $aqua2 $aqua3 $aqua4 $aqua5 $bl
     }
 
     .wrapper{
-        display: grid;
-        grid-template-columns: 1fr 250px;
-        grid-column-gap: 70px;
-        grid-auto-rows: max-content;
+        display: flex;
+        
+        .left-wrap{
+            flex: 1;
+            padding: 0 50px 0 0;
+        }
+        .right-wrap{
+            width: 250px;
+        }
+        
     }
     
     .content-wrap{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-row-gap:25px;
+        > .grid-item:not(:last-child){
+            margin-bottom: 25px;
+        }
         text-align: left;
         
         .title{
@@ -1250,23 +1328,24 @@ $colors-list: $grey3 $pink1 $pink2 $pink3 $aqua1 $aqua2 $aqua3 $aqua4 $aqua5 $bl
 }
 
 .related_services{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-row-gap:25px;
     text-align: center;
     font-family: 'Zilla Slab', serif;
+
+    > .grid-item:not(:last-child){
+        margin-bottom: 25px;    
+    }
 
     .title{
         font-size: $font-28;
     }
 
     .services_links{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-row-gap:25px;
         text-align: center;
-
         padding: 0 40px;
+
+        > .grid-item:not(:last-child){
+            margin-bottom: 25px;    
+        }
 
         span{
             display: inline-block;
@@ -1289,10 +1368,8 @@ $colors-list: $grey3 $pink1 $pink2 $pink3 $aqua1 $aqua2 $aqua3 $aqua4 $aqua5 $bl
     background: transparent;
 }
 .template{
-    //display: grid;
-    //grid-template-columns: 1fr;
-    //grid-row-gap:25px;
-    //grid-auto-rows: max-content;
+    
+    text-align: left;
 
     font-family: 'Zilla Slab', serif;
     font-size: $font-21 + 1;
@@ -1385,18 +1462,32 @@ $colors-list: $grey3 $pink1 $pink2 $pink3 $aqua1 $aqua2 $aqua3 $aqua4 $aqua5 $bl
     
 
     .wrapper {
-        display: grid;
-        grid-template-columns: 70px 1fr 250px;
-        grid-column-gap: 50px;
-        grid-auto-rows: -webkit-max-content;
-        grid-auto-rows: max-content;
+        // display: grid;
+        // grid-template-columns: 70px 1fr 250px;
+        // grid-column-gap: 50px;
+        // grid-auto-rows: -webkit-max-content;
+        // grid-auto-rows: max-content;
+        display: flex;
+
+        .left-wrap{
+            width: 70px;
+        }
+        .right-wrap{
+            width: 250px;
+        }
+        .mid-wrap{
+            flex: 1;
+            padding: 0 50px;
+        }
     }
 }
 
 .post{
     margin:70px 0;
-    padding: 0 10px;
-    word-break: break-all;
+    padding: 0px;
+    word-break: break-word;
+    //word-break: break-all;
+    text-align: left;
 
     .post-title{
         font-size: $font-70 + 5;
@@ -1410,19 +1501,25 @@ $colors-list: $grey3 $pink1 $pink2 $pink3 $aqua1 $aqua2 $aqua3 $aqua4 $aqua5 $bl
     }
     p{
         margin: 20px 0;
+        text-align: justify;
         
     }
     .post-img{
-        margin: 0px -10px;
         display: inline-block;
-
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        
         .half, .full{
-            padding: 10px;
+            //padding: 10px;
             float: left;
             width: 100%;
+            margin-bottom: 10px;
+            
         }
         .half{
             max-width: 50%;
+            max-width: calc(50% - 5px);
         }
         
         img{
@@ -1442,10 +1539,17 @@ $colors-list: $grey3 $pink1 $pink2 $pink3 $aqua1 $aqua2 $aqua3 $aqua4 $aqua5 $bl
 
 .getStarted{
     .steps-wrap{
-        display: grid;
-        grid-template-columns: repeat(3 , 110px);
-        grid-column-gap: 50px;
-        justify-content: center;
+        // display: grid;
+        // grid-template-columns: repeat(3 , 110px);
+        // grid-column-gap: 50px;
+        // justify-content: center;
+        text-align: center;
+
+        > .grid-item{
+            width: 110px;
+            display: inline-block;
+            margin: 0 25px;
+        }
 
         .step{
             display: inline-block;
@@ -1536,6 +1640,8 @@ $colors-list: $grey3 $pink1 $pink2 $pink3 $aqua1 $aqua2 $aqua3 $aqua4 $aqua5 $bl
 
     .form-cover{
         padding: 40px 0;
+        float: left;
+        width: 100%;
     }
     .form-wrapper{
         max-width: 720px;
@@ -1551,11 +1657,17 @@ $colors-list: $grey3 $pink1 $pink2 $pink3 $aqua1 $aqua2 $aqua3 $aqua4 $aqua5 $bl
         margin-bottom: 30px;
     }
     .field-grid{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 25px;
-    }
+        text-align: left;
 
+         > .grid-item{
+            width: 50%;
+            float: left;
+            padding: 0 10px;
+         }
+    }
+    .contact_Preference-check{
+        text-align: left;
+    }
     .input-field{
         margin-bottom: 15px;
 
