@@ -1225,28 +1225,32 @@ $colors-list: $grey3 $pink1 $pink2 $pink3 $aqua1 $aqua2 $aqua3 $aqua4 $aqua5 $bl
             display: flex;
             flex: 1;
 
-            // grid-template-columns: 100px 1fr;
-            // display: grid;
-            // grid-column-gap: 20px;
-            // align-items: center;
+            &:first-child, 
+            &:last-child{
+                .number{
+                    span{
+                        margin-top: -11%;
+                    }
+                }
+            }
         }
 
         .number{
-            font-size: $font-62;
-            font-weight: 600;
             height: 100px;
             width: 100px;
+            display: flex;
+            justify-content: center;
+            border-radius: 100%;
+            color: $white;
+            line-height: 62px;    
+            font-size: $font-62;
+            font-weight: 600;
 
             span{
-                height: 100%;
-                
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                border-radius: 100%;
-                color: $white;
+                align-self: center;
             }
+
+           
         }
         .text{
             flex: 1;

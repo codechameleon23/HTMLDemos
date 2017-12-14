@@ -2012,15 +2012,13 @@ a {
           flex: 1;
 }
 
-.biography .bio-points .number {
-  font-size: 62px;
-  font-weight: 600;
-  height: 100px;
-  width: 100px;
+.biography .bio-points .points:first-child .number span, .biography .bio-points .points:last-child .number span {
+  margin-top: -11%;
 }
 
-.biography .bio-points .number span {
-  height: 100%;
+.biography .bio-points .number {
+  height: 100px;
+  width: 100px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2029,13 +2027,18 @@ a {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-border-radius: 100%;
           border-radius: 100%;
   color: #ffffff;
+  line-height: 62px;
+  font-size: 62px;
+  font-weight: 600;
+}
+
+.biography .bio-points .number span {
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
 }
 
 .biography .bio-points .text {
