@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Design By Timber</title>
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700" rel="stylesheet"> -->
+    <link type="text/css" rel="stylesheet" href="css/vvw0mxh.css"/>
+    <link type="text/css" rel="stylesheet" href="css/animate.css"/>
+    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTxvhJM2iPIObf-gvXkoYyU5zNZR4-Xs8"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="hamburger hamburger--slider-r">
+            <div class="hamburger-box">
+                <div class="hamburger-inner"></div>
+            </div>
+        </div>
+        <nav class="nav">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <img alt="Design by Timber" class="brand-logo" src="images/brand-logo.png"/>
+                    <img alt="Design by Timber" class="brand-name visible-sm" src="images/brand-name-small.png"/>
+                    <img alt="Design by Timber" class="brand-name hidden-sm" src="images/brand-name.png"/>
+                </a>
+                <div class="hamburger hamburger--slider-r">
+                    <div class="hamburger-box">
+                        <div class="hamburger-inner"></div>
+                    </div>
+                </div>
+                <ul class="links">
+                        <li><a href="index.html">home</a></li>
+                        <li><a href="about.html">about</a></li>
+                        <li><a href="furnituredesign.html">furniture design</a></li>
+                        <li><a href="workshop.html">workshop</a></li>
+                        <li class="active"><a href="contact.html">contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="main">
+        <div id="map-canvas" class="map"></div>
+        <div class="container get-in-touch">
+            <h1 class="title">GET IN TOUCH</h1>
+            <p>If you have any projects you would like to discuss or are interested in any of the products on the website please contact Tim on the details below and he will be pleased to help you.</p>
+            <div class="contact-via">
+            
+                <div class="contact-details">
+                    <p><b>Studio:</b> 01380 860791</p>
+                    <p><b>Mobile:</b> 07931 382754</p>
+                    <p><b>Furniture Design:</b> tim@designbytimber.co.uk</p>
+                    <p><b>Press:</b> sophie@designbytimber.co.uk</p>
+                    <p><b>Shop:</b> shop@designbytimber.co.uk</p>
+                </div>
+            </div>
+            <div class="contact-address">
+                <img src="images/get-in-touch-pic.png"/>
+                <div class="address-details">
+                    Orchard Barn<br>
+                    Lydeway<br>
+                    Devizes<br>
+                    Wiltshire<br>
+                    <b>SN10 3PU</b>
+                </div>
+            </div>
+        </div>
+        <div class="hl-bg subscribe">
+            <div class="container">
+                <span class="label"><b>SUBSCRIBE TO<br>OUR NEWSLETTER</b></span>
+                <div><input type="text" placeholder="NAME"/></div>
+                <div><input type="email" placeholder="EMAIL"/></div>
+                <button class="btn">Submit</button>
+            </div>
+        </div>
+        <div class="insta-feeds">
+            <div class="feed"><a href="#"><img src="images/insta-pic-7.jpg"/></a></div>
+            <div class="feed"><a href="#"><img src="images/insta-pic-6.jpg"/></a></div>
+            <div class="feed"><a href="#"><img src="images/insta-pic-5.jpg"/></a></div>
+            <div class="feed"><a href="#"><img src="images/insta-pic-4.jpg"/></a></div>
+            <div class="feed"><a href="#"><img src="images/insta-pic-3.jpg"/></a></div>
+            <div class="feed"><a href="#"><img src="images/insta-pic-2.jpg"/></a></div>
+            <div class="feed"><a href="#"><img src="images/insta-pic-1.jpg"/></a></div>
+        </div>
+    </div>
+    <!-- FOOTER -->
+	<div class="footer">
+        <div class="container">
+            <h1>GET SOCIAL</h1>
+            <div class="social">
+                <a href="#" class="btn">Follow us</a>
+                <div>
+                    <a href="#"><img alt="Facebook" src="images/fb-ico.png"/></a>
+                    <a href="#"><img alt="Twitter" src="images/tw-ico.png"/></a>
+                    <a href="#"><img alt="Pintress" src="images/pt-ico.png"/></a>
+                    <a href="#"><img alt="Instagram" src="images/ig-ico.png"/></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <a href="#">TERMS</a>
+                <a href="#">contact</a>
+                <span>©DESIGN BY TIMBER 2017</span>
+            </div>
+        </div>
+    </div>	
+    <!-- END : FOOTER -->
+    
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.scrollex.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>
+    $(function() {
+        $('.contact-address').scrollex({
+            top : '20%',
+            enter: function() {
+                $(this).addClass('fadeInUp animated');
+                
+            },
+            leave: function() {
+                //$(this).removeClass('fadeInUp animated');
+            }
+        });
+    });
+    </script>
+    <script>
+            function initialise() {
+            var myLatlng = new google.maps.LatLng(51.319391, -1.924667); // Add the coordinates
+            var mapOptions = {
+                zoom: 12, // The initial zoom level when your map loads (0-20)
+                minZoom: 6, // Minimum zoom level allowed (0-20)
+                maxZoom: 20, // Maximum soom level allowed (0-20)
+                zoomControl:true, // Set to true if using zoomControlOptions below, or false to remove all zoom controls.
+                zoomControlOptions: {
+                      style:google.maps.ZoomControlStyle.DEFAULT // Change to SMALL to force just the + and - buttons.
+                },
+                center: myLatlng, // Centre the Map to our coordinates variable
+                mapTypeId: google.maps.MapTypeId.ROADMAP, // Set the type of Map
+                scrollwheel: false, // Disable Mouse Scroll zooming (Essential for responsive sites!)
+                // All of the below are set to true by default, so simply remove if set to true:
+                panControl:false, // Set to false to disable
+                mapTypeControl:false, // Disable Map/Satellite switch
+                scaleControl:false, // Set to false to hide scale
+                streetViewControl:false, // Set to disable to hide street view
+                overviewMapControl:false, // Set to false to remove overview control
+                rotateControl:false // Set to false to disable rotate control
+              }
+            var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions); // Render our map within the empty div
+            var image = new google.maps.MarkerImage("images/map-marker.png", null, null, null, new google.maps.Size(125,125)); // Create a variable for our marker image.
+            var marker = new google.maps.Marker({ // Set the marker
+                position: myLatlng, // Position marker to coordinates
+                icon:image, //use our image as the marker
+                map: map, // assign the market to our map variable
+                title: 'Click here for more details', // Marker ALT Text
+                optimized: false
+            });
+            var myoverlay = new google.maps.OverlayView();
+            myoverlay.draw = function () {
+                this.getPanes().markerLayer.id='markerLayer';
+            };
+            myoverlay.setMap(map);
+            var infowindow = new google.maps.InfoWindow({ // Create a new InfoWindow
+                  content:"Design by Timber, Orchard Barn, Lydeway, Devizes SN10 3PU, UK" // HTML contents of the InfoWindow
+              });
+            google.maps.event.addListener(marker, 'click', function() { // Add a Click Listener to our marker
+                  infowindow.open(map,marker); // Open our InfoWindow
+              });
+            google.maps.event.addDomListener(window, 'resize', function() { map.setCenter(myLatlng); }); // Keeps the Pin Central when resizing the browser on responsive sites
+        }
+        google.maps.event.addDomListener(window, 'load', initialise); // Execute our 'initialise' function once the page has loaded.
+        </script>
+</body>
+</html>
