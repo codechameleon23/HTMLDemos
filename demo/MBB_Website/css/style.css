@@ -22,6 +22,10 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 *:focus { outline: 0; }
 
+* { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; -webkit-font-kerning: auto; font-kerning: auto; }
+
+html { font-family: sans-serif; -webkit-text-size-adjust: 100%; }
+
 body { color: #000000; }
 
 body, p { font-weight: 300; font-size: 16px; line-height: 22px; font-family: "Montserrat", sans-serif; }
@@ -32,7 +36,15 @@ b { font-weight: 600; }
 
 .btn, a.btn { padding: 20px 20px; min-width: 200px; border: 1px solid #000000; text-transform: uppercase; background-color: transparent; color: #000000; font-weight: 400; color: #000000; font-size: 16px; font-family: "Montserrat", sans-serif; cursor: pointer; display: inline-block; text-align: center; }
 
-input, textarea, select { border: 0; background-color: #ffffff; font-family: "Montserrat", sans-serif; font-size: 16px; color: #000000; height: 42px; font-weight: 300; width: 100%; padding: 10px 0 10px 10px; resize: none; }
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */ color: #666666; }
+
+::-moz-placeholder { /* Firefox 19+ */ color: #666666; opacity: 1; }
+
+:-ms-input-placeholder { /* IE 10+ */ color: #666666; }
+
+:-moz-placeholder { /* Firefox 18- */ color: #666666; }
+
+input, textarea, select { border: 0; background-color: #ffffff; font-family: "Montserrat", sans-serif; font-size: 16px; color: #666666; font-weight: 300; width: 100%; padding: 10px 0 10px 10px; resize: none; }
 
 .select-wrap { overflow-x: hidden; }
 
@@ -90,6 +102,8 @@ input, textarea, select { border: 0; background-color: #ffffff; font-family: "Mo
 
 .banner.home-banner > .container > .content { padding-right: 80px; }
 
+.banner.home-banner > .container .content-img { width: 50%; max-width: 500px; }
+
 /*Ie 11 Hack for min-height and flex issue*/
 @media all and (-ms-high-contrast: none) { *::-ms-backdrop, .banner { height: 600px; }
   /* IE11 */
@@ -103,7 +117,7 @@ input, textarea, select { border: 0; background-color: #ffffff; font-family: "Mo
 
 .contact-section .contact-details > div { width: 50%; float: left; }
 
-.contact-section .contact-details > div:not(.address) { margin-bottom: 30px; }
+.contact-section .contact-details > div:not(.address) { margin-bottom: 20px; }
 
 .contact-section .contact-info { width: 55%; padding-right: 60px; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; }
 
@@ -187,7 +201,11 @@ input, textarea, select { border: 0; background-color: #ffffff; font-family: "Mo
 
 .container.col-2, .container.col-3 { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; border-bottom: 1px solid #404041; border-top: 1px solid #404041; padding-top: 60px; padding-bottom: 60px; }
 
-.container.col-2 .col { width: 50%; }
+.container.col-2 .col { width: 50%; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: start; -webkit-align-items: flex-start; -ms-flex-align: start; align-items: flex-start; }
+
+.container.col-2 .col .btn { margin-top: auto; }
+
+.container.col-2 .col.about-section .btn, .container.col-2 .col.our-approach-section .btn { margin-top: 0; }
 
 .container.col-2 .col.col-first { padding-right: 60px; border: 1px solid #404041; border-width: 0 1px 0 0; }
 
@@ -195,15 +213,25 @@ input, textarea, select { border: 0; background-color: #ffffff; font-family: "Mo
 
 .container.col-3 { -webkit-box-align: start; -webkit-align-items: flex-start; -ms-flex-align: start; align-items: flex-start; }
 
-.container.col-3 .col.col-first { width: 27%; padding-right: 40px; }
+.container.col-3 .col-group { width: 57%; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; }
 
-.container.col-3 .col.col-second { width: 30%; padding-right: 40px; padding-left: 40px; border: 1px solid #404041; border-width: 0 0 0 1px; }
+.container.col-3 .col { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: start; -webkit-align-items: flex-start; -ms-flex-align: start; align-items: flex-start; }
+
+.container.col-3 .col .btn { margin-top: auto; }
+
+.container.col-3 .col.col-first { width: 48%; padding-right: 40px; }
+
+.container.col-3 .col.col-second { width: 52%; padding-right: 40px; padding-left: 40px; border: 1px solid #404041; border-width: 0 0 0 1px; }
 
 .container.col-3 .col.col-third { width: 43%; padding-top: 260px; padding-left: 80px; border: 1px solid #404041; border-width: 0 0 0 1px; }
 
-.container.col-3 .ref-img.at-lb { bottom: 120px; left: 60px; }
+.container.col-3 .ref-img.ref-img-1 { max-width: 550px; }
 
-.container .ref-img { position: absolute; max-width: 50%; }
+.container.col-3 .ref-img.ref-img-2 { max-width: 450px; }
+
+.container.col-3 .ref-img.at-lb { bottom: 120px; }
+
+.container .ref-img { position: absolute; max-width: 550px; width: 100%; }
 
 .container .ref-img > img { max-width: 100%; }
 
@@ -216,8 +244,6 @@ input, textarea, select { border: 0; background-color: #ffffff; font-family: "Mo
 .about-content-wrap .container.col-2 .col.col-first { width: 55%; }
 
 .about-content-wrap .container.col-2 .col.col-second { width: 45%; }
-
-.about-content-wrap .container .ref-img { max-width: 55%; }
 
 /*Header CSS*/
 .header { position: relative; z-index: 999; }
@@ -283,7 +309,7 @@ input, textarea, select { border: 0; background-color: #ffffff; font-family: "Mo
   /*Banner CSS*/
   .banner:not(.home-banner) { padding-top: 60px; padding-bottom: 60px; min-height: 0; }
   .banner:not(.home-banner) > .container { position: relative; z-index: 2; padding: 20px; }
-  .banner:not(.home-banner) > .container:after { content: ""; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-color: rgba(255, 255, 255, 0.5); z-index: -1; padding: 20px; } }
+  .banner:not(.home-banner) > .container:after { content: ""; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-color: rgba(255, 255, 255, 0.8); z-index: -1; padding: 20px; } }
 
 @media (max-width: 1050px) { /*Viewport Below 1050px : Desktop*/
   /*Header CSS*/
@@ -291,15 +317,18 @@ input, textarea, select { border: 0; background-color: #ffffff; font-family: "Mo
   .header .nav > .container { -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; }
   .header .nav .links { width: 100%; margin-top: 15px; margin-bottom: 15px; -webkit-justify-content: space-around; -ms-flex-pack: distribute; justify-content: space-around; }
   /*Banner CSS*/
-  .banner { padding-top: 30px; min-height: 400px; } }
+  .banner { padding-top: 30px; min-height: 400px; }
+  .container .ref-img { max-width: 50%; } }
 
 @media (max-width: 991px) { /*Viewport Below 991px : Tablet*/
   /*Container CSS*/
   .section { padding-top: 60px; padding-bottom: 60px; }
   .container.col-2, .container.col-3 { padding-top: 30px; padding-bottom: 30px; }
-  .container.col-3 .col.col-first, .container.col-3 .col.col-second { width: -webkit-calc(57% - 40px); width: calc(57% - 40px); }
-  .container.col-3 .col.col-second { border-left: 0; padding-right: 0; padding-left: 0; border-width: 1px 0 0; padding-bottom: 200px; }
-  .container.col-3 .col.col-third { padding-top: 0; padding-left: 40px; }
+  .container.col-3 .col.col-first, .container.col-3 .col.col-second { width: -webkit-calc(100% - 40px); width: calc(100% - 40px); }
+  .container.col-3 .col-group { width: 50%; }
+  .container.col-3 .col.col-second { border-left: 0; padding-right: 0; padding-left: 0; border-width: 1px 0 0; padding-bottom: 60px; }
+  .container.col-3 .col.col-third { width: 50%; padding-top: 280px; padding-left: 40px; }
+  .container.col-3 .ref-img.at-lb { bottom: 0; }
   /*Footer CSS*/
   .footer { padding: 30px 0; }
   .footer .container .col { padding-top: 15px; padding-bottom: 15px; }
@@ -313,6 +342,15 @@ input, textarea, select { border: 0; background-color: #ffffff; font-family: "Mo
   .footer .right .col:first-child .social { -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; }
   .footer .left .col:not(:last-child) { margin-right: 0; }
   .footer .right .col:not(:first-child), .footer .left .col:not(:first-child) { margin-left: 0; } }
+
+@media (max-width: 801px) and (min-width: 768px) { .contact-section .contact-info { -webkit-box-orient: horizontal; -webkit-box-direction: normal; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; }
+  .contact-section .contact-details > div { width: 100%; }
+  .contact-section .contact-details > div.address { margin-bottom: 20px; }
+  .contact-section .contact-details > div.telephone { margin-bottom: 0px; }
+  .contact-section .contact-details { width: 50%; padding-right: 40px; padding-bottom: 0; border-width: 0 1px 0 0; margin-bottom: 30px; }
+  .contact-section .contact-info .contact-time { padding-top: 0; width: 50%; padding-left: 40px; padding-bottom: 0; margin-bottom: 30px; }
+  .container.col-2 .col.col-first { padding-right: 40px; }
+  .container.col-2 .col.col-second { padding-left: 40px; } }
 
 @media (max-width: 800px) { /*Viewport Below 800px : Tablet*/
   /*Hero CSS*/
@@ -334,10 +372,11 @@ input, textarea, select { border: 0; background-color: #ffffff; font-family: "Mo
   .consultation-section .container .col.ref-img:after, .clinics-section .container .col.ref-img:after { content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 0; padding: 40px; background-color: rgba(255, 255, 255, 0.5); -webkit-background-clip: content-box; background-clip: content-box; }
   .consultation-wrap > .container > .col { padding-top: 0; text-align: center; }
   .about-content-wrap .container.col-2 .col.col-first, .about-content-wrap .container.col-2 .col.col-second { width: 50%; }
-  .about-content-wrap .container.col-2 .col.col-first { padding-top: 30px; padding-bottom: 150px; }
+  .about-content-wrap .container.col-2 .col.col-first { padding-top: 30px; padding-bottom: 180px; }
   .get-in-touch > .container { -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; }
   .get-in-touch > .container .head-text, .get-in-touch > .container .info-text { width: 100%; }
-  .get-in-touch > .container > div { max-width: 100%; padding: 15px 0; text-align: center; } }
+  .get-in-touch > .container > div { max-width: 100%; padding: 15px 0; text-align: center; }
+  .container.col-2 .ref-img, .container.col-3 .ref-img.ref-img-2, .container.col-3 .ref-img.ref-img-1 { max-width: 50%; } }
 
 @media (min-width: 768px) { .hamburger { display: none; } }
 
@@ -364,8 +403,12 @@ input, textarea, select { border: 0; background-color: #ffffff; font-family: "Mo
   /*Banner CSS*/
   .banner.home-banner > .container { -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; }
   .banner.home-banner > .container > .content { -webkit-box-ordinal-group: 2; -webkit-order: 1; -ms-flex-order: 1; order: 1; padding: 30px 0 60px; }
+  .banner.home-banner > .container .content-img { width: -webkit-calc( 100% - 60px); width: calc( 100% - 60px); }
+  .banner.home-banner > .container .content-img img { max-width: 100%; }
   .banner.healthScreening-banner, .banner.homeopathy-banner { background-position: 85% center; }
   /*Container css*/
+  .container.col-2 .ref-img, .container.col-3 .ref-img.ref-img-2, .container.col-3 .ref-img.ref-img-1 { max-width: 100%; }
+  .container.col-3 .col-group { width: 100%; }
   .container .col.col-first { padding-top: 30px; }
   .container.col-3 .col.col-first, .container.col-3 .col.col-second { width: 100%; padding-left: 0; padding-right: 0; }
   .container.col-3 .col.col-second { padding-bottom: 40px; border-width: 1px 0; }
