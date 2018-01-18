@@ -866,7 +866,7 @@
 }
 
 @keyframes flipInX {
-  0% {
+  from {
     transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
     animation-timing-function: ease-in;
     opacity: 0;
@@ -885,15 +885,10 @@
   80% {
     transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
   }
-95% {
+
+  to {
     transform: perspective(400px);
   }
-to {
-     transform: translate(0, 0);
-  }
-  //to {
-    //transform: perspective(400px);
-  //}
 }
 
 .flipInX {
