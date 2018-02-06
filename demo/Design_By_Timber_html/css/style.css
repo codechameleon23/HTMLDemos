@@ -1371,19 +1371,20 @@ body:not(.home) > .header > .hamburger + .nav {
   left: 2px;
 }
 
-.product-details-wrap.full .product-details {
-  -webkit-transition: all 0s ease-in 0s;
-  -o-transition: all 0s ease-in 0s;
-  transition: all 0s ease-in 0s;
-  opacity: 0;
-  height: 0;
-  -webkit-transform: translate(110%, -110%) scale(0);
-      -ms-transform: translate(110%, -110%) scale(0);
-          transform: translate(110%, -110%) scale(0);
-}
-
-.product-details-wrap.full .product-thumbs-wrap .tag {
-  display: none;
+@media (min-width: 768px) {
+  .product-details-wrap.full .product-details {
+    -webkit-transition: all 0s ease-in 0s;
+    -o-transition: all 0s ease-in 0s;
+    transition: all 0s ease-in 0s;
+    opacity: 0;
+    height: 0;
+    -webkit-transform: translate(110%, -110%) scale(0);
+        -ms-transform: translate(110%, -110%) scale(0);
+            transform: translate(110%, -110%) scale(0);
+  }
+  .product-details-wrap.full .product-thumbs-wrap .tag {
+    display: none;
+  }
 }
 
 .slick-list {
