@@ -1098,6 +1098,12 @@ body:not(.home) > .header > .hamburger + .nav {
 .media-gallery .row .nerrow, .media-gallery .row .wide {
   
 border:1px solid blue;
+   -webkit-flex-grow: 0; /* Safari 6.1+ */
+    -webkit-flex-shrink: 0; /* Safari 6.1+ */
+    -webkit-flex-basis: 35%; /* Safari 6.1+ */
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 35%;
    
   margin-bottom: 70px;
   position: relative;
@@ -1191,12 +1197,12 @@ border:1px solid blue;
 
 .media-gallery .row .nerrow {
   max-width: 35%;
-   flex-basis: 35%;
 }
 
 .media-gallery .row .wide {
   max-width: 55%;
-   flex-basis: 55%;
+   -webkit-flex-basis: 55%; /* Safari 6.1+ */
+    flex-basis: 55%;
 }
 
 .media-gallery .row .next-up {
