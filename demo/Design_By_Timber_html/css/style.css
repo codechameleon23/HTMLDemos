@@ -1096,15 +1096,9 @@ body:not(.home) > .header > .hamburger + .nav {
 }
 
 .media-gallery .row .nerrow, .media-gallery .row .wide {
-  
-border:1px solid blue;
-   -webkit-flex-grow: 0; /* Safari 6.1+ */
-    -webkit-flex-shrink: 0; /* Safari 6.1+ */
-    -webkit-flex-basis: 35%; /* Safari 6.1+ */
-    flex-grow: 0;
-    flex-shrink: 0;
-    flex-basis: 35%;
-   
+  -webkit-flex-basis: 35%;
+      -ms-flex-preferred-size: 35%;
+          flex-basis: 35%;
   margin-bottom: 70px;
   position: relative;
   display: -webkit-box;
@@ -1201,8 +1195,9 @@ border:1px solid blue;
 
 .media-gallery .row .wide {
   max-width: 55%;
-   -webkit-flex-basis: 55%; /* Safari 6.1+ */
-    flex-basis: 55%;
+  -webkit-flex-basis: 55%;
+      -ms-flex-preferred-size: 55%;
+          flex-basis: 55%;
 }
 
 .media-gallery .row .next-up {
@@ -2207,6 +2202,9 @@ border:1px solid blue;
   .media-gallery .row .wide,
   .media-gallery .row .nerrow {
     max-width: 100%;
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
   }
   .media-gallery .row .next-up {
     width: 100%;
