@@ -291,9 +291,9 @@ input[type="checkbox"]:checked + label::after, input[type=radio]:checked + label
 label::before, label::after { -webkit-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; }
 
 /*Navbar*/
-@media (min-width: 1050px) { .nav .menu > li:hover:before { content: ""; position: absolute; left: 0; right: 0; bottom: 0px; top: 0px; -webkit-box-shadow: -1px 2px 2px 1px rgba(0, 0, 0, 0.3); box-shadow: -1px 2px 2px 1px rgba(0, 0, 0, 0.3); -webkit-border-radius: 5px 5px 0 0; border-radius: 5px 5px 0 0; }
-  .nav .menu > li:hover > a { position: relative; border-color: #ec7c7f; z-index: 99; -webkit-border-radius: 5px 5px 0 0; border-radius: 5px 5px 0 0; }
-  .nav .menu > li:hover .submenu { display: block; } }
+@media (min-width: 1050px) { .nav .menu > li.has-menu:hover:before { content: ""; position: absolute; left: 0; right: 0; bottom: 0px; top: 0px; -webkit-box-shadow: -1px 2px 2px 1px rgba(0, 0, 0, 0.3); box-shadow: -1px 2px 2px 1px rgba(0, 0, 0, 0.3); -webkit-border-radius: 5px 5px 0 0; border-radius: 5px 5px 0 0; }
+  .nav .menu > li.has-menu:hover > a { position: relative; border-color: #ec7c7f; z-index: 99; -webkit-border-radius: 5px 5px 0 0; border-radius: 5px 5px 0 0; }
+  .nav .menu > li.has-menu:hover .submenu { display: block; } }
 
 .nav { width: 100%; margin-top: 25px; position: relative; }
 
@@ -304,6 +304,18 @@ label::before, label::after { -webkit-transition: all 0.3s ease-in-out; -o-trans
 .nav .menu li:not(.active) a { /*Text colors*/ }
 
 .nav .menu li:not(.active) a.text-green, .nav .menu li:not(.active) a.text-blue, .nav .menu li:not(.active) a.text-sky, .nav .menu li:not(.active) a.text-orange, .nav .menu li:not(.active) a.text-pink, .nav .menu li:not(.active) a.text-violet { color: #6d6e70; }
+
+.nav .menu li:not(.active):hover > a.text-green { color: #8eca6e; }
+
+.nav .menu li:not(.active):hover > a.text-blue { color: #68a2c8; }
+
+.nav .menu li:not(.active):hover > a.text-sky { color: #6ac8c1; }
+
+.nav .menu li:not(.active):hover > a.text-orange { color: #fcc35d; }
+
+.nav .menu li:not(.active):hover > a.text-pink { color: #ec7c7f; }
+
+.nav .menu li:not(.active):hover > a.text-violet { color: #867ca4; }
 
 .nav .menu > li { position: relative; }
 
