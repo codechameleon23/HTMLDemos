@@ -155,7 +155,7 @@ h3, .h3 { font-size: 2.11765rem; line-height: 1.3; }
 
 h4, .h4 { font-size: 1.76471rem; line-height: 1.35; }
 
-h5, .h5 { font-size: 1.41176rem; line-height: 1.35; }
+h5, .h5, #availabilitychecker .eviivo_title { font-size: 1.41176rem; line-height: 1.35; }
 
 h6, .h6 { font-size: 1.17647rem; line-height: 1.35; }
 
@@ -181,27 +181,27 @@ a:hover { color: black; text-decoration: none; }
 
 .heading-wrap .heading { margin-bottom: 10px; }
 
-.title { font-family: "Montserrat", Helvetica, Arial, sans-serif; text-transform: uppercase; font-weight: 300; }
+.title, #availabilitychecker .eviivo_title { font-family: "Montserrat", Helvetica, Arial, sans-serif; text-transform: uppercase; font-weight: 300; }
 
-.title.t-secondary { color: #a4a94f; }
+.title.t-secondary, #availabilitychecker .t-secondary.eviivo_title { color: #a4a94f; }
 
 .title-wrap { background-color: #a4a94f; padding: 15px 15px 0; }
 
-.title-wrap .title { font-size: 1.52941rem; color: #ffffff; margin-bottom: 10px; }
+.title-wrap .title, .title-wrap #availabilitychecker .eviivo_title, #availabilitychecker .title-wrap .eviivo_title { font-size: 1.52941rem; color: #ffffff; margin-bottom: 10px; }
 
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.btn, .tag { background-color: transparent; font-family: "Montserrat", Helvetica, Arial, sans-serif; font-size: 1.05882rem; font-weight: 300; -webkit-box-sizing: border-box; box-sizing: border-box; display: inline-block; vertical-align: top; height: 40px; line-height: 40px; min-width: 150px; padding: 0 30px; text-align: center; text-decoration: none; white-space: nowrap; }
+.btn, #availabilitychecker .eviivo_submit .ui-button, .tag { background-color: transparent; font-family: "Montserrat", Helvetica, Arial, sans-serif; font-size: 1.05882rem; font-weight: 300; -webkit-box-sizing: border-box; box-sizing: border-box; display: inline-block; vertical-align: top; height: 40px; line-height: 40px; min-width: 150px; padding: 0 30px; text-align: center; text-decoration: none; white-space: nowrap; }
 
-.btn-block, .tag-block { width: 100%; }
+.btn-block, #availabilitychecker .eviivo_submit .ui-button, .tag-block { width: 100%; }
 
 .btn-350, .tag-350 { max-width: 320px; }
 
 .btn-50, .tag-50 { width: -webkit-calc(50% - 15px); width: calc(50% - 15px); }
 
-.btn { border: 1px solid #383739; color: #383739; -webkit-border-radius: 6px; border-radius: 6px; cursor: pointer; -webkit-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1); -o-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1); transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1); }
+.btn, #availabilitychecker .eviivo_submit .ui-button { border: 1px solid #383739; color: #383739; -webkit-border-radius: 6px; border-radius: 6px; cursor: pointer; -webkit-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1); -o-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1); transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1); }
 
-.btn:hover, .btn:focus { color: #a4a94f; border-color: #a4a94f; text-shadow: 1px 4px 2px rgba(0, 0, 0, 0.4); }
+.btn:hover, #availabilitychecker .eviivo_submit .ui-button:hover, .btn:focus, #availabilitychecker .eviivo_submit .ui-button:focus { color: #a4a94f; border-color: #a4a94f; text-shadow: 1px 4px 2px rgba(0, 0, 0, 0.4); }
 
 .btn-primary { border-color: #383739; background-color: #383739; color: #ffffff; }
 
@@ -246,7 +246,7 @@ li { margin-bottom: 15px; }
 
 /* Spacing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-button, .btn { margin-bottom: 15px; }
+button, .btn, #availabilitychecker .eviivo_submit .ui-button { margin-bottom: 15px; }
 
 .tag { margin-bottom: 20px; }
 
@@ -365,7 +365,7 @@ hr { margin-top: 30px; margin-bottom: 35px; border-width: 0; border-top: 1px dot
 
 .fancybox-inner .fancybox-caption { color: #383739; }
 
-.fancybox-inner .fancybox-caption .title { margin-bottom: 0; }
+.fancybox-inner .fancybox-caption .title, .fancybox-inner .fancybox-caption #availabilitychecker .eviivo_title, #availabilitychecker .fancybox-inner .fancybox-caption .eviivo_title { margin-bottom: 0; }
 
 .fancybox-inner .fancybox-stage-ratio { border: 3px solid #fff; }
 
@@ -491,17 +491,17 @@ hr { margin-top: 30px; margin-bottom: 35px; border-width: 0; border-top: 1px dot
 
 .room .room-info { padding: 0 40px; }
 
-.room .room-info .title { margin-bottom: 0; }
+.room .room-info .title, .room .room-info #availabilitychecker .eviivo_title, #availabilitychecker .room .room-info .eviivo_title { margin-bottom: 0; }
 
 .contact-wrap { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; margin-top: 50px; margin-bottom: 50px; }
 
 .contact-wrap .col { width: 45%; }
 
-.contact-wrap .title { font-size: 1.35294rem; margin-bottom: 0; }
+.contact-wrap .title, .contact-wrap #availabilitychecker .eviivo_title, #availabilitychecker .contact-wrap .eviivo_title { font-size: 1.35294rem; margin-bottom: 0; }
 
 .contact-wrap .we-are-open { margin: 30px 0; border: 3px solid #dbdab9; padding: 20px; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; }
 
-.contact-wrap .we-are-open .title { margin-bottom: 0; }
+.contact-wrap .we-are-open .title, .contact-wrap .we-are-open #availabilitychecker .eviivo_title, #availabilitychecker .contact-wrap .we-are-open .eviivo_title { margin-bottom: 0; }
 
 .contact-wrap .opening-time { text-align: left; padding-right: 70px; }
 
@@ -542,7 +542,7 @@ hr { margin-top: 30px; margin-bottom: 35px; border-width: 0; border-top: 1px dot
 
 .localWalks-wrap .box-text .box-header { margin-bottom: 15px; }
 
-.localWalks-wrap .box-text .title { margin-bottom: 0; }
+.localWalks-wrap .box-text .title, .localWalks-wrap .box-text #availabilitychecker .eviivo_title, #availabilitychecker .localWalks-wrap .box-text .eviivo_title { margin-bottom: 0; }
 
 .localWalks-wrap .box-text p { margin-bottom: 15px; }
 
@@ -569,7 +569,7 @@ hr { margin-top: 30px; margin-bottom: 35px; border-width: 0; border-top: 1px dot
 
 .book_a_room { margin: 30px 0; background-color: #dbdab9; padding: 20px 5px 0; }
 
-.book_a_room .title { margin-bottom: 0; }
+.book_a_room .title, .book_a_room #availabilitychecker .eviivo_title, #availabilitychecker .book_a_room .eviivo_title { margin-bottom: 0; }
 
 .book_a_room .book-a-room-form { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; text-align: left; -webkit-box-align: end; -webkit-align-items: flex-end; -ms-flex-align: end; align-items: flex-end; }
 
@@ -634,6 +634,40 @@ hr { margin-top: 30px; margin-bottom: 35px; border-width: 0; border-top: 1px dot
 .popup .heading { font-size: 2.41176rem; }
 
 .popup .popup-inner { padding: 20px; }
+
+#availabilitychecker { margin: 30px 0; background-color: #dbdab9; padding: 20px 5px 0; /*unwanted classes*/ }
+
+#availabilitychecker input, #availabilitychecker select { width: 100%; -webkit-border-radius: 6px; border-radius: 6px; }
+
+#availabilitychecker label { text-align: left; }
+
+#availabilitychecker .eviivo_nights, #availabilitychecker .eviivo_room2, #availabilitychecker .eviivo_room3, #availabilitychecker .eviivo_room, #availabilitychecker .ui-datepicker-trigger { display: none; }
+
+#availabilitychecker .eviivo_title { font-weight: bold; }
+
+#availabilitychecker .eviivo_serviced { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; margin-top: 10px; }
+
+#availabilitychecker .eviivo_serviced .eviivo_enddate, #availabilitychecker .eviivo_serviced .eviivo_startdate, #availabilitychecker .eviivo_serviced .eviivo_select_wrap, #availabilitychecker .eviivo_serviced .eviivo_rooms_container, #availabilitychecker .eviivo_serviced .eviivo_submit_wrap { margin: 0 15px; -webkit-box-flex: 1; -webkit-flex: 1; -ms-flex: 1; flex: 1; }
+
+#availabilitychecker .eviivo_serviced .eviivo_rooms_container { -webkit-box-flex: 1.2; -webkit-flex: 1.2; -ms-flex: 1.2; flex: 1.2; }
+
+#availabilitychecker .eviivo_serviced .eviivo_select_wrap { -webkit-box-flex: .5; -webkit-flex: .5; -ms-flex: .5; flex: .5; }
+
+#availabilitychecker .eviivo_serviced .eviivo_room1 { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; }
+
+#availabilitychecker .eviivo_serviced .eviivo_room1 > div { width: -webkit-calc(50% - 15px); width: calc(50% - 15px); }
+
+#availabilitychecker .eviivo_submit_wrap { -webkit-align-self: flex-end; -ms-flex-item-align: end; align-self: flex-end; }
+
+#availabilitychecker .eviivo_submit .ui-button { border-color: #a4a94f; background-color: #a4a94f; color: #ffffff; }
+
+#availabilitychecker .eviivo_submit .ui-button:hover, #availabilitychecker .eviivo_submit .ui-button:focus { border-color: #939847; background-color: #939847; color: #ffffff; }
+
+#availabilitychecker .eviivo_submit .ui-button .ui-button-text { font-weight: bold; }
+
+@media (max-width: 767px) { #availabilitychecker .eviivo_serviced { -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; padding: 20px 15px 0; }
+  #availabilitychecker .eviivo_serviced .eviivo_enddate, #availabilitychecker .eviivo_serviced .eviivo_startdate, #availabilitychecker .eviivo_serviced .eviivo_select_wrap, #availabilitychecker .eviivo_serviced .eviivo_rooms_container, #availabilitychecker .eviivo_serviced .eviivo_submit_wrap, #availabilitychecker .eviivo_serviced .eviivo_room1 { -webkit-box-flex: unset; -webkit-flex: unset; -ms-flex: unset; flex: unset; width: 100%; margin: 0; }
+  #availabilitychecker .eviivo_submit { text-align: left; margin-top: 10px; } }
 
 /* Header
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -785,17 +819,17 @@ hr { margin-top: 30px; margin-bottom: 35px; border-width: 0; border-top: 1px dot
   .dropUs-a-line { width: 100%; max-width: 600px; margin: 0 auto; }
   .event .content-outer .content-inner { overflow: auto; } }
 
-@media (max-width: 767px) { .btn, .tag { font-size: 13px; }
+@media (max-width: 767px) { .btn, #availabilitychecker .eviivo_submit .ui-button, .tag { font-size: 13px; }
   .display-1 { font-size: 2.70588rem; }
   h1, .h1 { font-size: 2.11765rem; }
   h2, .h2 { font-size: 1.76471rem; }
   h3, .h3 { font-size: 1.64706rem; }
   h4, .h4 { font-size: 1.41176rem; }
-  h5, .h5 { font-size: 1.17647rem; }
+  h5, .h5, #availabilitychecker .eviivo_title { font-size: 1.17647rem; }
   h6, .h6 { font-size: 1.05882rem; }
   .furry-friends .main-text .heading { font-size: 2.11765rem; }
   .popup .heading { font-size: 1.64706rem; }
-  .popup .title { font-size: 1.17647rem; }
+  .popup .title, .popup #availabilitychecker .eviivo_title, #availabilitychecker .popup .eviivo_title { font-size: 1.17647rem; }
   .header-top { -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; }
   .header-top .col { width: 100%; }
   .header-top .social { -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-box-ordinal-group: 1; -webkit-order: 0; -ms-flex-order: 0; order: 0; width: 100%; }
