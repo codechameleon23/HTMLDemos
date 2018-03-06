@@ -1,0 +1,150 @@
+hr {
+    margin-top: 30px;
+    margin-bottom: 35px;
+    border-width: 0;
+    border-top: 1px solid #b9c2cb;
+    display: inline-block;
+    width: 100%;
+}
+
+.tabs-wrap{
+    padding:0 40px;
+    position: relative;
+    font-family: $secondary-font;
+
+    .btn-arrow{
+        border-radius: 0;
+        position: absolute;
+        top: 2px;
+        line-height: 28px;
+        min-width: 40px;
+
+        &.btn-prev{
+            left: 0;
+        }
+        &.btn-next{
+            right: 0;
+        }
+
+    }
+
+    .tabs{
+        .tab{
+            text-align: center;
+            padding: 9px 0;
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            margin-top: 2px;
+
+            position: relative;
+
+            &:after{
+                content: "";
+                position: absolute;
+                left: 0; top: -3px;
+                width: 0;
+                height: 3px;
+                background-color: #2ecc71;
+
+                @include transition;
+            }
+
+            &.complete{
+                &:after{
+                    width: 100%;
+                }        
+            }
+        }
+    }
+
+    .btn-arrow,
+    .tab{
+        background-color: #e87111;
+        color: #fff;
+        border:1px solid #fff;
+    }
+}
+
+
+/*Form header*/
+.form-header{
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin: 30px 0;
+    position: relative;
+    font-family: $secondary-font;
+
+    .logo{
+        position: absolute;
+        left: 15px;
+        top: 0;
+    }
+}
+
+/*forms*/
+.form-heading{
+    text-transform: uppercase;
+}
+.sub-title{
+    color: $secondary-color;
+}
+
+.forms{
+    .checkbox, .radio{
+        margin-top: 0;
+    }
+
+
+    .btn,
+    .input-group-addon,
+    .form-control{
+        border-radius: 0 !important;
+    }
+
+    .input-group-btn{
+        .fa-minus{
+            color: #2ecc71;
+        }
+        .fa-plus{
+            color: #e87111;
+        }
+    }
+}
+
+.btn-stack-group{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .btn{
+        flex:auto;
+        line-height: 0;
+        border: 0;
+    }
+}
+
+.form-footer{
+    padding: 30px;
+    position: relative;
+
+    .btn{
+        position: absolute;
+        border-radius: 0;
+        background-color: $secondary-color;
+        color: #fff;
+        font-size: 28px;
+        padding: 15px 20px;
+        display: flex;
+        align-items: center;
+
+        &-prev{
+            left: 0;
+        }
+        &-next{
+            right: 0;
+        }
+    }
+
+}
+

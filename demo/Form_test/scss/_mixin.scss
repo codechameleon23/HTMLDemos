@@ -1,0 +1,11 @@
+//*Transition mixin*//
+$easing: cubic-bezier(0.645, 0.045, 0.355, 1);
+$t: .5s;
+$what: all;
+@mixin transition($what: $what, $time: $t, $how: $easing) {
+    -webkit-transition: $what $time $how;
+    -moz-transition: $what $time $how;
+    -ms-transition: $what $time $how;
+    -o-transition: $what $time $how;
+    transition: $what $time $how;
+}
