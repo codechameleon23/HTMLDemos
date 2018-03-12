@@ -901,8 +901,6 @@ img { vertical-align: middle; }
 
 .mesonry .brick { margin-bottom: 20px; -webkit-column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid; }
 
-@media (max-width: 970px) { .mesonry { -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; } }
-
 /*card-block
 -------------------------------------------*/
 .card-block { padding: 15px; color: #fff; display: block; text-decoration: none; }
@@ -988,10 +986,9 @@ img { vertical-align: middle; }
   /*Header*/
   .header .social-contact { text-align: center; }
   .header .logo-display { -webkit-box-ordinal-group: 0; -webkit-order: -1; -ms-flex-order: -1; order: -1; }
-  .header .contact-group { font-size: 13px; }
+  .header .contact-group { font-size: 13px; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; }
   .header .contact-group.link-group .link:first-child { padding-left: 10px; }
   .logo.display_1, .logo.display_4 { font-size: 40px; }
-  .mesonry { -webkit-columns: 1; -moz-columns: 1; columns: 1; }
   .card-row .card-img { margin-bottom: 30px; }
   .card-row .card-body { -webkit-box-ordinal-group: 2; -webkit-order: 1; -ms-flex-order: 1; order: 1; }
   .follow-us a { font-size: 20px; }
@@ -999,8 +996,13 @@ img { vertical-align: middle; }
   .card-info { text-align: center; }
   .card-info .card-img { margin-left: auto; margin-right: auto; }
   .testimonials-carousel .slick-prev, .testimonials-carousel .slick-next { top: 80px; }
+  .mesonry { -webkit-columns: 2; -moz-columns: 2; columns: 2; }
   /*Footer*/
   .footer .logo.display_4.tag-l { -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
   .footer .site-map { margin-top: 30px; text-align: center; }
   .footer .site-map > p { margin-bottom: 15px; }
   .footer .site-map .link-group .link { display: block; border: 0; padding: 0; margin-bottom: 5px; } }
+
+@media (max-width: 480px) { .mesonry .brick { text-align: center; }
+  .mesonry .brick .card-box { width: auto; }
+  .mesonry { -webkit-columns: 1; -moz-columns: 1; columns: 1; } }
