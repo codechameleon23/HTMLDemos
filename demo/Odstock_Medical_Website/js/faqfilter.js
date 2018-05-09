@@ -3,7 +3,7 @@
 
     var $imgs = $('#FAQList .accordion');
     var $buttons = $('#FAQfilter');
-    var $buttonActiveClass = 'button-fill';
+    var $buttonActiveClass = 'active';
     var $buttonDefaultClass = '';
     var tagged = {};
 
@@ -28,7 +28,7 @@
     //text: 'Show All', 
         href : "javascript:void(0)",
         html: '<b>All</b>',
-        class: 'button button-primary button-thin button-lg '+$buttonActiveClass,
+        class: 'button button-primary button-thin button-lg button-outline '+$buttonActiveClass,
         click: function() {
             $(this)
             .removeClass($buttonDefaultClass)
@@ -50,7 +50,7 @@
             //text: tagName + '(' + $n + ')',
             href : "javascript:void(0)",
             html: '<b>'+tagName+'</b>',
-            class: 'button button-primary button-thin button-lg '+$buttonDefaultClass,
+            class: 'button button-primary button-thin button-lg button-outline '+$buttonDefaultClass,
             click: function() {
                 $(this)
                 .removeClass($buttonDefaultClass)
