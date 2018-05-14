@@ -543,15 +543,7 @@ select.size-w-lg {
 ----------------------------------------*/
 .custom-radio,
 .custom-check {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 7px;
+  display: inline-block;
 }
 
 .custom-radio > input[type="radio"],
@@ -570,10 +562,8 @@ select.size-w-lg {
   width: 15px;
   background-color: #ffffff;
   border: 1px solid #4f9fc9;
-  margin-top: 7px;
   margin-bottom: auto;
   display: inline-block;
-  vertical-align: bottom;
   -webkit-box-flex: 0;
   -webkit-flex: none;
       -ms-flex: none;
@@ -1211,6 +1201,7 @@ input[type="button"] {
   background-color: transparent;
   border-color: gray;
   text-decoration: none;
+  white-space: pre-wrap;
 }
 
 .button:hover, .button:focus,
@@ -1316,6 +1307,7 @@ input[type="button"] + input[type="button"] {
 /* Links
 ---------------------------------*/
 a {
+  vertical-align: baseline;
   color: inherit;
   text-decoration: none;
   -webkit-transition: color .2s ease-in-out;
@@ -2709,6 +2701,7 @@ table, table thead, table tbody, table tr, table th, table td {
 .card {
   width: 100%;
   height: 100%;
+  float: left;
   text-align: center;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2761,9 +2754,9 @@ table, table thead, table tbody, table tr, table th, table td {
       -ms-flex-direction: column;
           flex-direction: column;
   -webkit-box-flex: 1;
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -webkit-flex: auto;
+      -ms-flex: auto;
+          flex: auto;
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
@@ -4063,6 +4056,7 @@ table, table thead, table tbody, table tr, table th, table td {
   height: 3px;
   width: 100%;
   background-color: #4f9fc9;
+  right: 0;
 }
 
 .popup-close:before {
@@ -5326,7 +5320,18 @@ table, table thead, table tbody, table tr, table th, table td {
     max-width: 151px;
   }
   .heading-group .text-title {
-    max-width: 70%;
+    width: 60%;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .heading-group .breadcrumbs {
+    width: 40%;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
   .bigFES > *:first-child {
     width: 95px;
@@ -5346,5 +5351,16 @@ table, table thead, table tbody, table tr, table th, table td {
   .navigation .brand-logo {
     width: 302px;
     margin-right: 0;
+  }
+  .accordion-type_2 .accordion-toggle:before, .accordion-type_2 .accordion-toggle:after {
+    left: 10px;
+    top: 18px;
+    -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  .accordion-type_2 .accordion-toggle:before {
+    top: 10px;
+    left: 18px;
   }
 }
