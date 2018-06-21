@@ -11,7 +11,8 @@ $(".search_toggle").on('click',  function(){
 // Initialize the Contact form Popup 
 $('.popup').popup({
     scrolllock : true,
-    color : '#fff'
+    color : '#fff',
+    //opacity : '.3'
 });
 
 $('#chooseBranch').popup({
