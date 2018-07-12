@@ -42,7 +42,7 @@ $(function(){
     var shakers = [];
     var sc = 0;
     var sc_timer;
-    var sc_interval = 3100;//Start time
+    var sc_interval = 5600;//Start time
 
     $('.shaker').each(function(){
         shakers.push($(this));
@@ -75,7 +75,7 @@ $(function(){
     var pulsers = [];
     var pc = 0;
     var pc_timer;
-    var pc_interval = 5900;//Start time
+    var pc_interval = 3700;//Start time
 
     $('.pulser').each(function(){
         pulsers.push($(this));
