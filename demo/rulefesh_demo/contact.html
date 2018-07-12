@@ -27,6 +27,7 @@
             </div>
             <nav class="navbar">
                 <ul>
+                    <li class="nav_index"><a href="index.html">home</a></li>
                     <li class="nav_services"><a href="services.html">services</a></li>
                     <li class="nav_portfolio"><a href="index.html#portfolio_1">portfolio</a></li>
                     <li class="nav_about"><a href="about.html">about</a></li>
@@ -103,30 +104,29 @@
                     <h1 class="title text_highlight">Contact us today</h1>
                     <h2 class="h3 subtitle">don't worry if you are unsure on what you may need, just pop your details in to the contact form and we'll get back to you shortly</h2>
                     <div class="grid grid-gutter grid-list contact-us">
-                        <div class="col-5 col-xs-12">
-                            <form class="form">
-                                <div class="field"><input type="text" placeholder="Name*"></div>
-                                <div class="field"><input type="text" placeholder="Email*"></div>
-                                <div class="field"><input type="text" placeholder="Telephone"></div>
-                                <div class="field"><textarea placeholder="Message*"></textarea></div>
-                                <div class="field form-footer grid">
-                                    <div class="col">
-                                        <a href="#" class="button"><span class="rollover">Contact Us</span></a>
+                        <div class="col-8 col-xs-12">
+                            <form>
+                                <div class="grid grid-gutter grid-list">
+                                    <div class="col-6 col-xs-12 form">
+                                        <div class="field"><input type="text" placeholder="Name*"></div>
+                                        <div class="field"><input type="text" placeholder="Email*"></div>
+                                        <div class="field"><input type="text" placeholder="Telephone"></div>
                                     </div>
-                                    <div class="col text-right">
-                                        <small>*required field</small>
+                                    <div class="col-6 col-xs-12 form">
+                                        <div class="field"><textarea placeholder="Message*"></textarea></div>
+                                        <div class="field form-footer grid">
+                                            <div class="col">
+                                                <small>*required field</small>
+                                            </div>
+                                            <div class="col text-right">
+                                                <a href="#" class="button"><span class="rollover">Contact Us</span></a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </form>
                         </div>
-                        <div class="col-7 col-xs-12">
-                            <!--S: Map -->
-                            <div class="map-wrap">
-                                <div id="map-canvas" class="map"></div>
-                            </div>
-                            <!--E: Map -->
-                        </div>
-                        <div class="col-5 col-xs-12 text-center">
+                        <div class="col-4 col-xs-12 text-center">
                             <div class="contact-details h2">
                                 <p><a href="mailto:hello@rulefresh.com">hello@rulefresh.com</a></p>
                                 <p><a href="tel:+44(0)1903715781">+44(0)1903715781</a></p>
@@ -166,7 +166,7 @@
 
     <!-- Privacy Policy poppup -->
     <div id="privacypolicy_popup" class="popup theme-bg">
-        <a href="#" class="popup-close privacypolicy_popup_close"></a>
+        <a href="#" class="popup-close privacypolicy_popup_close text_highlight"><b>X</b></a>
         <div class="popup-body" data-content="privacy_notice.html">
             <!-- Ajax will load content here from data-content -->
         </div>
@@ -175,7 +175,6 @@
 
 </body>
 <script src="js/jquery-3.3.1.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACmR3AFoBOpEF2QkCt5zpvn7qiOGm-sqo"></script>
 <script src="js/imgtosvg.js"></script>
 <script src="js/jquery.popupoverlay.js"></script>
 <script src="js/jquery.scrollify.js"></script>
@@ -188,6 +187,5 @@
         
     });
 </script>
-<script src="js/mapscript.js"></script>
 
 </html>
