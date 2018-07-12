@@ -5,31 +5,106 @@ $(function(){
         $(this).toggleClass("is-active");
     });
 
-    /*Hero animation one after another*/
+    /*Bounce one after another*/
     var bouncers = [];
+    var bc = 0;
+    var bc_timer;
+    var bc_interval = 4500;//Start time
     
     $('.bouncer').each(function(){
         bouncers.push($(this));
     });
 
-    c = 0;
-    var timer;
+    bcFirsttime();
+    function bcFirsttime(){
+        toggleBounce();
+        bounceOnebyOne();
+    }
     
-    bounceOnebyOne();
-
     function bounceOnebyOne() {
-        timer = setInterval(function(){
-            //console.log(c);
-            $('.bouncer').removeClass('animated bounceIt');
-            $(bouncers[c]).addClass('animated bounceIt');
-            
-            if(c < bouncers.length - 1){
-                c++;
-            }else{
-                c = 0;
-            }
+        bc_timer = setInterval(function(){    
+            toggleBounce();
+        }, bc_interval);
+    }
 
-        }, 4100);
+    function toggleBounce(){
+        $('.bouncer').removeClass('animated bounceIt');
+        $(bouncers[bc]).addClass('animated bounceIt');
+        
+        if(bc < bouncers.length - 1){
+            bc++;
+        }else{
+            bc = 0;
+        }
+    }
+    
+    /*Shake one after another*/
+    var shakers = [];
+    var sc = 0;
+    var sc_timer;
+    var sc_interval = 3100;//Start time
+
+    $('.shaker').each(function(){
+        shakers.push($(this));
+    });
+    
+    scFirsttime();
+    function scFirsttime(){
+        toggleShake();
+        shakeOnebyOne();
+    }
+    
+    function shakeOnebyOne() {
+        sc_timer = setInterval(function(){
+            toggleShake()
+        }, sc_interval);
+    }
+
+    function toggleShake(){
+        $('.shaker').removeClass('animated shakeIt');
+        $(shakers[sc]).addClass('animated shakeIt');
+    
+        if(sc < shakers.length - 1){
+            sc++;
+        }else{
+            sc = 0;
+        }
+    }
+    
+    /*Pulse one after another*/
+    var pulsers = [];
+    var pc = 0;
+    var pc_timer;
+    var pc_interval = 5900;//Start time
+
+    $('.pulser').each(function(){
+        pulsers.push($(this));
+    });
+
+    pcFirsttime();
+    function pcFirsttime(){
+        togglePulse();
+        pulseOnebyOne();
+    }
+
+    function pulseOnebyOne() {
+        pc_timer = setInterval(function(){
+            togglePulse()
+        }, pc_interval);
+    }
+
+    function togglePulse(){
+        $('.pulser').removeClass('animated pulseIt');
+
+        setTimeout(function(){
+            $(pulsers[pc]).addClass('animated pulseIt');            
+        }, 500)
+
+        if(pc < pulsers.length - 1){
+            pc++;
+        }else{
+            pc = 0;
+        }
     }
 
     /* Section wise scroll*/
@@ -45,10 +120,14 @@ $(function(){
     
             if(index > 0){
                 $('body').addClass('not-slide_1');
-                clearInterval(timer);
+                clearInterval(bc_timer);
+                clearInterval(sc_timer);
+                clearInterval(pc_timer);
             }else{
                 $('body').removeClass('not-slide_1');
                 bounceOnebyOne();
+                shakeOnebyOne();
+                pulseOnebyOne();
             }
         },
         afterRender:function() {
