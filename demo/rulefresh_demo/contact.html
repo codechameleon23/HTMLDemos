@@ -115,25 +115,25 @@
                             </div>
                         </div>
                         <div class="col-8 col-sm-12">
-                            <form class="contact__form" method="post" action="mail.php">
+                            <form id="ajax-contact" method="post" action="mail.php">
 
-                                <div class="alert alert-success contact__msg" style="display: none" role="alert">Your message was sent successfully.</div>
+                                <div id="form-messages text_highlight"></div>
 
                                 <div class="grid grid-gutter">
                                     <div class="col-6 col-xs-12 form">
                                         <div class="field">
-                                            <input name="name" type="text" placeholder="Name*" required>
+                                            <input id="name" name="name" type="text" placeholder="Name*" required>
                                         </div>
                                         <div class="field">
-                                            <input name="email" type="email" placeholder="Email*" required>
+                                            <input id="email"  name="email" type="email" placeholder="Email*" required>
                                         </div>
                                         <div class="field">
-                                            <input name="phone" type="text" placeholder="Telephone">
+                                            <input id="phone" name="phone" type="text" placeholder="Telephone">
                                         </div>
                                     </div>
                                     <div class="col-6 col-xs-12 form">
                                         <div class="field">
-                                            <textarea name="message"placeholder="Message*" required></textarea>
+                                            <textarea id="message" name="message"placeholder="Message*" required></textarea>
                                         </div>
                                         <div class="field form-footer grid">
                                             <div class="col">
