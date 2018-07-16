@@ -156,11 +156,9 @@ ul { list-style: disc; }
 
 @media all and (max-width: 1380px) { .container { width: 100%; } }
 
-.wrapper { min-height: 100vh; padding-top: 14vh; padding-bottom: 14vh; opacity: 0; -webkit-transition: all .7s .35s ease-in-out; -o-transition: all .7s .35s ease-in-out; transition: all .7s .35s ease-in-out; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+.wrapper { height: 100%; opacity: 0; -webkit-transition: all .7s .35s ease-in-out; -o-transition: all .7s .35s ease-in-out; transition: all .7s .35s ease-in-out; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -ms-flex-wrap: wrap; flex-wrap: wrap; }
 
 .active .wrapper { opacity: 1; }
-
-#fullpage > .section { min-height: 100vh; }
 
 .grid { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; }
 
@@ -461,9 +459,9 @@ body[data-theme="theme_brand_yellow"][data-section-name="website"] .websites, bo
 
 /* Spacing
 // –––––––––––––––––––––––––––––––––––––––––––––––––– */
-dd, dt, li { margin-bottom: 1.5rem; }
+dd:not(:last-child), dt:not(:last-child), li:not(:last-child) { margin-bottom: 1.5rem; }
 
-h1:not(:last-child), h2:not(:last-child), h3:not(:last-child), h4:not(:last-child), h5:not(:last-child), h6:not(:last-child) { margin-bottom: 2.3rem; }
+h1:not(:last-child), h2:not(:last-child), h3:not(:last-child), h4:not(:last-child), h5:not(:last-child), h6:not(:last-child) { margin-bottom: 2rem; }
 
 fieldset:not(:last-child), input:not(:last-child), select:not(:last-child), textarea:not(:last-child) { margin-bottom: 1.2rem; }
 
@@ -614,6 +612,8 @@ label > .label-body { display: inline-block; margin-left: 15px; font-weight: nor
 .navbar ul li:last-child a { padding-right: 0; }
 
 /*Footer*/
+.footer-line { margin: 2.3vh 0 0; }
+
 .footer { position: fixed; left: 0; right: 0; bottom: 0; padding: 2vh 0 0; overflow: hidden; }
 
 .footer .footer-bottom { margin-top: 4vh; margin-bottom: 1vh; }
@@ -631,8 +631,6 @@ body[data-footer="default_footer"] .footer .default_footer, body[data-footer="fo
 
 .hero-banner { position: fixed; z-index: 998; left: 0; top: 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-transition: height .35s ease-in-out; -o-transition: height .35s ease-in-out; transition: height .35s ease-in-out; }
 
-.hero-banner { height: 37vh; }
-
 .hero-banner, .hero-wrapper { width: 100%; }
 
 .hero-wrapper { height: 100%; position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
@@ -647,11 +645,9 @@ body:not(.not-slide_1) .floating { -webkit-animation: floating .7s .3s ease-in-o
 
 body:not(.home-page) .floating, body.not-slide_1 .floating { opacity: 0; }
 
-body:not(.home-page) .hero-banner .floating-wrap, body.not-slide_1 .hero-banner .floating-wrap { padding-top: 5vh; height: 100%; }
+body:not(.home-page) .hero-banner .floating-wrap, body.not-slide_1 .hero-banner .floating-wrap { height: 100%; }
 
 body:not(.home-page) .hero-banner .floating-wrap .row, body.not-slide_1 .hero-banner .floating-wrap .row { -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 94%; }
-
-.has-hero .wrapper { padding-top: 38vh; }
 
 @-webkit-keyframes floating { 0% { margin-bottom: -20vh;
     opacity: 0; }
@@ -851,7 +847,7 @@ body[data-section-name="contact_us"] .wrapper { padding-bottom: 5vh; }
 
 /* Hamburger
 ------------------------------------- */
-.hamburger { width: 3vh; height: 3vh; right: 1rem; margin: 0 0px 2.5rem auto; -webkit-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg); -webkit-transition: .5s ease-in-out; -o-transition: .5s ease-in-out; transition: .5s ease-in-out; cursor: pointer; position: relative; z-index: 3; }
+.hamburger { width: 3vh; height: 3vh; margin: 0 0px 2.5rem auto; -webkit-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg); -webkit-transition: .5s ease-in-out; -o-transition: .5s ease-in-out; transition: .5s ease-in-out; cursor: pointer; position: relative; z-index: 3; }
 
 .hamburger span { display: block; position: absolute; height: .2vh; width: 100%; background-color: #ffffff; border-radius: 2px; opacity: 1; left: 0; -webkit-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg); -webkit-transition: .25s ease-in-out; -o-transition: .25s ease-in-out; transition: .25s ease-in-out; }
 
@@ -869,7 +865,23 @@ body[data-section-name="contact_us"] .wrapper { padding-bottom: 5vh; }
 
 .hamburger.is-active span:nth-child(4) { top: 6px; width: 0%; left: 50%; }
 
-@media all and (min-width: 801px) { .nav_index, .hamburger { display: none; } }
+#fullpage > .section .wrapper { min-height: 100%; padding-top: 38vh; padding-bottom: 14vh; }
+
+.hero-banner { height: 37vh; }
+
+body:not(.home-page) .hero-banner .floating-wrap, body.not-slide_1 .hero-banner .floating-wrap { padding-top: 9vh; }
+
+/* Portrait */
+@media only screen and (max-width: 800px) and (orientation: portrait) { .hero-banner { height: 27vh; }
+  body.home-page.not-slide_1 .hero-banner { height: 27vh; }
+  body:not(.home-page) .hero-banner .floating-wrap, body.not-slide_1 .hero-banner .floating-wrap { -webkit-transform: scale(0.89); -ms-transform: scale(0.89); transform: scale(0.89); }
+  #fullpage > .section .wrapper { padding-top: 29vh; padding-bottom: 8vh; }
+  .social-contact img { height: 3vh; width: 3vh; } }
+
+@media only screen and (max-width: 800px) { .default_footer, .footer_2 { display: none !important; }
+  .footer .footer-bottom { margin-top: 0; } }
+
+@media all and (min-width: 801px) { .visible-sm, .nav_index, .hamburger { display: none; } }
 
 @media all and (max-width: 800px) { /*Navbar*/
   .hamburger.is-active + .navbar { max-height: 10000px; }
@@ -910,9 +922,6 @@ body[data-section-name="contact_us"] .wrapper { padding-bottom: 5vh; }
   h6, .h6 { font-size: 1.6vh; letter-spacing: 0; line-height: 1.4; }
   .brand-logo { height: 5vh; width: 5vh; }
   .floating-wrap .row .up { -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); }
-  .hero-banner, body.home-page.not-slide_1 .hero-banner { height: 25vh; }
-  .has-hero .wrapper { padding-top: 26vh; }
-  body:not(.home-page) .hero-banner .floating-wrap, body.not-slide_1 .hero-banner .floating-wrap { padding-top: 4vh; }
   .hero-banner .display_1 { font-size: 9vh; line-height: 1; }
   .control > span { display: none !important; }
   .floating-tags.title._md { font-size: 4vh; }
@@ -930,13 +939,10 @@ body[data-section-name="contact_us"] .wrapper { padding-bottom: 5vh; }
   .services { -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
   .services .services-ico { width: 40%; -webkit-box-flex: 0; -ms-flex: none; flex: none; margin-bottom: 2.5vh; }
   .services .services-ico img { max-width: 12vh; height: 10vh; }
-  .hero-banner, .footer { -webkit-box-shadow: 0 0 3vh 0 rgba(0, 0, 0, 0.3); box-shadow: 0 0 3vh 0 rgba(0, 0, 0, 0.3); }
+  .footer { -webkit-box-shadow: 0 0 3vh 0 rgba(0, 0, 0, 0.3); box-shadow: 0 0 3vh 0 rgba(0, 0, 0, 0.3); }
   body[data-section-name="contact_us"] .footer .footer-bottom { margin-top: 0; } }
 
-@media only screen and (max-width: 480px) and (orientation: portrait) { .hero-banner, body.home-page.not-slide_1 .hero-banner { height: 24vh; }
-  .has-hero .wrapper { padding-top: 25vh; }
-  body:not(.home-page) .hero-banner .floating-wrap, body.not-slide_1 .hero-banner .floating-wrap { padding-top: 8vh; }
-  body:not(.home-page) .hero-banner .floating-wrap .row, body.not-slide_1 .hero-banner .floating-wrap .row { width: 100%; }
+@media only screen and (max-width: 480px) and (orientation: portrait) { body:not(.home-page) .hero-banner .floating-wrap .row, body.not-slide_1 .hero-banner .floating-wrap .row { width: 100%; }
   .floating-wrap .icons { width: 3vh; height: 3vh; }
   .floating-tags.title._md { font-size: 2.8vh; }
   body:not(.home-page) .hero-banner .floating-wrap, body.not-slide_1 .hero-banner .floating-wrap { -webkit-transform: scale(0.89); -ms-transform: scale(0.89); transform: scale(0.89); }
