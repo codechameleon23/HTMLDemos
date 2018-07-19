@@ -276,11 +276,11 @@ function pageActive(currentSlide){
     currentSlide = $.scrollify.current();
     var navactive = currentSlide.attr('data-nav');
     var sectionName = currentSlide.attr('data-section-name');
-    var pageThene = currentSlide.attr('data-theme');
+    var pageTheme = currentSlide.attr('data-theme');
     var slideFooter = currentSlide.attr('data-footer');
 
     $('body').attr({'data-theme':''}).attr({
-        'data-theme': pageThene ? pageThene : '',
+        'data-theme': pageTheme ? pageTheme : '',
         'data-footer': slideFooter ? slideFooter : "default_footer",
         'data-nav': navactive ? navactive : '',
         'data-section-name': sectionName ? sectionName : ''
