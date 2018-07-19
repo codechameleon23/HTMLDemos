@@ -186,7 +186,8 @@ $(function(){
 	// Set up an event listener for the contact form.
 	$(form).submit(function(e) {
         // Stop the browser from submitting the form.
-        $(this).find('.button').attr('disabled', 'disabled');
+        $(form).find('.button').prop('value', 'submitting..').attr('disabled', 'disabled');
+        
 		e.preventDefault();
 		// Serialize the form data.
 		var formData = $(form).serialize();
@@ -201,14 +202,17 @@ $(function(){
             $(formMessages).fadeIn();
 			// Set the message text.
             $(formMessages).text(response);
+
             setTimeout(function () {
                 $(formMessages).fadeOut();
+                $(form).find('.button').prop('value', 'submit').removeAttr("disabled"); 
             }, 2000);
 			// Clear the form.
 			$('#name').val('');
 			$('#email').val('');
 			$('#phone').val('');
-			$('#message').val('');
+            $('#message').val('');
+
 		})
 		.fail(function(data) {
 			// Make sure that the formMessages div has the 'error' class.
@@ -219,8 +223,10 @@ $(function(){
 			} else {
 				$(formMessages).text('Oops! An error occured and your message could not be sent.');
             }
+
             setTimeout(function () {
                 $(formMessages).fadeOut();
+                $(form).find('.button').prop('value', 'submit').removeAttr("disabled"); 
             }, 2000);
 		});
 
