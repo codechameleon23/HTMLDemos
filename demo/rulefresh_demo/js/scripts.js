@@ -238,7 +238,7 @@ $(function(){
 
         var instaFeed = new Instafeed({
             get: 'user',
-            userId: '7834359227',//7834359227
+            userId: '7834359227',
             accessToken: '7834359227.8a9cc2b.46a8a4d456a04cebb8d32d59fc1ab52f',
             tagName: '',
             limit : 4,
