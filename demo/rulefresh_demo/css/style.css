@@ -136,11 +136,13 @@ h6, .h6 { font-size: 2.4vh; letter-spacing: 0; line-height: 1.4; }
 a { color: inherit; text-decoration: none; }
 
 /*Button*/
-.button, button, input[type='button'], input[type='reset'], input[type='submit'] { font-weight: 700; font-size: 2.6vh; line-height: 1.6; border: 0; background-color: rgba(0, 0, 0, 0.2); display: inline-block; vertical-align: bottom; padding: 1vh 1em; border-radius: 1rem; white-space: nowrap; color: inherit; display: inline-block; }
+.button, button, input[type='button'], input[type='reset'], input[type='submit'] { font-weight: 700; font-size: 2.6vh; line-height: 1.6; border: 0; background-color: rgba(0, 0, 0, 0.2); display: inline-block; vertical-align: bottom; padding: 1vh 1em; border-radius: 1rem; white-space: nowrap; color: inherit; display: inline-block; cursor: pointer; }
 
 .button:hover, button:hover, input[type='button']:hover, input[type='reset']:hover, input[type='submit']:hover { background-color: rgba(0, 0, 0, 0.4); }
 
 .button.is-rounded, button.is-rounded, input[type='button'].is-rounded, input[type='reset'].is-rounded, input[type='submit'].is-rounded { border-radius: 3rem; }
+
+.button[disabled], button[disabled], input[type='button'][disabled], input[type='reset'][disabled], input[type='submit'][disabled] { opacity: .1; }
 
 /* List
 // –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -151,6 +153,12 @@ dl dl, dl ol, dl ul, ol dl, ol ol, ol ul, ul dl, ul ol, ul ul { font-size: 90%; 
 ol { list-style: decimal; }
 
 ul { list-style: disc; }
+
+.list { list-style: none; padding-left: 1vh; }
+
+.list li { padding-left: 2.6rem; position: relative; }
+
+.list li:before { content: ""; position: absolute; left: 0; top: 1.2vh; height: 0; width: 0; color: inherit; border: .5vh solid; border-radius: 100%; }
 
 .container { margin: 0 auto; padding: 0 2.5vh; position: relative; width: 96%; }
 
@@ -645,7 +653,7 @@ body:not(.not-slide_1) .floating { -webkit-animation: floating .7s .3s ease-in-o
 
 body:not(.home-page) .floating, body.not-slide_1 .floating { opacity: 0; }
 
-body:not(.home-page) .hero-banner .floating-wrap, body.not-slide_1 .hero-banner .floating-wrap { height: 100%; }
+body:not(.home-page) .hero-banner .floating-wrap, body.not-slide_1 .hero-banner .floating-wrap { -webkit-transform: scale(0.85); -ms-transform: scale(0.85); transform: scale(0.85); height: 100%; }
 
 body:not(.home-page) .hero-banner .floating-wrap .row, body.not-slide_1 .hero-banner .floating-wrap .row { -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 94%; }
 
@@ -690,6 +698,8 @@ body:not(.home-page) .hero-banner .floating-wrap .row, body.not-slide_1 .hero-ba
 .floating-wrap .row .solcialMedia { white-space: nowrap; }
 
 .floating-wrap .row .charities { line-height: 1; }
+
+.floating-wrap .row .charities .icons { margin: 1vh 1vh 0; }
 
 .floating-wrap .row .rf_heart { text-align: right; padding: 0; margin: auto; }
 
@@ -845,6 +855,20 @@ body[data-section-name="contact_us"] .wrapper { padding-bottom: 5vh; }
 
 .form { margin-top: 3vh; }
 
+.strip-carousel-wrapper { position: relative; overflow: hidden; padding-bottom: 5rem; display: inline-block; width: 100%; }
+
+.strip-carousel-wrapper .strip-carousel { margin-left: -1vh; margin-right: -1vh; width: auto; }
+
+.strip-carousel-wrapper .strip-carousel .item .item-img { padding: 0 1vh; position: relative; }
+
+.strip-carousel-wrapper .strip-carousel .item .item-img:before { display: block; content: ""; width: 100%; padding-top: 100%; }
+
+.strip-carousel-wrapper .strip-carousel .item .img-wrap { position: absolute; top: 0; bottom: 0; right: 1vh; left: 1vh; overflow: hidden; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+
+.strip-carousel-wrapper .strip-carousel .item .img-wrap img { -webkit-transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1); -o-transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1); transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1); -o-object-fit: cover; object-fit: cover; min-height: 100%; min-width: 100%; height: auto; }
+
+.strip-carousel-wrapper .strip-carousel .item:hover .img-wrap img { -webkit-transform: scale(1.1); -ms-transform: scale(1.1); transform: scale(1.1); }
+
 /* Hamburger
 ------------------------------------- */
 .hamburger { width: 3vh; height: 3vh; margin: 0 0px 2.5rem auto; -webkit-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg); -webkit-transition: .5s ease-in-out; -o-transition: .5s ease-in-out; transition: .5s ease-in-out; cursor: pointer; position: relative; z-index: 3; }
@@ -872,9 +896,11 @@ body[data-section-name="contact_us"] .wrapper { padding-bottom: 5vh; }
 body:not(.home-page) .hero-banner .floating-wrap, body.not-slide_1 .hero-banner .floating-wrap { padding-top: 9vh; }
 
 /* Portrait */
-@media only screen and (max-width: 800px) and (orientation: portrait) { .hero-banner { height: 27vh; }
+@media all and (orientation: landscape) { .vertical-only { display: none; } }
+
+@media all and (orientation: portrait) { .hero-banner { height: 27vh; }
   body.home-page.not-slide_1 .hero-banner { height: 27vh; }
-  body:not(.home-page) .hero-banner .floating-wrap, body.not-slide_1 .hero-banner .floating-wrap { -webkit-transform: scale(0.89); -ms-transform: scale(0.89); transform: scale(0.89); }
+  body:not(.home-page) .hero-banner .floating-wrap, body.not-slide_1 .hero-banner .floating-wrap { -webkit-transform: scale(0.7); -ms-transform: scale(0.7); transform: scale(0.7); }
   #fullpage > .section .wrapper { padding-top: 29vh; padding-bottom: 8vh; }
   .social-contact img { height: 3vh; width: 3vh; } }
 
@@ -883,7 +909,7 @@ body:not(.home-page) .hero-banner .floating-wrap, body.not-slide_1 .hero-banner 
 
 @media all and (min-width: 801px) { .visible-sm, .nav_index, .hamburger { display: none; } }
 
-@media all and (max-width: 800px) { /*Navbar*/
+@media all and (max-width: 800px), (orientation: portrait) { /*Navbar*/
   .hamburger.is-active + .navbar { max-height: 10000px; }
   .hamburger.is-active + .navbar ul li { opacity: 1; }
   .hamburger.is-active + .navbar ul li:nth-child(1) { -webkit-animation: 0.7s 0.1s fadeInRight both; animation: 0.7s 0.1s fadeInRight both; }
@@ -912,7 +938,7 @@ body:not(.home-page) .hero-banner .floating-wrap, body.not-slide_1 .hero-banner 
   .navbar ul li a, .navbar ul li:first-child a, .navbar ul li:last-child a { width: 100%; display: inline-block; padding: 0 1.5rem; text-align: right; } }
 
 /* Portrait */
-@media only screen and (max-width: 800px) and (orientation: portrait) { body { font-size: 2vh; }
+@media all and (orientation: portrait) { body { font-size: 2.2vh; }
   h1, h2, h3, h4, h5, h6 { font-weight: 300; letter-spacing: -0.1rem; }
   h1, .h1 { font-size: 3vh; line-height: 1.35; }
   h2, .h2 { font-size: 2.8vh; line-height: 1.25; }
@@ -940,12 +966,10 @@ body:not(.home-page) .hero-banner .floating-wrap, body.not-slide_1 .hero-banner 
   .services .services-ico { width: 40%; -webkit-box-flex: 0; -ms-flex: none; flex: none; margin-bottom: 2.5vh; }
   .services .services-ico img { max-width: 12vh; height: 10vh; }
   .footer { -webkit-box-shadow: 0 0 3vh 0 rgba(0, 0, 0, 0.3); box-shadow: 0 0 3vh 0 rgba(0, 0, 0, 0.3); }
-  body[data-section-name="contact_us"] .footer .footer-bottom { margin-top: 0; } }
-
-@media only screen and (max-width: 480px) and (orientation: portrait) { body:not(.home-page) .hero-banner .floating-wrap .row, body.not-slide_1 .hero-banner .floating-wrap .row { width: 100%; }
+  body[data-section-name="contact_us"] .footer .footer-bottom { margin-top: 0; }
+  body:not(.home-page) .hero-banner .floating-wrap .row, body.not-slide_1 .hero-banner .floating-wrap .row { width: 100%; }
   .floating-wrap .icons { width: 3vh; height: 3vh; }
   .floating-tags.title._md { font-size: 2.8vh; }
-  body:not(.home-page) .hero-banner .floating-wrap, body.not-slide_1 .hero-banner .floating-wrap { -webkit-transform: scale(0.89); -ms-transform: scale(0.89); transform: scale(0.89); }
   body.home-page:not(.not-slide_1) .hero-banner .display_1 { font-size: 8vh; line-height: 1; }
   body.home-page:not(.not-slide_1) .hero-banner .floating-wrap { position: relative; }
   body.home-page:not(.not-slide_1) .hero-banner .row > * { position: absolute; margin: 0; }
