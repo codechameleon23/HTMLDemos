@@ -3,7 +3,6 @@
 
 $(function(){
 
-
     /*Navbar toggle*/
     $(".hamburger").on('click',  function(){
         $(this).toggleClass("is-active");
@@ -141,6 +140,9 @@ $(function(){
 
     /*Got to slide*/
     $('.goto_button').on('click', function(){
+
+        $(".hamburger").removeClass("is-active");
+
         slideName = $(this).attr('href');
         $.scrollify.instantMove(slideName);
     });
@@ -166,6 +168,7 @@ $(function(){
         }
 
     });
+
     /* Privacy Policy poppup*/
     $('#privacynotice_popup').popup({
         onopen: function() {  
@@ -173,6 +176,98 @@ $(function(){
             $('#privacynotice_popup').find('.popup-body').load(content);
         }
     });
+
+
+    /*Submit contact us form*/
+	// Get the form.
+	var form = $('#ajax-contact');
+	// Get the messages div.
+	var formMessages = $('#form-messages');
+	// Set up an event listener for the contact form.
+	$(form).submit(function(e) {
+        // Stop the browser from submitting the form.
+        $(this).find('.button').attr('disabled', 'disabled');
+		e.preventDefault();
+		// Serialize the form data.
+		var formData = $(form).serialize();
+		// Submit the form using AJAX.
+		$.ajax({
+			type: 'POST',
+			url: $(form).attr('action'),
+			data: formData
+		})
+		.done(function(response) {
+			// Make sure that the formMessages div has the 'success' class.
+            $(formMessages).fadeIn();
+			// Set the message text.
+            $(formMessages).text(response);
+            setTimeout(function () {
+                $(formMessages).fadeOut();
+            }, 2000);
+			// Clear the form.
+			$('#name').val('');
+			$('#email').val('');
+			$('#phone').val('');
+			$('#message').val('');
+		})
+		.fail(function(data) {
+			// Make sure that the formMessages div has the 'error' class.
+            $(formMessages).fadeIn();
+			// Set the message text.
+			if (data.responseText !== '') {
+				$(formMessages).text(data.responseText);
+			} else {
+				$(formMessages).text('Oops! An error occured and your message could not be sent.');
+            }
+            setTimeout(function () {
+                $(formMessages).fadeOut();
+            }, 2000);
+		});
+
+	});
+
+
+    /* instagram feeds */
+    if ($('.strip-carousel').length){//if element exists
+
+        var instaFeed = new Instafeed({
+            get: 'user',
+            userId: '7834359227',//7834359227
+            accessToken: '7834359227.8a9cc2b.46a8a4d456a04cebb8d32d59fc1ab52f',
+            tagName: '',
+            limit : 4,
+            template: '<div class="item"><div class="item-img"><a href="{{link}}" class="img-wrap"><img class="" src="{{image}}" /></a></div></div>',
+            sortBy: 'most-recent',
+            resolution : 'standard_resolution',
+            after : function(){
+
+                /*Strip carousel*/
+                stripCarousel = $('.strip-carousel');
+
+                stripCarousel.owlCarousel({
+                    items:4,
+                    loop:true,
+                    nav:false,
+                    dots:false,
+                    autoplay:true,
+                    autoplayTimeout:3000,
+                    autoplayHoverPause:true,
+                    responsive:{
+                        0:{
+                            items:3
+                        },
+                        600:{
+                            items:4
+                        }
+                    }
+                });
+
+            }
+        });
+        instaFeed.run();
+    }
+
+
 
 });
 
@@ -197,70 +292,3 @@ function pageActive(currentSlide){
     $('#fullpage >  section').removeClass('active');
     currentSlide.addClass('active');
 }
-
-
-
-/*Submit contact us form*/
-$(function() {
-
-	// Get the form.
-	var form = $('#ajax-contact');
-
-	// Get the messages div.
-	var formMessages = $('#form-messages');
-
-	// Set up an event listener for the contact form.
-	$(form).submit(function(e) {
-		// Stop the browser from submitting the form.
-		e.preventDefault();
-
-		// Serialize the form data.
-		var formData = $(form).serialize();
-
-		// Submit the form using AJAX.
-		$.ajax({
-			type: 'POST',
-			url: $(form).attr('action'),
-			data: formData
-		})
-		.done(function(response) {
-			// Make sure that the formMessages div has the 'success' class.
-            //$(formMessages).removeClass('error');
-            //$(formMessages).addClass('success');
-            $(formMessages).fadeIn();
-		
-			// Set the message text.
-            $(formMessages).text(response);
-            
-            setTimeout(function () {
-                $(formMessages).fadeOut();
-            }, 2000);
-
-			// Clear the form.
-			$('#name').val('');
-			$('#email').val('');
-			$('#phone').val('');
-			$('#message').val('');
-		})
-		.fail(function(data) {
-			// Make sure that the formMessages div has the 'error' class.
-			// $(formMessages).removeClass('success');
-            // $(formMessages).addClass('error');
-            
-            $(formMessages).fadeIn();
-
-			// Set the message text.
-			if (data.responseText !== '') {
-				$(formMessages).text(data.responseText);
-			} else {
-				$(formMessages).text('Oops! An error occured and your message could not be sent.');
-            }
-            
-            setTimeout(function () {
-                $(formMessages).fadeOut();
-            }, 2000);
-		});
-
-	});
-
-});
