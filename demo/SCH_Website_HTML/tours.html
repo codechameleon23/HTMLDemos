@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="images/favicon.png"/>
+    <title>Salisbury's Chequered History Guides</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.min.css"/>
+    <link rel="stylesheet" href="css/daterangepicker.css"/>
+    <link rel="stylesheet" href="css/magnific-popup.css"/>
+    <link rel="stylesheet" href="css/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="css/owl.theme.default.min.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<header class="header bg-primary">
+    <div class="container header-wrap">
+
+        <a href="index.html" class="brand-logo">
+            <img src="images/brand-logo.png" alt="Salisbury's Chequered History Guides"/>
+        </a>
+
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="navbar">
+            <ul>
+                <li class="active"><a href="tours.html">Tours</a></li>
+                <li><a href="guides.html">Guides</a></li>
+                <li><a href="aboutsalisbury.html">About Salisbury</a></li>
+                <li><a href="attractions.html">Attractions</a></li>
+                <li><a href="contactus.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="social icons">
+            <a href="#" class="icon is-circle"><span><i class="fab fa-facebook-f"></i></span></a>
+            <a href="#" class="icon is-circle"><span><i class="fab fa-twitter"></i></span></a>
+            <a href="#" class="icon is-circle"><span><i class="fab fa-instagram"></i></span></a>
+        </div>
+
+    </div>
+</header>
+
+<main class="main">
+
+    <!-- Search -->
+    <div class="search_wrapper">
+        <button class="btn search-toggle">
+            <span><i class="fas fa-search"></i>&nbsp;Search</span>
+            <span class="when-active"><i class="fas fa-times"></i>&nbsp;Close</span>
+        </button>
+        <div class="search_outer">
+            <div class="box bg-secondary"> 
+                <div class="container">
+                    <form class="grid has-list has-gutter_skinny">
+                        <div class="col col-sm-6 col-xs-12">
+                            <div class="field select">
+                                <select>
+                                    <option value="-1">Tour type</option>
+                                    <option value="">Popular Tours</option>
+                                    <option value="">Package Tours</option>
+                                    <option value="">Group Tours</option>
+                                </select>
+                                <span class="ico fas fa-angle-down"></span>
+                            </div>
+                        </div>
+                        <div class="col col-sm-6 col-xs-12">
+                            <div class="field select">
+                                <select>
+                                    <option value="-1">Area</option>
+                                    <option value="">city centre</option>
+                                    <option value="">old sarum</option>
+                                    <option value="">new forest</option>
+                                    <option value="">Jurassic Coast</option>
+                                    <option value="">Stonehenge</option>
+                                </select>
+                                <span class="ico fas fa-angle-down"></span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="field">
+                                <input type="text" placeholder="Keyword (optional)"/>
+                            </div>
+                        </div>
+                        <div class="col col-auto m_l-auto">
+                            <div class="m_l-auto">
+                                <button class="btn has-icon">
+                                    <span class="ico fas fa-search"></span>
+                                    <span>Search</span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cards list with filter -->
+    <section class="section filter_parent">
+        <div class="container section-wrap">
+
+            <!-- Heading and filter -->
+            <div class="heading">
+                <div class="title-wrap"><h2 class="h1 title"><b>Tours of</b> Salisbury</h2></div>
+                <div class="aside btns">
+                    <button class="btn has-icon filter_toggle">
+                        <span class="ico fas fa-filter"></span>
+                        <span>Filter</span>
+                    </button>
+                </div>
+
+                <!-- Filter panel -->
+                <div class="col-12 filter_panel">
+                    <div class="box is-rounded border">
+                        <div class="grid grid-1 has-gutter_skinny has-list">
+                            <div class="col">
+                                <div class="grid has-gutter has-list_skinny">
+                                    <div class="col col-auto col-sm-3 col-xs-12">
+                                        <span class="sub-title h4">Tour Type:</span>
+                                    </div>
+                                    <div class="col">
+                                        <div class="grid has-gutter_hairline has-list">
+
+                                            <div class="col col-auto">
+                                                <button class="btn btn-outline btn-default pill filter_tab" data-filterby="Popular_Tours">
+                                                    <span>Popular Tours</span>
+                                                    <span class="close_ico arrow ico_only _close _xs"></span>
+                                                </button>
+                                            </div>
+                                            <div class="col col-auto">
+                                                <button class="btn btn-outline btn-default pill filter_tab" data-filterby="Package_Tours">
+                                                    <span>Package Tours</span>
+                                                    <span class="close_ico arrow ico_only _close _xs"></span>
+                                                </button>
+                                            </div>
+                                            <div class="col col-auto">
+                                                <button class="btn btn-outline btn-default pill filter_tab" data-filterby="Group_Tours">
+                                                    <span>Group Tours</span>
+                                                    <span class="close_ico arrow ico_only _close _xs"></span>
+                                                </button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="grid has-gutter has-list_skinny">
+                                    <div class="col col-auto col-sm-3 col-xs-12">
+                                        <span class="sub-title h4">Area:</span>
+                                    </div>
+                                    <div class="col">
+                                        <div class="grid has-gutter_hairline has-list">
+
+                                            <div class="col col-auto">
+                                                <button class="btn btn-outline btn-default pill filter_tab" data-filterby="city_centre">
+                                                    <span>city centre</span>
+                                                    <span class="close_ico arrow ico_only _close _xs"></span>
+                                                </button>
+                                            </div>
+                                            <div class="col col-auto">
+                                                <button class="btn btn-outline btn-default pill filter_tab" data-filterby="old_sarum">
+                                                    <span>old sarum</span>
+                                                    <span class="close_ico arrow ico_only _close _xs"></span>
+                                                </button>
+                                            </div>
+                                            <div class="col col-auto">
+                                                <button class="btn btn-outline btn-default pill filter_tab" data-filterby="new_forest">
+                                                    <span>new forest</span>
+                                                    <span class="close_ico arrow ico_only _close _xs"></span>
+                                                </button>
+                                            </div>
+                                            <div class="col col-auto">
+                                                <button class="btn btn-outline btn-default pill filter_tab" data-filterby="Jurassic_Coast">
+                                                    <span>Jurassic Coast</span>
+                                                    <span class="close_ico arrow ico_only _close _xs"></span>
+                                                </button>
+                                            </div>
+                                            <div class="col col-auto">
+                                                <button class="btn btn-outline btn-default pill filter_tab" data-filterby="Stonehenge">
+                                                    <span>Stonehenge</span>
+                                                    <span class="close_ico arrow ico_only _close _xs"></span>
+                                                </button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <p>Pit officid et vero cus doloriorest lame porem earum vendaeptat et auta culleni menderuntus aut excepre sciumquas dipsandisi assit mossit od ma doluptatiis resciame pelessima poste simincta verupid excea quiae doluptur aliquis  cienduc imillam doloren emoluptaes.</p>
+            </div>
+
+            <!-- card list -->
+            <!-- filter function : tabs data attibutes(data-filterby) = class name(type|area) -->
+            <div class="section">
+                <div class="grid has-gutter has-list filter_list">
+                    <div class="col col-4 col-sm-6 col-xs-12 filter_obj filtered Popular_Tours Package_Tours city_centre">
+                        
+                        <div class="card bg-secondary">
+                            <div class="card-image">
+                                <div class="figure _4x3">
+                                    <figure class="figure-inner">
+                                        <a href="#"><img src="images/IMG_3265.jpg"></a>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-content">
+                                    <h4 class="content-title">Birth of a City Death of a Knight</h4>
+                                    <p>One of those present at the laying of the foundation stone was Sir William Longspee. He later became the first person to be buried at the Cathedral.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="tourdetails.html" class="btn"><span>Read More</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col col-4 col-sm-6 col-xs-12 filter_obj filtered Package_Tours">
+
+                        <div class="card bg-secondary city_centre">
+                            <div class="card-image">
+                                <div class="figure _4x3">
+                                    <figure class="figure-inner">
+                                        <a href="#"><img src="images/IMG_3417.jpg"></a>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-content">
+                                    <h4 class="content-title">Costume Tours</h4>
+                                    <p>At a aut labo. Que dis min rat aliqu as doluptium ipsam voluptam venistibus, atemporum dole nducit et ex et utasitat quis dolestia eiuntium fuga.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="#" class="btn "><span>Read More</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col col-4 col-sm-6 col-xs-12 filter_obj filtered Popular_Tours Jurassic_Coast">
+                        <div class="card bg-secondary">
+                            <div class="card-image">
+                                <div class="figure _4x3">
+                                    <figure class="figure-inner">
+                                        <a href="#"><img src="images/iStock-183768707 (2).jpg"></a>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-content">
+                                    <h4 class="content-title">Stonehenge</h4>
+                                    <p>Walk in the footsteps of your Neolithic ancestors at Stonehenge – one of the wonders of the world.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="tourdetails.html" class="btn"><span>Read More</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-4 col-sm-6 col-xs-12 filter_obj filtered Popular_Tours old_sarum">
+                        
+                        <div class="card bg-secondary">
+                            <div class="card-image">
+                                <div class="figure _4x3">
+                                    <figure class="figure-inner">
+                                        <a href="#"><img src="images/Mayor-Ivy-council-house.jpg"></a>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-content">
+                                    <h4 class="content-title">Royal Retreats</h4>
+                                    <p>At a aut labo. Que dis min rat aliqu as doluptium ipsam voluptam venistibus, atemporum dole nducit et ex et utasitat quis dolestia eiuntium fuga.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="tourdetails.html" class="btn"><span>Read More</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col col-4 col-sm-6 col-xs-12 filter_obj filtered Group_Tours new_forest">
+
+                        <div class="card bg-secondary">
+                            <div class="card-image">
+                                <div class="figure _4x3">
+                                    <figure class="figure-inner">
+                                        <a href="#"><img src="images/iStock-182175266.jpg"></a>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-content">
+                                    <h4 class="content-title">Shakespeare</h4>
+                                    <p>At a aut labo. Que dis min rat aliqu as doluptium ipsam voluptam venistibus, atemporum dole nducit et ex et utasitat quis dolestia eiuntium fuga.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="tourdetails.html" class="btn"><span>Read More</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col col-4 col-sm-6 col-xs-12 filter_obj filtered Package_Tours Group_Tours Stonehenge">
+                        
+                        <div class="card bg-secondary">
+                            <div class="card-image">
+                                <div class="figure _4x3">
+                                    <figure class="figure-inner">
+                                        <a href="#"><img src="images/iStock-183768707 (2).jpg"></a>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-content">
+                                    <h4 class="content-title">Stonehenge</h4>
+                                    <p>Walk in the footsteps of your Neolithic ancestors at Stonehenge – one of the wonders of the world.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="tourdetails.html" class="btn"><span>Read More</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col col-4 col-sm-6 col-xs-12 filter_obj filtered Package_Tours Group_Tours Stonehenge">
+                        
+                        <div class="card bg-secondary">
+                            <div class="card-image">
+                                <div class="figure _4x3">
+                                    <figure class="figure-inner">
+                                        <a href="#"><img src="images/iStock-183768707 (2).jpg"></a>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-content">
+                                    <h4 class="content-title">Stonehenge</h4>
+                                    <p>Walk in the footsteps of your Neolithic ancestors at Stonehenge – one of the wonders of the world.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="tourdetails.html" class="btn"><span>Read More</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col col-4 col-sm-6 col-xs-12 filter_obj filtered Package_Tours Group_Tours Stonehenge">
+                        
+                        <div class="card bg-secondary">
+                            <div class="card-image">
+                                <div class="figure _4x3">
+                                    <figure class="figure-inner">
+                                        <a href="#"><img src="images/iStock-183768707 (2).jpg"></a>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-content">
+                                    <h4 class="content-title">Stonehenge</h4>
+                                    <p>Walk in the footsteps of your Neolithic ancestors at Stonehenge – one of the wonders of the world.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="tourdetails.html" class="btn"><span>Read More</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col col-4 col-sm-6 col-xs-12 filter_obj filtered Package_Tours Group_Tours Stonehenge">
+                        
+                        <div class="card bg-secondary">
+                            <div class="card-image">
+                                <div class="figure _4x3">
+                                    <figure class="figure-inner">
+                                        <a href="#"><img src="images/iStock-183768707 (2).jpg"></a>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-content">
+                                    <h4 class="content-title">Stonehenge</h4>
+                                    <p>Walk in the footsteps of your Neolithic ancestors at Stonehenge – one of the wonders of the world.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="tourdetails.html" class="btn"><span>Read More</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tour information  -->
+    <!-- Tour info Popup(id="eventTourPopup") @ bottom-->
+    <section class="section-partision bg-secondary">
+        <div class="container">
+            <div class="grid grid-xs-1 has-gutter">
+                <div class="col col-sm-12 partision _l">
+                    <div class="section-wrap content">
+                        <h2 class="h1 title-wrap title"><b>What’s</b> On</h2>
+                        <div class="calender">
+                            <div class="calender-header bg-default">
+                                <div class="calender-year heading">
+                                    <div class="title-wrap"><h4 class="title"><b>January</b> 2018</h4></div>
+                                    <div class="aside btns">
+                                        <button class="btn arrow _prv _sm"></button>
+                                        <button class="btn arrow _nxt _sm"></button>
+                                    </div>
+                                </div>
+                                <div class="calender-day">
+                                    <div class="block">Mo</div>
+                                    <div class="block">Tu</div>
+                                    <div class="block">We</div>
+                                    <div class="block">Th</div>
+                                    <div class="block">Fr</div>
+                                    <div class="block">Sa</div>
+                                    <div class="block">Su</div>
+                                </div>
+                            </div>
+                            <div class="calender-body">
+                                <div class="block">1</div>
+                                <div class="block">2</div>
+                                <div class="block">3</div>
+                                <div class="block">4</div>
+                                <div class="block">5</div>
+                                <div class="block">6</div>
+                                <div class="block">7</div>
+                                <div class="block">8</div>
+                                <div class="block btn bg-primary eventTourPopup_open">9</div>
+                                <div class="block btn bg-primary eventTourPopup_open">10</div>
+                                <div class="block btn bg-primary eventTourPopup_open">11</div>
+                                <div class="block">12</div>
+                                <div class="block">13</div>
+                                <div class="block">14</div>
+                                <div class="block">15</div>
+                                <div class="block">16</div>
+                                <div class="block">17</div>
+                                <div class="block">18</div>
+                                <div class="block btn bg-primary eventTourPopup_open">19</div>
+                                <div class="block btn bg-primary eventTourPopup_open">20</div>
+                                <div class="block">21</div>
+                                <div class="block">22</div>
+                                <div class="block">23</div>
+                                <div class="block btn bg-primary eventTourPopup_open">24</div>
+                                <div class="block">25</div>
+                                <div class="block">26</div>
+                                <div class="block">27</div>
+                                <div class="block">28</div>
+                                <div class="block">29</div>
+                                <div class="block">30</div>
+                                <div class="block disabled">31</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-1 col-md-auto hide-sm"></div>
+                <div class="col col-sm-12 partision _r bg-primary">
+                    <div class="content section-wrap">
+                        <div class="card-content">
+                            <h2 class="h1 title"><b>Enquire</b> About a Tour</h2>
+                            <form class="form">
+                                <div class="grid has-gutter_skinny has-list">
+                                    <div class="col col-12">
+                                        <div class="field"><input type="text" placeholder="Name"/></div>
+                                    </div>
+                                    <div class="col col-12">
+                                        <div class="field"><input type="email" placeholder="Email"/></div>
+                                    </div>
+                                    <div class="col col-12">
+                                        <div class="field"><input type="tel" placeholder="Telephone"/></div>
+                                    </div>
+                                    <div class="col col-6  col-xs-12">
+                                        <div class="field select">
+                                            <select>
+                                                <option value="-1">Tour name</option>
+                                                <option value="">Lorem, ipsum.</option>
+                                                <option value="">Lorem, ipsum.</option>
+                                                <option value="">Lorem, ipsum.</option>
+                                                <option value="">Lorem, ipsum.</option>
+                                                <option value="">Lorem, ipsum.</option>
+                                            </select>
+                                            <span class="ico fas fa-angle-down"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col col-6 col-xs-12">
+                                        <div class="field select">
+                                            <select>
+                                                <option value="-1">Location</option>
+                                                <option value="">Lorem, ipsum.</option>
+                                                <option value="">Lorem, ipsum.</option>
+                                                <option value="">Lorem, ipsum.</option>
+                                                <option value="">Lorem, ipsum.</option>
+                                                <option value="">Lorem, ipsum.</option>
+                                            </select>
+                                            <span class="ico fas fa-angle-down"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col col-6 col-xs-12">
+                                        <div class="field has-icon datepicker">
+                                            <input type="text" placeholder="Date"/>
+                                            <span class="ico far fa-calendar-alt"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col col-6 col-xs-12">
+                                        <div class="field select">
+                                            <select>
+                                                <option value="-1">Number of people</option>
+                                                <option value="">Lorem, ipsum.</option>
+                                                <option value="">Lorem, ipsum.</option>
+                                                <option value="">Lorem, ipsum.</option>
+                                                <option value="">Lorem, ipsum.</option>
+                                                <option value="">Lorem, ipsum.</option>
+                                            </select>
+                                            <span class="ico fas fa-angle-down"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col col-xs-12">
+                                        <div class="grid has-gutter form-footer ">
+                                            <div class="col col-xs-12">
+                                                <div class="">
+                                                    <label class="custom-check has_link">
+                                                        <input name="addr" type="checkbox">
+                                                        <span class="tick"></span>
+                                                        <span class="related-text">I have read and agreed your <a href="#">privacy&nbsp;policy</a></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col col-auto col-xs-12">
+                                                <div class="m_l-auto">
+                                                    <button class="btn btn-outline"><span>Sign up</span></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Mailing and Book a tour -->
+    <section class="section">
+        <div class="container section-wrap">
+            <div class="grid has-gutter">
+                <div class="col">
+                    <div class="content section-wrap">
+                        <h2 class="h1 title"><b>Join our</b> Mailing List</h2>
+                        <p>Interested in finding out more information on our tours and events? Want to find out more about Salisbury Chequered History and our work within Salisbury and the surrounding areas? Then Sign up for our latest news and updates!</p>
+
+                        <form class="form form_border">
+                            <div class="grid has-gutter_skinny has-list">
+                                <div class="col col-12">
+                                    <div class="field">
+                                        <input type="text" placeholder="Name"/>
+                                    </div>
+                                </div>
+                                <div class="col col-12">
+                                    <div class="field">
+                                        <input type="email" placeholder="Email"/>
+                                    </div>
+                                </div>
+                                <div class="col col-xs-12">
+                                    <div class="form-footer">
+                                        <div class="grid has-gutter has-list_thin ">
+                                            <div class="col col-12">
+                                                <div class="">
+                                                    <label class="custom-check has_link">
+                                                        <input name="addr" type="checkbox">
+                                                        <span class="tick"></span>
+                                                        <span class="related-text">I have read and agreed your <a href="#">privacy&nbsp;policy</a></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col col-12">
+                                                <div class="">
+                                                    <button class="btn"><span>Sign up</span></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                        </form>
+
+                    </div>
+                </div>
+                <div class="col col-1 col-md-auto col-sm-12"><div class="divider _vr _hr-sm"></div></div>
+                <div class="col">
+                    <div class="content section-wrap">
+                        <div class="grid has-gutter">
+                            <div class="col col-12 col-sm-flex col-xs-12">
+                                <div class="content">
+                                    <h2 class="h1 title"><b>Book a</b> Bespoke Tour</h2>
+                                    <p>We aim to offer bespoke tour packages that can include multiple tours and take place over half days, full days or longer. Please get in touch to discuss booking a bespoke tour package.</p>
+                                    <a href="#" class="btn"><span>organise a tour</span></a>
+                                </div>
+                            </div>
+                            <div class="col col-12 col-sm-auto col-xs-12"><div class="divider _vr-sm _hr-xs"></div></div>
+                            <div class="col col-12 col-sm-flex col-xs-12">
+                                <div class="content">
+                                    <h2 class="h1 title"><b>Salisbury</b> Souvenirs</h2>
+                                    <p>Looking for a memento of your time in Salisbury? Find out where to buy Salisbury Chequered History Guides merch or download our illustrated map of Salisbury</p>
+                                    <a href="#" class="btn"><span>Find out more</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer carousel -->
+    <section class="section bg-secondary">
+        <div class="strip-carousel-wrapper">
+            <div class="strip-carousel owl-carousel owl-theme">
+                <div class="item">
+                    <div class="item-img">
+                        <a href="#" class="img-wrap">
+                            <img class="" src="images/IMG_3222.jpg" />
+                        </a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-img">
+                        <a href="#" class="img-wrap">
+                            <img class="" src="images/IMG_3409.jpg" />
+                        </a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-img">
+                        <a href="#" class="img-wrap">
+                            <img class="" src="images/IMG_3258.jpg" />
+                        </a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-img">
+                        <a href="#" class="img-wrap">
+                            <img class="" src="images/IMG_3508.jpg" />
+                        </a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-img">
+                        <a href="#" class="img-wrap">
+                            <img class="" src="images/IMG_3871 (1).jpg" />
+                        </a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-img">
+                        <a href="#" class="img-wrap">
+                            <img class="" src="images/iStock-172194332.jpg" />
+                        </a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-img">
+                        <a href="#" class="img-wrap">
+                            <img class="" src="images/IMG_3417.jpg" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Tour info Popup -->
+    <div id="eventTourPopup" class="popup popup-md">
+        <div class="popup-wrap">
+            <div class="popup-header">
+                <div class="heading">
+                    <div class="title-wrap"><h2 class="title"><b>9th January</b> 2018</h2></div>
+                    <div class="aside btns">
+                        <button class="btn arrow _close _sm eventTourPopup_close"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-body">
+                <div class="content">
+                    <div class="grid has-list">
+                        <div class="col col-12">
+                            <div>
+                                <h4 class="title">Event/Tour Name</h4>
+                                <p>At a aut labo. Que dis min rat aliqu as doluptium ipsam voluptam venistibus, atemporum dole nducit et ex et utasitat quis dolestia eiuntium fuga.</p>
+                                <a href="tourdetails.html" class="btn"><span>Read More</span></a>
+                            </div>
+                        </div>
+                        <hr class="">
+                        <div class="col col-12">
+                            <div>
+                                <h4 class="title">Event/Tour Name</h4>
+                                <p>At a aut labo. Que dis min rat aliqu as doluptium ipsam voluptam venistibus, atemporum dole nducit et ex et utasitat quis dolestia eiuntium fuga.</p>
+                                <a href="tourdetails.html" class="btn"><span>Read More</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</main>
+
+<footer class="footer bg-default">
+<div class="container footer-wrap">
+    <div class="grid has-gutter has-list">
+        <div class="col col-auto col-md-2 col-sm-12">
+            <a href="index.html" class="brand-logo">
+                <img src="images/brand-logo.png" alt="Salisbury's Chequered History Guides"/>
+            </a>
+        </div>
+        <div class="col col-5 col-offset-1 col-md-5 col-md-offset-0 col-sm-6 col-xs-6 col-xxs-12">
+            <ul class="footer-links">
+                <li><a href="#">Tours</a></li>
+                <li><a href="#">Guides</a></li>
+                <li><a href="#">About Salisbury</a></li>
+                <li><a href="#">Attractions</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Sitemap</a></li>
+                <li><a href="#">Privacy policy</a></li>
+                <li><a href="#">T&amp;Cs</a></li>
+                <li><a href="#">Cookie Policy</a></li>
+            </ul>
+        </div>
+        <div class="col col-auto m_l-auto col-sm-6 col-xs-12">
+            <div class="contacts">
+                <div class="social icons">
+                    <a href="#" class="icon is-circle"><span><i class="fab fa-facebook-f"></i></span></a>
+                    <a href="#" class="icon is-circle"><span><i class="fab fa-twitter"></i></span></a>
+                    <a href="#" class="icon is-circle"><span><i class="fab fa-instagram"></i></span></a>
+                </div>
+                <a href="tel:xxxxx xxx xxx">Telephone: <b>xxxxx xxx xxx</b></a>
+                <a href="mailto:info@salisburyhistorytours.co.uk">Email: <b>info@salisburyhistorytours.co.uk</b></a>
+                <div><small>&copy; Copyright 2018</small></div>
+            </div>
+        </div>
+    </div>
+</div>
+</footer>
+</body>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1kmlnoOlwpHQQBvhhIL3joMAKpKq9Yoo"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/daterangepicker.js"></script>
+<script src="js/snazzy-info-window.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/jquery.popupoverlay.js"></script>
+<script src="js/map.js"></script>
+<script src="js/scripts.js"></script>
+</html>
