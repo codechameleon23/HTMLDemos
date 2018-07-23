@@ -1,0 +1,61 @@
+*, *:before, *:after { padding: 0; margin: 0; -webkit-box-sizing: inherit; box-sizing: inherit; }
+
+html, body { height: 100%; }
+
+html { -webkit-box-sizing: border-box; box-sizing: border-box; font-size: 62.5%; }
+
+body { font-family: 'Raleway', sans-serif; font-size: 2.8rem; font-weight: 400; color: #ffffff; background-color: #404041; background-image: url("../images/bg.jpg"); background-position: bottom center; background-size: cover; }
+
+a, a:hover { color: #ffffff; text-decoration: none; }
+
+b { font-weight: 800; }
+
+h1 { font-size: 6.4rem; margin-bottom: 2.5rem; font-weight: normal; }
+
+p { margin-bottom: 2rem; }
+
+.holdingpage .header, .holdingpage .footer { position: fixed; left: 0; right: 0; }
+
+.holdingpage .header { top: 0; background-color: rgba(149, 22, 25, 0.4); padding: 2rem 0; }
+
+.holdingpage .header .container, .holdingpage .header .contact { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+.holdingpage .header .brand-logo img { height: 93px; }
+
+.holdingpage .header .contact { margin-left: auto; font-weight: 700; }
+
+.holdingpage .header .contact a + a { margin-left: 1.5rem; }
+
+.holdingpage .header .contact img { height: 28px; }
+
+.holdingpage .header .social { margin-left: 1.5rem; }
+
+.holdingpage .header .social a { display: inline-block; }
+
+.holdingpage .footer { bottom: 0; text-align: right; font-size: 1.4rem; padding: 1rem; background-color: #404041; }
+
+.holdingpage .main { min-height: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; text-align: center; background-color: rgba(0, 0, 0, 0.5); padding: 140px 0 36px; }
+
+.holdingpage .container, .holdingpage .wrapper { margin: 0 auto; width: 100%; max-width: 1400px; min-height: 100%; padding: 0 1.5rem; }
+
+.holdingpage .wrapper { max-width: 1180px; }
+
+.holdingpage .button { font-weight: 700; background-color: #951619; padding: 1.5rem 3rem; text-align: center; text-transform: uppercase; display: inline-block; }
+
+@media all and (max-width: 1380px) { body { font-size: 2.2rem; }
+  h1 { font-size: 4.6rem; }
+  .holdingpage .container { max-width: 1280px; }
+  .holdingpage .wrapper { max-width: 900px; } }
+
+@media all and (max-width: 700px) { body { font-size: 1.6rem; }
+  h1 { font-size: 3.6rem; }
+  .holdingpage .header .contact { -webkit-box-orient: vertical; -webkit-box-direction: reverse; -ms-flex-direction: column-reverse; flex-direction: column-reverse; -webkit-box-align: end; -ms-flex-align: end; align-items: flex-end; }
+  .holdingpage .header .social { margin: 0 0 1.2rem 0; } }
+
+@media all and (max-width: 500px) { body { font-size: 1.4rem; }
+  h1 { font-size: 2.4rem; margin-bottom: 1.3rem; }
+  p { margin-bottom: 1.2rem; }
+  .holdingpage .header .brand-logo img { height: 54px; }
+  .holdingpage .header .contact { font-size: 1.2rem; }
+  .holdingpage .main { padding-top: 110px; }
+  .holdingpage .footer { text-align: center; font-size: 1rem; } }
