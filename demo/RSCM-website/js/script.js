@@ -37,17 +37,7 @@ $(".button-icon input").focus(function(){
     $(this).closest(".button-icon").removeClass('is-hover');
 })
 
-
-document.addEventListener('DOMContentLoaded', function () {
-// Prepare BackgroundCheck
-    BackgroundCheck.init({
-        targets: '.header',
-        images: '.banner-bg'
-    });
-});
-
 /*banner-carousel*/
-
 var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 
 if ($('.banner-carousel').length){//if element exists
@@ -85,17 +75,17 @@ if ($('.banner-carousel').length){//if element exists
         $('.dots .dot').eq(current - 1).addClass('is-active');
 
         /*function to change logo on first banner*/
-        // if(current == 1){
-        //     $('.header').addClass('has-logo-dark');
-        // }else{
-        //     $('.header').removeClass('has-logo-dark');
-        // }
-
         setTimeout(function(){
-            BackgroundCheck.refresh();
-        }, 1200);
+            if(current > 1){
+                $('.header').removeClass('logo-dark').addClass('logo-white');
+            }else{
+                console.log('current:'+current);
+                $('.header').removeClass('logo-white').addClass('logo-dark');    
+            }
+        }, 800);
+        
 
-    })
+    });
 
 }
 
@@ -161,6 +151,7 @@ if($('.tabs-contnet-group').length){//if element exists
 
 /*Accordion toggle*/
 $(".accordian-toggle").on('click tap',  function(){
+    $(this).closest('.accordion-wrapper').find('.accordian-toggle').removeClass('is-open');
     $(this).toggleClass("is-open");
 });
 
@@ -181,16 +172,24 @@ $('input[name="dates"]').daterangepicker({
 
 
 /*imageGallery*/
+
+var imageGallery;
 window.onload = function() {
 
     if ($('#imageGallery').length){//if element exists
-        $('#imageGallery').lightSlider({
+
+        var imageGallery = $('#imageGallery');
+
+        imageGallery.lightSlider({
+
             gallery:true,
             pauseOnHover:true,
             loop:true,
             enableDrag : false,
             freeMove: false,
             //auto : true,
+
+            adaptiveHeight: true,
 
             item:1,
             thumbItem:8,
@@ -214,7 +213,6 @@ window.onload = function() {
     }
 
 };
-
 
 /*Affiliate Membership Application form*/
 if ($('.forms-carousel-affiliate').length){//if element exists
