@@ -1604,6 +1604,7 @@ figure img,
 
 .is-all-center {
   -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
       align-self: center;
   margin-top: auto;
   margin-bottom: auto;
@@ -2174,6 +2175,42 @@ figure img,
   background-position: left top;
 }
 
+.banner-overlay .banner-bg {
+  -webkit-box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.4) inset;
+          box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.4) inset;
+}
+
+.banner-overlay .hero-wrap {
+  color: #ffffff;
+}
+
+.banner-overlay.overlay_shade .banner-bg {
+  -webkit-box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.4) inset;
+          box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.4) inset;
+}
+
+.banner-overlay.overlay_shade .hero-wrap {
+  color: #ffffff;
+}
+
+.banner-overlay.overlay_tint .banner-bg {
+  -webkit-box-shadow: 0 0 0 1000px rgba(255, 255, 255, 0.4) inset;
+          box-shadow: 0 0 0 1000px rgba(255, 255, 255, 0.4) inset;
+}
+
+.banner-overlay.overlay_tint .hero-wrap {
+  color: #282829;
+}
+
+.banner-overlay.overlay_primary .banner-bg {
+  -webkit-box-shadow: 0 0 0 1000px rgba(93, 173, 71, 0.4) inset;
+          box-shadow: 0 0 0 1000px rgba(93, 173, 71, 0.4) inset;
+}
+
+.banner-overlay.overlay_primary .hero-wrap {
+  color: #ffffff;
+}
+
 .banner-body {
   position: relative;
   width: 100%;
@@ -2248,14 +2285,10 @@ figure img,
   .banner .banner-bg {
     opacity: .7;
   }
-  .banner .banner-body {
-    background-color: rgba(93, 173, 71, 0.4);
-  }
   .banner .banner-body .hero-wrap {
     width: 80%;
     margin: 0 auto;
     text-align: center;
-    color: #ffffff;
   }
 }
 
