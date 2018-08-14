@@ -1,6 +1,6 @@
 function resizeHeaderOnScroll() {
-	const distanceY = window.pageYOffset || document.documentElement.scrollTop,
-	shrinkOn = 100,
+	var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+	shrinkOn = 10,
 	headerEl = document.querySelector('.js-header');
 	
 	if (distanceY > shrinkOn) {
