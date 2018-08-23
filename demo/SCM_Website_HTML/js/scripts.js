@@ -13,18 +13,12 @@ if(!isIE11){
             // downscroll code
             
             $(".js-header").addClass("shrink");
-            if(scroll > 600){
-                $(".js-header").addClass("shrink_more");
-                $(".shrink").addClass("shrink_more");
-            }
 
         } else if(scroll < lastScrollTop){
             // upscroll code
 
-            $(".js-header").removeClass("shrink_more");
-            $(".shrink").removeClass("shrink_more");   
             if(scroll <= 100){
-                $(".js-header").removeClass("shrink shrink_more");    
+                $(".js-header").removeClass("shrink");
             }
         }
         
