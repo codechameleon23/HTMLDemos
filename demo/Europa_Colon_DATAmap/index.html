@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="icon" href="images/favicon.png"/>
+<title>Digestive Cancer Europe</title>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.typekit.net/lgq0cto.css">
+<link rel="stylesheet" href="css/animate.min.css"/>
+<link rel="stylesheet" href="css/owl.carousel.min.css"/>
+<link rel="stylesheet" href="css/owl.theme.default.min.css"/>
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body class="map-home">
+    <header class="header bg-color-white border-color-secondary">
+        <div class="container header-wrapper">
+            <a class="brand-logo" href="index.html"><img src="images/DCE-long-lg.png" alt=""/></a>
+            <div class="aside text-color-primary h3">
+                Data<span class="text-color-secondary">Map</span>
+                <img src="images/datamap-icon.png" alt=""/>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        
+        <div id="mapArea" class="mapArea has-theme-color-BahamaBlue"></div>
+
+        <div class="start_here_note has-theme-color-BahamaBlue">
+            <p class="h3">Start Here</p>
+            <!-- <p><img class="col-3" src="images/compass-icon.png" alt=""/></p> -->
+            <p><span class="text-color-secondary">Tap</span> to explore information <span class="text-color-secondary">about colorectal cancer.</span></p>
+        </div>
+        <!-- Country sequence -->
+        <!-- imp for to index of item in flag-carousel -->
+        <ul class="country-sequence">
+            <li class="nul"><!-- keep it empty --></li>
+            <li class="GBR col-4 sourse-flags_popup_open">
+                <!-- United Kingdom -->
+                <div class="country-tag">
+                    <div class="flag image aspect-ratio_1x1 is-circle">
+                        <span class="img-wrap"><img src="images/country-flag/uk.jpg" / alt="United Kingdom"></span>
+                    </div>
+                    <div class="name h6">United Kingdom</div>
+                </div>
+            </li>
+            <li class="PRT col-4 sourse-flags_popup_open">
+                <!-- Portugal -->
+                <div class="country-tag">
+                    <div class="flag image aspect-ratio_1x1 is-circle">
+                        <span class="img-wrap"><img src="images/country-flag/portugal.jpg" / alt="Austria"></span>
+                    </div>
+                    <div class="name h6">Portugal</div>
+                </div>
+            </li>
+            <li class="ESP col-4 sourse-flags_popup_open">
+                <!-- Spain -->
+                <div class="country-tag">
+                    <div class="flag image aspect-ratio_1x1 is-circle">
+                        <span class="img-wrap"><img src="images/country-flag/spain.jpg" / alt="Spain"></span>
+                    </div>
+                    <div class="name h6">Spain</div>
+                </div>
+            </li>
+            <li class="FRA col-4 sourse-flags_popup_open">
+                <!-- France -->
+                <div class="country-tag">
+                    <div class="flag image aspect-ratio_1x1 is-circle">
+                        <span class="img-wrap"><img src="images/country-flag/france.jpg" / alt="France"></span>
+                    </div>
+                    <div class="name h6">France</div>
+                </div>
+            </li>
+            <li class="DEU col-4 sourse-flags_popup_open">
+                <!-- Germany -->
+                <div class="country-tag">
+                    <div class="flag image aspect-ratio_1x1 is-circle">
+                        <span class="img-wrap"><img src="images/country-flag/germany.jpg" / alt="Germany"></span>
+                    </div>
+                    <div class="name h6">Germany</div>
+                </div>
+            </li>
+            <li class="CHE col-4 sourse-flags_popup_open">
+                <!-- Switzerland -->
+                <div class="country-tag">
+                    <div class="flag image aspect-ratio_1x1 is-circle">
+                        <span class="img-wrap"><img src="images/country-flag/switzerland.jpg" / alt="Switzerland"></span>
+                    </div>
+                    <div class="name h6">Switzerland</div>
+                </div>
+            </li>
+            <li class="ITA col-4 sourse-flags_popup_open">
+                <!-- Italy -->
+                <div class="country-tag">
+                    <div class="flag image aspect-ratio_1x1 is-circle">
+                        <span class="img-wrap"><img src="images/country-flag/italy.jpg" / alt="Italy"></span>
+                    </div>
+                    <div class="name h6">Italy</div>
+                </div>
+            </li>
+            <li class="AUT col-4 sourse-flags_popup_open">
+                <!-- Austria -->
+                <div class="country-tag">
+                    <div class="flag image aspect-ratio_1x1 is-circle">
+                        <span class="img-wrap"><img src="images/country-flag/austria.jpg" / alt="Austria"></span>
+                    </div>
+                    <div class="name h6">Austria</div>
+                </div>
+            </li>
+            <li class="CZE col-4 sourse-flags_popup_open">
+                <!-- Czech Republic -->
+                <div class="country-tag">
+                    <div class="flag image aspect-ratio_1x1 is-circle">
+                        <span class="img-wrap"><img src="images/country-flag/czechRepublic.jpg" / alt="Czech Republic"></span>
+                    </div>
+                    <div class="name h6">Czech Republic</div>
+                </div>
+            </li>
+            <li class="POL col-4 sourse-flags_popup_open">
+                <!-- Poland -->
+                <div class="country-tag">
+                    <div class="flag image aspect-ratio_1x1 is-circle">
+                        <span class="img-wrap"><img src="images/country-flag/poland.jpg" / alt="Poland"></span>
+                    </div>
+                    <div class="name h6">Poland</div>
+                </div>
+            </li>
+            <li class="SVN col-4 sourse-flags_popup_open">
+                <!-- Slovenia -->
+                <div class="country-tag">
+                    <div class="flag image aspect-ratio_1x1 is-circle">
+                        <span class="img-wrap"><img src="images/country-flag/slovenia.jpg" / alt="Slovenia"></span>
+                    </div>
+                    <div class="name h6">Slovenia</div>
+                </div>
+            </li>
+            <li class="HRV col-4 sourse-flags_popup_open">
+                <!-- Croatia -->
+                <div class="country-tag">
+                    <div class="flag image aspect-ratio_1x1 is-circle">
+                        <span class="img-wrap"><img src="images/country-flag/croatia.jpg" / alt="Croatia"></span>
+                    </div>
+                    <div class="name h6">Croatia</div>
+                </div>
+            </li>
+            <li class="HUN col-4 sourse-flags_popup_open">
+                <!-- Hungary -->
+                <div class="country-tag">
+                    <div class="flag image aspect-ratio_1x1 is-circle">
+                        <span class="img-wrap"><img src="images/country-flag/hungary.jpg" / alt="Hungary"></span>
+                    </div>
+                    <div class="name h6">Hungary</div>
+                </div>
+            </li>
+            <li class="SVK col-4 sourse-flags_popup_open">
+                <!-- Slovakia -->
+                <div class="country-tag">
+                    <div class="flag image aspect-ratio_1x1 is-circle">
+                        <span class="img-wrap"><img src="images/country-flag/slovakia.jpg" / alt="Slovakia"></span>
+                    </div>
+                    <div class="name h6">Slovakia</div>
+                </div>
+            </li>
+        </ul>
+
+        <!-- popup  mobile only -->
+        <div id="sourse-flags_popup" class="popup popup-md bg-primary">
+            <a href="#" class="popup-close sourse-flags_popup_close"></a>
+
+            <div class="container sourse-flags_container">
+                <div class="sourse-flags">
+                    <div class="fleg-carousel owl-carousel owl-theme">
+                        <div class="item item_start-here">
+                            <!-- Start here -->
+                            <div class="flag start-here has-theme-color-Ecstasy">
+                                <div class="flag-inner">
+                                    <div class="flag-content theme-bg text-center">
+                                        <ul><li>
+                                            <p>Start Here</p>
+                                            <p><img class="col-6" src="images/compass-icon.png" alt=""/></p>
+                                            <p><span class="theme-text-tint">Click</span> on the Datamap to explore information <span class="theme-text-tint">about colorectal cancer.</span></p>
+                                        </li>
+                                    </div>
+                                    <div class="edge aspect-ratio_edge">
+                                        <div><img class="imgTosvg theme-svg" src="images/ribbon-edge.svg" alt=""/></div>
+                                    </div>
+                                </div>
+                                <div class="flag-footer">
+                                    <div class="gap theme-bg-tint"></div>
+                                    <div class="edge aspect-ratio_edge">
+                                        <div><img class="imgTosvg theme-svg-tint" src="images/ribbon-edge.svg" alt=""/></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- UK -->
+                        <div class="item">
+                            <!-- <button class="button bg-BahamaBlue">United Kingdom</button> -->
+                            <div class="flag start-here has-theme-color-BahamaBlue">
+                                <div class="flag-inner">
+                                    <div class="flag-content theme-bg text-center">
+                                        <ul>
+                                            <li>
+                                                <div class="country-tag">
+                                                    <div class="flag image aspect-ratio_1x1 is-circle">
+                                                        <span class="img-wrap"><img src="images/country-flag/uk.jpg" alt="UK"></span>
+                                                    </div>
+                                                </div>
+                                                <p class="h4">United Kingdom</p>
+                                            </li>
+                                            <li><p><span class="h5">Country Stats</span></p></li>
+                                            <li>
+                                                <div class="info-card">
+                                                    <img class="col-2" src="images/population-icon.png" alt=""/>
+                                                    <br><span class="h6">Total Population</span>
+                                                    <br><span class="h3">66.57m</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="info-card">
+                                                    <img class="col-2" src="images/calenderdate-icon.png" alt=""/>
+                                                    <br><span class="h6">Date of Data Collection</span>
+                                                    <br><span class="h3">July 2018</span>
+                                                </div>
+                                            </li>
+                                            <li><a class="h5" href="country.html"><span>Source</span> <i class="fas fa-angle-double-right"></i></a></li>
+                                        </ul>
+
+                                    </div>
+                                    <div class="edge aspect-ratio_edge">
+                                        <div><img class="imgTosvg theme-svg" src="images/ribbon-edge.svg" alt=""/></div>
+                                    </div>
+                                </div>
+                                <div class="flag-footer">
+                                    <div class="gap theme-bg-tint"></div>
+                                    <div class="edge aspect-ratio_edge">
+                                        <div><img class="imgTosvg theme-svg-tint" src="images/ribbon-edge.svg" alt=""/></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Portugal -->
+                        <div class="item">
+                            <!-- <button class="button bg-BahamaBlue">Portugal</button> -->
+                            <div class="flag start-here has-theme-color-BahamaBlue">
+                                <div class="flag-inner">
+                                    <div class="flag-content theme-bg text-center">
+                                        <ul>
+                                            <li>
+                                                <div class="country-tag">
+                                                    <div class="flag image aspect-ratio_1x1 is-circle">
+                                                        <span class="img-wrap"><img src="images/country-flag/portugal.jpg" alt="Portugal"></span>
+                                                    </div>
+                                                </div>
+                                                <p class="h4">Portugal</p>
+                                            </li>
+                                            <li><p><span class="h5">Country Stats</span></p></li>
+                                            <li>
+                                                <div class="info-card">
+                                                    <img class="col-2" src="images/population-icon.png" alt=""/>
+                                                    <br><span class="h6">Total Population</span>
+                                                    <br><span class="h3">10.2m</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="info-card">
+                                                    <img class="col-2" src="images/calenderdate-icon.png" alt=""/>
+                                                    <br><span class="h6">Date of Data Collection</span>
+                                                    <br><span class="h3">July 2018</span>
+                                                </div>
+                                            </li>
+                                            <li><a class="h5" href="country.html"><span>Source</span> <i class="fas fa-angle-double-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="edge aspect-ratio_edge">
+                                        <div><img class="imgTosvg theme-svg" src="images/ribbon-edge.svg" alt=""/></div>
+                                    </div>
+                                </div>
+                                <div class="flag-footer">
+                                    <div class="gap theme-bg-tint"></div>
+                                    <div class="edge aspect-ratio_edge">
+                                        <div><img class="imgTosvg theme-svg-tint" src="images/ribbon-edge.svg" alt=""/></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Spain -->
+                        <div class="item">
+                            <!-- <button class="button bg-BahamaBlue">Spain</button> -->
+                            <div class="flag start-here has-theme-color-BahamaBlue">
+                                <div class="flag-inner">
+                                    <div class="flag-content theme-bg text-center">
+                                        <ul>
+                                            <li>
+                                                <div class="country-tag">
+                                                    <div class="flag image aspect-ratio_1x1 is-circle">
+                                                        <span class="img-wrap"><img src="images/country-flag/spain.jpg" alt="Spain"></span>
+                                                    </div>
+                                                </div>
+                                                <p class="h4">Spain</p>
+                                            </li>
+                                            <li><p><span class="h5">Country Stats</span></p></li>
+                                            <li>
+                                                <div class="info-card">
+                                                    <img class="col-2" src="images/population-icon.png" alt=""/>
+                                                    <br><span class="h6">Total Population</span>
+                                                    <br><span class="h3">47.1m</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="info-card">
+                                                    <img class="col-2" src="images/calenderdate-icon.png" alt=""/>
+                                                    <br><span class="h6">Date of Data Collection</span>
+                                                    <br><span class="h3">July 2018</span>
+                                                </div>
+                                            </li>
+                                            <li><a class="h5" href="country.html"><span>Source</span> <i class="fas fa-angle-double-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="edge aspect-ratio_edge">
+                                        <div><img class="imgTosvg theme-svg" src="images/ribbon-edge.svg" alt=""/></div>
+                                    </div>
+                                </div>
+                                <div class="flag-footer">
+                                    <div class="gap theme-bg-tint"></div>
+                                    <div class="edge aspect-ratio_edge">
+                                        <div><img class="imgTosvg theme-svg-tint" src="images/ribbon-edge.svg" alt=""/></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- France -->
+                        <div class="item">
+                            <!-- <button class="button bg-BahamaBlue">France</button> -->
+                            <div class="flag start-here has-theme-color-BahamaBlue">
+                                <div class="flag-inner">
+                                    <div class="flag-content theme-bg text-center">
+                                        <ul>
+                                            <li>
+                                                <div class="country-tag">
+                                                    <div class="flag image aspect-ratio_1x1 is-circle">
+                                                        <span class="img-wrap"><img src="images/country-flag/france.jpg" alt="France"></span>
+                                                    </div>
+                                                </div>
+                                                <p class="h4">France</p>
+                                            </li>
+                                            <li><p><span class="h5">Country Stats</span></p></li>
+                                            <li>
+                                                <div class="info-card">
+                                                    <img class="col-2" src="images/population-icon.png" alt=""/>
+                                                    <br><span class="h6">Total Population</span>
+                                                    <br><span class="h3">65.23m</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="info-card">
+                                                    <img class="col-2" src="images/calenderdate-icon.png" alt=""/>
+                                                    <br><span class="h6">Date of Data Collection</span>
+                                                    <br><span class="h3">July 2018</span>
+                                                </div>
+                                            </li>
+                                            <li><a class="h5" href="country.html"><span>Source</span> <i class="fas fa-angle-double-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="edge aspect-ratio_edge">
+                                        <div><img class="imgTosvg theme-svg" src="images/ribbon-edge.svg" alt=""/></div>
+                                    </div>
+                                </div>
+                                <div class="flag-footer">
+                                    <div class="gap theme-bg-tint"></div>
+                                    <div class="edge aspect-ratio_edge">
+                                        <div><img class="imgTosvg theme-svg-tint" src="images/ribbon-edge.svg" alt=""/></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Germany -->
+                        <div class="item">
+                            <!-- <button class="button bg-BahamaBlue">Germany</button> -->
+                            <div class="flag start-here has-theme-color-BahamaBlue">
+                                <div class="flag-inner">
+                                    <div class="flag-content theme-bg text-center">
+                                        <ul>
+                                            <li>
+                                                <div class="country-tag">
+                                                    <div class="flag image aspect-ratio_1x1 is-circle">
+                                                        <span class="img-wrap"><img src="images/country-flag/germany.jpg" alt="Germany"></span>
+                                                    </div>
+                                                </div>
+                                                <p class="h4">Germany</p>
+                                            </li>
+                                            <li><p><span class="h5">Country Stats</span></p></li>
+                                            <li>
+                                                <div class="info-card">
+                                                    <img class="col-2" src="images/population-icon.png" alt=""/>
+                                                    <br><span class="h6">Total Population</span>
+                                                    <br><span class="h3">82m</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="info-card">
+                                                    <img class="col-2" src="images/calenderdate-icon.png" alt=""/>
+                                                    <br><span class="h6">Date of Data Collection</span>
+                                                    <br><span class="h3">July 2018</span>
+                                                </div>
+                                            </li>
+                                            <li><a class="h5" href="country.html"><span>Source</span> <i class="fas fa-angle-double-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="edge aspect-ratio_edge">
+                                        <div><img class="imgTosvg theme-svg" src="images/ribbon-edge.svg" alt=""/></div>
+                                    </div>
+                                </div>
+                                <div class="flag-footer">
+                                    <div class="gap theme-bg-tint"></div>
+                                    <div class="edge aspect-ratio_edge">
+                                        <div><img class="imgTosvg theme-svg-tint" src="images/ribbon-edge.svg" alt=""/></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Switzerland -->
+                        <div class="item">
+                            <!-- <button class="button bg-BahamaBlue">Switzerland</button> -->
+                            <div class="flag start-here has-theme-color-BahamaBlue">
+                                <div class="flag-inner">
+                                    <div class="flag-content theme-bg text-center">
+                                        <ul>
+                                            <li>
+                                                <div class="country-tag">
+                                                    <div class="flag image aspect-ratio_1x1 is-circle">
+                                                        <span class="img-wrap"><img src="images/country-flag/switzerland.jpg" alt="Switzerland"></span>
+                                                    </div>
+                                                </div>
+                                                <p class="h4">Switzerland</p>
+                                            </li>
+                                            <li><p><span class="h5">Country Stats</span></p></li>
+                                            <li>
+                                                <div class="info-card">
+                                                    <img class="col-2" src="images/population-icon.png" alt=""/>
+                                                    <br><span class="h6">Total Population</span>
+                                                    <br><span class="h3">8m</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="info-card">
+                                                    <img class="col-2" src="images/calenderdate-icon.png" alt=""/>
+                                                    <br><span class="h6">Date of Data Collection</span>
+                                                    <br><span class="h3">July 2018</span>
+                                                </div>
+                                            </li>
+                                            <li><a class="h5" href="country.html"><span>Source</span> <i class="fas fa-angle-double-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="edge aspect-ratio_edge">
+                                        <div><img class="imgTosvg theme-svg" src="images/ribbon-edge.svg" alt=""/></div>
+                                    </div>
+                                </div>
+                                <div class="flag-footer">
+                                    <div class="gap theme-bg-tint"></div>
+                                    <div class="edge aspect-ratio_edge">
+                                        <div><img class="imgTosvg theme-svg-tint" src="images/ribbon-edge.svg" alt=""/></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Italy -->
+                        <div class="item">
+                            <!-- <button class="button bg-BahamaBlue">Italy</button> -->
+                            <div class="flag start-here has-theme-color-BahamaBlue">
+                                <div class="flag-inner">
+                                    <div class="flag-content theme-bg text-center">
+                                        <ul>
+                                            <li>
+                                                <div class="country-tag">
+                                                    <div class="flag image aspect-ratio_1x1 is-circle">
+                                                        <span class="img-wrap"><img src="images/country-flag/italy.jpg" alt="Italy"></span>
+                                                    </div>
+                                                </div>
+                                                <p class="h4">Italy</p>
+                                            </li>
+                                            <li><p><span class="h5">Country Stats</span></p></li>
+                                            <li>
+                                                <div class="info-card">
+                                                    <img class="col-2" src="images/population-icon.png" alt=""/>
+                                                    <br><span class="h6">Total Population</span>
+                                                    <br><span class="h3">60.59m</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="info-card">
+                                                    <img class="col-2" src="images/calenderdate-icon.png" alt=""/>
+                                                    <br><span class="h6">Date of Data Collection</span>
+                                                    <br><span class="h3">July 2018</span>
+                                                </div>
+                                            </li>
+                                            <li><a class="h5" href="country.html"><span>Source</span> <i class="fas fa-angle-double-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="edge aspect-ratio_edge">
+                                        <div><img class="imgTosvg theme-svg" src="images/ribbon-edge.svg" alt=""/></div>
+                                    </div>
+                                </div>
+                                <div class="flag-footer">
+                                    <div class="gap theme-bg-tint"></div>
+                                    <div class="edge aspect-ratio_edge">
+                                        <div><img class="imgTosvg theme-svg-tint" src="images/ribbon-edge.svg" alt=""/></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Austria -->
+                        <div class="item">
+                            <!-- <button class="button bg-BahamaBlue">Austria</button> -->
+                            <div class="flag start-here has-theme-color-BahamaBlue">
+                                <div class="flag-inner">
+                                    <div class="flag-content theme-bg text-center">
+                                        <ul>
+                                            <li>
+                                                <div class="country-tag">
+                                                    <div class="flag image aspect-ratio_1x1 is-circle">
+                                                        <span class="img-wrap"><img src="images/country-flag/austria.jpg" alt="Austria"></span>
+                                                    </div>
+                                                </div>
+                                                <p class="h4">Austria</p>
+                                            </li>
+                                            <li><p><span class="h5">Country Stats</span></p></li>
+                                            <li>
+                                                <div class="info-card">
+                                                    <img class="col-2" src="images/population-icon.png" alt=""/>
+                                                    <br><span class="h6">Total Population</span>
+                                                    <br><span class="h3">8.7m</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="info-card">
+                                                    <img class="col-2" src="images/calenderdate-icon.png" alt=""/>
+                                                    <br><span class="h6">Date of Data Collection</span>
+                                                    <br><span class="h3">July 2018</span>
+                                                </div>
+                                            </li>
+                                            <li><a class="h5" href="country.html"><span>Source</span> <i class="fas fa-angle-double-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="edge aspect-ratio_edge">
+                                        <div><img class="imgTosvg theme-svg" src="images/ribbon-edge.svg" alt=""/></div>
+                                    </div>
+                                </div>
+                                <div class="flag-footer">
+                                    <div class="gap theme-bg-tint"></div>
+                                    <div class="edge aspect-ratio_edge">
+                                        <div><img class="imgTosvg theme-svg-tint" src="images/ribbon-edge.svg" alt=""/></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Czech Republic -->
+                        <div class="item">
+                            <!-- <button class="button bg-BahamaBlue">Czech Republic</button> -->
+                            <div class="flag start-here has-theme-color-BahamaBlue">
+                                <div class="flag-inner">
+                                    <div class="flag-content theme-bg text-center">
+                                        <ul>
+                                            <li>
+                                                <div class="country-tag">
+                                                    <div class="flag image aspect-ratio_1x1 is-circle">
+                                                        <span class="img-wrap"><img src="images/country-flag/czechRepublic.jpg" alt="Czech Republic"></span>
+                                                    </div>
+                                                </div>
+                                                <p class="h4">Czech Republic</p>
+                                            </li>
+                                            <li><p><span class="h5">Country Stats</span></p></li>
+                                            <li>
+                                                <div class="info-card">
+                                                    <img class="col-2" src="images/population-icon.png" alt=""/>
+                                                    <br><span class="h6">Total Population</span>
+                                                    <br><span class="h3">10.6m</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="info-card">
+                                                    <img class="col-2" src="images/calenderdate-icon.png" alt=""/>
+                                                    <br><span class="h6">Date of Data Collection</span>
+                                                    <br><span class="h3">July 2018</span>
+                                                </div>
+                                            </li>
+                                            <li><a class="h5" href="country.html"><span>Source</span> <i class="fas fa-angle-double-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="edge aspect-ratio_edge">
+                                        <div><img class="imgTosvg theme-svg" src="images/ribbon-edge.svg" alt=""/></div>
+                                    </div>
+                                </div>
+                                <div class="flag-footer">
+                                    <div class="gap theme-bg-tint"></div>
+                                    <div class="edge aspect-ratio_edge">
+                                        <div><img class="imgTosvg theme-svg-tint" src="images/ribbon-edge.svg" alt=""/></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Poland -->
+                        <div class="item">
+                            <!-- <button class="button bg-BahamaBlue">Poland</button> -->
+                            <div class="flag start-here has-theme-color-BahamaBlue">
+                                <div class="flag-inner">
+                                    <div class="flag-content theme-bg text-center">
+                                        <ul>
+                                            <li>
+                                                <div class="country-tag">
+                                                    <div class="flag image aspect-ratio_1x1 is-circle">
+                                                        <span class="img-wrap"><img src="images/country-flag/poland.jpg" alt="Poland"></span>
+                                                    </div>
+                                                </div>
+                                                <p class="h4">Poland</p>
+                                            </li>
+                                            <li><p><span class="h5">Poland</span></p></li>
+                                            <li>
+                                                <div class="info-card">
+                                                    <img class="col-2" src="images/population-icon.png" alt=""/>
+                                                    <br><span class="h6">Total Population</span>
+                                                    <br><span class="h3">37.1m</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="info-card">
+                                                    <img class="col-2" src="images/calenderdate-icon.png" alt=""/>
+                                                    <br><span class="h6">Date of Data Collection</span>
+                                                    <br><span class="h3">July 2018</span>
+                                                </div>
+                                            </li>
+                                            <li><a class="h5" href="country.html"><span>Source</span> <i class="fas fa-angle-double-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="edge aspect-ratio_edge">
+                                        <div><img class="imgTosvg theme-svg" src="images/ribbon-edge.svg" alt=""/></div>
+                                    </div>
+                                </div>
+                                <div class="flag-footer">
+                                    <div class="gap theme-bg-tint"></div>
+                                    <div class="edge aspect-ratio_edge">
+                                        <div><img class="imgTosvg theme-svg-tint" src="images/ribbon-edge.svg" alt=""/></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slovenia -->
+                        <div class="item">
+                            <!-- <button class="button bg-BahamaBlue">Slovenia</button> -->
+                            <div class="flag start-here has-theme-color-BahamaBlue">
+                                <div class="flag-inner">
+                                    <div class="flag-content theme-bg text-center">
+                                        <ul>
+                                            <li>
+                                                <div class="country-tag">
+                                                    <div class="flag image aspect-ratio_1x1 is-circle">
+                                                        <span class="img-wrap"><img src="images/country-flag/slovenia.jpg" alt="Slovenia"></span>
+                                                    </div>
+                                                </div>
+                                                <p class="h4">Slovenia</p>
+                                            </li>
+                                            <li><p><span class="h5">Slovenia</span></p></li>
+                                            <li>
+                                                <div class="info-card">
+                                                    <img class="col-2" src="images/population-icon.png" alt=""/>
+                                                    <br><span class="h6">Total Population</span>
+                                                    <br><span class="h3">2.1m</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="info-card">
+                                                    <img class="col-2" src="images/calenderdate-icon.png" alt=""/>
+                                                    <br><span class="h6">Date of Data Collection</span>
+                                                    <br><span class="h3">July 2018</span>
+                                                </div>
+                                            </li>
+                                            <li><a class="h5" href="country.html"><span>Source</span> <i class="fas fa-angle-double-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="edge aspect-ratio_edge">
+                                        <div><img class="imgTosvg theme-svg" src="images/ribbon-edge.svg" alt=""/></div>
+                                    </div>
+                                </div>
+                                <div class="flag-footer">
+                                    <div class="gap theme-bg-tint"></div>
+                                    <div class="edge aspect-ratio_edge">
+                                        <div><img class="imgTosvg theme-svg-tint" src="images/ribbon-edge.svg" alt=""/></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Croatia -->
+                        <div class="item">
+                            <!-- <button class="button bg-BahamaBlue">Croatia</button> -->
+                            <div class="flag start-here has-theme-color-BahamaBlue">
+                                <div class="flag-inner">
+                                    <div class="flag-content theme-bg text-center">
+                                        <ul>
+                                            <li>
+                                                <div class="country-tag">
+                                                    <div class="flag image aspect-ratio_1x1 is-circle">
+                                                        <span class="img-wrap"><img src="images/country-flag/croatia.jpg" alt="Croatia"></span>
+                                                    </div>
+                                                </div>
+                                                <p class="h4">Croatia</p>
+                                            </li>
+                                            <li><p><span class="h5">Croatia</span></p></li>
+                                            <li>
+                                                <div class="info-card">
+                                                    <img class="col-2" src="images/population-icon.png" alt=""/>
+                                                    <br><span class="h6">Total Population</span>
+                                                    <br><span class="h3">4.1m</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="info-card">
+                                                    <img class="col-2" src="images/calenderdate-icon.png" alt=""/>
+                                                    <br><span class="h6">Date of Data Collection</span>
+                                                    <br><span class="h3">July 2018</span>
+                                                </div>
+                                            </li>
+                                            <li><a class="h5" href="country.html"><span>Source</span> <i class="fas fa-angle-double-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="edge aspect-ratio_edge">
+                                        <div><img class="imgTosvg theme-svg" src="images/ribbon-edge.svg" alt=""/></div>
+                                    </div>
+                                </div>
+                                <div class="flag-footer">
+                                    <div class="gap theme-bg-tint"></div>
+                                    <div class="edge aspect-ratio_edge">
+                                        <div><img class="imgTosvg theme-svg-tint" src="images/ribbon-edge.svg" alt=""/></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Hungary -->
+                        <div class="item">
+                            <!-- <button class="button bg-BahamaBlue">Hungary</button> -->
+                            <div class="flag start-here has-theme-color-BahamaBlue">
+                                <div class="flag-inner">
+                                    <div class="flag-content theme-bg text-center">
+                                        <ul>
+                                            <li>
+                                                <div class="country-tag">
+                                                    <div class="flag image aspect-ratio_1x1 is-circle">
+                                                        <span class="img-wrap"><img src="images/country-flag/hungary.jpg" alt="Hungary"></span>
+                                                    </div>
+                                                </div>
+                                                <p class="h4">Hungary</p>
+                                            </li>
+                                            <li><p><span class="h5">Hungary</span></p></li>
+                                            <li>
+                                                <div class="info-card">
+                                                    <img class="col-2" src="images/population-icon.png" alt=""/>
+                                                    <br><span class="h6">Total Population</span>
+                                                    <br><span class="h3">9.8m</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="info-card">
+                                                    <img class="col-2" src="images/calenderdate-icon.png" alt=""/>
+                                                    <br><span class="h6">Date of Data Collection</span>
+                                                    <br><span class="h3">July 2018</span>
+                                                </div>
+                                            </li>
+                                            <li><a class="h5" href="country.html"><span>Source</span> <i class="fas fa-angle-double-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="edge aspect-ratio_edge">
+                                        <div><img class="imgTosvg theme-svg" src="images/ribbon-edge.svg" alt=""/></div>
+                                    </div>
+                                </div>
+                                <div class="flag-footer">
+                                    <div class="gap theme-bg-tint"></div>
+                                    <div class="edge aspect-ratio_edge">
+                                        <div><img class="imgTosvg theme-svg-tint" src="images/ribbon-edge.svg" alt=""/></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slovakia -->
+                        <div class="item">
+                            <!-- <button class="button bg-BahamaBlue">Slovakia</button> -->
+                            <div class="flag start-here has-theme-color-BahamaBlue">
+                                <div class="flag-inner">
+                                    <div class="flag-content theme-bg text-center">
+                                        <ul>
+                                            <li>
+                                                <div class="country-tag">
+                                                    <div class="flag image aspect-ratio_1x1 is-circle">
+                                                        <span class="img-wrap"><img src="images/country-flag/slovakia.jpg" alt="Slovakia"></span>
+                                                    </div>
+                                                </div>
+                                                <p class="h4">Slovakia</p>
+                                            </li>
+                                            <li><p><span class="h5">Slovakia</span></p></li>
+                                            <li>
+                                                <div class="info-card">
+                                                    <img class="col-2" src="images/population-icon.png" alt=""/>
+                                                    <br><span class="h6">Total Population</span>
+                                                    <br><span class="h3">5.45m</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="info-card">
+                                                    <img class="col-2" src="images/calenderdate-icon.png" alt=""/>
+                                                    <br><span class="h6">Date of Data Collection</span>
+                                                    <br><span class="h3">July 2018</span>
+                                                </div>
+                                            </li>
+                                            <li><a class="h5" href="country.html"><span>Source</span> <i class="fas fa-angle-double-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="edge aspect-ratio_edge">
+                                        <div><img class="imgTosvg theme-svg" src="images/ribbon-edge.svg" alt=""/></div>
+                                    </div>
+                                </div>
+                                <div class="flag-footer">
+                                    <div class="gap theme-bg-tint"></div>
+                                    <div class="edge aspect-ratio_edge">
+                                        <div><img class="imgTosvg theme-svg-tint" src="images/ribbon-edge.svg" alt=""/></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- mobile popup ends -->
+        
+
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="aside text-color-primary h4">
+                Data<span class="text-color-secondary">Map</span>
+                <img src="images/datamap-icon.png" alt=""/>
+            </div>
+            <div class="h6">&copy; Copyright 2018</div>
+        </div>
+    </footer>
+</body>
+<script src="js/jquery-3.3.1.min.js"></script>
+<!-- Dognut chart -->
+<script src="js/donutty.js"></script>
+<!-- Carousel -->
+<script src="js/owl.carousel.min.js"></script>
+<!-- img to svg -->
+<script src="js/imgtosvg.js"></script>
+<!-- popupoverlay -->
+<script src="js/jquery.popupoverlay.js"></script>
+
+<!-- datamaps-->
+<script src="js/d3.min.js"></script>
+<script src="js/topojson.min.js"></script>
+<script src="js/datamaps.world.hires.min.js"></script>
+<script src="js/scripts.js"></script>
+<script src="js/eumap.js"></script>
+</html>
