@@ -18,9 +18,9 @@ $(function(){
         var maintabCarousel = $('.mainTabCarousel');
 
         maintabCarousel.owlCarousel({
-            autoHeight: true,
             mouseDrag:false,
             touchDrag:false,
+            // autoHeight: true,
             items:1,
             loop:false,
             nav:false,
@@ -50,7 +50,7 @@ $(function(){
         innermaintabCarousel.owlCarousel({
             mouseDrag:false,
             touchDrag:true,
-            autoHeight:true,
+            // autoHeight:true,
             items:1,
             loop:false,
             nav:false,

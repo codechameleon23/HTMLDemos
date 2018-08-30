@@ -1063,7 +1063,7 @@ a.image:hover img { -webkit-transform: scale(1.075); -ms-transform: scale(1.075)
 /*tooltop : infotip*/
 .infotip { position: relative; cursor: help; }
 
-.infotip:after { content: attr(data-info); position: absolute; z-index: 99; padding: 1.5rem; bottom: calc(100% + .5rem); left: 0; font-family: "itc-avant-garde-gothic-pro", "Helvetica", "Arial", sans-serif; font-size: 1.6rem; font-weight: 500; min-width: 23rem; display: none; }
+.infotip:after { content: attr(data-info); position: absolute; z-index: 99; padding: 1.5rem; bottom: calc(100% + .5rem); left: 0; font-family: "itc-avant-garde-gothic-pro", "Helvetica", "Arial", sans-serif; font-size: 1.6rem; font-weight: 500; min-width: 13rem; display: none; }
 
 .infotip:hover:after { display: block; -webkit-animation: fadeIn .3s 0s ease-in-out; animation: fadeIn .3s 0s ease-in-out; }
 
@@ -1179,9 +1179,9 @@ a.image:hover img { -webkit-transform: scale(1.075); -ms-transform: scale(1.075)
 @keyframes flagUp { 100% { margin-bottom: 4rem; } }
 
 /*sourses-flag*/
-html, .map-home { height: 100%; overflow: hidden; }
+html, .map-home { height: 100%; }
 
-.map-home { padding-top: 10rem; }
+.map-home { padding-top: 10rem; overflow: hidden; }
 
 .map-home .header { position: absolute; top: 0; right: 0; left: 0; }
 
@@ -1251,7 +1251,8 @@ html, .map-home { height: 100%; overflow: hidden; }
   .infotip_link .infotip_close, .infotip_link .infotip { display: none; }
   .sourse-flags_popup .popup-close, .start_here_note, .country-sequence { display: none; } }
 
-@media (max-width: 767px) { .page-heading .ountry-tag .name { font-size: 1.8rem; margin-left: 1rem; }
+@media (max-width: 767px) { .page-heading .country-tag .flag { width: 3rem; }
+  .page-heading .country-tag .name { font-size: 1.8rem; margin-left: 1rem; }
   .back_to_map > span { display: none; }
   .tabs-holder .wrapper { -ms-flex-wrap: wrap; flex-wrap: wrap; }
   .tabs-holder .wrapper > a { -webkit-box-flex: 1; -ms-flex: auto; flex: auto; }
@@ -1269,9 +1270,9 @@ html, .map-home { height: 100%; overflow: hidden; }
   .inner-tabs .inner-tab { padding: 1rem; margin-top: .5rem; }
   .inner-tabs .inner-tab + .inner-tab { margin-left: .5rem; }
   .inner-tabs .inner-tab::after { display: none; }
-  .map-home { background-color: #e6eff5; }
+  .map-home { background-color: #e6eff5; padding-top: 7rem; overflow: auto; }
   .start_here_note { padding: 2rem; }
-  .map-home .main { padding-top: 7rem; height: auto; }
+  .map-home .main { height: auto; }
   .map-home .main .start-here { display: none; }
   .country-sequence { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; padding: 0 1rem; list-style: none; margin: 0 0 3rem; }
   .country-sequence li { margin: 0; padding: .5rem; display: -webkit-box; display: -ms-flexbox; display: flex; }
@@ -1284,7 +1285,8 @@ html, .map-home { height: 100%; overflow: hidden; }
   .map-home .footer .container { -webkit-transform: translate(0); -ms-transform: translate(0); transform: translate(0); text-align: right; }
   .item_start-here { display: none; }
   .sourse-flags_container { position: static; height: auto; -webkit-transform: translateX(0); -ms-transform: translateX(0); transform: translateX(0); }
-  .sourse-flags_container .sourse-flags { max-width: 100%; }
+  .sourse-flags_container .sourse-flags { max-width: 100%; width: 100%; }
+  .sourse-flags_container .sourse-flags .flag-inner { width: 100%; }
   .sourse-flags_container .sourse-flags .flag-footer, .sourse-flags_container .sourse-flags .flag .edge { display: none; }
   .sourse-flags_container .country-tag .flag { border: .2rem solid; } }
 
