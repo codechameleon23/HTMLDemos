@@ -1110,7 +1110,7 @@ a.image:hover img { -webkit-transform: scale(1.075); -ms-transform: scale(1.075)
 
 .flagMarker .flag-name { padding: 0 1rem; height: 6rem; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; text-transform: capitalize; }
 
-.flagMarker .flag-name:before { content: ""; height: 40px; width: 40px; border-radius: 100%; background-size: cover; background-position: center; }
+.flagMarker .flag-name:before { content: ""; height: 40px; width: 40px; display: inline-block; border-radius: 100%; background-size: cover; background-position: center; }
 
 .flagMarker .flag-name:after { margin-left: 1rem; }
 
@@ -1199,13 +1199,19 @@ html, .map-home { height: 100%; }
 
 .map-home .footer .aside img { margin-left: 1rem; margin-bottom: 1rem; }
 
-.sourse-flags { width: 27rem; max-height: 100%; position: relative; z-index: 1; }
+.sourse-flags { overflow: hidden; width: 27rem; position: relative; z-index: 1; }
 
 .sourse-flags_container { position: absolute; z-index: 999; top: 0rem; left: 50%; right: 0; height: 100px; width: 100%; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); }
 
+.sourse-flags_container .item { display: none; }
+
+.sourse-flags_container .active .item { display: block; }
+
 .sourse-flags .flag { position: relative; max-height: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; }
 
-.sourse-flags .flag-inner { padding-bottom: 1.5rem; }
+.sourse-flags .flag .img-wrap { max-height: 48px; }
+
+.sourse-flags .flag-inner { padding-bottom: 1.5rem; width: 100%; }
 
 .sourse-flags .flag-footer { position: absolute; z-index: -1; left: 0; bottom: 0rem; right: 0; }
 
