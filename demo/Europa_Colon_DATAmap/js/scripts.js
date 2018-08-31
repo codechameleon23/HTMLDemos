@@ -55,7 +55,7 @@ $(function(){
             loop:false,
             nav:false,
             dots:false,
-            animateIn: isIE11 ? '' : 'smoothInUp',
+            animateIn: isIE11 ? 'fadeIn' : 'smoothInUp',
             animateOut: isIE11 ? '' : 'fadeOutDown',
             autoplay:false,
         });

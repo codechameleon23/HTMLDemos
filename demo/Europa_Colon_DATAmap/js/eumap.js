@@ -64,7 +64,7 @@ function drowMap(){
             return { path: path, projection: projection };
         },
         done: function(datamap) {
-            datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
+            datamap.svg.selectAll('.datamaps-subunit').on('mouseover', function(geography) {
                countryClicked($(this), geography.id);
             });
         }
