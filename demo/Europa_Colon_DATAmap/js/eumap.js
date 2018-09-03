@@ -13,9 +13,10 @@ $(function(){
     });
 });
 
+var map;
 function drowMap(){
-    $('#mapArea').empty();
-    var map = new Datamap({
+    $('#mapArea').empty();//empty maparea before drow/redraw
+    map = new Datamap({
         element: document.getElementById('mapArea'),
         scope: 'world',
         projection: 'mercator',
@@ -30,12 +31,12 @@ function drowMap(){
             },
             highlightBorderColor: '#00aeef',
             highlightBorderWidth: .7,
-            popupOnHover: function(data){
-                if (data.fillKey) {
-                    return true;
-                }
-                return false;
-            }
+            // popupOnHover: function(data){
+            //     if (data.fillKey) {
+            //         return true;
+            //     }
+            //     return false;
+            // }
         },
         fills: {
             'marker': '#f5851f',
@@ -43,25 +44,40 @@ function drowMap(){
             defaultFill: "transparent",
         },
         data: {
-            'GBR': { fillKey: 'country' },
-            'PRT': { fillKey: 'country' },
-            'ESP': { fillKey: 'country' },
-            'FRA': { fillKey: 'country' },
-            'DEU': { fillKey: 'country' },
-            'CHE': { fillKey: 'country' },
-            'ITA': { fillKey: 'country' },
-            'AUT': { fillKey: 'country' },
-            'CZE': { fillKey: 'country' },
-            'POL': { fillKey: 'country' },
-            'SVN': { fillKey: 'country' },
-            'HRV': { fillKey: 'country' },
-            'HUN': { fillKey: 'country' },
-            'SVK': { fillKey: 'country' },
+            'GBR': { fillKey: 'country' },//United Kingdom
+            'PRT': { fillKey: 'country' },//Portugal
+            'ESP': { fillKey: 'country' },//Spain
+            'FRA': { fillKey: 'country' },//France
+            'DEU': { fillKey: 'country' },//Germany
+            'CHE': { fillKey: 'country' },//Switzerland
+            'ITA': { fillKey: 'country' },//Italy
+            'AUT': { fillKey: 'country' },//Austria
+            'CZE': { fillKey: 'country' },//Czech Republic
+            'POL': { fillKey: 'country' },//Poland
+            'SVN': { fillKey: 'country' },//Slovenia
+            'HRV': { fillKey: 'country' },//Croatia
+            'HUN': { fillKey: 'country' },//Hungary
+            'SVK': { fillKey: 'country' },//Slovakia
+            'BEL': { fillKey: 'country' },//Belgium
+            'BGR': { fillKey: 'country' },//Bulgaria
+            'CYP': { fillKey: 'country' },//Cyprus
+            'DNK': { fillKey: 'country' },//DENMARK
+            'EST': { fillKey: 'country' },//Estonia
+            'FIN': { fillKey: 'country' },//Finland
+            'GRC': { fillKey: 'country' },//Greece
+            'IRL': { fillKey: 'country' },//Ireland
+            'LVA': { fillKey: 'country' },//Latvia
+            'LTU': { fillKey: 'country' },//Lithuania
+            'MLT': { fillKey: 'country' },//Malta
+            'NLD': { fillKey: 'country' },//Netherlands
+            'ROU': { fillKey: 'country' },//Romania
+            'SWE': { fillKey: 'country' },//Sweden
         },
+        
         setProjection: function (element) {
             var projection = d3.geo.mercator()
-                .center([-2, 48]) // always in [East Latitude, North Longitude]
-                .scale( (getViewportWidth() < 900 ? element.offsetWidth : element.offsetHeight*1.45) )
+                .center([4, 53]) // always in [East Latitude, North Longitude]
+                .scale( (getViewportWidth() < 900 ? element.offsetWidth : element.offsetHeight) )
                 // .scale(3000)
                 .translate([element.offsetWidth / 2, element.offsetHeight / 2]);
             var path = d3.geo.path().projection(projection);
@@ -77,6 +93,7 @@ function drowMap(){
 
     // Add pins on selected countries
     map.addPlugin('pins', function(layer, data, options) {
+
         var self = this,
             fillData = this.options.fills,
             svg = this.svg;
@@ -237,7 +254,102 @@ function drowMap(){
             centered: 'SVK',
             fillKey: 'marker'
         },
+        {
+            name: "Belgium",
+            c_id: 'BEL',
+            centered: 'BEL',
+            fillKey: 'marker'
+        },
+        {
+            name: "Bulgaria",
+            c_id: 'BGR',
+            centered: 'BGR',
+            fillKey: 'marker'
+        },
+        {
+            name: "Cyprus",
+            c_id: 'CYP',
+            centered: 'CYP',
+            fillKey: 'marker'
+        },
+        {
+            name: "Denmark",
+            c_id: 'DNK',
+            centered: 'DNK',
+            fillKey: 'marker'
+        },
+        {
+            name: "Estonia",
+            c_id: 'EST',
+            centered: 'EST',
+            fillKey: 'marker'
+        },
+        {
+            name: "Finland",
+            c_id: 'FIN',
+            centered: 'FIN',
+            fillKey: 'marker'
+        },
+        {
+            name: "Greece",
+            c_id: 'GRC',
+            centered: 'GRC',
+            fillKey: 'marker'
+        },
+        {
+            name: "Ireland",
+            c_id: 'IRL',
+            centered: 'IRL',
+            fillKey: 'marker'
+        },
+        {
+            name: "Latvia",
+            c_id: 'LVA',
+            centered: 'LVA',
+            fillKey: 'marker'
+        },
+        {
+            name: "Lithuania",
+            c_id: 'LTU',
+            centered: 'LTU',
+            fillKey: 'marker'
+        },
+        {
+            name: "Malta",
+            c_id: 'MLT',
+            centered: 'MLT',
+            fillKey: 'marker'
+        },
+        {
+            name: "Netherlands",
+            c_id: 'NLD',
+            centered: 'NLD',
+            fillKey: 'marker'
+        },
+        {
+            name: "Romania",
+            c_id: 'ROU',
+            centered: 'ROU',
+            fillKey: 'marker'
+        },
+        {
+            name: "Sweden",
+            c_id: 'SWE',
+            centered: 'SWE',
+            fillKey: 'marker'
+        },
     ]);
+
+    pinEvent();
+}
+
+// Add click event on pins
+function pinEvent(){
+    $('.datamaps-pin').on('click', function(){
+        pin_id = $(this).attr('data-id');
+        pin_obj = $('.datamaps-subunit '+pin_id);
+        countryClicked(pin_obj, pin_id);
+    });
 }
 
 /* when Country clicked*/
@@ -253,7 +365,6 @@ function countryClicked(obj, c_id){
 
 /* Add flag marker on click of country */
 function addFlagMarker(c_id){
-
 
     var pin = $('.pins').find('.datamaps-pin[data-id="'+c_id+'"]');
     var posX = pin.attr('x')+'px';
