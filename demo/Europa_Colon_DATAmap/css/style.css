@@ -1075,7 +1075,7 @@ a.image:hover img { -webkit-transform: scale(1.075); -ms-transform: scale(1.075)
 
 .mapArea path { stroke-dasharray: 4,2; }
 
-.mapArea .pins { height: 100%; width: 100%; }
+.mapArea .pins { height: 100%; width: 100%; pointer-events: none; }
 
 .mapArea .datamaps-pin { position: relative; pointer-events: none; -webkit-transform: translate(-0.3rem, -1.65rem); -ms-transform: translate(-0.3rem, -1.65rem); transform: translate(-0.3rem, -1.65rem); -webkit-transition: all .35s 0s ease-in-out both; -o-transition: all .35s 0s ease-in-out both; transition: all .35s 0s ease-in-out both; }
 
@@ -1203,9 +1203,8 @@ html, .map-home { height: 100%; }
 
 .sourse-flags_container { position: absolute; z-index: 999; top: 0rem; left: 50%; right: 0; height: 100px; width: 100%; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); }
 
-.sourse-flags_container .item { display: none; }
-
-.sourse-flags_container .active .item { display: block; }
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { .sourse-flags_container .item { display: none; }
+  .sourse-flags_container .active .item { display: block; } }
 
 .sourse-flags .flag { position: relative; max-height: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; }
 
@@ -1230,6 +1229,11 @@ html, .map-home { height: 100%; }
 .sourse-flags .flag-content > ul > li:not(:last-child) { border-bottom: 1px dashed; }
 
 .sourse-flags .flag-content .info-card { padding: 1rem 0 0; }
+
+/*Ie10 Heck*/
+html[data-useragent*='MSIE 10.0'] .sourse-flags_container .item { display: none; }
+
+html[data-useragent*='MSIE 10.0'] .sourse-flags_container .active .item { display: block; }
 
 /*Media*/
 @media all and (max-width: 1088px) { .container-wrapper { max-width: calc(100% - 2rem); margin-top: 1rem; margin-bottom: 1rem; }
