@@ -1069,21 +1069,21 @@ a.image:hover img { -webkit-transform: scale(1.075); -ms-transform: scale(1.075)
 
 /*_owlsetting*/
 /*mapArea*/
-.mapArea { position: absolute; z-index: 1; left: 0; top: 0; height: 100%; width: 100%; background-color: #ffffff; overflow: hidden; }
+.mapArea { position: absolute; z-index: 1; left: 0; top: 0; height: 100%; width: 100%; background-color: #ffffff; }
 
 .mapArea .datamap { width: 100% !important; height: 100% !important; }
 
 .mapArea path { stroke-dasharray: 4,2; }
 
-.mapArea .pins { height: 100%; width: 100%; pointer-events: none; }
+.mapArea .pins { height: 100%; width: 100%; }
 
-.mapArea .datamaps-pin { position: relative; pointer-events: none; -webkit-transform: translate(-0.3rem, -1.65rem); -ms-transform: translate(-0.3rem, -1.65rem); transform: translate(-0.3rem, -1.65rem); -webkit-transition: all .35s 0s ease-in-out both; -o-transition: all .35s 0s ease-in-out both; transition: all .35s 0s ease-in-out both; }
+.mapArea .datamaps-pin { position: relative; -webkit-transform: translate(-0.3rem, -1.65rem); -ms-transform: translate(-0.3rem, -1.65rem); transform: translate(-0.3rem, -1.65rem); -webkit-transition: all .35s 0s ease-in-out both; -o-transition: all .35s 0s ease-in-out both; transition: all .35s 0s ease-in-out both; }
 
 .mapArea .datamaps-subunit { pointer-events: none; }
 
-.mapArea .datamaps-subunit.GBR, .mapArea .datamaps-subunit.PRT, .mapArea .datamaps-subunit.ESP, .mapArea .datamaps-subunit.FRA, .mapArea .datamaps-subunit.DEU, .mapArea .datamaps-subunit.CHE, .mapArea .datamaps-subunit.ITA, .mapArea .datamaps-subunit.AUT, .mapArea .datamaps-subunit.CZE, .mapArea .datamaps-subunit.POL, .mapArea .datamaps-subunit.SVN, .mapArea .datamaps-subunit.HRV, .mapArea .datamaps-subunit.HUN, .mapArea .datamaps-subunit.SVK { pointer-events: all; }
+.mapArea .datamaps-subunit.GBR, .mapArea .datamaps-subunit.PRT, .mapArea .datamaps-subunit.ESP, .mapArea .datamaps-subunit.FRA, .mapArea .datamaps-subunit.DEU, .mapArea .datamaps-subunit.CHE, .mapArea .datamaps-subunit.ITA, .mapArea .datamaps-subunit.AUT, .mapArea .datamaps-subunit.CZE, .mapArea .datamaps-subunit.POL, .mapArea .datamaps-subunit.SVN, .mapArea .datamaps-subunit.HRV, .mapArea .datamaps-subunit.HUN, .mapArea .datamaps-subunit.SVK, .mapArea .datamaps-subunit.BEL, .mapArea .datamaps-subunit.BGR, .mapArea .datamaps-subunit.CYP, .mapArea .datamaps-subunit.DNK, .mapArea .datamaps-subunit.EST, .mapArea .datamaps-subunit.FIN, .mapArea .datamaps-subunit.GRC, .mapArea .datamaps-subunit.IRL, .mapArea .datamaps-subunit.LVA, .mapArea .datamaps-subunit.LTU, .mapArea .datamaps-subunit.MLT, .mapArea .datamaps-subunit.NLD, .mapArea .datamaps-subunit.ROU, .mapArea .datamaps-subunit.SWE { pointer-events: all; }
 
-.mapArea .datamaps-subunit.GBR.selected, .mapArea .datamaps-subunit.PRT.selected, .mapArea .datamaps-subunit.ESP.selected, .mapArea .datamaps-subunit.FRA.selected, .mapArea .datamaps-subunit.DEU.selected, .mapArea .datamaps-subunit.CHE.selected, .mapArea .datamaps-subunit.ITA.selected, .mapArea .datamaps-subunit.AUT.selected, .mapArea .datamaps-subunit.CZE.selected, .mapArea .datamaps-subunit.POL.selected, .mapArea .datamaps-subunit.SVN.selected, .mapArea .datamaps-subunit.HRV.selected, .mapArea .datamaps-subunit.HUN.selected, .mapArea .datamaps-subunit.SVK.selected { fill: #a5dff9 !important; }
+.mapArea .datamaps-subunit.GBR.selected, .mapArea .datamaps-subunit.PRT.selected, .mapArea .datamaps-subunit.ESP.selected, .mapArea .datamaps-subunit.FRA.selected, .mapArea .datamaps-subunit.DEU.selected, .mapArea .datamaps-subunit.CHE.selected, .mapArea .datamaps-subunit.ITA.selected, .mapArea .datamaps-subunit.AUT.selected, .mapArea .datamaps-subunit.CZE.selected, .mapArea .datamaps-subunit.POL.selected, .mapArea .datamaps-subunit.SVN.selected, .mapArea .datamaps-subunit.HRV.selected, .mapArea .datamaps-subunit.HUN.selected, .mapArea .datamaps-subunit.SVK.selected, .mapArea .datamaps-subunit.BEL.selected, .mapArea .datamaps-subunit.BGR.selected, .mapArea .datamaps-subunit.CYP.selected, .mapArea .datamaps-subunit.DNK.selected, .mapArea .datamaps-subunit.EST.selected, .mapArea .datamaps-subunit.FIN.selected, .mapArea .datamaps-subunit.GRC.selected, .mapArea .datamaps-subunit.IRL.selected, .mapArea .datamaps-subunit.LVA.selected, .mapArea .datamaps-subunit.LTU.selected, .mapArea .datamaps-subunit.MLT.selected, .mapArea .datamaps-subunit.NLD.selected, .mapArea .datamaps-subunit.ROU.selected, .mapArea .datamaps-subunit.SWE.selected { fill: #a5dff9 !important; }
 
 .mapArea .flagMarker { position: absolute; }
 
@@ -1110,7 +1110,7 @@ a.image:hover img { -webkit-transform: scale(1.075); -ms-transform: scale(1.075)
 
 .flagMarker .flag-name { padding: 0 1rem; height: 6rem; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; text-transform: capitalize; }
 
-.flagMarker .flag-name:before { content: ""; height: 40px; width: 40px; display: inline-block; border-radius: 100%; background-size: cover; background-position: center; }
+.flagMarker .flag-name:before { content: ""; height: 40px; width: 40px; display: inline-block; border-radius: 100%; background-size: cover; background-position: center; -webkit-box-shadow: inset 0 0 0px 1px rgba(255, 255, 255, 0.4); box-shadow: inset 0 0 0px 1px rgba(255, 255, 255, 0.4); }
 
 .flagMarker .flag-name:after { margin-left: 1rem; }
 
@@ -1174,6 +1174,62 @@ a.image:hover img { -webkit-transform: scale(1.075); -ms-transform: scale(1.075)
 
 .flagMarker.SVK .flag-name:after { content: "slovakia"; }
 
+.flagMarker.BEL .flag-name:before { background-image: url("../images/country-flag/belgium.jpg"); }
+
+.flagMarker.BEL .flag-name:after { content: "Belgium"; }
+
+.flagMarker.BGR .flag-name:before { background-image: url("../images/country-flag/bulgaria.jpg"); }
+
+.flagMarker.BGR .flag-name:after { content: "Bulgaria"; }
+
+.flagMarker.CYP .flag-name:before { background-image: url("../images/country-flag/Cyprus.jpg"); }
+
+.flagMarker.CYP .flag-name:after { content: "Cyprus"; }
+
+.flagMarker.DNK .flag-name:before { background-image: url("../images/country-flag/Denmark.jpg"); }
+
+.flagMarker.DNK .flag-name:after { content: "Denmark"; }
+
+.flagMarker.EST .flag-name:before { background-image: url("../images/country-flag/Estonia.jpg"); }
+
+.flagMarker.EST .flag-name:after { content: "Estonia"; }
+
+.flagMarker.FIN .flag-name:before { background-image: url("../images/country-flag/finland.jpg"); }
+
+.flagMarker.FIN .flag-name:after { content: "finland"; }
+
+.flagMarker.GRC .flag-name:before { background-image: url("../images/country-flag/greece.jpg"); }
+
+.flagMarker.GRC .flag-name:after { content: "greece"; }
+
+.flagMarker.IRL .flag-name:before { background-image: url("../images/country-flag/Ireland.jpg"); }
+
+.flagMarker.IRL .flag-name:after { content: "Ireland"; }
+
+.flagMarker.LVA .flag-name:before { background-image: url("../images/country-flag/Latvia.jpg"); }
+
+.flagMarker.LVA .flag-name:after { content: "Latvia"; }
+
+.flagMarker.LTU .flag-name:before { background-image: url("../images/country-flag/Lithuania.jpg"); }
+
+.flagMarker.LTU .flag-name:after { content: "Lithuania"; }
+
+.flagMarker.MLT .flag-name:before { background-image: url("../images/country-flag/Malta.jpg"); }
+
+.flagMarker.MLT .flag-name:after { content: "Malta"; }
+
+.flagMarker.NLD .flag-name:before { background-image: url("../images/country-flag/Netherlands.jpg"); }
+
+.flagMarker.NLD .flag-name:after { content: "Netherlands"; }
+
+.flagMarker.ROU .flag-name:before { background-image: url("../images/country-flag/Romania.jpg"); }
+
+.flagMarker.ROU .flag-name:after { content: "Romania"; }
+
+.flagMarker.SWE .flag-name:before { background-image: url("../images/country-flag/Sweden.jpg"); }
+
+.flagMarker.SWE .flag-name:after { content: "Sweden"; }
+
 @-webkit-keyframes flagUp { 100% { margin-bottom: 4rem; } }
 
 @keyframes flagUp { 100% { margin-bottom: 4rem; } }
@@ -1185,9 +1241,9 @@ html, .map-home { height: 100%; }
 
 .map-home .header { position: absolute; top: 0; right: 0; left: 0; }
 
-.map-home .main { position: relative; height: 100%; width: 100%; overflow: hidden; display: inline-block; }
+.map-home .main { position: relative; z-index: 99; height: 100%; width: 100%; display: inline-block; }
 
-.map-home .footer { position: fixed; height: 0; z-index: 1; bottom: 2rem; left: 2rem; left: 0; right: 0; }
+.map-home .footer { position: fixed; height: 0; z-index: 1; bottom: 2rem; left: 2rem; left: 0; right: 0; pointer-events: none; }
 
 .map-home .footer .container { -webkit-transform: translateY(-100%); -ms-transform: translateY(-100%); transform: translateY(-100%); }
 
@@ -1201,7 +1257,7 @@ html, .map-home { height: 100%; }
 
 .sourse-flags { overflow: hidden; width: 27rem; position: relative; z-index: 1; }
 
-.sourse-flags_container { position: absolute; z-index: 999; top: 0rem; left: 50%; right: 0; height: 100px; width: 100%; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); }
+.sourse-flags_container { position: absolute; z-index: 999; top: 0rem; left: 50%; right: 0; height: 0px; width: 100%; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { .sourse-flags_container .item { display: none; }
   .sourse-flags_container .active .item { display: block; } }
