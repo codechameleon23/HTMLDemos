@@ -1,3 +1,7 @@
+//Ie 10 hack
+var doc = document.documentElement;
+doc.setAttribute('data-useragent', navigator.userAgent);
+
 function getViewportWidth(){if (window.innerWidth){return window.innerWidth;}else if (document.body && document.body.offsetWidth){return document.body.offsetWidth;}else{return 0;}}
 
 function stopOwlPropagation(element) {
@@ -55,7 +59,7 @@ $(function(){
             loop:false,
             nav:false,
             dots:false,
-            animateIn: isIE11 ? 'fadeIn' : 'smoothInUp',
+            animateIn: isIE11 ? '' : 'smoothInUp',
             animateOut: isIE11 ? '' : 'fadeOutDown',
             autoplay:false,
         });

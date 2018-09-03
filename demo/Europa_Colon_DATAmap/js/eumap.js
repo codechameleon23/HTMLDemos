@@ -1,17 +1,22 @@
 
-if($('#mapArea').length && getViewportWidth() > 700){
-    drowMap();
-}else{
-    $('#mapArea').hide();
-}
+
+$(function(){
+    //map in tablet and desktop only
+    if($('#mapArea').length && getViewportWidth() > 700){
+        drowMap();
+    }else{
+        $('#mapArea').hide();
+    }
+
+    $(window).on('resize', function() {
+        drowMap();
+    });
+});
 
 function drowMap(){
-
     $('#mapArea').empty();
-
     var map = new Datamap({
         element: document.getElementById('mapArea'),
-        // responsive: true,
         scope: 'world',
         projection: 'mercator',
         geographyConfig: {
@@ -64,12 +69,13 @@ function drowMap(){
             return { path: path, projection: projection };
         },
         done: function(datamap) {
-            datamap.svg.selectAll('.datamaps-subunit').on('mouseover', function(geography) {
+            datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
                countryClicked($(this), geography.id);
             });
         }
     });
 
+    // Add pins on selected countries
     map.addPlugin('pins', function(layer, data, options) {
         var self = this,
             fillData = this.options.fills,
@@ -136,7 +142,7 @@ function drowMap(){
 
     });
 
-    //bubbles, custom popup on hover template
+    //Pins positions 
     map.pins([
         {
             name: "United Kingdom",
@@ -291,10 +297,3 @@ function addFlagMarker(c_id){
         .appendTo('#mapArea');
     }
 }
-
-
-$(function(){
-    $(window).on('resize', function() {
-        drowMap();
-    });
-});
