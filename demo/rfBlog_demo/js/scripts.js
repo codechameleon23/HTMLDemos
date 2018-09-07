@@ -252,32 +252,40 @@ $(function(){
             after : function(){
 
                 /*Strip carousel*/
-                stripCarousel = $('.strip-carousel');
+                // stripCarousel = $('.strip-carousel');
 
-                stripCarousel.owlCarousel({
-                    items:4,
-                    loop:true,
-                    nav:false,
-                    dots:false,
-                    autoplay:true,
-                    autoplayTimeout:3000,
-                    autoplayHoverPause:true,
-                    responsive:{
-                        0:{
-                            items:3
-                        },
-                        600:{
-                            items:4
-                        }
-                    }
-                });
+                // stripCarousel.owlCarousel({
+                //     items:4,
+                //     loop:true,
+                //     nav:false,
+                //     dots:false,
+                //     autoplay:true,
+                //     autoplayTimeout:3000,
+                //     autoplayHoverPause:true,
+                //     responsive:{
+                //         0:{
+                //             items:3
+                //         },
+                //         600:{
+                //             items:4
+                //         }
+                //     }
+                // });
 
             }
         });
         instaFeed.run();
     }
 
-
+    $(window).on('scroll', function(){
+        scroll = $(window).scrollTop();
+        if (scroll > 100){
+            // downscroll code
+            $(".gotoTop_button").addClass('show');
+        }else{
+            $(".gotoTop_button").removeClass('show');
+        }
+    });
 
 });
 
