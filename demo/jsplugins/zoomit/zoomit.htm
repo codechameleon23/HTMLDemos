@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zoomer</title>
+<head>
+<link rel="stylesheet" href="zoomit/zoomit.css" type="text/css"/>
+<link href="caret/caret.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="fontawesome/font-awesome.css" type="text/css"/>
+<script type="text/javascript" src="jquery-1.10.2.js"></script>
+<script type="text/javascript" src="jquery-ui.js"></script>
+<script type="text/javascript" src="mousestop.js"></script>
+<style>
+body{text-align: center;}
+.sample{display:inline-block;position: relative;}	
+</style>
+</head>
+<body>
+<br><br><br>
+<div class="sample">
+	<div class="applyZoomit">
+		<div class="zmit_group">
+			<div class="zmit_displayArea"><!-- add class "zmit_noimages" if control buttons are not required -->
+				<div class="zmit_displayImgHolder">
+					<!-- image goes here using zoomit.js-->
+				</div>
+				<a class="zmit_control_btn zmit_zoomArea_open" href="javascript:void(0);"><i class="fa fa-search-plus"></i></a><!-- zoom button -->
+				<a class="zmit_control_btn zmit_control_btn_next " href="javascript:void(0);"><i class="fa fa-angle-right"></i></a><!-- next button -->
+				<a class="zmit_control_btn zmit_control_btn_prev " href="javascript:void(0);"><i class="fa fa-angle-left"></i></a><!-- previous button -->
+			</div>
+			<div class="zmit_thumbArea">
+				<a href="javascript:void(0)" class="zoomit_thumb">
+					<img src="images/dice-thumb.jpg" data-medium="images/dice-medium.jpg" data-large="images/dice-large.jpg"/><!-- data-noimages="true" -->
+				<a href="javascript:void(0)" class="zoomit_thumb">
+					<img src="images/paris-thumb.jpg" data-medium="images/paris-medium.jpg" data-large="images/paris-large.jpg"/>
+				</a>
+				<a href="javascript:void(0)" class="zoomit_thumb">
+					<img src="images/japanese-thumb.jpg" data-medium="images/japanese-medium.jpg" data-large="images/japanese-large.jpg"/>
+				</a>
+				<a href="javascript:void(0)" class="zoomit_thumb">
+					<img src="images/volkswagen-thumb.jpg" data-medium="images/volkswagen-medium.jpg" data-large="images/volkswagen-large.jpg"/>
+				</a>
+				<a href="javascript:void(0)" class="zoomit_thumb">
+					<img src="images/yellow-flowers-thumb.jpg" data-medium="images/yellow-flowers-medium.jpg" data-large="images/yellow-flowers-large.jpg"/>
+				</a>
+			</div>		
+			<div class="zmit_zoomArea">
+				<div class="zmit_zoomImgholder">
+					<!-- image goes here using zoomit.js-->
+				</div>
+				<a href="javascript:void(0);" class="zmit_control_btn zmit_zoomArea_close"><i class="fa fa-times"></i></a>
+				<a href="javascript:void(0);" class="zmit_control_btn zmit_control_btn_next"><i class="fa fa-angle-right"></i></a><!-- next button -->
+				<a href="javascript:void(0);" class="zmit_control_btn zmit_control_btn_prev"><i class="fa fa-angle-left"></i></a><!-- previous button -->
+			</div>
+		</div>
+	</div>
+</div>	
+
+<div style="position:absolute;left:0;top:0;right:0;z-index:10000001;color:#fff;background-color:#000;" id="value"></div>
+</body>
+<script type="text/javascript" src="zoomit/zoomit.js"></script>
+<script type="text/javascript" src="jquery.popupoverlay.js"></script>
+<script>
+$(function(){
+	zoomit = $('.applyZoomit');
+	zoomit.zoomit({
+		thumbactiveClass :'thumbActive default-border content-bg caret-bg caret-border carret carretUp carretAlignCenter',
+		callbacks : {
+			onintialise : function(){
+				//alert("Hello");
+			},
+			beforeDisplay : function(){
+				//alert('beforeDisplay');
+			}
+		}
+	});
+});
+</script>
+</html>

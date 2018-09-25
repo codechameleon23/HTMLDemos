@@ -1,0 +1,53 @@
+.zmit_group img{border:0;outline:none;}
+.zmit_group{text-align:center;}
+.zmit_group .zmit_displayArea{
+	-webkit-cursor:zoom-in;
+	-moz-cursor:zoom-in;
+	-ms-cursor:zoom-in;
+	-o-cursor:zoom-in;
+	cursor:zoom-in;
+}
+.zmit_displayArea.zmit_noimages .zmit_control_btn{display:none;}
+.zmit_loding{position:absolute;top:50%;left:50%;margin-left:-20px;margin-top:-20px;font-size:40px;opacity:0.3;filter:alpha(opacity=30);}
+.zmit_displayArea{position: relative;}
+.zmit_displayArea img.zmit_displayImg{position:absolute;}
+.zmit_control_btn{background-color: rgba(0, 0, 0, 0.7);color: #fff;height: 40px;line-height: 40px;position: absolute;text-align: center;text-decoration: none;top: 50%;width: 40px;z-index: 99;background-color:#000\9;font-size: 30px;}
+.zmit_control_btn.zmit_control_btn_next{right:20px;}
+.zmit_control_btn.zmit_control_btn_prev{left:20px;}
+.zmit_control_btn.zmit_zoomArea_open{bottom: 20px;font-size: inherit;right: 20px;top: auto;}
+.zmit_control_btn.zmit_zoomArea_close{bottom: auto;font-size: inherit;right: 20px;top: 20px;}
+
+.zmit_zoomArea{overflow:hidden;width:100%;max-width:850px;height:100%;display:none;position: relative;background-color:rgba(255,255,255,0.6);background-color:#fff\9;cursor:pointer;}
+.zmit_zoomArea .zmit_zoomImgholder{position:absolute;bottom: 0;left: 0;position: absolute;right: 0;top: 0;}
+.zmit_zoomArea img.zmit_zoomImg{position:absolute;}
+
+.touchDevice .zmit_control_btn{position:fixed;}
+.touchDevice .zmit_displayArea .zmit_control_btn{position:absolute;}
+.touchDevice .zmit_zoomArea{overflow:auto;}
+.touchDevice .zmit_zoomArea img.zmit_zoomImg{position:static;}
+
+@media (max-width:768px){
+
+	.zmit_control_btn{position:fixed;}
+	.zmit_displayArea .zmit_control_btn{position:absolute;}
+	.zmit_zoomArea{overflow:auto;width:100%;height:100%;}
+	.zmit_zoomArea img.zmit_zoomImg{position:static;max-width: inherit;}
+}
+
+/*theme*/
+body{background-color:#000;background-image:url(../images/blue_pattern-wallpaper-1280x1024.jpg);}
+*{box-sizing:border-box;}
+.zmit_displayImgHolder{width:100%;max-width:430px;height:322px;}
+.zmit_thumbArea{width:100%;float:left;max-width:430px;}
+.zoomit_thumb{}
+.zoomit_thumb img.zoomit_thumbImg{float:left;width:100%;}
+.zoomit_thumb{border:2px solid #E57E26;float:left;margin: 0 0.7%;width: 18.7%;}
+.zoomit_thumb:first-child{margin-left:0;}
+.zoomit_thumb:last-child{margin-right:0;}
+.thumbActive{border:2px solid #4285F4;}
+.caret-bg:after,.caret-border:before  {
+    border:1px solid #4285F4;
+}
+.thumbActive.carret.carretUp:after {
+    top: -22px;
+}

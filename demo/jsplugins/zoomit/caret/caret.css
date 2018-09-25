@@ -1,0 +1,70 @@
+.carret{position:relative;}
+.carret:after, .carret:before {
+	content: "";
+    height: 0;
+    width: 0;
+	position: absolute;
+	
+	border-width: 11px;/*Set Size*/
+}
+/*Set Direction*/
+
+/*Direction up*/
+.carret.carretUp:after, .carret.carretUp:before {
+	border-left-color: transparent !important;
+    border-right-color: transparent !important;
+    border-top-color: transparent !important;	
+	margin-left: -11px;/*set -ve width*/
+}
+.carret.carretUp:before{top: -22px;}/*double of border-width */
+.carret.carretUp:after{top: -21px;}/*double of border-width - 1*/
+
+/*Set Alignment*/
+.carret.carretUp.carretAlignCenter:after, .carret.carretUp.carretAlignCenter:before{left: 50%;}
+.carret.carretUp.carretAlignLeft:after, .carret.carretUp.carretAlignLeft:before{left: 20px;}
+.carret.carretUp.carretAlignRight:after, .carret.carretUp.carretAlignRight:before{right:20px;}
+/*===================================================*/
+/*Direction Left*/
+.carret.carretLeft:after, .carret.carretLeft:before {
+	border-left-color: transparent !important;
+    border-bottom-color: transparent !important;
+    border-top-color: transparent !important;	
+	margin-top: -11px;/*set -ve width*/
+}
+.carret.carretLeft:before{left: -22px;}/*double of border-width */
+.carret.carretLeft:after{left: -21px;}/*double of border-width - 1*/
+
+/*Set Alignment*/
+.carret.carretLeft.carretAlignCenter:after, .carret.carretLeft.carretAlignCenter:before{top: 50%;}
+.carret.carretLeft.carretAlignTop:after, .carret.carretLeft.carretAlignTop:before{top: 20px;}
+.carret.carretLeft.carretAlignBottom:after, .carret.carretLeft.carretAlignBottom:before{bottom:20px;}
+/*===================================================*/
+/*Direction Bottom*/
+.carret.carretBottom:after, .carret.carretBottom:before {
+	border-left-color: transparent !important;
+    border-right-color: transparent !important;
+    border-bottom-color: transparent !important;	
+	margin-left: -11px;/*set -ve width*/
+}
+.carret.carretBottom:before{bottom: -22px;}/*double of border-width */
+.carret.carretBottom:after{bottom: -21px;}/*double of border-width - 1*/
+
+/*Set Alignment*/
+.carret.carretBottom.carretAlignCenter:after, .carret.carretBottom.carretAlignCenter:before{left: 50%;}
+.carret.carretBottom.carretAlignLeft:after, .carret.carretBottom.carretAlignLeft:before{left: 20px;}
+.carret.carretBottom.carretAlignRight:after, .carret.carretBottom.carretAlignRight:before{right:20px;}
+/*===================================================*/
+/*Direction Left*/
+.carret.carretRight:after, .carret.carretRight:before {
+	border-right-color: transparent !important;
+    border-bottom-color: transparent !important;
+    border-top-color: transparent !important;	
+	margin-top: -11px;/*set -ve width*/
+}
+.carret.carretRight:before{right: -22px;}/*double of border-width */
+.carret.carretRight:after{right: -21px;}/*double of border-width - 1*/
+
+/*Set Alignment*/
+.carret.carretRight.carretAlignCenter:after, .carret.carretRight.carretAlignCenter:before{top: 50%;}
+.carret.carretRight.carretAlignTop:after, .carret.carretRight.carretAlignTop:before{top: 20px;}
+.carret.carretRight.carretAlignBottom:after, .carret.carretRight.carretAlignBottom:before{bottom:20px;}
