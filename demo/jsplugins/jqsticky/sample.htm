@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+<style>
+body{font-family:"Trebuchet MS", Helvetica, sans-serif;}
+#brgv{position:fixed;bottom:0;z-index:10000001;}
+.container{height:2000px;width:3000px;}
+.holder{
+	padding:10px;
+	width:200px;
+	float:left;
+	height:500px;
+	background-color:#F2F0EF;
+	border:1px dashed #4D1A05;	
+	margin:15px;
+}
+.romeroom{background-color:#F7E8E8;}
+.romeroom:after{background-color: #c34d74;bottom: 0;content: "roming path";left: auto;padding: 0 2px;position: absolute;right: 0;top: auto;border-radius: 2px;font-size: 11px;color: #fff;}
+
+.holder-half{height:50%;border:1px dashed #EB9898;}
+.sticky,.stickytospecific,.stickytospecific2{display:block;color:#fff;}
+.status{display:block;background-color:#6BBB14;color:#000;padding:5px 0;text-align:center;font-size:12px;}
+.sticky0{background-color:#E17525;padding:15px;}
+.sticky1{background-color:#4285F4;padding:15px;}
+.sticky2{background-color:#49852B;padding:15px;margin-top:15px;}
+.sticky3{background-color:#D3A821;padding:15px;margin-bottom:15px;}
+.sticky4{background-color:#7E4836;padding:15px;}
+.sticky5{background-color:red;padding:15px;}
+/*margin-bottom:15px;*/
+small{font-size:10px;}
+code{font-size:11px;}
+
+</style>
+<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="jquery-ui.js"></script>
+</head>
+<body>
+<div id="brgv"></div>
+<div class="container">
+	<div>
+		<div class="holder" style="padding:0;margin-top:200px;">
+			<div class="sticky sticky0" data-startpoint="120" data-endpoint="550">
+				sticky<br>
+				<code>
+					<b>fun:</b> $('.sticky').sticky();<br>
+					default Related to closest Parent(<i>".holder"</i>)</i><br>
+					parent w/o padding.<br>
+					
+					<i>data-startpoint="120" data-endpoint="550"</i><br><br>
+				</code>
+				<span class="status">STATIC</span>
+			</div>
+		</div>
+	</div>
+	<div class="holder" style="margin-top:390px;">
+		<div class="sticky sticky1" data-startpoint="200" data-endpoint=".holder">
+			sticky<br>
+			<code>
+				<b>fun:</b> $('.sticky').sticky();<br>
+				default Related to closest Parent(<i>".holder"</i>)</i><br>
+				parent w/ padding.
+				<br><i>&lt;div data-startpoint="130" data-endpoint=".class name/#id/px"&gt;</i><br><br>
+			</code>
+		</div>
+	</div>
+	<div class="holder">
+		<div class="sticky sticky2">
+			sticky<small>(with margin-top 15px)</small><br>
+			<code>
+				<b>fun:</b> $('.sticky').sticky();<br>
+				default Related to closest Parent(<i>".holder"</i>)<br>
+			</code>
+		</div>
+	</div>
+	<div class="holder">
+		<div class="sticky sticky3">
+			sticky<small>(with margin-bottom 15px)</small><br>
+			<code>
+				<b>fun:</b> $('.sticky').sticky();<br>
+				default Related to closest Parent(<i>".holder"</i>)<br>
+			</code>
+		</div>
+	</div>
+	<div class="holder">
+		<br><br><br><br><br><br>
+		<div class="veryrude sticky5" data-resolute="true">
+			very rude sticky<br>
+			<code>
+				<b>fun:</b> $('.veryrude').sticky({<br>
+				&nbsp;resolute : true<br>
+				});<br>
+				OR<br>
+				<b>html:</b><br>&lt;div class="veryrude sticky4" data-resolute="true"&gt;</br>
+				Related to NOTHING<br>
+			</code>
+		</div>
+	</div>
+	<div class="holder">
+		<div class="holder-half">
+			<br><br><br>
+			<div class="sticky sticky1">
+				sticky<br>
+				<code>
+					<b>fun:</b> $('.sticky').sticky();<br>
+					default Related to closest Parent(<i>".holder-half"</i>)<br>
+				</code>
+			</div>
+		</div>	
+	</div>
+	<div class="holder">
+		<div class="holder-half">
+			<div class="stickytospecific sticky4">
+				sticky<br>
+				<code>
+					<b>fun:</b> $('.sticky-to-specific').sticky({<br>
+					&nbsp;stickyto : '.holder'<br>
+					});<br>
+					Related to particular Parent(<i>".holder"</i>)<br>
+				</code>
+			</div>
+		</div>	
+	</div>
+	<div class="holder">
+		<div class="holder-half">
+			<div class="stickytospecific2 sticky4" data-stickyto=".holder">
+				sticky<br>
+				<code>
+					<b>fun:</b> $('.sticky-to-specific').sticky();<br>
+					<b>html:</b><br>&lt;div class="stickytospecific2 sticky4" data-stickyto=".holder"&gt;</br>
+					Related to particular Parent(<i>".holder"</i>)<br>
+				</code>
+			</div>
+		</div>	
+	</div>
+	
+</div>
+<script type="text/javascript" src="jq.sticky-1.0.5.js"></script>
+<script>
+$(function(){
+	$('.sticky').sticky({
+		stickyStart : function(){
+			$(this).find('.status').text('START')
+		},
+		stickyEnd : function(){
+			$(this).find('.status').text('END')
+		},
+		stickyInt : function(){
+			$(this).find('.status').text('Normal')
+		}
+	});
+	$('.stickytospecific').sticky({
+		stickyto : '.holder'
+	});
+	$('.stickytospecific2').sticky({});
+	$('.veryrude').sticky({
+		resolute : true,
+		horizontalFix : false
+	});
+});
+</script>
+</body>
+</html>
