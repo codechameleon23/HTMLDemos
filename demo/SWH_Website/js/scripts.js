@@ -1,3 +1,5 @@
+function getViewportWidth(){if (window.innerWidth){return window.innerWidth;}else if (document.body && document.body.offsetWidth){return document.body.offsetWidth;}else{return 0;}}
+
 window.onload = function(e){
     // document.getElementById("pageLoader").classList.add("is-hidden");
     var x = document.getElementsByClassName("pageLoader");
@@ -47,7 +49,7 @@ $(document).ready(function(){
     /*Banner-carousel*/
     var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 
-    if ($('.banner_carousel-js').length){//if element exists
+    if($('.banner_carousel-js').length){//if element exists
         
         var bannerCarousel = $('.banner_carousel-js');
 
@@ -75,7 +77,7 @@ $(document).ready(function(){
 
     }
 
-    if ($('.ourTeam_carousel-js').length){//if element exists
+    if ($('.ourTeam_carousel-js').length  && (getViewportWidth() > 700) ){//if element exists
         
         var ourTeamCarousel = $('.ourTeam_carousel-js');
 
@@ -88,7 +90,7 @@ $(document).ready(function(){
             animateIn: isIE11 ? '' : 'fadeIn',
             animateOut: isIE11 ? '' : 'fadeOut',
             autoplay:true,
-            autoplayTimeout:5000,
+            autoplayTimeout:7000,
             autoplayHoverPause:true
         });
 
@@ -101,12 +103,18 @@ $(document).ready(function(){
 
     // Initialize the Popup 
     $('.popup').popup({
-        // beforeopen: function() {
-        //     $.scrollify.disable();
-        // },
-        // onclose: function() {
-        //     $.scrollify.enable();
-        // }
+        beforeopen: function() {
+            $('body, html').css({
+                'overflow' : 'hidden'
+            });
+            $.scrollify.disable();
+        },
+        onclose: function() {
+            $('body, html').css({
+                'overflow' : ''
+            });
+            $.scrollify.enable();
+        }
     });
 
     $('#floorPlan-popup').popup({
