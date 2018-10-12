@@ -13,8 +13,27 @@
 <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body class="header_fixed footer_fixed">
+<!-- Cookie Policy message -->
+<script>
+    // Detect JS support
+    document.body.className = document.body.className + " js_enabled";
+    //close on click
+    function messageClose(){
+        document.getElementById("cookie-message").style.display = "none";
+    }
+</script>
+<div id="cookie-message" data-cookie-expiry="60">
+    <div class="grid has-gutter_thin has-list">
+        <div class="col col-auto col-sm-12">
+            <p class="m_t-auto m_b-auto">We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies. <a href="#" class="text-primary">More info</a></p>
+        </div>
+        <div class="col col-auto col-sm-12">
+            <a href="#" class="button" onclick="messageClose()">got it</a>
+        </div>
+    </div>
+</div>
 
-    <!-- page loader -->
+    <!-- page loader : Home screen -->
     <div class="pageLoader"></div>
     
     <!-- tablet rotate -->
@@ -22,26 +41,6 @@
         <div>
             <p><img src="images/tablet-rotate.png" alt=""/></p>
             <p class="h4 text-upper">PLEASE ROTATE YOUR DEVICE</p>
-        </div>
-    </div>
-
-    <!-- Cookie Policy message -->
-    <script>
-        // Detect JS support
-        document.body.className = document.body.className + " js_enabled";
-        //close on click
-        function messageClose(){
-            document.getElementById("cookie-message").style.display = "none";
-        }
-    </script>
-    <div id="cookie-message" data-cookie-expiry="60">
-        <div class="grid has-gutter_thin has-list">
-            <div class="col col-auto col-sm-12">
-                <p class="m_t-auto m_b-auto">We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies. <a href="#" class="text-primary">More info</a></p>
-            </div>
-            <div class="col col-auto col-sm-12">
-                <a href="#" class="button" onclick="messageClose()">got it</a>
-            </div>
         </div>
     </div>
 
@@ -61,7 +60,7 @@
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="inspiration.html">Inspiration</a></li>
-                <li class="active"><a href="bespoke.html">Bespoke</a></li>
+                <li><a href="bespoke.html">Bespoke</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </div>

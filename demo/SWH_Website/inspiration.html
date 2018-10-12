@@ -12,8 +12,27 @@
 <link rel="stylesheet" href="css/owl.theme.default.min.css"/>
 <link rel="stylesheet" href="css/style.css"/>
 </head>
-<body>
-
+<body class="">
+<!-- Cookie Policy message -->
+<script>
+    // Detect JS support
+    document.body.className = document.body.className + " js_enabled";
+    //close on click
+    function messageClose(){
+        document.getElementById("cookie-message").style.display = "none";
+    }
+</script>
+<div id="cookie-message" data-cookie-expiry="60">
+    <div class="grid has-gutter_thin has-list">
+        <div class="col col-auto col-sm-12">
+            <p class="m_t-auto m_b-auto">We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies. <a href="#" class="text-primary">More info</a></p>
+        </div>
+        <div class="col col-auto col-sm-12">
+            <a href="#" class="button" onclick="messageClose()">got it</a>
+        </div>
+    </div>
+</div>
+    
     <!-- page loader -->
     <div class="pageLoader"></div>
 
@@ -22,26 +41,6 @@
         <div>
             <p><img src="images/tablet-rotate.png" alt=""/></p>
             <p class="h4 text-upper">PLEASE ROTATE YOUR DEVICE</p>
-        </div>
-    </div>
-
-	<!-- Cookie Policy message -->
-	<script>
-		// Detect JS support
-		document.body.className = document.body.className + " js_enabled";
-		//close on click
-		function messageClose(){
-			document.getElementById("cookie-message").style.display = "none";
-		}
-	</script>
-    <div id="cookie-message" data-cookie-expiry="60">
-        <div class="grid has-gutter_thin has-list">
-            <div class="col col-auto col-sm-12">
-                <p class="m_t-auto m_b-auto">We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies. <a href="#" class="text-primary">More info</a></p>
-            </div>
-            <div class="col col-auto col-sm-12">
-                <a href="#" class="button" onclick="messageClose()">got it</a>
-            </div>
         </div>
     </div>
 
@@ -54,7 +53,7 @@
         </div>
         <a class="brand-logo" href="index.html"><img src="images/SWH_Logo_white.png" alt=""/></a>
     </header>
-
+    
     <nav class="navbar navbar-toggle-js">
         <div class="navbar-inner">
             <ul>
@@ -69,117 +68,137 @@
 
     <main class="main">
         <section class="scrollify_section-js">
-
-            <!-- Image tiles -->
             <div class="tiles-wrapper">
-                <div class="tiles tiles-col-sm">
-
-                    <!-- Hexgone image -->
-                    <!-- Hexgone outer border -->
-                    <div class="hexagone_boder"> <div class="aspect-ratio"> <div> <div class="aspect-ratio_1x1"> <div> <div class="side_0"> <div class="side_1"> <div class="side_2"> <div class="aspect-ratio"> <div class="bg-inside"></div></div></div></div></div></div></div></div></div></div>
-                    <!-- Hexgone inner image -->
-                    <div class="hexagone_frame"> <div class="aspect-ratio"> <div> <div class="aspect-ratio_1x1"> <div> <div class="side_0"> <div class="side_1"> <div class="side_2"> <div class="aspect-ratio"> 
-                    <!-- Your image goes here -->
-                    <div class="image-inside" style="background-image: url('images/281.0000_1841_bcc658ae-0232-4187-bff5-707758b3593a_1024x1024.jpg');">
-                    </div></div></div></div></div></div></div></div></div></div>   
-
-                    <div class="tile-col col-1">
-                        <div class="tile row-6">
-                            <div class="tile-col">
-                                <div class="tile">
-                                    <figure class="item figure aspect-ratio_1x1--sm">
-                                        <div class="image-wrap" style="background-image: url('images/image-tile_1.jpg');"></div>
-                                    </figure>
-                                </div>
-                                <div class="tile">
-                                    <figure class="item figure aspect-ratio_1x1--sm">
-                                        <div class="image-wrap" style="background-image: url('images/image-tile_2.jpg');"></div>
-                                    </figure>
-                                </div>
-                                <div class="tile">
-                                    <figure class="item figure aspect-ratio_1x1--sm">
-                                        <div class="image-wrap" style="background-image: url('images/image-tile_3.jpg');"></div>
-                                    </figure>
-                                </div>
-                                <div class="tile">
-                                    <figure class="item figure aspect-ratio_1x1--sm">
-                                        <div class="image-wrap" style="background-image: url('images/image-tile_4.jpg');"></div>
-                                    </figure>
-                                </div>
-                                <div class="tile">
-                                    <figure class="item figure aspect-ratio_1x1--sm">
-                                        <div class="image-wrap" style="background-image: url('images/image-tile_5.jpg');"></div>
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>
+                <div class="tiles tiles-row-sm">
+                    <div class="tile-col col-2 col-sm-12">
                         <div class="tile">
-                            <div class="tile-col">
-                                <div class="tile">
-                                    <figure class="item figure aspect-ratio_1x1">
-                                        <div class="image-wrap" style="background-image: url('images/image-tile_6.jpg');"></div>
-                                    </figure>
-                                </div>
-                                <div class="tile">
-                                    <figure class="item figure aspect-ratio_1x1">
-                                        <div class="image-wrap" style="background-image: url('images/image-tile_7.jpg');"></div>
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tile-col col-6 col-sm-12">
-                        <div class="tile row-6">
-                            <figure class="item figure aspect-ratio_16x9--sm">
-                                <div class="image-wrap" style="background-image: url('images/Shorewood-Homes_Redthorne-House_HQ-50.jpg');"></div>
+                            <figure class="item figure aspect-ratio_5x6--sm">
+                                <div class="image-wrap" style="background-image: url('images/SYDDI_1_MAIN.jpg');"></div>
+                                <figcaption class="figure-caption figure-rollover">
+                                    <div class="caption-wrap">
+                                        <div>
+                                            <h6 class="caption-title subtitle">FARROW & BALL</h6>
+                                            <p class="caption-content h6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis rerum at quaerat.</p>
+                                        </div>
+                                    </div>
+                                </figcaption>
                             </figure>
                         </div>
-                        <div class="tile tile-row">
-                            <div class="tile-col col-3">
-                                <div class="tile">
-                                    <figure class="item figure aspect-ratio_1x1--sm">
-                                        <div class="image-wrap" style="background-image: url('images/b968beccb9c6c76b03a8d89b16993770.jpg');"></div>
-                                    </figure>
-                                </div>
-                            </div>
-                            <div class="tile-col col-7">
-                                <div class="tile">
-                                    <figure class="item figure">
-                                        <div class="image-wrap" style="background-image: url('images/Shorewood-Homes_Redthorne-House_HQ-71.jpg');"></div>
-                                    </figure>
-                                </div>
-                            </div>
+                        <div class="tile">
+                            <figure class="item figure aspect-ratio_5x6--sm">
+                                <div class="image-wrap" style="background-image: url('images/MCIM02722196_Showroom_Munich_2016_4_mainstage.jpg');"></div>
+                                <figcaption class="figure-caption figure-rollover">
+                                    <div class="caption-wrap">
+                                        <div>
+                                            <h6 class="caption-title">KURT JACKSON</h6>
+                                            <p class="caption-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis rerum at quaerat.</p>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
                         </div>
                     </div>
-                    <div class="tile-col col-4 col-sm-12">
-                        <div class="tile row-6">
-                            <figure class="item figure aspect-ratio_16x9--sm">
+                    <div class="tile-col col-2 col-sm-12">
+                        <div class="tile">
+                            <figure class="item figure aspect-ratio_5x6--sm">
                                 <div class="image-wrap" style="background-image: url('images/Shorewood-Homes_Redthorne-House_HQ-93.jpg');"></div>
+                                <figcaption class="figure-caption figure-rollover">
+                                    <div class="caption-wrap">
+                                        <div>
+                                            <h6 class="caption-title">KURT JACKSON</h6>
+                                            <p class="caption-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis rerum at quaerat.</p>
+                                        </div>
+                                    </div>
+                                </figcaption>
                             </figure>
                         </div>
                         <div class="tile">
-                            <figure class="item figure aspect-ratio_16x9--sm">
-                                <div class="image-wrap" style="background-image: url('images/262856-(4).jpg');"></div>
+                            <figure class="item figure aspect-ratio_5x6--sm">
+                                <div class="image-wrap" style="background-image: url('images/Leaflands_Exterior_HR.jpg');"></div>
+                                <figcaption class="figure-caption figure-rollover">
+                                    <div class="caption-wrap">
+                                        <div>
+                                            <h6 class="caption-title">KURT JACKSON</h6>
+                                            <p class="caption-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis rerum at quaerat.</p>
+                                        </div>
+                                    </div>
+                                </figcaption>
                             </figure>
                         </div>
-                    </div>        
+                        
+                    </div>
+                    <div class="tile-col col-3 col-sm-12">
+                        <div class="tile">
+                            <figure class="item figure aspect-ratio_16x9--sm">
+                                <div class="image-wrap" style="background-image: url('images/littlehouse-newheader.jpg');"></div>
+                                <figcaption class="figure-caption figure-rollover">
+                                    <div class="caption-wrap">
+                                        <div>
+                                            <h6 class="caption-title">KURT JACKSON</h6>
+                                            <p class="caption-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis rerum at quaerat.</p>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="tile-col tile-col--sm  col-3 col-sm-12">
+                        <div class="tile">
+                            <figure class="item figure aspect-ratio_16x9--sm">
+                                <div class="image-wrap" style="background-image: url('images/aldwych_side_table_019.jpg');"></div>
+                                <figcaption class="figure-caption figure-rollover">
+                                    <div class="caption-wrap">
+                                        <div>
+                                            <h6 class="caption-title">KURT JACKSON</h6>
+                                            <p class="caption-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis rerum at quaerat.</p>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="tile">
+                            <div class="tile-col col-6 col-sm-12">
+                                <div class="tile">
+                                    <figure class="item figure aspect-ratio_5x6--sm">
+                                        <div class="image-wrap" style="background-image: url('images/Shorewood-Homes_Redthorne-House_HQ-173.jpg');"></div>
+                                        <figcaption class="figure-caption figure-rollover">
+                                            <div class="caption-wrap">
+                                                <div>
+                                                    <h6 class="caption-title">KURT JACKSON</h6>
+                                                    <p class="caption-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis rerum at quaerat.</p>
+                                                </div>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="tile-col col-6 col-sm-12">
+                                <div class="tile">
+                                    <figure class="item figure aspect-ratio_5x6--sm">
+                                        <div class="image-wrap" style="background-image: url('images/VAHVU_SP18_2_L.jpg');"></div>
+                                        <figcaption class="figure-caption figure-rollover">
+                                            <div class="caption-wrap">
+                                                <div>
+                                                    <h6 class="caption-title">KURT JACKSON</h6>
+                                                    <p class="caption-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis rerum at quaerat.</p>
+                                                </div>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
     <footer class="footer">
         <div class="left">
-            <p>The above images are a style guide only</p>
             <ul class="links">
                 <li><a href="mailto:info@shorewoodhomes.co.uk">info@shorewoodhomes.co.uk</a></li>
                 <li><a href="tel:01962 678528">01962 678528</a></li>
             </ul>
-        </div>
-        <div class="middle">
-            <div class="buttons">
-                <a href="#" class="button">BROCHURE</a>
-                <a href="#" class="button floorPlan-popup_open">FLOOR PLANS</a>
-            </div>
         </div>
         <div class="right">
             <ul class="links">
@@ -189,88 +208,6 @@
             </ul>
         </div>
     </footer>
-
-    <!-- floor plans popup-->
-    <div id="floorPlan-popup" class="popup bg-primary--light">
-        <div class="popup-wrap">
-            <div class="popup-header">
-                <a href="#" class="floorPlan-popup_close close_button m_l-auto">
-                    <span></span>
-                    <span></span>
-                </a>
-            </div>
-            <div class="popup-body">
-                <div class="container container-wrap">
-                    <div class="grid has-list has-gutter">
-                        <div class="col col-6 col-sm-12 center_a">
-                            <div class="container-col--inner">
-                                <div>
-                                    <h6 class="subtitle">FLOOR PLANS</h6>
-                                    <table>
-                                        <tbody>
-                                            <tr>
-                                                <td>Kitchen/Dining/Family Area</td>
-                                                <td>6.75m x 5.70m</td>
-                                                <td>22’ 2” x 18’ 8”</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Kitchen/Dining/Family Area</td>
-                                                <td>6.75m x 5.70m</td>
-                                                <td>22’ 2” x 18’ 8”</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <table>
-                                        <tbody>
-                                            <tr>
-                                                <td>Kitchen/Dining/Family Area</td>
-                                                <td>6.75m x 5.70m</td>
-                                                <td>22’ 2” x 18’ 8”</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Kitchen/Dining/Family Area</td>
-                                                <td>6.75m x 5.70m</td>
-                                                <td>22’ 2” x 18’ 8”</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Kitchen/Dining/Family Area</td>
-                                                <td>6.75m x 5.70m</td>
-                                                <td>22’ 2” x 18’ 8”</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Kitchen/Dining/Family Area</td>
-                                                <td>6.75m x 5.70m</td>
-                                                <td>22’ 2” x 18’ 8”</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <br>
-                                    <p>
-                                        <small>Floor plans of plots 1 and 3 (plots 2 and 4 handed).</small>
-                                        <br>
-                                        <small>All measurements are an approximate guide only and subject to change.</small>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col col-sm-12 center_a">
-                            <div class="grid has-list has-gutter center_a">
-                                <div class="col col-5 col-xs-12">
-                                    <h5 class="title font-primary text-center">GROUND FLOOR</h5>
-                                    <img src="images/floorplan_1.png" alt=""/>
-                                </div>
-                                <div class="col col-5 col-xs-12">
-                                    <h5 class="title font-primary text-center">GROUND FLOOR</h5>
-                                    <img src="images/floorplan_1.png" alt=""/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
 </body>
 <script src="js/cookie-message.js"></script>
 <script src="js/jquery-3.3.1.min.js"></script>

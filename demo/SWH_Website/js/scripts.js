@@ -1,7 +1,7 @@
 function getViewportWidth(){if (window.innerWidth){return window.innerWidth;}else if (document.body && document.body.offsetWidth){return document.body.offsetWidth;}else{return 0;}}
 
+//Hide page loader 
 window.onload = function(e){
-    // document.getElementById("pageLoader").classList.add("is-hidden");
     var x = document.getElementsByClassName("pageLoader");
 
     for (i = 0; i < x.length; i++) 
@@ -12,17 +12,19 @@ window.onload = function(e){
 
 $(document).ready(function(){
 
-    /*apply fullpage*/
-    $.scrollify({
-        section : ".scrollify_section-js",
-        interstitialSection:".header, .footer",
-        scrollSpeed:700,
-        easing: "easeInOutQuad",
-        // scrollbars:false,
-        updateHash: false,
+    // Initialize the Popup 
+    $('.popup').popup({
+        transition: 'all 0.7s',
+        scrolllock : true,
+        beforeopen: function() {
+            $.scrollify.disable();
+        },
+        onclose: function() {
+            setTimeout(function(){
+                $.scrollify.enable();
+            }, 700);
+        }
     });
-
-
 
     /*Navbar toggle*/
     $(".hamburger").on('click',  function(){
@@ -54,15 +56,17 @@ $(document).ready(function(){
         var bannerCarousel = $('.banner_carousel-js');
 
         bannerCarousel.owlCarousel({
-            mouseDrag:false,
             items:1,
+            rtl:true,
             loop:true,
+            mouseDrag:false,
             nav:false,
             dots: false,
             animateIn: isIE11 ? '' : '',
-            animateOut: isIE11 ? '' : 'slideOutUp',
+            animateOut: isIE11 ? '' : '',
+            smartSpeed:1500,
             autoplay:true,
-            autoplayTimeout:5000,
+            autoplayTimeout:7000,
             autoplayHoverPause:true
         });
 
@@ -89,9 +93,10 @@ $(document).ready(function(){
             dots: false,
             animateIn: isIE11 ? '' : 'fadeIn',
             animateOut: isIE11 ? '' : 'fadeOut',
-            autoplay:true,
-            autoplayTimeout:7000,
-            autoplayHoverPause:true
+            smartSpeed:1500,
+            // autoplay:true,
+            // autoplayTimeout:7000,
+            // autoplayHoverPause:true
         });
 
         // Go to the next item
@@ -101,24 +106,15 @@ $(document).ready(function(){
 
     }
 
-    // Initialize the Popup 
-    $('.popup').popup({
-        beforeopen: function() {
-            $('body, html').css({
-                'overflow' : 'hidden'
-            });
-            $.scrollify.disable();
-        },
-        onclose: function() {
-            $('body, html').css({
-                'overflow' : ''
-            });
-            $.scrollify.enable();
-        }
-    });
-
-    $('#floorPlan-popup').popup({
-        scrolllock : true
+    /*apply fullpage*/
+    $.scrollify({
+        section : ".scrollify_section-js",
+        interstitialSection:".header, .footer",
+        scrollSpeed:700,
+        easing: "easeInOutQuad",
+        // scrollbars:false,
+        updateHash: false,
+        touchScroll : false
     });
 
     // Scroll to section

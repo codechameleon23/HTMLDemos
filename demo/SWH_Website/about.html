@@ -13,6 +13,26 @@
 <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body class="header_fixed footer_fixed full-page">
+<!-- Cookie Policy message -->
+<script>
+    // Detect JS support
+    document.body.className = document.body.className + " js_enabled";
+    //close on click
+    function messageClose(){
+        document.getElementById("cookie-message").style.display = "none";
+    }
+</script>
+<div id="cookie-message" data-cookie-expiry="60">
+    <div class="grid has-gutter_thin has-list">
+        <div class="col col-auto col-sm-12">
+            <p class="m_t-auto m_b-auto">We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies. <a href="#" class="text-primary">More info</a></p>
+        </div>
+        <div class="col col-auto col-sm-12">
+            <a href="#" class="button" onclick="messageClose()">got it</a>
+        </div>
+    </div>
+</div>
+
 
     <!-- page loader -->
     <div class="pageLoader"></div>
@@ -22,26 +42,6 @@
         <div>
             <p><img src="images/tablet-rotate.png" alt=""/></p>
             <p class="h4 text-upper">PLEASE ROTATE YOUR DEVICE</p>
-        </div>
-    </div>
-
-    <!-- Cookie Policy message -->
-    <script>
-        // Detect JS support
-        document.body.className = document.body.className + " js_enabled";
-        //close on click
-        function messageClose(){
-            document.getElementById("cookie-message").style.display = "none";
-        }
-    </script>
-    <div id="cookie-message" data-cookie-expiry="60">
-        <div class="grid has-gutter_thin has-list">
-            <div class="col col-auto col-sm-12">
-                <p class="m_t-auto m_b-auto">We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies. <a href="#" class="text-primary">More info</a></p>
-            </div>
-            <div class="col col-auto col-sm-12">
-                <a href="#" class="button" onclick="messageClose()">got it</a>
-            </div>
         </div>
     </div>
 
@@ -95,271 +95,269 @@
             <!-- Our team popup -->
             <div id="ourTeam-popup" class="ourTeam-popup popup bg-secondary">
                 <div class="popup-wrap">
-                    <div class="popup-body">
-                        <div class="container">
-                            <div class="grid has-gutter_skinny has-list">
-                                <div class="col col-sm-12">
-                                    <div class="action_group m_t-auto m_r-auto">
-                                        <a href="#" class="action_button button ourTeam-popup_close">About</a>
-                                        <a href="#" class="action_button button ourTeam-popup_close"><img class="button_icon" src="images/arrow_left.png" alt=""/></a>
-                                    </div>
+                    <div class="popup-body container">
+                        <div class="grid has-gutter_skinny has-list">
+                            <div class="col col-sm-12">
+                                <div class="action_group m_t-auto m_r-auto">
+                                    <a href="#" class="action_button button ourTeam-popup_close">About</a>
+                                    <a href="#" class="action_button button ourTeam-popup_close"><img class="button_icon" src="images/arrow_left.png" alt=""/></a>
                                 </div>
-                                <div class="col col-9 col-sm-12">
-                                    <section class="ourTeam_carousel_wrapper">
-                                        <div class="ourTeam_carousel ourTeam_carousel-js owl-carousel owl-theme">
-                                            <div class="slide_item team_list">
-                                                <div class="tile">
-                                                    <figure class="item figure aspect-ratio_1x1">
-                                                        <div class="image-wrap" style="background-image: url('images/pexels-photo-542282.jpeg');"></div>
-                                                        <figcaption class="figure-caption figure-rollover">
-                                                            <div class="caption-wrap">
-                                                                <div>
-                                                                    <h6 class="caption-title font-primary text-upper">RICHARD WICKINS</h6>
-                                                                    <p class="text-upper">CO-FOUNDER</p>
-                                                                    <p class="caption-content">Richard is a co-founder of Shorewood Homes and his expertise is in land and planning. Prior to forming Shorewood Homes, he was an Associate Director in the Development Land team at a wellknown multi-disciplinary estate agent</p>
-                                                                    <p>M R I C S</p>
-                                                                </div>
+                            </div>
+                            <div class="col col-9 col-sm-12">
+                                <section class="ourTeam_carousel_wrapper">
+                                    <div class="ourTeam_carousel ourTeam_carousel-js owl-carousel owl-theme">
+                                        <div class="slide_item team_list">
+                                            <div class="tile">
+                                                <figure class="item figure aspect-ratio_1x1">
+                                                    <div class="image-wrap" style="background-image: url('images/pexels-photo-542282.jpeg');"></div>
+                                                    <figcaption class="figure-caption figure-rollover">
+                                                        <div class="caption-wrap">
+                                                            <div>
+                                                                <h6 class="caption-title font-primary text-upper">RICHARD WICKINS</h6>
+                                                                <p class="text-upper">CO-FOUNDER</p>
+                                                                <p class="caption-content">Richard is a co-founder of Shorewood Homes and his expertise is in land and planning. Prior to forming Shorewood Homes, he was an Associate Director in the Development Land team at a wellknown multi-disciplinary estate agent</p>
+                                                                <p>M R I C S</p>
                                                             </div>
-                                                        </figcaption>
-                                                    </figure>
-                                                </div>    
-                                                <div class="tile">
-                                                    <figure class="item figure aspect-ratio_1x1">
-                                                        <div class="image-wrap" style="background-image: url('images/pexels-photo-672599.jpeg');"></div>
-                                                        <figcaption class="figure-caption figure-rollover">
-                                                            <div class="caption-wrap">
-                                                                <div>
-                                                                    <h6 class="caption-title font-primary text-upper">RICHARD WICKINS</h6>
-                                                                    <p class="text-upper">CO-FOUNDER</p>
-                                                                    <p class="caption-content">Richard is a co-founder of Shorewood Homes and his expertise is in land and planning. Prior to forming Shorewood Homes, he was an Associate Director in the Development Land team at a wellknown multi-disciplinary estate agent</p>
-                                                                    <p>M R I C S</p>
-                                                                </div>
+                                                        </div>
+                                                    </figcaption>
+                                                </figure>
+                                            </div>    
+                                            <div class="tile">
+                                                <figure class="item figure aspect-ratio_1x1">
+                                                    <div class="image-wrap" style="background-image: url('images/pexels-photo-672599.jpeg');"></div>
+                                                    <figcaption class="figure-caption figure-rollover">
+                                                        <div class="caption-wrap">
+                                                            <div>
+                                                                <h6 class="caption-title font-primary text-upper">RICHARD WICKINS</h6>
+                                                                <p class="text-upper">CO-FOUNDER</p>
+                                                                <p class="caption-content">Richard is a co-founder of Shorewood Homes and his expertise is in land and planning. Prior to forming Shorewood Homes, he was an Associate Director in the Development Land team at a wellknown multi-disciplinary estate agent</p>
+                                                                <p>M R I C S</p>
                                                             </div>
-                                                        </figcaption>
-                                                    </figure>
-                                                </div>    
-                                                <div class="tile">
-                                                    <figure class="item figure aspect-ratio_1x1">
-                                                        <div class="image-wrap" style="background-image: url('images/pexels-photo-736716.jpeg');"></div>
-                                                        <figcaption class="figure-caption figure-rollover">
-                                                            <div class="caption-wrap">
-                                                                <div>
-                                                                    <h6 class="caption-title font-primary text-upper">RICHARD WICKINS</h6>
-                                                                    <p class="text-upper">CO-FOUNDER</p>
-                                                                    <p class="caption-content">Richard is a co-founder of Shorewood Homes and his expertise is in land and planning. Prior to forming Shorewood Homes, he was an Associate Director in the Development Land team at a wellknown multi-disciplinary estate agent</p>
-                                                                    <p>M R I C S</p>
-                                                                </div>
+                                                        </div>
+                                                    </figcaption>
+                                                </figure>
+                                            </div>    
+                                            <div class="tile">
+                                                <figure class="item figure aspect-ratio_1x1">
+                                                    <div class="image-wrap" style="background-image: url('images/pexels-photo-736716.jpeg');"></div>
+                                                    <figcaption class="figure-caption figure-rollover">
+                                                        <div class="caption-wrap">
+                                                            <div>
+                                                                <h6 class="caption-title font-primary text-upper">RICHARD WICKINS</h6>
+                                                                <p class="text-upper">CO-FOUNDER</p>
+                                                                <p class="caption-content">Richard is a co-founder of Shorewood Homes and his expertise is in land and planning. Prior to forming Shorewood Homes, he was an Associate Director in the Development Land team at a wellknown multi-disciplinary estate agent</p>
+                                                                <p>M R I C S</p>
                                                             </div>
-                                                        </figcaption>
-                                                    </figure>
-                                                </div>    
-                                                <div class="tile">
-                                                    <figure class="item figure aspect-ratio_1x1">
-                                                        <div class="image-wrap" style="background-image: url('images/pexels-photo-324658.jpeg');"></div>
-                                                        <figcaption class="figure-caption figure-rollover">
-                                                            <div class="caption-wrap">
-                                                                <div>
-                                                                    <h6 class="caption-title font-primary text-upper">RICHARD WICKINS</h6>
-                                                                    <p class="text-upper">CO-FOUNDER</p>
-                                                                    <p class="caption-content">Richard is a co-founder of Shorewood Homes and his expertise is in land and planning. Prior to forming Shorewood Homes, he was an Associate Director in the Development Land team at a wellknown multi-disciplinary estate agent</p>
-                                                                    <p>M R I C S</p>
-                                                                </div>
+                                                        </div>
+                                                    </figcaption>
+                                                </figure>
+                                            </div>    
+                                            <div class="tile">
+                                                <figure class="item figure aspect-ratio_1x1">
+                                                    <div class="image-wrap" style="background-image: url('images/pexels-photo-324658.jpeg');"></div>
+                                                    <figcaption class="figure-caption figure-rollover">
+                                                        <div class="caption-wrap">
+                                                            <div>
+                                                                <h6 class="caption-title font-primary text-upper">RICHARD WICKINS</h6>
+                                                                <p class="text-upper">CO-FOUNDER</p>
+                                                                <p class="caption-content">Richard is a co-founder of Shorewood Homes and his expertise is in land and planning. Prior to forming Shorewood Homes, he was an Associate Director in the Development Land team at a wellknown multi-disciplinary estate agent</p>
+                                                                <p>M R I C S</p>
                                                             </div>
-                                                        </figcaption>
-                                                    </figure>
-                                                </div>    
-                                                <div class="tile">
-                                                    <figure class="item figure aspect-ratio_1x1">
-                                                        <div class="image-wrap" style="background-image: url('images/pexels-photo-712521.jpeg');"></div>
-                                                        <figcaption class="figure-caption figure-rollover">
-                                                            <div class="caption-wrap">
-                                                                <div>
-                                                                    <h6 class="caption-title font-primary text-upper">RICHARD WICKINS</h6>
-                                                                    <p class="text-upper">CO-FOUNDER</p>
-                                                                    <p class="caption-content">Richard is a co-founder of Shorewood Homes and his expertise is in land and planning. Prior to forming Shorewood Homes, he was an Associate Director in the Development Land team at a wellknown multi-disciplinary estate agent</p>
-                                                                    <p>M R I C S</p>
-                                                                </div>
+                                                        </div>
+                                                    </figcaption>
+                                                </figure>
+                                            </div>    
+                                            <div class="tile">
+                                                <figure class="item figure aspect-ratio_1x1">
+                                                    <div class="image-wrap" style="background-image: url('images/pexels-photo-712521.jpeg');"></div>
+                                                    <figcaption class="figure-caption figure-rollover">
+                                                        <div class="caption-wrap">
+                                                            <div>
+                                                                <h6 class="caption-title font-primary text-upper">RICHARD WICKINS</h6>
+                                                                <p class="text-upper">CO-FOUNDER</p>
+                                                                <p class="caption-content">Richard is a co-founder of Shorewood Homes and his expertise is in land and planning. Prior to forming Shorewood Homes, he was an Associate Director in the Development Land team at a wellknown multi-disciplinary estate agent</p>
+                                                                <p>M R I C S</p>
                                                             </div>
-                                                        </figcaption>
-                                                    </figure>
-                                                </div>    
-                                                <div class="tile">
-                                                    <figure class="item figure aspect-ratio_1x1">
-                                                        <div class="image-wrap" style="background-image: url('images/pexels-photo-713312.jpeg');"></div>
-                                                        <figcaption class="figure-caption figure-rollover">
-                                                            <div class="caption-wrap">
-                                                                <div>
-                                                                    <h6 class="caption-title font-primary text-upper">RICHARD WICKINS</h6>
-                                                                    <p class="text-upper">CO-FOUNDER</p>
-                                                                    <p class="caption-content">Richard is a co-founder of Shorewood Homes and his expertise is in land and planning. Prior to forming Shorewood Homes, he was an Associate Director in the Development Land team at a wellknown multi-disciplinary estate agent</p>
-                                                                    <p>M R I C S</p>
-                                                                </div>
+                                                        </div>
+                                                    </figcaption>
+                                                </figure>
+                                            </div>    
+                                            <div class="tile">
+                                                <figure class="item figure aspect-ratio_1x1">
+                                                    <div class="image-wrap" style="background-image: url('images/pexels-photo-713312.jpeg');"></div>
+                                                    <figcaption class="figure-caption figure-rollover">
+                                                        <div class="caption-wrap">
+                                                            <div>
+                                                                <h6 class="caption-title font-primary text-upper">RICHARD WICKINS</h6>
+                                                                <p class="text-upper">CO-FOUNDER</p>
+                                                                <p class="caption-content">Richard is a co-founder of Shorewood Homes and his expertise is in land and planning. Prior to forming Shorewood Homes, he was an Associate Director in the Development Land team at a wellknown multi-disciplinary estate agent</p>
+                                                                <p>M R I C S</p>
                                                             </div>
-                                                        </figcaption>
-                                                    </figure>
-                                                </div>    
-                                                <div class="tile">
-                                                    <figure class="item figure aspect-ratio_1x1">
-                                                        <div class="image-wrap" style="background-image: url('images/pexels-photo-756453.jpeg');"></div>
-                                                        <figcaption class="figure-caption figure-rollover">
-                                                            <div class="caption-wrap">
-                                                                <div>
-                                                                    <h6 class="caption-title font-primary text-upper">RICHARD WICKINS</h6>
-                                                                    <p class="text-upper">CO-FOUNDER</p>
-                                                                    <p class="caption-content">Richard is a co-founder of Shorewood Homes and his expertise is in land and planning. Prior to forming Shorewood Homes, he was an Associate Director in the Development Land team at a wellknown multi-disciplinary estate agent</p>
-                                                                    <p>M R I C S</p>
-                                                                </div>
+                                                        </div>
+                                                    </figcaption>
+                                                </figure>
+                                            </div>    
+                                            <div class="tile">
+                                                <figure class="item figure aspect-ratio_1x1">
+                                                    <div class="image-wrap" style="background-image: url('images/pexels-photo-756453.jpeg');"></div>
+                                                    <figcaption class="figure-caption figure-rollover">
+                                                        <div class="caption-wrap">
+                                                            <div>
+                                                                <h6 class="caption-title font-primary text-upper">RICHARD WICKINS</h6>
+                                                                <p class="text-upper">CO-FOUNDER</p>
+                                                                <p class="caption-content">Richard is a co-founder of Shorewood Homes and his expertise is in land and planning. Prior to forming Shorewood Homes, he was an Associate Director in the Development Land team at a wellknown multi-disciplinary estate agent</p>
+                                                                <p>M R I C S</p>
                                                             </div>
-                                                        </figcaption>
-                                                    </figure>
-                                                </div>    
-                                                <div class="tile">
-                                                    <figure class="item figure aspect-ratio_1x1">
-                                                        <div class="image-wrap" style="background-image: url('images/pexels-photo-1239291.jpeg');"></div>
-                                                        <figcaption class="figure-caption figure-rollover">
-                                                            <div class="caption-wrap">
-                                                                <div>
-                                                                    <h6 class="caption-title font-primary text-upper">RICHARD WICKINS</h6>
-                                                                    <p class="text-upper">CO-FOUNDER</p>
-                                                                    <p class="caption-content">Richard is a co-founder of Shorewood Homes and his expertise is in land and planning. Prior to forming Shorewood Homes, he was an Associate Director in the Development Land team at a wellknown multi-disciplinary estate agent</p>
-                                                                    <p>M R I C S</p>
-                                                                </div>
+                                                        </div>
+                                                    </figcaption>
+                                                </figure>
+                                            </div>    
+                                            <div class="tile">
+                                                <figure class="item figure aspect-ratio_1x1">
+                                                    <div class="image-wrap" style="background-image: url('images/pexels-photo-1239291.jpeg');"></div>
+                                                    <figcaption class="figure-caption figure-rollover">
+                                                        <div class="caption-wrap">
+                                                            <div>
+                                                                <h6 class="caption-title font-primary text-upper">RICHARD WICKINS</h6>
+                                                                <p class="text-upper">CO-FOUNDER</p>
+                                                                <p class="caption-content">Richard is a co-founder of Shorewood Homes and his expertise is in land and planning. Prior to forming Shorewood Homes, he was an Associate Director in the Development Land team at a wellknown multi-disciplinary estate agent</p>
+                                                                <p>M R I C S</p>
                                                             </div>
-                                                        </figcaption>
-                                                    </figure>
-                                                </div>    
-                                            </div>
-                                            
-                                            <div class="slide_item team_list">    
-                                                <div class="tile">
-                                                    <figure class="item figure aspect-ratio_1x1">
-                                                        <div class="image-wrap" style="background-image: url('images/pexels-photo-756453.jpeg');"></div>
-                                                        <figcaption class="figure-caption figure-rollover">
-                                                            <div class="caption-wrap">
-                                                                <div>
-                                                                    <h6 class="caption-title font-primary text-upper">RICHARD WICKINS</h6>
-                                                                    <p class="text-upper">CO-FOUNDER</p>
-                                                                    <p class="caption-content">Richard is a co-founder of Shorewood Homes and his expertise is in land and planning. Prior to forming Shorewood Homes, he was an Associate Director in the Development Land team at a wellknown multi-disciplinary estate agent</p>
-                                                                    <p>M R I C S</p>
-                                                                </div>
-                                                            </div>
-                                                        </figcaption>
-                                                    </figure>
-                                                </div>   
-                                                <div class="tile">
-                                                    <figure class="item figure aspect-ratio_1x1">
-                                                        <div class="image-wrap" style="background-image: url('images/pexels-photo-712521.jpeg');"></div>
-                                                        <figcaption class="figure-caption figure-rollover">
-                                                            <div class="caption-wrap">
-                                                                <div>
-                                                                    <h6 class="caption-title font-primary text-upper">RICHARD WICKINS</h6>
-                                                                    <p class="text-upper">CO-FOUNDER</p>
-                                                                    <p class="caption-content">Richard is a co-founder of Shorewood Homes and his expertise is in land and planning. Prior to forming Shorewood Homes, he was an Associate Director in the Development Land team at a wellknown multi-disciplinary estate agent</p>
-                                                                    <p>M R I C S</p>
-                                                                </div>
-                                                            </div>
-                                                        </figcaption>
-                                                    </figure>
-                                                </div>    
-                                                <div class="tile">
-                                                    <figure class="item figure aspect-ratio_1x1">
-                                                        <div class="image-wrap" style="background-image: url('images/pexels-photo-713312.jpeg');"></div>
-                                                        <figcaption class="figure-caption figure-rollover">
-                                                            <div class="caption-wrap">
-                                                                <div>
-                                                                    <h6 class="caption-title font-primary text-upper">RICHARD WICKINS</h6>
-                                                                    <p class="text-upper">CO-FOUNDER</p>
-                                                                    <p class="caption-content">Richard is a co-founder of Shorewood Homes and his expertise is in land and planning. Prior to forming Shorewood Homes, he was an Associate Director in the Development Land team at a wellknown multi-disciplinary estate agent</p>
-                                                                    <p>M R I C S</p>
-                                                                </div>
-                                                            </div>
-                                                        </figcaption>
-                                                    </figure>
-                                                </div>  
-                                                <div class="tile">
-                                                    <figure class="item figure aspect-ratio_1x1">
-                                                        <div class="image-wrap" style="background-image: url('images/pexels-photo-672599.jpeg');"></div>
-                                                        <figcaption class="figure-caption figure-rollover">
-                                                            <div class="caption-wrap">
-                                                                <div>
-                                                                    <h6 class="caption-title font-primary text-upper">RICHARD WICKINS</h6>
-                                                                    <p class="text-upper">CO-FOUNDER</p>
-                                                                    <p class="caption-content">Richard is a co-founder of Shorewood Homes and his expertise is in land and planning. Prior to forming Shorewood Homes, he was an Associate Director in the Development Land team at a wellknown multi-disciplinary estate agent</p>
-                                                                    <p>M R I C S</p>
-                                                                </div>
-                                                            </div>
-                                                        </figcaption>
-                                                    </figure>
-                                                </div>   
-                                                <div class="tile">
-                                                    <figure class="item figure aspect-ratio_1x1">
-                                                        <div class="image-wrap" style="background-image: url('images/pexels-photo-1239291.jpeg');"></div>
-                                                        <figcaption class="figure-caption figure-rollover">
-                                                            <div class="caption-wrap">
-                                                                <div>
-                                                                    <h6 class="caption-title font-primary text-upper">RICHARD WICKINS</h6>
-                                                                    <p class="text-upper">CO-FOUNDER</p>
-                                                                    <p class="caption-content">Richard is a co-founder of Shorewood Homes and his expertise is in land and planning. Prior to forming Shorewood Homes, he was an Associate Director in the Development Land team at a wellknown multi-disciplinary estate agent</p>
-                                                                    <p>M R I C S</p>
-                                                                </div>
-                                                            </div>
-                                                        </figcaption>
-                                                    </figure>
-                                                </div>  
-                                                <div class="tile">
-                                                    <figure class="item figure aspect-ratio_1x1">
-                                                        <div class="image-wrap" style="background-image: url('images/pexels-photo-542282.jpeg');"></div>
-                                                        <figcaption class="figure-caption figure-rollover">
-                                                            <div class="caption-wrap">
-                                                                <div>
-                                                                    <h6 class="caption-title font-primary text-upper">RICHARD WICKINS</h6>
-                                                                    <p class="text-upper">CO-FOUNDER</p>
-                                                                    <p class="caption-content">Richard is a co-founder of Shorewood Homes and his expertise is in land and planning. Prior to forming Shorewood Homes, he was an Associate Director in the Development Land team at a wellknown multi-disciplinary estate agent</p>
-                                                                    <p>M R I C S</p>
-                                                                </div>
-                                                            </div>
-                                                        </figcaption>
-                                                    </figure>
-                                                </div>   
-                                                <div class="tile">
-                                                    <figure class="item figure aspect-ratio_1x1">
-                                                        <div class="image-wrap" style="background-image: url('images/pexels-photo-736716.jpeg');"></div>
-                                                        <figcaption class="figure-caption figure-rollover">
-                                                            <div class="caption-wrap">
-                                                                <div>
-                                                                    <h6 class="caption-title font-primary text-upper">RICHARD WICKINS</h6>
-                                                                    <p class="text-upper">CO-FOUNDER</p>
-                                                                    <p class="caption-content">Richard is a co-founder of Shorewood Homes and his expertise is in land and planning. Prior to forming Shorewood Homes, he was an Associate Director in the Development Land team at a wellknown multi-disciplinary estate agent</p>
-                                                                    <p>M R I C S</p>
-                                                                </div>
-                                                            </div>
-                                                        </figcaption>
-                                                    </figure>
-                                                </div>    
-                                                <div class="tile">
-                                                    <figure class="item figure aspect-ratio_1x1">
-                                                        <div class="image-wrap" style="background-image: url('images/pexels-photo-324658.jpeg');"></div>
-                                                        <figcaption class="figure-caption figure-rollover">
-                                                            <div class="caption-wrap">
-                                                                <div>
-                                                                    <h6 class="caption-title font-primary text-upper">RICHARD WICKINS</h6>
-                                                                    <p class="text-upper">CO-FOUNDER</p>
-                                                                    <p class="caption-content">Richard is a co-founder of Shorewood Homes and his expertise is in land and planning. Prior to forming Shorewood Homes, he was an Associate Director in the Development Land team at a wellknown multi-disciplinary estate agent</p>
-                                                                    <p>M R I C S</p>
-                                                                </div>
-                                                            </div>
-                                                        </figcaption>
-                                                    </figure>
-                                                </div>   
-                                            </div>
-        
+                                                        </div>
+                                                    </figcaption>
+                                                </figure>
+                                            </div>    
                                         </div>
-                                    </section>
-                                </div>
-                                <div class="col col-sm-12">
-                                    <div class="action_group m_t-auto m_b-auto m_l-auto">
-                                        <a href="#" class="action_button button ourTeam_carousel-js--next"><img class="button_icon" src="images/arrow_right.png" alt=""/></a>
+                                        
+                                        <div class="slide_item team_list">    
+                                            <div class="tile">
+                                                <figure class="item figure aspect-ratio_1x1">
+                                                    <div class="image-wrap" style="background-image: url('images/pexels-photo-756453.jpeg');"></div>
+                                                    <figcaption class="figure-caption figure-rollover">
+                                                        <div class="caption-wrap">
+                                                            <div>
+                                                                <h6 class="caption-title font-primary text-upper">RICHARD WICKINS</h6>
+                                                                <p class="text-upper">CO-FOUNDER</p>
+                                                                <p class="caption-content">Richard is a co-founder of Shorewood Homes and his expertise is in land and planning. Prior to forming Shorewood Homes, he was an Associate Director in the Development Land team at a wellknown multi-disciplinary estate agent</p>
+                                                                <p>M R I C S</p>
+                                                            </div>
+                                                        </div>
+                                                    </figcaption>
+                                                </figure>
+                                            </div>   
+                                            <div class="tile">
+                                                <figure class="item figure aspect-ratio_1x1">
+                                                    <div class="image-wrap" style="background-image: url('images/pexels-photo-712521.jpeg');"></div>
+                                                    <figcaption class="figure-caption figure-rollover">
+                                                        <div class="caption-wrap">
+                                                            <div>
+                                                                <h6 class="caption-title font-primary text-upper">RICHARD WICKINS</h6>
+                                                                <p class="text-upper">CO-FOUNDER</p>
+                                                                <p class="caption-content">Richard is a co-founder of Shorewood Homes and his expertise is in land and planning. Prior to forming Shorewood Homes, he was an Associate Director in the Development Land team at a wellknown multi-disciplinary estate agent</p>
+                                                                <p>M R I C S</p>
+                                                            </div>
+                                                        </div>
+                                                    </figcaption>
+                                                </figure>
+                                            </div>    
+                                            <div class="tile">
+                                                <figure class="item figure aspect-ratio_1x1">
+                                                    <div class="image-wrap" style="background-image: url('images/pexels-photo-713312.jpeg');"></div>
+                                                    <figcaption class="figure-caption figure-rollover">
+                                                        <div class="caption-wrap">
+                                                            <div>
+                                                                <h6 class="caption-title font-primary text-upper">RICHARD WICKINS</h6>
+                                                                <p class="text-upper">CO-FOUNDER</p>
+                                                                <p class="caption-content">Richard is a co-founder of Shorewood Homes and his expertise is in land and planning. Prior to forming Shorewood Homes, he was an Associate Director in the Development Land team at a wellknown multi-disciplinary estate agent</p>
+                                                                <p>M R I C S</p>
+                                                            </div>
+                                                        </div>
+                                                    </figcaption>
+                                                </figure>
+                                            </div>  
+                                            <div class="tile">
+                                                <figure class="item figure aspect-ratio_1x1">
+                                                    <div class="image-wrap" style="background-image: url('images/pexels-photo-672599.jpeg');"></div>
+                                                    <figcaption class="figure-caption figure-rollover">
+                                                        <div class="caption-wrap">
+                                                            <div>
+                                                                <h6 class="caption-title font-primary text-upper">RICHARD WICKINS</h6>
+                                                                <p class="text-upper">CO-FOUNDER</p>
+                                                                <p class="caption-content">Richard is a co-founder of Shorewood Homes and his expertise is in land and planning. Prior to forming Shorewood Homes, he was an Associate Director in the Development Land team at a wellknown multi-disciplinary estate agent</p>
+                                                                <p>M R I C S</p>
+                                                            </div>
+                                                        </div>
+                                                    </figcaption>
+                                                </figure>
+                                            </div>   
+                                            <div class="tile">
+                                                <figure class="item figure aspect-ratio_1x1">
+                                                    <div class="image-wrap" style="background-image: url('images/pexels-photo-1239291.jpeg');"></div>
+                                                    <figcaption class="figure-caption figure-rollover">
+                                                        <div class="caption-wrap">
+                                                            <div>
+                                                                <h6 class="caption-title font-primary text-upper">RICHARD WICKINS</h6>
+                                                                <p class="text-upper">CO-FOUNDER</p>
+                                                                <p class="caption-content">Richard is a co-founder of Shorewood Homes and his expertise is in land and planning. Prior to forming Shorewood Homes, he was an Associate Director in the Development Land team at a wellknown multi-disciplinary estate agent</p>
+                                                                <p>M R I C S</p>
+                                                            </div>
+                                                        </div>
+                                                    </figcaption>
+                                                </figure>
+                                            </div>  
+                                            <div class="tile">
+                                                <figure class="item figure aspect-ratio_1x1">
+                                                    <div class="image-wrap" style="background-image: url('images/pexels-photo-542282.jpeg');"></div>
+                                                    <figcaption class="figure-caption figure-rollover">
+                                                        <div class="caption-wrap">
+                                                            <div>
+                                                                <h6 class="caption-title font-primary text-upper">RICHARD WICKINS</h6>
+                                                                <p class="text-upper">CO-FOUNDER</p>
+                                                                <p class="caption-content">Richard is a co-founder of Shorewood Homes and his expertise is in land and planning. Prior to forming Shorewood Homes, he was an Associate Director in the Development Land team at a wellknown multi-disciplinary estate agent</p>
+                                                                <p>M R I C S</p>
+                                                            </div>
+                                                        </div>
+                                                    </figcaption>
+                                                </figure>
+                                            </div>   
+                                            <div class="tile">
+                                                <figure class="item figure aspect-ratio_1x1">
+                                                    <div class="image-wrap" style="background-image: url('images/pexels-photo-736716.jpeg');"></div>
+                                                    <figcaption class="figure-caption figure-rollover">
+                                                        <div class="caption-wrap">
+                                                            <div>
+                                                                <h6 class="caption-title font-primary text-upper">RICHARD WICKINS</h6>
+                                                                <p class="text-upper">CO-FOUNDER</p>
+                                                                <p class="caption-content">Richard is a co-founder of Shorewood Homes and his expertise is in land and planning. Prior to forming Shorewood Homes, he was an Associate Director in the Development Land team at a wellknown multi-disciplinary estate agent</p>
+                                                                <p>M R I C S</p>
+                                                            </div>
+                                                        </div>
+                                                    </figcaption>
+                                                </figure>
+                                            </div>    
+                                            <div class="tile">
+                                                <figure class="item figure aspect-ratio_1x1">
+                                                    <div class="image-wrap" style="background-image: url('images/pexels-photo-324658.jpeg');"></div>
+                                                    <figcaption class="figure-caption figure-rollover">
+                                                        <div class="caption-wrap">
+                                                            <div>
+                                                                <h6 class="caption-title font-primary text-upper">RICHARD WICKINS</h6>
+                                                                <p class="text-upper">CO-FOUNDER</p>
+                                                                <p class="caption-content">Richard is a co-founder of Shorewood Homes and his expertise is in land and planning. Prior to forming Shorewood Homes, he was an Associate Director in the Development Land team at a wellknown multi-disciplinary estate agent</p>
+                                                                <p>M R I C S</p>
+                                                            </div>
+                                                        </div>
+                                                    </figcaption>
+                                                </figure>
+                                            </div>   
+                                        </div>
+    
                                     </div>
+                                </section>
+                            </div>
+                            <div class="col col-sm-12">
+                                <div class="action_group m_t-auto m_b-auto m_l-auto">
+                                    <a href="#" class="action_button button ourTeam_carousel-js--next"><img class="button_icon" src="images/arrow_right.png" alt=""/></a>
                                 </div>
                             </div>
                         </div>
