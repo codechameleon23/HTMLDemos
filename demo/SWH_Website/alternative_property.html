@@ -15,21 +15,6 @@
 </head>
 
 <body>
-    <script>
-        //Hide page loader on load
-        window.onload = function (e) {
-            var x = document.getElementsByClassName("pageLoader");
-            for (i = 0; i < x.length; i++) {
-                x[i].className += ' is-hidden';
-            }
-        };
-
-        //Cookie Policy message
-        document.body.className = document.body.className + " js_enabled"; // Detect JS support
-        function messageClose() { //close on click
-            document.getElementById("cookie-message").style.display = "none";
-        }
-    </script>
 
     <!-- page loader -->
     <div class="pageLoader"></div>
@@ -50,10 +35,26 @@
     <!-- Rotate tablet message -->
     <div class="tabletRoate bg-default">
         <div>
-            <p><img src="images/tablet-rotate.png" alt="" /></p>
+            <p><img src="images/tablet-rotate.png" alt=""/></p>
             <p class="h4 text-upper">PLEASE ROTATE YOUR DEVICE</p>
         </div>
     </div>
+
+<script>
+//Hide page loader on load
+window.onload = function (e) {
+    var x = document.getElementsByClassName("pageLoader");
+    for (i = 0; i < x.length; i++) {
+        x[i].className += ' is-hidden';
+    }
+};
+
+//Cookie Policy message
+document.body.className = document.body.className + " js_enabled"; // Detect JS support
+function messageClose() { //close on click
+    document.getElementById("cookie-message").style.display = "none";
+};
+</script>
 
     <header class="header">
         <div class="hamburger">
@@ -198,7 +199,7 @@
             <p>The above images are a style guide only</p>
             <ul class="links">
                 <li><a href="mailto:info@shorewoodhomes.co.uk">info@shorewoodhomes.co.uk</a></li>
-                <li><a href="tel:01962 678528">01962 678528</a></li>
+                <li><a href="tel:01962678528">01962 678528</a></li>
             </ul>
         </div>
         <div class="middle">
@@ -305,8 +306,6 @@
             </div>
         </div>
     </div>
-
-</body>
 <script src="js/cookie-message.js"></script>
 <script src="js/jquery-3.3.1.min.js"></script>
 <!-- Scrollyfy js -->
@@ -318,5 +317,5 @@
 <script src="js/jquery.popupoverlay.js"></script>
 <!-- scripts -->
 <script src="js/scripts.js"></script>
-
+</body>
 </html>

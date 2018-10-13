@@ -13,20 +13,6 @@
 <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body class="header_fixed footer_fixed full-page">
-<script>
-    //Hide page loader on load
-    window.onload = function(e){
-        var x = document.getElementsByClassName("pageLoader");
-        for (i = 0; i < x.length; i++) 
-        {x[i].className += ' is-hidden';}
-    };
-
-    //Cookie Policy message
-    document.body.className = document.body.className + " js_enabled";// Detect JS support
-    function messageClose(){//close on click
-        document.getElementById("cookie-message").style.display = "none";
-    }
-</script>
 
     <!-- page loader -->
     <div class="pageLoader"></div>
@@ -35,7 +21,8 @@
     <div id="cookie-message" data-cookie-expiry="60">
         <div class="grid has-gutter_thin has-list center_a">
             <div class="col col-auto col-sm-12">
-                <p class="m_t-auto m_b-auto">We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies. <a href="#" class="text-primary">More info</a></p>
+                <p class="m_t-auto m_b-auto">We use cookies to enhance your experience. By continuing to visit this
+                    site you agree to our use of cookies. <a href="#" class="text-primary">More info</a></p>
             </div>
             <div class="col col-auto col-sm-12">
                 <a href="#" class="button" onclick="messageClose()">got it</a>
@@ -50,6 +37,22 @@
             <p class="h4 text-upper">PLEASE ROTATE YOUR DEVICE</p>
         </div>
     </div>
+
+<script>
+//Hide page loader on load
+window.onload = function (e) {
+    var x = document.getElementsByClassName("pageLoader");
+    for (i = 0; i < x.length; i++) {
+        x[i].className += ' is-hidden';
+    }
+};
+
+//Cookie Policy message
+document.body.className = document.body.className + " js_enabled"; // Detect JS support
+function messageClose() { //close on click
+    document.getElementById("cookie-message").style.display = "none";
+};
+</script>
 
     <header class="header">
         <div class="hamburger">
@@ -377,7 +380,7 @@
         <div class="left">
             <ul class="links">
                 <li><a href="mailto:info@shorewoodhomes.co.uk">info@shorewoodhomes.co.uk</a></li>
-                <li><a href="tel:01962 678528">01962 678528</a></li>
+                <li><a href="tel:01962678528">01962 678528</a></li>
             </ul>
         </div>
         <div class="right">
@@ -388,7 +391,6 @@
             </ul>
         </div>
     </footer>
-</body>
 <script src="js/cookie-message.js"></script>
 <script src="js/jquery-3.3.1.min.js"></script>
 <!-- Scrollyfy js -->
@@ -400,4 +402,5 @@
 <script src="js/jquery.popupoverlay.js"></script>
 <!-- scripts -->
 <script src="js/scripts.js"></script>
+</body>
 </html>

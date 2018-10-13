@@ -32,29 +32,29 @@
         </div>
     </div>
 
-<script>
-    //Hide page loader on load
-    window.onload = function (e) {
-        var x = document.getElementsByClassName("pageLoader");
-        for (i = 0; i < x.length; i++) {
-            x[i].className += ' is-hidden';
-        }
-    };
-
-    //Cookie Policy message
-    document.body.className = document.body.className + " js_enabled"; // Detect JS support
-    function messageClose() { //close on click
-        document.getElementById("cookie-message").style.display = "none";
-    };
-</script>
-
     <!-- Rotate tablet message -->
     <div class="tabletRoate bg-default">
         <div>
-            <p><img src="images/tablet-rotate.png" alt="" /></p>
+            <p><img src="images/tablet-rotate.png" alt=""/></p>
             <p class="h4 text-upper">PLEASE ROTATE YOUR DEVICE</p>
         </div>
     </div>
+
+<script>
+//Hide page loader on load
+window.onload = function (e) {
+    var x = document.getElementsByClassName("pageLoader");
+    for (i = 0; i < x.length; i++) {
+        x[i].className += ' is-hidden';
+    }
+};
+
+//Cookie Policy message
+document.body.className = document.body.className + " js_enabled"; // Detect JS support
+function messageClose() { //close on click
+    document.getElementById("cookie-message").style.display = "none";
+};
+</script>
 
 
     <header class="header header_light">
@@ -128,8 +128,6 @@
             </ul>
         </div>
     </footer>
-
-</body>
 <script src="js/cookie-message.js"></script>
 <script src="js/jquery-3.3.1.min.js"></script>
 <!-- Scrollyfy js -->
@@ -142,6 +140,7 @@
 <!-- scripts -->
 <script src="js/scripts.js"></script>
 <script>
+    //Scrollyfy and Pagination 
     $(function () {
         $.scrollify({
             scrollbars: false,
@@ -171,7 +170,6 @@
                 pagination += "</ul>";
 
                 $(".main").append(pagination);
-                // $(".pagination a").on("click",$.scrollify.move);
 
                 $(".pagination a").on('click', function (event) {
                     if (this.hash !== "") {
@@ -185,5 +183,5 @@
 
     });
 </script>
-
+</body>
 </html>
