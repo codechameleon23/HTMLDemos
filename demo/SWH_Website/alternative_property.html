@@ -1,44 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="icon" href="images/favicon.png"/>
-<title>Shorewood Homes</title>
-<link rel="stylesheet" href="https://use.typekit.net/uiy6agb.css">
-<link rel="stylesheet" href="css/animate.min.css"/>
-<link rel="stylesheet" href="css/owl.carousel.min.css"/>
-<link rel="stylesheet" href="css/owl.theme.default.min.css"/>
-<link rel="stylesheet" href="css/style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="images/favicon.png" />
+    <title>Shorewood Homes</title>
+    <link rel="stylesheet" href="https://use.typekit.net/uiy6agb.css">
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
-<!-- Cookie Policy message -->
-<script>
-    // Detect JS support
-    document.body.className = document.body.className + " js_enabled";
-    //close on click
-    function messageClose(){
-        document.getElementById("cookie-message").style.display = "none";
-    }
-</script>
-<div id="cookie-message" data-cookie-expiry="60">
-    <div class="grid has-gutter_thin has-list">
-        <div class="col col-auto col-sm-12">
-            <p class="m_t-auto m_b-auto">We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies. <a href="#" class="text-primary">More info</a></p>
-        </div>
-        <div class="col col-auto col-sm-12">
-            <a href="#" class="button" onclick="messageClose()">got it</a>
-        </div>
-    </div>
-</div>
+    <script>
+        //Hide page loader on load
+        window.onload = function (e) {
+            var x = document.getElementsByClassName("pageLoader");
+            for (i = 0; i < x.length; i++) {
+                x[i].className += ' is-hidden';
+            }
+        };
+
+        //Cookie Policy message
+        document.body.className = document.body.className + " js_enabled"; // Detect JS support
+        function messageClose() { //close on click
+            document.getElementById("cookie-message").style.display = "none";
+        }
+    </script>
+
     <!-- page loader -->
     <div class="pageLoader"></div>
 
-    <!-- tablet rotate -->
+    <!-- Cookie message-->
+    <div id="cookie-message" data-cookie-expiry="60">
+        <div class="grid has-gutter_thin has-list center_a">
+            <div class="col col-auto col-sm-12">
+                <p class="m_t-auto m_b-auto">We use cookies to enhance your experience. By continuing to visit this
+                    site you agree to our use of cookies. <a href="#" class="text-primary">More info</a></p>
+            </div>
+            <div class="col col-auto col-sm-12">
+                <a href="#" class="button" onclick="messageClose()">got it</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rotate tablet message -->
     <div class="tabletRoate bg-default">
         <div>
-            <p><img src="images/tablet-rotate.png" alt=""/></p>
+            <p><img src="images/tablet-rotate.png" alt="" /></p>
             <p class="h4 text-upper">PLEASE ROTATE YOUR DEVICE</p>
         </div>
     </div>
@@ -50,9 +62,10 @@
             <span></span>
             <span></span>
         </div>
-        <a class="brand-logo" href="index.html"><img src="images/SWH_Logo_white.png" alt=""/></a>
+        <a class="brand-logo" href="index.html"><img src="images/logo.png" alt="Shorewood Homes" /></a>
     </header>
 
+    <div id="navbarOverlay" class="popup"></div>
     <nav class="navbar navbar-toggle-js">
         <div class="navbar-inner">
             <ul>
@@ -73,13 +86,28 @@
                 <div class="tiles tiles-col-sm">
 
                     <!-- Hexgone image -->
-                    <!-- Hexgone outer border -->
-                    <div class="hexagone_boder"> <div class="aspect-ratio"> <div> <div class="aspect-ratio_1x1"> <div> <div class="side_0"> <div class="side_1"> <div class="side_2"> <div class="aspect-ratio"> <div class="bg-inside"></div></div></div></div></div></div></div></div></div></div>
-                    <!-- Hexgone inner image -->
-                    <div class="hexagone_frame"> <div class="aspect-ratio"> <div> <div class="aspect-ratio_1x1"> <div> <div class="side_0"> <div class="side_1"> <div class="side_2"> <div class="aspect-ratio"> 
-                    <!-- Your image goes here -->
-                    <div class="image-inside" style="background-image: url('images/281.0000_1841_bcc658ae-0232-4187-bff5-707758b3593a_1024x1024.jpg');">
-                    </div></div></div></div></div></div></div></div></div></div>   
+                    <div class="hexagoneShape col-3">
+                        <div class="hexagone-ratio">
+                            <div>
+                                <div class="hexside hexside_1">
+                                    <div class="hexside hexside_2">
+                                        <div class="hexside hexside_3">
+                                            <div class="hexside hexside_4">
+                                                <div class="hexside hexside_5">
+                                                    <div class="hexside hexside_6">
+                                                        <div class="hexagone-ratio">
+                                                            <!-- Your image goes here -->
+                                                            <div class="image_inside" style="background-image: url('images/281.0000_1841_bcc658ae-0232-4187-bff5-707758b3593a_1024x1024.jpg');"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="tile-col col-1">
                         <div class="tile row-6">
@@ -160,7 +188,7 @@
                                 <div class="image-wrap" style="background-image: url('images/262856-(4).jpg');"></div>
                             </figure>
                         </div>
-                    </div>        
+                    </div>
                 </div>
             </div>
         </section>
@@ -261,13 +289,13 @@
                                 <div class="col col-5 col-xs-12">
                                     <div class="text-center">
                                         <h5 class="title font-primary text-center">GROUND FLOOR</h5>
-                                        <img src="images/floorplan_1.png" alt=""/>
+                                        <img src="images/floorplan_1.png" alt="" />
                                     </div>
                                 </div>
                                 <div class="col col-5 col-offset-1 col-sm-12 col-sm-offset-0">
                                     <div class="text-center">
                                         <h5 class="title font-primary text-center">GROUND FLOOR</h5>
-                                        <img src="images/floorplan_2.png" alt=""/>
+                                        <img src="images/floorplan_2.png" alt="" />
                                     </div>
                                 </div>
                             </div>
@@ -290,4 +318,5 @@
 <script src="js/jquery.popupoverlay.js"></script>
 <!-- scripts -->
 <script src="js/scripts.js"></script>
+
 </html>

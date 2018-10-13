@@ -13,31 +13,37 @@
 <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body class="header_fixed footer_fixed full-page">
-<!-- Cookie Policy message -->
 <script>
-    // Detect JS support
-    document.body.className = document.body.className + " js_enabled";
-    //close on click
-    function messageClose(){
+    //Hide page loader on load
+    window.onload = function(e){
+        var x = document.getElementsByClassName("pageLoader");
+        for (i = 0; i < x.length; i++) 
+        {x[i].className += ' is-hidden';}
+    };
+
+    //Cookie Policy message
+    document.body.className = document.body.className + " js_enabled";// Detect JS support
+    function messageClose(){//close on click
         document.getElementById("cookie-message").style.display = "none";
     }
 </script>
-<div id="cookie-message" data-cookie-expiry="60">
-    <div class="grid has-gutter_thin has-list">
-        <div class="col col-auto col-sm-12">
-            <p class="m_t-auto m_b-auto">We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies. <a href="#" class="text-primary">More info</a></p>
-        </div>
-        <div class="col col-auto col-sm-12">
-            <a href="#" class="button" onclick="messageClose()">got it</a>
-        </div>
-    </div>
-</div>
-
 
     <!-- page loader -->
     <div class="pageLoader"></div>
 
-    <!-- tablet rotate -->
+    <!-- Cookie message-->
+    <div id="cookie-message" data-cookie-expiry="60">
+        <div class="grid has-gutter_thin has-list center_a">
+            <div class="col col-auto col-sm-12">
+                <p class="m_t-auto m_b-auto">We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies. <a href="#" class="text-primary">More info</a></p>
+            </div>
+            <div class="col col-auto col-sm-12">
+                <a href="#" class="button" onclick="messageClose()">got it</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rotate tablet message -->
     <div class="tabletRoate bg-default">
         <div>
             <p><img src="images/tablet-rotate.png" alt=""/></p>
@@ -52,7 +58,7 @@
             <span></span>
             <span></span>
         </div>
-        <a class="brand-logo" href="index.html"><img src="images/SWH_Logo_white.png" alt=""/></a>
+        <a class="brand-logo" href="index.html"><img src="images/logo.png" alt=""/></a>
     </header>
 
     <nav class="navbar navbar-toggle-js">
@@ -66,7 +72,8 @@
             </ul>
         </div>
     </nav>
-
+    
+    <div id="navbarOverlay" class="popup"></div>
     <main class="main">
         <section class="scrollify_section-js">
             
