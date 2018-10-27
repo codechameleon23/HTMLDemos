@@ -11,20 +11,19 @@
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
-<body class="header_fixed footer_fixed">
+<body class="header_fixed footer_fixed contact_page">
 
     <!-- page loader -->
     <div class="pageLoader"></div>
 
     <!-- Cookie message-->
     <div id="cookie-message" data-cookie-expiry="60">
-        <div class="grid has-gutter_thin has-list center_a">
-            <div class="col col-auto col-sm-12">
-                <p class="m_t-auto m_b-auto">We use cookies to enhance your experience. By continuing to visit this
-                    site you agree to our use of cookies. <a href="#" class="text-primary">More info</a></p>
+        <div class="grid has-gutter has-list_thin center_a">
+            <div class="col col-auto col-sm-12 text-center">
+                <p class="m_t-auto m_b-auto">We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies. <a href="#" class="text-primary">More info</a></p>
             </div>
-            <div class="col col-auto col-sm-12">
-                <a href="javascript:void(0);" class="button" onclick="messageClose()">got it</a>
+            <div class="col col-auto">
+                <a href="javascript:void(0);" class="button is_100" onclick="messageClose()">got it</a>
             </div>
         </div>
     </div>
@@ -32,38 +31,38 @@
     <!-- Rotate tablet message -->
     <div class="tabletRoate bg-default">
         <div>
-            <p><img src="images/tablet-rotate.png" alt=""/></p>
-            <p class="h4 text-upper">PLEASE ROTATE YOUR DEVICE</p>
+            <p><img src="images/tablet-rotate.png" alt="" /></p>
+            <p class="h5">PLEASE ROTATE YOUR DEVICE</p>
         </div>
     </div>
 
 <script>
-//Hide page loader on load
-window.onload = function (e) {
-    var x = document.getElementsByClassName("pageLoader");
-    for (i = 0; i < x.length; i++) {
-        x[i].className += ' is-hidden';
-    }
-};
+    //Hide page loader on load
+    window.onload = function (e) {
+        var x = document.getElementsByClassName("pageLoader");
+        for (i = 0; i < x.length; i++) {
+            x[i].className += ' is-hidden';
+        }
+    };
 
-//Cookie Policy message
-document.body.className = document.body.className + " js_enabled"; // Detect JS support
-function messageClose() { //close on click
-    document.getElementById("cookie-message").style.display = "none";
-};
+    //Cookie Policy message
+    document.body.className = document.body.className + " js_enabled"; // Detect JS support
+    function messageClose() { //close on click
+        document.getElementById("cookie-message").style.display = "none";
+    };
 </script>
-
+    <!--Header-->
     <header class="header">
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <a class="brand-logo" href="index.html"><img src="images/logo.png" alt="Shorewood Homes" /></a>
+        <a class="brand-logo" href="index.html"><img src="images/SWH_logo.png" alt="Shorewood Homes" /></a>
     </header>
-
-    <div id="navbarOverlay" class="popup"></div>
+    <!--Hamburger-->
+    <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <!--Navbar-->
     <nav class="navbar navbar-toggle-js is-closed">
         <div class="navbar-inner">
             <ul>
@@ -75,25 +74,35 @@ function messageClose() { //close on click
             </ul>
         </div>
     </nav>
-
+    <!--Main-->
     <main class="main">
         <section class="scrollify_section-js">
-            <div class="banner banner-bg--lc has-shade has-shade-full-sm">
+            <div class="banner has-shade_sm banner-bg--lc">
                 <div class="banner-bg" style="background-image:url('images/Shorewood-Homes_Redthorne-House_HQ-143-2.jpg')"></div>
                 <div class="banner-body">
                     <div class="container">
-                        <h4 class="title font-primary">GET IN TOUCH</h4>
-                        <p>12 Southgate Street</p>
-                        <p>Winchester</p>
-                        <p>SO23 9EF</p>
-                        <br>
-                        <p><a href="tel:01962678528">01962 678528 </a></p>
-                        <p><a href="mailto:info@shorewoodhomes.co.uk">info@shorewoodhomes.co.uk</a></p>
+                        <div class="grid has-list">
+                            <div class="col col-4 col-sm-12 col-xs-12 h5">
+                                <div class="contact-details">
+                                    <h4 class="title font-primary">Get in touch</h4>
+                                    <address class="address">
+                                        <p>12 Southgate Street</p>
+                                        <p>Winchester</p>
+                                        <p>SO23 9EF</p>
+                                    </address>
+                                    <div class="contacts">
+                                        <p><a href="tel:01962678528">01962 678528 </a></p>
+                                        <p><a href="mailto:info@shorewoodhomes.co.uk">info@shorewoodhomes.co.uk</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+    <!--Footer-->
     <footer class="footer">
         <div class="left">
             <ul class="links">
@@ -105,10 +114,11 @@ function messageClose() { //close on click
             <ul class="links">
                 <li><a href="#">Terms</a></li>
                 <li><a href="#">Privacy</a></li>
-                <li><span>© Shorewood Homes 2018</span></li>
+                <li class="copyright"><span>© Shorewood Homes 2018</span></li>
             </ul>
         </div>
     </footer>
+<!--Scripts-->
 <script src="js/alljs.js"></script>
 </body>
 </html>

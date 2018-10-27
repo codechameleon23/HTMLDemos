@@ -11,20 +11,19 @@
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
-<body>
+<body class="header_fixed footer_fixed full-page nav-solid">
 
     <!-- page loader -->
     <div class="pageLoader"></div>
 
     <!-- Cookie message-->
     <div id="cookie-message" data-cookie-expiry="60">
-        <div class="grid has-gutter_thin has-list center_a">
-            <div class="col col-auto col-sm-12">
-                <p class="m_t-auto m_b-auto">We use cookies to enhance your experience. By continuing to visit this
-                    site you agree to our use of cookies. <a href="#" class="text-primary">More info</a></p>
+        <div class="grid has-gutter has-list_thin center_a">
+            <div class="col col-auto col-sm-12 text-center">
+                <p class="m_t-auto m_b-auto">We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies. <a href="#" class="text-primary">More info</a></p>
             </div>
-            <div class="col col-auto col-sm-12">
-                <a href="javascript:void(0);" class="button" onclick="messageClose()">got it</a>
+            <div class="col col-auto">
+                <a href="javascript:void(0);" class="button is_100" onclick="messageClose()">got it</a>
             </div>
         </div>
     </div>
@@ -32,38 +31,38 @@
     <!-- Rotate tablet message -->
     <div class="tabletRoate bg-default">
         <div>
-            <p><img src="images/tablet-rotate.png" alt=""/></p>
-            <p class="h4 text-upper">PLEASE ROTATE YOUR DEVICE</p>
+            <p><img src="images/tablet-rotate.png" alt="" /></p>
+            <p class="h5">PLEASE ROTATE YOUR DEVICE</p>
         </div>
     </div>
 
 <script>
-//Hide page loader on load
-window.onload = function (e) {
-    var x = document.getElementsByClassName("pageLoader");
-    for (i = 0; i < x.length; i++) {
-        x[i].className += ' is-hidden';
-    }
-};
+    //Hide page loader on load
+    window.onload = function (e) {
+        var x = document.getElementsByClassName("pageLoader");
+        for (i = 0; i < x.length; i++) {
+            x[i].className += ' is-hidden';
+        }
+    };
 
-//Cookie Policy message
-document.body.className = document.body.className + " js_enabled"; // Detect JS support
-function messageClose() { //close on click
-    document.getElementById("cookie-message").style.display = "none";
-};
+    //Cookie Policy message
+    document.body.className = document.body.className + " js_enabled"; // Detect JS support
+    function messageClose() { //close on click
+        document.getElementById("cookie-message").style.display = "none";
+    };
 </script>
-
+    <!--Header-->
     <header class="header">
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <a class="brand-logo" href="index.html"><img src="images/logo.png" alt="Shorewood Homes" /></a>
+        <a class="brand-logo" href="index.html"><img src="images/SWH_logo.png" alt="Shorewood Homes" /></a>
     </header>
-
-    <div id="navbarOverlay" class="popup"></div>
+    <!--Hamburger-->
+    <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <!--Navbar-->
     <nav class="navbar navbar-toggle-js">
         <div class="navbar-inner">
             <ul>
@@ -75,7 +74,7 @@ function messageClose() { //close on click
             </ul>
         </div>
     </nav>
-
+    <!--Main-->
     <main class="main">
         <section class="scrollify_section-js">
             <div class="tiles-wrapper">
@@ -83,13 +82,12 @@ function messageClose() { //close on click
                     <div class="tile-col col-2 col-sm-12">
                         <div class="tile">
                             <figure class="item figure aspect-ratio_5x6--sm">
-                                <div class="image-wrap" style="background-image: url('images/SYDDI_1_MAIN.jpg');"></div>
+                                <div class="image-wrap" style="background-image: url('images/inspiration_1.jpg');"></div>
                                 <figcaption class="figure-caption figure-rollover">
                                     <div class="caption-wrap">
                                         <div>
-                                            <h6 class="caption-title subtitle">FARROW & BALL</h6>
-                                            <p class="caption-content h6">Lorem ipsum dolor sit amet consectetur
-                                                adipisicing elit. Quis rerum at quaerat.</p>
+                                            <h5 class="caption-title subtitle">Farrow & ball</h5>
+                                            <p class="caption-content h5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                         </div>
                                     </div>
                                 </figcaption>
@@ -97,12 +95,12 @@ function messageClose() { //close on click
                         </div>
                         <div class="tile">
                             <figure class="item figure aspect-ratio_5x6--sm">
-                                <div class="image-wrap" style="background-image: url('images/MCIM02722196_Showroom_Munich_2016_4_mainstage.jpg');"></div>
+                                <div class="image-wrap" style="background-image: url('images/inspiration_2.jpg');"></div>
                                 <figcaption class="figure-caption figure-rollover">
                                     <div class="caption-wrap">
                                         <div>
-                                            <h6 class="caption-title">KURT JACKSON</h6>
-                                            <p class="caption-content">Lorem ipsum dolor sit amet consectetur
+                                            <h5 class="caption-title subtitle">Farrow & ball</h5>
+                                            <p class="caption-content h5">Lorem ipsum dolor sit amet consectetur
                                                 adipisicing elit. Quis rerum at quaerat.</p>
                                         </div>
                                     </div>
@@ -113,11 +111,11 @@ function messageClose() { //close on click
                     <div class="tile-col col-2 col-sm-12">
                         <div class="tile">
                             <figure class="item figure aspect-ratio_5x6--sm">
-                                <div class="image-wrap" style="background-image: url('images/Shorewood-Homes_Redthorne-House_HQ-93.jpg');"></div>
+                                <div class="image-wrap" style="background-image: url('images/inspiration_3.jpg');"></div>
                                 <figcaption class="figure-caption figure-rollover">
                                     <div class="caption-wrap">
                                         <div>
-                                            <h6 class="caption-title">KURT JACKSON</h6>
+                                            <h5 class="caption-title">Kurt jackson</h5>
                                             <p class="caption-content">Lorem ipsum dolor sit amet consectetur
                                                 adipisicing elit. Quis rerum at quaerat.</p>
                                         </div>
@@ -127,11 +125,11 @@ function messageClose() { //close on click
                         </div>
                         <div class="tile">
                             <figure class="item figure aspect-ratio_5x6--sm">
-                                <div class="image-wrap" style="background-image: url('images/Leaflands_Exterior_HR.jpg');"></div>
+                                <div class="image-wrap" style="background-image: url('images/inspiration_4.jpg');"></div>
                                 <figcaption class="figure-caption figure-rollover">
                                     <div class="caption-wrap">
                                         <div>
-                                            <h6 class="caption-title">KURT JACKSON</h6>
+                                            <h5 class="caption-title">Kurt jackson</h5>
                                             <p class="caption-content">Lorem ipsum dolor sit amet consectetur
                                                 adipisicing elit. Quis rerum at quaerat.</p>
                                         </div>
@@ -148,7 +146,7 @@ function messageClose() { //close on click
                                 <figcaption class="figure-caption figure-rollover">
                                     <div class="caption-wrap">
                                         <div>
-                                            <h6 class="caption-title">KURT JACKSON</h6>
+                                            <h5 class="caption-title">Kurt jackson</h5>
                                             <p class="caption-content">Lorem ipsum dolor sit amet consectetur
                                                 adipisicing elit. Quis rerum at quaerat.</p>
                                         </div>
@@ -164,7 +162,7 @@ function messageClose() { //close on click
                                 <figcaption class="figure-caption figure-rollover">
                                     <div class="caption-wrap">
                                         <div>
-                                            <h6 class="caption-title">KURT JACKSON</h6>
+                                            <h5 class="caption-title">Kurt jackson</h5>
                                             <p class="caption-content">Lorem ipsum dolor sit amet consectetur
                                                 adipisicing elit. Quis rerum at quaerat.</p>
                                         </div>
@@ -176,11 +174,11 @@ function messageClose() { //close on click
                             <div class="tile-col col-6 col-sm-12">
                                 <div class="tile">
                                     <figure class="item figure aspect-ratio_5x6--sm">
-                                        <div class="image-wrap" style="background-image: url('images/Shorewood-Homes_Redthorne-House_HQ-173.jpg');"></div>
+                                        <div class="image-wrap" style="background-image: url('images/inspiration_5.jpg');"></div>
                                         <figcaption class="figure-caption figure-rollover">
                                             <div class="caption-wrap">
                                                 <div>
-                                                    <h6 class="caption-title">KURT JACKSON</h6>
+                                                    <h5 class="caption-title">Kurt jackson</h5>
                                                     <p class="caption-content">Lorem ipsum dolor sit amet consectetur
                                                         adipisicing elit. Quis rerum at quaerat.</p>
                                                 </div>
@@ -192,11 +190,11 @@ function messageClose() { //close on click
                             <div class="tile-col col-6 col-sm-12">
                                 <div class="tile">
                                     <figure class="item figure aspect-ratio_5x6--sm">
-                                        <div class="image-wrap" style="background-image: url('images/VAHVU_SP18_2_L.jpg');"></div>
+                                        <div class="image-wrap" style="background-image: url('images/inspiration_6.jpg');"></div>
                                         <figcaption class="figure-caption figure-rollover">
                                             <div class="caption-wrap">
                                                 <div>
-                                                    <h6 class="caption-title">KURT JACKSON</h6>
+                                                    <h5 class="caption-title">Kurt jackson</h5>
                                                     <p class="caption-content">Lorem ipsum dolor sit amet consectetur
                                                         adipisicing elit. Quis rerum at quaerat.</p>
                                                 </div>
@@ -211,6 +209,7 @@ function messageClose() { //close on click
             </div>
         </section>
     </main>
+    <!--Footer-->
     <footer class="footer">
         <div class="left">
             <ul class="links">
@@ -222,10 +221,11 @@ function messageClose() { //close on click
             <ul class="links">
                 <li><a href="#">Terms</a></li>
                 <li><a href="#">Privacy</a></li>
-                <li><span>© Shorewood Homes 2018</span></li>
+                <li class="copyright"><span>© Shorewood Homes 2018</span></li>
             </ul>
         </div>
     </footer>
+<!--Scripts-->
 <script src="js/alljs.js"></script>
 </body>
 </html>

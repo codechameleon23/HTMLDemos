@@ -18,13 +18,12 @@
 
     <!-- Cookie message-->
     <div id="cookie-message" data-cookie-expiry="60">
-        <div class="grid has-gutter_thin has-list center_a">
-            <div class="col col-auto col-sm-12">
-                <p class="m_t-auto m_b-auto">We use cookies to enhance your experience. By continuing to visit this
-                    site you agree to our use of cookies. <a href="#" class="text-primary">More info</a></p>
+        <div class="grid has-gutter has-list_thin center_a">
+            <div class="col col-auto col-sm-12 text-center">
+                <p class="m_t-auto m_b-auto">We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies. <a href="#" class="text-primary">More info</a></p>
             </div>
-            <div class="col col-auto col-sm-12">
-                <a href="javascript:void(0);" class="button" onclick="messageClose()">got it</a>
+            <div class="col col-auto">
+                <a href="javascript:void(0);" class="button is_100" onclick="messageClose()">got it</a>
             </div>
         </div>
     </div>
@@ -32,38 +31,38 @@
     <!-- Rotate tablet message -->
     <div class="tabletRoate bg-default">
         <div>
-            <p><img src="images/tablet-rotate.png" alt=""/></p>
-            <p class="h4 text-upper">PLEASE ROTATE YOUR DEVICE</p>
+            <p><img src="images/tablet-rotate.png" alt="" /></p>
+            <p class="h5">PLEASE ROTATE YOUR DEVICE</p>
         </div>
     </div>
 
 <script>
-//Hide page loader on load
-window.onload = function (e) {
-    var x = document.getElementsByClassName("pageLoader");
-    for (i = 0; i < x.length; i++) {
-        x[i].className += ' is-hidden';
-    }
-};
+    //Hide page loader on load
+    window.onload = function (e) {
+        var x = document.getElementsByClassName("pageLoader");
+        for (i = 0; i < x.length; i++) {
+            x[i].className += ' is-hidden';
+        }
+    };
 
-//Cookie Policy message
-document.body.className = document.body.className + " js_enabled"; // Detect JS support
-function messageClose() { //close on click
-    document.getElementById("cookie-message").style.display = "none";
-};
+    //Cookie Policy message
+    document.body.className = document.body.className + " js_enabled"; // Detect JS support
+    function messageClose() { //close on click
+        document.getElementById("cookie-message").style.display = "none";
+    };
 </script>
-
+    <!--Header-->
     <header class="header">
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <a class="brand-logo" href="index.html"><img src="images/logo.png" alt="Shorewood Homes" /></a>
+        <a class="brand-logo" href="index.html"><img src="images/SWH_logo.png" alt="Shorewood Homes" /></a>
     </header>
-
-    <div id="navbarOverlay" class="popup"></div>
+    <!--Hamburger-->
+    <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <!--Navbar-->
     <nav class="navbar navbar-toggle-js">
         <div class="navbar-inner">
             <ul>
@@ -75,38 +74,38 @@ function messageClose() { //close on click
             </ul>
         </div>
     </nav>
-
+    <!--Main-->
     <main class="main">
         <!-- Banner carousel -->
         <section class="banner_carousel_wrapper scrollify_section-js">
             <div class="banner_carousel banner_carousel-js owl-carousel owl-theme">
                 <div class="item">
-                    <div class="banner has-shade">
+                    <div class="banner">
                         <div class="banner-bg" style="background-image:url('images/262856-(5).jpg')"></div>
                     </div>
                 </div>
                 <div class="item">
-                    <div class="banner has-shade">
+                    <div class="banner">
                         <div class="banner-bg" style="background-image:url('images/Shorewood-Homes_Redthorne-House_HQ-50.jpg')"></div>
                     </div>
                 </div>
                 <div class="item">
-                    <div class="banner has-shade">
+                    <div class="banner">
                         <div class="banner-bg" style="background-image:url('images/Shorewood-Homes_Redthorne-House_HQ-124.jpg')"></div>
                     </div>
                 </div>
                 <div class="item">
-                    <div class="banner has-shade">
+                    <div class="banner">
                         <div class="banner-bg" style="background-image:url('images/Shorewood-Homes_Redthorne-House_HQ-125.jpg')"></div>
                     </div>
                 </div>
                 <div class="item">
-                    <div class="banner has-shade">
+                    <div class="banner">
                         <div class="banner-bg" style="background-image:url('images/Shorewood-Homes_Redthorne-House_HQ-138.jpg')"></div>
                     </div>
                 </div>
                 <div class="item">
-                    <div class="banner has-shade">
+                    <div class="banner">
                         <div class="banner-bg" style="background-image:url('images/Shorewood-Homes_Redthorne-House_HQ-138.jpg')"></div>
                     </div>
                 </div>
@@ -117,11 +116,11 @@ function messageClose() { //close on click
                     <a href="#aboutUs" class="action_button button"><img class="button_icon" src="images/arrow_down.png"
                             alt="" /></a>
                 </div>
-                <div class="action_group">
-                    <a href="javascript:void(0);" class="action_button button banner_carousel-js--next"><img class="button_icon" src="images/arrow_right.png"
-                            alt="" /></a>
-                    <a href="javascript:void(0);" class="action_button button banner_carousel-js--prev"><img class="button_icon" src="images/arrow_left.png"
-                            alt="" /></a>
+                <div class="action_group banner-controls">
+                    <a href="javascript:void(0);" class="action_button button banner_carousel-js--next"><img class="button_icon"
+                            src="images/arrow_right.png" alt="" /></a>
+                    <a href="javascript:void(0);" class="action_button button banner_carousel-js--prev"><img class="button_icon"
+                            src="images/arrow_left.png" alt="" /></a>
                 </div>
             </div>
         </section>
@@ -129,29 +128,19 @@ function messageClose() { //close on click
             <!-- Content -->
             <div id="aboutUs" class="content-wrapper">
                 <div class="content-outer">
-                    <div class="grid has-gutter has-list center_v">
-                        <div class="col col-5 col-sm-12">
-                            <figure class="content-media image">
-                                <div class="image-wrap">
-                                    <img src="images/Shorewood-Homes_Redthorne-House_HQ-99.jpg" alt="" />
-                                </div>
-                            </figure>
+                    <figure class="content-media image col-xs-12">
+                        <div class="image-wrap">
+                            <img src="images/Shorewood-Homes_Redthorne-House_HQ-169_cropped.jpg" alt="" />
                         </div>
-                        <div class="col col-5 col-offset-1 col-sm-12 col-sm-offset-0">
-                            <div class="content-details m_auto">
-                                <div class="details-wrap">
-                                    <h3 class="title font-primary">REDTHORNE HOUSE</h3>
-                                    <h5 class="subtitle">SPARSHOLT</h5>
-                                    <p>Redthorne House is a stunning four bedroom house in the sought after village of
-                                        Sparsholt, a few miles to the west of Winchester. Shorewood Homes designed and
-                                        built a beautiful extension whilst refurbishing the rest of the house. The
-                                        house combines a practical layout with a luxury finish, ideal for modern
-                                        living.</p>
-                                    <div class="details-footer buttons">
-                                        <a href="javascript:void(0);" class="button">BROCHURE</a>
-                                        <a href="javascript:void(0);" class="button floorPlan-popup_open">FLOOR PLANS</a>
-                                    </div>
-                                </div>
+                    </figure>
+                    <div class="content-details text-center col-xs-12">
+                        <div class="details-wrap content-text">
+                            <h3 class="title font-primary">Redthorne house</h3>
+                            <h5 class="subtitle">Sparsholt</h5>
+                            <p class="para text-justify-center">Redthorne House is a stunning four bedroom house in the sought after village of Sparsholt, a few miles to the west of Winchester. Shorewood Homes designed and built a beautiful extension whilst refurbishing the rest of the house. The house combines a practical layout with a luxury finish, ideal for modern living.</p>
+                            <div class="details-footer buttons">
+                                <a href="javascript:void(0);" class="button is_150 is_small">Brochure</a>
+                                <a href="javascript:void(0);" class="button is_150 is_small floorPlan-popup_open">Floor plans</a>
                             </div>
                         </div>
                     </div>
@@ -160,6 +149,7 @@ function messageClose() { //close on click
         </section>
 
     </main>
+    <!--Footer-->
     <footer class="footer">
         <div class="left">
             <ul class="links">
@@ -171,7 +161,7 @@ function messageClose() { //close on click
             <ul class="links">
                 <li><a href="#">Terms</a></li>
                 <li><a href="#">Privacy</a></li>
-                <li><span>© Shorewood Homes 2018</span></li>
+                <li class="copyright"><span>© Shorewood Homes 2018</span></li>
             </ul>
         </div>
     </footer>
@@ -179,84 +169,75 @@ function messageClose() { //close on click
     <!-- floor plans popup-->
     <div id="floorPlan-popup" class="popup bg-primary--light">
         <div class="popup-wrap">
-
-            <!-- Popup close button -->
-            <a href="javascript:void(0);" class="floorPlan-popup_close close_button">
-                <span></span>
-                <span></span>
-            </a>
-
             <div class="popup-body container">
-                <div class="grid has-gutter has-list">
-                    <div class="col col-4 col-sm-12 col-sm-offset-0">
-                        <div class="m_t-auto m_b-auto">
-                            <div class="grid has-gutter has-list">
-                                <div class="col col-12">
-                                    <h6 class="subtitle">FLOOR PLANS</h6>
-                                </div>
-                                <div class="col col-12">
-                                    <table>
-                                        <tbody>
-                                            <tr>
-                                                <td>Kitchen/Dining/Family Area</td>
-                                                <td>6.75m x 5.70m</td>
-                                                <td>22’ 2” x 18’ 8”</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Kitchen/Dining/Family Area</td>
-                                                <td>6.75m x 5.70m</td>
-                                                <td>22’ 2” x 18’ 8”</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <table>
-                                        <tbody>
-                                            <tr>
-                                                <td>Kitchen/Dining/Family Area</td>
-                                                <td>6.75m x 5.70m</td>
-                                                <td>22’ 2” x 18’ 8”</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Kitchen/Dining/Family Area</td>
-                                                <td>6.75m x 5.70m</td>
-                                                <td>22’ 2” x 18’ 8”</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Kitchen/Dining/Family Area</td>
-                                                <td>6.75m x 5.70m</td>
-                                                <td>22’ 2” x 18’ 8”</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Kitchen/Dining/Family Area</td>
-                                                <td>6.75m x 5.70m</td>
-                                                <td>22’ 2” x 18’ 8”</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="col col-12">
-                                    <p>
-                                        <small>Floor plans of plots 1 and 3 (plots 2 and 4 handed).</small>
-                                        <br>
-                                        <small>All measurements are an approximate guide only and subject to change.</small>
-                                    </p>
-                                </div>
-                            </div>
+                <!-- Popup close button -->
+                <a href="javascript:void(0);" class="floorPlan-popup_close close_button">
+                    <span></span>
+                    <span></span>
+                </a>
+                <div class="grid has-gutter_thin has-list">
+                    <div class="col col-4 col-sm-8 col-sm-offset-2 col-xs-12 col-xs-offset-0">
+                        <div class="m_t-auto m_b-auto floorplan-tabel">
+
+                            <p class="table_header"><small class="text-small subtitle kern">Floor plans</small></p>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td width="126px">Kitchen/Dining/Family Area</td>
+                                        <td>6.75m x 5.70m</td>
+                                        <td>22’ 2” x 18’ 8”</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Drawing Room</td>
+                                        <td>4.77m x 5.31m</td>
+                                        <td>15’ 8” x 17’ 5”</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td width="126px">Master Bedroom</td>
+                                        <td>3.04m x 5.70m</td>
+                                        <td>9’ 11” x 18’ 8”</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bedroom 2</td>
+                                        <td>3.39m x 3.81m</td>
+                                        <td>11’ 1” x 12’ 6”</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bedroom 3</td>
+                                        <td>2.89m x 4.44m</td>
+                                        <td>9’ 6” x 14’ 7”</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Study</td>
+                                        <td>2.98m x 3.15m</td>
+                                        <td>9’ 9” x 10’ 4”</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="table_footer text-xs-small">
+                                <small>Floor plans of plots 1 and 3 (plots 2 and 4 handed).</small>
+                                <br>
+                                <small>All measurements are an approximate guide only and subject to change.</small>
+                            </p>
                         </div>
                     </div>
-                    <div class="col col-6 col-offset-1 col-sm-12 col-sm-offset-0">
+                    <div class="col col-6 col-offset-1 col-sm-8 col-sm-offset-2 col-xs-12 col-xs-offset-0">
                         <div class="m_t-auto m_b-auto">
-                            <div class="grid has-gutter has-list">
-                                <div class="col col-5 col-xs-12">
+                            <div class="grid has-gutter_thin has-list_reg space_between">
+                                <div class="col col-5 col-xs-6 col-xvs-12">
                                     <div class="text-center">
-                                        <h5 class="title font-primary text-center">GROUND FLOOR</h5>
-                                        <img src="images/floorplan_1.png" alt="" />
+                                        <h5 class="title plan-title font-primary text-center text-upper"><b>Ground floor</b></h5>
+                                        <img class="plan-image" src="images/floorplan_1.png" alt="" />
                                     </div>
                                 </div>
-                                <div class="col col-5 col-offset-1 col-sm-12 col-sm-offset-0">
+                                <div class="col col-5 col-xs-6 col-xvs-12">
                                     <div class="text-center">
-                                        <h5 class="title font-primary text-center">GROUND FLOOR</h5>
-                                        <img src="images/floorplan_2.png" alt="" />
+                                        <h5 class="title plan-title font-primary text-center text-upper"><b>First floor</b></h5>
+                                        <img class="plan-image" src="images/floorplan_2.png" alt="" />
                                     </div>
                                 </div>
                             </div>
@@ -266,6 +247,7 @@ function messageClose() { //close on click
             </div>
         </div>
     </div>
+<!--Scripts-->
 <script src="js/alljs.js"></script>
 </body>
 </html>
