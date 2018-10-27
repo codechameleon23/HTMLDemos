@@ -1,175 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="images/favicon.png" />
-    <title>Shorewood Homes</title>
-    <link rel="stylesheet" href="https://use.typekit.net/uiy6agb.css">
-    <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="images/favicon.png"/>
+  <title>Shorewood Homes</title>
+  <link rel="stylesheet" href="https://use.typekit.net/uiy6agb.css">
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
-
 <body class="header_fixed footer_fixed">
-
-    <!-- page loader -->
-    <div class="pageLoader"></div>
-
-    <!-- Cookie message-->
-    <div id="cookie-message" data-cookie-expiry="60">
-        <div class="grid has-gutter has-list_thin center_a">
-            <div class="col col-auto col-sm-12 text-center">
-                <p class="m_t-auto m_b-auto">We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies. <a href="#" class="text-primary">More info</a></p>
-            </div>
-            <div class="col col-auto">
-                <a href="javascript:void(0);" class="button is_100" onclick="messageClose()">got it</a>
-            </div>
-        </div>
+  <!-- page loader -->
+  <div class="pageLoader"></div>
+  <!-- Cookie message-->
+  <div id="cookie-message" data-cookie-expiry="60">
+    <div class="grid has-gutter has-list_thin center_a">
+      <div class="col col-auto col-sm-12 text-center">
+        <p class="m_t-auto m_b-auto">We use cookies to enhance your experience. By continuing to visit this site you
+          agree to our use of cookies. <a href="#" class="text-primary">More info</a></p>
+      </div>
+      <div class="col col-auto">
+        <a href="javascript:void(0);" class="button is_100" onclick="messageClose()">got it</a>
+      </div>
     </div>
-
-    <!-- Rotate tablet message -->
-    <div class="tabletRoate bg-default">
-        <div>
-            <p><img src="images/tablet-rotate.png" alt=""/></p>
-            <p class="h5">PLEASE ROTATE YOUR DEVICE</p>
-        </div>
+  </div>
+  <!-- Rotate tablet message -->
+  <div class="tabletRoate bg-default">
+    <div>
+      <p><img src="images/tablet-rotate.png" alt=""/></p>
+      <p class="h5">Please rotate your device</p>
     </div>
-
+  </div>
 <script>
-//Hide page loader on load
-window.onload = function (e) {
+  //Hide page loader on load
+  window.onload = function (e) {
     var x = document.getElementsByClassName("pageLoader");
     for (i = 0; i < x.length; i++) {
-        x[i].className += ' is-hidden';
+      x[i].className += ' is-hidden';
     }
-};
-
-//Cookie Policy message
-document.body.className = document.body.className + " js_enabled"; // Detect JS support
-function messageClose() { //close on click
+  };
+  //Cookie Policy message
+  document.body.className = document.body.className + " js_enabled"; // Detect JS support
+  function messageClose() { //close on click
     document.getElementById("cookie-message").style.display = "none";
-};
+  };
 </script>
-
-
-    <header class="header header_light">
-        <a class="brand-logo" href="index.html"><img src="images/SWH_logo.png" alt="Shorewood Homes"/></a>
-    </header>
-
-    <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+  <!--Header-->
+  <header class="header header_light">
+    <a class="brand-logo" href="index.html"><img src="images/SWH_logo.png" alt="Shorewood Homes"/></a>
+  </header>
+  <!--Hamburger-->
+  <div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <!--Navbar-->
+  <nav class="navbar navbar-toggle-js">
+    <div class="navbar-inner">
+      <ul>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="inspiration.html">Inspiration</a></li>
+        <li><a href="bespoke.html">Bespoke</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
     </div>
-
-    
-    <nav class="navbar navbar-toggle-js">
-        <div class="navbar-inner">
-            <ul>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="inspiration.html">Inspiration</a></li>
-                <li><a href="bespoke.html">Bespoke</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <main class="main">
-
-        <section class="scrollify_section-js" data-section-name="leaflands">
-            <!-- Banner -->
-            <div class="banner">
-                <div class="banner-bg" style="background-image:url('images/Shorewood-Homes_Redthorne-House_HQ-50.jpg')"></div>
-            </div>
-        </section>
-
-        <section class="scrollify_section-js" data-section-name="downside">
-            <!-- Banner -->
-            <div class="banner">
-                <div class="banner-bg" style="background-image:url('images/Redthorne-House_Outside_Edit.jpg')"></div>
-            </div>
-        </section>
-
-        <section class="scrollify_section-js" data-section-name="redthorne_house">
-            <!-- Banner -->
-            <div class="banner">
-                <div class="banner-bg" style="background-image:url('images/Shorewood-Homes_Redthorne-House_HQ-125.jpg')"></div>
-            </div>
-        </section>
-
-        <section class="scrollify_section-js" data-section-name="springvale">
-            <!-- Banner -->
-            <div class="banner">
-                <div class="banner-bg" style="background-image:url('images/MCIM02478373_gaggenau-stockholm-showroom.jpg')"></div>
-            </div>
-        </section>
-
-
-    </main>
-
-    <footer class="footer">
-        <div class="left">
-            <ul class="links">
-                <li><a href="mailto:info@shorewoodhomes.co.uk">info@shorewoodhomes.co.uk</a></li>
-                <li><a href="tel:01962678528">01962 678528</a></li>
-            </ul>
-        </div>
-        <div class="right">
-            <ul class="links">
-                <li><a href="#">Terms</a></li>
-                <li><a href="#">Privacy</a></li>
-                <li class="copyright"><span>© Shorewood Homes 2018</span></li>
-            </ul>
-        </div>
-    </footer>
-<script src="js/alljs.js"></script>
+  </nav>
+  <!--Main-->
+  <main class="main">
+    <section class="scrollify_section-js" data-section-name="leaflands">
+      <!-- Banner -->
+      <div class="banner">
+        <div class="banner-bg" style="background-image:url('images/Shorewood-Homes_Redthorne-House_HQ-50.jpg')"></div>
+      </div>
+    </section>
+    <section class="scrollify_section-js" data-section-name="downside">
+      <!-- Banner -->
+      <div class="banner">
+        <div class="banner-bg" style="background-image:url('images/Redthorne-House_Outside_Edit.jpg')"></div>
+      </div>
+    </section>
+    <section class="scrollify_section-js" data-section-name="redthorne_house">
+      <!-- Banner -->
+      <div class="banner">
+        <div class="banner-bg" style="background-image:url('images/Shorewood-Homes_Redthorne-House_HQ-125.jpg')"></div>
+      </div>
+    </section>
+    <section class="scrollify_section-js" data-section-name="springvale">
+      <!-- Banner -->
+      <div class="banner">
+        <div class="banner-bg" style="background-image:url('images/MCIM02478373_gaggenau-stockholm-showroom.jpg')"></div>
+      </div>
+    </section>
+  </main>
+  <!--Footer-->
+  <footer class="footer">
+    <div class="left">
+      <ul class="links">
+        <li><a href="mailto:info@shorewoodhomes.co.uk">info@shorewoodhomes.co.uk</a></li>
+        <li><a href="tel:01962678528">01962 678528</a></li>
+      </ul>
+    </div>
+    <div class="right">
+      <ul class="links">
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li class="copyright"><span>© Shorewood Homes 2018</span></li>
+      </ul>
+    </div>
+  </footer>
+  <script src="js/alljs.js"></script>
 <script>
-    //Scrollyfy update options and add Pagination 
-    $(function () {
-        $.scrollify({
-            touchScroll: true,
-            scrollbars: false,
-            updateHash: false,
-            interstitialSection: "",
-            before: function (i, panels) {
-                var ref = panels[i].attr("data-section-name");
-                $(".pagination .active").removeClass("active");
-                $(".pagination").find("a[href=\"#" + ref + "\"]").addClass("active");
-            },
-            afterRender: function () {
-                var pagination = "<ul class=\"pagination\">";
-                var activeClass = "";
-
-                $(".scrollify_section-js").each(function (i) {
-                    activeClass = "";
-                    if (i === $.scrollify.current().index()) {
-                        activeClass = "active";
-                    }
-
-                    pagination += "<li><a class=\"" + activeClass + "\" href=\"#" + $(this)
-                        .attr("data-section-name") + "\"><span class=\"hover-text\">" + $(
-                            this).attr("data-section-name").replace('_', ' ') +
-                        "</span></a></li>";
-                });
-
-                pagination += "</ul>";
-
-                $(".main").append(pagination);
-
-                $(".pagination a").on('click', function (event) {
-                    if (this.hash !== "") {
-                        event.preventDefault();
-                        var hash = this.hash;
-                        $.scrollify.move(hash);
-                    }
-                });
-            }
+  //Scrollyfy update options and add Pagination 
+  $(function () {
+    $.scrollify({
+      touchScroll: true,
+      scrollbars: false,
+      updateHash: false,
+      setHeights: false,
+      interstitialSection: "",
+      before: function (i, panels) {
+        var ref = panels[i].attr("data-section-name");
+        $(".pagination .active").removeClass("active");
+        $(".pagination").find("a[href=\"#" + ref + "\"]").addClass("active");
+      },
+      afterRender: function () {
+        var pagination = "<ul class=\"pagination\">";
+        var activeClass = "";
+        $(".scrollify_section-js").each(function (i) {
+          activeClass = "";
+          if (i === $.scrollify.current().index()) {
+            activeClass = "active";
+          }
+          pagination += "<li><a class=\"" + activeClass + "\"href=\"#" + $(this).attr("data-section-name") + "\"><span class=\"hover-text\">" + $(this).attr("data-section-name").replace('_', ' ') + "</span></a></li>";
         });
-
+        pagination += "</ul>";
+        $(".main").append(pagination);
+        $(".pagination a").on('click', function (event) {
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            $.scrollify.move(hash);
+          }
+        });
+      },
+      afterResize: function () {
+        //reset height when browser bar hide in touch device
+        if (getViewportWidth() < 1100) {
+          setTimeout(function () {
+            $('.scrollify_section-js').css({ 'height': window.innerHeight });
+            $.scrollify.update();
+          }, 500);
+          setTimeout(function () {
+            $.scrollify.move('#' + $.scrollify.current().attr('data-section-name'));
+          }, 1000);
+        }
+      }
     });
+  });
 </script>
 </body>
 </html>
