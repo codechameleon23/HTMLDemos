@@ -47,24 +47,23 @@ function getViewportWidth() {
   }
 }
 
-function openPopup(popupId){
-  alert('open');
-  $(popupId).popup('show');
-}
+// function openPopup(popupId){
+//   alert('open');
+//   $(popupId).popup('show');
+// }
 
-$(document).ready(function() {
+$(document).ready(function(){
   $(".popup").popup({
     // Initialize the Popup
     background: false,
     opacity: 0,
-    blur: false,
     scrolllock: false,
     beforeopen: function() {
-      $.scrollify.disable();
+      getViewportWidth() > 700 ? $.scrollify.disable() : null;
     },
     onclose: function() {
       setTimeout(function() {
-        $.scrollify.enable();
+        getViewportWidth() > 700 ? $.scrollify.enable() : null;
       }, 700);
     }
   });
