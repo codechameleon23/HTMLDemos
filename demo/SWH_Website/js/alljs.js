@@ -52,17 +52,6 @@ $(document).ready(function(){
   $(".popup").popup({
     // Initialize the Popup
     background: false,
-    // opacity: 0,
-    // scrolllock: false,
-    // blur: false,
-    // beforeopen: function() {
-    //   getViewportWidth() > 700 ? $.scrollify.disable() : null;
-    // },
-    // onclose: function() {
-    //   setTimeout(function() {
-    //     getViewportWidth() > 700 ? $.scrollify.enable() : null;
-    //   }, 700);
-    // }
   });
 
   $(".hamburger").on("click", function() {
