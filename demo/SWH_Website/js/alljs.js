@@ -48,11 +48,6 @@ function getViewportWidth() {
   }
 }
 
-// function openPopup(popupId){
-//   alert('open');
-//   $(popupId).popup('show');
-// }
-
 $(document).ready(function(){
   $(".popup").popup({
     // Initialize the Popup
@@ -195,7 +190,7 @@ $(document).ready(function(){
     touchScroll: getViewportWidth() > 700
   });
 
-  $("a").on("click", function(event) {
+  $(".goto").on("click", function(event) {
     //Scroll to section
     if (this.hash !== "") {
       event.preventDefault();
