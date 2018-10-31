@@ -51,7 +51,7 @@ function getViewportWidth() {
 $(document).ready(function(){
   $(".popup").popup({
     // Initialize the Popup
-    // background: false,
+    background: false,
     // opacity: 0,
     // scrolllock: false,
     // blur: false,
