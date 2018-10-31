@@ -47,6 +47,11 @@ function getViewportWidth() {
   }
 }
 
+function openPopup(popupId){
+  alert('open');
+  $(popupId).popup('show');
+}
+
 $(document).ready(function() {
   $(".popup").popup({
     // Initialize the Popup
