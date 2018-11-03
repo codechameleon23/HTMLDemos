@@ -11,7 +11,12 @@
 </head>
 <body class="header_abs">
   <!-- page loader -->
-  <div class="pageLoader"></div>
+  <div class="pageLoader">
+		<div class="loader">
+			<div><img src="images/SWH_logo.png"/></div>
+			<div class="effect-overlay"></div>
+		</div>
+	</div>
   <!-- Cookie message-->
   <div id="cookie-message" data-cookie-expiry="60">
     <div class="grid has-gutter has-list_thin center_a">
@@ -105,15 +110,17 @@
         </div>
       </div>
       <div class="section_navigation">
-        <div class="action_group">
-          <a href="#aboutUs" class="goto action_button button">About</a>
-          <a href="#aboutUs" class="goto action_button button"><img class="button_icon" src="images/arrow_down.png" alt=""/></a>
-        </div>
+        <a href="#aboutUs" class="action_group goto">
+          <span class="action_button button">About</span>
+          <span class="action_button button"><img class="button_icon" src="images/arrow_down.png" alt=""/></span>
+        </a>
         <div class="action_group banner-controls">
-          <a href="javascript:void(0);" class="action_button button banner_carousel-js--next"><img class="button_icon"
-              src="images/arrow_right.png" alt=""/></a>
-          <a href="javascript:void(0);" class="action_button button banner_carousel-js--prev"><img class="button_icon"
-              src="images/arrow_left.png" alt=""/></a>
+          <button class="action_button button banner_carousel-js--next">
+            <img class="button_icon" src="images/arrow_right.png" alt=""/>
+          </button>
+          <button href="javascript:void(0);" class="action_button button banner_carousel-js--prev">
+            <img class="button_icon" src="images/arrow_left.png" alt=""/>
+          </button>
         </div>
       </div>
     </section>
