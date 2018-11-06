@@ -12,11 +12,10 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,600,700" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<!-- signup-is-open -->
-<body class="">
-  
+
+<body class="signup-is-open">
   <!-- vertical Sign up form -->
-  <!-- <div class="signup-notification stripe bg-secondary_light">
+  <div class="signup-notification stripe bg-secondary_light">
     <div class="container">
       <div class="grid has-gutter_thin has-list">
         <div class="col col-5 col-md-12">
@@ -35,8 +34,7 @@
         </div>
       </div>
     </div>
-  </div> -->
-
+  </div>
   <!-- Header Absoluet -->
   <header class="header is-absolute">
     <div class="hamburger navbar-toggle-js">
@@ -56,21 +54,16 @@
         <ul class="contacts list-with-separator">
           <li><a href="tel:4401722743662">+44 (0)1722 743 662</a></li>
           <li><a class="text-thin" href="mailto:">Email</a></li>
-          <li class="">
-              <div class="field select as_link">
-                <select>
-                  <option value="-1">Language</option>
-                  <option value="0">English</option>
-                  <option value="1">German</option>
-                  <option value="2">French</option>
-                </select>
-              </div>
-            </li>
+          <li class="has-dropdown rtl">
+            <a href="#">Language</a>
+            <ul class="dropdown">
+              <li><a href="#">English</a></li>
+              <li><a href="#">German</a></li>
+              <li><a href="#">French</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
-      <a href="index.html" class="brand-logo brand-logo_sm">
-        <img src="images/alpine-logo_higher.jpg" alt="Alpine Property Investments" />
-      </a>
       <nav class="navbar navbar-toggle-js">
         <a href="index.html" class="brand-logo">
           <img src="images/alpine-logo_higher.jpg" alt="Alpine Property Investments" />
@@ -104,108 +97,134 @@
   </header>
   <!-- Main -->
   <main class="main">
-    
-      <section class="banner hero bg-primary bg-change-animation">
-          
-        <div class="banner-bg bg-secondary" style="background-image:url('images/iStock-472317588_noclouds.jpg')"></div>
-        <div class="banner-bg bg-secondary" style="background-image:url('images/iStock-179037748_EXTENDED_SKY2.jpg')"></div>
-
-          <div class="banner-body m_t-auto section-wrap">
-            <div class="container">
-              <div class="grid has-gutter_thin has-list">
-                <div class="col col-8 col-md-7 col-sm-6 col-xxs-12">
-                  <div class="hero-text">
-                    <h2 class="display_1">Who we are</h2>
-                    <h4>Alpine Properties in France, Switzerland and Canada.</h4>
-                  </div>
-                </div>
-                <div class="col col-4 col-md-5 col-sm-6 col-xxs-12">
-                  <div class="box bg-secondary has-opacity">
-                    <form class="form">
-                      <h4 class=""><b>Your Property Search Starts Here:</b></h4>
-                      <div class="grid has-gutter_skinny has-list">
-                        <div class="col col-12 field select">
-                          <select>
-                            <option value="-1">All countries</option>
-                            <option value="">Lorem, ipsum dolor.</option>
-                            <option value="">Lorem, ipsum dolor.</option>
-                            <option value="">Lorem, ipsum dolor.</option>
-                            <option value="">Lorem, ipsum dolor.</option>
-                          </select>
-                        </div>
-                        <div class="col col-12 field select">
-                          <select>
-                            <option value="-1">Select resort</option>
-                            <option value="">Lorem, ipsum dolor.</option>
-                            <option value="">Lorem, ipsum dolor.</option>
-                            <option value="">Lorem, ipsum dolor.</option>
-                            <option value="">Lorem, ipsum dolor.</option>
-                          </select>
-                        </div>
-                        <div class="col col-12 field select">
-                          <select>
-                            <option value="-1">Pound sterling</option>
-                            <option value="">Lorem, ipsum dolor.</option>
-                            <option value="">Lorem, ipsum dolor.</option>
-                            <option value="">Lorem, ipsum dolor.</option>
-                            <option value="">Lorem, ipsum dolor.</option>
-                          </select>
-                        </div>
-                        <div class="col col-12 field select">
-                          <select>
-                            <option value="-1">All property type</option>
-                            <option value="">Lorem, ipsum dolor.</option>
-                            <option value="">Lorem, ipsum dolor.</option>
-                            <option value="">Lorem, ipsum dolor.</option>
-                            <option value="">Lorem, ipsum dolor.</option>
-                          </select>
-                        </div>
-                        <div class="col col-12">
-                          <div class="grid has-gutter_skinny has-list">
-                            <div class="col col-6 col-xxs-12 field select">
-                              <select>
-                                <option value="-1">Price Min</option>
-                                <option value="">Lorem, ipsum dolor.</option>
-                                <option value="">Lorem, ipsum dolor.</option>
-                                <option value="">Lorem, ipsum dolor.</option>
-                                <option value="">Lorem, ipsum dolor.</option>
-                              </select>
-                            </div>
-                            <div class="col col-6 col-xxs-12 field select">
-                              <select>
-                                <option value="-1">Price Max</option>
-                                <option value="">Lorem, ipsum dolor.</option>
-                                <option value="">Lorem, ipsum dolor.</option>
-                                <option value="">Lorem, ipsum dolor.</option>
-                                <option value="">Lorem, ipsum dolor.</option>
-                              </select>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col col-12 field select">
-                          <select>
-                            <option value="-1">All new build and re-sales</option>
-                            <option value="">Lorem, ipsum dolor.</option>
-                            <option value="">Lorem, ipsum dolor.</option>
-                            <option value="">Lorem, ipsum dolor.</option>
-                            <option value="">Lorem, ipsum dolor.</option>
-                          </select>
-                        </div>
-                        <div class="col col-12 field">
-                          <div class="grid has-gutter_thin has-list">
-                            <div class="col col-auto">Property Ref</div>
-                            <div class="col field"><input type="text" placeholder="" /></div>
-                          </div>
-                        </div>
-                        <div class="col col-12 field"><button class="button">Search properties for sale</button></div>
-                      </div>
-                    </form>
+    <!-- Hero banner Home -->
+    <section class="hero-section">
+      <div class="js-banner-carousel banner-carousel owl-carousel owl-theme">
+        <div class="item">
+          <div class="banner hero bg-primary bg-tc">
+            <div class="banner-bg" style="background-image:url('images/iStock-179037748_EXTENDED_SKY2.jpg')"></div>
+            <div class="banner-body section-wrap">
+              <div class="container m_t-auto m_b-auto">
+                <div class="grid has-gutter_thin has-list">
+                  <div class="col col-8 col-xs-12">
+                    <div class="hero-text">
+                      <h2 class="display_1">Invest in Lifestyle</h2>
+                      <h4>Alpine Properties in France, Switzerland and Canada.</h4>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+        <div class="item">
+          <div class="banner hero bg-primary bg-tc">
+            <div class="banner-bg" style="background-image:url('images/iStock-472317588_noclouds.jpg')"></div>
+            <div class="banner-body section-wrap">
+              <div class="container m_b-auto">
+                <div class="grid has-gutter_thin has-list">
+                  <div class="col col-8 col-xs-12">
+                    <div class="hero-text">
+                      <h2 class="display_1">Invest in Lifestyle</h2>
+                      <h4>Alpine Properties in France, Switzerland and Canada.</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-banner-overlay section-wrap">
+        <div class="container search-form-box m_t-auto">
+          <div class="col col-4 col-offset-8 col-xs-12 col-xs-offset-0 search-form-box">
+            <div class="box bg-secondary has-opacity">
+              <!-- Search Form -->
+              <form class="form">
+                <h4 class="text-default"><b>Your Property Search Starts Here:</b></h4>
+                <div class="grid has-gutter_skinny has-list">
+                  <div class="col col-12 field select">
+                    <select>
+                      <option value="-1">All countries</option>
+                      <option value="">Lorem, ipsum dolor.</option>
+                      <option value="">Lorem, ipsum dolor.</option>
+                      <option value="">Lorem, ipsum dolor.</option>
+                      <option value="">Lorem, ipsum dolor.</option>
+                    </select>
+                  </div>
+                  <div class="col col-12 field select">
+                    <select>
+                      <option value="-1">Select resort</option>
+                      <option value="">Lorem, ipsum dolor.</option>
+                      <option value="">Lorem, ipsum dolor.</option>
+                      <option value="">Lorem, ipsum dolor.</option>
+                      <option value="">Lorem, ipsum dolor.</option>
+                    </select>
+                  </div>
+                  <div class="col col-12 field select">
+                    <select>
+                      <option value="-1">Pound sterling</option>
+                      <option value="">Lorem, ipsum dolor.</option>
+                      <option value="">Lorem, ipsum dolor.</option>
+                      <option value="">Lorem, ipsum dolor.</option>
+                      <option value="">Lorem, ipsum dolor.</option>
+                    </select>
+                  </div>
+                  <div class="col col-12 field select">
+                    <select>
+                      <option value="-1">All property type</option>
+                      <option value="">Lorem, ipsum dolor.</option>
+                      <option value="">Lorem, ipsum dolor.</option>
+                      <option value="">Lorem, ipsum dolor.</option>
+                      <option value="">Lorem, ipsum dolor.</option>
+                    </select>
+                  </div>
+                  <div class="col col-12">
+                    <div class="grid has-gutter_skinny has-list">
+                      <div class="col col-6 col-xxs-12 field select">
+                        <select>
+                          <option value="-1">Price Min</option>
+                          <option value="">Lorem, ipsum dolor.</option>
+                          <option value="">Lorem, ipsum dolor.</option>
+                          <option value="">Lorem, ipsum dolor.</option>
+                          <option value="">Lorem, ipsum dolor.</option>
+                        </select>
+                      </div>
+                      <div class="col col-6 col-xxs-12 field select">
+                        <select>
+                          <option value="-1">Price Max</option>
+                          <option value="">Lorem, ipsum dolor.</option>
+                          <option value="">Lorem, ipsum dolor.</option>
+                          <option value="">Lorem, ipsum dolor.</option>
+                          <option value="">Lorem, ipsum dolor.</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-12 field select">
+                    <select>
+                      <option value="-1">All new build and re-sales</option>
+                      <option value="">Lorem, ipsum dolor.</option>
+                      <option value="">Lorem, ipsum dolor.</option>
+                      <option value="">Lorem, ipsum dolor.</option>
+                      <option value="">Lorem, ipsum dolor.</option>
+                    </select>
+                  </div>
+                  <div class="col col-12 field">
+                    <div class="grid has-gutter_thin has-list">
+                      <div class="col col-auto">Property Ref</div>
+                      <div class="col field"><input type="text" placeholder="" /></div>
+                    </div>
+                  </div>
+                  <div class="col col-12 field"><button class="button">Search properties for sale</button></div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="section section-wrap filter_parent">
       <div class="container">
@@ -531,9 +550,9 @@
     </section>
 
     <section class="section">
-      <div class="grid">
+      <div class="grid has-list">
         <div class="col col-4 col-xs-12">
-          <figure class="image full-grow aspect-ratio_16x9">
+          <figure class="image full-grow aspect-ratio_16x9_xs">
             <div class="image-wrap" style="background-image: url('images/iStock-490686800.jpg');"></div>
           </figure>
         </div>
