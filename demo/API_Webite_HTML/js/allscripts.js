@@ -267,7 +267,8 @@ if ($('.popup-image_video').length){//if element exists
 
 });
 
-
+//Double tap if has over
+$(".navbar").doubleTapToGo();
 
 function filtered(fp){
   // console.log(fp+'//'+ fp.find('.filter_tab.is-active').length);
