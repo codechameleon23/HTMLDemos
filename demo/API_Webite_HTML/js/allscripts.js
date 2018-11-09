@@ -92,6 +92,15 @@ $(document).ready(function() {
     }
   });
 
+  $(".has-accordion li:first-child").on("click tab", function(){
+    if($(this).closest("ul").hasClass('is-open')){
+      $(this).closest("ul").removeClass('is-open');
+    }else{
+      $(this).closest("ul").addClass('is-open');
+    }
+  })
+
+
   var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
   if ($(".js-banner-carousel").length) {
     //if element exists
@@ -268,7 +277,7 @@ if ($('.popup-image_video').length){//if element exists
 });
 
 //Double tap if has over
-$(".navbar").doubleTapToGo();
+$(".navbar, .has-accordion li:first-child").doubleTapToGo();
 
 function filtered(fp){
   // console.log(fp+'//'+ fp.find('.filter_tab.is-active').length);
