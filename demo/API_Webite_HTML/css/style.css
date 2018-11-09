@@ -889,6 +889,13 @@ body.sign-up_notification_show .signup-notification { display: block; -webkit-an
 
 @media all and (min-width: 900px) { .footer .grid { -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; } }
 
+@media all and (max-width: 640px) { .footer .brand-logo { width: auto; }
+  .footer .col { -webkit-box-ordinal-group: 3; -ms-flex-order: 2; order: 2; }
+  .footer .col.logo, .footer .col.contacts { -webkit-box-ordinal-group: 1; -ms-flex-order: 0; order: 0; }
+  .footer .col.address { -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; }
+  .footer .has-accordion li:not(:first-child) { display: none; -webkit-animation: fadeOut .4s ease-in; animation: fadeOut .4s ease-in; }
+  .footer .has-accordion.is-open li { display: block; -webkit-animation: fadeIn .4s ease-in; animation: fadeIn .4s ease-in; } }
+
 /* Owl Carousel */
 /*Owl Carousel v2.2.1*/
 .owl-carousel, .owl-carousel .owl-item { -webkit-tap-highlight-color: transparent; position: relative; }
