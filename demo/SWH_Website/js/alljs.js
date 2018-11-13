@@ -199,4 +199,46 @@ $(document).ready(function(){
 
   //Double tap if has over
   $(".figure").doubleTapToGo();
-});
+
+  //Content trim
+  if(getViewportWidth() > 701){
+    $(".team_list .trimed").each(function(){
+      trimIt($(this));
+    });
+
+    var hov = 1;
+    var tileObj;
+    $(".tile").hover(function(){
+      $(".tile").removeClass('rollover_expanded');
+      clearTimeout();
+      hov = 1;
+      tileObj = $(this);
+      console.log('in');
+    }, function() {
+      console.log('out');
+      hov = 0;
+      setTimeout(function(){
+          if(hov == 0){
+            $(".tile").removeClass('rollover_expanded');
+          }
+      }, 0);
+    });  
+  }
+
+  });
+
+  var maxLength = 200;
+  function trimIt(elm){
+    var myStr = elm.text();
+    if($.trim(myStr).length > maxLength){
+      var newStr = myStr.substring(0, maxLength);
+      var removedStr = myStr.substring(maxLength, $.trim(myStr).length);
+      elm.empty().html(newStr);
+      elm.append('<a href="javascript:void(0);" class="read-more" onclick="expand(this);"> ...<span>read more</span></a>');
+      elm.append('<span class="more-text">' + removedStr + '</span>');
+    }
+  }
+
+  function expand(obj){
+    $(obj).closest('.tile').addClass('rollover_expanded');
+  }
