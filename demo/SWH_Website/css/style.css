@@ -810,13 +810,13 @@ img { display: inline-block; max-width: 100%; vertical-align: top; }
 
 .figure-rollover .caption-wrap { -webkit-animation: fadeOut .5s 0s ease-in-out both; animation: fadeOut .5s 0s ease-in-out both; }
 
-.figure:hover .figure-rollover { -webkit-animation: slideInLeft .5s 0s ease-in-out both; animation: slideInLeft .5s 0s ease-in-out both; }
-
-.figure:hover .figure-rollover .caption-wrap { -webkit-animation: fadeIn .5s .15s ease-in-out both; animation: fadeIn .5s .15s ease-in-out both; }
-
 .figure .caption-wrap { height: 100%; width: 100%; padding: 3em; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -ms-flex-line-pack: center; align-content: center; text-align: center; }
 
 .figure .caption-title { text-transform: uppercase; letter-spacing: .25rem; }
+
+.is-hovered .figure-rollover { -webkit-animation: slideInLeft .5s 0s ease-in-out both; animation: slideInLeft .5s 0s ease-in-out both; }
+
+.is-hovered .figure-rollover .caption-wrap { -webkit-animation: fadeIn .5s .15s ease-in-out both; animation: fadeIn .5s .15s ease-in-out both; }
 
 /*owl_carousel*/
 .owl-carousel, .owl-carousel .owl-item { -webkit-tap-highlight-color: transparent; position: relative; }
@@ -1064,10 +1064,6 @@ table_footer, .table_footer { margin-top: 3.4rem; margin-bottom: 0; }
 .ourTeam-popup .slide_item .tile .read-more { display: inline; text-transform: capitalize; }
 
 .ourTeam-popup .slide_item .tile .more-text { display: none; }
-
-.ourTeam-popup .slide_item .tile:hover .figure .figure-rollover { -webkit-animation: slideInLeft .5s 0s ease-in-out both; animation: slideInLeft .5s 0s ease-in-out both; }
-
-.ourTeam-popup .slide_item .tile:hover .figure .figure-rollover .caption-wrap { -webkit-animation: fadeIn .5s .15s ease-in-out both; animation: fadeIn .5s .15s ease-in-out both; }
 
 .ourTeam-popup .slide_item .tile.rollover_expanded { z-index: 99 !important; }
 

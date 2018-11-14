@@ -198,32 +198,32 @@ $(document).ready(function(){
   });
 
   //Double tap if has over
-  $(".figure").doubleTapToGo();
+  // $(".figure").doubleTapToGo();
 
-  //Content trim
-  if(getViewportWidth() > 701){
-    $(".team_list .trimed").each(function(){
-      trimIt($(this));
-    });
+    //Content trim
+    if(getViewportWidth() > 701){
+      $(".team_list .trimed").each(function(){
+        trimIt($(this));
+      });
 
-    var hov = 1;
-    var tileObj;
-    $(".tile").hover(function(){
-      $(".tile").removeClass('rollover_expanded');
-      clearTimeout();
-      hov = 1;
-      tileObj = $(this);
-      console.log('in');
-    }, function() {
-      console.log('out');
-      hov = 0;
-      setTimeout(function(){
-          if(hov == 0){
-            $(".tile").removeClass('rollover_expanded');
-          }
-      }, 0);
-    });  
-  }
+      // var hov = 1;
+      // var tileObj;
+      // $(".tile").hover(function(){
+      //   $(".tile").removeClass('rollover_expanded');
+      //   clearTimeout();
+      //   hov = 1;
+      //   tileObj = $(this);
+      //   console.log('in');
+      // }, function() {
+      //   console.log('out');
+      //   hov = 0;
+      //   setTimeout(function(){
+      //       if(hov == 0){
+      //         $(".tile").removeClass('rollover_expanded');
+      //       }
+      //   }, 0);
+      // });  
+    }
 
   });
 
@@ -242,3 +242,9 @@ $(document).ready(function(){
   function expand(obj){
     $(obj).closest('.tile').addClass('rollover_expanded');
   }
+
+  $('.has-hover').mouseenter(function(){
+    $(this).addClass('is-hovered');
+  }).mouseleave(function(){
+    $(this).removeClass('is-hovered rollover_expanded');
+  });
