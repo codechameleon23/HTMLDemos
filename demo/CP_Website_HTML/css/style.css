@@ -207,7 +207,7 @@ hr.is-primary { border-color: #9fcf67; }
 
 .button, .button span, button, button span, input[type="button"], input[type="button"] span, input[type="reset"], input[type="reset"] span, input[type="submit"], input[type="submit"] span { font-size: 1.4rem; line-height: 1.7rem; font-weight: 300; letter-spacing: 0.1rem; padding: 1.16rem 2rem; text-transform: uppercase; }
 
-.button:active, .button:hover, button:active, button:hover, input[type="button"]:active, input[type="button"]:hover, input[type="reset"]:active, input[type="reset"]:hover, input[type="submit"]:active, input[type="submit"]:hover { background-color: #9fcf67; color: #ffffff; }
+.button.is-active, .button:active, .button:hover, button.is-active, button:active, button:hover, input[type="button"].is-active, input[type="button"]:active, input[type="button"]:hover, input[type="reset"].is-active, input[type="reset"]:active, input[type="reset"]:hover, input[type="submit"].is-active, input[type="submit"]:active, input[type="submit"]:hover { background-color: #9fcf67; color: #ffffff; }
 
 .button.is-light, button.is-light, input[type="button"].is-light, input[type="reset"].is-light, input[type="submit"].is-light { border-color: #ffffff; }
 
@@ -619,6 +619,12 @@ a.figure:hover .image-holder, .figure.has-hover-effect:hover .image-holder, .fig
 .toggle-sign:before { content: ""; position: absolute; top: calc(50% - 1.6rem/2); left: calc(50% - 0.15rem); width: 0.3rem; height: 1.6rem; background-color: #9fcf67; -webkit-transition: all .5s 0s ease-in-out; -o-transition: all .5s 0s ease-in-out; transition: all .5s 0s ease-in-out; }
 
 .toggle-sign:after { content: ""; position: absolute; top: calc(50% - 0.15rem); left: calc(50% - 1.6rem/2); width: 1.6rem; height: 0.3rem; background-color: #9fcf67; }
+
+@media all and (max-width: 700px) { .has-list_reg > .col.accordion_row, .has-list.has-gutter > .col.accordion_row { margin-top: 1.2rem; } }
+
+@media all and (min-width: 700px) { .accordion-toggle_wrapper.via_js .accordion { background-color: transparent; }
+  .accordion-toggle_wrapper.via_js .accordion.box { padding: 0; }
+  .accordion-toggle_wrapper.via_js .accordion-label { display: none; } }
 
 .popup_background { opacity: .75 !important; }
 
@@ -1061,6 +1067,20 @@ a.figure:hover .image-holder, .figure.has-hover-effect:hover .image-holder, .fig
 .tile { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
 
 .tile:not(.is-flex_col) { padding: 0.6rem; }
+
+.filter_parent .filter_obj { display: none; }
+
+.filter_parent .filtered { display: block; -webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both; animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
+
+.filter_parent .filtered.col { display: -webkit-box; display: -ms-flexbox; display: flex; }
+
+.toggle_tabs, .filter_tabs { padding-bottom: 2rem; border-bottom: 0.2rem solid #9fcf67; }
+
+.accordion_toggle_tab, .filter_tab { cursor: pointer; }
+
+.accordion_toggle_tab.is-active .button, .filter_tab.is-active .button { background-color: #9fcf67; color: #ffffff; }
+
+@media all and (min-width: 900px) { .accordion_toggle_tab.is-active .button, .filter_tab.is-active .button { padding: 2.16rem 2rem 2.16rem 2rem; margin-bottom: -2rem; } }
 
 .text-default { color: #3e3f42; }
 

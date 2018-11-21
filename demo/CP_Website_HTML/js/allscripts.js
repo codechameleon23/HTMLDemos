@@ -81,6 +81,21 @@ $(document).ready(function() {
     $(this).removeClass('is-hovered rollover_expanded');
   });
 
+  if($('.accordion-toggle_wrapper').length && getViewportWidth() > 700 ){
+    $filter_parent = $('.accordion-toggle_wrapper');
+    $filter_parent.addClass('via_js').find('.accordion_row').slice(1).hide();
+    $('.accordion_toggle_tab').on('click', function(){
+      if(!$(this).hasClass('is-active')){
+        $current = $(this).attr('data-filterby');
+        $(this).addClass('is-active').siblings().removeClass('is-active');
+        $filter_parent.addClass($current).find('.accordian-toggle.'+$current).trigger('click').closest('.accordion_row').show().siblings('.accordion_row').hide();
+      }
+      
+    });
+  }else{
+    $('.toggle_tabs').hide();
+  }
+
   /*Accordion toggle*/
   $(".accordian-toggle").on('click tap',  function(){
     if($(this).hasClass("is-open")){
@@ -145,60 +160,21 @@ $(document).ready(function() {
 
   // Initialize the Popup
   $(".popup").popup({});
-  
 
-  // /*Tabs*/
-  // if ($('.tabs-wrapper').length){//if element exists
-  //   $('.tab').on('click', function(){
-
-  //       var obj = $(this);
-
-  //       if(obj.closest('.tab-content_group').length){
-  //           this_eq =  $(this).closest('.tab-content_group').index();
-  //       }else{
-  //           this_eq =  $(this).index();
-  //       }
-
-  //       if(getViewportWidth() > 767){
-  //           activateTab();
-  //       }else{
-  //           if(obj.closest('.tab-content_group').hasClass('active')){
-  //               obj.closest('.tab-parent-container').find('.tab-content_group, .tabs .tab').removeClass('active');
-  //           }else{
-  //               activateTab();
-  //           }
-  //       }
-
-  //       function activateTab(){
-  //           obj.closest('.tab-parent-container').find('.tab-content_group, .tabs .tab').removeClass('active');
-  //           obj.closest('.tab-parent-container').find('.tabs .tab').eq(this_eq).addClass('active');
-  //           obj.closest('.tab-parent-container').find('.tab-content_group').eq(this_eq).addClass('active');
-  //     }
-
-  //   });
-
-  //   $('.tab-button').on('click', function(){
-
-  //       this_eq =  $(this).index();
-  //       $(this).addClass('active').siblings('.tab-button').removeClass('active');
-  //       $('.tab-containers > .tab-content').eq(this_eq).addClass('active').siblings('.tab-content').removeClass('active');
-  //   });
-  // };
-
-  // /*Filter*/
-  // if($('.filter_parent').length){//if element exists
-  //   $('.filter_tab').on('click', function(){
-  //       $filter_parent = $(this).closest('.filter_parent');
-  //       //$filterBy = $(this).attr('data-filterby');
-  //       if($(this).hasClass('is-active')){
-  //           $(this).removeClass('is-active');
-  //           filtered($filter_parent);
-  //       }else{
-  //           $(this).addClass('is-active');
-  //           filtered($filter_parent);
-  //       }
-  //   });
-  // }
+  /*Filter*/
+  if($('.filter_parent').length){//if element exists
+    $('.filter_tab').on('click', function(){
+        $filter_parent = $(this).closest('.filter_parent');
+        //$filterBy = $(this).attr('data-filterby');
+        if($(this).hasClass('is-active')){
+            $(this).removeClass('is-active');
+            filtered($filter_parent);
+        }else{
+            $(this).addClass('is-active');
+            filtered($filter_parent);
+        }
+    });
+  };
 
   if ($('#map-canvas').length) { //if element exists
     //create empty LatLngBounds object
