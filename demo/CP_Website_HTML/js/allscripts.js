@@ -64,6 +64,34 @@ function filtered(fp){
   } 
 }
 
+// Inview js
+var $animation_elements = $('.in-view-animation');
+var $window = $(window);
+
+function check_if_in_view() {
+  var window_height = $window.height();
+  var window_top_position = $window.scrollTop();
+  var window_bottom_position = (window_top_position + window_height);
+ 
+  $.each($animation_elements, function() {
+    var $element = $(this);
+    var element_height = $element.outerHeight();
+    var element_top_position = $element.offset().top;
+    var element_bottom_position = (element_top_position + element_height);
+ 
+    //check to see if this current container is within viewport
+    if ((element_bottom_position >= window_top_position) &&
+        (element_top_position <= window_bottom_position)) {
+          $element.addClass('in-view add-animation');
+        } else {
+          $element.removeClass('in-view');
+        }
+  });
+}
+$window.on('scroll resize', check_if_in_view);
+$window.trigger('scroll');
+
+
 $(document).ready(function() {
 
   //Navbar toggle
@@ -135,9 +163,9 @@ $(document).ready(function() {
       animateIn: isIE11 ? "" : "fade-in",
       animateOut: isIE11 ? "" : "fade-out",
       smartSpeed: 500,
-      // autoplay: true,
-      // autoplayTimeout: 10000
-      // autoplayHoverPause: true
+      autoplay: true,
+      autoplayTimeout: 10000,
+      autoplayHoverPause: true
     });
   }
   
@@ -167,9 +195,11 @@ $(document).ready(function() {
         $filter_parent = $(this).closest('.filter_parent');
         //$filterBy = $(this).attr('data-filterby');
         if($(this).hasClass('is-active')){
+            $('.filter_tab').removeClass('is-active');//single select at a time
             $(this).removeClass('is-active');
             filtered($filter_parent);
         }else{
+            $('.filter_tab').removeClass('is-active');//single select at a time 
             $(this).addClass('is-active');
             filtered($filter_parent);
         }
@@ -196,6 +226,7 @@ $(document).ready(function() {
         map: map,
         icon: markerIcon,
         position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        optimized: false
       });
       //extend the bounds to include each marker's position
       bounds.extend(marker.position);
