@@ -314,7 +314,11 @@ select { padding-right: 40px; }
 
 .contact-form { padding: 4rem; }
 
+@media screen and (-webkit-min-device-pixel-ratio: 0) { select, textarea, input { font-size: 16px !important; } }
+
 /* Layout */
+.main { overflow-x: hidden; }
+
 .container, .wrapper { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
 
 .is-fluid { max-width: 100%; padding: 0 2rem; }
@@ -772,6 +776,10 @@ a.image:hover img { -webkit-transform: scale(1.025); -ms-transform: scale(1.025)
 
 .signup-notification { position: absolute; left: 0; right: 0; top: -100%; z-index: 9998; -webkit-animation: slideOutUp .5s 0s ease-in-out; animation: slideOutUp .5s 0s ease-in-out; }
 
+@media all and (min-width: 930px) and (max-width: 1200px) { .signup-notification .container { width: 91.66667%; } }
+
+@media all and (min-width: 930px) { .signup-notification .signup_notification_toggle { top: 1rem; right: 2rem; display: block; left: auto; } }
+
 body.sign-up_notification_show { -webkit-transition: all .7s .2s ease-in-out; -o-transition: all .7s .2s ease-in-out; transition: all .7s .2s ease-in-out; }
 
 body.sign-up_notification_show .signup_notification_toggle .open_text { display: none; }
@@ -1196,6 +1204,9 @@ body.sign-up_notification_show .signup-notification { display: block; -webkit-an
 .banner.has-animation .animate__2:nth-child(4), .owl-item .banner .animate__2:nth-child(4) { -webkit-animation: smoothInUp 0.7s 2s ease-in-out both; animation: smoothInUp 0.7s 2s ease-in-out both; }
 
 .contact-banner { height: auto; min-height: 95rem; }
+
+@media all and (max-width: 767px) { .form_image_bg > .banner-bg { position: static; }
+  .form_image_bg > .banner-bg .stripe { position: relative; z-index: 1; } }
 
 /* Banner Carousel */
 .banner-carousel { position: relative; }
@@ -1673,16 +1684,7 @@ yx-axis
 */
 .mCSB_scrollTools, .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCSB_scrollTools .mCSB_buttonUp, .mCSB_scrollTools .mCSB_buttonDown, .mCSB_scrollTools .mCSB_buttonLeft, .mCSB_scrollTools .mCSB_buttonRight { -webkit-transition: opacity .2s ease-in-out, background-color .2s ease-in-out; -o-transition: opacity .2s ease-in-out, background-color .2s ease-in-out; transition: opacity .2s ease-in-out, background-color .2s ease-in-out; }
 
-.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger_bar, .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerRail, .mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger_bar, .mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerRail { -webkit-transition: width .2s ease-out .2s, height .2s ease-out .2s, 
- margin-left .2s ease-out .2s, margin-right .2s ease-out .2s, 
- margin-top .2s ease-out .2s, margin-bottom .2s ease-out .2s,
- opacity .2s ease-in-out, background-color .2s ease-in-out; -o-transition: width .2s ease-out .2s, height .2s ease-out .2s, 
- margin-left .2s ease-out .2s, margin-right .2s ease-out .2s, 
- margin-top .2s ease-out .2s, margin-bottom .2s ease-out .2s,
- opacity .2s ease-in-out, background-color .2s ease-in-out; transition: width .2s ease-out .2s, height .2s ease-out .2s, 
- margin-left .2s ease-out .2s, margin-right .2s ease-out .2s, 
- margin-top .2s ease-out .2s, margin-bottom .2s ease-out .2s,
- opacity .2s ease-in-out, background-color .2s ease-in-out; }
+.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger_bar, .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerRail, .mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger_bar, .mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerRail { -webkit-transition: width .2s ease-out .2s, height .2s ease-out .2s,  margin-left .2s ease-out .2s, margin-right .2s ease-out .2s,  margin-top .2s ease-out .2s, margin-bottom .2s ease-out .2s, opacity .2s ease-in-out, background-color .2s ease-in-out; -o-transition: width .2s ease-out .2s, height .2s ease-out .2s,  margin-left .2s ease-out .2s, margin-right .2s ease-out .2s,  margin-top .2s ease-out .2s, margin-bottom .2s ease-out .2s, opacity .2s ease-in-out, background-color .2s ease-in-out; transition: width .2s ease-out .2s, height .2s ease-out .2s,  margin-left .2s ease-out .2s, margin-right .2s ease-out .2s,  margin-top .2s ease-out .2s, margin-bottom .2s ease-out .2s, opacity .2s ease-in-out, background-color .2s ease-in-out; }
 
 /* 
 ------------------------------------------------------------------------------------------------------------------------
@@ -3862,14 +3864,3 @@ yx-axis
 .animated.slower { -webkit-animation-duration: 3s; animation-duration: 3s; }
 
 @media (prefers-reduced-motion) { .animated { -webkit-animation: unset !important; animation: unset !important; -webkit-transition: none !important; -o-transition: none !important; transition: none !important; } }
-
-@media screen and (-webkit-min-device-pixel-ratio:0) { 
-	select,	
-	select:focus,
-	textarea,
-	textarea:focus,
-	input,
-	input:focus {
-		font-size: 16px !important;
-	}
-}
