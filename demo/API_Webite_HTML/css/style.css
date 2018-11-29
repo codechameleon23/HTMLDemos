@@ -314,8 +314,6 @@ select { padding-right: 40px; }
 
 .contact-form { padding: 4rem; }
 
-@media screen and (-webkit-min-device-pixel-ratio: 0) and (max-width: 900px) { select { font-size: 16px; } }
-
 /* Layout */
 .main { overflow-x: hidden; }
 
@@ -758,7 +756,7 @@ a.image:hover img { -webkit-transform: scale(1.025); -ms-transform: scale(1.025)
 
 .header .contacts a { padding-top: 1.2rem; padding-bottom: 1.2rem; }
 
-.header .contacts select { padding-top: 0; padding-bottom: 0; height: auto; font-weight: 300; font-size: inherit; }
+.header .contacts select { padding-top: 0; padding-bottom: 0; height: auto; font-weight: 300; }
 
 .header .list-with-separator > li:not(:first-child):before { content: "|"; font-weight: 200; margin-left: .7rem; }
 
@@ -3864,3 +3862,9 @@ yx-axis
 .animated.slower { -webkit-animation-duration: 3s; animation-duration: 3s; }
 
 @media (prefers-reduced-motion) { .animated { -webkit-animation: unset !important; animation: unset !important; -webkit-transition: none !important; -o-transition: none !important; transition: none !important; } }
+
+/*iphone slect Zoom Hack*/
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (max-width: 767px) { select { font-size: 16px !important; }
+  .contacts select { padding-right: 20px; }
+  .contacts .select.as_link { -webkit-transform: scale(0.8); -ms-transform: scale(0.8); transform: scale(0.8); }
+  .contacts .select.as_link:after { right: 0.4rem; } }
