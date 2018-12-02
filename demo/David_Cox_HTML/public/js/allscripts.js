@@ -42,11 +42,13 @@ function getViewportWidth() {
 function navBarClose() {
   $(".hamburger").removeClass("is-active");
   $(".jsNavbarToggle").removeClass("is-open");
+  $(".main").removeClass("is-blur");
 }
 //Open Navbar
 function navBarOpen() {
   $(".hamburger").addClass("is-active");
   $(".jsNavbarToggle").addClass("is-open");
+  $(".main").addClass("is-blur");
 }
 //filter
 function filtered(fp){
@@ -73,7 +75,7 @@ function check_if_in_view() {
   var window_top_position = $window.scrollTop();
   var window_bottom_position = (window_top_position + window_height);
  
-  $.each($animation_elements, function() {
+  $.each($animation_elements, function(i, el) {
     var $element = $(this);
     var element_height = $element.outerHeight();
     var element_top_position = $element.offset().top;
@@ -81,8 +83,11 @@ function check_if_in_view() {
  
     //check to see if this current container is within viewport
     if ((element_bottom_position >= window_top_position) &&
-        (element_top_position <= window_bottom_position)) {
+        (element_top_position <= window_bottom_position - 10)) {
           $element.addClass('in-view add-animation');
+          // setTimeout(function(){
+          //   $element.addClass('in-view add-animation');
+          // },(i*150));
         } else {
           $element.removeClass('in-view');
         }
@@ -102,27 +107,13 @@ $(document).ready(function() {
       navBarOpen();
     }
   });
+
   //Add hover [behave as click in touch device]
   $('.has-hover').mouseenter(function(){
     $(this).addClass('is-hovered');
   }).mouseleave(function(){
     $(this).removeClass('is-hovered rollover_expanded');
   });
-
-  if($('.accordion-toggle_wrapper').length && getViewportWidth() > 700 ){
-    $filter_parent = $('.accordion-toggle_wrapper');
-    $filter_parent.addClass('via_js').find('.accordion_row').slice(1).hide();
-    $('.accordion_toggle_tab').on('click', function(){
-      if(!$(this).hasClass('is-active')){
-        $current = $(this).attr('data-filterby');
-        $(this).addClass('is-active').siblings().removeClass('is-active');
-        $filter_parent.addClass($current).find('.accordian-toggle.'+$current).trigger('click').closest('.accordion_row').show().siblings('.accordion_row').hide();
-      }
-      
-    });
-  }else{
-    $('.toggle_tabs').hide();
-  }
 
   /*Accordion toggle*/
   $(".accordian-toggle").on('click tap',  function(){
@@ -146,9 +137,9 @@ $(document).ready(function() {
       animateIn: isIE11 ? "" : "",
       animateOut: isIE11 ? "" : "",
       smartSpeed: 500,
-      // autoplay: true,
-      // autoplayTimeout: 10000
-      // autoplayHoverPause: true
+      autoplay: true,
+      autoplayTimeout: 7000,
+      autoplayHoverPause: true
     });
   }
 
@@ -156,61 +147,30 @@ $(document).ready(function() {
   if ($(".jsTestimonialsCarousel").length) {
     var bannerCarousel = $(".jsTestimonialsCarousel"); //Banner-carousel for Property-details page
     bannerCarousel.owlCarousel({
+      // autoHeight: true,
       items: 1,
       loop: true,
       mouseDrag: false,
       nav: false,
       animateIn: isIE11 ? "" : "fade-in",
-      animateOut: isIE11 ? "" : "fade-out",
+      animateOut: isIE11 ? "" : "",
       smartSpeed: 500,
       autoplay: true,
-      autoplayTimeout: 10000,
+      autoplayTimeout: 4000,
       autoplayHoverPause: true
-    });
-  }
-  
-  //if element exists
-  if ($(".jsImageGalleryCarousel").length) {
-    var bannerCarousel = $(".jsImageGalleryCarousel"); //Banner-carousel for Property-details page
-    bannerCarousel.owlCarousel({
-      items: 1,
-      loop: true,
-      mouseDrag: false,
-      nav: false,
-      animateIn: isIE11 ? "" : "fade-in",
-      animateOut: isIE11 ? "" : "fade-out",
-      smartSpeed: 500,
-      // autoplay: true,
-      // autoplayTimeout: 10000
-      // autoplayHoverPause: true
     });
   }
 
   // Initialize the Popup
   $(".popup").popup({});
-
-  /*Filter*/
-  if($('.filter_parent').length){//if element exists
-    $('.filter_tab').on('click', function(){
-        $filter_parent = $(this).closest('.filter_parent');
-        //$filterBy = $(this).attr('data-filterby');
-        if($(this).hasClass('is-active')){
-            $('.filter_tab').removeClass('is-active');//single select at a time
-            $(this).removeClass('is-active');
-            filtered($filter_parent);
-        }else{
-            $('.filter_tab').removeClass('is-active');//single select at a time 
-            $(this).addClass('is-active');
-            filtered($filter_parent);
-        }
-    });
-  };
-
+  
+  // Google Map
   if ($('#map-canvas').length) { //if element exists
     //create empty LatLngBounds object
     var bounds = new google.maps.LatLngBounds();
     var locations = [
-      ['Salisbury Christmas Market', 50.964821, -1.579350]
+      ['London Hospital', 51.526599, -0.123598],
+      ['Salisbury Hospital', 51.071293, -1.794611]
     ];
     var map = new google.maps.Map($('.map-canvas')[0], {
       // zoom: 16,
@@ -218,7 +178,7 @@ $(document).ready(function() {
     });
     // Add a custom marker
     var markerIcon = {
-      url: 'images/map-marker.png',
+      url: 'images/map-marker.gif',
       scaledSize: new google.maps.Size(60, 60)
     };
     $.each(locations, function (i, e) {
@@ -240,9 +200,24 @@ $(document).ready(function() {
     map.fitBounds(bounds);
     //(optional) restore the zoom level after the map is done scaling
     var listener = google.maps.event.addListener(map, "idle", function () {
-      map.setZoom(14);
+      map.setZoom( getViewportWidth() < 700 ? 7 : 9);
       google.maps.event.removeListener(listener);
     });
+  }
+
+  /*Inline Video Player*/
+  $(document).on('click','.js-videoPoster',function(e) {
+    e.preventDefault();
+    var poster = $(this);
+    var wrapper = poster.closest('.js-videoWrapper');
+    videoPlay(wrapper);
+  });
+
+  function videoPlay(wrapper) {
+    var iframe = wrapper.find('.js-videoIframe');
+    var src = iframe.data('src');
+    wrapper.addClass('videoWrapperActive');
+    iframe.attr('src',src);
   }
 
 });
