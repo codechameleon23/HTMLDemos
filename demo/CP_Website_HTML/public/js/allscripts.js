@@ -248,4 +248,13 @@ $(document).ready(function() {
     });
   }
 
+  $('.toggle-rest').on('click', function(){
+    $(this).toggleClass('is-open');
+    $('.hide-rest').toggleClass('show-it');
+    if($(this).hasClass('is-open')){
+      $("html, body").animate({
+          scrollTop: $('#toggleRest').offset().top - 20 }, 500);
+    }
+  })
+
 });
