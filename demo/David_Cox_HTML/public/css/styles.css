@@ -83,7 +83,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { font-weight: 400; }
 
 .display_2 { font-size: 7rem; line-height: normal; }
 
-@media all and (max-width: 700px) { .display_2 { font-size: 4.8rem; line-height: normal; } }
+@media all and (max-width: 700px) { .display_2 { font-size: 4.8rem; } }
 
 .display_3 { font-size: 6rem; line-height: normal; }
 
@@ -114,6 +114,10 @@ small, .small { font-size: 1.4rem; line-height: normal; }
 .text-bold { font-weight: 700; }
 
 .intro { text-align: center; }
+
+.line-height_equal { line-height: .85; }
+
+@media all and (max-width: 700px) { .line-height_equal-xs { line-height: .85; } }
 
 a { color: inherit; text-decoration: none; }
 
@@ -405,25 +409,31 @@ label > .label-body { display: inline-block; margin-left: 1.5rem; font-weight: n
 
 .box-thin { padding-left: 1rem; padding-right: 1rem; }
 
-.box-fat { padding-left: 3rem; padding-right: 3rem; }
+.box-fat { padding-left: 4rem; padding-right: 4rem; }
 
 .box-wrap { padding-top: 2rem; padding-bottom: 2rem; }
 
 .box-wrap-thin { padding-top: 1rem; padding-bottom: 1rem; }
 
-.box-wrap-fat { padding-top: 3rem; padding-bottom: 3rem; }
+.box-wrap-fat { padding-top: 3rem; padding-bottom: 4rem; }
 
 .box-wrap.top-only { padding-bottom: 0; }
 
+.box-wrap.bottom-only { padding-top: 0; }
+
 .section { padding-top: 6.5rem; padding-bottom: 6.5rem; }
+
+@media all and (max-width: 700px) { .section.is-thin-xs { padding-top: 3.25rem; padding-bottom: 3.25rem; } }
 
 .section.is-fat { padding-top: 13rem; padding-bottom: 13rem; }
 
-@media all and (max-width: 1200px) { .section.is-fat { padding-top: 6.5rem; padding-bottom: 6.5rem; } }
+@media all and (max-width: 1100px) { .section.is-fat { padding-top: 6.5rem; padding-bottom: 6.5rem; } }
 
 .section.is-fat.top-only { padding-bottom: 0; }
 
 .section.top-only { padding-bottom: 0; }
+
+.section.bottom-only { padding-top: 0; }
 
 .aspect-ratio_16x9 { position: relative; width: 100%; }
 
@@ -1160,7 +1170,11 @@ a.figure:hover .image-holder, .figure:hover a.image-holder { -webkit-transform: 
 ---------------------------------*/
 .banner { position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; overflow: hidden; height: auto; min-height: 58.8rem; background-color: #e0eafd; color: #ffffff; width: 100%; }
 
+@media all and (max-width: 700px) { .banner { min-height: 40rem; } }
+
 .banner.hero { min-height: 40rem; text-align: center; }
+
+@media all and (max-width: 700px) { .banner.hero { min-height: 25rem; } }
 
 .banner .hero-text { text-shadow: 0 0 1px rgba(0, 0, 0, 0.8); display: -webkit-box; display: -ms-flexbox; display: flex; }
 
@@ -1378,9 +1392,21 @@ ul.is-primary li:before, ol.is-primary li:before { color: #2e71f3; }
 .brand-logo { font-size: 2.8rem; line-height: normal; text-transform: uppercase; text-decoration: none !important; }
 
 @media all and (max-width: 900px) { .header .hambuger.is-active { position: fixed; z-index: 999; }
-  .header .navbar { background-color: #1c479e; color: #ffffff; padding: 2rem 0 1.5rem; margin-left: 0; width: 100%; position: fixed; top: 0; height: auto; margin: 0; z-index: 999; max-width: 25rem; left: 0; height: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-transform: translateX(-100%); -ms-transform: translateX(-100%); transform: translateX(-100%); -webkit-transition: all .3s .3s ease-in-out; -o-transition: all .3s .3s ease-in-out; transition: all .3s .3s ease-in-out; }
-  .header .navbar li:not(:last-child) { margin-bottom: 2rem; }
+  .header .navbar { background-color: #1c479e; color: #ffffff; padding: 2rem 0 1.5rem; margin-left: 0; width: 100%; position: fixed; top: 0; height: auto; margin: 0; z-index: 999; max-width: 25rem; left: 0; height: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-transform: translateX(-100%); -ms-transform: translateX(-100%); transform: translateX(-100%); -webkit-transition: all .3s 0s ease-in-out; -o-transition: all .3s 0s ease-in-out; transition: all .3s 0s ease-in-out; }
+  .header .navbar li:not(:last-child) { margin-bottom: 3.2rem; }
   .header .navbar.is-open { -webkit-transform: translateX(0); -ms-transform: translateX(0); transform: translateX(0); }
+  .header .navbar.is-open li:nth-child(1) { -webkit-animation: fade-in 0.5s 0.15s ease-in-out both; animation: fade-in 0.5s 0.15s ease-in-out both; }
+  .header .navbar.is-open li:nth-child(2) { -webkit-animation: fade-in 0.5s 0.3s ease-in-out both; animation: fade-in 0.5s 0.3s ease-in-out both; }
+  .header .navbar.is-open li:nth-child(3) { -webkit-animation: fade-in 0.5s 0.45s ease-in-out both; animation: fade-in 0.5s 0.45s ease-in-out both; }
+  .header .navbar.is-open li:nth-child(4) { -webkit-animation: fade-in 0.5s 0.6s ease-in-out both; animation: fade-in 0.5s 0.6s ease-in-out both; }
+  .header .navbar.is-open li:nth-child(5) { -webkit-animation: fade-in 0.5s 0.75s ease-in-out both; animation: fade-in 0.5s 0.75s ease-in-out both; }
+  .header .navbar.is-open li:nth-child(6) { -webkit-animation: fade-in 0.5s 0.9s ease-in-out both; animation: fade-in 0.5s 0.9s ease-in-out both; }
+  .header .navbar.is-open li:nth-child(7) { -webkit-animation: fade-in 0.5s 1.05s ease-in-out both; animation: fade-in 0.5s 1.05s ease-in-out both; }
+  .header .navbar.is-open li:nth-child(8) { -webkit-animation: fade-in 0.5s 1.2s ease-in-out both; animation: fade-in 0.5s 1.2s ease-in-out both; }
+  .header .navbar.is-open li:nth-child(9) { -webkit-animation: fade-in 0.5s 1.35s ease-in-out both; animation: fade-in 0.5s 1.35s ease-in-out both; }
+  .header .navbar.is-open li:nth-child(10) { -webkit-animation: fade-in 0.5s 1.5s ease-in-out both; animation: fade-in 0.5s 1.5s ease-in-out both; }
+  .header .navbar.is-open li:nth-child(11) { -webkit-animation: fade-in 0.5s 1.65s ease-in-out both; animation: fade-in 0.5s 1.65s ease-in-out both; }
+  .header .navbar.is-open li:nth-child(12) { -webkit-animation: fade-in 0.5s 1.8s ease-in-out both; animation: fade-in 0.5s 1.8s ease-in-out both; }
   .main { -webkit-transition: -webkit-filter .3s 0s ease-in-out; transition: -webkit-filter .3s 0s ease-in-out; -o-transition: filter .3s 0s ease-in-out; transition: filter .3s 0s ease-in-out; transition: filter .3s 0s ease-in-out, -webkit-filter .3s 0s ease-in-out; }
   .main.is-blur { -webkit-filter: blur(4px) grayscale(0%); filter: blur(4px) grayscale(0%); } }
 
