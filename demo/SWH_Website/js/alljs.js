@@ -200,6 +200,7 @@ $(document).ready(function(){
     }); 
   }
   $('.has-hover').removeClass('is-hovered rollover_expanded');
+  alert('hi');
   $('.has-hover').mouseenter(function(){
     $(this).addClass('is-hovered');
   }).mouseleave(function(){
