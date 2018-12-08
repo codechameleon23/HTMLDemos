@@ -208,11 +208,11 @@ $(document).ready(function(){
   });
 
 });
-$(window).bind("pageshow", function(event) {
-  if (event.originalEvent.persisted) {
-    alert('innnnn');
+window.onpageshow = function (event) {
+  if (event.persisted) {
+    alert("From back / forward cache.");
   }
-});
+};
 
 var maxLength = 200;
 function trimIt(elm){
