@@ -207,7 +207,7 @@ $(document).ready(function(){
       $(this).removeClass('is-hovered rollover_expanded');
     });
   } else {
-    $('.has-hover').tap(function () {
+    $('.has-hover').on('click tap', function () {
       if (!$(this).hasClass('is-hovered')) {
         $(this).addClass('is-hovered');
       } else {
