@@ -200,13 +200,18 @@ $(document).ready(function(){
     }); 
   }
   $('.has-hover').removeClass('is-hovered rollover_expanded');
-  alert('in');
+ 
   $('.has-hover').mouseenter(function () {
     $(this).addClass('is-hovered');
   }).mouseleave(function () {
     $(this).removeClass('is-hovered rollover_expanded');
   });
 
+});
+$(window).bind("pageshow", function(event) {
+  if (event.originalEvent.persisted) {
+    alert('innnnn');
+  }
 });
 
 var maxLength = 200;
