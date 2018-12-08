@@ -199,22 +199,13 @@ $(document).ready(function(){
       trimIt($(this));
     }); 
   }
-  alert('hello');
-  if (getViewportWidth() > 701) {
-    $('.has-hover').mouseenter(function () {
-      $(this).addClass('is-hovered');
-    }).mouseleave(function () {
-      $(this).removeClass('is-hovered rollover_expanded');
-    });
-  } else {
-    $('.has-hover').on('click tap', function () {
-      if (!$(this).hasClass('is-hovered')) {
-        $(this).addClass('is-hovered');
-      } else {
-        $('.has-hover').removeClass('is-hovered rollover_expanded');
-      }
-    })
-  }
+  $('.has-hover').removeClass('is-hovered rollover_expanded');
+  alert('in');
+  $('.has-hover').mouseenter(function () {
+    $(this).addClass('is-hovered');
+  }).mouseleave(function () {
+    $(this).removeClass('is-hovered rollover_expanded');
+  });
 
 });
 
