@@ -199,7 +199,7 @@ $(document).ready(function(){
       trimIt($(this));
     }); 
   }
-
+  $('.has-hover').removeClass('is-hovered rollover_expanded');
   $('.has-hover').mouseenter(function(){
     $(this).addClass('is-hovered');
   }).mouseleave(function(){
