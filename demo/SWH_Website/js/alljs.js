@@ -207,12 +207,14 @@ $(document).ready(function(){
     $(this).removeClass('is-hovered rollover_expanded');
   });
 
+   $(window).bind("pageshow", function (event) {
+    if (event.originalEvent.persisted) {
+      alert('sdsadassd');
+      // window.location.reload()
+    }
+  });
+  
 });
-window.onpageshow = function (event) {
-  if (event.persisted) {
-    alert("From back / forward cache.");
-  }
-};
 
 var maxLength = 200;
 function trimIt(elm){
