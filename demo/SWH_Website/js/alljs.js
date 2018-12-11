@@ -199,13 +199,21 @@ $(document).ready(function(){
       trimIt($(this));
     }); 
   }
-
-  $('.has-hover').mouseenter(function(){
+  $('.has-hover').removeClass('is-hovered rollover_expanded');
+ 
+  $('.has-hover').mouseenter(function () {
     $(this).addClass('is-hovered');
-  }).mouseleave(function(){
+  }).mouseleave(function () {
     $(this).removeClass('is-hovered rollover_expanded');
   });
 
+   $(window).bind("pageshow", function (event) {
+    if (event.originalEvent.persisted) {
+      alert('sdsadassd');
+      // window.location.reload()
+    }
+  });
+  
 });
 
 var maxLength = 200;
