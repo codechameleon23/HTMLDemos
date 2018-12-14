@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="images/favicon.png" />
+  <title>Shorewood Homes</title>
+  <link rel="stylesheet" href="https://use.typekit.net/uiy6agb.css">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="header_fixed footer_fixed full-page nav-solid">
+  <!-- page loader -->
+  <div class="pageLoader"></div>
+  <!-- Cookie message-->
+  <div id="cookie-message" data-cookie-expiry="60">
+    <div class="grid has-gutter has-list_thin center_a">
+      <div class="col col-auto col-sm-12 text-center">
+        <p class="m_t-auto m_b-auto">We use cookies to enhance your experience. By continuing to visit this
+          site you agree to our use of cookies. <a href="#" class="text-primary">More info</a></p>
+      </div>
+      <div class="col col-auto">
+        <a href="javascript:void(0);" class="button is_100" onclick="messageClose()">got it</a>
+      </div>
+    </div>
+  </div>
+  <!-- Rotate tablet message -->
+  <div class="tabletRoate bg-default">
+    <div>
+      <p><img src="images/tablet-rotate.png" alt="" /></p>
+      <p class="h5">Please rotate your device</p>
+    </div>
+  </div>
+  <script>
+    //Hide page loader on load
+    window.onload = function (e) {
+      var x = document.getElementsByClassName("pageLoader");
+      for (i = 0; i < x.length; i++) {
+        x[i].className += ' is-hidden';
+      }
+    };
+    //Cookie Policy message
+    document.body.className = document.body.className + " js_enabled"; // Detect JS support
+    function messageClose() { //close on click
+      document.getElementById("cookie-message").style.display = "none";
+    };
+  </script>
+  <!--Header-->
+  <header class="header">
+    <a class="brand-logo" href="index.html"><img src="images/SWH_logo.png" alt="Shorewood Homes" /></a>
+  </header>
+  <!--Hamburger-->
+  <div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <!--Navbar-->
+  <nav class="navbar navbar-toggle-js">
+    <div class="navbar-inner">
+      <ul>
+        <li class="active"><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="inspiration.html">Inspiration</a></li>
+        <li><a href="bespoke.html">Bespoke</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!--Main-->
+  <main class="main">
+    <section class="scrollify_section-js">
+      <div class="portfolio_carousel_wrapper">
+        <div class="portfolio_carousel portfolio_carousel-js owl-carousel owl-theme">
+          <div class="slide_item tiles">
+            <div class="tile-col col-sm-12">
+              <div class="tile has-hover">
+                <figure class="item figure image">
+                  <div class="image-wrap"><img src="images/Leaflands_Exterior_HR.jpg" alt="" /></div>
+                  <figcaption class="figure-caption figure-rollover">
+                    <a href="property-details.html" class="caption-wrap">
+                      <div>
+                        <p class="caption-title">LEAFLANDS<br>
+                          FEBRUARY 2019</p>
+                        <span class="view-more"></span>
+                      </div>
+                    </a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="tile has-hover">
+                <figure class="item figure image aspect-ratio_16x9--sm">
+                  <div class="image-wrap"><img src="images/Shorewood-Homes_Redthorne-House_HQ-50.jpg" alt="" /></div>
+                  <figcaption class="figure-caption figure-rollover">
+                    <a href="property-details.html" class="caption-wrap">
+                      <div>
+                        <h5 class="caption-title">LEAFLANDS<br>
+                          FEBRUARY 2019</h5>
+                        <span class="view-more"></span>
+                      </div>
+                    </a>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="slide_item tiles">
+            <div class="tile-col col-sm-12">
+              <div class="tile has-hover">
+                <figure class="item figure image aspect-ratio_16x9--sm">
+                  <div class="image-wrap"><img src="images/Shorewood-Homes_Redthorne-House_HQ-99.jpg" alt="" /></div>
+                  <figcaption class="figure-caption figure-rollover">
+                    <a href="property-details.html" class="caption-wrap">
+                      <div>
+                        <h5 class="caption-title">LEAFLANDS<br>
+                          FEBRUARY 2019</h5>
+                        <span class="view-more"></span>
+                      </div>
+                    </a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="tile has-hover">
+                <figure class="item figure image aspect-ratio_16x9--sm">
+                  <div class="image-wrap"><img src="images/Shorewood-Homes_Redthorne-House_HQ-93.jpg" alt="" /></div>
+                  <figcaption class="figure-caption figure-rollover">
+                    <a href="property-details.html" class="caption-wrap">
+                      <div>
+                        <h5 class="caption-title">LEAFLANDS<br>
+                          FEBRUARY 2019</h5>
+                        <span class="view-more"></span>
+                      </div>
+                    </a>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="slide_item tiles">
+            <div class="tile-col col-sm-12">
+              <div class="tile has-hover">
+                <figure class="item figure image aspect-ratio_16x9--sm">
+                  <div class="image-wrap"><img src="images/VAHVU_SP18_2_L.jpg" alt="" /></div>
+                  <figcaption class="figure-caption figure-rollover">
+                    <a href="property-details.html" class="caption-wrap">
+                      <div>
+                        <h5 class="caption-title">LEAFLANDS<br>
+                          FEBRUARY 2019</h5>
+                        <span class="view-more"></span>
+                      </div>
+                    </a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="tile has-hover">
+                <figure class="item figure image aspect-ratio_16x9--sm">
+                  <div class="image-wrap"><img src="images/29-Downside-Rd_Family-Room_HR.jpg" alt="" /></div>
+                  <figcaption class="figure-caption figure-rollover">
+                    <a href="property-details.html" class="caption-wrap">
+                      <div>
+                        <h5 class="caption-title">LEAFLANDS<br>
+                          FEBRUARY 2019</h5>
+                        <span class="view-more"></span>
+                      </div>
+                    </a>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="slide_item tiles">
+            <div class="tile-col col-sm-12">
+              <div class="tile has-hover">
+                <figure class="item figure image aspect-ratio_16x9--sm">
+                  <div class="image-wrap"><img src="images/MCIM02722195_Showroom_Munich_3_mainstage.jpg" alt="" /></div>
+                  <figcaption class="figure-caption figure-rollover">
+                    <a href="property-details.html" class="caption-wrap">
+                      <div>
+                        <h5 class="caption-title">LEAFLANDS<br>
+                          FEBRUARY 2019</h5>
+                        <span class="view-more"></span>
+                      </div>
+                    </a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="tile has-hover">
+                <figure class="item figure image aspect-ratio_16x9--sm">
+                  <div class="image-wrap"><img src="images/Shorewood-Homes_Redthorne-House_HQ-125.jpg" alt="" /></div>
+                  <figcaption class="figure-caption figure-rollover">
+                    <a href="property-details.html" class="caption-wrap">
+                      <div>
+                        <h5 class="caption-title">LEAFLANDS<br>
+                          FEBRUARY 2019</h5>
+                        <span class="view-more"></span>
+                      </div>
+                    </a>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="slide_item tiles">
+            <div class="tile-col col-sm-12">
+              <div class="tile has-hover">
+                <figure class="item figure image aspect-ratio_16x9--sm">
+                  <div class="image-wrap"><img src="images/Shorewood-Homes_Redthorne-House_HQ-50.jpg" alt="" /></div>
+                  <figcaption class="figure-caption figure-rollover">
+                    <a href="property-details.html" class="caption-wrap">
+                      <div>
+                        <h5 class="caption-title">LEAFLANDS<br>
+                          FEBRUARY 2019</h5>
+                        <span class="view-more"></span>
+                      </div>
+                    </a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="tile has-hover">
+                <figure class="item figure image aspect-ratio_16x9--sm">
+                  <div class="image-wrap"><img src="images/29-Downside-Rd_Family-Room_HR.jpg" alt="" /></div>
+                  <figcaption class="figure-caption figure-rollover">
+                    <a href="property-details.html" class="caption-wrap">
+                      <div>
+                        <h5 class="caption-title">LEAFLANDS<br>
+                          FEBRUARY 2019</h5>
+                        <span class="view-more"></span>
+                      </div>
+                    </a>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="slide_item tiles">
+            <div class="tile-col col-sm-12">
+              <div class="tile has-hover">
+                <figure class="item figure image aspect-ratio_16x9--sm">
+                  <div class="image-wrap"><img src="images/Shorewood-Homes_Redthorne-House_HQ-99.jpg" alt="" /></div>
+                  <figcaption class="figure-caption figure-rollover">
+                    <a href="property-details.html" class="caption-wrap">
+                      <div>
+                        <h5 class="caption-title">LEAFLANDS<br>
+                          FEBRUARY 2019</h5>
+                        <span class="view-more"></span>
+                      </div>
+                    </a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="tile has-hover">
+                <figure class="item figure image aspect-ratio_16x9--sm">
+                  <div class="image-wrap"><img src="images/Shorewood-Homes_Redthorne-House_HQ-93.jpg" alt="" /></div>
+                  <figcaption class="figure-caption figure-rollover">
+                    <a href="property-details.html" class="caption-wrap">
+                      <div>
+                        <h5 class="caption-title">LEAFLANDS<br>
+                          FEBRUARY 2019</h5>
+                        <span class="view-more"></span>
+                      </div>
+                    </a>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="slide_item tiles">
+            <div class="tile-col col-sm-12">
+              <div class="tile has-hover">
+                <figure class="item figure image aspect-ratio_16x9--sm">
+                  <div class="image-wrap"><img src="images/VAHVU_SP18_2_L.jpg" alt="" /></div>
+                  <figcaption class="figure-caption figure-rollover">
+                    <a href="property-details.html" class="caption-wrap">
+                      <div>
+                        <h5 class="caption-title">LEAFLANDS<br>
+                          FEBRUARY 2019</h5>
+                        <span class="view-more"></span>
+                      </div>
+                    </a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="tile has-hover">
+                <figure class="item figure image aspect-ratio_16x9--sm">
+                  <div class="image-wrap"><img src="images/29-Downside-Rd_Family-Room_HR.jpg" alt="" /></div>
+                  <figcaption class="figure-caption figure-rollover">
+                    <a href="property-details.html" class="caption-wrap">
+                      <div>
+                        <h5 class="caption-title">LEAFLANDS<br>
+                          FEBRUARY 2019</h5>
+                        <span class="view-more"></span>
+                      </div>
+                    </a>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="slide_item tiles">
+            <div class="tile-col col-sm-12">
+              <div class="tile has-hover">
+                <figure class="item figure image aspect-ratio_16x9--sm">
+                  <div class="image-wrap"><img src="images/MCIM02722195_Showroom_Munich_3_mainstage.jpg" alt="" /></div>
+                  <figcaption class="figure-caption figure-rollover">
+                    <a href="property-details.html" class="caption-wrap">
+                      <div>
+                        <h5 class="caption-title">LEAFLANDS<br>
+                          FEBRUARY 2019</h5>
+                        <span class="view-more"></span>
+                      </div>
+                    </a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="tile has-hover">
+                <figure class="item figure image aspect-ratio_16x9--sm">
+                  <div class="image-wrap"><img src="images/Shorewood-Homes_Redthorne-House_HQ-125.jpg" alt="" /></div>
+                  <figcaption class="figure-caption figure-rollover">
+                    <a href="property-details.html" class="caption-wrap">
+                      <div>
+                        <h5 class="caption-title">LEAFLANDS<br>
+                          FEBRUARY 2019</h5>
+                        <spanclass="h2">+</span>
+                      </div>
+                    </a>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!--Footer-->
+  <footer class="footer">
+    <div class="left">
+      <ul class="links">
+        <li><a href="mailto:info@shorewoodhomes.co.uk">info@shorewoodhomes.co.uk</a></li>
+        <li><a href="tel:01962678528">01962 678528</a></li>
+      </ul>
+    </div>
+    <div class="right">
+      <ul class="links">
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li class="copyright"><span>© Shorewood Homes 2018</span></li>
+      </ul>
+    </div>
+  </footer>
+  <!--Scripts-->
+  <script src="js/alljs.js"></script>
+  <script>
+    $(function () {
+      $.scrollify.disable();
+    })
+  </script>
+</body>
+
+</html>

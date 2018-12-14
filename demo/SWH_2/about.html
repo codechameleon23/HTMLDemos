@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="icon" href="images/favicon.png" />
+	<title>Shorewood Homes</title>
+	<link rel="stylesheet" href="https://use.typekit.net/uiy6agb.css">
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="header_fixed footer_fixed full-page">
+	<!-- page loader -->
+	<div class="pageLoader"></div>
+	<!-- Cookie message-->
+	<div id="cookie-message" data-cookie-expiry="60">
+		<div class="grid has-gutter has-list_thin center_a">
+			<div class="col col-auto col-sm-12 text-center">
+				<p class="m_t-auto m_b-auto">We use cookies to enhance your experience. By continuing to visit this site you agree
+					to our use of cookies. <a href="#" class="text-primary">More info</a></p>
+			</div>
+			<div class="col col-auto">
+				<a href="javascript:void(0);" class="button is_100" onclick="messageClose()">got it</a>
+			</div>
+		</div>
+	</div>
+	<!-- Rotate tablet message -->
+	<div class="tabletRoate bg-default">
+		<div>
+			<p><img src="images/tablet-rotate.png" alt="" /></p>
+			<p class="h5">Please rotate your device</p>
+		</div>
+	</div>
+	<script>
+		//Hide page loader on load
+		window.onload = function (e) {
+			var x = document.getElementsByClassName("pageLoader");
+			for (i = 0; i < x.length; i++) {
+				x[i].className += ' is-hidden';
+			}
+		};
+		//Cookie Policy message
+		document.body.className = document.body.className + " js_enabled"; // Detect JS support
+		function messageClose() { //close on click
+			document.getElementById("cookie-message").style.display = "none";
+		};
+	</script>
+	<!--Header-->
+	<header class="header">
+		<a class="brand-logo" href="index.html"><img src="images/SWH_logo.png" alt="Shorewood Homes" /></a>
+	</header>
+	<!--Hamburger-->
+	<div class="hamburger">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+	<!--Navbar-->
+	<nav class="navbar navbar-toggle-js">
+		<div class="navbar-inner">
+			<ul>
+				<li><a href="portfolio.html">Portfolio</a></li>
+				<li class="active"><a href="about.html">About</a></li>
+				<li><a href="inspiration.html">Inspiration</a></li>
+				<li><a href="bespoke.html">Bespoke</a></li>
+				<li><a href="contact.html">Contact Us</a></li>
+			</ul>
+		</div>
+	</nav>
+	<!--Main-->
+	<main class="main">
+		<section class="scrollify_section-js">
+			<!-- about us text-->
+			<div class="banner has-shade_sm banner-bg--rc_sm">
+				<div class="banner-bg" style="background-image:url('images/Shorewood-Homes_Redthorne-House_HQ-173_cropped.jpg')">
+					<div class="banner-bg banner-bg-mob" style="background-image:url('images/Shorewood-Homes_Redthorne-House_HQ-173_cropped_mobile.jpg')"></div>
+				</div>
+				<div class="banner-body">
+					<div class="container">
+						<div class="about-content content-text">
+							<h5 class="title font-primary">Built for living &centerdot; Valued for life</h5>
+							<p class="para text-justify">We are a Winchester-based housebuilder who have created a team which brings
+								together a long-standing track record of delivering luxury housing throughout Hampshire. We pride ourselves on
+								attention to detail and a strong focus on quality, which underpins our philosophy ‘Built for living – valued
+								for life’. Our style takes influence from period architecture which fits well within the traditional
+								environment in Winchester. With a strong emphasis on our internal layouts and design, coupled with high-quality
+								specification, our homes promote functionality and modern-day living.</p>
+							<button class="action_group ourTeam-popup_open">
+								<span class="action_button button">Meet the team</span>
+								<span class="action_button button"><img class="button_icon" src="images/arrow_right.png" alt="" /></span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Our team popup -->
+			<div id="ourTeam-popup" class="ourTeam-popup popup bg-secondary">
+				<div class="popup-wrap">
+					<div class="popup-body container">
+						<div class="grid has-list_skinny space_between">
+							<div class="col col-auto col-sm-12">
+								<button class="action_group m_t-auto ourTeam-popup_close">
+									<span class="action_button button">About</span>
+									<span class="action_button button"><img class="button_icon" src="images/arrow_left.png" alt="" /></span>
+								</button>
+							</div>
+							<div class="col col-10 col-sm-12 ourTeam_carousel_col">
+								<section class="ourTeam_carousel_wrapper">
+									<div class="ourTeam_carousel ourTeam_carousel-js owl-carousel owl-theme">
+										<div class="slide_item team_list">
+											<div class="tile has-hover">
+												<figure class="item figure aspect-ratio_1x1">
+													<div class="image-wrap" style="background-image: url('images/Simon_Machola_Greyscale.jpg');"></div>
+													<figcaption class="figure-caption figure-rollover">
+														<div class="caption-wrap">
+															<div>
+																<h6 class="caption-title font-primary">Simon Machola</h6>
+																<p class="caption-subtitle">Director</p>
+																<p class="caption-content trimed">Simon is a co-founder of Shorewood Homes and, with a degree in Civil
+																	Engineering, his expertise is in land and production. He has been responsible for the construction of
+																	many high-quality developments in the south, building beautiful homes for well- known housebuilders
+																	for the last 15 years. Simon lives in Winchester and often finds himself either at St Mary’s Stadium
+																	with his children or cheering on his son from the touchline of the school pitch.</p>
+															</div>
+														</div>
+													</figcaption>
+												</figure>
+											</div>
+											<div class="tile has-hover">
+												<figure class="item figure aspect-ratio_1x1">
+													<div class="image-wrap" style="background-image: url('images/Richard_Wickins_Greyscale.jpg');"></div>
+													<figcaption class="figure-caption figure-rollover">
+														<div class="caption-wrap">
+															<div>
+																<h6 class="caption-title font-primary ">Richard Wickins</h6>
+																<p class="caption-subtitle">Mrics</p>
+																<p class="caption-subtitle">Director</p>
+																<p class="caption-content trimed">Richard is a co-founder of Shorewood Homes and his expertise is in
+																	land and planning. As a University of Reading graduate in Real Estate, he went onto qualify as a
+																	Chartered Surveyor whilst working in the South Coast Development and Land Team at Savills before
+																	forming Shorewood Homes. Whilst out of the office, Richard can be found at home either on the beach or
+																	the water.</p>
+															</div>
+														</div>
+													</figcaption>
+												</figure>
+											</div>
+											<div class="tile has-hover">
+												<figure class="item figure aspect-ratio_1x1">
+													<div class="image-wrap" style="background-image: url('images/Tom_Penfold_Greyscale.jpg');"></div>
+													<figcaption class="figure-caption figure-rollover">
+														<div class="caption-wrap">
+															<div>
+																<h6 class="caption-title font-primary ">Tom Penfold</h6>
+																<p class="caption-subtitle">Production Manager</p>
+																<p class="caption-content trimed">Having gained a first-class honours degree in Construction
+																	Management, Tom combines his academic knowledge with excellent experience in the industry, having
+																	worked in a similar capacity for some very reputable firms in Winchester over the last 8 years. His
+																	attention-to-detail and calm nature equip him very well to deal with the daily challenges of building
+																	superlative houses.</p>
+															</div>
+														</div>
+													</figcaption>
+												</figure>
+											</div>
+											<div class="tile has-hover">
+												<figure class="item figure aspect-ratio_1x1">
+													<div class="image-wrap" style="background-image: url('images/Charles_Ellis_Greyscale.jpg');"></div>
+													<figcaption class="figure-caption figure-rollover">
+														<div class="caption-wrap">
+															<div>
+																<h6 class="caption-title font-primary ">Charles Ellis</h6>
+																<p class="caption-subtitle">Quantit y surveyor</p>
+																<p class="caption-content trimed">Charlie’s degree in Property Development led to his career to date
+																	working for a major housebuilder with contract values of up to £30m. He has a very thorough,
+																	methodical approach to his work and remains positive and fair at all times.</p>
+															</div>
+														</div>
+													</figcaption>
+												</figure>
+											</div>
+											<div class="tile has-hover">
+												<figure class="item figure aspect-ratio_1x1">
+													<div class="image-wrap" style="background-image: url('images/Jason_Othen_Greyscale.jpg');"></div>
+													<figcaption class="figure-caption figure-rollover">
+														<div class="caption-wrap">
+															<div>
+																<h6 class="caption-title font-primary ">Jason Othen</h6>
+																<p class="caption-subtitle">site manager</p>
+																<p class="caption-content trimed">Jason is a qualified and experienced Construction Site Manager with
+																	over 20 years in the construction industry. He has an excellent track record of delivering a
+																	high-quality finish on projects ranging in value from £1m through to £9m.</p>
+															</div>
+														</div>
+													</figcaption>
+												</figure>
+											</div>
+											<div class="tile has-hover">
+												<figure class="item figure aspect-ratio_1x1">
+													<div class="image-wrap" style="background-image: url('images/Emma_Penfold.jpg');"></div>
+													<figcaption class="figure-caption figure-rollover">
+														<div class="caption-wrap">
+															<div>
+																<h6 class="caption-title font-primary ">Emma Penfold</h6>
+																<p class="caption-subtitle">Marketing manager</p>
+																<p class="caption-content trimed">Having learnt her craft through a degree in Graphic Design, Emma’s
+																	expertise is in graphic and website design. She is responsible for the creation and delivery of the
+																	Shorewood Homes branding including, of course, our website.</p>
+															</div>
+														</div>
+													</figcaption>
+												</figure>
+											</div>
+											<div class="tile has-hover">
+												<figure class="item figure aspect-ratio_1x1">
+													<div class="image-wrap" style="background-image: url('images/Gavin_Walker_Greyscale.jpg');"></div>
+													<figcaption class="figure-caption figure-rollover">
+														<div class="caption-wrap">
+															<div>
+																<h6 class="caption-title font-primary ">Gavin Walker</h6>
+																<p class="caption-subtitle">Non executive</p>
+																<p class="caption-content trimed">Gavin is the Finance Director for a £200m turnover business in the
+																	South West and offers a strategic service to the Shorewood Homes accounts function. He takes an active
+																	interest in the housebuilding industry, having assisted a number of construction-orientated businesses
+																	over the span of his career.</p>
+															</div>
+														</div>
+													</figcaption>
+												</figure>
+											</div>
+											<div class="tile has-hover">
+												<figure class="item figure aspect-ratio_1x1">
+													<div class="image-wrap" style="background-image: url('images/Anthony_Wickins_Greyscale.jpg');"></div>
+													<figcaption class="figure-caption figure-rollover">
+														<div class="caption-wrap">
+															<div>
+																<h6 class="caption-title font-primary ">Anthony Wickins</h6>
+																<p class="caption-subtitle">Non executive</p>
+																<p class="caption-content trimed">Anthony has worked with the development industry for over 30 years
+																	and has considerable experience in the set-up and management of small and medium-sized companies. He
+																	assists with the strategic management of Shorewood Homes amongst his various other senior roles
+																	elsewhere in the South.</p>
+															</div>
+														</div>
+													</figcaption>
+												</figure>
+											</div>
+										</div>
+										<div class="slide_item team_list">
+											<div class="tile has-hover">
+												<figure class="item figure aspect-ratio_1x1">
+													<div class="image-wrap" style="background-image: url('images/Simon_Machola_Greyscale.jpg');"></div>
+													<figcaption class="figure-caption figure-rollover">
+														<div class="caption-wrap">
+															<div>
+																<h6 class="caption-title font-primary">Simon Machola</h6>
+																<p class="caption-subtitle">Director</p>
+																<p class="caption-content trimed">Simon is a co-founder of Shorewood Homes and, with a degree in Civil
+																	Engineering, his expertise is in land and production. He has been responsible for the construction of
+																	many high-quality developments in the south, building beautiful homes for well- known housebuilders
+																	for the last 15 years. Simon lives in Winchester and often finds himself either at St Mary’s Stadium
+																	with his children or cheering on his son from the touchline of the school pitch.</p>
+															</div>
+														</div>
+													</figcaption>
+												</figure>
+											</div>
+											<div class="tile has-hover">
+												<figure class="item figure aspect-ratio_1x1">
+													<div class="image-wrap" style="background-image: url('images/Richard_Wickins_Greyscale.jpg');"></div>
+													<figcaption class="figure-caption figure-rollover">
+														<div class="caption-wrap">
+															<div>
+																<h6 class="caption-title font-primary ">Richard Wickins</h6>
+																<p class="caption-subtitle">Mrics</p>
+																<p class="caption-subtitle">Director</p>
+																<p class="caption-content trimed">Richard is a co-founder of Shorewood Homes and his expertise is in
+																	land and planning. As a University of Reading graduate in Real Estate, he went onto qualify as a
+																	Chartered Surveyor whilst working in the South Coast Development and Land Team at Savills before
+																	forming Shorewood Homes. Whilst out of the office, Richard can be found at home either on the beach or
+																	the water.</p>
+															</div>
+														</div>
+													</figcaption>
+												</figure>
+											</div>
+											<div class="tile has-hover">
+												<figure class="item figure aspect-ratio_1x1">
+													<div class="image-wrap" style="background-image: url('images/Tom_Penfold_Greyscale.jpg');"></div>
+													<figcaption class="figure-caption figure-rollover">
+														<div class="caption-wrap">
+															<div>
+																<h6 class="caption-title font-primary ">Tom Penfold</h6>
+																<p class="caption-subtitle">Production Manager</p>
+																<p class="caption-content trimed">Having gained a first-class honours degree in Construction
+																	Management, Tom combines his academic knowledge with excellent experience in the industry, having
+																	worked in a similar capacity for some very reputable firms in Winchester over the last 8 years. His
+																	attention-to-detail and calm nature equip him very well to deal with the daily challenges of building
+																	superlative houses.</p>
+															</div>
+														</div>
+													</figcaption>
+												</figure>
+											</div>
+											<div class="tile has-hover">
+												<figure class="item figure aspect-ratio_1x1">
+													<div class="image-wrap" style="background-image: url('images/Charles_Ellis_Greyscale.jpg');"></div>
+													<figcaption class="figure-caption figure-rollover">
+														<div class="caption-wrap">
+															<div>
+																<h6 class="caption-title font-primary ">Charles Ellis</h6>
+																<p class="caption-subtitle">Quantit y surveyor</p>
+																<p class="caption-content trimed">Charlie’s degree in Property Development led to his career to date
+																	working for a major housebuilder with contract values of up to £30m. He has a very thorough,
+																	methodical approach to his work and remains positive and fair at all times.</p>
+															</div>
+														</div>
+													</figcaption>
+												</figure>
+											</div>
+											<div class="tile has-hover">
+												<figure class="item figure aspect-ratio_1x1">
+													<div class="image-wrap" style="background-image: url('images/Jason_Othen_Greyscale.jpg');"></div>
+													<figcaption class="figure-caption figure-rollover">
+														<div class="caption-wrap">
+															<div>
+																<h6 class="caption-title font-primary ">Jason Othen</h6>
+																<p class="caption-subtitle">site manager</p>
+																<p class="caption-content trimed">Jason is a qualified and experienced Construction Site Manager with
+																	over 20 years in the construction industry. He has an excellent track record of delivering a
+																	high-quality finish on projects ranging in value from £1m through to £9m.</p>
+															</div>
+														</div>
+													</figcaption>
+												</figure>
+											</div>
+											<div class="tile has-hover">
+												<figure class="item figure aspect-ratio_1x1">
+													<div class="image-wrap" style="background-image: url('images/Emma_Penfold.jpg');"></div>
+													<figcaption class="figure-caption figure-rollover">
+														<div class="caption-wrap">
+															<div>
+																<h6 class="caption-title font-primary ">Emma Penfold</h6>
+																<p class="caption-subtitle">Marketing manager</p>
+																<p class="caption-content trimed">Having learnt her craft through a degree in Graphic Design, Emma’s
+																	expertise is in graphic and website design. She is responsible for the creation and delivery of the
+																	Shorewood Homes branding including, of course, our website.</p>
+															</div>
+														</div>
+													</figcaption>
+												</figure>
+											</div>
+											<div class="tile has-hover">
+												<figure class="item figure aspect-ratio_1x1">
+													<div class="image-wrap" style="background-image: url('images/Gavin_Walker_Greyscale.jpg');"></div>
+													<figcaption class="figure-caption figure-rollover">
+														<div class="caption-wrap">
+															<div>
+																<h6 class="caption-title font-primary ">Gavin Walker</h6>
+																<p class="caption-subtitle">Non executive</p>
+																<p class="caption-content trimed">Gavin is the Finance Director for a £200m turnover business in the
+																	South West and offers a strategic service to the Shorewood Homes accounts function. He takes an active
+																	interest in the housebuilding industry, having assisted a number of construction-orientated businesses
+																	over the span of his career.</p>
+															</div>
+														</div>
+													</figcaption>
+												</figure>
+											</div>
+											<div class="tile has-hover">
+												<figure class="item figure aspect-ratio_1x1">
+													<div class="image-wrap" style="background-image: url('images/Anthony_Wickins_Greyscale.jpg');"></div>
+													<figcaption class="figure-caption figure-rollover">
+														<div class="caption-wrap">
+															<div>
+																<h6 class="caption-title font-primary ">Anthony Wickins</h6>
+																<p class="caption-subtitle">Non executive</p>
+																<p class="caption-content trimed">Anthony has worked with the development industry for over 30 years
+																	and has considerable experience in the set-up and management of small and medium-sized companies. He
+																	assists with the strategic management of Shorewood Homes amongst his various other senior roles
+																	elsewhere in the South.</p>
+															</div>
+														</div>
+													</figcaption>
+												</figure>
+											</div>
+										</div>
+									</div>
+								</section>
+							</div>
+							<div class="col col-auto col-sm-12">
+								<button class="ourTeam_carousel-js--next action_group m_t-auto m_b-auto arrow-right disabled-hide">
+									<span class="action_button button m_l-auto">
+										<img class="button_icon" src="images/arrow_right.png" alt="" />
+									</span>
+								</button>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+	</main>
+	<div class="goTotop">
+		<div><img src="images/arrow_right.png" alt="" /></div>
+	</div>
+	<!--Footer-->
+	<footer class="footer">
+		<div class="left">
+			<ul class="links">
+				<li><a href="mailto:info@shorewoodhomes.co.uk">info@shorewoodhomes.co.uk</a></li>
+				<li><a href="tel:01962678528">01962 678528</a></li>
+			</ul>
+		</div>
+		<div class="right">
+			<ul class="links">
+				<li><a href="#">Terms</a></li>
+				<li><a href="#">Privacy</a></li>
+				<li class="copyright"><span>© Shorewood Homes 2018</span></li>
+			</ul>
+		</div>
+	</footer>
+	<!--Scripts-->
+	<script src="js/alljs.js"></script>
+	<script>$(function () { $.scrollify.disable(); })</script>
+</body>
+
+</html>
