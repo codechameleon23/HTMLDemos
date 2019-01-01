@@ -167,7 +167,6 @@ $(document).ready(function () {
         },
         callbacks: {
           elementParse: function (item) {
-            console.log(item.el[0].className);
             if (item.el[0].className == 'has-video') {
               item.type = 'iframe',
                 item.iframe = {
