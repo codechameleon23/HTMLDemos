@@ -1,5 +1,6 @@
 //* scripts.js
 var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
+var isIE10 = (navigator.userAgent.match(/MSIE 10/i));
 //Get View port width
 function getViewportWidth() {
   if (window.innerWidth) {
@@ -22,7 +23,25 @@ function navBarOpen() {
   $(".jsNavbarToggle").addClass("is-open");
   $(".main").addClass("is-blur");
 }
-
+//filter
+function filtered(fp) {
+  if (fp && fp.find('.filter_tab.is-active').length) {
+    fp.find('.filter_obj').removeClass('filtered');
+    filterBy = [];
+    fp.find('.filter_tab.is-active').each(function () {
+      filterBy.push($(this).attr('data-filterby'));
+    });
+    for (i = 0; i < filterBy.length; i++) {
+      $.each(fp.find('.filter_obj.' + filterBy[i]), function (i, el) {
+        setTimeout(function () {
+          $(el).addClass('filtered');
+        }, 0 + (i * 100));
+      });
+    }
+  } else {
+    $('.filter_obj').addClass('filtered');
+  }
+}
 // Inview js
 var $animation_elements = $('.in-view-animation');
 var $window = $(window);
@@ -33,18 +52,16 @@ function check_if_in_view() {
   var window_bottom_position = (window_top_position + window_height);
 
   $.each($animation_elements, function (i, el) {
-    var $element = $(this);
+    var $element = $(el);
     var element_height = $element.outerHeight();
     var element_top_position = $element.offset().top;
     var element_bottom_position = (element_top_position + element_height);
-
-    //check to see if this current container is within viewport
     if ((element_bottom_position >= window_top_position) &&
       (element_top_position <= window_bottom_position - 10)) {
-      $element.addClass('in-view add-animation');
-      // setTimeout(function(){
-      //   $element.addClass('in-view add-animation');
-      // },(i*150));
+      // $element.addClass('in-view add-animation');
+      setTimeout(function () {
+        $(el).addClass('in-view add-animation');
+      }, 100 + (i * 150));
     } else {
       $element.removeClass('in-view');
     }
@@ -53,11 +70,10 @@ function check_if_in_view() {
 $window.on('scroll resize', check_if_in_view);
 $window.trigger('scroll');
 
-
 $(document).ready(function () {
   //Navbar toggle
   $(".hamburger").on("click", function () {
-    if ($(".jsNavbarToggle").hasClass("is-open")) {
+    if ($(".hamburger").hasClass("is-active")) {
       navBarClose();
     } else {
       navBarOpen();
@@ -75,17 +91,18 @@ $(document).ready(function () {
     }
   });
 
-  //if element exists
+  //Banner carousel
   if ($(".jsBannerCarousel").length) {
     var bannerCarousel = $(".jsBannerCarousel"); //Banner-carousel for Property-details page
     bannerCarousel.owlCarousel({
       items: 1,
+      margin: 5,
       loop: true,
-      mouseDrag: false,
+      mouseDrag: true,
       nav: false,
       dots: false,
-      animateIn: isIE11 ? "" : "fadeIn",
-      animateOut: isIE11 ? "" : "fadeOut",
+      animateIn: isIE11 || isIE10 ? "" : "slideInUp",
+      animateOut: isIE11 || isIE10 ? "" : "slideOutUp",
       smartSpeed: 500,
       autoplay: true,
       autoplayTimeout: 7000,
@@ -98,9 +115,9 @@ $(document).ready(function () {
     $('.jsCarouselNxt').on('click', function () {
       $(this).closest('.carousel-outer').find(bannerCarousel).trigger('next.owl.carousel');
     });
-  }
+  };
 
-  /*Strip carousel*/
+  //Product carousel
   if ($('.jsProductCarousel').length) { //if element exists
     var jsProductCarousel = $('.jsProductCarousel');
     jsProductCarousel.owlCarousel({
@@ -129,8 +146,7 @@ $(document).ready(function () {
     $('.jsCarouselNxt').on('click', function () {
       $(this).closest('.carousel-outer').find(jsProductCarousel).trigger('next.owl.carousel');
     });
-  }
-
+  };
 
   // Initialize the Popup
   $(".popup").popup({
@@ -191,7 +207,6 @@ $(document).ready(function () {
     });
   };
 
-
   // Google Map
   if ($('#map-canvas').length) { //if element exists
     //create empty LatLngBounds object
@@ -234,10 +249,10 @@ $(document).ready(function () {
       map.setZoom(getViewportWidth() < 700 ? 8 : 14.4);
       google.maps.event.removeListener(listener);
     });
-  }
+  };
 
   //Page transition
-  const swup = new Swup({
+  var swup = new Swup({
     cache: true,
     animationSelector: '[class^="a-"]',
     elements: ['#swup'],
@@ -254,6 +269,30 @@ $(document).ready(function () {
     scrollDuration: 0,
 
     LINK_SELECTOR: 'a[href^="/"]:not([data-no-swup]), a[xlink\\:href]'
-  })
+  });
+
+  //Filter tabs
+  /*Filter*/
+  if ($('.filter_parent').length) { //if element exists
+    $('.filter_tab').on('click', function () {
+      $filter_parent = $(this).closest('.filter_parent');
+      $filterBy = $(this).attr('data-filterby');
+      if ($(this).hasClass('is-active')) {
+        // $('.filter_tab').removeClass('is-active'); //single select at a time
+        // $(this).removeClass('is-active');
+        // filtered($filter_parent);
+      } else {
+        $('.filter_tab').removeClass('is-active'); //single select at a time 
+        $(this).addClass('is-active');
+        if ($('.filter_dropdown').val() !== $filterBy) {
+          $('.filter_dropdown').val($filterBy)
+        }
+        filtered($filter_parent);
+      }
+    });
+    $('.filter_dropdown').change(function () {
+      $('.filter_tab[data-filterby=' + $(this).val() + ']').trigger('click');
+    });
+  };
 
 });
