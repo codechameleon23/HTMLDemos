@@ -1981,15 +1981,16 @@ ul.is-primary li:before, ol.is-primary li:before { color: #859090; }
   .process-row:not(:first-child):nth-child(odd) .process-block:nth-child(even), .process-row:nth-child(even) .process-block:nth-child(even) { padding-left: 4.5rem; border-top-left-radius: 3rem; border-bottom-left-radius: 3rem; margin-right: 3rem; border-right: 0; }
   .process-row:not(:first-child):nth-child(odd) .process-block:nth-child(even):not(.block-aside):after, .process-row:nth-child(even) .process-block:nth-child(even):not(.block-aside):after { content: ""; position: absolute; width: 1rem; height: 1rem; border: 1.3pt solid #859090; border-left-width: 0; border-bottom-width: 0; -webkit-transform: rotate(135deg); -ms-transform: rotate(135deg); transform: rotate(135deg); left: -.6rem; top: 50%; } }
 
-@media all and (min-width: 768px) { .process-block { border: 1.3pt solid #859090; color: #859090; position: relative; width: 18%; }
-  .process-block:after { content: ""; position: absolute; width: 1rem; height: 1rem; border: 1.3pt solid #859090; border-left-width: 0; border-bottom-width: 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); right: 0; top: -.6rem; }
-  .process-block .button { opacity: 0; }
+@media all and (hover: hover) { .process-block .button { opacity: 0; }
   .process-block .img-hover-toggle > * > *:first-child { opacity: 0; }
   .process-block:hover { color: #010407; }
   .process-block:hover .button { -webkit-animation: fadeInDown .3s 0s ease-in-out both; animation: fadeInDown .3s 0s ease-in-out both; }
   .process-block:hover .img-hover-toggle > * { -webkit-animation: flipper 5s .3s linear infinite; animation: flipper 5s .3s linear infinite; -webkit-perspective: 500px; perspective: 500px; -webkit-perspective-origin: 50% 50%; perspective-origin: 50% 50%; }
   .process-block:hover .img-hover-toggle > * > *:first-child { opacity: 1; }
-  .process-block:hover .img-hover-toggle > * > *:last-child { opacity: 0; }
+  .process-block:hover .img-hover-toggle > * > *:last-child { opacity: 0; } }
+
+@media all and (min-width: 768px) { .process-block { border: 1.3pt solid #859090; color: #859090; position: relative; width: 18%; }
+  .process-block:after { content: ""; position: absolute; width: 1rem; height: 1rem; border: 1.3pt solid #859090; border-left-width: 0; border-bottom-width: 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); right: 0; top: -.6rem; }
   .process-row { display: -webkit-box; display: -ms-flexbox; display: flex; }
   .process-row .block-aside { -webkit-box-flex: 1; -ms-flex: auto; flex: auto; width: auto; }
   .process-row .process-block:not(.block-aside) { border-left: 0; border-right: 0; }
