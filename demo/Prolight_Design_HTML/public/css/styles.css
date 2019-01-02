@@ -1497,13 +1497,17 @@ hr.is-default { border-color: #010407; }
 
 .icons > .icon + .icon { margin-left: .7rem; }
 
-.button { cursor: pointer; -ms-flex-item-align: start; align-self: flex-start; text-align: center; display: inline-block; white-space: nowrap; -webkit-transition: all .3s 0s ease-in-out; -o-transition: all .3s 0s ease-in-out; transition: all .3s 0s ease-in-out; border: 1pt solid; text-decoration: none !important; outline: none !important; font-size: 1.5rem; font-weight: 300; padding: 1.13rem 0; }
+.button { cursor: pointer; -ms-flex-item-align: start; align-self: flex-start; text-align: center; display: inline-block; white-space: nowrap; -webkit-transition: all .3s 0s ease-in-out; -o-transition: all .3s 0s ease-in-out; transition: all .3s 0s ease-in-out; border: 1pt solid; text-decoration: none !important; outline: none !important; font-size: 1.5rem; font-weight: 300; padding: 1.13rem 1rem; }
 
-.button.size-big { min-width: 25rem; }
+@media all and (max-width: 768px) { .button { width: 100%; }
+  .button.size-big { min-width: 0; max-width: 25rem; }
+  .button.size-mid { min-width: 0; max-width: 20.9rem; }
+  .button.size-reg { min-width: 0; max-width: 15rem; } }
 
-.button.size-mid { min-width: 20.9rem; }
-
-.button.size-reg { min-width: 15rem; }
+@media all and (min-width: 769px) { .button { padding: 1.13rem 0rem; }
+  .button.size-big { min-width: 25rem; }
+  .button.size-mid { min-width: 20.9rem; }
+  .button.size-reg { min-width: 15rem; } }
 
 .button, .button.is-primary { background-color: transparent; border-color: #859090; color: #010407; }
 

@@ -294,11 +294,14 @@ $(document).ready(function () {
     });
   };
 
-  $('.has-hover').removeClass('is-hovered');
-  $('.has-hover').mouseenter(function () {
-    $(this).addClass('is-hovered');
-  }).mouseleave(function () {
+  //Thumb Roll over
+  if ($('.has-hover').length) {
     $('.has-hover').removeClass('is-hovered');
-  });
+    $('.has-hover').mouseenter(function () {
+      $(this).addClass('is-hovered');
+    }).mouseleave(function () {
+      $('.has-hover').removeClass('is-hovered');
+    });
+  };
 
 });
