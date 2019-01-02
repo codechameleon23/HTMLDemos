@@ -2020,13 +2020,15 @@ ul.is-primary li:before, ol.is-primary li:before { color: #859090; }
 
 .figure.full-grow .image-holder, .figure-rollover, .figure-caption { position: absolute; width: 100%; height: 100%; top: 0; left: 0; text-decoration: none !important; }
 
+.figure-rollover { opacity: 0; -webkit-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out; transition: all .3s ease-in-out; }
+
 a.figure:hover .image-holder, .figure:hover a.image-holder { -webkit-transform: scale(1.075); -ms-transform: scale(1.075); transform: scale(1.075); }
 
 .has-hover .figure-rollover { -webkit-animation: slideOutRight 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; animation: slideOutRight 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
 
 .has-hover .figure-rollover .figure-rollover-inner { -webkit-animation: slideOutRight 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; animation: slideOutRight 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
 
-.has-hover.is-hovered .figure-rollover { -webkit-animation: slideInLeft 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; animation: slideInLeft 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+.has-hover.is-hovered .figure-rollover { opacity: 1; -webkit-animation: slideInLeft 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; animation: slideInLeft 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
 
 .has-hover.is-hovered .figure-rollover .figure-rollover-inner { -webkit-animation: slideInLeft 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both; animation: slideInLeft 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
 
