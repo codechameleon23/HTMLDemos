@@ -167,6 +167,7 @@ $(document).ready(function () {
         },
         callbacks: {
           elementParse: function (item) {
+            console.log(item.el[0].className);
             if (item.el[0].className == 'has-video') {
               item.type = 'iframe',
                 item.iframe = {
@@ -271,7 +272,6 @@ $(document).ready(function () {
   });
 
   //Filter tabs
-  /*Filter*/
   if ($('.filter_parent').length) { //if element exists
     $('.filter_tab').on('click', function () {
       $filter_parent = $(this).closest('.filter_parent');
@@ -293,5 +293,12 @@ $(document).ready(function () {
       $('.filter_tab[data-filterby=' + $(this).val() + ']').trigger('click');
     });
   };
+
+  $('.has-hover').removeClass('is-hovered');
+  $('.has-hover').mouseenter(function () {
+    $(this).addClass('is-hovered');
+  }).mouseleave(function () {
+    $('.has-hover').removeClass('is-hovered');
+  });
 
 });
