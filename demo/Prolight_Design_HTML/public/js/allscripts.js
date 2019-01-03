@@ -326,7 +326,7 @@ $(document).ready(function () {
     });
   };
 
-  Thumb Rollover
+  //Thumb Rollover
   if ($('.has-hover').length) {
     $('.has-hover').removeClass('is-hovered');
     $('.has-hover').mouseenter(function () {
