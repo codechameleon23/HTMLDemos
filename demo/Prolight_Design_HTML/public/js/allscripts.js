@@ -328,14 +328,14 @@ $(document).ready(function () {
   };
 
   //Thumb Rollover
-  $(window).unload( function () { $('a').blur(); } );
+  $('.has-hover').removeClass('is-hovered');
+  
   if ($('.has-hover').length) {
-    $('.has-hover').removeClass('is-hovered');
     $('.has-hover').mouseenter(function () {
       $(this).addClass('is-hovered');
     }).mouseleave(function () {
       $('.has-hover').removeClass('is-hovered');
     });
   };
-  
+
 });
