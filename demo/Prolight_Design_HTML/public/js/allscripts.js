@@ -329,11 +329,12 @@ $(document).ready(function () {
   //Thumb Rollover
   if ($('.has-hover').length) {
     $('.has-hover').removeClass('is-hovered');
-    $('.has-hover').mouseenter(function () {
-      $(this).addClass('is-hovered');
-    }).mouseleave(function () {
-      $('.has-hover').removeClass('is-hovered');
-    });
+    $('.has-hover').hover(function () {
+      $(this).toggleClass('is-hovered');
+    })
+    // .mouseleave(function () {
+    //   $('.has-hover').removeClass('is-hovered');
+    // });
   };
 
 });
