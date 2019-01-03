@@ -339,7 +339,7 @@ $(document).ready(function () {
   //     $('.has-hover').removeClass('is-hovered');
   //   });
   // };
-
+  $(window).unload( function () { $('a').blur(); } );
   $('.has-hover').doubleTapToGo();
 
 });
