@@ -328,7 +328,7 @@ $(document).ready(function () {
 
   Thumb Rollover
   if ($('.has-hover').length) {
-    $('.has-hover').addClass('is-hovered');
+    $('.has-hover').removeClass('is-hovered');
     $('.has-hover').mouseenter(function () {
       $(this).addClass('is-hovered');
     }).mouseleave(function () {
