@@ -326,14 +326,14 @@ $(document).ready(function () {
     });
   };
 
-  //Thumb Roll over
-  if ($('.has-hover').length) {
-    $('.has-hover').removeClass('is-hovered');
-    $('.has-hover').mouseenter(function () {
-      $(this).addClass('is-hovered');
-    }).mouseleave(function () {
-      $('.has-hover').removeClass('is-hovered');
-    });
-  };
+  //Thumb Rollover
+  // if ($('.has-hover').length) {
+    // $('.has-hover').addClass('is-hovered');
+    // $('.has-hover').mouseenter(function () {
+    //   $(this).addClass('is-hovered');
+    // }).mouseleave(function () {
+    //   $('.has-hover').removeClass('is-hovered');
+    // });
+  // };
 
 });
