@@ -246,8 +246,10 @@ $(document).ready(function () {
 
   //Page transition
   var swup = new Swup({
+    LINK_SELECTOR: 'a[href^="' + window.location.origin + '"]:not([data-no-swup]), a[href^="/"]:not([data-no-swup]), a[href^="#"]:not([data-no-swup])',
+    FORM_SELECTOR: 'form[data-swup-form]',
     cache: true,
-    animationSelector: '[class^="a-"]',
+    animationSelector: '[class*="transition-"]',
     elements: ['#swup'],
     pageClassPrefix: '',
     debugMode: false,
