@@ -15,14 +15,14 @@
 
 <body class="theme-colorWinter">
   <!-- Header -->
-  <header class="header is-light flex-row justify-center bg-colorMirage  text-white">
+  <header class="header is-light flex-row bg-colorMirage text-white">
     <nav class="navbar container pt-30 pb-30 flex-row flex-col flex-row_sm flex-wrap justify-space-between align-center">
       <a class="bran-logo" href="index.html"><img src="images/brand-logo.png" alt="Prestro"></a>
       <div class="hamburger m-15">
         <span></span><span></span><span></span><span></span>
       </div>
       <ul class="nav-links is-inline text-center flex-col flex-row_sm col-auto font-18 font-lh-22 text-regular pt-10 pb-10 ml-auto_sm">
-        <li>
+        <li class="active">
           <a class="pl-28 pr-28 pt-10 pb-10 pt-0_sm pb-0_sm" href="index.html">Home</a>
         </li>
         <li>
@@ -49,8 +49,8 @@
       <div class="banner is-hero at-bottom-right has-shade frm_ltr flex-col ar_5x2_sm theme-bg">
         <div class="banner-bg" style="background-image:url('images/banner-bg.jpg')">
         </div>
-        <div class="container banner-body flex-row flex-wrap grid has-gutter-reg">
-          <div class="col col-12 col-6_md pt-78_sm">
+        <div class="container banner-body flex-row flex-wrap grid has-gutter-reg has-list-reg">
+          <div class="col col-12 col-6_sm pt-78_sm">
             <h2 class="font-50 font-lh-60 mb-30">
               <span class="text-heavy"><em>Hungry? Why wait?</em></span><br>
               <span class="font-45">Enjoy a week of meals for £20 or less...</span>
@@ -61,7 +61,7 @@
                 healthy goodness and all for under £20 or less every week. </p>
             </div>
           </div>
-          <div class="col col-12 col-6_md pb-30">
+          <div class="col col-12 col-6_sm pb-30 flex-row align-end">
             <div class="figure img-fit ar-1x1">
               <div class="image-holder" style="background-image: url('images/iStock-905879422-blue-1x1.png')"></div>
             </div>
@@ -71,10 +71,10 @@
     </section>
 
     <section class="section_thik section-wrap_thik section_fat_sm section-wrap_fat_sm">
-      <div class="container flex-row grid has-gutter-reg has-list-reg">
-        <div class="col col-12 col-6_sm">
+      <div class="container flex-row flex-wrap grid has-gutter-reg has-list-reg">
+        <div class="col col-12 col-8_sm col-6_md ml-auto_sm mr-auto_sm mt-0_md mr-0_md">
 
-          <div class="col-12 pt-45 pr-45 pl-45 pb-25 theme-bg flex-col align-start mb-50">
+          <div class="signup_index col-12 pt-30 pl-30 pr-30 pb-30 pl-45_sm pr-45_sm theme-bg flex-col align-start mb-50">
             <h2 class="font-34 font-lh-40 text-heavy mb-30">Fill out the form to receive your free weekly meal plan.</h2>
             <form class="form flex-row flex-wrap">
               <div class="fields col-12">
@@ -102,7 +102,7 @@
                   </label>
                 </div>
               </div>
-              <div class="fields col-12 col-count-2_sm">
+              <div class="fields col-12 col-count-2_md">
                 <div class="field text-caps mb-20 font-18 font-lh-21 text-regular">
                   <span>Sign up to receive your free weekly meal plan</span>
                 </div>
@@ -154,7 +154,7 @@
 
 
         </div>
-        <div class="col col-12 col-6_sm">
+        <div class="col col-12 col-8_sm col-6_md ml-auto_sm mr-auto_sm mt-0_md mr-0_md">
           <h2 class="font-50 font-lh-60 text-heavy mb-30"><em>Enjoy healthy meals every day!</em></h2>
           <div class="font-34 font-lh-40 text-regular col-12 col-11_sm mb-30">
             <p>Join the Presto free weekly student meal plan and experience our exciting and diverse menus.</p>
@@ -256,6 +256,58 @@
       </div>
     </section>
   </main>
+
+  <!-- Signup popup -->
+  <div id="signup_popup" class="popup popup-sm">
+    <div class="popup-wrap bg-primary text-white">
+      <a href="javascript:void(0);" class="signup_popup_close close_button">
+        <span></span>
+        <span></span>
+      </a>
+      <div class="popup-body">
+        <div class="pt-30 pl-30 pr-30 pb-30 pl-45_sm pr-45_sm theme-bg flex-col align-start">
+          <h2 class="font-34 font-lh-40 text-heavy mb-30">Full width sign up form - Fill out the form to
+            receive your free weekly meal plan.</h2>
+          <form class="form flex-row flex-wrap">
+            <div class="fields col-12">
+              <div class="field text-caps mb-20">
+                <input type="text" value="" placeholder="Full name" />
+              </div>
+              <div class="field text-caps mb-20">
+                <input type="email" value="" placeholder="Email address" />
+              </div>
+              <div class="field text-caps mb-20">
+                <input type="text" value="" placeholder="University" />
+              </div>
+              <div class="field text-caps mb-20">
+                <input type="text" value="" placeholder="Age" />
+              </div>
+              <div class="field text-caps mb-20">
+                <input type="text" value="" placeholder="Gender" />
+              </div>
+              <div class="field text-caps mb-20 text-regular">
+                <label class="custom-check has_link">
+                  <input name="addr" type="checkbox">
+                  <span class="tick"></span>
+                  <span class="related-text flex-inline align-center"><span>I have read and agree with
+                      the prolight design <a href="#">privacy&nbsp;policy</a></span></span>
+                </label>
+              </div>
+            </div>
+            <div class="fields col-12 col-count-2_xs">
+              <div class="field text-caps mb-20 font-18 font-lh-21 text-regular">
+                <span>Sign up to receive your free weekly meal plan</span>
+              </div>
+              <div class="field text-caps mb-20">
+                <a href="" class="button size-full"><span>Sign up</span></a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Footer -->
   <footer class="footer flex-col justify-center bg-colorMirage  text-white pt-70">
     <nav class="navbar container flex-col flex-row_md flex-wrap justify-space-between align-center pb-25">

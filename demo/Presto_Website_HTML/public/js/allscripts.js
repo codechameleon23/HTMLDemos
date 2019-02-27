@@ -85,6 +85,7 @@ $(document).ready(function () {
   // Initialize the Popup
   $(".popup").popup({
     scrolllock: true,
+    autoopen: true,
   });
 
   // Thumb Rollover
@@ -117,42 +118,71 @@ $(document).ready(function () {
         }
     });
   };
+  
+  // water_wheel_carousel
+  if($('.jsWaterWheel').length){
 
-   /*--water_wheel_carousel--*/
-   if($('.js_waterWheel').length){
-    function moveToSelected(element) {
-
-      if (element == "next") {
-        var selected = $(".selected").next();
-      } else if (element == "prev") {
-        var selected = $(".selected").prev();
-      } else {
-        var selected = element;
-      }
-
-      var next = $(selected).next();
-      var prev = $(selected).prev();
-      var prevSecond = $(prev).prev();
-      var nextSecond = $(next).next();
-  
-      $(selected).attr({'class':''}).removeClass().addClass("selected");
-  
-      $(prev).attr({'class':''}).removeClass().addClass("prev");
-      $(next).attr({'class':''}).removeClass().addClass("next");
-  
-      $(nextSecond).attr({'class':''}).removeClass().addClass("nextRightSecond");
-      $(prevSecond).attr({'class':''}).removeClass().addClass("prevLeftSecond");
-  
-      $(nextSecond).nextAll().attr({'class':''}).removeClass().addClass('hideRight');
-      $(prevSecond).prevAll().attr({'class':''}).removeClass().addClass('hideLeft');
-  
-    }
- 
-    $('#swiper div').click(function() {
-      moveToSelected($(this));
+    var captionCarousel = $('.jsCaptionCarousel');
+    captionCarousel.owlCarousel({
+        nav:false,
+        dots:false,
+        items: 1,
+        autoHeight: false,
+        mouseDrag: false,
+        touchDrag: false,
+        pullDrag: false,
     });
     
-   }
+    var jsWaterWheel = $('.jsWaterWheel').owlCarousel({
+      center: true,
+      loop: true,
+      nav: false,
+      donts: false,
+      items: 3,
+      margin: -200,
+      mouseDrag: false,
+      pullDrag: false,
+      responsive:{
+        0:{
+          margin: -100,
+        },
+        768:{
+          margin: -200,
+        },
+        990:{
+        }
+      },
+      onInitialized: coverFlowEfx,
+      onTranslate: coverFlowEfx,
+    });
+
+    $('.jsWaterWheelPrv').on('click', function () {
+      jsWaterWheel.trigger('prev.owl.carousel');
+      captionCarousel.trigger('prev.owl.carousel');
+    });
+    $('.jsWaterWheelNxt').on('click', function () {
+      jsWaterWheel.trigger('next.owl.carousel');
+      captionCarousel.trigger('next.owl.carousel');
+    });
+    
+    function coverFlowEfx(e){
+      if ($('.owl-dots')) {
+        $('.owl-dots').remove();
+      }
+      idx = e.item.index;
+      $('.owl-item.big').removeClass('big');
+      $('.owl-item.medium').removeClass('medium');
+      $('.owl-item.mdright').removeClass('mdright');
+      $('.owl-item.mdleft').removeClass('mdleft');
+      $('.owl-item.smallRight').removeClass('smallRight');
+      $('.owl-item.smallLeft').removeClass('smallLeft');
+      $('.owl-item').eq(idx -1).addClass('medium mdleft');
+      $('.owl-item').eq(idx).addClass('big');
+      $('.owl-item').eq(idx + 1).addClass('medium mdright');
+      $('.owl-item').eq(idx + 2).addClass('smallRight');
+      $('.owl-item').eq(idx - 2).addClass('smallLeft');
+    }
+  }
    
 });
 // iPhone page refresh on back button
