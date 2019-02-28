@@ -104,7 +104,7 @@ $(document).ready(function () {
   // Initialize the Popup
   $(".popup").popup({
     scrolllock: true,
-    // autoopen: true,
+    autoopen: true,
   });
 
   // Thumb Rollover
