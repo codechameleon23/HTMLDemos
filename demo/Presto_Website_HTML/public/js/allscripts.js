@@ -82,7 +82,7 @@ function check_if_in_view() {
       // $element.addClass('in-view add-animation');
       setTimeout(function () {
         $(el).addClass('in-view add-animation');
-      }, 100 + (i * 150));
+      }, 100 + (i * 50));
     } else {
       $element.removeClass('in-view');
     }
@@ -104,7 +104,6 @@ $(document).ready(function () {
   // Initialize the Popup
   $(".popup").popup({
     scrolllock: true,
-    autoopen: true,
   });
 
   // Thumb Rollover
@@ -145,6 +144,10 @@ $(document).ready(function () {
       autoPlay: 3200,
       speed: 450,
       animationEasing: 'easeInSine',
+      separation: 130,
+      separationMultiplier: .8,
+      opacityMultiplier: 1,
+      sizeMultiplier: 0.8,
       movedToCenter: function ($item) {
         $('.captions .caption').removeClass('active');
         $('#'+$item.attr('rel')).addClass('active');
