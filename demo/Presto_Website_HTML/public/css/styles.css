@@ -2450,7 +2450,7 @@ a.figure:hover .image-holder, .figure:hover a.image-holder { -webkit-transform: 
   .header.is-light { background-color: transparent !important; }
   .header ~ * .banner { padding-top: 11.6rem; } }
 
-.header ul, .header li, .footer ul, .footer li { margin-bottom: 0; }
+.header ul li, .footer ul li { margin-bottom: 0; }
 
 .navbar .nav-links li:after { opacity: 0; clear: both; content: ""; height: 0; width: 0; color: inherit; border-bottom: .2rem solid; display: block; position: absolute; margin: 0; bottom: -1.5rem; left: 50%; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); border-color: #414042; -webkit-transition: opacity 1s .5s ease-in-out; -o-transition: opacity 1s .5s ease-in-out; transition: opacity 1s .5s ease-in-out; -webkit-transform-origin: center; -ms-transform-origin: center; transform-origin: center; }
 
@@ -2468,8 +2468,8 @@ a.figure:hover .image-holder, .figure:hover a.image-holder { -webkit-transform: 
   .header .nav-links li { opacity: 0; }
   .header .hamburger { -webkit-box-ordinal-group: 0; -ms-flex-order: -1; order: -1; position: absolute; top: 2rem; left: 2rem; }
   .header .social-links { position: absolute; top: 2rem; right: 2rem; margin-top: 1rem; }
-  .header .hamburger.is-active ~ .nav-links { max-height: 500rem; margin-top: 1.5rem; }
-  .header .hamburger.is-active ~ .nav-links li:after { bottom: 0rem; }
+  .header .hamburger.is-active ~ .nav-links { max-height: 500rem; margin-top: 1.5rem; -webkit-transition: all .7s 0s ease-in-out; -o-transition: all .7s 0s ease-in-out; transition: all .7s 0s ease-in-out; }
+  .header .hamburger.is-active ~ .nav-links li:after { bottom: 0rem; width: calc(100% - 4rem); }
   .header .hamburger.is-active ~ .nav-links li:nth-child(1) { -webkit-animation: fadeInLeft 0.2s 0.1s ease-in-out both; animation: fadeInLeft 0.2s 0.1s ease-in-out both; }
   .header .hamburger.is-active ~ .nav-links li:nth-child(2) { -webkit-animation: fadeInLeft 0.2s 0.2s ease-in-out both; animation: fadeInLeft 0.2s 0.2s ease-in-out both; }
   .header .hamburger.is-active ~ .nav-links li:nth-child(3) { -webkit-animation: fadeInLeft 0.2s 0.3s ease-in-out both; animation: fadeInLeft 0.2s 0.3s ease-in-out both; }
