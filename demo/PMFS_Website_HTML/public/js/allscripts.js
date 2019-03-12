@@ -209,7 +209,7 @@ $(document).ready(function () {
 
   // Responsive Table
   $('.jsTableResponsive').basictable({
-    breakpoint: 576,
+    breakpoint: 577,
   });
 
 });
