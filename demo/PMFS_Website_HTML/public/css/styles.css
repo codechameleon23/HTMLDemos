@@ -724,48 +724,48 @@ table.bt.bt--no-header tfoot td::before, table.bt.bt--no-header tbody td::before
 @media all and (-ms-high-contrast: none) { .icon > span img *::-ms-backdrop, .icon > span img { width: 100%; } }
 
 @media all and (min-width: 0) { .icon { width: 2rem; }
-  .icon img { height: 2rem; }
+  .icon img { max-height: 2rem; }
   .icon-sm { width: 1.6rem; }
-  .icon-sm img { height: 1.6rem; }
+  .icon-sm img { max-height: 1.6rem; }
   .icon-rg { width: 2.4rem; }
-  .icon-rg img { height: 2.4rem; }
+  .icon-rg img { max-height: 2.4rem; }
   .icon-md { width: 3.2rem; }
-  .icon-md img { height: 3.2rem; }
+  .icon-md img { max-height: 3.2rem; }
   .icon-lg { width: 5.2rem; }
-  .icon-lg img { height: 5.2rem; } }
+  .icon-lg img { max-height: 5.2rem; } }
 
 @media all and (min-width: 576px) { .icon_sm { width: 2rem; }
-  .icon_sm img { height: 2rem; }
+  .icon_sm img { max-height: 2rem; }
   .icon-sm_sm { width: 1.6rem; }
-  .icon-sm_sm img { height: 1.6rem; }
+  .icon-sm_sm img { max-height: 1.6rem; }
   .icon-rg_sm { width: 2.4rem; }
-  .icon-rg_sm img { height: 2.4rem; }
+  .icon-rg_sm img { max-height: 2.4rem; }
   .icon-md_sm { width: 3.2rem; }
-  .icon-md_sm img { height: 3.2rem; }
+  .icon-md_sm img { max-height: 3.2rem; }
   .icon-lg_sm { width: 5.2rem; }
-  .icon-lg_sm img { height: 5.2rem; } }
+  .icon-lg_sm img { max-height: 5.2rem; } }
 
 @media all and (min-width: 992px) { .icon_md { width: 2rem; }
-  .icon_md img { height: 2rem; }
+  .icon_md img { max-height: 2rem; }
   .icon-sm_md { width: 1.6rem; }
-  .icon-sm_md img { height: 1.6rem; }
+  .icon-sm_md img { max-height: 1.6rem; }
   .icon-rg_md { width: 2.4rem; }
-  .icon-rg_md img { height: 2.4rem; }
+  .icon-rg_md img { max-height: 2.4rem; }
   .icon-md_md { width: 3.2rem; }
-  .icon-md_md img { height: 3.2rem; }
+  .icon-md_md img { max-height: 3.2rem; }
   .icon-lg_md { width: 5.2rem; }
-  .icon-lg_md img { height: 5.2rem; } }
+  .icon-lg_md img { max-height: 5.2rem; } }
 
 @media all and (min-width: 1200px) { .icon_lg { width: 2rem; }
-  .icon_lg img { height: 2rem; }
+  .icon_lg img { max-height: 2rem; }
   .icon-sm_lg { width: 1.6rem; }
-  .icon-sm_lg img { height: 1.6rem; }
+  .icon-sm_lg img { max-height: 1.6rem; }
   .icon-rg_lg { width: 2.4rem; }
-  .icon-rg_lg img { height: 2.4rem; }
+  .icon-rg_lg img { max-height: 2.4rem; }
   .icon-md_lg { width: 3.2rem; }
-  .icon-md_lg img { height: 3.2rem; }
+  .icon-md_lg img { max-height: 3.2rem; }
   .icon-lg_lg { width: 5.2rem; }
-  .icon-lg_lg img { height: 5.2rem; } }
+  .icon-lg_lg img { max-height: 5.2rem; } }
 
 .icons > * + * { margin-left: .7rem; }
 
@@ -1133,15 +1133,69 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focu
 .banner-body { position: relative; z-index: 1; }
 
 /*Color classes*/
-.bg-primary { background-color: #bf1721; }
+@media all and (min-width: 0) { .bg-primary { background-color: #bf1721; }
+  .bg-white { background-color: #ffffff; }
+  .bg-secondary { background-color: #9d9d9c; }
+  .bg-secondaryLight { background-color: #c6c6c6; }
+  .bg-secondaryExtraLight { background-color: #edecee; }
+  .text-default { color: #020203; }
+  .text-default input[type="email"], .text-default input[type="number"], .text-default input[type="search"], .text-default input[type="text"], .text-default input[type="tel"], .text-default input[type="url"], .text-default textarea, .text-default select { color: #020203; }
+  .text-defaultLight { color: #575756; }
+  .text-defaultLight input[type="email"], .text-defaultLight input[type="number"], .text-defaultLight input[type="search"], .text-defaultLight input[type="text"], .text-defaultLight input[type="tel"], .text-defaultLight input[type="url"], .text-defaultLight textarea, .text-defaultLight select { color: #575756; }
+  .text-primary { color: #cc0033; }
+  .text-primary input[type="email"], .text-primary input[type="number"], .text-primary input[type="search"], .text-primary input[type="text"], .text-primary input[type="tel"], .text-primary input[type="url"], .text-primary textarea, .text-primary select { color: #cc0033; }
+  .text-secondary { color: #bab8bb; }
+  .text-secondary input[type="email"], .text-secondary input[type="number"], .text-secondary input[type="search"], .text-secondary input[type="text"], .text-secondary input[type="tel"], .text-secondary input[type="url"], .text-secondary textarea, .text-secondary select { color: #bab8bb; }
+  .text-white { color: #ffffff; }
+  .text-white input[type="email"], .text-white input[type="number"], .text-white input[type="search"], .text-white input[type="text"], .text-white input[type="tel"], .text-white input[type="url"], .text-white textarea, .text-white select { color: #ffffff; } }
 
-.bg-white { background-color: #ffffff; }
+@media all and (min-width: 576px) { .bg-primary_sm { background-color: #bf1721; }
+  .bg-white_sm { background-color: #ffffff; }
+  .bg-secondary_sm { background-color: #9d9d9c; }
+  .bg-secondaryLight_sm { background-color: #c6c6c6; }
+  .bg-secondaryExtraLight_sm { background-color: #edecee; }
+  .text-default_sm { color: #020203; }
+  .text-default_sm input[type="email"], .text-default_sm input[type="number"], .text-default_sm input[type="search"], .text-default_sm input[type="text"], .text-default_sm input[type="tel"], .text-default_sm input[type="url"], .text-default_sm textarea, .text-default_sm select { color: #020203; }
+  .text-defaultLight_sm { color: #575756; }
+  .text-defaultLight_sm input[type="email"], .text-defaultLight_sm input[type="number"], .text-defaultLight_sm input[type="search"], .text-defaultLight_sm input[type="text"], .text-defaultLight_sm input[type="tel"], .text-defaultLight_sm input[type="url"], .text-defaultLight_sm textarea, .text-defaultLight_sm select { color: #575756; }
+  .text-primary_sm { color: #cc0033; }
+  .text-primary_sm input[type="email"], .text-primary_sm input[type="number"], .text-primary_sm input[type="search"], .text-primary_sm input[type="text"], .text-primary_sm input[type="tel"], .text-primary_sm input[type="url"], .text-primary_sm textarea, .text-primary_sm select { color: #cc0033; }
+  .text-secondary_sm { color: #bab8bb; }
+  .text-secondary_sm input[type="email"], .text-secondary_sm input[type="number"], .text-secondary_sm input[type="search"], .text-secondary_sm input[type="text"], .text-secondary_sm input[type="tel"], .text-secondary_sm input[type="url"], .text-secondary_sm textarea, .text-secondary_sm select { color: #bab8bb; }
+  .text-white_sm { color: #ffffff; }
+  .text-white_sm input[type="email"], .text-white_sm input[type="number"], .text-white_sm input[type="search"], .text-white_sm input[type="text"], .text-white_sm input[type="tel"], .text-white_sm input[type="url"], .text-white_sm textarea, .text-white_sm select { color: #ffffff; } }
 
-.bg-secondary { background-color: #9d9d9c; }
+@media all and (min-width: 992px) { .bg-primary_md { background-color: #bf1721; }
+  .bg-white_md { background-color: #ffffff; }
+  .bg-secondary_md { background-color: #9d9d9c; }
+  .bg-secondaryLight_md { background-color: #c6c6c6; }
+  .bg-secondaryExtraLight_md { background-color: #edecee; }
+  .text-default_md { color: #020203; }
+  .text-default_md input[type="email"], .text-default_md input[type="number"], .text-default_md input[type="search"], .text-default_md input[type="text"], .text-default_md input[type="tel"], .text-default_md input[type="url"], .text-default_md textarea, .text-default_md select { color: #020203; }
+  .text-defaultLight_md { color: #575756; }
+  .text-defaultLight_md input[type="email"], .text-defaultLight_md input[type="number"], .text-defaultLight_md input[type="search"], .text-defaultLight_md input[type="text"], .text-defaultLight_md input[type="tel"], .text-defaultLight_md input[type="url"], .text-defaultLight_md textarea, .text-defaultLight_md select { color: #575756; }
+  .text-primary_md { color: #cc0033; }
+  .text-primary_md input[type="email"], .text-primary_md input[type="number"], .text-primary_md input[type="search"], .text-primary_md input[type="text"], .text-primary_md input[type="tel"], .text-primary_md input[type="url"], .text-primary_md textarea, .text-primary_md select { color: #cc0033; }
+  .text-secondary_md { color: #bab8bb; }
+  .text-secondary_md input[type="email"], .text-secondary_md input[type="number"], .text-secondary_md input[type="search"], .text-secondary_md input[type="text"], .text-secondary_md input[type="tel"], .text-secondary_md input[type="url"], .text-secondary_md textarea, .text-secondary_md select { color: #bab8bb; }
+  .text-white_md { color: #ffffff; }
+  .text-white_md input[type="email"], .text-white_md input[type="number"], .text-white_md input[type="search"], .text-white_md input[type="text"], .text-white_md input[type="tel"], .text-white_md input[type="url"], .text-white_md textarea, .text-white_md select { color: #ffffff; } }
 
-.bg-secondaryLight { background-color: #c6c6c6; }
-
-.bg-secondaryExtraLight { background-color: #edecee; }
+@media all and (min-width: 1200px) { .bg-primary_lg { background-color: #bf1721; }
+  .bg-white_lg { background-color: #ffffff; }
+  .bg-secondary_lg { background-color: #9d9d9c; }
+  .bg-secondaryLight_lg { background-color: #c6c6c6; }
+  .bg-secondaryExtraLight_lg { background-color: #edecee; }
+  .text-default_lg { color: #020203; }
+  .text-default_lg input[type="email"], .text-default_lg input[type="number"], .text-default_lg input[type="search"], .text-default_lg input[type="text"], .text-default_lg input[type="tel"], .text-default_lg input[type="url"], .text-default_lg textarea, .text-default_lg select { color: #020203; }
+  .text-defaultLight_lg { color: #575756; }
+  .text-defaultLight_lg input[type="email"], .text-defaultLight_lg input[type="number"], .text-defaultLight_lg input[type="search"], .text-defaultLight_lg input[type="text"], .text-defaultLight_lg input[type="tel"], .text-defaultLight_lg input[type="url"], .text-defaultLight_lg textarea, .text-defaultLight_lg select { color: #575756; }
+  .text-primary_lg { color: #cc0033; }
+  .text-primary_lg input[type="email"], .text-primary_lg input[type="number"], .text-primary_lg input[type="search"], .text-primary_lg input[type="text"], .text-primary_lg input[type="tel"], .text-primary_lg input[type="url"], .text-primary_lg textarea, .text-primary_lg select { color: #cc0033; }
+  .text-secondary_lg { color: #bab8bb; }
+  .text-secondary_lg input[type="email"], .text-secondary_lg input[type="number"], .text-secondary_lg input[type="search"], .text-secondary_lg input[type="text"], .text-secondary_lg input[type="tel"], .text-secondary_lg input[type="url"], .text-secondary_lg textarea, .text-secondary_lg select { color: #bab8bb; }
+  .text-white_lg { color: #ffffff; }
+  .text-white_lg input[type="email"], .text-white_lg input[type="number"], .text-white_lg input[type="search"], .text-white_lg input[type="text"], .text-white_lg input[type="tel"], .text-white_lg input[type="url"], .text-white_lg textarea, .text-white_lg select { color: #ffffff; } }
 
 .bg-gred-primary { background: -webkit-gradient(linear, left top, right top, from(#bf1721), to(#E94257)); background: -webkit-linear-gradient(left, #bf1721, #E94257); background: -o-linear-gradient(left, #bf1721, #E94257); background: linear-gradient(to right, #bf1721, #E94257); }
 
@@ -1150,26 +1204,6 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focu
 .bg-gred-secondary { background: -webkit-gradient(linear, left top, right top, from(#bab8bb), to(#edecee)); background: -webkit-linear-gradient(left, #bab8bb, #edecee); background: -o-linear-gradient(left, #bab8bb, #edecee); background: linear-gradient(to right, #bab8bb, #edecee); }
 
 .bg-gred-secondary:hover:hover { -webkit-animation: color-change-2x .7s linear infinite alternate both; animation: color-change-2x .7s linear infinite alternate both; }
-
-.text-default { color: #020203; }
-
-.text-default input[type="email"], .text-default input[type="number"], .text-default input[type="search"], .text-default input[type="text"], .text-default input[type="tel"], .text-default input[type="url"], .text-default textarea, .text-default select { color: #020203; }
-
-.text-defaultLight { color: #575756; }
-
-.text-defaultLight input[type="email"], .text-defaultLight input[type="number"], .text-defaultLight input[type="search"], .text-defaultLight input[type="text"], .text-defaultLight input[type="tel"], .text-defaultLight input[type="url"], .text-defaultLight textarea, .text-defaultLight select { color: #575756; }
-
-.text-primary { color: #cc0033; }
-
-.text-primary input[type="email"], .text-primary input[type="number"], .text-primary input[type="search"], .text-primary input[type="text"], .text-primary input[type="tel"], .text-primary input[type="url"], .text-primary textarea, .text-primary select { color: #cc0033; }
-
-.text-secondary { color: #bab8bb; }
-
-.text-secondary input[type="email"], .text-secondary input[type="number"], .text-secondary input[type="search"], .text-secondary input[type="text"], .text-secondary input[type="tel"], .text-secondary input[type="url"], .text-secondary textarea, .text-secondary select { color: #bab8bb; }
-
-.text-white { color: #ffffff; }
-
-.text-white input[type="email"], .text-white input[type="number"], .text-white input[type="search"], .text-white input[type="text"], .text-white input[type="tel"], .text-white input[type="url"], .text-white textarea, .text-white select { color: #ffffff; }
 
 ul.is-primary li:before, ol.is-primary li:before { color: #bf1721; }
 
