@@ -36,6 +36,12 @@ a.fn.owlCarousel.Constructor.Plugins.Animate=e}(window.Zepto||window.jQuery,wind
 // jQuery.easing
 jQuery.easing.jswing=jQuery.easing.swing,jQuery.extend(jQuery.easing,{def:"easeOutQuad",swing:function(n,e,t,u,a){return jQuery.easing[jQuery.easing.def](n,e,t,u,a)},easeInQuad:function(n,e,t,u,a){return u*(e/=a)*e+t},easeOutQuad:function(n,e,t,u,a){return-u*(e/=a)*(e-2)+t},easeInOutQuad:function(n,e,t,u,a){return(e/=a/2)<1?u/2*e*e+t:-u/2*(--e*(e-2)-1)+t},easeInCubic:function(n,e,t,u,a){return u*(e/=a)*e*e+t},easeOutCubic:function(n,e,t,u,a){return u*((e=e/a-1)*e*e+1)+t},easeInOutCubic:function(n,e,t,u,a){return(e/=a/2)<1?u/2*e*e*e+t:u/2*((e-=2)*e*e+2)+t},easeInQuart:function(n,e,t,u,a){return u*(e/=a)*e*e*e+t},easeOutQuart:function(n,e,t,u,a){return-u*((e=e/a-1)*e*e*e-1)+t},easeInOutQuart:function(n,e,t,u,a){return(e/=a/2)<1?u/2*e*e*e*e+t:-u/2*((e-=2)*e*e*e-2)+t},easeInQuint:function(n,e,t,u,a){return u*(e/=a)*e*e*e*e+t},easeOutQuint:function(n,e,t,u,a){return u*((e=e/a-1)*e*e*e*e+1)+t},easeInOutQuint:function(n,e,t,u,a){return(e/=a/2)<1?u/2*e*e*e*e*e+t:u/2*((e-=2)*e*e*e*e+2)+t},easeInSine:function(n,e,t,u,a){return-u*Math.cos(e/a*(Math.PI/2))+u+t},easeOutSine:function(n,e,t,u,a){return u*Math.sin(e/a*(Math.PI/2))+t},easeInOutSine:function(n,e,t,u,a){return-u/2*(Math.cos(Math.PI*e/a)-1)+t},easeInExpo:function(n,e,t,u,a){return 0==e?t:u*Math.pow(2,10*(e/a-1))+t},easeOutExpo:function(n,e,t,u,a){return e==a?t+u:u*(1-Math.pow(2,-10*e/a))+t},easeInOutExpo:function(n,e,t,u,a){return 0==e?t:e==a?t+u:(e/=a/2)<1?u/2*Math.pow(2,10*(e-1))+t:u/2*(2-Math.pow(2,-10*--e))+t},easeInCirc:function(n,e,t,u,a){return-u*(Math.sqrt(1-(e/=a)*e)-1)+t},easeOutCirc:function(n,e,t,u,a){return u*Math.sqrt(1-(e=e/a-1)*e)+t},easeInOutCirc:function(n,e,t,u,a){return(e/=a/2)<1?-u/2*(Math.sqrt(1-e*e)-1)+t:u/2*(Math.sqrt(1-(e-=2)*e)+1)+t},easeInElastic:function(n,e,t,u,a){var r=1.70158,i=0,s=u;if(0==e)return t;if(1==(e/=a))return t+u;if(i||(i=.3*a),s<Math.abs(u)){s=u;r=i/4}else r=i/(2*Math.PI)*Math.asin(u/s);return-s*Math.pow(2,10*(e-=1))*Math.sin((e*a-r)*(2*Math.PI)/i)+t},easeOutElastic:function(n,e,t,u,a){var r=1.70158,i=0,s=u;if(0==e)return t;if(1==(e/=a))return t+u;if(i||(i=.3*a),s<Math.abs(u)){s=u;r=i/4}else r=i/(2*Math.PI)*Math.asin(u/s);return s*Math.pow(2,-10*e)*Math.sin((e*a-r)*(2*Math.PI)/i)+u+t},easeInOutElastic:function(n,e,t,u,a){var r=1.70158,i=0,s=u;if(0==e)return t;if(2==(e/=a/2))return t+u;if(i||(i=a*(.3*1.5)),s<Math.abs(u)){s=u;r=i/4}else r=i/(2*Math.PI)*Math.asin(u/s);return e<1?s*Math.pow(2,10*(e-=1))*Math.sin((e*a-r)*(2*Math.PI)/i)*-.5+t:s*Math.pow(2,-10*(e-=1))*Math.sin((e*a-r)*(2*Math.PI)/i)*.5+u+t},easeInBack:function(n,e,t,u,a,r){return void 0==r&&(r=1.70158),u*(e/=a)*e*((r+1)*e-r)+t},easeOutBack:function(n,e,t,u,a,r){return void 0==r&&(r=1.70158),u*((e=e/a-1)*e*((r+1)*e+r)+1)+t},easeInOutBack:function(n,e,t,u,a,r){return void 0==r&&(r=1.70158),(e/=a/2)<1?u/2*(e*e*((1+(r*=1.525))*e-r))+t:u/2*((e-=2)*e*((1+(r*=1.525))*e+r)+2)+t},easeInBounce:function(n,e,t,u,a){return u-jQuery.easing.easeOutBounce(n,a-e,0,u,a)+t},easeOutBounce:function(n,e,t,u,a){return(e/=a)<1/2.75?u*(7.5625*e*e)+t:e<2/2.75?u*(7.5625*(e-=1.5/2.75)*e+.75)+t:e<2.5/2.75?u*(7.5625*(e-=2.25/2.75)*e+.9375)+t:u*(7.5625*(e-=2.625/2.75)*e+.984375)+t},easeInOutBounce:function(n,e,t,u,a){return e<a/2?.5*jQuery.easing.easeInBounce(n,2*e,0,u,a)+t:.5*jQuery.easing.easeOutBounce(n,2*e-a,0,u,a)+.5*u+t}});
 
+// Responsive Table
+/*
+ * @license jQuery Basictable | MIT | Jerry Low | https://www.github.com/jerrylow/basictable
+ */
+!function(t){t.fn.basictable=function(a){var e=function(a,e,n){a.children().each(function(){var a=t(this);if(""!==a.html()&&"&nbsp;"!==a.html()||n.showEmptyCells){for(var r=a.index(),i="",s=0;s<e.length;s++){0!=s&&(i+=": "),i+=e[s][r].text()}a.attr("data-th",i),n.contentWrap&&!a.children().hasClass("bt-content")&&a.wrapInner('<span class="bt-content" />')}else a.addClass("bt-hide")})},n=function(a,e){e.forceResponsive?null!==e.breakpoint&&t(window).width()<=e.breakpoint||null!==e.containerBreakpoint&&a.parent().width()<=e.containerBreakpoint?r(a,e):i(a,e):a.removeClass("bt").outerWidth()>a.parent().width()?r(a,e):i(a,e)},r=function(t,a){t.addClass("bt"),a.header||t.addClass("bt--no-header"),a.tableWrap&&t.parent(".bt-wrapper").addClass("active")},i=function(t,a){t.removeClass("bt bt--no-header"),a.tableWrap&&t.parent(".bt-wrapper").removeClass("active")},s=function(a,e){var n;a.removeClass("bt bt--no-header"),a.find("td").removeAttr("data-th"),e.tableWrap&&a.unwrap(),e.contentWrap&&(n=a,t.each(n.find("td"),function(){var a=t(this),e=a.children(".bt-content").html();a.html(e)})),a.removeData("basictable")};this.each(function(){var o=t(this);if(0===o.length||o.data("basictable"))return o.data("basictable")&&("destroy"==a?s(o,o.data("basictable")):"start"===a?r(o,o.data("basictable")):"stop"===a?i(o,o.data("basictable")):n(o,o.data("basictable"))),!1;var l=t.extend({},t.fn.basictable.defaults,a),b={breakpoint:l.breakpoint,containerBreakpoint:l.containerBreakpoint,contentWrap:l.contentWrap,forceResponsive:l.forceResponsive,noResize:l.noResize,tableWrap:l.tableWrap,showEmptyCells:l.showEmptyCells,header:l.header};null===b.breakpoint&&null===b.containerBreakpoint&&(b.breakpoint=568),o.data("basictable",b),function(a,n){var r=[];if(n.tableWrap&&a.wrap('<div class="bt-wrapper"></div>'),n.header){var i="";i=a.find("thead tr th").length?"thead th":a.find("tbody tr th").length?"tbody tr th":a.find("th").length?"tr:first th":"tr:first td",t.each(a.find(i),function(){var a=t(this),e=parseInt(a.attr("colspan"),10)||1,n=a.closest("tr").index();r[n]||(r[n]=[]);for(var i=0;i<e;i++)r[n].push(a)})}t.each(a.find("tbody tr"),function(){e(t(this),r,n)}),t.each(a.find("tfoot tr"),function(){e(t(this),r,n)})}(o,o.data("basictable")),b.noResize||(n(o,o.data("basictable")),t(window).bind("resize.basictable",function(){var t;(t=o).data("basictable")&&n(t,t.data("basictable"))}))})},t.fn.basictable.defaults={breakpoint:null,containerBreakpoint:null,contentWrap:!0,forceResponsive:!0,noResize:!1,tableWrap:!1,showEmptyCells:!1,header:!0}}(jQuery);
+
 // scripts.js
 var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 var isIE10 = (navigator.userAgent.match(/MSIE 10/i));
@@ -125,6 +131,12 @@ $(document).ready(function () {
     scrolllock: true,
   });
 
+  if(getViewportWidth() < 992){
+    $("#catergorySlide_sm_popup").popup({
+      scrolllock: true,
+    });
+  }
+
   // Thumb Rollover
   $('.has-hover').removeClass('is-hovered');
   if ($('.has-hover').length) {
@@ -175,22 +187,30 @@ $(document).ready(function () {
                 items:2
             },
             600:{
+                items:3
+            },
+            800:{
                 items:5
             }
         }
     });
   };
 
-    /*Accordion toggle*/
-    $(".accordian-toggle").on('click tap',  function(){
-      if($(this).hasClass("is-open")){
-        $(this).closest('.accordion-wrapper').find('.accordian-toggle').removeClass('is-open');
-        $(this).removeClass("is-open");
-      }else{
-        $(this).closest('.accordion-wrapper').find('.accordian-toggle').removeClass('is-open');
-        $(this).addClass("is-open");
-      }
-    });
+  /*Accordion toggle*/
+  $(".accordian-toggle").on('click tap',  function(){
+    if($(this).hasClass("is-open")){
+      $(this).closest('.accordion-wrapper').find('.accordian-toggle').removeClass('is-open');
+      $(this).removeClass("is-open");
+    }else{
+      $(this).closest('.accordion-wrapper').find('.accordian-toggle').removeClass('is-open');
+      $(this).addClass("is-open");
+    }
+  });
+
+  // Responsive Table
+  $('.jsTableResponsive').basictable({
+    breakpoint: 576,
+  });
 
 });
 // iPhone page refresh on back button
