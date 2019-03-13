@@ -108,6 +108,7 @@ $window.on('scroll resize', check_if_in_view);
 $window.trigger('scroll');
 
 $(document).ready(function () {
+
   // Navbar toggle
   $(".hamburger").on("click", function () {
     if ($(".hamburger").hasClass("is-active")) {
