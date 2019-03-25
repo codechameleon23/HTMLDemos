@@ -114,7 +114,7 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; font-size: 62.5%;
 
 *, *:after, *:before { -webkit-box-sizing: inherit; box-sizing: inherit; margin: 0; padding: 0; outline: none; border: 0 solid transparent; }
 
-body { color: #414042; font-family: "Source Sans Pro", system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; font-size: 1.8rem; font-weight: 300; letter-spacing: 0.01em; line-height: normal; font-style: normal; overflow-x: hidden; position: relative; min-height: 100vh; }
+body { color: #414042; font-family: "Source Sans Pro", system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; font-size: 1.8rem; font-weight: 300; letter-spacing: 0.01em; line-height: normal; font-style: normal; overflow-x: hidden; position: relative; min-height: 100vh; max-width: 100%; width: 100%; }
 
 /*all css*/
 .border { border-width: .1rem; }
@@ -130,7 +130,7 @@ body { color: #414042; font-family: "Source Sans Pro", system-ui, BlinkMacSystem
 
 *[class*="ar-"] > *:first-child { position: absolute; top: 0; right: 0; bottom: 0; left: 0; }
 
-.container { width: calc(100% - 3rem); }
+.container { width: calc(100% - 5rem); }
 
 .col { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
 
@@ -148,15 +148,15 @@ body { color: #414042; font-family: "Source Sans Pro", system-ui, BlinkMacSystem
 
 @media all and (-ms-high-contrast: none) { .icon > * img *::-ms-backdrop, .icon > * img { width: 100%; } }
 
-.hamburger { width: 2.4rem; height: 2.4rem; right: 1rem; -webkit-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg); cursor: pointer; }
+.hamburger { width: 2.4rem !important; height: 2.4rem; right: 1rem; -webkit-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg); cursor: pointer; }
 
 .hamburger span { display: block; position: absolute; height: 0px; width: 100%; border-top: .1rem solid; border-radius: 2px; opacity: 1; left: 0; -webkit-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg); -webkit-transition: .25s ease-in-out; -o-transition: .25s ease-in-out; transition: .25s ease-in-out; }
 
-.hamburger span:nth-child(1) { top: 15%; }
+.hamburger span:nth-child(1) { top: 15%; top: calc(15% - .05rem); }
 
 .hamburger span:nth-child(2), .hamburger span:nth-child(3) { top: 50%; top: calc(50% - .05rem); }
 
-.hamburger span:nth-child(4) { bottom: 15%; }
+.hamburger span:nth-child(4) { bottom: 15%; bottom: calc(15% - .05rem); }
 
 .hamburger.is-active span:nth-child(1), .hamburger.is-active span:nth-child(4) { top: 50%; bottom: 50%; -webkit-transform: scale(0); -ms-transform: scale(0); transform: scale(0); width: 0%; left: 50%; }
 
@@ -1277,10 +1277,10 @@ body[data-aos-easing="ease-in-out"] [data-aos], [data-aos][data-aos][data-aos-ea
   .hover\:shadow-default:hover { -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); }
   .focus\:shadow-default:focus { -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); }
   .active\:shadow-default { -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); }
-  .shadow-md { -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.08); box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.08); }
-  .hover\:shadow-md:hover { -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.08); box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.08); }
-  .focus\:shadow-md:focus { -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.08); box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.08); }
-  .active\:shadow-md { -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.08); box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.08); }
+  .shadow-md { -webkit-box-shadow: 0 4px 8px 0 rgba(60, 32, 79, 0.2), 0 2px 4px 0 rgba(60, 32, 79, 0.08); box-shadow: 0 4px 8px 0 rgba(60, 32, 79, 0.2), 0 2px 4px 0 rgba(60, 32, 79, 0.08); }
+  .hover\:shadow-md:hover { -webkit-box-shadow: 0 4px 8px 0 rgba(60, 32, 79, 0.2), 0 2px 4px 0 rgba(60, 32, 79, 0.08); box-shadow: 0 4px 8px 0 rgba(60, 32, 79, 0.2), 0 2px 4px 0 rgba(60, 32, 79, 0.08); }
+  .focus\:shadow-md:focus { -webkit-box-shadow: 0 4px 8px 0 rgba(60, 32, 79, 0.2), 0 2px 4px 0 rgba(60, 32, 79, 0.08); box-shadow: 0 4px 8px 0 rgba(60, 32, 79, 0.2), 0 2px 4px 0 rgba(60, 32, 79, 0.08); }
+  .active\:shadow-md { -webkit-box-shadow: 0 4px 8px 0 rgba(60, 32, 79, 0.2), 0 2px 4px 0 rgba(60, 32, 79, 0.08); box-shadow: 0 4px 8px 0 rgba(60, 32, 79, 0.2), 0 2px 4px 0 rgba(60, 32, 79, 0.08); }
   .shadow-lg { -webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.25), 0 5px 15px 0 rgba(0, 0, 0, 0.08); box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.25), 0 5px 15px 0 rgba(0, 0, 0, 0.08); }
   .hover\:shadow-lg:hover { -webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.25), 0 5px 15px 0 rgba(0, 0, 0, 0.08); box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.25), 0 5px 15px 0 rgba(0, 0, 0, 0.08); }
   .focus\:shadow-lg:focus { -webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.25), 0 5px 15px 0 rgba(0, 0, 0, 0.08); box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.25), 0 5px 15px 0 rgba(0, 0, 0, 0.08); }
@@ -1918,10 +1918,10 @@ body[data-aos-easing="ease-in-out"] [data-aos], [data-aos][data-aos][data-aos-ea
   .sm\:hover\:shadow-default:hover { -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); }
   .sm\:focus\:shadow-default:focus { -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); }
   .sm\:active\:shadow-default { -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); }
-  .sm\:shadow-md { -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.08); box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.08); }
-  .sm\:hover\:shadow-md:hover { -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.08); box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.08); }
-  .sm\:focus\:shadow-md:focus { -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.08); box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.08); }
-  .sm\:active\:shadow-md { -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.08); box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.08); }
+  .sm\:shadow-md { -webkit-box-shadow: 0 4px 8px 0 rgba(60, 32, 79, 0.2), 0 2px 4px 0 rgba(60, 32, 79, 0.08); box-shadow: 0 4px 8px 0 rgba(60, 32, 79, 0.2), 0 2px 4px 0 rgba(60, 32, 79, 0.08); }
+  .sm\:hover\:shadow-md:hover { -webkit-box-shadow: 0 4px 8px 0 rgba(60, 32, 79, 0.2), 0 2px 4px 0 rgba(60, 32, 79, 0.08); box-shadow: 0 4px 8px 0 rgba(60, 32, 79, 0.2), 0 2px 4px 0 rgba(60, 32, 79, 0.08); }
+  .sm\:focus\:shadow-md:focus { -webkit-box-shadow: 0 4px 8px 0 rgba(60, 32, 79, 0.2), 0 2px 4px 0 rgba(60, 32, 79, 0.08); box-shadow: 0 4px 8px 0 rgba(60, 32, 79, 0.2), 0 2px 4px 0 rgba(60, 32, 79, 0.08); }
+  .sm\:active\:shadow-md { -webkit-box-shadow: 0 4px 8px 0 rgba(60, 32, 79, 0.2), 0 2px 4px 0 rgba(60, 32, 79, 0.08); box-shadow: 0 4px 8px 0 rgba(60, 32, 79, 0.2), 0 2px 4px 0 rgba(60, 32, 79, 0.08); }
   .sm\:shadow-lg { -webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.25), 0 5px 15px 0 rgba(0, 0, 0, 0.08); box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.25), 0 5px 15px 0 rgba(0, 0, 0, 0.08); }
   .sm\:hover\:shadow-lg:hover { -webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.25), 0 5px 15px 0 rgba(0, 0, 0, 0.08); box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.25), 0 5px 15px 0 rgba(0, 0, 0, 0.08); }
   .sm\:focus\:shadow-lg:focus { -webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.25), 0 5px 15px 0 rgba(0, 0, 0, 0.08); box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.25), 0 5px 15px 0 rgba(0, 0, 0, 0.08); }
@@ -2559,10 +2559,10 @@ body[data-aos-easing="ease-in-out"] [data-aos], [data-aos][data-aos][data-aos-ea
   .md\:hover\:shadow-default:hover { -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); }
   .md\:focus\:shadow-default:focus { -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); }
   .md\:active\:shadow-default { -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); }
-  .md\:shadow-md { -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.08); box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.08); }
-  .md\:hover\:shadow-md:hover { -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.08); box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.08); }
-  .md\:focus\:shadow-md:focus { -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.08); box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.08); }
-  .md\:active\:shadow-md { -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.08); box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.08); }
+  .md\:shadow-md { -webkit-box-shadow: 0 4px 8px 0 rgba(60, 32, 79, 0.2), 0 2px 4px 0 rgba(60, 32, 79, 0.08); box-shadow: 0 4px 8px 0 rgba(60, 32, 79, 0.2), 0 2px 4px 0 rgba(60, 32, 79, 0.08); }
+  .md\:hover\:shadow-md:hover { -webkit-box-shadow: 0 4px 8px 0 rgba(60, 32, 79, 0.2), 0 2px 4px 0 rgba(60, 32, 79, 0.08); box-shadow: 0 4px 8px 0 rgba(60, 32, 79, 0.2), 0 2px 4px 0 rgba(60, 32, 79, 0.08); }
+  .md\:focus\:shadow-md:focus { -webkit-box-shadow: 0 4px 8px 0 rgba(60, 32, 79, 0.2), 0 2px 4px 0 rgba(60, 32, 79, 0.08); box-shadow: 0 4px 8px 0 rgba(60, 32, 79, 0.2), 0 2px 4px 0 rgba(60, 32, 79, 0.08); }
+  .md\:active\:shadow-md { -webkit-box-shadow: 0 4px 8px 0 rgba(60, 32, 79, 0.2), 0 2px 4px 0 rgba(60, 32, 79, 0.08); box-shadow: 0 4px 8px 0 rgba(60, 32, 79, 0.2), 0 2px 4px 0 rgba(60, 32, 79, 0.08); }
   .md\:shadow-lg { -webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.25), 0 5px 15px 0 rgba(0, 0, 0, 0.08); box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.25), 0 5px 15px 0 rgba(0, 0, 0, 0.08); }
   .md\:hover\:shadow-lg:hover { -webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.25), 0 5px 15px 0 rgba(0, 0, 0, 0.08); box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.25), 0 5px 15px 0 rgba(0, 0, 0, 0.08); }
   .md\:focus\:shadow-lg:focus { -webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.25), 0 5px 15px 0 rgba(0, 0, 0, 0.08); box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.25), 0 5px 15px 0 rgba(0, 0, 0, 0.08); }
@@ -3200,10 +3200,10 @@ body[data-aos-easing="ease-in-out"] [data-aos], [data-aos][data-aos][data-aos-ea
   .lg\:hover\:shadow-default:hover { -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); }
   .lg\:focus\:shadow-default:focus { -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); }
   .lg\:active\:shadow-default { -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); }
-  .lg\:shadow-md { -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.08); box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.08); }
-  .lg\:hover\:shadow-md:hover { -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.08); box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.08); }
-  .lg\:focus\:shadow-md:focus { -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.08); box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.08); }
-  .lg\:active\:shadow-md { -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.08); box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.08); }
+  .lg\:shadow-md { -webkit-box-shadow: 0 4px 8px 0 rgba(60, 32, 79, 0.2), 0 2px 4px 0 rgba(60, 32, 79, 0.08); box-shadow: 0 4px 8px 0 rgba(60, 32, 79, 0.2), 0 2px 4px 0 rgba(60, 32, 79, 0.08); }
+  .lg\:hover\:shadow-md:hover { -webkit-box-shadow: 0 4px 8px 0 rgba(60, 32, 79, 0.2), 0 2px 4px 0 rgba(60, 32, 79, 0.08); box-shadow: 0 4px 8px 0 rgba(60, 32, 79, 0.2), 0 2px 4px 0 rgba(60, 32, 79, 0.08); }
+  .lg\:focus\:shadow-md:focus { -webkit-box-shadow: 0 4px 8px 0 rgba(60, 32, 79, 0.2), 0 2px 4px 0 rgba(60, 32, 79, 0.08); box-shadow: 0 4px 8px 0 rgba(60, 32, 79, 0.2), 0 2px 4px 0 rgba(60, 32, 79, 0.08); }
+  .lg\:active\:shadow-md { -webkit-box-shadow: 0 4px 8px 0 rgba(60, 32, 79, 0.2), 0 2px 4px 0 rgba(60, 32, 79, 0.08); box-shadow: 0 4px 8px 0 rgba(60, 32, 79, 0.2), 0 2px 4px 0 rgba(60, 32, 79, 0.08); }
   .lg\:shadow-lg { -webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.25), 0 5px 15px 0 rgba(0, 0, 0, 0.08); box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.25), 0 5px 15px 0 rgba(0, 0, 0, 0.08); }
   .lg\:hover\:shadow-lg:hover { -webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.25), 0 5px 15px 0 rgba(0, 0, 0, 0.08); box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.25), 0 5px 15px 0 rgba(0, 0, 0, 0.08); }
   .lg\:focus\:shadow-lg:focus { -webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.25), 0 5px 15px 0 rgba(0, 0, 0, 0.08); box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.25), 0 5px 15px 0 rgba(0, 0, 0, 0.08); }
@@ -3841,10 +3841,10 @@ body[data-aos-easing="ease-in-out"] [data-aos], [data-aos][data-aos][data-aos-ea
   .xl\:hover\:shadow-default:hover { -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); }
   .xl\:focus\:shadow-default:focus { -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); }
   .xl\:active\:shadow-default { -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); }
-  .xl\:shadow-md { -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.08); box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.08); }
-  .xl\:hover\:shadow-md:hover { -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.08); box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.08); }
-  .xl\:focus\:shadow-md:focus { -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.08); box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.08); }
-  .xl\:active\:shadow-md { -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.08); box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.08); }
+  .xl\:shadow-md { -webkit-box-shadow: 0 4px 8px 0 rgba(60, 32, 79, 0.2), 0 2px 4px 0 rgba(60, 32, 79, 0.08); box-shadow: 0 4px 8px 0 rgba(60, 32, 79, 0.2), 0 2px 4px 0 rgba(60, 32, 79, 0.08); }
+  .xl\:hover\:shadow-md:hover { -webkit-box-shadow: 0 4px 8px 0 rgba(60, 32, 79, 0.2), 0 2px 4px 0 rgba(60, 32, 79, 0.08); box-shadow: 0 4px 8px 0 rgba(60, 32, 79, 0.2), 0 2px 4px 0 rgba(60, 32, 79, 0.08); }
+  .xl\:focus\:shadow-md:focus { -webkit-box-shadow: 0 4px 8px 0 rgba(60, 32, 79, 0.2), 0 2px 4px 0 rgba(60, 32, 79, 0.08); box-shadow: 0 4px 8px 0 rgba(60, 32, 79, 0.2), 0 2px 4px 0 rgba(60, 32, 79, 0.08); }
+  .xl\:active\:shadow-md { -webkit-box-shadow: 0 4px 8px 0 rgba(60, 32, 79, 0.2), 0 2px 4px 0 rgba(60, 32, 79, 0.08); box-shadow: 0 4px 8px 0 rgba(60, 32, 79, 0.2), 0 2px 4px 0 rgba(60, 32, 79, 0.08); }
   .xl\:shadow-lg { -webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.25), 0 5px 15px 0 rgba(0, 0, 0, 0.08); box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.25), 0 5px 15px 0 rgba(0, 0, 0, 0.08); }
   .xl\:hover\:shadow-lg:hover { -webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.25), 0 5px 15px 0 rgba(0, 0, 0, 0.08); box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.25), 0 5px 15px 0 rgba(0, 0, 0, 0.08); }
   .xl\:focus\:shadow-lg:focus { -webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.25), 0 5px 15px 0 rgba(0, 0, 0, 0.08); box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.25), 0 5px 15px 0 rgba(0, 0, 0, 0.08); }
@@ -3989,7 +3989,9 @@ body[data-aos-easing="ease-in-out"] [data-aos], [data-aos][data-aos][data-aos-ea
 
 @media all and (max-width: 992px) { .bran-logo img { max-width: 6.4rem; } }
 
-.header a { -webkit-transition: all .5s 0s ease-in-out; -o-transition: all .5s 0s ease-in-out; transition: all .5s 0s ease-in-out; }
+.header li, .header a { -webkit-transition: all .35s 0s ease-in-out; -o-transition: all .35s 0s ease-in-out; transition: all .35s 0s ease-in-out; }
+
+.header li:hover, .header a:hover { -webkit-transform: translateY(-0.25rem); -ms-transform: translateY(-0.25rem); transform: translateY(-0.25rem); }
 
 @media all and (max-width: 992px) { .jsNavbarToggle .navbar { position: fixed; top: 0; right: 0; bottom: 0; left: 0; background-color: #3c204f; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; text-align: center; z-index: 998; }
   .jsNavbarToggle .navbar ul { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
@@ -4007,7 +4009,7 @@ body[data-aos-easing="ease-in-out"] [data-aos], [data-aos][data-aos][data-aos-ea
   .jsNavbarToggle:not(.is-open) .navbar li:nth-child(8) { -webkit-animation: fade-out-left 0.4s 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both; animation: fade-out-left 0.4s 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
   .jsNavbarToggle:not(.is-open) .navbar li:nth-child(9) { -webkit-animation: fade-out-left 0.4s 0.9s cubic-bezier(0.39, 0.575, 0.565, 1) both; animation: fade-out-left 0.4s 0.9s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
   .jsNavbarToggle:not(.is-open) .navbar li:nth-child(10) { -webkit-animation: fade-out-left 0.4s 1s cubic-bezier(0.39, 0.575, 0.565, 1) both; animation: fade-out-left 0.4s 1s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
-  .jsNavbarToggle .hamburger { position: absolute; left: auto; right: 1.5rem; top: 1rem; z-index: 999; }
+  .jsNavbarToggle .hamburger { position: absolute; left: auto; right: 2.5rem; top: 2.5rem; z-index: 999; }
   .jsNavbarToggle.is-open .hamburger { position: fixed; color: #ffffff; }
   .jsNavbarToggle.is-open .navbar { -webkit-animation: fade-in-left 0.35s cubic-bezier(0.39, 0.575, 0.565, 1) both; animation: fade-in-left 0.35s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
   .jsNavbarToggle.is-open .navbar li:nth-child(1) { -webkit-animation: fade-in-left 0.4s 0.1s cubic-bezier(0.39, 0.575, 0.565, 1) both; animation: fade-in-left 0.4s 0.1s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
@@ -4034,3 +4036,5 @@ body[data-aos-easing="ease-in-out"] [data-aos], [data-aos][data-aos][data-aos-ea
 .add-animation *[class*='inView-'] { opacity: 1; }
 
 .jsInview.add-animation.inView-animation, .jsInview.add-animation .inView-animation { -webkit-animation: fade-in-right 0.45s cubic-bezier(0.39, 0.575, 0.565, 1) both; animation: fade-in-right 0.45s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
+
+*[class*='hover:']:hover { -webkit-transition: all .35s 0s ease-in !important; -o-transition: all .35s 0s ease-in !important; transition: all .35s 0s ease-in !important; }
