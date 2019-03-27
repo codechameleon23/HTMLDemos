@@ -85,7 +85,7 @@ function filtered(fp) {
   }
 }
 // Inview js
-var $animation_elements = $('.in-view-animation');
+var $animation_elements = $('body').find('.in-view-animation');
 var $window = $(window);
 
 function check_if_in_view() {
