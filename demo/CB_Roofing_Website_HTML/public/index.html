@@ -37,14 +37,20 @@
         </ul>
       </nav>
 
-      <p class="flex-row md:flex-col xl:flex-row text-center pt-5 md:pt-0 font-sm md:font-base text-secondary">
-        <span class="mr-10">Call us on:</span>
+      <p class="flex-row text-center pt-5 md:pt-0 font-sm md:font-base text-secondary 
+      md:mr-50
+      lg:pos-absolute lg:pin-t lg:pin-r lg:mt-20 lg:mr-50 
+      xl:pos-static xl:pin-t-auto xl:pin-r-auto xl:mt-0 xl:mr-0">
+        <span class="mr-10">
+          <span class="d-hidden md:d-inline">Call us on:</span>
+          <i class="md:d-hidden fa fa-phone text-secondary"></i>
+        </span>
         <a class="text-white no-underline font-bold md:font-regular" href="tel:01722622084">01722622084</a>
         <span class="mx-10">or</span>
         <a class="text-white no-underline font-bold md:font-regular" href="tel:07707535215">07707535215</a>
       </p>
 
-      <div class="hamburger icon lg:d-hidden">
+      <div class="hamburger icon lg:d-hidden md:mt-20">
         <span></span><span></span><span></span><span></span>
       </div>
     </div>
@@ -52,9 +58,9 @@
 
   <main class="flex-auto">
 
-    <section class="py-96 bg-primary pos-relative">
+    <section class="py-96 bg-primary pos-relative portrait:min-h-screen flex-col">
       <div
-        class="pt-40 md:py-96 container sm:container-sm md:container-md lg:container-lg xl:container-xl mx-auto flex-col justify-center">
+        class="my-auto pt-40 md:py-96 container sm:container-sm md:container-md lg:container-lg xl:container-xl mx-auto flex-col justify-center">
         <div class="pos-absolute pin-y pin figure img-fit ar-1x1 z-0 has-shade has-shade_ltr">
           <div class="image-holder bg-bottom" style="background-image:url('images/iStock-538575738-edit.jpg');"></div>
         </div>
@@ -144,7 +150,8 @@
     <section class="pb-25 md:pb-76">
       <div class="container sm:container-sm md:container-md lg:container-lg xl:container-xl mx-auto">
 
-        <div data-aos="fade-up" data-aos-delay="100" class="flex-row flex-wrap bg-light md:flex-row-reverse mb-20 md:mb-0 overflow-hidden">
+        <div data-aos="fade-up" data-aos-delay="100"
+          class="flex-row flex-wrap bg-light md:flex-row-reverse mb-20 md:mb-0 overflow-hidden">
           <figure data-aos="fade" data-aos-delay="200" class="col-12 md:col-6 figure img-fit ar-rect">
             <div class="image-holder"
               style="background-image:url('images/12196299_1121355804562155_2747618886849640374_n.jpg');"></div>
@@ -183,7 +190,8 @@
             </div>
           </div>
         </div>
-        <div data-aos="fade-up" data-aos-delay="100" class="flex-row flex-wrap bg-light md:flex-row-reverse mb-20 md:mb-0 overflow-hidden">
+        <div data-aos="fade-up" data-aos-delay="100"
+          class="flex-row flex-wrap bg-light md:flex-row-reverse mb-20 md:mb-0 overflow-hidden">
           <figure data-aos="fade" data-aos-delay="200" class="col-12 md:col-6 figure img-fit ar-rect">
             <div class="image-holder"
               style="background-image:url('images/13043771_1150950448269357_6248282722260715608_n.jpg');"></div>
@@ -219,7 +227,7 @@
               <h2 class="text-dark font-lg2 md:font-xl font-bold">Our Client Feedback</h2>
             </div>
             <a href="testimonials.html"
-              class="col-flex md:col-5 xl:col-4 flex-row button bg-secondary text-lg font-regular text-white no-underline hover:bg-primary hover:text-light hover:shadow-md uppercase d-inline-block mb-20">
+              class="col-flex md:col-5 xl:col-4 flex-row button bg-secondary text-lg font-regular text-white no-underline hover:bg-primary hover:text-light hover:shadow-md uppercase d-inline-flex mb-20">
               <div class="col-6 p-5 flex-col justify-center">more testimonials</div>
               <div class="col-6 p-5 bg-white border border-secondary">
                 <span class="my-auto"><img src="images/google-review-logo.jpg" alt="" /></span>
@@ -271,11 +279,18 @@
   <footer class="py-25 md:py-76 bg-dark">
     <div class="container sm:container-sm md:container-md lg:container-lg xl:container-xl mx-auto">
       <div class="-mx-20 flex-row flex-wrap justify-center md:justify-space-between">
-        <div class="col-12 flex-row justify-center md:col-auto p-20">
+        <div class="col-12 flex-row justify-center md:col-auto p-20 -mt-10
+        d-hidden lg:d-inline-block">
           <a class="bran-logo" href="index.html"><img src="images/brand-logo-white.png" alt="CB Roofing"></a>
         </div>
         <ul
-          class="list-reset flex-col align-center md:align-start justify-space-between px-20 col-12 sm:col-6 md:col-auto mb-20 lg:mb-0">
+          class="list-reset mx-auto
+          col-count-1 text-center
+          md:col-count-3 md:text-left
+          xl:col-count-4">
+          <li class="lg:d-hidden mb-10">
+            <a class="bran-logo" href="index.html"><img src="images/brand-logo-white.png" alt="CB Roofing"></a>
+          </li>
           <li><a class="text-white no-underline py-1 d-inline-block hover:text-secondary"
               href="#"><span>Services</span></a></li>
           <li><a class="text-white no-underline py-1 d-inline-block hover:text-secondary"
@@ -288,9 +303,6 @@
                 Policy</span></a></li>
           <li><a class="text-white no-underline py-1 d-inline-block hover:text-secondary" href="#"><span>Term &
                 Conditions</span></a></li>
-        </ul>
-        <ul
-          class="list-reset flex-col align-center md:align-start justify-space-between px-20 col-12 sm:col-6 md:col-4 lg:col-auto mb-20 lg:mb-0">
           <li><a class="text-white no-underline py-1 d-inline-block hover:text-secondary" href="#"><span>Cookie
                 Policy</span></a></li>
           <li><a class="text-white no-underline py-1 d-inline-block hover:text-secondary" href="#"><span>CB Roofing
@@ -303,35 +315,31 @@
                 Salisbury</span></a></li>
           <li><a class="text-white no-underline py-1 d-inline-block hover:text-secondary" href="#"><span>Chimney Repair
                 Salisbury</span></a></li>
-        </ul>
-        <ul
-          class="list-reset flex-col align-center md:align-start justify-space-between px-20 col-12 sm:col-6 md:col-4 lg:col-auto mb-20 lg:mb-0">
           <li><span class="text-white no-underline py-1 d-inline-block hover:text-secondary"><span>Leadwork
                 Salisbury</span></span></li>
           <li><span class="text-white no-underline py-1 d-inline-block hover:text-secondary"><span>Velux windows
                 Salisbury</span></span></li>
-          <li class="mt-auto"><span class="text-white no-underline py-1 d-inline-block"><span>© Copyright
+          <li class="xl:mt-50"><span class="text-white no-underline py-1 d-inline-block"><span>© Copyright
                 2019</span></span></li>
           <li><a class="text-white no-underline py-1 d-inline-block hover:text-secondary"
               href="https://www.unstuckdesign.com/"><span class="text-white">Site by</span> Unstuck Design</a></li>
-        </ul>
-        <ul
-          class="list-reset flex-col align-center md:align-start justify-space-between px-20 col-12 sm:col-6 md:col-auto mb-20 lg:mb-0 mr-auto lg:mr-0">
-          <li class="flex-row">
-            <a class="icon radius-full bg-white text-dark hover:bg-secondary hover:text-whilte mr-5" href=""><span><i
-                  class="fab fa-facebook-f"></i></span></a>
-            <a class="icon radius-full bg-white text-dark hover:bg-secondary hover:text-whilte mr-5" href=""><span><i
-                  class="fab fa-twitter"></i></span></a>
-            <a class="icon radius-full bg-white text-dark hover:bg-secondary hover:text-whilte mr-5" href=""><span><i
-                  class="fab fa-instagram"></i></span></a>
-            <a class="icon radius-full bg-white text-dark hover:bg-secondary hover:text-whilte mr-5" href=""><span><i
-                  class="fab fa-pinterest"></i></span></a>
+          <li class="flex-row justify-center
+          my-20
+          md:justify-start">
+            <a class="icon icon-md lg:icon-rg radius-full bg-white text-dark hover:bg-secondary hover:text-whilte mr-5"
+              href=""><span><i class="fab fa-facebook-f"></i></span></a>
+            <a class="icon icon-md lg:icon-rg radius-full bg-white text-dark hover:bg-secondary hover:text-whilte mr-5"
+              href=""><span><i class="fab fa-twitter"></i></span></a>
+            <a class="icon icon-md lg:icon-rg radius-full bg-white text-dark hover:bg-secondary hover:text-whilte mr-5"
+              href=""><span><i class="fab fa-instagram"></i></span></a>
+            <a class="icon icon-md lg:icon-rg radius-full bg-white text-dark hover:bg-secondary hover:text-whilte mr-5"
+              href=""><span><i class="fab fa-pinterest"></i></span></a>
           </li>
-          <li class="mt-auto"><a class="text-white no-underline py-1 d-inline-block hover:text-secondary"
+          <li class=""><a class="text-white no-underline py-1 d-inline-block hover:text-secondary"
               href="tel:01722622084"><span>01722622084</span></a></li>
-          <li class="mb-auto"><a class="text-white no-underline py-1 d-inline-block hover:text-secondary"
+          <li class=""><a class="text-white no-underline py-1 d-inline-block hover:text-secondary"
               href="tel:07707535215"><span>07707535215</span></a></li>
-          <li><a class="text-white no-underline py-1 d-inline-block hover:text-secondary"
+          <li class="lg:mt-40 xl:mt-20"><a class="text-white no-underline py-1 d-inline-block hover:text-secondary"
               href="mailto:info@cbroofingsalisbury.co.uk"><span>info@cbroofingsalisbury.co.uk</span></a></li>
         </ul>
       </div>
