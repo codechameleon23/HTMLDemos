@@ -203,9 +203,11 @@ hr.is-primary { border-color: #9fcf67; }
 
 .button { margin: 0; border-radius: 0; cursor: pointer; min-width: 206px; text-align: center; display: inline-block; white-space: nowrap; -webkit-transition: all 0.5s 0s ease-in-out; -o-transition: all 0.5s 0s ease-in-out; transition: all 0.5s 0s ease-in-out; border: 0.2rem solid; text-decoration: none !important; outline: none !important; background-color: transparent; border-color: #9fcf67; color: inherit; }
 
+.button.is-auto { min-width: 0; }
+
 .button, .button span { font-size: 1.4rem; line-height: 1.7rem; font-weight: 300; letter-spacing: 0.1rem; padding: 1.16rem 2rem; text-transform: uppercase; }
 
-.button.is-active, .button:active, .button:hover { background-color: #9fcf67; color: #ffffff; }
+.button.is-primary, .button.is-active, .button:active, .button:hover { background-color: #9fcf67; color: #ffffff; }
 
 .button.is-light { border-color: #ffffff; }
 
@@ -689,6 +691,10 @@ a.figure:hover .image-holder, .figure.has-hover-effect:hover .image-holder, .fig
 
 .has-gutter_skinny > .col { padding-left: 0.3rem; padding-right: 0.3rem; }
 
+.has-gutter_fat { margin-left: -2.4rem; margin-right: -2.4rem; }
+
+.has-gutter_fat > .col { padding-left: 2.4rem; padding-right: 2.4rem; }
+
 .has-list { margin-top: -1.2rem; }
 
 .has-list > .col { margin-top: 1.2rem; }
@@ -704,6 +710,10 @@ a.figure:hover .image-holder, .figure.has-hover-effect:hover .image-holder, .fig
 .has-list_skinny, .has-list.has-gutter_skinny { margin-top: -0.6rem; }
 
 .has-list_skinny > .col, .has-list.has-gutter_skinny > .col { margin-top: 0.6rem; }
+
+.has-list_fat, .has-list.has-gutter_fat { margin-top: -2.4rem; }
+
+.has-list_fat > .col, .has-list.has-gutter_fat > .col { margin-top: 2.4rem; }
 
 .col-1 { -webkit-box-flex: 0; -ms-flex: none; flex: none; width: 8.33333%; }
 
@@ -878,6 +888,10 @@ a.figure:hover .image-holder, .figure.has-hover-effect:hover .image-holder, .fig
   .col-xxs-auto { -webkit-box-flex: 0; -ms-flex: none; flex: none; width: auto; }
   .col-xxs-flex { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; -ms-flex: 1 1 auto; flex: 1 1 auto; }
   .hide-xxs { display: none; } }
+
+@media all and (min-width: 900px) { .visible-sm { display: none; } }
+
+@media all and (max-width: 899px) { .hidden-sm { display: none; } }
 
 @media all and (min-width: 768px) { .visible-xs { display: none; } }
 
