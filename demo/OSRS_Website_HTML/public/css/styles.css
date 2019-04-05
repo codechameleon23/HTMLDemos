@@ -3988,13 +3988,15 @@ footer .brand-logo { max-width: 17.2rem; }
 
 .byUnstuckDesign { max-height: 1.6rem; }
 
-.border-through, .border-under { position: relative; }
+.border-under { position: relative; }
 
-.border-through:after, .border-under:after { clear: both; content: ""; left: 50%; color: inherit; border-bottom: .25rem solid; position: absolute; -webkit-transform: translate(-50%, 50%); -ms-transform: translate(-50%, 50%); transform: translate(-50%, 50%); }
+.border-under:after { clear: both; content: ""; left: 50%; color: inherit; border-bottom: .25rem solid; position: absolute; -webkit-transform: translate(-50%, 50%); -ms-transform: translate(-50%, 50%); transform: translate(-50%, 50%); }
 
-.border-through:after { width: calc(100% + 2.5rem); border-left: 2.5rem solid; border-right: 2.5rem solid; border-bottom: 0; height: .25rem; -webkit-box-sizing: content-box; box-sizing: content-box; top: 50%; z-index: -1; }
+.border-through { display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; position: relative; }
 
-@media all and (min-width: 576px) { .border-through:after { width: calc(100% + 10rem); border-left: 5rem solid; border-right: 5rem solid; } }
+.border-through .line { border-left: 2.5rem solid; border-right: 2.5rem solid; height: .25rem; left: -1.25rem; right: -1.25rem; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); position: absolute; top: 50%; }
+
+@media all and (min-width: 992px) { .border-through .line { border-left: 5rem solid; border-right: 5rem solid; left: -5rem; right: -5rem; } }
 
 .border-under:after { width: 5rem; top: auto; bottom: .5rem; }
 
