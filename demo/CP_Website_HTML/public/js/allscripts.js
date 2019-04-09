@@ -116,12 +116,12 @@ $(document).ready(function() {
     $filter_parent = $('.accordion-toggle_wrapper');
     $filter_parent.addClass('via_js').find('.accordion_row').slice(1).hide();
     $('.accordion_toggle_tab').on('click', function(){
+      console.log('sdadas');
       if(!$(this).hasClass('is-active')){
         $current = $(this).attr('data-filterby');
         $(this).addClass('is-active').siblings().removeClass('is-active');
         $filter_parent.addClass($current).find('.accordian-toggle.'+$current).trigger('click').closest('.accordion_row').show().siblings('.accordion_row').hide();
       }
-      
     });
   }else{
     $('.toggle_tabs').hide();
@@ -133,8 +133,15 @@ $(document).ready(function() {
       $(this).closest('.accordion-wrapper').find('.accordian-toggle').removeClass('is-open');
       $(this).removeClass("is-open");
     }else{
+      var elm = $(this);
       $(this).closest('.accordion-wrapper').find('.accordian-toggle').removeClass('is-open');
       $(this).addClass("is-open");
+      if(getViewportWidth() < 700){
+        setTimeout(function() {
+          var offset = elm.offset();
+          window.scrollTo(0, offset.top - 12)
+        }, 700);
+      }
     }
   });
 
