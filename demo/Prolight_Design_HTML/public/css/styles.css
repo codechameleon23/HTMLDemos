@@ -1841,17 +1841,19 @@ label > .label-body { display: inline-block; margin-left: 1.5rem; font-weight: n
 
 .social-links .icon { border: .1rem solid; }
 
-.navbar .nav-links li:after { clear: both; content: ""; height: 0; width: 0; color: inherit; border-bottom: .1rem solid; display: block; -webkit-transition: all .3s 0s ease-in-out; -o-transition: all .3s 0s ease-in-out; transition: all .3s 0s ease-in-out; position: absolute; margin: 0; bottom: -1.5rem; left: 50%; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); border-color: #859090; }
+.navbar .nav-links > li { position: relative; }
 
-.navbar .nav-links li.active { position: relative; font-weight: 400; }
+.navbar .nav-links > li:after { clear: both; content: ""; height: 0; width: 0; color: inherit; border-bottom: .1rem solid; display: block; -webkit-transition: all .3s 0s ease-in-out; -o-transition: all .3s 0s ease-in-out; transition: all .3s 0s ease-in-out; position: absolute; margin: 0; bottom: -1.5rem; left: 50%; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); border-color: #859090; }
 
-.navbar .nav-links li.active:after { width: 2rem; }
+.navbar .nav-links > li.active { font-weight: 400; }
+
+.navbar .nav-links > li.active:after { width: 2rem; }
 
 .navbar .nav-links a { display: inline-block; text-decoration: none !important; }
 
 .social-links li { margin: 0; padding: 0; }
 
-@media all and (max-width: 767px) { .header .nav-links { max-height: 0; overflow: hidden; padding: 0; }
+@media all and (max-width: 767px) { .header .nav-links { max-height: 0; overflow: hidden; padding: 0; width: 100%; }
   .header .nav-links li { opacity: 0; }
   .header .hamburger.is-active ~ .nav-links { max-height: 500rem; padding: 1.5rem; }
   .header .hamburger.is-active ~ .nav-links li:after { bottom: 0rem; }
@@ -1864,7 +1866,42 @@ label > .label-body { display: inline-block; margin-left: 1.5rem; font-weight: n
   .header .hamburger.is-active ~ .nav-links li:nth-child(7) { -webkit-animation: fadeInLeft 0.2s 0.7s ease-in-out both; animation: fadeInLeft 0.2s 0.7s ease-in-out both; }
   .header .hamburger.is-active ~ .nav-links li:nth-child(8) { -webkit-animation: fadeInLeft 0.2s 0.8s ease-in-out both; animation: fadeInLeft 0.2s 0.8s ease-in-out both; }
   .header .hamburger.is-active ~ .nav-links li:nth-child(9) { -webkit-animation: fadeInLeft 0.2s 0.9s ease-in-out both; animation: fadeInLeft 0.2s 0.9s ease-in-out both; }
-  .header .hamburger.is-active ~ .nav-links li:nth-child(10) { -webkit-animation: fadeInLeft 0.2s 1s ease-in-out both; animation: fadeInLeft 0.2s 1s ease-in-out both; } }
+  .header .hamburger.is-active ~ .nav-links li:nth-child(10) { -webkit-animation: fadeInLeft 0.2s 1s ease-in-out both; animation: fadeInLeft 0.2s 1s ease-in-out both; }
+  .header .hamburger.is-active ~ .nav-links li .submenu { padding-bottom: 2rem; }
+  .header .hamburger.is-active ~ .nav-links li .submenu > li:nth-child(1) { -webkit-animation: fadeInUp 0.2s 0.1s ease-in-out both; animation: fadeInUp 0.2s 0.1s ease-in-out both; }
+  .header .hamburger.is-active ~ .nav-links li .submenu > li:nth-child(2) { -webkit-animation: fadeInUp 0.2s 0.2s ease-in-out both; animation: fadeInUp 0.2s 0.2s ease-in-out both; }
+  .header .hamburger.is-active ~ .nav-links li .submenu > li:nth-child(3) { -webkit-animation: fadeInUp 0.2s 0.3s ease-in-out both; animation: fadeInUp 0.2s 0.3s ease-in-out both; }
+  .header .hamburger.is-active ~ .nav-links li .submenu > li:nth-child(4) { -webkit-animation: fadeInUp 0.2s 0.4s ease-in-out both; animation: fadeInUp 0.2s 0.4s ease-in-out both; }
+  .header .hamburger.is-active ~ .nav-links li .submenu > li:nth-child(5) { -webkit-animation: fadeInUp 0.2s 0.5s ease-in-out both; animation: fadeInUp 0.2s 0.5s ease-in-out both; }
+  .header .hamburger.is-active ~ .nav-links li .submenu > li:nth-child(6) { -webkit-animation: fadeInUp 0.2s 0.6s ease-in-out both; animation: fadeInUp 0.2s 0.6s ease-in-out both; }
+  .header .hamburger.is-active ~ .nav-links li .submenu > li:nth-child(7) { -webkit-animation: fadeInUp 0.2s 0.7s ease-in-out both; animation: fadeInUp 0.2s 0.7s ease-in-out both; }
+  .header .hamburger.is-active ~ .nav-links li .submenu > li:nth-child(8) { -webkit-animation: fadeInUp 0.2s 0.8s ease-in-out both; animation: fadeInUp 0.2s 0.8s ease-in-out both; }
+  .header .hamburger.is-active ~ .nav-links li .submenu > li:nth-child(9) { -webkit-animation: fadeInUp 0.2s 0.9s ease-in-out both; animation: fadeInUp 0.2s 0.9s ease-in-out both; }
+  .header .hamburger.is-active ~ .nav-links li .submenu > li:nth-child(10) { -webkit-animation: fadeInUp 0.2s 1s ease-in-out both; animation: fadeInUp 0.2s 1s ease-in-out both; } }
+
+.navbar .nav-links li .submenu { list-style: none; margin: 0; padding: 0; display: none; }
+
+.navbar .nav-links li .submenu li:first-child { border-top: 0.1rem solid #010407; }
+
+.navbar .nav-links li .submenu li:first-child a { display: inline-block; width: 100%; }
+
+.navbar .nav-links li .submenu li:first-child a:hover { background-color: rgba(133, 144, 144, 0.4); }
+
+.navbar .nav-links li:hover .submenu { display: block; -webkit-animation: showMenu .25s 0s ease-in-out both; animation: showMenu .25s 0s ease-in-out both; }
+
+@media all and (min-width: 768px) { .navbar .nav-links { z-index: 999; }
+  .navbar .nav-links li .submenu { position: absolute; top: 100%; bottom: auto; left: 0; right: auto; min-width: 20rem; text-align: left; -webkit-box-shadow: 0 0.2rem 1rem 0 rgba(0, 0, 0, 0.2); box-shadow: 0 0.2rem 1rem 0 rgba(0, 0, 0, 0.2); -webkit-transform-origin: 0 0; -ms-transform-origin: 0 0; transform-origin: 0 0; }
+  .navbar .nav-links li:last-child .submenu { -webkit-transform-origin: right 0; -ms-transform-origin: right 0; transform-origin: right 0; left: auto; right: 0; } }
+
+@-webkit-keyframes showMenu { 0% { -webkit-transform: scale(0.95); transform: scale(0.95); }
+  100% { z-index: 9999;
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+@keyframes showMenu { 0% { -webkit-transform: scale(0.95); transform: scale(0.95); }
+  100% { z-index: 9999;
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
 
 .footer .member-of-lia { max-width: 9.4rem; }
 
@@ -2132,11 +2169,18 @@ a.figure:hover .image-holder, .figure:hover a.image-holder { -webkit-transform: 
 
 .holder { position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
 
-.holder-inner { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; overflow: auto; padding-bottom: 3rem; }
+.holder-inner { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; overflow: auto; padding-bottom: 4rem; }
 
-.holder:after { content: ""; position: absolute; bottom: 0; right: 0; left: 0; height: 2rem; background-image: -webkit-gradient(linear, left top, left bottom, color-stop(-5%, rgba(133, 144, 144, 0)), color-stop(90%, #859090)); background-image: -webkit-linear-gradient(top, rgba(133, 144, 144, 0) -5%, #859090 90%); background-image: -o-linear-gradient(top, rgba(133, 144, 144, 0) -5%, #859090 90%); background-image: linear-gradient(to bottom, rgba(133, 144, 144, 0) -5%, #859090 90%); }
+.holder:after { content: ""; position: absolute; bottom: 0; right: 0; left: 0; height: 3rem; background-image: -webkit-gradient(linear, left top, left bottom, color-stop(-5%, rgba(133, 144, 144, 0)), color-stop(90%, #859090)); background-image: -webkit-linear-gradient(top, rgba(133, 144, 144, 0) -5%, #859090 90%); background-image: -o-linear-gradient(top, rgba(133, 144, 144, 0) -5%, #859090 90%); background-image: linear-gradient(to bottom, rgba(133, 144, 144, 0) -5%, #859090 90%); }
 
 .popup .holder-inner { max-height: 25rem; }
+
+@media all and (-ms-high-contrast: none) { .popup .holder:after { display: none; }
+  .popup .holder, .popup .holder-inner { height: 25rem; }
+  .popup .holder-inner { margin-bottom: 0rem; }
+  *::-ms-backdrop .holder:after, .popup .holder:after { display: none; }
+  *::-ms-backdrop .holder, *::-ms-backdrop .holder-inner, .popup .holder, .popup .holder-inner { height: 25rem; }
+  *::-ms-backdrop .holder-inner, .popup .holder-inner { margin-bottom: 0rem; } }
 
 body.compensate-for-scrollbar { overflow: hidden; }
 
