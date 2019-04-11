@@ -1879,6 +1879,10 @@ label > .label-body { display: inline-block; margin-left: 1.5rem; font-weight: n
   .header .hamburger.is-active ~ .nav-links li .submenu > li:nth-child(9) { -webkit-animation: fadeInUp 0.2s 0.9s ease-in-out both; animation: fadeInUp 0.2s 0.9s ease-in-out both; }
   .header .hamburger.is-active ~ .nav-links li .submenu > li:nth-child(10) { -webkit-animation: fadeInUp 0.2s 1s ease-in-out both; animation: fadeInUp 0.2s 1s ease-in-out both; } }
 
+.navbar .nav-links li.has-menu > a { position: relative; }
+
+.navbar .nav-links li.has-menu > a:after { content: "\25BE"; position: absolute; right: 0; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); }
+
 .navbar .nav-links li .submenu { list-style: none; margin: 0; padding: 0; display: none; }
 
 .navbar .nav-links li .submenu li:first-child { border-top: 0.1rem solid #010407; }
