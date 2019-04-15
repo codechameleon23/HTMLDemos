@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" viewport-fit="cover”" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="icon" href="images/favicon.png" />
+  <title>Evans & Partridge</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Playfair+Display" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="flex-col jsNavbarToggle">
+
+  <!-- Heaader -->
+  <header class="header bg-white text-dark py-30">
+    <div class="container container-xl mx-auto">
+      <div class="flex-row justify-space-between align-center">
+        <a href="index.html" class="brand-logo"><img src="images/brand-logo.png" alt="Evans & Partridge" /></a>
+        <nav class="navbar bg-white shadow-lg lg:shadow-none 
+        pos-fixed pin pin-l-auto col-10 z-50 flex-col justify-center
+        sm:col-6 lg:col-auto lg:pos-static">
+          <ul class="list-reset flex-row
+          flex-col align-center
+          lg:flex-row">
+            <li class="lg:ml-30"><a class="text-inherit no-underline d-inline-block py-20" href="index.html">Home</a>
+            </li>
+            <li class="lg:ml-30"><a class="text-inherit no-underline d-inline-block py-20"
+                href="property-search.html">Property Search</a></li>
+            <li class="lg:ml-30"><a class="text-inherit no-underline d-inline-block py-20" href="sell-with-us.html">Sell
+                With Us</a></li>
+            <li class="active lg:ml-30"><a class="text-inherit no-underline d-inline-block py-20"
+                href="about.html">About</a>
+            </li>
+            <li class="lg:ml-30"><a class="text-inherit no-underline d-inline-block py-20" href="the-area.html">The
+                Area</a></li>
+            <li class="lg:ml-30"><a class="text-inherit no-underline d-inline-block py-20"
+                href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="hamburger icon lg:d-hidden ml-10 text-white">
+          <div class="text-primary"><span></span><span></span><span></span><span></span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="flex-auto">
+
+    <!-- Search filter -->
+    <section class="bg-light py-15 mb-20">
+      <div class="container sm:container-sm lg:container-xl mx-auto">
+        <form class="-mx-6 flex-col lg:flex-row align-center">
+          <div class="p-6 col-12 md:col-auto flex-row font-2md">Search Our Properties:</div>
+          <div class="select p-6 col-12 md:col-flex flex-row">
+            <select class="p-14 flex-stretch border focus:border focus:border-primary focus:shadow-outline bg-white">
+              <option value="">Min Price</option>
+              <option value="0">0</option>
+              <option value="150000">150,000</option>
+              <option value="175000">175,000</option>
+              <option value="200000">200,000</option>
+              <option value="225000">225,000</option>
+              <option value="250000">250,000</option>
+              <option value="275000">275,000</option>
+              <option value="300000">300,000</option>
+              <option value="325000">325,000</option>
+              <option value="350000">350,000</option>
+              <option value="400000">400,000</option>
+              <option value="450000">450,000</option>
+              <option value="500000">500,000</option>
+              <option value="600000">600,000</option>
+              <option value="700000">700,000</option>
+              <option value="800000">800,000</option>
+              <option value="900000">900,000</option>
+              <option value="1000000">1,000,000</option>
+              <option value="2000000">2,000,000</option>
+              <option value="3000000">3,000,000</option>
+              <option value="4000000">4,000,000</option>
+              <option value="5000000">5,000,000</option>
+            </select>
+          </div>
+          <div class="select p-6 col-12 md:col-flex flex-row">
+            <select class="p-14 flex-stretch border focus:border focus:border-primary focus:shadow-outline bg-white">
+              <option value="">Max Price</option>
+              <option value="150000">150,000</option>
+              <option value="175000">175,000</option>
+              <option value="200000">200,000</option>
+              <option value="225000">225,000</option>
+              <option value="250000">250,000</option>
+              <option value="275000">275,000</option>
+              <option value="300000">300,000</option>
+              <option value="325000">325,000</option>
+              <option value="350000">350,000</option>
+              <option value="400000">400,000</option>
+              <option value="450000">450,000</option>
+              <option value="500000">500,000</option>
+              <option value="600000">600,000</option>
+              <option value="700000">700,000</option>
+              <option value="800000">800,000</option>
+              <option value="900000">900,000</option>
+              <option value="1000000">1,000,000</option>
+              <option value="2000000">2,000,000</option>
+              <option value="3000000">3,000,000</option>
+              <option value="4000000">4,000,000</option>
+              <option value="5000000">5,000,000</option>
+              <option value="99999999">5,000,000+</option>
+            </select>
+          </div>
+          <div class="p-6 col-12 lg:col-auto flex-col sm:flex-row justify-end">
+            <button
+              class="button p-14 px-25 bg-primary border text-white hover:bg-white hover:border-primary hover:text-primary">
+              <i class="fa fa-search mr-6"></i><span>Search</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Image grid -->
+    <section>
+      <div class="overflow-hidden">
+        <div class="-mx-3 lg:-m-20 flex-row flex-wrap">
+          <div class="p-3 lg:p-10 col-6">
+            <div class="flex-stretch flex-col">
+              <div class="figure img-fit ar-1x1">
+                <div class="image-holder" style="background-image: url('images/iStock-153751337.jpg')"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 flex-col">
+            <div class="flex-stretch flex-col">
+              <div class="p-3 lg:p-10 flex-stretch flex-col">
+                <div class="figure img-fit flex-stretch">
+                  <div class="image-holder" style="background-image: url('images/iStock-964333536.jpg')"></div>
+                </div>
+              </div>
+              <div class="-px-10 flex-stretch flex-row">
+                <div class="col-6 flex-stretch flex-col">
+                  <div class="p-3 lg:p-10 flex-stretch flex-col">
+                    <div class="figure img-fit flex-stretch">
+                      <div class="image-holder" style="background-image: url('images/iStock-174847111.jpg')"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 flex-stretch flex-col">
+                  <div class="p-3 lg:p-10 flex-stretch flex-col">
+                    <div class="figure img-fit flex-stretch">
+                      <div class="image-holder" style="background-image: url('images/iStock-898206520.jpg')"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Intro -->
+    <section class="py-20 lg:py-60">
+      <div class="container container-lg mx-auto">
+        <div class="pt-20 flex-col text-center">
+          <h2 data-aos="fade-up" data-aos-delay="100" data-aos-easing="ease-in-out-quad" data-aos-duration="700"
+            class="font-secondary font-2lg font-regular mb-40">About Evans & Partridge</h2>
+          <p data-aos="fade-up" data-aos-delay="300" data-aos-easing="ease-in-out-quad" data-aos-duration="700"
+            class="mb-20">Our mission is to help our clients through potentially one of the most challenging lifetime
+            experiences
+            i.e. that of buying and selling property, moving house, and changing area. We will work as a team committed
+            to maintain our reputation for the highest standards of professionalism, integrity, and personal service to
+            this end.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Devider -->
+    <div class="container container-lg mx-auto flex-row justify-center">
+      <div class="col-2 border-primary border-b-2 -mt-2"></div>
+    </div>
+
+    <!-- Team Grid -->
+    <section class="py-20 lg:py-60">
+      <div class="container container-lg mx-auto">
+        <div class="pt-20 flex-col text-center">
+          <h2 class="font-secondary font-2lg font-regular mb-20">Meet Our Team</h2>
+
+          <div class="-mx-10 py-10 flex-row flex-wrap">
+
+            <div data-aos="fade-up" data-aos-delay="100" data-aos-easing="ease-in-out-quad" data-aos-duration="700"
+              class="col-12 md:col-4 p-10 flex-col">
+              <div class="figure img-fit ar-custom2">
+                <div class="image-holder" style="background-image: url('images/Evans_Partridge1743.jpg')"></div>
+              </div>
+              <div class="p-20 bg-light text-center flex-auto">
+                <h3 class="font-medium font-2md">Jamie Armstrong</h3>
+                <h4 class="font-regular font-2md">Managing Director</h4>
+              </div>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200" data-aos-easing="ease-in-out-quad" data-aos-duration="700"
+              class="col-12 md:col-4 p-10 flex-col">
+              <div class="figure img-fit ar-custom2">
+                <div class="image-holder" style="background-image: url('images/Evans_Partridge_14th_Feb_20194141.jpg')">
+                </div>
+              </div>
+              <div class="p-20 bg-light text-center flex-auto">
+                <h3 class="font-medium font-2md">James Bryant</h3>
+                <h4 class="font-regular font-2md">Sales Manager</h4>
+              </div>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="300" data-aos-easing="ease-in-out-quad" data-aos-duration="700"
+              class="col-12 md:col-4 p-10 flex-col">
+              <div class="figure img-fit ar-custom2">
+                <div class="image-holder" style="background-image: url('images/Evans_Partridge1609.jpg')"></div>
+              </div>
+              <div class="p-20 bg-light text-center flex-auto">
+                <h3 class="font-medium font-2md">Janet Taplin</h3>
+                <h4 class="font-regular font-2md">Secretary</h4>
+              </div>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="100" data-aos-easing="ease-in-out-quad" data-aos-duration="700"
+              class="col-12 md:col-4 p-10 flex-col">
+              <div class="figure img-fit ar-custom2">
+                <div class="image-holder" style="background-image: url('images/Evans_Partridge1487.jpg')"></div>
+              </div>
+              <div class="p-20 bg-light text-center flex-auto">
+                <h3 class="font-medium font-2md">Fiona Sexton</h3>
+                <h4 class="font-regular font-2md">Receptionist</h4>
+              </div>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200" data-aos-easing="ease-in-out-quad" data-aos-duration="700"
+              class="col-12 md:col-4 p-10 flex-col">
+              <div class="figure img-fit ar-custom2">
+                <div class="image-holder" style="background-image: url('images/Evans_Partridge1400_1.jpg')"></div>
+              </div>
+              <div class="p-20 bg-light text-center flex-auto">
+                <h3 class="font-medium font-2md">Beryl Vickers</h3>
+                <h4 class="font-regular font-2md">Administration</h4>
+              </div>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="300" data-aos-easing="ease-in-out-quad" data-aos-duration="700"
+              class="col-12 md:col-4 p-10 flex-col">
+              <div class="figure img-fit ar-custom2">
+                <div class="image-holder" style="background-image: url('images/Evans_Partridge_14th_Feb_20194040.jpg')">
+                </div>
+              </div>
+              <div class="p-20 bg-light text-center flex-auto">
+                <h3 class="font-medium font-2md">Cassandra Walsh</h3>
+                <h4 class="font-regular font-2md">Accounts</h4>
+              </div>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="100" data-aos-easing="ease-in-out-quad" data-aos-duration="700"
+              class="col-12 md:col-4 p-10 flex-col">
+              <div class="figure img-fit ar-custom2">
+                <div class="image-holder" style="background-image: url('images/Evans_Partridge1860_1.jpg')"></div>
+              </div>
+              <div class="p-20 bg-light text-center flex-auto">
+                <h3 class="font-medium font-2md">Mark Fry</h3>
+                <h4 class="font-regular font-2md">Consultant/Sales Manager</h4>
+              </div>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200" data-aos-easing="ease-in-out-quad" data-aos-duration="700"
+              class="col-12 md:col-4 p-10 flex-col">
+              <div class="figure img-fit ar-custom2">
+                <div class="image-holder" style="background-image: url('images/Evans_Partridge1645_1.jpg')"></div>
+              </div>
+              <div class="p-20 bg-light text-center flex-auto">
+                <h3 class="font-medium font-2md">Tim Evans</h3>
+                <h4 class="font-regular font-2md">Founder</h4>
+              </div>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="300" data-aos-easing="ease-in-out-quad" data-aos-duration="700"
+              class="col-12 md:col-4 p-10 flex-col">
+              <div class="figure img-fit ar-custom2">
+                <div class="image-holder"
+                  style="background-image: url('images/Evans_Partridge1972_FINAL_B_W_SQ-Crop.jpg')"></div>
+              </div>
+              <div class="p-20 bg-light text-center flex-auto">
+                <h3 class="font-medium font-2md">John Partridge</h3>
+                <h4 class="font-regular font-2md">Founder</h4>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Devider -->
+    <div class="container container-lg mx-auto flex-row justify-center">
+      <div class="col-2 border-primary border-b-2 -mt-2"></div>
+    </div>
+
+    <!-- Form -->
+    <section class="py-20 lg:py-60">
+      <div class="container container-xl mx-auto">
+        <div class="py-20 flex-col text-center">
+          <h2 data-aos="fade-up" data-aos-delay="100" data-aos-easing="ease-in-out-quad" data-aos-duration="700"
+            class="font-secondary font-2lg font-regular mb-40">Book a Market Appraisal</h2>
+          <p data-aos="fade-up" data-aos-delay="300" data-aos-easing="ease-in-out-quad" data-aos-duration="700"
+            class="mb-20">Please complete the form to book a free no obligation property inspection and meeting.</p>
+
+          <form data-aos="fade" data-aos-delay="500" data-aos-easing="ease-in-out-quad" data-aos-duration="700"
+            class="-mx-6 flex-row flex-wrap text-left">
+            <div class="p-6 col-12 md:col-6 flex-row"><input
+                class="p-14 border border-default flex-stretch focus:border-primary focus:shadow-outline" type="text"
+                placeholder="Full Name" /></div>
+            <div class="p-6 col-12 md:col-6 flex-row"><input
+                class="p-14 border border-default flex-stretch focus:border-primary focus:shadow-outline" type="text"
+                placeholder="Property Address" /></div>
+            <div class="p-6 col-12 md:col-6 flex-row"><input
+                class="p-14 border border-default flex-stretch focus:border-primary focus:shadow-outline" type="text"
+                placeholder="Email" /></div>
+            <div class="p-6 col-12 md:col-6 flex-row"><input
+                class="p-14 border border-default flex-stretch focus:border-primary focus:shadow-outline" type="text"
+                placeholder="Telephone" /></div>
+            <div data-aos="fade" data-aos-delay="700" data-aos-easing="ease-in-out-quad" data-aos-duration="700"
+              class="p-6 col-12 flex-col align-center">
+              <label class="custom-tick mt-20">
+                <input name="addr" type="checkbox">
+                <span class="tick border border-default bg-white"><span class="border-primary"></span></span>
+                <span class="related-text hover:text-primary">
+                  <span class="text-default">I have read and agree to the</span> <a href="#"
+                    class="text-inherit no-underline">Privacy&nbsp;Policy</a>
+                </span>
+              </label>
+              <button
+                class="button p-14 px-25 mt-20 bg-primary border text-white hover:bg-white hover:border-primary hover:text-primary">Send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Clients -->
+  <section class="py-15 bg-light">
+    <div class="container container-xl mx-auto">
+      <div
+        class="clients -mx-15 flex-col md:flex-row md:flex-wrap align-center justify-center xl:justify-space-between">
+        <div class="p-15"><img src="images/logo copy.png" /></div>
+        <div class="p-15"><img src="images/Zoopla_logo_purple copy.png" /></div>
+        <div class="p-15"><img src="images/prime-location.com.png" /></div>
+        <div class="p-15"><img src="images/right-move.png" /></div>
+        <div class="p-15"><img src="images/1_standard_rgb copy.png" /></div>
+        <div class="p-15"><img src="images/Generic_TPO_Logo.png" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-20 lg:py-60 footer bg-dark text-white">
+    <div class="container container-xl mx-auto">
+      <div class="-mx-20 flex-col md:flex-row justify-space-between">
+        <div class="p-20 flex-col flex-stretch align-center md:align-start">
+          <a href="index.html" class="brand-logo mb-20 "><img src="images/brand-logo-w.png"
+              alt="Evans & Partridge" /></a>
+          <ul class="list-reset sm:col-count-3 lg:col-count-4 mt-auto text-center md:text-left">
+            <li><a class="text-inherit no-underline d-inline-block py-1 " href="#">Home</a></li>
+            <li><a class="text-inherit no-underline d-inline-block py-1 " href="#">About</a></li>
+            <li><a class="text-inherit no-underline d-inline-block py-1 " href="#">The Area</a></li>
+            <li><a class="text-inherit no-underline d-inline-block py-1 " href="#">Sell With Us</a></li>
+            <li><a class="text-inherit no-underline d-inline-block py-1 " href="#">Contact </a></li>
+            <li><a class="text-inherit no-underline d-inline-block py-1 " href="#">Sitemap</a></li>
+            <li><a class="text-inherit no-underline d-inline-block py-1 " href="#">Privacy policy</a></li>
+            <li><a class="text-inherit no-underline d-inline-block py-1 " href="#">T&Cs</a></li>
+            <li><a class="text-inherit no-underline d-inline-block py-1 " href="#">Cookie Policy</a></li>
+            <li><a class="text-inherit no-underline d-inline-block py-1 " href="#">© Copyright 2019</a></li>
+            <li class="mt-20 ">
+              <a class="text-inherit no-underline d-inline-block py-1 " href="http://unstuckdesign.com">
+                <img class="byUnstuckDesign" src="images/designbyunstuckdesign.png" alt="Desgin by Unstuck Designs">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="p-20 flex-col flex-stretch">
+          <ul class="list-reset flex-col text-center md:text-left lg:text-right">
+            <li><a class="text-inherit no-underline d-inline-block py-1 " href="tel:01264810702">Telephone: 01264
+                810702</a></li>
+            <li><a class="text-inherit no-underline d-inline-block py-1 "
+                href="mailto:property@evansandpartridge.co.uk">Email: property@evansandpartridge.co.uk</a></li>
+            <li class="mt-20">
+              <address class="roman">Stockbridge Office<br>
+                Agriculture House<br>
+                High street<br>
+                Stockbridge<br>
+                Hampshire SO20 6HF</address>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/allscripts.js"></script>
+</body>
+
+</html>

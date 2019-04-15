@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" viewport-fit="cover”" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="icon" href="images/favicon.png" />
+  <title>Evans & Partridge</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Playfair+Display" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="flex-col jsNavbarToggle">
+
+  <!-- Heaader -->
+  <header class="header bg-white text-dark py-30">
+    <div class="container container-xl mx-auto">
+      <div class="flex-row justify-space-between align-center">
+        <a href="index.html" class="brand-logo"><img src="images/brand-logo.png" alt="Evans & Partridge" /></a>
+        <nav class="navbar bg-white shadow-lg lg:shadow-none 
+        pos-fixed pin pin-l-auto col-10 z-50 flex-col justify-center
+        sm:col-6 lg:col-auto lg:pos-static">
+          <ul class="list-reset flex-row
+          flex-col align-center
+          lg:flex-row">
+            <li class="lg:ml-30"><a class="text-inherit no-underline d-inline-block py-20" href="index.html">Home</a>
+            </li>
+            <li class="lg:ml-30 active"><a class="text-inherit no-underline d-inline-block py-20"
+                href="property-search.html">Property Search</a></li>
+            <li class="lg:ml-30"><a class="text-inherit no-underline d-inline-block py-20" href="sell-with-us.html">Sell
+                With Us</a></li>
+            <li class="lg:ml-30"><a class="text-inherit no-underline d-inline-block py-20" href="about.html">About</a>
+            </li>
+            <li class="lg:ml-30"><a class="text-inherit no-underline d-inline-block py-20" href="the-area.html">The
+                Area</a></li>
+            <li class="lg:ml-30"><a class="text-inherit no-underline d-inline-block py-20"
+                href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="hamburger icon lg:d-hidden ml-10 text-white">
+          <div class="text-primary"><span></span><span></span><span></span><span></span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="flex-auto">
+
+    <!-- Search filter -->
+    <section class="bg-light py-15 mb-20">
+      <div class="container sm:container-sm lg:container-xl mx-auto">
+        <form class="-mx-6 flex-col lg:flex-row align-center">
+          <div class="p-6 col-12 md:col-auto flex-row font-2md">Search Our Properties:</div>
+          <div class="select p-6 col-12 md:col-flex flex-row">
+            <select class="p-14 flex-stretch border focus:border focus:border-primary focus:shadow-outline bg-white">
+              <option value="">Min Price</option>
+              <option value="0">0</option>
+              <option value="150000">150,000</option>
+              <option value="175000">175,000</option>
+              <option value="200000">200,000</option>
+              <option value="225000">225,000</option>
+              <option value="250000">250,000</option>
+              <option value="275000">275,000</option>
+              <option value="300000">300,000</option>
+              <option value="325000">325,000</option>
+              <option value="350000">350,000</option>
+              <option value="400000">400,000</option>
+              <option value="450000">450,000</option>
+              <option value="500000">500,000</option>
+              <option value="600000">600,000</option>
+              <option value="700000">700,000</option>
+              <option value="800000">800,000</option>
+              <option value="900000">900,000</option>
+              <option value="1000000">1,000,000</option>
+              <option value="2000000">2,000,000</option>
+              <option value="3000000">3,000,000</option>
+              <option value="4000000">4,000,000</option>
+              <option value="5000000">5,000,000</option>
+            </select>
+          </div>
+          <div class="select p-6 col-12 md:col-flex flex-row">
+            <select class="p-14 flex-stretch border focus:border focus:border-primary focus:shadow-outline bg-white">
+              <option value="">Max Price</option>
+              <option value="150000">150,000</option>
+              <option value="175000">175,000</option>
+              <option value="200000">200,000</option>
+              <option value="225000">225,000</option>
+              <option value="250000">250,000</option>
+              <option value="275000">275,000</option>
+              <option value="300000">300,000</option>
+              <option value="325000">325,000</option>
+              <option value="350000">350,000</option>
+              <option value="400000">400,000</option>
+              <option value="450000">450,000</option>
+              <option value="500000">500,000</option>
+              <option value="600000">600,000</option>
+              <option value="700000">700,000</option>
+              <option value="800000">800,000</option>
+              <option value="900000">900,000</option>
+              <option value="1000000">1,000,000</option>
+              <option value="2000000">2,000,000</option>
+              <option value="3000000">3,000,000</option>
+              <option value="4000000">4,000,000</option>
+              <option value="5000000">5,000,000</option>
+              <option value="99999999">5,000,000+</option>
+            </select>
+          </div>
+          <div class="p-6 col-12 lg:col-auto flex-col sm:flex-row justify-end">
+            <button
+              class="button p-14 px-25 bg-primary border text-white hover:bg-white hover:border-primary hover:text-primary">
+              <i class="fa fa-search mr-6"></i><span>Search</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Cards -->
+    <section class="pb-20 lg:pb-60">
+      <div class="container container-xl mx-auto">
+        <div class="-mx-10 py-10 flex-row flex-wrap">
+
+          <div data-aos="fade-up" data-aos-delay="100" data-aos-easing="ease-in-out-quad" data-aos-duration="700"
+            class="col-12 sm:col-6 lg:col-4 flex-col p-10">
+            <div
+              class="pos-relative border border-lightSecondary flex-stretch flex-col justify-start has-detail-button">
+              <a href="property-details.html" class="figure img-fit ar-custom">
+                <span class="image-holder bg-primary text-white font-base"
+                  style="background-image: url('images/thumb_sorl_dch1zzza_jpg_801x413_crop_upscale_q85.jpg')"></span>
+              </a>
+              <div class="p-20 bg-light">
+                <h3 class="font-medium font-2md">Offers Invited Around</h3>
+                <h4 class="font-regular font-lg">£1,575,000</h4>
+              </div>
+              <div class="p-20 flex-auto">
+                <h3 class="font-medium font-2md">House with 4 bedrooms</h3>
+                <h4 class="font-regular font-2md">Houghton, Stockbridge, Hampshire SO20</h4>
+              </div>
+            </div>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="200" data-aos-easing="ease-in-out-quad" data-aos-duration="700"
+            class="col-12 sm:col-6 lg:col-4 flex-col p-10">
+            <div
+              class="pos-relative border border-lightSecondary flex-stretch flex-col justify-start has-detail-button">
+              <a href="property-details.html" class="figure img-fit ar-custom">
+                <span class="image-holder bg-primary text-white font-base"
+                  style="background-image: url('images/thumb_sorl_IMG_2789-HDR-2-MAIN-SHOT_jpg_801x413_crop_upscale_q85.jpg')"></span>
+              </a>
+              <div class="p-20 bg-light">
+                <h3 class="font-medium font-2md">Price</h3>
+                <h4 class="font-regular font-lg">£1,425,000</h4>
+              </div>
+              <div class="p-20 flex-auto">
+                <h3 class="font-medium font-2md">House with 5 bedrooms</h3>
+                <h4 class="font-regular font-2md">Nr Figsbury, Salisbury, Wiltshire Sp4</h4>
+              </div>
+            </div>
+          </div>
+          <!-- Form -->
+          <div data-aos="fade-up" data-aos-delay="300" data-aos-easing="ease-in-out-quad" data-aos-duration="700"
+            class="col-12 sm:col-6 lg:col-4 flex-col p-10">
+            <div class="bg-light px-15 lg:px-25 py-20 border flex-stretch">
+              <h2 class="mb-20 font-lg font-regular font-secondary">Sign up for Email Alerts of New Instructions</h2>
+              <p class="mb-20 font-md">Keep up to date with our as they are added to our site.</p>
+              <form class="-mx-6 flex-col">
+                <div class="p-6 col-12 lg:col-flex flex-row">
+                  <input class="p-14 flex-stretch border focus:border-primary focus:shadow-outline" type="text"
+                    placeholder="Full Name" />
+                </div>
+                <div class="p-6 col-12 lg:col-flex flex-row">
+                  <input class="p-14 flex-stretch border focus:border-primary focus:shadow-outline" type="email"
+                    placeholder="Email" />
+                </div>
+                <div class="p-6 col-12">
+                  <label class="custom-tick">
+                    <input name="addr" type="checkbox">
+                    <span class="tick bg-white"><span class="border-primary"></span></span>
+                    <span class="related-text hover:text-primary">
+                      <span class="text-default">I have read and agree to the</span> <a href="#"
+                        class="text-inherit no-underline">Privacy&nbsp;Policy</a>
+                    </span>
+                  </label>
+                </div>
+                <div class="p-6 col-12">
+                  <button
+                    class="button p-14 px-25 bg-primary border text-white hover:bg-white hover:border-primary hover:text-primary">Sign
+                    Up</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="100" data-aos-easing="ease-in-out-quad" data-aos-duration="700"
+            class="col-12 sm:col-6 lg:col-4 flex-col p-10">
+            <div
+              class="pos-relative border border-lightSecondary flex-stretch flex-col justify-start has-detail-button">
+              <a href="property-details.html" class="figure img-fit ar-custom">
+                <span class="image-holder bg-primary text-white font-base"
+                  style="background-image: url('images/thumb_sorl_DSC05148EDzz_jpg_801x413_crop_upscale_q85.jpg')"></span>
+              </a>
+              <div class="p-20 bg-light">
+                <h3 class="font-medium font-2md">Offers Invited Around</h3>
+                <h4 class="font-regular font-lg">£1,385,000</h4>
+              </div>
+              <div class="p-20 flex-auto">
+                <h3 class="font-medium font-2md">House with 4 bedrooms</h3>
+                <h4 class="font-regular font-2md">Hurstbourne Priors, Whitchurch, Hampshire RG28</h4>
+              </div>
+            </div>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="200" data-aos-easing="ease-in-out-quad" data-aos-duration="700"
+            class="col-12 sm:col-6 lg:col-4 flex-col p-10">
+            <div
+              class="pos-relative border border-lightSecondary flex-stretch flex-col justify-start has-detail-button">
+              <a href="property-details.html" class="figure img-fit ar-custom">
+                <span class="image-holder bg-primary text-white font-base"
+                  style="background-image: url('images/thumb_sorl_IMG_5341zzza_jpg_801x413_crop_upscale_q85.jpg')"></span>
+              </a>
+              <div class="p-20 bg-light">
+                <h3 class="font-medium font-2md">Offers Invited Around</h3>
+                <h4 class="font-regular font-lg">£1,575,000</h4>
+              </div>
+              <div class="p-20 flex-auto">
+                <h3 class="font-medium font-2md">House with 4 bedrooms</h3>
+                <h4 class="font-regular font-2md">Houghton, Stockbridge, Hampshire SO20</h4>
+              </div>
+              <span
+                class="tag pos-absolute pin pin-r-auto pin-b-auto p-15 px-25 bg-primary border text-white uppercase">Sold</span>
+            </div>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="300" data-aos-easing="ease-in-out-quad" data-aos-duration="700"
+            class="col-12 sm:col-6 lg:col-4 flex-col p-10">
+            <div
+              class="pos-relative border border-lightSecondary flex-stretch flex-col justify-start has-detail-button">
+              <a href="property-details.html" class="figure img-fit ar-custom">
+                <span class="image-holder bg-primary text-white font-base"
+                  style="background-image: url('images/thumb_sorl_IMG_7819ed2z_jpg_801x413_crop_upscale_q85.jpg')"></span>
+              </a>
+              <div class="p-20 bg-light">
+                <h3 class="font-medium font-2md">Price Guide</h3>
+                <h4 class="font-regular font-lg">£1,250,000</h4>
+              </div>
+              <div class="p-20 flex-auto">
+                <h3 class="font-medium font-2md">House with 6 bedrooms</h3>
+                <h4 class="font-regular font-2md">Tufton, Whitchurch, Hampshire Rg28</h4>
+              </div>
+            </div>
+          </div>
+          <!-- Form -->
+          <div data-aos="fade-up" data-aos-delay="100" data-aos-easing="ease-in-out-quad" data-aos-duration="700"
+            class="col-12 sm:col-6 lg:col-4 flex-col p-10">
+            <div class="bg-light px-15 lg:px-25 py-20 border flex-stretch">
+              <h2 class="mb-20 font-3rg font-regular font-secondary">Book a Market Appraisal</h2>
+              <p class="mb-20 font-md">Please complete the form to book a free no obligation property inspection and
+                meeting.</p>
+              <form class="-mx-6 flex-col">
+                <div class="p-6 col-12 lg:col-flex flex-row">
+                  <input class="p-14 flex-stretch border focus:border-primary focus:shadow-outline" type="text"
+                    placeholder="Full Name" />
+                </div>
+                <div class="p-6 col-12 lg:col-flex flex-row">
+                  <input class="p-14 flex-stretch border focus:border-primary focus:shadow-outline" type="email"
+                    placeholder="Email" />
+                </div>
+                <div class="p-6 col-12 lg:col-flex flex-row">
+                  <input class="p-14 flex-stretch border focus:border-primary focus:shadow-outline" type="text"
+                    placeholder="Telephone" />
+                </div>
+                <div class="p-6 col-12 lg:col-flex flex-row">
+                  <input class="p-14 flex-stretch border focus:border-primary focus:shadow-outline" type="text"
+                    placeholder="Property Name" />
+                </div>
+                <div class="p-6 col-12">
+                  <label class="custom-tick">
+                    <input name="addr" type="checkbox">
+                    <span class="tick bg-white"><span class="border-primary"></span></span>
+                    <span class="related-text hover:text-primary">
+                      <span class="text-default">I have read and agree to the</span> <a href="#"
+                        class="text-inherit no-underline">Privacy&nbsp;Policy</a>
+                    </span>
+                  </label>
+                </div>
+                <div class="p-6 col-12">
+                  <button
+                    class="button p-14 px-25 bg-primary border text-white hover:bg-white hover:border-primary hover:text-primary">Send</button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="200" data-aos-easing="ease-in-out-quad" data-aos-duration="700"
+            class="col-12 sm:col-6 lg:col-4 flex-col p-10">
+            <div
+              class="pos-relative border border-lightSecondary flex-stretch flex-col justify-start has-detail-button">
+              <a href="property-details.html" class="figure img-fit ar-custom">
+                <span class="image-holder bg-primary text-white font-base"
+                  style="background-image: url('images/thumb_sorl_IMG_4659-HDR_jpg_801x413_crop_upscale_q85.jpg')"></span>
+              </a>
+              <div class="p-20 bg-light">
+                <h3 class="font-medium font-2md">Offers Invited Around</h3>
+                <h4 class="font-regular font-lg">£1,175,000</h4>
+              </div>
+              <div class="p-20 flex-auto">
+                <h3 class="font-medium font-2md">House with 4 bedrooms</h3>
+                <h4 class="font-regular font-2md">Nether Wallop, Stockbridge, Hampshire SO20</h4>
+              </div>
+            </div>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="300" data-aos-easing="ease-in-out-quad" data-aos-duration="700"
+            class="col-12 sm:col-6 lg:col-4 flex-col p-10">
+            <div
+              class="pos-relative border border-lightSecondary flex-stretch flex-col justify-start has-detail-button">
+              <a href="property-details.html" class="figure img-fit ar-custom">
+                <span class="image-holder bg-primary text-white font-base"
+                  style="background-image: url('images/thumb_sorl_DSC05719z_jpg_801x413_crop_upscale_q85.jpg')"></span>
+              </a>
+              <div class="p-20 bg-light">
+                <h3 class="font-medium font-2md">Price Guide</h3>
+                <h4 class="font-regular font-lg">£1,150,000</h4>
+              </div>
+              <div class="p-20 flex-auto">
+                <h3 class="font-medium font-2md">House with 6 bedrooms</h3>
+                <h4 class="font-regular font-2md">Abbotts Ann, Andover, Hampshire Sp11</h4>
+              </div>
+            </div>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="100" data-aos-easing="ease-in-out-quad" data-aos-duration="700"
+            class="col-12 sm:col-6 lg:col-4 flex-col p-10">
+            <div
+              class="pos-relative border border-lightSecondary flex-stretch flex-col justify-start has-detail-button">
+              <a href="property-details.html" class="figure img-fit ar-custom">
+                <span class="image-holder bg-primary text-white font-base"
+                  style="background-image: url('images/thumb_sorl_PROa_DSC8065zzz_jpg_801x413_crop_upscale_q85.jpg')"></span>
+              </a>
+              <div class="p-20 bg-light">
+                <h3 class="font-medium font-2md">Offers Invited Around</h3>
+                <h4 class="font-regular font-lg">£1,150,000</h4>
+              </div>
+              <div class="p-20 flex-auto">
+                <h3 class="font-medium font-2md">House with 5 bedrooms</h3>
+                <h4 class="font-regular font-2md">East Cholderton, Andover, Hampshire Sp11</h4>
+              </div>
+            </div>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="200" data-aos-easing="ease-in-out-quad" data-aos-duration="700"
+            class="col-12 sm:col-6 lg:col-4 flex-col p-10">
+            <div
+              class="pos-relative border border-lightSecondary flex-stretch flex-col justify-start has-detail-button">
+              <a href="property-details.html" class="figure img-fit ar-custom">
+                <span class="image-holder bg-primary text-white font-base"
+                  style="background-image: url('images/thumb_sorl_IMG_4129-HDR_jpg_801x413_crop_upscale_q85.jpg')"></span>
+              </a>
+              <div class="p-20 bg-light">
+                <h3 class="font-medium font-2md">Offers Invited Around</h3>
+                <h4 class="font-regular font-lg">£925,000</h4>
+              </div>
+              <div class="p-20 flex-auto">
+                <h3 class="font-medium font-2md">House with 5 bedrooms</h3>
+                <h4 class="font-regular font-2md">Weyhill, Andover, Hampshire Sp11</h4>
+              </div>
+            </div>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="300" data-aos-easing="ease-in-out-quad" data-aos-duration="700"
+            class="col-12 sm:col-6 lg:col-4 flex-col p-10">
+            <div
+              class="pos-relative border border-lightSecondary flex-stretch flex-col justify-start has-detail-button">
+              <a href="property-details.html" class="figure img-fit ar-custom">
+                <span class="image-holder bg-primary text-white font-base"
+                  style="background-image: url('images/thumb_sorl_DSC05672zz_jpg_801x413_crop_upscale_q85.jpg')"></span>
+              </a>
+              <div class="p-20 bg-light">
+                <h3 class="font-medium font-2md">Offers Invited Around</h3>
+                <h4 class="font-regular font-lg">£895,000</h4>
+              </div>
+              <div class="p-20 flex-auto">
+                <h3 class="font-medium font-2md">House with 4 bedrooms</h3>
+                <h4 class="font-regular font-2md">Abbotts Ann, Andover, Hampshire Sp11</h4>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <!-- Clients -->
+  <section class="py-15 bg-light">
+    <div class="container container-xl mx-auto">
+      <div
+        class="clients -mx-15 flex-col md:flex-row md:flex-wrap align-center justify-center xl:justify-space-between">
+        <div class="p-15"><img src="images/logo copy.png" /></div>
+        <div class="p-15"><img src="images/Zoopla_logo_purple copy.png" /></div>
+        <div class="p-15"><img src="images/prime-location.com.png" /></div>
+        <div class="p-15"><img src="images/right-move.png" /></div>
+        <div class="p-15"><img src="images/1_standard_rgb copy.png" /></div>
+        <div class="p-15"><img src="images/Generic_TPO_Logo.png" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-20 lg:py-60 footer bg-dark text-white">
+    <div class="container container-xl mx-auto">
+      <div class="-mx-20 flex-col md:flex-row justify-space-between">
+        <div class="p-20 flex-col flex-stretch align-center md:align-start">
+          <a href="index.html" class="brand-logo mb-20 "><img src="images/brand-logo-w.png"
+              alt="Evans & Partridge" /></a>
+          <ul class="list-reset sm:col-count-3 lg:col-count-4 mt-auto text-center md:text-left">
+            <li><a class="text-inherit no-underline d-inline-block py-1 " href="#">Home</a></li>
+            <li><a class="text-inherit no-underline d-inline-block py-1 " href="#">About</a></li>
+            <li><a class="text-inherit no-underline d-inline-block py-1 " href="#">The Area</a></li>
+            <li><a class="text-inherit no-underline d-inline-block py-1 " href="#">Sell With Us</a></li>
+            <li><a class="text-inherit no-underline d-inline-block py-1 " href="#">Contact </a></li>
+            <li><a class="text-inherit no-underline d-inline-block py-1 " href="#">Sitemap</a></li>
+            <li><a class="text-inherit no-underline d-inline-block py-1 " href="#">Privacy policy</a></li>
+            <li><a class="text-inherit no-underline d-inline-block py-1 " href="#">T&Cs</a></li>
+            <li><a class="text-inherit no-underline d-inline-block py-1 " href="#">Cookie Policy</a></li>
+            <li><a class="text-inherit no-underline d-inline-block py-1 " href="#">© Copyright 2019</a></li>
+            <li class="mt-20 ">
+              <a class="text-inherit no-underline d-inline-block py-1 " href="http://unstuckdesign.com">
+                <img class="byUnstuckDesign" src="images/designbyunstuckdesign.png" alt="Desgin by Unstuck Designs">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="p-20 flex-col flex-stretch">
+          <ul class="list-reset flex-col text-center md:text-left lg:text-right">
+            <li><a class="text-inherit no-underline d-inline-block py-1 " href="tel:01264810702">Telephone: 01264
+                810702</a></li>
+            <li><a class="text-inherit no-underline d-inline-block py-1 "
+                href="mailto:property@evansandpartridge.co.uk">Email: property@evansandpartridge.co.uk</a></li>
+            <li class="mt-20">
+              <address class="roman">Stockbridge Office<br>
+                Agriculture House<br>
+                High street<br>
+                Stockbridge<br>
+                Hampshire SO20 6HF</address>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/allscripts.js"></script>
+</body>
+
+</html>
