@@ -36,15 +36,15 @@ a.fn.owlCarousel.Constructor.Plugins.Animate=e}(window.Zepto||window.jQuery,wind
 // var isIE10 = (navigator.userAgent.match(/MSIE 10/i));
 
 // Get View port width
-// function getViewportWidth() {
-//   if (window.innerWidth) {
-//     return window.innerWidth;
-//   } else if (document.body && document.body.offsetWidth) {
-//     return document.body.offsetWidth;
-//   } else {
-//     return 0;
-//   }
-// }
+function getViewportWidth() {
+  if (window.innerWidth) {
+    return window.innerWidth;
+  } else if (document.body && document.body.offsetWidth) {
+    return document.body.offsetWidth;
+  } else {
+    return 0;
+  }
+}
 
 // Close Navbar
 function navBarClose() {
@@ -136,12 +136,12 @@ $(document).ready(function () {
       elm.addClass("is-open");
       
       // Scroll to avoid jump when other closes
-      // if(getViewportWidth() < 700){
+      if(getViewportWidth() < 900){
         setTimeout(function() {
           var offset = elm.offset();
           window.scrollTo(0, offset.top - 20)
         }, 700);
-      // }
+      }
 
     }
   });
