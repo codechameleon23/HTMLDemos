@@ -1142,15 +1142,13 @@ a.figure:hover .image-holder, .figure.has-hover-effect:hover .image-holder, .fig
 
 .filter_parent .filtered.col { display: -webkit-box; display: -ms-flexbox; display: flex; }
 
-.toggle_tabs, .filter_tabs { padding-bottom: 2rem; }
-
 .accordion_toggle_tab, .filter_tab { cursor: pointer; }
 
 .accordion_toggle_tab .button, .filter_tab .button { min-width: 0; -webkit-transition: all .25s 0s ease-in-out; -o-transition: all .25s 0s ease-in-out; transition: all .25s 0s ease-in-out; }
 
 .accordion_toggle_tab.is-active .button, .filter_tab.is-active .button { background-color: #9fcf67; color: #ffffff; }
 
-@media all and (min-width: 900px) { .accordion_toggle_tab.is-active .button, .filter_tab.is-active .button { padding-bottom: 3.16rem; margin-bottom: -2rem; } }
+@media all and (min-width: 900px) { .accordion_toggle_tab > .button, .filter_tab > .button { border-bottom: 0; } }
 
 .in-view-animation { opacity: 0; }
 
@@ -1254,6 +1252,7 @@ body.is-open .navbar-links .navbar-link:not(.navtoggle) { opacity: 0; }
 
 @media all and (min-width: 900px) { .hamburger_md { display: none; }
   .newMenu { width: 100vw; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); margin-left: 50%; }
+  .newMenu > .container > div { width: 25%; }
   .navtoggle:first-child { display: none; }
   .navtoggle:first-child .brand-logo { opacity: 0; -webkit-animation: fade-in .45s 0s ease-in-out; animation: fade-in .45s 0s ease-in-out; }
   .navtoggle:last-child { padding-right: 0; }
