@@ -61,19 +61,21 @@ tpl:'<div class="fancybox-share"><h1>{{SHARE}}</h1><p><a class="fancybox-share__
 // Close Navbar
 function navBarClose() {
   $(".hamburger").removeClass("is-active");
-  $(".jsNavbarToggle").removeClass("is-open");
+  $(".jsNavbarToggle").removeClass('is-open').addClass('is-closing');
+  setTimeout(function(){
+    $(".jsNavbarToggle").removeClass('is-closing').addClass('is-close');
+  }, 2000)
 }
 // Open Navbar
 function navBarOpen() {
   $(".hamburger").addClass("is-active");
-  $(".jsNavbarToggle").addClass("is-open");
+  $(".jsNavbarToggle").removeClass('is-close').addClass('is-open');
 }
 
 $(document).ready(function () {
   
   // Navbar toggle
   $(".hamburger").on("click", function () {
-    console.log('dfaa');
     if ($(".hamburger").hasClass("is-active")) {
       navBarClose();
     } else {
