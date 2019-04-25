@@ -62,7 +62,7 @@ tpl:'<div class="fancybox-share"><h1>{{SHARE}}</h1><p><a class="fancybox-share__
 function navBarClose() {
   $(".hamburger").removeClass("is-active");
   $(".jsNavbarToggle").removeClass('is-open').addClass('is-closing');
-  setTimeout(function(){
+  setTimeout(function () {
     $(".jsNavbarToggle").removeClass('is-closing').addClass('is-close');
   }, 2000)
 }
@@ -73,7 +73,7 @@ function navBarOpen() {
 }
 
 $(document).ready(function () {
-  
+
   // Navbar toggle
   $(".hamburger").on("click", function () {
     if ($(".hamburger").hasClass("is-active")) {
@@ -83,53 +83,53 @@ $(document).ready(function () {
     }
   });
 
-    //Banner carousel
-    if ($(".jsBannerCarousel").length) {
-      var bannerCarousel = $(".jsBannerCarousel"); //Banner-carousel for Property-details page
-      bannerCarousel.owlCarousel({
-        items: 1,
-        margin: 0,
-        loop: true,
-        mouseDrag: true,
-        nav: false,
-        dots: false,
-        // animateIn: isIE11 || isIE10 ? "" : "slideInUp",
-        // animateOut: isIE11 || isIE10 ? "" : "slideOutUp",
-        smartSpeed: 500,
-        autoplay: true,
-        autoplayTimeout: 7000,
-        autoplayHoverPause: true
-      });
-  
-      $('.jsCarouselPrv').on('click', function () {
-        $(this).closest('.carousel-outer').find(bannerCarousel).trigger('prev.owl.carousel');
-      });
-      $('.jsCarouselNxt').on('click', function () {
-        $(this).closest('.carousel-outer').find(bannerCarousel).trigger('next.owl.carousel');
-      });
-    };
-  
+  //Banner carousel
+  if ($(".jsBannerCarousel").length) {
+    var bannerCarousel = $(".jsBannerCarousel"); //Banner-carousel for Property-details page
+    bannerCarousel.owlCarousel({
+      items: 1,
+      margin: 0,
+      loop: true,
+      mouseDrag: true,
+      nav: false,
+      dots: false,
+      // animateIn: isIE11 || isIE10 ? "" : "slideInUp",
+      // animateOut: isIE11 || isIE10 ? "" : "slideOutUp",
+      smartSpeed: 500,
+      autoplay: true,
+      autoplayTimeout: 7000,
+      autoplayHoverPause: true
+    });
+
+    $('.jsCarouselPrv').on('click', function () {
+      $(this).closest('.carousel-outer').find(bannerCarousel).trigger('prev.owl.carousel');
+    });
+    $('.jsCarouselNxt').on('click', function () {
+      $(this).closest('.carousel-outer').find(bannerCarousel).trigger('next.owl.carousel');
+    });
+  };
+
   // Strip carousel
-  if($('.js_stripCarousel').length){//if element exists
+  if ($('.js_stripCarousel').length) { //if element exists
     var imageCarousel = $('.js_stripCarousel');
     imageCarousel.owlCarousel({
-        loop:true,
-        nav:false,
-        dots:false,
-        autoplay:true,
-        autoplayTimeout:3000,
-        autoplayHoverPause:true,
-        responsive:{
-            0:{
-                items:1
-            },
-            600:{
-                items:2
-            },
-            750:{
-                items:3
-            }
+      loop: true,
+      nav: false,
+      dots: false,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      autoplayHoverPause: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 2
+        },
+        750: {
+          items: 3
         }
+      }
     });
     $('.jsCarouselPrv').on('click', function () {
       $(this).closest('.carousel-outer').find(imageCarousel).trigger('prev.owl.carousel');
@@ -140,21 +140,21 @@ $(document).ready(function () {
   };
 
   /*Accordion toggle*/
-  $(".accordian-toggle").on('click tap',  function(){
+  $(".accordian-toggle").on('click tap', function () {
     var elm = $(this);
-    if(elm.hasClass("is-open")){
+    if (elm.hasClass("is-open")) {
       elm.closest('.accordion-wrapper').find('.accordian-toggle').removeClass('is-open');
       elm.removeClass("is-open");
-    }else{
+    } else {
       elm.closest('.accordion-wrapper').find('.accordian-toggle').removeClass('is-open');
       elm.addClass("is-open");
-      
+
       // Scroll to avoid jump when other closes
       // if(getViewportWidth() < 700){
-        setTimeout(function() {
-          var offset = elm.offset();
-          window.scrollTo(0, offset.top - 20)
-        }, 700);
+      setTimeout(function () {
+        var offset = elm.offset();
+        window.scrollTo(0, offset.top - 20)
+      }, 700);
       // }
 
     }
@@ -162,17 +162,15 @@ $(document).ready(function () {
 
   // fancybox
   $().fancybox({
-    selector : '.jsPopupGallery a.JsFancyboxItem',
+    selector: '.jsPopupGallery a.JsFancyboxItem',
     btnTpl: {
-      arrowLeft:
-      '<button data-fancybox-prev class="fancybox-button fancybox-button--arrow_left flex-row" title="{{PREV}}">' +
-      '<div class="m-auto icon icon-md bg-white radius-full"><div class="col-6 mx-auto"><img src="images/left-arrow-icon.png" /></div></div>' +
-      "</button>",
+      arrowLeft: '<button data-fancybox-prev class="fancybox-button fancybox-button--arrow_left flex-row" title="{{PREV}}">' +
+        '<div class="m-auto icon icon-md bg-white radius-full"><div class="col-6 mx-auto"><img src="images/left-arrow-icon.png" /></div></div>' +
+        "</button>",
 
-    arrowRight:
-      '<button data-fancybox-next class="fancybox-button fancybox-button--arrow_right flex-row" title="{{NEXT}}">' +
-      '<div class="m-auto icon icon-md bg-white radius-full"><div class="col-6 mx-auto"><img src="images/right-arrow-icon.png" /></div></div>' +
-      "</button>",
+      arrowRight: '<button data-fancybox-next class="fancybox-button fancybox-button--arrow_right flex-row" title="{{NEXT}}">' +
+        '<div class="m-auto icon icon-md bg-white radius-full"><div class="col-6 mx-auto"><img src="images/right-arrow-icon.png" /></div></div>' +
+        "</button>",
     }
   });
 
@@ -191,8 +189,8 @@ $(document).ready(function () {
 });
 
 // iPhone page refresh on browser back button
-$(window).bind("pageshow", function(event) {
+$(window).bind("pageshow", function (event) {
   if (event.originalEvent.persisted) {
-      window.location.reload();
+    window.location.reload();
   }
 });
