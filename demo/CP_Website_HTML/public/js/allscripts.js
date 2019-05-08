@@ -266,12 +266,15 @@ $(document).ready(function() {
 
   // Sticky navbar
   window.onscroll = function() {stickyNav()};
+  var stickyBody = document.body;
   var navbar = document.getElementById("jsStickyNav");
-  var sticky = navbar.offsetTop;
+  var sticky = 10;
   function stickyNav() {
     if (window.pageYOffset >= sticky) {
+      stickyBody.classList.add("initialMenuSticky")
       navbar.classList.add("sticky")
     } else {
+      stickyBody.classList.remove("initialMenuSticky");
       navbar.classList.remove("sticky");
     }
   }
