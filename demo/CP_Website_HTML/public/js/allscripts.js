@@ -267,7 +267,7 @@ $(document).ready(function() {
   // Sticky navbar
   window.onscroll = function() {stickyNav()};
   var stickyBody = document.body;
-  var navbar = document.getElementById("jsStickyNav");
+  // var navbar = document.getElementById("jsStickyNav");
   var sticky = 10;
   function stickyNav() {
     if (window.pageYOffset >= sticky) {
