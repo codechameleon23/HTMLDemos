@@ -1218,7 +1218,7 @@ ul.is-primary li:before, ol.is-primary li:before { color: #9fcf67; }
 
 @media (min-width: 900px) { .header ~ .main { margin-top: 20.12rem; } }
 
-.navbar { font-size: 1.4rem; line-height: 1.7rem; background-color: #ffffff; position: relative; z-index: 0; }
+.navbar { font-size: 1.4rem; line-height: 1.7rem; position: relative; z-index: 0; }
 
 .navbar.container { padding-left: 0; padding-right: 0; }
 
@@ -1260,10 +1260,8 @@ ul.is-primary li:before, ol.is-primary li:before { color: #9fcf67; }
   body.is-open .navbar { z-index: 9; }
   body.is-open .newMenu { display: block; opacity: 1; -webkit-animation: fade-in .45s 0s ease-in-out; animation: fade-in .45s 0s ease-in-out; z-index: 998; }
   body.is-open .navtoggle { position: relative; z-index: 9999; }
-  body.is-open .sticky { position: fixed; top: 0; bottom: auto; z-index: 999; }
-  body.is-open .sticky#jsStickyNav { margin-left: -1.2rem; padding: 0 1.2rem; }
-  body.is-open .sticky#jsStickyNav .navtoggle:first-child { display: inline-block; }
-  body.is-open .sticky#jsStickyNav .navtoggle:first-child .brand-logo { opacity: 1; } }
+  body.is-open #jsStickyNav .navtoggle:first-child { display: inline-block; }
+  body.is-open #jsStickyNav .navtoggle:first-child .brand-logo { opacity: 1; } }
 
 @media all and (max-width: 900px) { .navbar { margin-top: 0; opacity: 0; max-height: 0; overflow: hidden; position: fixed; width: 100%; right: 0; top: 0; z-index: 999; color: #ffffff; bottom: 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; }
   .navbar .navbar-links { display: none; }
@@ -1283,8 +1281,8 @@ body.initialMenuSticky .header { -webkit-box-shadow: 0 1rem 1rem -0.8rem rgba(62
 
 @media (min-width: 900px) { body.initialMenuSticky .header { padding-top: 0; }
   body.initialMenuSticky .header > .container > .brand-logo { display: none; }
-  body.initialMenuSticky .sticky#jsStickyNav .navtoggle:first-child { display: inline-block; }
-  body.initialMenuSticky .sticky#jsStickyNav .navtoggle:first-child .brand-logo { opacity: 1; } }
+  body.initialMenuSticky #jsStickyNav .navtoggle:first-child { display: inline-block; }
+  body.initialMenuSticky #jsStickyNav .navtoggle:first-child .brand-logo { opacity: 1; } }
 
 .footer { font-size: 1.6rem; border-bottom: 1rem solid #9fcf67; }
 

@@ -271,11 +271,11 @@ $(document).ready(function() {
   var sticky = 10;
   function stickyNav() {
     if (window.pageYOffset >= sticky) {
-      stickyBody.classList.add("initialMenuSticky")
-      navbar.classList.add("sticky")
+      stickyBody.classList.add("initialMenuSticky");
+      // navbar.classList.add("sticky");
     } else {
       stickyBody.classList.remove("initialMenuSticky");
-      navbar.classList.remove("sticky");
+      // navbar.classList.remove("sticky");
     }
   }
 
