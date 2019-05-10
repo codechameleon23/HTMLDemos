@@ -61,9 +61,21 @@
 		<!-- Header in banner -->
 		<div class="container-fluid bg-light pt-40">
 			<div class="container container-xl mx-auto">
-				<div class="flex-col justify-center align-center">
-					<h3 class="fsize-xl fweight-bold fspacing-wide text-dark uppercase my-25">contact</h3>
-					<div class="icon icon-lg">
+				<div class="flex-col justify-center align-center overflow-hidden">
+					<h1 class="fsize-xl fweight-bold fspacing-wide text-dark uppercase my-25"
+						data-aos="fade-up" 
+						data-aos-delay="100" 
+						data-aos-easing="ease-in-out-quad" 
+						data-aos-duration="500"
+						data-aos-anchor-placement="top-bottom"
+					>contact</h1>
+					<div class="icon icon-lg"
+						data-aos="flip-left" 
+						data-aos-delay="300" 
+						data-aos-easing="ease-in-out-quad" 
+						data-aos-duration="500"
+						data-aos-anchor-placement="top-bottom"
+					>
 						<span class="align-end">
 							<img src="images/brand-artwork.svg" />
 						</span>
@@ -75,58 +87,93 @@
 		<!-- Google map -->
 		<div id="map-canvas" class="map map-canvas"></div>
 
-		<!-- card full: reverse -->
-		<article class="card-full pos-relative flex-col 
-		bg-light
-		mx-auto mb-25
-		container grid-1
-		md:container-md
-		lg:container-fluid lg:grid-2 lg:flex-row lg:mb-0">
-			<section class="column figure img-fit ratio-5x2
-			d-hidden lg:d-block
-			pos-absolute pin pin-r-auto opacity-50 lg:opacity-100">
-				<!-- background image desktop view -->
-				<div class="d-hidden lg:d-block image-holder flex-col justify-center align-start"
-					style="background-image:url('./images/square_image-1_ext.jpg')"></div>
-			</section>
-			<section class="w-full lg:grid-2 md:container-xl mx-auto pos-relative z-0 
-			flex-col lg:flex-row lg:align-center">
-				<div class="column p-25 md:p-40 lg:p-70 
-				flex-col justify-center align-start
-				pos-relative">
-					<!-- same background image for mobile view-->
-					<div class="lg:d-hidden pos-absolute pin z-0 figure img-fit">
-						<div class="image-holder flex-col justify-center align-start"
-							style="background-image:url('./images/square_image-1_ext.jpg')"></div>
+
+		<div class="pt-40 lg:pt-0">
+			<!-- Card full: reverse -->
+			<article class="card-full pos-relative
+			bg-light mx-auto
+			container md:container-md lg:container-fluid
+			grid-1 lg:grid-2 
+			flex-col lg:flex-row">
+				<!--  -->
+				<section class="column 
+				figure img-fit
+				flex-col
+				d-hidden lg:d-block
+				pos-absolute pin pin-r-auto">
+					<!-- background image desktop view -->
+					<div class="d-hidden lg:d-block image-holder w-full h-full"
+						style="background-image:url('./images/square_image-1_ext.jpg')">
 					</div>
-					<h2 class="uppercase fsize-lg3 lg:fsize-xl2 fweight-bold text-white pos-relative z-0">GET IN<br> TOUCH...</h2>
-				</div>
-				<div class="column ml-auto mt-auto 
-            md:pl-40 xl:pl-70 xl:pr-0
-            pt-25 md:pt-40 lg:pt-70">
-					<div class="text-wrap">
-						<p>We aim to provide a highly personal service – please pick up the phone or email us with any
-							question, great or small, so we can iron out everything in your search to bring inspirational and
-							exceptional objects to you.</p>
-					</div>
-					<address class="roman flex-col mb-25">
-						<h3 class="fsize-lg2 fweight-bold uppercase my-25">Guy hockley</h3>
-						<a class="text-inherit no-underline" href="tell:07968 952846"><strong>Call</strong> 07968 952846</a>
-						<a class="text-inherit no-underline" href="tell:guy@owtsideandin.com"><strong>Email</strong>
-							guy@owtsideandin.com</a>
-						<br>
-						<p>Stratford-sub-castle, Salisbury, SP1 3LL</p>
-					</address>
-					<div class="flex-col justify-center">
-						<div class="icon icon-lg">
-							<span class="align-end">
-								<img src="images/brand-artwork.svg" />
-							</span>
+				</section>
+
+				<section class="w-full lg:grid-2 
+				container md:container-xl 
+				mx-auto 
+				pos-relative z-0 
+				flex-col lg:flex-row lg:align-center">
+					<div class="column pos-relative z-0
+					flex-col justify-center align-start">
+						<div class="-mx-25 lg:d-hidden pos-absolute pin -z-1 
+						figure img-fit">
+							<!-- same background image mobile view -->
+							<div class="image-holder flex-col justify-center align-start"
+								style="background-image:url('./images/square_image-1_ext.jpg')">
+							</div>
+						</div>
+						<div class="w-full
+							lg:pr-40 xl:pr-70
+							py-25 md:py-40 lg:py-70 overflow-hidden">
+							<h2 class="uppercase fsize-lg3 lg:fsize-xl2 fweight-bold text-white pos-relative z-0"
+								data-aos="fade-left" 
+								data-aos-delay="200" 
+								data-aos-easing="ease-in-out-quad" 
+								data-aos-duration="500"
+								data-aos-anchor-placement="center-bottom"
+							>Get in<br> touch...</h2>
 						</div>
 					</div>
-				</div>
-			</section>
-		</article>
+					<div class="column ml-auto mt-auto 
+						md:pl-40 xl:pl-70 xl:pr-0
+						pt-25 md:pt-40 lg:pt-70 overflow-hidden">
+							<div 
+								data-aos="fade" 
+								data-aos-delay="400" 
+								data-aos-easing="ease-in-out-quad" 
+								data-aos-duration="500"
+								data-aos-anchor-placement="center-bottom"
+							>
+								<div class="text-wrap">
+									<p>We aim to provide a highly personal service – please pick up the phone or email us with any
+										question, great or small, so we can iron out everything in your search to bring inspirational and
+										exceptional objects to you.</p>
+								</div>
+								<address class="roman flex-col mb-25">
+									<h3 class="fsize-lg2 fweight-bold uppercase my-25">Guy hockley</h3>
+									<a class="text-inherit no-underline" href="tell:07968 952846"><strong>Call</strong> 07968 952846</a>
+									<a class="text-inherit no-underline" href="tell:guy@owtsideandin.com"><strong>Email</strong>
+										guy@owtsideandin.com</a>
+									<br>
+									<p>Stratford-sub-castle, Salisbury, SP1 3LL</p>
+								</address>
+							</div>
+							<div class="flex-col justify-center">
+								<div class="icon icon-lg"
+									data-aos="flip-left" 
+									data-aos-delay="600" 
+									data-aos-easing="ease-in-out-quad" 
+									data-aos-duration="500"
+									data-aos-anchor-placement="center-bottom"
+								>
+									<span class="align-end">
+										<img src="images/brand-artwork.svg" />
+									</span>
+								</div>
+							</div>
+						</div>
+				</section>
+			</article>
+		</div>
 
 	</main>
 
