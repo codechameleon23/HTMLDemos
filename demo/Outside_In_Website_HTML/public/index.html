@@ -66,7 +66,7 @@
 
 	<!-- Header -->
 	<div id="getStarted"></div>
-   <header class="header bg-white py-25 pos-relative">
+   <header id="jsStickyNav" class="header bg-white py-25 pos-relative">
 		<div class="container container-xl mx-auto flex-row align-center grid-1 md:grid-2">
 			<div class="column">
 				<a href="index.html" class="brand-logo">
@@ -164,22 +164,28 @@
 						fonts-primary fweight-bold
 						fsize-md4 lg:fsize-lg4">
 							<li class="flex-row align-start mb-10 pos-relative pl-40">
-								<span class="icon icon-sm pos-absolute pin-l mt-5">
-									<span><img src="./images/brand-artwork.svg" /></span>
-								</span>
-								<span>Garden</span>
+								<a href="stockroom.html" class="text-inherit no-underline hover:text-primary">
+									<span class="icon icon-sm pos-absolute pin-l mt-5">
+										<span><img src="./images/brand-artwork.svg" /></span>
+									</span>
+									<span>Garden</span>
+								</a>
 							</li>
 							<li class="flex-row align-start mb-10 pos-relative pl-40">
-								<span class="icon icon-sm pos-absolute pin-l mt-5">
-									<span><img src="./images/brand-artwork.svg" /></span>
-								</span>
-								<span>House</span>
+								<a href="stockroom.html" class="text-inherit no-underline hover:text-primary">
+									<span class="icon icon-sm pos-absolute pin-l mt-5">
+										<span><img src="./images/brand-artwork.svg" /></span>
+									</span>
+									<span>House</span>
+								</a>
 							</li>
 							<li class="flex-row align-start mb-10 pos-relative pl-40">
-								<span class="icon icon-sm pos-absolute pin-l mt-5">
-									<span><img src="./images/brand-artwork.svg" /></span>
-								</span>
-								<span>Lifestyle</span>
+								<a href="stockroom.html" class="text-inherit no-underline hover:text-primary">
+									<span class="icon icon-sm pos-absolute pin-l mt-5">
+										<span><img src="./images/brand-artwork.svg" /></span>
+									</span>
+									<span>Lifestyle</span>
+								</a>
 							</li>
 						</ul>
 						<p>We specialise in aged objects of character that are decorative, tactile, functional and fun.</p>
@@ -195,7 +201,9 @@
 		<!-- Header center -->
 		<div class="container-fluid py-25">
 			<div class="container container-xl mx-auto text-center">
-				<h3 class="my-25 fsize-lg2 fweight-bold uppercase text-dark text-center mb-25">Stock Room</h3>
+				<h3 class="my-25 fsize-lg2 fweight-bold uppercase text-dark text-center mb-25">
+					<a href="stockroom.html" class="text-inherit no-underline hover:text-primary">Stock Room</a>
+				</h3>
 				<p class="fonts-secondary">Explore our hand-picked antique and contemporary-adapted pieces</p>
 			</div>
 
@@ -233,7 +241,7 @@
 							fweight-bold 
 							fspacing-wide 
 							fsize-md3 
-							text-inherit hover:text-primary
+							text-dark hover:text-primary
 							mb-20">Garden</a>
 						</section>
 					</article>
@@ -264,7 +272,7 @@
 								fweight-bold 
 								fspacing-wide 
 								fsize-md3 
-								text-inherit hover:text-primary
+								text-dark hover:text-primary
 								mb-20">House
 							</a>
 						</section>
@@ -296,7 +304,7 @@
 								fweight-bold 
 								fspacing-wide 
 								fsize-md3 
-								text-inherit hover:text-primary
+								text-dark hover:text-primary
 								mb-20">Lifestyle</a>
 						</section>
 					</article>
@@ -327,7 +335,7 @@
 						data-aos-duration="500"
 						data-aos-anchor-placement="top-bottom"
 					>
-						<h3 class="fsize-lg2 fweight-bold uppercase">Just ask Guy</h3>
+						<h3 class="fsize-lg2 fweight-bold uppercase fspacing-wide">Just ask Guy</h3>
 						<p class="">
 							<a href="tel:07968 952846" class="text-inherit no-underline hover:text-primary">07968 952846</a>
 							<span class="fweight-light">or</span>
@@ -449,7 +457,7 @@
 			</article>
 		</div>
 
-		<!-- just ask guy -->
+		<!-- Rotating quotes -->
 		<div class="container-fluid overflow-hidden">
 			<div class="flex-col md:flex-row align-center justify-space-between">
 				<div class="icon icon-md md:icon-xl1 md:pin-l50 md:-mb-40">
@@ -457,8 +465,18 @@
 						<img class="align-bottom" src="images/brand-artwork.svg" />
 					</span>
 				</div>
-				<div class="column flex-col p-25 text-center fsize-md2 fweight-semibold text-dark roman">
-					<q class="fonts-display fsize-lg text-primary fweight-light"><em>Our quest is for objects you can have a conversation with</em></q>
+				<div class="column container md:container-lg flex-col p-25 text-center fsize-md2 fweight-semibold text-dark roman">
+					<div class="jsTestimonialsCarousel is-carousel owl-carousel owl-theme">
+						<div class="item">
+							<span class="fonts-display fsize-lg text-primary fweight-light"><em>Our quest is for objects you can have a conversation with</em></span>
+						</div>
+						<div class="item">
+							<span class="fonts-display fsize-lg text-primary fweight-light"><em>Versatility is a wonderful attribute – to use an object in differing ways in different seasons or settings makes it valuable</em></span>
+						</div>
+						<div class="item">
+							<span class="fonts-display fsize-lg text-primary fweight-light"><em>Our ideal object is a pleasure to see, to touch and to use</em></span>
+						</div>
+					</div>
 				</div>
 				<div class="icon icon-md md:icon-xl1 md:pin-r50 md:-mb-40">
 					<span>
@@ -555,7 +573,7 @@
 					lg:pr-40 xl:pr-70
 					py-25 md:py-40 lg:py-70
 					lg:ml-auto">
-					<div class="text-wrap"
+					<div class="text-wrap fonts-secondary"
 						data-aos="fade-up" 
 						data-aos-delay="400" 
 						data-aos-easing="ease-in-out-quad" 
@@ -644,19 +662,19 @@
 					>
 						<h2 class="uppercase fsize-lg2 fweight-bold text-white pos-relative z-0 mb-15">...Advice</h2>
 						<ul class="list-reset mb-25">
-							<li class="flex-row align-start mb-10 pos-relative pl-40">
+							<li class="flex-row align-start mb-10 pos-relative pl-40 fonts-secondary">
 								<span class="icon icon-sm pos-absolute pin-l mt-5">
 									<span><img src="./images/brand-artwork-w.svg" /></span>
 								</span>
 								<span>balancing content  for indoor and outdoor areas</span>
 							</li>
-							<li class="flex-row align-start mb-10 pos-relative pl-40">
+							<li class="flex-row align-start mb-10 pos-relative pl-40 fonts-secondary">
 								<span class="icon icon-sm pos-absolute pin-l mt-5">
 									<span><img src="./images/brand-artwork-w.svg" /></span>
 								</span>
 								<span>styling solutions, suggestions and examples</span>
 							</li>
-							<li class="flex-row align-start mb-10 pos-relative pl-40">
+							<li class="flex-row align-start mb-10 pos-relative pl-40 fonts-secondary">
 								<span class="icon icon-sm pos-absolute pin-l mt-5">
 									<span><img src="./images/brand-artwork-w.svg" /></span>
 								</span>
@@ -665,7 +683,7 @@
 						</ul>
 						<h2 class="uppercase fsize-lg2 fweight-bold text-white pos-relative z-0 mb-15">...Sourcing</h2>
 						<ul class="list-reset mb-25">
-							<li class="flex-row align-start mb-10 pos-relative pl-40">
+							<li class="flex-row align-start mb-10 pos-relative pl-40 fonts-secondary">
 								<span class="icon icon-sm pos-absolute pin-l mt-5">
 									<span><img src="./images/brand-artwork-w.svg" /></span>
 								</span>
@@ -674,13 +692,13 @@
 						</ul>
 						<h2 class="uppercase fsize-lg2 fweight-bold text-white pos-relative z-0 mb-15">...Bespoke design</h2>
 						<ul class="list-reset mb-25">
-							<li class="flex-row align-start mb-10 pos-relative pl-40">
+							<li class="flex-row align-start mb-10 pos-relative pl-40 fonts-secondary">
 								<span class="icon icon-sm pos-absolute pin-l mt-5">
 									<span><img src="./images/brand-artwork-w.svg" /></span>
 								</span>
 								<span>designing your garden’s form with focus on the transition of outdoor/indoor spaces</span>
 							</li>
-							<li class="flex-row align-start mb-10 pos-relative pl-40">
+							<li class="flex-row align-start mb-10 pos-relative pl-40 fonts-secondary">
 								<span class="icon icon-sm pos-absolute pin-l mt-5">
 									<span><img src="./images/brand-artwork-w.svg" /></span>
 								</span>
@@ -848,22 +866,43 @@
 				<ul class="fsize-sm  list-reset 
             text-center lg:text-left
             lg:col-count-3">
-					<li class="py-5"><a class="text-inherit no-underline hover:text-primary" href="#"><span>Stock
-								Room</span></a></li>
-					<li class="py-5"><a class="text-inherit no-underline hover:text-primary" href="#"><span>Services</span>
-							</article>
+					<li class="py-2">
+						<a class="text-inherit no-underline hover:text-primary" href="#">
+							<span>Stock Room</span>
+						</a>
 					</li>
-					<li class="py-5"><a class="text-inherit no-underline hover:text-primary"
-							href="#"><span>Contact</span></a></li>
-					<li class="py-5"><a class="text-inherit no-underline hover:text-primary" href="#"><span>Terms &
-								Conditions</span></a></li>
-					<li class="py-5"><a class="text-inherit no-underline hover:text-primary" href="#"><span>Delivery &
-								Returns</span></a></li>
-					<li class="py-5"><a class="text-inherit no-underline hover:text-primary" href="#"><span>Privacy &
-								Cookies</span></a></li>
-					<li class="py-5"><a class="text-inherit no-underline hover:text-primary"
-							href="#"><span>Sitemap</span></a></li>
-					<li class="py-5"><span>Copyright © 2019</span></li>
+					<li class="py-2">
+						<a class="text-inherit no-underline hover:text-primary" href="#">
+							<span>Services</span>
+						</a>
+					</li>
+					<li class="py-2">
+						<a class="text-inherit no-underline hover:text-primary"
+							href="#">
+							<span>Contact</span>
+						</a>
+					</li>
+					<li class="py-2">
+						<a class="text-inherit no-underline hover:text-primary" href="#">
+							<span>Terms & Conditions</span>
+						</a>
+					</li>
+					<li class="py-2">
+						<a class="text-inherit no-underline hover:text-primary" href="#">
+							<span>Delivery & Returns</span>
+						</a>
+					</li>
+					<li class="py-2">
+						<a class="text-inherit no-underline hover:text-primary" href="#">
+							<span>Privacy & Cookies</span>
+						</a>
+					</li>
+					<li class="py-2">
+						<a class="text-inherit no-underline hover:text-primary" href="#">
+							<span>Sitemap</span>
+						</a>
+					</li>
+					<li class="py-2"><span>Copyright © 2019</span></li>
 				</ul>
 			</nav>
 			<div class="flex-auto mt-auto pb-25

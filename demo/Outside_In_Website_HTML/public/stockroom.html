@@ -13,7 +13,7 @@
 <body class="jsNavbarToggle is-close flex-col">
 
    <!-- Header -->
-   <header class="header bg-white py-25 pos-relative">
+   <header id="jsStickyNav" class="header bg-white py-25 pos-relative">
       <div class="container container-xl mx-auto flex-row align-center justify-space-between grid-1 md:grid-2">
          <div class="column">
             <a href="index.html" class="brand-logo"><img src="images/brand-logo-b.svg" alt="OUTSIDE+IN" /></a>
@@ -31,16 +31,14 @@
             justify-end justify-space-between
             text-center">
                <li class="py-11 md:py-0">
-                  <a href="stockroom.html" 
-                  class="text-inherit no-underline text-primary hover:text-primary"><span>Stock room</span></a>
+                  <a href="stockroom.html" class="text-inherit no-underline text-primary hover:text-primary"><span>Stock
+                        room</span></a>
                </li>
                <li class="py-11 md:py-0">
-                  <a href="services.html" 
-                  class="text-inherit no-underline hover:text-primary"><span>Services</span></a>
+                  <a href="services.html" class="text-inherit no-underline hover:text-primary"><span>Services</span></a>
                </li>
                <li class="py-11 md:py-0">
-                  <a href="contact.html" 
-                  class="text-inherit no-underline hover:text-primary"><span>Contact</span></a>
+                  <a href="contact.html" class="text-inherit no-underline hover:text-primary"><span>Contact</span></a>
                </li>
             </ul>
          </nav>
@@ -62,20 +60,11 @@
       <div class="container-fluid bg-light pt-40">
          <div class="container container-xl mx-auto">
             <div class="flex-col justify-center align-center overflow-hidden">
-               <h1 class="fsize-xl fweight-bold text-dark fspacing-wide uppercase my-25"
-                  data-aos="fade-up" 
-                  data-aos-delay="100" 
-                  data-aos-easing="ease-in-out-quad" 
-                  data-aos-duration="500"
-                  data-aos-anchor-placement="top-bottom"
-               >Stock room</h1>
-               <div class="icon icon-lg"
-                  data-aos="flip-left" 
-                  data-aos-delay="300" 
-                  data-aos-easing="ease-in-out-quad" 
-                  data-aos-duration="500"
-                  data-aos-anchor-placement="top-bottom"
-               >
+               <h1 class="fsize-xl fweight-bold text-dark fspacing-wide uppercase my-25" data-aos="fade-up"
+                  data-aos-delay="100" data-aos-easing="ease-in-out-quad" data-aos-duration="500"
+                  data-aos-anchor-placement="top-bottom">Stock room</h1>
+               <div class="icon icon-lg" data-aos="flip-left" data-aos-delay="300" data-aos-easing="ease-in-out-quad"
+                  data-aos-duration="500" data-aos-anchor-placement="top-bottom">
                   <span class="align-end">
                      <img src="images/brand-artwork.svg" />
                   </span>
@@ -85,9 +74,10 @@
       </div>
 
       <div class="filter_parent">
-      
+
          <!-- Filters -->
          <ul class="
+         text-dark
          filter_tabs
          pt-40 pb-20
          container mx-auto
@@ -100,24 +90,16 @@
                <div class="p-15 text-primary">Sort&nbsp;by:</div>
             </li>
             <li class="mx-15">
-               <div 
-               data-filterby="by_All"
-               class="filter_tab is-active p-15 hover:shadow-default">all</div>
+               <div data-filterby="by_All" class="filter_tab is-active p-15 hover:shadow-default">all</div>
             </li>
             <li class="mx-15">
-               <div 
-               data-filterby="by_Garden"
-               class="filter_tab p-15 hover:shadow-default">Garden</div>
+               <div data-filterby="by_Garden" class="filter_tab p-15 hover:shadow-default">Garden</div>
             </li>
             <li class="mx-15">
-               <div 
-               data-filterby="by_House"
-               class="filter_tab p-15 hover:shadow-default">House</div>
+               <div data-filterby="by_House" class="filter_tab p-15 hover:shadow-default">House</div>
             </li>
             <li class="mx-15">
-               <div 
-               data-filterby="by_Lifestyle"
-               class="filter_tab p-15 hover:shadow-default">Lifestyle</div>
+               <div data-filterby="by_Lifestyle" class="filter_tab p-15 hover:shadow-default">Lifestyle</div>
             </li>
          </ul>
 
@@ -136,8 +118,8 @@
             </select>
          </div>
 
-      <!-- Stocks -->
-      <!-- 3 column grid -->
+         <!-- Stocks -->
+         <!-- 3 column grid -->
          <div class="
          filter_wrapper
          mx-auto
@@ -151,7 +133,7 @@
                filter_obj by_All by_Garden by_Lifestyle filtered">
                   <a href="stockroom-details.html" class="figure img-fit ratio-custom3 mb-20">
                      <figure class="image-holder flex-col justify-center"
-                     style="background-image: url('./images/2019-03-24-19.04.58.jpg')">
+                        style="background-image: url('./images/2019-03-24-19.04.58.jpg')">
                      </figure>
                      <!-- overlay -->
                      <div class="overlay text-white fsize-xl2 
@@ -162,14 +144,13 @@
                      </div>
                   </a>
                   <section class="text-wrap text-center">
-                     <a href="stockroom.html" 
-                     class="
+                     <a href="stockroom.html" class="
                      uppercase no-underline 
                      fonts-primary 
                      fweight-bold 
                      fspacing-wide 
                      fsize-sm2 
-                     text-inherit hover:text-primary
+                     text-dark hover:text-primary
                      mb-20">Jardinierre<br> cast iron</a>
                      <p class="fweight-regular">£000</p>
                   </section>
@@ -178,7 +159,7 @@
                filter_obj by_All by_House filtered">
                   <a href="stockroom-details.html" class="figure img-fit ratio-custom3 mb-20">
                      <figure class="image-holder flex-col justify-center"
-                     style="background-image: url('./images/2019-04-01-19.34.14.jpg')">
+                        style="background-image: url('./images/2019-04-01-19.34.14.jpg')">
                      </figure>
                      <!-- overlay -->
                      <div class="overlay text-white fsize-xl2 
@@ -189,14 +170,13 @@
                      </div>
                   </a>
                   <section class="text-wrap text-center">
-                     <a href="stockroom.html" 
-                     class="
+                     <a href="stockroom.html" class="
                      uppercase no-underline 
                      fonts-primary 
                      fweight-bold 
                      fspacing-wide 
                      fsize-sm2 
-                     text-inherit hover:text-primary
+                     text-dark hover:text-primary
                      mb-20">Basket weave<br> planter</a>
                      <p class="fweight-regular">£000</p>
                   </section>
@@ -205,7 +185,7 @@
                filter_obj by_All by_Lifestyle filtered">
                   <a href="stockroom-details.html" class="figure img-fit ratio-custom3 mb-20">
                      <figure class="image-holder flex-col justify-center"
-                     style="background-image: url('./images/2019-04-01-19.39.43.jpg')">
+                        style="background-image: url('./images/2019-04-01-19.39.43.jpg')">
                      </figure>
                      <!-- overlay -->
                      <div class="overlay text-white fsize-xl2 
@@ -216,14 +196,13 @@
                      </div>
                   </a>
                   <section class="text-wrap text-center">
-                     <a href="stockroom.html" 
-                        class="
+                     <a href="stockroom.html" class="
                         uppercase no-underline 
                         fonts-primary 
                         fweight-bold 
                         fspacing-wide 
                         fsize-sm2 
-                        text-inherit hover:text-primary
+                        text-dark hover:text-primary
                         mb-20">Fox<br> bust</a>
                      <p class="fweight-regular">£000</p>
                   </section>
@@ -232,7 +211,7 @@
                filter_obj by_All by_Garden filtered">
                   <a href="stockroom-details.html" class="figure img-fit ratio-custom3 mb-20">
                      <figure class="image-holder flex-col justify-center"
-                     style="background-image: url('./images/2019-04-01-18.40.58.jpg')">
+                        style="background-image: url('./images/2019-04-01-18.40.58.jpg')">
                      </figure>
                      <!-- overlay -->
                      <div class="overlay text-white fsize-xl2 
@@ -243,14 +222,13 @@
                      </div>
                   </a>
                   <section class="text-wrap text-center">
-                     <a href="stockroom.html" 
-                        class="
+                     <a href="stockroom.html" class="
                         uppercase no-underline 
                         fonts-primary 
                         fweight-bold 
                         fspacing-wide 
                         fsize-sm2 
-                        text-inherit hover:text-primary
+                        text-dark hover:text-primary
                         mb-20">Product<br> Name Here</a>
                      <p class="fweight-regular">£000</p>
                   </section>
@@ -259,7 +237,7 @@
                filter_obj by_All by_House filtered">
                   <a href="stockroom-details.html" class="figure img-fit ratio-custom3 mb-20">
                      <figure class="image-holder flex-col justify-center"
-                     style="background-image: url('./images/2019-04-01-19.56.15.jpg')">
+                        style="background-image: url('./images/2019-04-01-19.56.15.jpg')">
                      </figure>
                      <!-- overlay -->
                      <div class="overlay text-white fsize-xl2 
@@ -270,14 +248,13 @@
                      </div>
                   </a>
                   <section class="text-wrap text-center">
-                     <a href="stockroom.html" 
-                        class="
+                     <a href="stockroom.html" class="
                         uppercase no-underline 
                         fonts-primary 
                         fweight-bold 
                         fspacing-wide 
                         fsize-sm2 
-                        text-inherit hover:text-primary
+                        text-dark hover:text-primary
                         mb-20">Product<br> Name Here</a>
                      <p class="fweight-regular">£000</p>
                   </section>
@@ -286,7 +263,7 @@
                filter_obj by_All by_Lifestyle by_House filtered">
                   <a href="stockroom-details.html" class="figure img-fit ratio-custom3 mb-20">
                      <figure class="image-holder flex-col justify-center"
-                     style="background-image: url('./images/2019-03-24-19.42.51.jpg')">
+                        style="background-image: url('./images/2019-03-24-19.42.51.jpg')">
                      </figure>
                      <!-- overlay -->
                      <div class="overlay text-white fsize-xl2 
@@ -297,14 +274,13 @@
                      </div>
                   </a>
                   <section class="text-wrap text-center">
-                     <a href="stockroom.html" 
-                        class="
+                     <a href="stockroom.html" class="
                         uppercase no-underline 
                         fonts-primary 
                         fweight-bold 
                         fspacing-wide 
                         fsize-sm2 
-                        text-inherit hover:text-primary
+                        text-dark hover:text-primary
                         mb-20">Product<br> Name Here</a>
                      <p class="fweight-regular">£000</p>
                   </section>
@@ -313,7 +289,7 @@
                filter_obj by_All by_Garden filtered">
                   <a href="stockroom-details.html" class="figure img-fit ratio-custom3 mb-20">
                      <figure class="image-holder flex-col justify-center"
-                     style="background-image: url('./images/2019-03-24-19.22.15.jpg')">
+                        style="background-image: url('./images/2019-03-24-19.22.15.jpg')">
                      </figure>
                      <!-- overlay -->
                      <div class="overlay text-white fsize-xl2 
@@ -324,14 +300,13 @@
                      </div>
                   </a>
                   <section class="text-wrap text-center">
-                     <a href="stockroom.html" 
-                        class="
+                     <a href="stockroom.html" class="
                         uppercase no-underline 
                         fonts-primary 
                         fweight-bold 
                         fspacing-wide 
                         fsize-sm2 
-                        text-inherit hover:text-primary
+                        text-dark hover:text-primary
                         mb-20">Product<br> Name Here</a>
                      <p class="fweight-regular">£000</p>
                   </section>
@@ -340,7 +315,7 @@
                filter_obj by_All by_Lifestyle filtered">
                   <a href="stockroom-details.html" class="figure img-fit ratio-custom3 mb-20">
                      <figure class="image-holder flex-col justify-center"
-                     style="background-image: url('./images/2019-04-01-19.36.34.jpg')">
+                        style="background-image: url('./images/2019-04-01-19.36.34.jpg')">
                      </figure>
                      <!-- overlay -->
                      <div class="overlay text-white fsize-xl2 
@@ -351,14 +326,13 @@
                      </div>
                   </a>
                   <section class="text-wrap text-center">
-                     <a href="stockroom.html" 
-                        class="
+                     <a href="stockroom.html" class="
                         uppercase no-underline 
                         fonts-primary 
                         fweight-bold 
                         fspacing-wide 
                         fsize-sm2 
-                        text-inherit hover:text-primary
+                        text-dark hover:text-primary
                         mb-20">Product<br> Name Here</a>
                      <p class="fweight-regular">£000</p>
                   </section>
@@ -367,7 +341,7 @@
                filter_obj by_All by_Lifestyle filtered">
                   <a href="stockroom-details.html" class="figure img-fit ratio-custom3 mb-20">
                      <figure class="image-holder flex-col justify-center"
-                     style="background-image: url('./images/square_image-6.jpg')">
+                        style="background-image: url('./images/square_image-6.jpg')">
                      </figure>
                      <!-- overlay -->
                      <div class="overlay text-white fsize-xl2 
@@ -378,14 +352,13 @@
                      </div>
                   </a>
                   <section class="text-wrap text-center">
-                     <a href="stockroom.html" 
-                        class="
+                     <a href="stockroom.html" class="
                         uppercase no-underline 
                         fonts-primary 
                         fweight-bold 
                         fspacing-wide 
                         fsize-sm2 
-                        text-inherit hover:text-primary
+                        text-dark hover:text-primary
                         mb-20">Product<br> Name Here</a>
                      <p class="fweight-regular">£000</p>
                   </section>
@@ -412,7 +385,7 @@
                   </span>
                </div>
                <address class="column flex-col p-25 text-center fsize-md2 fweight-semibold text-dark roman">
-                  <h3 class="fsize-lg2 fweight-bold uppercase">Just ask Guy</h3>
+                  <h3 class="fsize-lg2 fweight-bold uppercase fspacing-wide">Just ask Guy</h3>
                   <p class="">
                      <a href="tel:07968 952846" class="text-inherit no-underline hover:text-primary">07968 952846</a>
                      <span class="fweight-light">or</span>
@@ -490,21 +463,42 @@
             <ul class="fsize-sm  list-reset 
             text-center lg:text-left
             lg:col-count-3">
-               <li class="py-5"><a class="text-inherit no-underline hover:text-primary" href="#"><span>Stock
-                        Room</span></a></li>
-               <li class="py-5"><a class="text-inherit no-underline hover:text-primary"
-                     href="#"><span>Services</span></a></li>
-               <li class="py-5"><a class="text-inherit no-underline hover:text-primary"
-                     href="#"><span>Contact</span></a></li>
-               <li class="py-5"><a class="text-inherit no-underline hover:text-primary" href="#"><span>Terms &
-                        Conditions</span></a></li>
-               <li class="py-5"><a class="text-inherit no-underline hover:text-primary" href="#"><span>Delivery &
-                        Returns</span></a></li>
-               <li class="py-5"><a class="text-inherit no-underline hover:text-primary" href="#"><span>Privacy &
-                        Cookies</span></a></li>
-               <li class="py-5"><a class="text-inherit no-underline hover:text-primary"
-                     href="#"><span>Sitemap</span></a></li>
-               <li class="py-5"><span>Copyright © 2019</span></li>
+               <li class="py-2">
+                  <a class="text-inherit no-underline hover:text-primary" href="#">
+                     <span>Stock Room</span>
+                  </a>
+               </li>
+               <li class="py-2">
+                  <a class="text-inherit no-underline hover:text-primary" href="#">
+                     <span>Services</span>
+                  </a>
+               </li>
+               <li class="py-2">
+                  <a class="text-inherit no-underline hover:text-primary" href="#">
+                     <span>Contact</span>
+                  </a>
+               </li>
+               <li class="py-2">
+                  <a class="text-inherit no-underline hover:text-primary" href="#">
+                     <span>Terms & Conditions</span>
+                  </a>
+               </li>
+               <li class="py-2">
+                  <a class="text-inherit no-underline hover:text-primary" href="#">
+                     <span>Delivery & Returns</span>
+                  </a>
+               </li>
+               <li class="py-2">
+                  <a class="text-inherit no-underline hover:text-primary" href="#">
+                     <span>Privacy & Cookies</span>
+                  </a>
+               </li>
+               <li class="py-2">
+                  <a class="text-inherit no-underline hover:text-primary" href="#">
+                     <span>Sitemap</span>
+                  </a>
+               </li>
+               <li class="py-2"><span>Copyright © 2019</span></li>
             </ul>
          </nav>
          <div class="flex-auto mt-auto pb-25
