@@ -177,7 +177,7 @@ $(document).ready(function () {
     scrollSpeed: 700,
     easing: "easeInOutQuad",
     updateHash: false,
-    touchScroll: getViewportWidth() > 700
+    touchScroll: false
   });
 
   $(".goto").on("click", function (event) {
