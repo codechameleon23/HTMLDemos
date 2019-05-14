@@ -123,7 +123,7 @@ $(document).ready(function () {
       smartSpeed: 500,
       autoplay: true,
       autoplayTimeout: 3000,
-      autoplayHoverPause: false,
+      autoplayHoverPause: true,
     });
     $('.jsCarouselPrv').on('click', function () {
       $(this).closest('.carousel-outer').find(jsTestimonialsCarousel).trigger('prev.owl.carousel');
