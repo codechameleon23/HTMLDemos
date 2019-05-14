@@ -174,7 +174,7 @@ $(document).ready(function () {
     //apply fullpage
     section: ".scrollify_section-js",
     //interstitialSection: ".header, .footer",
-    scrollSpeed: 500,
+    scrollSpeed: 700,
     easing: "easeInOutQuad",
     updateHash: false,
     touchScroll: getViewportWidth() > 700
