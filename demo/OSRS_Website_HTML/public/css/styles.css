@@ -10284,6 +10284,43 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
     max-height: 100vh; } }
 
 /* Custom styling */
+a.figure .image-holder:after,
+a.image-holder:after {
+  content: "+";
+  color: #fcde78;
+  background-color: rgba(72, 141, 169, 0.4);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 4.8rem;
+  font-weight: 100;
+  height: 3.6rem;
+  width: 3.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 1;
+  border: .1rem dashed;
+  opacity: .75;
+  border-radius: .5rem; }
+
+@media all and (min-width: 992px) {
+  a.figure .image-holder:after,
+  a.image-holder:after {
+    opacity: 0; }
+  a.figure:hover .image-holder:after,
+  .figure:hover a.image-holder:after {
+    opacity: 1; } }
+
 .brand-logo {
   display: inline-block; }
 
@@ -10425,40 +10462,3 @@ nav {
   color: #488da9; }
   .link-hover:hover .icon {
     background-color: #488da9; }
-
-a.figure .image-holder:after,
-a.image-holder:after {
-  content: "+";
-  color: #fcde78;
-  background-color: rgba(72, 141, 169, 0.4);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  font-size: 4.8rem;
-  font-weight: 100;
-  height: 3.6rem;
-  width: 3.6rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  opacity: 1;
-  border: .1rem dashed;
-  opacity: .75;
-  border-radius: .5rem; }
-
-@media all and (min-width: 992px) {
-  a.figure .image-holder:after,
-  a.image-holder:after {
-    opacity: 0; }
-  a.figure:hover .image-holder:after,
-  .figure:hover a.image-holder:after {
-    opacity: 1; } }

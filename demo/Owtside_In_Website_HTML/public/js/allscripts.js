@@ -132,6 +132,7 @@ $(document).ready(function () {
     jsRotatingImgCarousel.owlCarousel({
       // autoHeight: true,
       items: 1,
+      stagePadding: -5,
       loop: true,
       mouseDrag: false,
       nav: false,
