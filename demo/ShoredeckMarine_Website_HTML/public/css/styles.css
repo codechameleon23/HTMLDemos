@@ -3623,19 +3623,21 @@ body { background-color: #ffffff; }
 
 .home.jsNavbarToggle .header .brand-logo { opacity: 0; }
 
-.home.jsNavbarToggle.is-closing .header .brand-logo { -webkit-animation: swing-out-bottom-bck 0.45s 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; animation: swing-out-bottom-bck 0.45s 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; }
+main { background-color: #ffffff; }
 
-.home.jsNavbarToggle.is-open .header .brand-logo { opacity: 1; -webkit-animation: swing-in-bottom-fwd 0.45s 0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; animation: swing-in-bottom-fwd 0.45s 0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+.jsNavbarToggle { background-color: #0a78b4; }
 
-.jsNavbarToggle .navbar { height: 100vh; overflow: hidden; }
+.jsNavbarToggle .navbar { height: 100vh; overflow: hidden; width: calc( 100% - 5rem); max-width: 32rem; }
+
+.jsNavbarToggle > main, .jsNavbarToggle > footer { -webkit-transition: -webkit-transform 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94); transition: -webkit-transform 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94); -o-transition: transform 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94); transition: transform 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94); transition: transform 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-transform 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
 
 .jsNavbarToggle.is-close .navbar { max-height: 0; }
 
+.jsNavbarToggle.is-closing { overflow: hidden !important; }
+
 .jsNavbarToggle.is-closing .hamburger { pointer-events: none; }
 
-.jsNavbarToggle.is-closing .header { border-color: #ffffff; -webkit-transition: border-color 0.5s 1.5s cubic-bezier(0.55, 0.085, 0.68, 0.53); -o-transition: border-color 0.5s 1.5s cubic-bezier(0.55, 0.085, 0.68, 0.53); transition: border-color 0.5s 1.5s cubic-bezier(0.55, 0.085, 0.68, 0.53); }
-
-.jsNavbarToggle.is-closing .navbar-inner { -webkit-animation: slide-out-bottom 0.5s 1.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; animation: slide-out-bottom 0.5s 1.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; }
+.jsNavbarToggle.is-closing .navbar-inner { -webkit-animation: slide-out-left 0.5s 1.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; animation: slide-out-left 0.5s 1.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; }
 
 .jsNavbarToggle.is-closing .navbar-inner li:nth-child(0) { -webkit-animation: swing-out-bottom-bck 0.45s 0s cubic-bezier(0.6, -0.28, 0.735, 0.045) both; animation: swing-out-bottom-bck 0.45s 0s cubic-bezier(0.6, -0.28, 0.735, 0.045) both; }
 
@@ -3649,11 +3651,15 @@ body { background-color: #ffffff; }
 
 .jsNavbarToggle.is-closing .navbar-inner li:nth-child(5) { -webkit-animation: swing-out-bottom-bck 0.45s 0.75s cubic-bezier(0.6, -0.28, 0.735, 0.045) both; animation: swing-out-bottom-bck 0.45s 0.75s cubic-bezier(0.6, -0.28, 0.735, 0.045) both; }
 
-.jsNavbarToggle.is-open .header { position: fixed; border-color: #0a78b4; -webkit-transition: border-color 0.5s 0s cubic-bezier(0.55, 0.085, 0.68, 0.53); -o-transition: border-color 0.5s 0s cubic-bezier(0.55, 0.085, 0.68, 0.53); transition: border-color 0.5s 0s cubic-bezier(0.55, 0.085, 0.68, 0.53); }
+.jsNavbarToggle.is-closing > main, .jsNavbarToggle.is-closing > footer { -webkit-transition: -webkit-transform 0.5s 1.5s cubic-bezier(0.55, 0.085, 0.68, 0.53); transition: -webkit-transform 0.5s 1.5s cubic-bezier(0.55, 0.085, 0.68, 0.53); -o-transition: transform 0.5s 1.5s cubic-bezier(0.55, 0.085, 0.68, 0.53); transition: transform 0.5s 1.5s cubic-bezier(0.55, 0.085, 0.68, 0.53); transition: transform 0.5s 1.5s cubic-bezier(0.55, 0.085, 0.68, 0.53), -webkit-transform 0.5s 1.5s cubic-bezier(0.55, 0.085, 0.68, 0.53); }
+
+.jsNavbarToggle.is-open { overflow: hidden !important; }
+
+.jsNavbarToggle.is-open .header { position: fixed; }
 
 .jsNavbarToggle.is-open .navbar { max-height: 200vh; }
 
-.jsNavbarToggle.is-open .navbar-inner { -webkit-animation: slide-in-bottom 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; animation: slide-in-bottom 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+.jsNavbarToggle.is-open .navbar-inner { -webkit-animation: slide-in-left 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; animation: slide-in-left 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
 
 .jsNavbarToggle.is-open .navbar li:nth-child(1) { -webkit-animation: swing-in-bottom-fwd 0.75s 0.9s cubic-bezier(0.6, -0.28, 0.735, 0.045) both; animation: swing-in-bottom-fwd 0.75s 0.9s cubic-bezier(0.6, -0.28, 0.735, 0.045) both; }
 
@@ -3669,25 +3675,35 @@ body { background-color: #ffffff; }
 
 .jsNavbarToggle.is-open .navbar li:nth-child(7) { -webkit-animation: swing-in-bottom-fwd 0.75s 0s cubic-bezier(0.6, -0.28, 0.735, 0.045) both; animation: swing-in-bottom-fwd 0.75s 0s cubic-bezier(0.6, -0.28, 0.735, 0.045) both; }
 
-.slide-in-bottom { -webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+.jsNavbarToggle.is-open > main, .jsNavbarToggle.is-open > footer { -webkit-transform: translateX(32rem); -ms-transform: translateX(32rem); transform: translateX(32rem); }
 
-.slide-out-bottom { -webkit-animation: slide-out-bottom 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; animation: slide-out-bottom 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; }
+.slide-in-left { -webkit-animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+
+.slide-out-left { -webkit-animation: slide-out-left 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; animation: slide-out-left 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; }
 
 .swing-in-bottom-fwd { -webkit-animation: swing-in-bottom-fwd 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both; animation: swing-in-bottom-fwd 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both; }
 
 .swing-out-bottom-bck { -webkit-animation: swing-out-bottom-bck 0.45s cubic-bezier(0.6, -0.28, 0.735, 0.045) both; animation: swing-out-bottom-bck 0.45s cubic-bezier(0.6, -0.28, 0.735, 0.045) both; }
 
-@-webkit-keyframes slide-in-bottom { 0% { -webkit-transform: translateY(100%); transform: translateY(100%); }
-  100% { -webkit-transform: translateY(0); transform: translateY(0); } }
+@-webkit-keyframes slide-in-left { 0% { -webkit-transform: translateX(-1000px); transform: translateX(-1000px);
+    opacity: 0; }
+  100% { -webkit-transform: translateX(0); transform: translateX(0);
+    opacity: 1; } }
 
-@keyframes slide-in-bottom { 0% { -webkit-transform: translateY(100%); transform: translateY(100%); }
-  100% { -webkit-transform: translateY(0); transform: translateY(0); } }
+@keyframes slide-in-left { 0% { -webkit-transform: translateX(-1000px); transform: translateX(-1000px);
+    opacity: 0; }
+  100% { -webkit-transform: translateX(0); transform: translateX(0);
+    opacity: 1; } }
 
-@-webkit-keyframes slide-out-bottom { 0% { -webkit-transform: translateY(0); transform: translateY(0); }
-  100% { -webkit-transform: translateY(100%); transform: translateY(100%); } }
+@-webkit-keyframes slide-out-left { 0% { -webkit-transform: translateX(0); transform: translateX(0);
+    opacity: 1; }
+  100% { -webkit-transform: translateX(-1000px); transform: translateX(-1000px);
+    opacity: 0; } }
 
-@keyframes slide-out-bottom { 0% { -webkit-transform: translateY(0); transform: translateY(0); }
-  100% { -webkit-transform: translateY(100%); transform: translateY(100%); } }
+@keyframes slide-out-left { 0% { -webkit-transform: translateX(0); transform: translateX(0);
+    opacity: 1; }
+  100% { -webkit-transform: translateX(-1000px); transform: translateX(-1000px);
+    opacity: 0; } }
 
 @-webkit-keyframes swing-out-bottom-bck { 0% { -webkit-transform: rotateX(0); transform: rotateX(0);
     -webkit-transform-origin: bottom;
