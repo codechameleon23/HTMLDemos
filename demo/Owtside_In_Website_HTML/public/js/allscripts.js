@@ -125,11 +125,23 @@ $(document).ready(function () {
       autoplayTimeout: 3000,
       autoplayHoverPause: true,
     });
-    $('.jsCarouselPrv').on('click', function () {
-      $(this).closest('.carousel-outer').find(jsTestimonialsCarousel).trigger('prev.owl.carousel');
-    });
-    $('.jsCarouselNxt').on('click', function () {
-      $(this).closest('.carousel-outer').find(jsTestimonialsCarousel).trigger('next.owl.carousel');
+  }
+
+  if ($(".jsRotatingImgCarousel").length) {
+    var jsRotatingImgCarousel = $(".jsRotatingImgCarousel");
+    jsRotatingImgCarousel.owlCarousel({
+      // autoHeight: true,
+      items: 1,
+      loop: true,
+      mouseDrag: false,
+      nav: false,
+      dots: false,
+      animateIn: "fade-in-bottom",
+      animateOut: "text-blur-out",
+      smartSpeed: 500,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      autoplayHoverPause: false,
     });
   }
 
