@@ -141,7 +141,7 @@ $(document).ready(function () {
       animateOut: "text-blur-out",
       smartSpeed: 500,
       autoplay: true,
-      autoplayTimeout: 3000,
+      autoplayTimeout: 4000,
       autoplayHoverPause: false,
     });
   }
