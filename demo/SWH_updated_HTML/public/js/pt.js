@@ -269,8 +269,6 @@ var PageTransitions = (function ($) {
       if(sectionIndex == 0){
 
          // change content
-         console.log('prevPage current', current);
-         gotoContentSlide(current);
 
          if ((isAnimating)) {
             return !1
@@ -283,6 +281,8 @@ var PageTransitions = (function ($) {
          } else {
             current = pagesCount - 1
          }
+         console.log('prevPage current', current);
+         gotoContentSlide(current);
          var $nextPage = $pages.eq(current).addClass('pt-page-current'),
             outClass = '',
             inClass = '';

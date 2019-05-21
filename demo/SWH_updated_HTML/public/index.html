@@ -299,7 +299,7 @@
       "f_effect": "16",
       "b_effect": "15",
       "autoslide": "no",
-      "autoslideduration": "4500"
+      "autoslideduration": "6000"
     };
   </script>
   <script>
@@ -345,10 +345,8 @@
     });
 
     function gotoContentSlide(slide){
-      console.log('slide', slide);
-      setTimeout(function(){
-        contentCarousel.trigger('to.owl.carousel', [slide, 500]);
-      }, 500);
+      // console.log('slide', slide);
+      contentCarousel.trigger('to.owl.carousel', [slide, 500]);
     }
   
   </script>
