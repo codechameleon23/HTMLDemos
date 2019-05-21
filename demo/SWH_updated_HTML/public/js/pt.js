@@ -281,7 +281,7 @@ var PageTransitions = (function ($) {
          } else {
             current = pagesCount - 1
          }
-         console.log('prevPage current', current);
+         // console.log('prevPage current', current);
          gotoContentSlide(current);
          var $nextPage = $pages.eq(current).addClass('pt-page-current'),
             outClass = '',
