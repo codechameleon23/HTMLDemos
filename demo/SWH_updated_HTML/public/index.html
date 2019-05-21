@@ -309,7 +309,6 @@
     var contentCarousel;
     $(function(){
       if ($(".content_carousel-js").length) {
-        console.log('innnnnn');
         contentCarousel = $(".content_carousel-js");
         contentCarousel.owlCarousel({
           items: 1,
@@ -320,8 +319,6 @@
           animateIn: isIE11 ? "" : "",
           animateOut: isIE11 ? "" : "",
           smartSpeed: 500,
-        }).on('changed.owl.carousel', function(event) {
-          console.log('changed', event.item.index);
         });
         $(".content_carousel-js--prev").click(function () {
           // Go to pervious item
