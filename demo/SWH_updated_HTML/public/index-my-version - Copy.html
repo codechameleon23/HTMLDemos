@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="images/favicon.png" />
+  <title>Shorewood Homes</title>
+  <link rel="stylesheet" href="https://use.typekit.net/uiy6agb.css">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="header_abs footer-inside-section">
+  <!-- page loader -->
+  <div class="pageLoader"></div>
+  <!-- Cookie message-->
+  <div id="cookie-message" data-cookie-expiry="60">
+    <div class="grid has-gutter has-list_thin center_a">
+      <div class="col col-auto col-sm-12 text-center">
+        <p class="m_t-auto m_b-auto">We use cookies to enhance your experience. By continuing to visit this site you
+          agree to our use of cookies. <a href="#" class="text-primary">More info</a></p>
+      </div>
+      <div class="col col-auto">
+        <a href="javascript:void(0);" class="button is_100" onclick="messageClose()">got it</a>
+      </div>
+    </div>
+  </div>
+  <!-- Rotate tablet message -->
+  <div class="tabletRoate bg-default">
+    <div>
+      <p><img src="images/tablet-rotate.png" alt="" /></p>
+      <p class="h5">Please rotate your device</p>
+    </div>
+  </div>
+  <script>
+    //Hide page loader on load
+    window.onload = function (e) {
+      var x = document.getElementsByClassName("pageLoader");
+      for (i = 0; i < x.length; i++) {
+        x[i].className += ' is-hidden';
+      }
+    };
+    //Cookie Policy message
+    document.body.className = document.body.className + " js_enabled"; // Detect JS support
+    function messageClose() { //close on click
+      document.getElementById("cookie-message").style.display = "none";
+    };
+  </script>
+  <!--Header-->
+  <header class="header">
+    <a class="brand-logo" href="index.html"><img src="images/SWH_logo.png" alt="Shorewood Homes" /></a>
+  </header>
+  <!--Hamburger-->
+  <div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <!--Navbar-->
+  <nav class="navbar navbar-toggle-js">
+    <div class="navbar-inner">
+      <ul>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="inspiration.html">Inspiration</a></li>
+        <li><a href="bespoke.html">Bespoke</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!--Main-->
+  <main class="main">
+    <!-- Banner carousel -->
+    <section class="banner_carousel_wrapper scrollify_section-js">
+      <div class="banner_carousel hero_carousel-js owl-carousel owl-theme">
+        <div class="item" data-section-name="leaflands" >
+          <div class="banner">
+            <div class="banner-bg" style="background-image:url('images/Shorewood-Homes-Leaflands-2019_RETOUCHED_HQ-1-2.jpg')"></div>
+          </div>
+        </div>
+        <div class="item" data-section-name="redthorne_house" >
+          <div class="banner">
+            <div class="banner-bg" style="background-image:url('images/Shorewood-Homes_Redthorne-House_HQ-50.jpg')"></div>
+          </div>
+        </div>
+      </div>
+      <div class="section_navigation">
+        <a href="#aboutUs" class="action_group goto align-center">
+          <span class="action_button button">About</span>
+          <span class="action_button button"><img class="button_icon" src="images/arrow_down.png" alt="" /></span>
+        </a>
+      </div>
+    </section>
+
+    <section class="scrollify_section-js has-footer-inside-section">
+      <!-- Content -->
+      <div id="aboutUs" class="content-wrapper">
+        <div class="banner_carousel content_carousel-js owl-carousel owl-theme">
+          <div class="item">
+            <div class="content-outer">
+              <figure class="content-media two-pic content-media-16x9 image col-xs-12">
+                <div class="image-wrap">
+                  <div class="tiles">
+                    <div class="tile-col col-7">
+                      <div class="tile has-hover">
+                        <figure class="item figure aspect-ratio_1x1">
+                          <div class="image-wrap" style="background-image: url('./images/Shorewood-Homes-Leaflands-2019_HQ-40.jpg');"></div>
+                        </figure>
+                      </div>
+                    </div>
+                    <div class="tile-col col-5">
+                      <div class="tile has-hover">
+                        <figure class="item figure">
+                          <div class="image-wrap" style="background-image: url('./images/Shorewood-Homes-Leaflands-2019_HQ-17.jpg');"></div>
+                        </figure>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </figure>
+              <div class="content-details text-center col-xs-12">
+                <div class="details-wrap content-text">
+                  <h3 class="title font-primary">Leaflands</h3>
+                  <h5 class="subtitle">Headbourne worthy</h5>
+                  <p class="para text-justify-center">Leaflands comprises four well-proportioned homes in Headbourne Worthy, a village on the outskirts of
+                    Winchester, from where there is easy access to good local amenities and the city centre. The train station
+                    is within easy reach, providing regular direct services to London Waterloo in under an hour, and there are
+                    fast connections to the major road networks across the south. Located just a couple of miles to the north of
+                    Winchester, the development provides the perfect combination of rural and urban living</p>
+                  <div class="details-footer buttons">
+                    <a href="#" class="button is_150 is_small">find out more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="content-outer">
+              <figure class="content-media two-pic content-media-16x9 image col-xs-12">
+                <div class="image-wrap">
+                  <div class="tiles">
+                    <div class="tile-col col-7">
+                      <div class="tile has-hover">
+                        <figure class="item figure aspect-ratio_1x1">
+                          <div class="image-wrap" style="background-image: url('./images/Shorewood-Homes_Redthorne-House_HQ-99-cropped.jpg');"></div>
+                        </figure>
+                      </div>
+                    </div>
+                    <div class="tile-col col-5">
+                      <div class="tile has-hover">
+                        <figure class="item figure">
+                          <div class="image-wrap" style="background-image: url('./images/Shorewood-Homes_Redthorne-House_HQ-129.jpg');"></div>
+                        </figure>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </figure>
+              <div class="content-details text-center col-xs-12">
+                <div class="details-wrap content-text">
+                  <h3 class="title font-primary">Redthorne House</h3>
+                  <h5 class="subtitle">Sparsholt</h5>
+                  <p class="para text-justify-center">Redthorne House is a stunning four bedroom house in the sought after
+                    village of Sparsholt, a few miles to the west of Winchester. Shorewood Homes designed and built a
+                    beautiful extension whilst refurbishing the rest of the house. The house combines a practical layout
+                    with a luxury finish, ideal for modern living.</p>
+                  <p class="para text-justify-center">Shorewood Homes dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Uluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                  <div class="details-footer buttons">
+                    <a href="#" class="button is_150 is_small">find out more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!--inside Footer-->
+      <footer class="footer">
+        <div class="section_navigation grey">
+          <a href="#aboutShorewood" class="action_group goto align-center">
+            <span class="action_button button">About Shorewood</span>
+            <span class="action_button button"><img class="button_icon" src="images/arrow_down-grey.png" alt="" /></span>
+          </a>
+        </div>
+      </footer>
+    </section>
+    
+    <section class="scrollify_section-js has-footer-inside-section bg-secondary--light">
+      <!-- Content -->
+      <div id="aboutShorewood" class="content-wrapper">
+        <div class="content-outer reverse">
+          <figure class="content-media two-pic content-media-16x9 image col-xs-12">
+            <div class="image-wrap">
+              <div class="tiles">
+                <div class="tile-col col-7">
+                  <div class="tile has-hover">
+                    <figure class="item figure aspect-ratio_1x1">
+                      <div class="image-wrap" style="background-image: url('./images/image_1111.jpg');"></div>
+                    </figure>
+                  </div>
+                </div>
+                <div class="tile-col col-5">
+                  <div class="tile has-hover">
+                    <figure class="item figure">
+                      <div class="image-wrap" style="background-image: url('./images/image_2222.jpg');"></div>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </figure>
+          <div class="content-details text-center col-xs-12">
+            <div class="details-wrap content-text">
+              <h5 class="subtitle">
+                <a class="brand-logo" href="index.html"><img src="images/SWH_logo-blue.png" alt="Shorewood Homes" /></a>
+              </h5>
+              <p class="para text-justify-center">Shorewood Homes are a Winchester-based housebuilder who have created a team which brings together
+                a long-standing track record of delivering luxury housing throughout Hampshire. They pride themselves on
+                attention to detail and a strong focus on quality, which underpins their philosophy ‘Built for Living: Valued
+                for Life’. The Shorewood Homes style takes influence from period architecture which fits well within the
+                traditional environment in Winchester. With a strong emphasis on internal layouts and design, coupled
+                with high-quality specification, their homes promote functionality and modern-day living</p>
+              <div class="details-footer buttons">
+                <a href="#" class="button is_150 is_small">Meet the team</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--inside Footer-->
+      <footer class="footer">
+        <div class="left">
+          <ul class="links">
+            <li><a href="mailto:info@shorewoodhomes.co.uk">info@shorewoodhomes.co.uk</a></li>
+            <li><a href="tel:01962678528">01962 678528</a></li>
+          </ul>
+        </div>
+        <div class="right">
+          <ul class="links">
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li class="copyright"><span>© Shorewood Homes 2018</span></li>
+          </ul>
+        </div>
+      </footer>
+    </section>
+  </main>
+  <!--Footer-->
+  <footer class="footer">
+    <div class="left">
+      <ul class="links">
+        <li><a href="mailto:info@shorewoodhomes.co.uk">info@shorewoodhomes.co.uk</a></li>
+        <li><a href="tel:01962678528">01962 678528</a></li>
+      </ul>
+    </div>
+    <div class="right">
+      <ul class="links">
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li class="copyright"><span>© Shorewood Homes 2018</span></li>
+      </ul>
+    </div>
+  </footer>
+  <!--Scripts-->
+  <script src="js/alljs.js"></script>
+  <script>
+    $(function(){
+      if ($(".hero_carousel-js").length) {
+        //if element exists
+        var heroCarousel = $(".hero_carousel-js");
+        var contentCarousel = $(".content_carousel-js");
+
+        heroCarousel.on('initialize.owl.carousel', function(event){      
+          var pagination = "<ul class=\"pagination\">";
+          var activeClass = "";
+          $(".hero_carousel-js .item").each(function (i) {
+            activeClass = "";
+            pagination += "<li><a class=\"" + activeClass + "\"><span class=\"hover-text\">" + $(this).attr("data-section-name").replace('_', ' ') + "</span></a></li>";
+          });
+          pagination += "</ul>";
+          $(".banner_carousel_wrapper").append(pagination);
+          $(".pagination a").on('click', function () {
+            var item = $(this).closest('li').index();
+            heroCarousel.trigger('to.owl.carousel', [item, 500]);
+            contentCarousel.trigger('to.owl.carousel', [item, 500]);
+          });
+        });
+        heroCarousel.on('initialized.owl.carousel', function(property){    
+          var item = property.item.index;
+          $(".pagination .active").removeClass("active");
+          $(".pagination li").eq(item).find('a').addClass("active");
+        });
+        heroCarousel.owlCarousel({
+          items: 1,
+          rtl: true,
+          // loop: true,
+          mouseDrag: false,
+          nav: false,
+          dots: false,
+          animateIn: isIE11 ? "" : "slideInUp",
+          animateOut: isIE11 ? "" : "slideOutUp",
+          smartSpeed: 500,
+          // autoplay: true,
+          autoplayTimeout: 4500,
+          autoplayHoverPause: true
+        });
+        heroCarousel.on('changed.owl.carousel',function(property){
+          var item = property.item.index;
+          $(".pagination .active").removeClass("active");
+          $(".pagination li").eq(item).find('a').addClass("active");
+        });
+
+        $(".hero_carousel-js--prev").click(function () {
+          // Go to pervious item
+          heroCarousel.trigger("prev.owl.carousel");
+        });
+        $(".hero_carousel-js--next").click(function () {
+          // Go to next item
+          heroCarousel.trigger("next.owl.carousel");
+        });
+
+        contentCarousel.owlCarousel({
+          items: 1,
+          loop: true,
+          mouseDrag: false,
+          nav: false,
+          dots: false,
+          animateIn: isIE11 ? "" : "fadeIn",
+          animateOut: isIE11 ? "" : "fadeOut",
+          smartSpeed: 500,
+        });
+        $(".content_carousel-js--prev").click(function () {
+          // Go to pervious item
+          contentCarousel.trigger("prev.owl.carousel");
+        });
+        $(".content_carousel-js--next").click(function () {
+          // Go to next item
+          contentCarousel.trigger("next.owl.carousel");
+        });
+
+      }
+
+    });
+  </script>
+</body>
+
+</html>
