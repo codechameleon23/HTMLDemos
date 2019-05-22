@@ -48,6 +48,18 @@ function getViewportWidth() {
     return 0;
   }
 }
+
+function getViewportHeight() {
+  //Get View port width
+  if (window.innerHeight) {
+    return window.innerHeight;
+  } else if (document.body && document.body.offsetHeight) {
+    return document.body.offsetHeight;
+  } else {
+    return 0;
+  }
+}
+
 var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 $(document).ready(function () {
   $(".popup").popup({

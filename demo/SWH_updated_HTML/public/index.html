@@ -328,26 +328,6 @@
           contentCarousel.trigger("next.owl.carousel");
         });
       };
-
-      $.scrollify({
-        after:function(index) {
-          sectionIndex = index;
-          if(index > 0){
-            clearInterval(intervalID);
-          }else{
-            setTimeout(function(){
-              intervalID = setInterval(function () {
-                PageTransitions.prevPage(PTSettings.f_effect)
-              }, PTSettings.autoslideduration)
-            }, PTSettings.autoslideduration)
-          }
-        },
-        afterRender: function() {
-          if($.scrollify.current().index() > 0){
-            clearInterval(intervalID);
-          }
-        },
-      });
     });
 
     function gotoContentSlide(slide){

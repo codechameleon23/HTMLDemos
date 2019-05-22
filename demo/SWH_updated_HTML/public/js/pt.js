@@ -204,7 +204,6 @@ var PageTransitions = (function ($) {
       });
       if (jQuery(window).width() <= 768) {
          jQuery("#pt-main").on("swipedown", function (event) {
-            // console.log(123);
             prevPage(PTSettings.b_effect)
          })
          jQuery("#pt-main").on("swipeup", function (event) {
@@ -216,7 +215,7 @@ var PageTransitions = (function ($) {
    function nextPage(options) {
 
       // change content
-      gotoContentSlide(current);
+      window.scrollY < 100 && gotoContentSlide(current);
 
       var animation = (options.animation) ? options.animation : options;
       animation = parseInt(PTSettings.f_effect);
@@ -291,8 +290,7 @@ var PageTransitions = (function ($) {
          } else {
             current = pagesCount - 1
          }
-         // console.log('prevPage current', current);
-         gotoContentSlide(current);
+         window.scrollY < 100 && gotoContentSlide(current);
          var $nextPage = $pages.eq(current).addClass('pt-page-current'),
             outClass = '',
             inClass = '';
@@ -338,8 +336,7 @@ var PageTransitions = (function ($) {
       if (isAnimating) {
          return !1
       }
-
-      gotoContentSlide(page - 1);
+      window.scrollY < 100 && gotoContentSlide(page - 1);
 
       page = page - 1;
       isAnimating = !0;
