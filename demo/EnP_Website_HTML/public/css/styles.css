@@ -4623,11 +4623,14 @@ ol.list li:before { content: "." counter(step-counter); display: inline-block; w
 
 .strip-carousel .owl-stage > .owl-item { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
 
-.has-detail-button .figure .image-holder, .has-detail-button .figure a.image-holder { -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end; -webkit-box-align: end; -ms-flex-align: end; align-items: flex-end; }
+.has-detail-button .figure .image-holder:after, .has-detail-button .figure a.image-holder:after { width: auto; content: "View Details"; padding: 0 1rem; border-radius: .2rem; }
 
-.has-detail-button .figure .image-holder:after, .has-detail-button .figure a.image-holder:after { width: auto; content: "View Details"; padding: 0 1rem; border-radius: .2rem; top: auto; left: auto; -webkit-transform: scale(0.925) translate(-1rem, -0.8rem); -ms-transform: scale(0.925) translate(-1rem, -0.8rem); transform: scale(0.925) translate(-1rem, -0.8rem); }
+@media all and (max-width: 992px) { .has-detail-button .figure .image-holder, .has-detail-button .figure a.image-holder { -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end; -webkit-box-align: end; -ms-flex-align: end; align-items: flex-end; }
+  .has-detail-button .figure .image-holder:after, .has-detail-button .figure a.image-holder:after { top: auto; left: auto; -webkit-transform: translate(0, 0); -ms-transform: translate(0, 0); transform: translate(0, 0); } }
 
-.has-detail-button .figure:hover .image-holder:after, .has-detail-button .figure:hover a.image-holder:after { opacity: 1; -webkit-transition: all .35s .15s ease-in-out; -o-transition: all .35s .15s ease-in-out; transition: all .35s .15s ease-in-out; }
+.has-detail-button .figure:hover .image-holder:after, .has-detail-button .figure:hover a.image-holder:after { opacity: 1; }
+
+@media all and (max-width: 992px) { .has-detail-button .figure:hover .image-holder, .has-detail-button .figure:hover a.image-holder { -webkit-transform: scale(1); -ms-transform: scale(1); transform: scale(1); } }
 
 .message-image { position: relative; }
 
