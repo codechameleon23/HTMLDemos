@@ -385,7 +385,8 @@
          };
          
          $('#imageGallery li').on('click', function(){
-            current = $(this).index() - 1;
+            current = parseInt($(this).index() - 1);
+            alert(current);
             openPhotoSwipe();
          });
       });
