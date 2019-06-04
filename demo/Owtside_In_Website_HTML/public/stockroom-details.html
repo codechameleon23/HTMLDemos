@@ -352,44 +352,6 @@
       </div>
    </footer>
    <script src="js/allscripts.js"></script>
-   <script>
-      $(function () {
-         var galleryItems = [];
-
-         $('#imageGallery li').each(function(){
-            var childImgSrcPath = $(this).attr("data-src");
-            var newImg = new Image();
-            newImg.onload = function() {
-               galleryItems.push(
-                  {
-                     src: childImgSrcPath, 
-                     w: newImg.width, 
-                     h: newImg.height
-                  }
-               )
-            }
-            newImg.src = childImgSrcPath;
-         });
-
-         var openPhotoSwipe = function (current) {
-            var pswpElement = document.querySelectorAll('.pswp')[0];
-            var items = galleryItems;
-            var options = {
-               index: current,
-               shareEl: false,
-               clickToCloseNonZoomable: false,
-            }
-            // alert(current);
-            var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
-            gallery.init();
-         };
-         
-         $('#imageGallery li').on('click', function(){
-            var current = parseInt($(this).index() - 1);
-            openPhotoSwipe(current);
-         });
-      });
-   </script>
 </body>
 
 </html>
