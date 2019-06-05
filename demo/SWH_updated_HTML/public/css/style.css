@@ -675,7 +675,9 @@ img { display: inline-block; max-width: 100%; vertical-align: top; }
 
 @media all and (min-width: 901px) { .footer_2 .footer { padding-bottom: 2.6rem; } }
 
-@media all and (max-width: 700px) { .footer { padding-top: 3rem; padding-bottom: 3rem; } }
+@media all and (max-width: 700px) { #aboutUs { padding-top: 3rem; }
+  .footer { padding-top: 3rem; padding-bottom: 3rem; }
+  #aboutUs ~ .footer { padding-bottom: 0; } }
 
 .footer_fixed .footer, .footer_abs .footer { position: absolute; z-index: 100001; right: 0; top: auto; left: 0; bottom: 0; }
 
@@ -957,13 +959,12 @@ img { display: inline-block; max-width: 100%; vertical-align: top; }
 .banner-body { position: relative; z-index: 1; width: 100%; height: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -ms-flex-wrap: nowrap; flex-wrap: nowrap; }
 
 /*Banner Carousel*/
-.banner_carousel, .banner_carousel .owl-stage-outer, .banner_carousel .owl-stage, .banner_carousel .owl-item, .banner_carousel .owl-item > .item { height: 100%; }
-
 .banner_carousel_wrapper { position: relative; }
 
 .section_navigation { position: absolute; bottom: 0; left: 0; right: 0; top: auto; z-index: 9; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; padding: 0 4.5rem 4.5rem; }
 
 @media all and (max-width: 900px) { .section_navigation { padding-bottom: 2.58rem; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+  .home .banner_carousel_wrapper .section_navigation { padding-bottom: 10rem; }
   .section_navigation .banner-controls { display: none; } }
 
 /*Action group*/
@@ -988,7 +989,7 @@ img { display: inline-block; max-width: 100%; vertical-align: top; }
 /*content-wrapper*/
 .content-wrapper { height: 100%; padding: 0 4.5rem; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
 
-@media all and (max-width: 700px) { .content-wrapper { -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; } }
+@media all and (max-width: 700px) { .content-wrapper#aboutUs { -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; } }
 
 .content-outer { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
@@ -1010,6 +1011,10 @@ img { display: inline-block; max-width: 100%; vertical-align: top; }
 
 @media all and (max-width: 700px) { .content-details .title, .content-details .subtitle { margin-bottom: 2.5rem; } }
 
+@media all and (max-width: 700px) { .home .has-footer-inside-section { position: relative; }
+  .home .has-footer-inside-section #aboutUs ~ .footer { position: absolute; width: 100%; bottom: 0; }
+  .home .has-footer-inside-section #aboutUs ~ .footer .section_navigation { position: static; width: 100%; } }
+
 @media all and (max-width: 700px) { .content-outer { -ms-flex-wrap: wrap; flex-wrap: wrap; }
   .content-media, .content-details { width: 100%; }
   .content-media:not(:last-child), .content-details:not(:last-child) { margin-bottom: 4rem; } }
@@ -1018,7 +1023,7 @@ img { display: inline-block; max-width: 100%; vertical-align: top; }
 
 .content-text .para { line-height: 1.8; }
 
-.content-text .para:not(:last-child) { margin-bottom: 2.5rem; }
+.content-text .para:not(:last-child) { margin-bottom: 4rem; }
 
 @media all and (max-width: 700px) { .contact_page .footer .left { margin: auto auto auto 0; } }
 
@@ -1316,8 +1321,6 @@ table .table_footer, .table .table_footer { margin-top: 3.4rem; margin-bottom: 0
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) { /* Safari only override */
   ::i-block-chrome, .team_list .figure-caption .caption-content { text-align: center !important; } }
-
-.has-footer-inside-section .footer { display: none; }
 
 @media screen and (min-width: 0\0) { .has-footer-inside-section { overflow-x: hidden; } }
 
