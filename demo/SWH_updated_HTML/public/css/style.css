@@ -675,10 +675,6 @@ img { display: inline-block; max-width: 100%; vertical-align: top; }
 
 @media all and (min-width: 901px) { .footer_2 .footer { padding-bottom: 2.6rem; } }
 
-@media all and (max-width: 700px) { #aboutUs { padding-top: 3rem; }
-  .footer { padding-top: 3rem; padding-bottom: 3rem; }
-  #aboutUs ~ .footer { padding-bottom: 0; } }
-
 .footer_fixed .footer, .footer_abs .footer { position: absolute; z-index: 100001; right: 0; top: auto; left: 0; bottom: 0; }
 
 .footer_fixed .footer { position: fixed; }
@@ -1010,10 +1006,6 @@ img { display: inline-block; max-width: 100%; vertical-align: top; }
 .content-details .title, .content-details .subtitle { text-transform: uppercase; margin-bottom: 2rem; }
 
 @media all and (max-width: 700px) { .content-details .title, .content-details .subtitle { margin-bottom: 2.5rem; } }
-
-@media all and (max-width: 700px) { .home .has-footer-inside-section { position: relative; }
-  .home .has-footer-inside-section #aboutUs ~ .footer { position: absolute; width: 100%; bottom: 0; }
-  .home .has-footer-inside-section #aboutUs ~ .footer .section_navigation { position: static; width: 100%; } }
 
 @media all and (max-width: 700px) { .content-outer { -ms-flex-wrap: wrap; flex-wrap: wrap; }
   .content-media, .content-details { width: 100%; }
@@ -1396,3 +1388,9 @@ body.general_template { overflow: auto; }
 .bg-secondary--light .footer { background-color: transparent; }
 
 /* Disables pull-to-refresh and overscroll glow effect. Still keeps swipe navigations. */
+@media all and (max-width: 700px) { .home .has-footer-inside-section { position: relative; }
+  .home .has-footer-inside-section .content-wrapper { padding-top: 3rem; padding-bottom: 3rem; }
+  .home .has-footer-inside-section .footer { display: none; padding-bottom: 0; }
+  .home .has-footer-inside-section .footer .section_navigation { padding-left: 0; padding-right: 0; }
+  .home .has-footer-inside-section #aboutUs ~ .footer { display: block; position: static; width: 100%; }
+  .home .has-footer-inside-section #aboutUs ~ .footer .section_navigation { position: static; width: 100%; } }
