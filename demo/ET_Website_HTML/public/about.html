@@ -12,45 +12,81 @@
 
 <body class="jsNavbarToggle is-close flex-col has-theme-Red">
    <!-- Header -->
-   <header class="py-30">
+   <header class="py-10 lg:py-30">
       <div class="container container-xl mx-auto 
                   flex-col">
          <div class="header-top pointer-events-none
-                     flex-row justify-space-between align-center
-                     pos-absolute pin-x pin-t
-                     container container-xl 
-                     mx-auto mt-10">
+                     flex-row justify-space-between align-top
+                     lg:pos-absolute pin-x pin-t
+                     lg:container-xl 
+                     lg:mx-auto mt-10">
             <div class="icon-group -mx-5 pointer-events-auto">
                <a class="icon ratio-custom_1 icon-md mx-5" href="">
                   <span><img src="images/uk-flag.jpg" /></a>
                <a class="icon ratio-custom_1 icon-md mx-5" href="">
                   <span><img src="images/france-flag.jpg" /></span></a>
             </div>
+            <a class="px-5 no-underline text-inherit icon-xl 
+                     lg:d-hidden pointer-events-auto" href="index.html"><img
+               src="images/brand-logo.jpg" alt="Expressions Traductions" /></a>
             <div class="icon-group -mx-5 pointer-events-auto">
                <a class="icon radius-full fsize-xs bg-dark text-white mx-5" href="">
                   <span><i class="fab fa-facebook-f"></i></span></a>
                <a class="icon radius-full fsize-xs bg-dark text-white mx-5" href="">
                   <span><i class="fab fa-twitter"></i></span></a>
+               <div class="icon lg:d-hidden mx-5">
+                  <div>
+                     <div class="hamburger icon icon-xs pointer-events-auto">
+                        <div>
+                           <span></span>
+                           <span></span>
+                           <span></span>
+                           <span></span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
          </div>
          <nav class="navbar 
-                     flex-row justify-center 
-                     fsize-base fweight-light">
-            <ul class="list-reset flex-row align-end">
-               <li><a class="transition-all px-5 lg:px-20 no-underline text-inherit hover:text-Red 
-                              active:theme-text active:fweight-semibold" href="about.html">About</a></li>
-               <li><a class="transition-all px-5 lg:px-20 no-underline text-inherit hover:text-Purple"
-                     href="services.html">Services</a></li>
-               <li><a class="transition-all px-5 lg:px-20 no-underline text-inherit hover:text-Blue"
-                     href="happy-customers.html">Happy Customers</a></li>
-               <li><a class="transition-all px-5 lg:px-20 no-underline text-inherit brand-logo" href="index.html"><img
-                        src="images/brand-logo.jpg" alt="Expressions Traductions" /></a></li>
-               <li><a class="transition-all px-5 lg:px-20 no-underline text-inherit hover:text-Sky"
-                     href="out-and-about.html">Out & About</a></li>
-               <li><a class="transition-all px-5 lg:px-20 no-underline text-inherit hover:theme-default"
-                     href="other-hats.html">Other Hats</a></li>
-               <li><a class="transition-all px-5 lg:px-20 no-underline text-inherit hover:text-Green"
-                     href="contact.html">Contact</a></li>
+                     flex-row justify-center align-center 
+                     fsize-2md lg:fsize-base fweight-light
+                     pin pin-l-auto z-20
+                     pos-fixed 
+                     shadow-lg 
+                     w-full
+                     bg-white lg:bg-transparent 
+                     lg:pos-static lg:shadow-none">
+            <ul class="list-reset flex-row align-center lg:align-end">
+               <li>
+                  <a class="transition-all px-5 py-10 lg:py-0 d-inline-block lg:px-20 no-underline text-inherit hover:text-Red
+                     active:theme-text active:fweight-semibold"
+                     href="about.html">About</a>
+               </li>
+               <li>
+                  <a class="transition-all px-5 py-10 lg:py-0 d-inline-block lg:px-20 no-underline text-inherit hover:text-Purple"
+                     href="services.html">Services</a>
+               </li>
+               <li>
+                  <a class="transition-all px-5 py-10 lg:py-0 d-inline-block lg:px-20 no-underline text-inherit hover:text-Blue"
+                     href="happy-customers.html">Happy Customers</a>
+               </li>
+               <li class="d-hidden lg:d-block">
+                  <a class="transition-all px-5 lg:px-20 no-underline text-inherit brand-logo" href="index.html"><img
+                     src="images/brand-logo.jpg" alt="Expressions Traductions" /></a>
+                  </li>
+               <li>
+                  <a class="transition-all px-5 py-10 lg:py-0 d-inline-block lg:px-20 no-underline text-inherit hover:text-Sky"
+                     href="out-and-about.html">Out & About</a>
+               </li>
+               <li>
+                  <a class="transition-all px-5 py-10 lg:py-0 d-inline-block lg:px-20 no-underline text-inherit hover:theme-default"
+                     href="other-hats.html">Other Hats</a>
+               </li>
+               <li>
+                  <a class="transition-all px-5 py-10 lg:py-0 d-inline-block lg:px-20 no-underline text-inherit hover:text-Green"
+                     href="contact.html">Contact</a>
+               </li>
             </ul>
          </nav>
       </div>
@@ -77,9 +113,13 @@
                         lg:col-4 lg:mr-0 
                         mb-30 lg:-mb-100">
                   <div class="pos-relative lg:pl-70">
-                     <section class="figure img-fit ratio-custom_4 tilt">
+                     <section class="figure img-fit ratio-custom_4 tilt overflow-visible">
                         <figure class="image-holder flex-col justify-center theme-bg-light"
                            style="background-image: url('./images/England---Haslemere.jpg')"></figure>
+                        <div class="icon pos-absolute 
+                              icon-150 pin-t pin-r -mt-70 -mr-70"><div><img src="images/stamp_1.svg"/></div></div>
+                        <div class="icon pos-absolute 
+                              icon-150 pin-b pin-l -mt-70 -ml-70"><div><img src="images/stamp_2.svg"/></div></div>
                      </section>
                   </div>
                </div>
@@ -109,9 +149,11 @@
                         lg:col-4 lg:mr-0 
                         mb-30 lg:-mb-100">
                   <div class="pos-relative lg:pr-70">
-                     <section class="figure img-fit ratio-custom_4 tilt-reverse">
+                     <section class="figure img-fit ratio-custom_4 tilt-reverse overflow-visible">
                         <figure class="image-holder flex-col justify-center theme-bg-light"
                            style="background-image: url('./images/Brest-(4).jpg')"></figure>
+                        <div class="icon pos-absolute 
+                           icon-150 pin-t pin-l -mt-70 -ml-30"><div><img src="images/stamp_3.svg"/></div></div>
                      </section>
                   </div>
                </div>
@@ -143,9 +185,11 @@
                         lg:col-4 lg:mr-0 
                         mb-30">
                   <div class="pos-relative lg:pl-70">
-                     <section class="figure img-fit ratio-custom_4 tilt lg:-mt-100">
+                     <section class="figure img-fit ratio-custom_4 tilt lg:-mt-100 overflow-visible">
                         <figure class="image-holder flex-col justify-center theme-bg-light"
                            style="background-image: url('./images/iStock-513051742.jpg')"></figure>
+                           <div class="icon pos-absolute 
+                           icon-150 pin-t pin-r -mt-70 -mr-70"><div><img src="images/stamp_4.svg"/></div></div>
                      </section>
                      <section class="figure img-fit ratio-custom_4 tilt-reverse lg:-mb-100">
                         <figure class="image-holder flex-col justify-center theme-bg-light"
@@ -185,9 +229,11 @@
                         lg:col-4 lg:mr-0 
                         mb-30 lg:-mb-100">
                   <div class="pos-relative lg:pr-70">
-                     <section class="figure img-fit ratio-custom_4 tilt-reverse">
+                     <section class="figure img-fit ratio-custom_4 tilt-reverse overflow-visible">
                         <figure class="image-holder flex-col justify-center theme-bg-light"
                            style="background-image: url('./images/iStock-929876872.jpg')"></figure>
+                        <div class="icon pos-absolute 
+                        icon-150 pin-t pin-r -mr-70"><div><img src="images/stamp_2.svg"/></div></div>
                      </section>
                   </div>
                </div>
