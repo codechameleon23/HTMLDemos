@@ -82,9 +82,9 @@ a img { border: none; outline: none; }
 
 .figure.img-fit img { min-height: 100%; width: 100%; -o-object-fit: cover; object-fit: cover; -o-object-position: center; object-position: center; }
 
-.figure.img-fit .image-holder { background-size: cover; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+.figure.img-fit .image-holder { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
-.figure .image-holder { background-position: center; background-size: contain; background-repeat: no-repeat; -webkit-transition: all 0.2s 0s ease-in-out; -o-transition: all 0.2s 0s ease-in-out; transition: all 0.2s 0s ease-in-out; -webkit-box-flex: 1; -ms-flex: 1; flex: 1; -ms-flex: 1 1 auto; flex: 1 1 auto; min-height: 1px; }
+.figure .image-holder { -webkit-transition: all 0.2s 0s ease-in-out; -o-transition: all 0.2s 0s ease-in-out; transition: all 0.2s 0s ease-in-out; -webkit-box-flex: 1; -ms-flex: 1; flex: 1; -ms-flex: 1 1 auto; flex: 1 1 auto; min-height: 1px; }
 
 .figure .image-holder_inner { height: 100%; }
 
@@ -223,12 +223,11 @@ ol.list li:before { content: "." counter(step-counter); display: inline-block; w
   90% { -webkit-transform: rotate(3deg); transform: rotate(3deg); } }
 
 /*owlCarousel*/
-/*Owl Carousel v2.2.1*/
-.owl-carousel, .owl-carousel .owl-item { -webkit-tap-highlight-color: transparent; position: relative; }
+̥ .owl-carousel, .owl-carousel .owl-item { -webkit-tap-highlight-color: transparent; position: relative; }
 
 .owl-carousel { visibility: hidden; width: 100%; z-index: 1; }
 
-.owl-carousel .owl-stage { position: relative; -ms-touch-action: pan-Y; -moz-backface-visibility: hidden; }
+.owl-carousel .owl-stage { position: relative; -ms-touch-action: pan-Y; -moz-backface-visibility: hidden; display: -webkit-box; display: -ms-flexbox; display: flex; }
 
 .owl-carousel .owl-stage:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
 
@@ -236,7 +235,7 @@ ol.list li:before { content: "." counter(step-counter); display: inline-block; w
 
 .owl-carousel .owl-item, .owl-carousel .owl-wrapper { -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -ms-backface-visibility: hidden; -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); }
 
-.owl-carousel .owl-item { min-height: 1px; float: left; -webkit-backface-visibility: hidden; -webkit-touch-callout: none; }
+.owl-carousel .owl-item { min-height: 1px; float: left; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-backface-visibility: hidden; -webkit-touch-callout: none; }
 
 .owl-carousel .owl-dots.disabled, .owl-carousel .owl-nav.disabled { display: none; }
 
@@ -1170,25 +1169,11 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
 
 .no-underline { text-decoration: none; }
 
-.italic { font-style: italic; }
+.reflect { -webkit-transform: scale(-1); -ms-transform: scale(-1); transform: scale(-1); }
 
-.roman { font-style: normal; }
+.reflect-X { -webkit-transform: scaleX(-1); -ms-transform: scaleX(-1); transform: scaleX(-1); }
 
-.uppercase { text-transform: uppercase; }
-
-.lowercase { text-transform: lowercase; }
-
-.capitalize { text-transform: capitalize; }
-
-.normal-case { text-transform: none; }
-
-.underline { text-decoration: underline; }
-
-.line-through { text-decoration: line-through; }
-
-.wavy { -webkit-text-decoration-line: underline; text-decoration-line: underline; -webkit-text-decoration-style: wavy; text-decoration-style: wavy; }
-
-.no-underline { text-decoration: none; }
+.reflect-Y { -webkit-transform: scaleY(-1); -ms-transform: scaleY(-1); transform: scaleY(-1); }
 
 .italic { font-style: italic; }
 
@@ -1210,6 +1195,12 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
 
 .no-underline { text-decoration: none; }
 
+.reflect { -webkit-transform: scale(-1); -ms-transform: scale(-1); transform: scale(-1); }
+
+.reflect-X { -webkit-transform: scaleX(-1); -ms-transform: scaleX(-1); transform: scaleX(-1); }
+
+.reflect-Y { -webkit-transform: scaleY(-1); -ms-transform: scaleY(-1); transform: scaleY(-1); }
+
 .italic { font-style: italic; }
 
 .roman { font-style: normal; }
@@ -1229,6 +1220,38 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
 .wavy { -webkit-text-decoration-line: underline; text-decoration-line: underline; -webkit-text-decoration-style: wavy; text-decoration-style: wavy; }
 
 .no-underline { text-decoration: none; }
+
+.reflect { -webkit-transform: scale(-1); -ms-transform: scale(-1); transform: scale(-1); }
+
+.reflect-X { -webkit-transform: scaleX(-1); -ms-transform: scaleX(-1); transform: scaleX(-1); }
+
+.reflect-Y { -webkit-transform: scaleY(-1); -ms-transform: scaleY(-1); transform: scaleY(-1); }
+
+.italic { font-style: italic; }
+
+.roman { font-style: normal; }
+
+.uppercase { text-transform: uppercase; }
+
+.lowercase { text-transform: lowercase; }
+
+.capitalize { text-transform: capitalize; }
+
+.normal-case { text-transform: none; }
+
+.underline { text-decoration: underline; }
+
+.line-through { text-decoration: line-through; }
+
+.wavy { -webkit-text-decoration-line: underline; text-decoration-line: underline; -webkit-text-decoration-style: wavy; text-decoration-style: wavy; }
+
+.no-underline { text-decoration: none; }
+
+.reflect { -webkit-transform: scale(-1); -ms-transform: scale(-1); transform: scale(-1); }
+
+.reflect-X { -webkit-transform: scaleX(-1); -ms-transform: scaleX(-1); transform: scaleX(-1); }
+
+.reflect-Y { -webkit-transform: scaleY(-1); -ms-transform: scaleY(-1); transform: scaleY(-1); }
 
 /* White space classes */
 .whitespace-normal { white-space: normal; }
