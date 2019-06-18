@@ -24,20 +24,6 @@ a.fn.owlCarousel.Constructor.Plugins.Animate=e}(window.Zepto||window.jQuery,wind
 
 // * scripts.js
 
-var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
-var isIE10 = (navigator.userAgent.match(/MSIE 10/i));
-
-// Get View port width
-function getViewportWidth() {
-  if (window.innerWidth) {
-    return window.innerWidth;
-  } else if (document.body && document.body.offsetWidth) {
-    return document.body.offsetWidth;
-  } else {
-    return 0;
-  }
-}
-
 // Close Navbar
 function navBarClose() {
   $(".hamburger").removeClass("is-active");
@@ -47,26 +33,6 @@ function navBarClose() {
 function navBarOpen() {
   $(".hamburger").addClass("is-active");
   $(".jsNavbarToggle").addClass("is-open");
-}
-
-//filter function
-function filtered(fp) {
-  if (fp && fp.find('.filter_tab.is-active').length) {
-    fp.find('.filter_obj').removeClass('filtered');
-    filterBy = [];
-    fp.find('.filter_tab.is-active').each(function () {
-      filterBy.push($(this).attr('data-filterby'));
-    });
-    for (i = 0; i < filterBy.length; i++) {
-      $.each(fp.find('.filter_obj.' + filterBy[i]), function (i, el) {
-        setTimeout(function () {
-          $(el).addClass('filtered');
-        }, 0 + (i * 100));
-      });
-    }
-  } else {
-    $('.filter_obj').addClass('filtered');
-  }
 }
 
 $(document).ready(function () {
