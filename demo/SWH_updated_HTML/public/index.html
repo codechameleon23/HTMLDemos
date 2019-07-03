@@ -306,8 +306,15 @@
     };
     var contentCarousel;
     $(function(){
+      resetALL();
+    });
+    $(window).resize(function(){
+      resetALL();
+    });
 
+    function resetALL(){
       if(getViewportWidth() > 701){
+        $('.home-scrollify_section-js').removeClass('no-height');
         $.scrollify({
           section: ".home-scrollify_section-js",
           scrollSpeed: 700,
@@ -315,6 +322,9 @@
           updateHash: false,
           touchScroll: false
         });
+      }else{
+        console.log('adasdasd');
+        $('.home-scrollify_section-js').addClass('no-height');
       }
 
       if ($(".content_carousel-js").length) {
@@ -338,7 +348,7 @@
           contentCarousel.trigger("next.owl.carousel");
         });
       };
-    });
+    }
 
     function gotoContentSlide(slide){
       contentCarousel.trigger('to.owl.carousel', [slide, 500]);
