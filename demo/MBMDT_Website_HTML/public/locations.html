@@ -18,7 +18,7 @@
    <link rel="stylesheet" href="css/styles.css" />
 </head>
 
-<body class="jsNavbarToggle is-close flex-col has-theme-dark">
+<body class="jsNavbarToggle is-close flex-col">
 
    <!-- Header ======================================================================== -->
    <header class="bg-primary py-20 pos-relative z-40
@@ -108,7 +108,7 @@
    <main class="flex-auto flex-col">
 
       <!-- Google Map ================================================================== -->
-      <div class="pos-relative flex-stretch">
+      <div class="pos-relative flex-stretch min-h-screen">
 
          <div class="toggle-container
             container md:container-md lg:container-lg xl:container-fluid mx-auto
@@ -116,6 +116,8 @@
             xl:pos-absolute z-40 
             pointer-events-none
             ">
+
+            <!-- Toggle button -->
             <button class="toggle-button
                d-hidden xl:d-block  
                fsize-xs fcolor-white bg-primary
@@ -125,25 +127,33 @@
                shadow-default p-15 uppercase">
                <strong>Our Areas<br>Of Expertise</strong>
             </button>
+
             <div class="toggle-area 
                bg-white py-40 
                xl:p-50 xl:m-50 xl:col-2 xl:shadow-default
                pointer-events-auto
                pos-relative">
-               <button class="toggle-close 
+
+               <!-- close button -->
+               <a href="javascript:void(0);" class="toggle-close 
                   d-hidden xl:d-block
                   cursor-pointer
+                  pointer-events-auto
                   fcolor-primary bg-light fsize-3md
                   icon pos-absolute pin-r pin-t">
                   <span>×</span>
-               </button>
-               <h3 class="fsize-sm fweight-bold uppercase mb-20"><span class="border-b border-primary pb-2">areas we
-                     cover</span></h3>
-               <h2 class="fsize-3lg md:fsize-xl fweight-normal fonts-secondary mb-50">
+               </a>
+
+               <h3 class="fsize-sm fweight-bold uppercase mb-20 d-inline-block" data-aos="fade-up"
+                  data-aos-duration="400">
+                  <span class="border-b border-primary pb-2">areas we cover</span>
+               </h3>
+               <h2 class="fsize-3lg md:fsize-xl fweight-normal fonts-secondary mb-50" data-aos="fade-up"
+                  data-aos-delay="100" data-aos-duration="400">
                   <strong>Our Areas</strong><br>
                   <span>Of Expertise</span>
                </h2>
-               <div class="text-wrap">
+               <div class="text-wrap" data-aos="fade" data-aos-delay="200" data-aos-duration="400">
                   <p>Our extensive knowledge of the areas we operate in means that MBM Driving Tuition can offer an
                      unparalleled service when teaching you how to drive.</p>
                   <p>MBM Driving Tuition covers a number of areas such as Warminster, Westbury, Trowbridge, Frome,
@@ -151,9 +161,9 @@
                   <p>Want to find out whether we offer driving tuition in your area? Get in touch and we will respond as
                      soon as possible. </p>
                </div>
-               <div class="pt-50
-                  flex-col md:flex-row -m-10">
-                  <div class="p-10">
+               <div class="pt-50 -m-10
+                  flex-col md:flex-row">
+                  <div class="p-10" data-aos="fade-up" data-aos-delay="300" data-aos-duration="700">
                      <a href="driving-tuition.html" class="button 
                         border border-primary 
                         px-40 pt-10 pb-15
@@ -172,7 +182,7 @@
 
    </main>
 
-   
+
    <!-- Footer ======================================================================== -->
    <footer class="py-40 lg:py-70 bg-light fsize-sm">
       <div class="container md:container-md lg:container-xl mx-auto">
@@ -186,39 +196,29 @@
             </div>
             <div class="p-15 flex-auto lg:col-3 xl:pl-90">
                <ul class="list-reset text-center lg:text-left lg:col-count-2">
-                  <li><a href="driving-tuition.html" 
-                        class="no-underline fcolor-inherit 
+                  <li><a href="driving-tuition.html" class="no-underline fcolor-inherit 
                         hover:fcolor-primary">Driving Tuition</a></li>
-                  <li><a href="prices.html" 
-                        class="no-underline fcolor-inherit 
+                  <li><a href="prices.html" class="no-underline fcolor-inherit 
                         hover:fcolor-primary">Prices</a></li>
-                  <li><a href="about.html" 
-                        class="no-underline fcolor-inherit 
+                  <li><a href="about.html" class="no-underline fcolor-inherit 
                         hover:fcolor-primary">About</a></li>
-                  <li><a href="locations.html" 
-                        class="no-underline fcolor-inherit 
+                  <li><a href="locations.html" class="no-underline fcolor-inherit 
                         hover:fcolor-primary">Location</a></li>
-                  <li><a href="contact.html" 
-                        class="no-underline fcolor-inherit 
+                  <li><a href="contact.html" class="no-underline fcolor-inherit 
                         hover:fcolor-primary">Contact</a></li>
-                  <li><a href="client_area.html" 
-                        class="no-underline fcolor-inherit 
+                  <li><a href="client_area.html" class="no-underline fcolor-inherit 
                         hover:fcolor-primary">Client Area</a></li>
-                  <li><a href="#" 
-                        class="no-underline fcolor-inherit 
+                  <li><a href="#" class="no-underline fcolor-inherit 
                         hover:fcolor-primary">Sitemap</a></li>
-                  <li><a href="#" 
-                        class="no-underline fcolor-inherit 
+                  <li><a href="#" class="no-underline fcolor-inherit 
                         hover:fcolor-primary">Privacy policy</a></li>
-                  <li><a href="#" 
-                        class="no-underline fcolor-inherit 
+                  <li><a href="#" class="no-underline fcolor-inherit 
                         hover:fcolor-primary">T&Cs</a></li>
-                  <li><a href="#" 
-                        class="no-underline fcolor-inherit 
+                  <li><a href="#" class="no-underline fcolor-inherit 
                         hover:fcolor-primary">Cookie Policy</a></li>
-                  <li class="mt-20"><a href="#" 
-                        class="no-underline fcolor-inherit 
-                        hover:fcolor-primary">Copyright © <script>document.write(new Date().getFullYear())</script></a></li>
+                  <li class="mt-20"><a href="#" class="no-underline fcolor-inherit 
+                        hover:fcolor-primary">Copyright ©
+                        <script>document.write(new Date().getFullYear())</script></a></li>
                </ul>
             </div>
             <div class="p-15 flex-col text-center lg:text-right align-center lg:align-end">
@@ -246,10 +246,8 @@
                   </a>
                </div>
                <div class="mt-auto pt-40 flex-col">
-                  <a href="tel:07788 977 252"
-                     class="no-underline fcolor-inherit hover:fcolor-primary">07788 977 252</a>
-                  <a href="tel:07855 289 914"
-                     class="no-underline fcolor-inherit hover:fcolor-primary">07855 289 914</a>
+                  <a href="tel:07788 977 252" class="no-underline fcolor-inherit hover:fcolor-primary">07788 977 252</a>
+                  <a href="tel:07855 289 914" class="no-underline fcolor-inherit hover:fcolor-primary">07855 289 914</a>
                   <a href="mailto:mbmdrivingtuition@gmail.com"
                      class="no-underline fcolor-inherit hover:fcolor-primary">mbmdrivingtuition@gmail.com</a>
                </div>
@@ -257,7 +255,7 @@
          </div>
       </div>
    </footer>
-   
+
    <script src="js/allscripts.js"></script>
    <script>
       var marker = {
