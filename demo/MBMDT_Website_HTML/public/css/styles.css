@@ -1,7 +1,7 @@
 /*ImportFontsonts*/
 @import url("https://use.typekit.net/bvz1rxl.css");
 /*Reset css*/
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border-style: solid; font-size: 100%; font: inherit; vertical-align: baseline; }
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border-style: solid; border-radius: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
 
@@ -313,27 +313,31 @@ em { font-style: italic; }
 .bg-scroll { background-attachment: scroll; }
 
 /* Backgroud Position classes */
+.bg-top { background-position: top; }
+
+.bg-right { background-position: right; }
+
 .bg-bottom { background-position: bottom; }
+
+.bg-left { background-position: left; }
 
 .bg-center { background-position: center; }
 
-.bg-left { background-position: left; }
+.bg-left-top { background-position: left top; }
 
 .bg-left-bottom { background-position: left bottom; }
 
 .bg-left-center { background-position: left center; }
 
-.bg-left-top { background-position: left top; }
-
-.bg-right { background-position: right; }
+.bg-right-top { background-position: right top; }
 
 .bg-right-bottom { background-position: right bottom; }
 
 .bg-right-center { background-position: right center; }
 
-.bg-right-top { background-position: right top; }
+.bg-center-bottom { background-position: center bottom; }
 
-.bg-top { background-position: top; }
+.bg-center-top { background-position: center top; }
 
 /* Backgroud Repeat classes */
 .bg-repeat { background-repeat: repeat; }
@@ -583,19 +587,22 @@ em { font-style: italic; }
   .w-auto { width: auto; }
   .w-full { width: 100%; }
   .w-screen { width: 100vw; }
-  .h-auto { height: auto; }
-  .h-full { height: 100%; }
-  .h-screen { height: 100vh; }
   .min-w-0 { min-width: 0; }
   .min-w-full { min-width: 100%; }
   .min-w-screen { min-width: 100vw; }
   .max-w-0 { max-width: 0; }
   .max-w-full { max-width: 100%; }
   .max-w-screen { max-width: 100vw; }
+  .h-720 { height: 720px; }
+  .h-auto { height: auto; }
+  .h-full { height: 100%; }
+  .h-screen { height: 100vh; }
   .min-h-0 { min-height: 0; }
+  .min-h-720 { min-height: 720px; }
   .min-h-full { min-height: 100%; }
   .min-h-screen { min-height: 100vh; }
   .max-h-0 { max-height: 0; }
+  .max-h-720 { max-height: 720px; }
   .max-h-full { max-height: 100%; }
   .max-h-screen { max-height: 100vh; }
   /* Text Alignment classes */
@@ -779,6 +786,20 @@ em { font-style: italic; }
   .ml-50 { margin-left: 5rem; }
   .mx-50 { margin-left: 5rem; margin-right: 5rem; }
   .my-50 { margin-top: 5rem; margin-bottom: 5rem; }
+  .m-100 { margin-top: 10rem; margin-right: 10rem; margin-bottom: 10rem; margin-left: 10rem; }
+  .mt-100 { margin-top: 10rem; }
+  .mr-100 { margin-right: 10rem; }
+  .mb-100 { margin-bottom: 10rem; }
+  .ml-100 { margin-left: 10rem; }
+  .mx-100 { margin-left: 10rem; margin-right: 10rem; }
+  .my-100 { margin-top: 10rem; margin-bottom: 10rem; }
+  .m-200 { margin-top: 20rem; margin-right: 20rem; margin-bottom: 20rem; margin-left: 20rem; }
+  .mt-200 { margin-top: 20rem; }
+  .mr-200 { margin-right: 20rem; }
+  .mb-200 { margin-bottom: 20rem; }
+  .ml-200 { margin-left: 20rem; }
+  .mx-200 { margin-left: 20rem; margin-right: 20rem; }
+  .my-200 { margin-top: 20rem; margin-bottom: 20rem; }
   .m-0 { margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; }
   .mt-0 { margin-top: 0; }
   .mr-0 { margin-right: 0; }
@@ -1029,19 +1050,22 @@ em { font-style: italic; }
   .md\:w-auto { width: auto; }
   .md\:w-full { width: 100%; }
   .md\:w-screen { width: 100vw; }
-  .md\:h-auto { height: auto; }
-  .md\:h-full { height: 100%; }
-  .md\:h-screen { height: 100vh; }
   .md\:min-w-0 { min-width: 0; }
   .md\:min-w-full { min-width: 100%; }
   .md\:min-w-screen { min-width: 100vw; }
   .md\:max-w-0 { max-width: 0; }
   .md\:max-w-full { max-width: 100%; }
   .md\:max-w-screen { max-width: 100vw; }
+  .md\:h-720 { height: 720px; }
+  .md\:h-auto { height: auto; }
+  .md\:h-full { height: 100%; }
+  .md\:h-screen { height: 100vh; }
   .md\:min-h-0 { min-height: 0; }
+  .md\:min-h-720 { min-height: 720px; }
   .md\:min-h-full { min-height: 100%; }
   .md\:min-h-screen { min-height: 100vh; }
   .md\:max-h-0 { max-height: 0; }
+  .md\:max-h-720 { max-height: 720px; }
   .md\:max-h-full { max-height: 100%; }
   .md\:max-h-screen { max-height: 100vh; }
   /* Text Alignment classes */
@@ -1225,6 +1249,20 @@ em { font-style: italic; }
   .md\:ml-50 { margin-left: 5rem; }
   .md\:mx-50 { margin-left: 5rem; margin-right: 5rem; }
   .md\:my-50 { margin-top: 5rem; margin-bottom: 5rem; }
+  .md\:m-100 { margin-top: 10rem; margin-right: 10rem; margin-bottom: 10rem; margin-left: 10rem; }
+  .md\:mt-100 { margin-top: 10rem; }
+  .md\:mr-100 { margin-right: 10rem; }
+  .md\:mb-100 { margin-bottom: 10rem; }
+  .md\:ml-100 { margin-left: 10rem; }
+  .md\:mx-100 { margin-left: 10rem; margin-right: 10rem; }
+  .md\:my-100 { margin-top: 10rem; margin-bottom: 10rem; }
+  .md\:m-200 { margin-top: 20rem; margin-right: 20rem; margin-bottom: 20rem; margin-left: 20rem; }
+  .md\:mt-200 { margin-top: 20rem; }
+  .md\:mr-200 { margin-right: 20rem; }
+  .md\:mb-200 { margin-bottom: 20rem; }
+  .md\:ml-200 { margin-left: 20rem; }
+  .md\:mx-200 { margin-left: 20rem; margin-right: 20rem; }
+  .md\:my-200 { margin-top: 20rem; margin-bottom: 20rem; }
   .md\:m-0 { margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; }
   .md\:mt-0 { margin-top: 0; }
   .md\:mr-0 { margin-right: 0; }
@@ -1475,19 +1513,22 @@ em { font-style: italic; }
   .lg\:w-auto { width: auto; }
   .lg\:w-full { width: 100%; }
   .lg\:w-screen { width: 100vw; }
-  .lg\:h-auto { height: auto; }
-  .lg\:h-full { height: 100%; }
-  .lg\:h-screen { height: 100vh; }
   .lg\:min-w-0 { min-width: 0; }
   .lg\:min-w-full { min-width: 100%; }
   .lg\:min-w-screen { min-width: 100vw; }
   .lg\:max-w-0 { max-width: 0; }
   .lg\:max-w-full { max-width: 100%; }
   .lg\:max-w-screen { max-width: 100vw; }
+  .lg\:h-720 { height: 720px; }
+  .lg\:h-auto { height: auto; }
+  .lg\:h-full { height: 100%; }
+  .lg\:h-screen { height: 100vh; }
   .lg\:min-h-0 { min-height: 0; }
+  .lg\:min-h-720 { min-height: 720px; }
   .lg\:min-h-full { min-height: 100%; }
   .lg\:min-h-screen { min-height: 100vh; }
   .lg\:max-h-0 { max-height: 0; }
+  .lg\:max-h-720 { max-height: 720px; }
   .lg\:max-h-full { max-height: 100%; }
   .lg\:max-h-screen { max-height: 100vh; }
   /* Text Alignment classes */
@@ -1671,6 +1712,20 @@ em { font-style: italic; }
   .lg\:ml-50 { margin-left: 5rem; }
   .lg\:mx-50 { margin-left: 5rem; margin-right: 5rem; }
   .lg\:my-50 { margin-top: 5rem; margin-bottom: 5rem; }
+  .lg\:m-100 { margin-top: 10rem; margin-right: 10rem; margin-bottom: 10rem; margin-left: 10rem; }
+  .lg\:mt-100 { margin-top: 10rem; }
+  .lg\:mr-100 { margin-right: 10rem; }
+  .lg\:mb-100 { margin-bottom: 10rem; }
+  .lg\:ml-100 { margin-left: 10rem; }
+  .lg\:mx-100 { margin-left: 10rem; margin-right: 10rem; }
+  .lg\:my-100 { margin-top: 10rem; margin-bottom: 10rem; }
+  .lg\:m-200 { margin-top: 20rem; margin-right: 20rem; margin-bottom: 20rem; margin-left: 20rem; }
+  .lg\:mt-200 { margin-top: 20rem; }
+  .lg\:mr-200 { margin-right: 20rem; }
+  .lg\:mb-200 { margin-bottom: 20rem; }
+  .lg\:ml-200 { margin-left: 20rem; }
+  .lg\:mx-200 { margin-left: 20rem; margin-right: 20rem; }
+  .lg\:my-200 { margin-top: 20rem; margin-bottom: 20rem; }
   .lg\:m-0 { margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; }
   .lg\:mt-0 { margin-top: 0; }
   .lg\:mr-0 { margin-right: 0; }
@@ -1921,19 +1976,22 @@ em { font-style: italic; }
   .xl\:w-auto { width: auto; }
   .xl\:w-full { width: 100%; }
   .xl\:w-screen { width: 100vw; }
-  .xl\:h-auto { height: auto; }
-  .xl\:h-full { height: 100%; }
-  .xl\:h-screen { height: 100vh; }
   .xl\:min-w-0 { min-width: 0; }
   .xl\:min-w-full { min-width: 100%; }
   .xl\:min-w-screen { min-width: 100vw; }
   .xl\:max-w-0 { max-width: 0; }
   .xl\:max-w-full { max-width: 100%; }
   .xl\:max-w-screen { max-width: 100vw; }
+  .xl\:h-720 { height: 720px; }
+  .xl\:h-auto { height: auto; }
+  .xl\:h-full { height: 100%; }
+  .xl\:h-screen { height: 100vh; }
   .xl\:min-h-0 { min-height: 0; }
+  .xl\:min-h-720 { min-height: 720px; }
   .xl\:min-h-full { min-height: 100%; }
   .xl\:min-h-screen { min-height: 100vh; }
   .xl\:max-h-0 { max-height: 0; }
+  .xl\:max-h-720 { max-height: 720px; }
   .xl\:max-h-full { max-height: 100%; }
   .xl\:max-h-screen { max-height: 100vh; }
   /* Text Alignment classes */
@@ -2117,6 +2175,20 @@ em { font-style: italic; }
   .xl\:ml-50 { margin-left: 5rem; }
   .xl\:mx-50 { margin-left: 5rem; margin-right: 5rem; }
   .xl\:my-50 { margin-top: 5rem; margin-bottom: 5rem; }
+  .xl\:m-100 { margin-top: 10rem; margin-right: 10rem; margin-bottom: 10rem; margin-left: 10rem; }
+  .xl\:mt-100 { margin-top: 10rem; }
+  .xl\:mr-100 { margin-right: 10rem; }
+  .xl\:mb-100 { margin-bottom: 10rem; }
+  .xl\:ml-100 { margin-left: 10rem; }
+  .xl\:mx-100 { margin-left: 10rem; margin-right: 10rem; }
+  .xl\:my-100 { margin-top: 10rem; margin-bottom: 10rem; }
+  .xl\:m-200 { margin-top: 20rem; margin-right: 20rem; margin-bottom: 20rem; margin-left: 20rem; }
+  .xl\:mt-200 { margin-top: 20rem; }
+  .xl\:mr-200 { margin-right: 20rem; }
+  .xl\:mb-200 { margin-bottom: 20rem; }
+  .xl\:ml-200 { margin-left: 20rem; }
+  .xl\:mx-200 { margin-left: 20rem; margin-right: 20rem; }
+  .xl\:my-200 { margin-top: 20rem; margin-bottom: 20rem; }
   .xl\:m-0 { margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; }
   .xl\:mt-0 { margin-top: 0; }
   .xl\:mr-0 { margin-right: 0; }
@@ -2740,8 +2812,7 @@ textarea { resize: vertical; }
   .tile:hover .tile-text, .tile:hover .tile-footer { -webkit-animation: fade-in-bottom 0.45s 0.35s cubic-bezier(0.39, 0.575, 0.565, 1) both; animation: fade-in-bottom 0.45s 0.35s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
   .tile:hover .tile-footer { -webkit-animation: fade-in-bottom 0.45s 0.55s cubic-bezier(0.39, 0.575, 0.565, 1) both; animation: fade-in-bottom 0.45s 0.55s cubic-bezier(0.39, 0.575, 0.565, 1) both; } }
 
-@media (min-width: 1290px) { .toggle-container { height: 0; }
-  .toggle-container .toggle-button { display: none; }
+@media (min-width: 1290px) { .toggle-container .toggle-button { display: none; }
   .toggle-container.hide .toggle-button { display: block !important; }
   .toggle-container.hide .toggle-area { display: none !important; } }
 
@@ -2779,4 +2850,6 @@ textarea { resize: vertical; }
 
 .jsNavbarToggle.is-open .navbar { opacity: 1; -webkit-transform: translateX(0); -ms-transform: translateX(0); transform: translateX(0); }
 
-.jsNavbarToggle.is-open .hamburger { z-index: 9999; position: fixed; top: 2rem; right: 2.8rem; }
+.jsNavbarToggle.is-open .hamburger { z-index: 9999; position: fixed; top: 3.7rem; right: 2.8rem; }
+
+/*Test*/
