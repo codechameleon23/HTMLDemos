@@ -116,12 +116,11 @@ $(document).ready(function () {
   // Magnific Popup : Gallery
   if ($('.js__media__Gallery__Popup').length){//if element exists
     $('.js__media__Gallery__Popup .has__video').magnificPopup({
-      disableOn: 700,
       type: 'iframe',
       mainClass: 'mfp-fade',
       removalDelay: 160,
       preloader: false,
-      fixedContentPos: false,
+      fixedContentPos: true,
       gallery: {
         enabled: true,
         navigateByImgClick: true,
