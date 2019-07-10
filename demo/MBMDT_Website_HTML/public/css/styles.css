@@ -2849,9 +2849,7 @@ textarea { resize: vertical; }
 
 .navbar a { display: inline-block; text-decoration: none !important; }
 
-@media all and (max-width: 992px) { .navbar { opacity: 0; -webkit-transform: translateX(100%); -ms-transform: translateX(100%); transform: translateX(100%); -webkit-transition: all 0.35s 0s cubic-bezier(0.455, 0.03, 0.515, 0.955); -o-transition: all 0.35s 0s cubic-bezier(0.455, 0.03, 0.515, 0.955); transition: all 0.35s 0s cubic-bezier(0.455, 0.03, 0.515, 0.955); } }
-
-@media all and (max-width: 992px) { .navbar { opacity: 0; -webkit-transform: translateX(100%); -ms-transform: translateX(100%); transform: translateX(100%); -webkit-transition: all 0.35s 0s cubic-bezier(0.455, 0.03, 0.515, 0.955); -o-transition: all 0.35s 0s cubic-bezier(0.455, 0.03, 0.515, 0.955); transition: all 0.35s 0s cubic-bezier(0.455, 0.03, 0.515, 0.955); max-width: calc(100% - 5rem); }
+@media all and (max-width: 992px) { .navbar { opacity: 0; -webkit-transform: translateX(100%); -ms-transform: translateX(100%); transform: translateX(100%); -webkit-transition: -webkit-transform 0.35s 0s cubic-bezier(0.455, 0.03, 0.515, 0.955); transition: -webkit-transform 0.35s 0s cubic-bezier(0.455, 0.03, 0.515, 0.955); -o-transition: transform 0.35s 0s cubic-bezier(0.455, 0.03, 0.515, 0.955); transition: transform 0.35s 0s cubic-bezier(0.455, 0.03, 0.515, 0.955); transition: transform 0.35s 0s cubic-bezier(0.455, 0.03, 0.515, 0.955), -webkit-transform 0.35s 0s cubic-bezier(0.455, 0.03, 0.515, 0.955); max-width: calc(100% - 5rem); }
   .navbar ul { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; } }
 
 .jsNavbarToggle.is-open .navbar { opacity: 1; -webkit-transform: translateX(0); -ms-transform: translateX(0); transform: translateX(0); }

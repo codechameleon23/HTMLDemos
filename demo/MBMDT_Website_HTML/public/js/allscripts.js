@@ -148,7 +148,7 @@ $(document).ready(function () {
 
   // Initialize the Popup
   $("#signup_popup").popup({
-    // autoopen: true
+    autoopen: true
   });
 
   $('.toggle-button, .toggle-close').on('click', function(){
