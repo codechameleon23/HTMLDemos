@@ -173,9 +173,9 @@ $(document).ready(function() {
       animateIn: isIE11 ? "" : "fade-in",
       animateOut: isIE11 ? "" : "fade-out",
       smartSpeed: 500,
-      autoplay: true,
-      autoplayTimeout: 10000,
-      autoplayHoverPause: true
+      // autoplay: true,
+      // autoplayTimeout: 10000,
+      // autoplayHoverPause: true
     });
   }
   
