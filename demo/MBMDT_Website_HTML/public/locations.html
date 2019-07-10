@@ -110,7 +110,7 @@
       <!-- Google Map ================================================================== -->
       <div class="pos-relative flex-stretch min-h-screen xl:max-h-720">
 
-         <div class="pos-relative xl:pos-absolute pin min-h-screen h-720 flex-col">
+         <div class="ratio-1x1 lg:ratio-none pos-relative xl:pos-absolute pin lg:min-h-screen lg:h-720 flex-col">
             <div id="map-canvas" class="map h-full w-full flex-stretch"></div>
          </div>
 
@@ -193,7 +193,7 @@
    <footer class="py-40 lg:py-70 bg-light fsize-sm">
 		<div class="container md:container-md lg:container-xl mx-auto">
 			<div class="flex-col md:flex-row lg:align-center justify-space-between -mx-15">
-				<div class="p-15 mx-auto">
+				<div class="p-15 mx-auto md:mx-0">
 					<a href="index.html" class="icon icon-logo-footer ratio-logo-footer">
 						<span>
 							<img src="images/MBM_Logo_Colour.svg" alt="" />
@@ -265,7 +265,7 @@
    <script src="js/allscripts.js"></script>
    <script>
       var marker = {
-         size: [110, 110],
+         size: getViewportWidth() > 710 ? [110, 110] : [64, 64],
          image: 'images/map-marker.png',
          title: 'MBM Driving Tuition'
       }
