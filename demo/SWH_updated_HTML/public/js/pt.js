@@ -88,12 +88,18 @@ var PageTransitions = (function ($) {
       support = Modernizr.cssanimations;
 
    function init() {
+      // date:16-07-19: apply css according to the number of banner images
+      $('.pagination-wrapper').css({
+         "height": pagesCount < 4 ? '90px' : '150px',
+         "display": pagesCount < 2 ? 'none' : 'flex'
+      });
       $pages.each(function () {
          var $page = $(this);
          $page.data('originalClassList', $page.attr('class'))
       });
       $pages.eq(current).addClass('pt-page-current');
-      initScrollEvents();
+      // date:16-07-19: enable mouse scroll event only if banner images are more than 1
+      (pagesCount > 1) && initScrollEvents();
       $('.p-item[data-slide_id="' + (current + 1) + '"]').addClass("current");
       if (PTSettings.loop == "1") {
          var inf = 4;
