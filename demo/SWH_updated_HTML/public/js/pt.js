@@ -92,7 +92,7 @@ var PageTransitions = (function ($) {
       $('.pagination-wrapper').css({
          "height": pagesCount < 4 ? '90px' : '150px',
          "display": pagesCount < 2 ? 'none' : 'flex'
-      });
+      }).addClass(pagesCount == 2 ? 'has-onlyTwoOptions' : '');
       $pages.each(function () {
          var $page = $(this);
          $page.data('originalClassList', $page.attr('class'))
