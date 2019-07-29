@@ -108,9 +108,10 @@ $(document).ready(function () {
   };
 
   // Initialize the Popup
-  $(".popup").popup({
-    scrolllock: true,
-    transition: 'all 0.3s',
+  $("#getInTouch_popup").popup({
+    // scrolllock: true,
+    transition: 'all 0.7s',
+    color: "#ffffff",
   });
   
   //Animate on scroll
