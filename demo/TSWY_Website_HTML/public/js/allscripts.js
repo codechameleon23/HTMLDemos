@@ -70,7 +70,7 @@ $(document).ready(function () {
     var bannerCarousel = $(".jsBannerCarousel"); //Banner-carousel for Property-details page
     bannerCarousel.owlCarousel({
       items: 1,
-      margin: 5,
+      stagePadding: -5,
       loop: true,
       mouseDrag: true,
       nav: false,
