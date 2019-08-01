@@ -55,9 +55,10 @@ function navBarOpen() {
 
 $(document).ready(function () {
   
+
   // Navbar toggle
   $(".hamburger").on("click", function () {
-    console.log('dfaa');
+    $(".jsNavbarToggle").addClass("nav-transition");
     if ($(".hamburger").hasClass("is-active")) {
       navBarClose();
     } else {
@@ -121,7 +122,7 @@ $(document).ready(function () {
   });
 
   // Init Double tap in mobile
-  $('.has-hover').doubleTapToGo();
+  $('.touch-hover').doubleTapToGo();
 
 });
 

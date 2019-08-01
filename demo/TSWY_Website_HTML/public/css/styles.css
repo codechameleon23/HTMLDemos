@@ -2832,9 +2832,11 @@ b, strong { font-weight: 700; }
 
 a.button, button.button { line-height: inherit; min-width: 20rem; }
 
-a.button > span, button.button > span { display: inline-block; padding: .15rem; margin-top: 6.5px; }
+a.button > span, button.button > span { padding: .15rem; margin-top: 6.5px; }
 
 .button { cursor: pointer; text-align: center; text-decoration: none; position: relative; -webkit-transition: all .45s 0s ease-in-out; -o-transition: all .45s 0s ease-in-out; transition: all .45s 0s ease-in-out; display: inline-block; }
+
+.button > span { display: inline-block; }
 
 .button.text-space { letter-spacing: 0.2em; }
 
@@ -2844,7 +2846,7 @@ a.button > span, button.button > span { display: inline-block; padding: .15rem; 
 
 .button-parent:hover .button:before, .button:hover:before { -webkit-transform: skew(35deg); -ms-transform: skew(35deg); transform: skew(35deg); }
 
-.button-parent:hover .button span, .button:hover span { -webkit-transform: skew(15deg); -ms-transform: skew(15deg); transform: skew(15deg); display: inline-block; text-shadow: 0.2rem 0.2rem 0rem #00929f; }
+.button-parent:hover .button span, .button:hover span { -webkit-transform: skew(15deg); -ms-transform: skew(15deg); transform: skew(15deg); text-shadow: 0.2rem 0.2rem 0rem #00929f; }
 
 .button span, .button:before, .button-parent:hover .button span, .button-parent:hover .button:before { -webkit-transition: all .45s 0s ease-in-out; -o-transition: all .45s 0s ease-in-out; transition: all .45s 0s ease-in-out; }
 
@@ -2883,8 +2885,9 @@ body .fonts-secondary, body .fonts-display, body .fonts-button { font-style: nor
 
 .navbar a { display: inline-block; text-decoration: none !important; }
 
-@media all and (max-width: 710px) { .navbar { opacity: 0; -webkit-transform: translateX(100%); -ms-transform: translateX(100%); transform: translateX(100%); -webkit-transition: all .7s 0s ease-in-out; -o-transition: all .7s 0s ease-in-out; transition: all .7s 0s ease-in-out; max-width: calc(100% - 5rem); }
-  .navbar ul { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; } }
+@media all and (max-width: 710px) { .navbar { opacity: 0; -webkit-transform: translateX(100%); -ms-transform: translateX(100%); transform: translateX(100%); max-width: calc(100% - 5rem); }
+  .navbar ul { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+  .nav-transition .navbar { -webkit-transition: all .7s .2s ease-in-out; -o-transition: all .7s .2s ease-in-out; transition: all .7s .2s ease-in-out; } }
 
 .jsNavbarToggle.is-open .navbar { opacity: 1; -webkit-transform: translateX(0); -ms-transform: translateX(0); transform: translateX(0); }
 
