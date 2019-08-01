@@ -26,7 +26,7 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; font-size: 62.5%;
 
 @media (max-width: 710px) { html { overflow-x: hidden; } }
 
-*, *:after, *:before { -webkit-box-sizing: inherit; box-sizing: inherit; margin: 0; padding: 0; outline: none; border: 0 solid transparent; }
+*, *:after, *:before { -webkit-box-sizing: inherit; box-sizing: inherit; margin: 0; padding: 0; outline: none; border: 0 solid transparent; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); -webkit-tap-highlight-color: transparent; }
 
 body { color: #000000; font-family: "Source Sans Pro", system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; font-size: 1.8rem; font-weight: 300; letter-spacing: 0.01em; -webkit-font-kerning: none; font-kerning: none; line-height: normal; font-style: italic; position: relative; min-height: 100vh; max-width: 100%; width: 100%; }
 
@@ -2854,7 +2854,7 @@ textarea { resize: vertical; }
 
 .select:after { right: 3rem; border-width: 0 0 .1rem .1rem; }
 
-.transition-all, .transition-all *[class*="hover:"], .transition-all *[class*="focus:"] { -webkit-transition: all .45s 0s ease-in-out; -o-transition: all .45s 0s ease-in-out; transition: all .45s 0s ease-in-out; }
+.transition-all, .transition-all *[class*="hover:"], .transition-all *[class*="focus:"] { -webkit-transition: all .7s 0s ease-in-out; -o-transition: all .7s 0s ease-in-out; transition: all .7s 0s ease-in-out; }
 
 .text-wrap > *:not(:last-child) { margin-bottom: 2rem; }
 
@@ -2863,6 +2863,8 @@ textarea { resize: vertical; }
 .unstuck-link { display: inline-block; }
 
 .unstuck-link img { max-height: 1.7rem; }
+
+.has-hover > *:first-child { overflow: hidden; position: relative; }
 
 .has-hover:hover .figure { -webkit-filter: grayscale(1); filter: grayscale(1); -webkit-transition: -webkit-filter .45s 0s ease-in-out; transition: -webkit-filter .45s 0s ease-in-out; -o-transition: filter .45s 0s ease-in-out; transition: filter .45s 0s ease-in-out; transition: filter .45s 0s ease-in-out, -webkit-filter .45s 0s ease-in-out; }
 
