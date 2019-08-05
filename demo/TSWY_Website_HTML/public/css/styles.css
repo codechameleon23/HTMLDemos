@@ -2834,21 +2834,23 @@ a.button, button.button { line-height: inherit; min-width: 20rem; }
 
 a.button > span, button.button > span { padding: .15rem; margin-top: 6.5px; }
 
-.button { cursor: pointer; text-align: center; text-decoration: none; position: relative; -webkit-transition: all .7s 0s ease-in-out; -o-transition: all .7s 0s ease-in-out; transition: all .7s 0s ease-in-out; display: inline-block; }
+.button { cursor: pointer; text-align: center; text-decoration: none; position: relative; -webkit-transition: all .45s 0s ease-in-out; -o-transition: all .45s 0s ease-in-out; transition: all .45s 0s ease-in-out; display: inline-block; }
 
-.button > span { display: inline-block; }
+.button > span { display: inline-block; position: relative; z-index: 1; }
 
 .button.text-space { letter-spacing: 0.2em; }
 
-.button:before { content: ""; position: absolute; left: 0rem; top: 0rem; right: 0rem; bottom: 0rem; z-index: -1; background-color: #004259; }
+.button:after, .button:before { content: ""; position: absolute; left: 0rem; top: 0rem; right: 0rem; bottom: 0rem; z-index: 0; background-color: #004259; }
 
-.button-parent:hover .button, .button:hover { -webkit-transform: skew(-15deg); -ms-transform: skew(-15deg); transform: skew(-15deg); }
+.button-parent .button { background-color: transparent; }
 
-.button-parent:hover .button:before, .button:hover:before { -webkit-transform: skew(35deg); -ms-transform: skew(35deg); transform: skew(35deg); }
+.button-parent:hover .button:after, .button-parent:hover .button:before, .button-parent:hover .button:hover:after, .button-parent:hover .button:hover:before { left: 1rem; right: 1rem; }
 
-.button-parent:hover .button span, .button:hover span { -webkit-transform: skew(15deg); -ms-transform: skew(15deg); transform: skew(15deg); text-shadow: 0.2rem 0.2rem 0rem #00929f; }
+.button-parent:hover .button:after, .button:hover:after { -webkit-transform: skew(-15deg); -ms-transform: skew(-15deg); transform: skew(-15deg); }
 
-.button span, .button:before, .button-parent:hover .button span, .button-parent:hover .button:before { -webkit-transition: all .7s 0s ease-in-out; -o-transition: all .7s 0s ease-in-out; transition: all .7s 0s ease-in-out; }
+.button-parent:hover .button:before, .button:hover:before { -webkit-transform: skew(15deg); -ms-transform: skew(15deg); transform: skew(15deg); }
+
+.button:after, .button:before, .button-parent:hover .button:after, .button-parent:hover .button:before { -webkit-transition: all .45s 0s ease-in-out; -o-transition: all .45s 0s ease-in-out; transition: all .45s 0s ease-in-out; }
 
 textarea { resize: vertical; }
 
