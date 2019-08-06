@@ -121,6 +121,7 @@ var PageTransitions = (function ($) {
          prevPage(12)
       });
       $(".p-item").click(function () {
+         $('.pagination-wrapper').addClass('disabled');
          clearInterval(intervalID);
          var activeIndex = $(".p-item.current").index();
          var indexclick = $(this).index();
@@ -141,6 +142,7 @@ var PageTransitions = (function ($) {
             "margin-top": action + "" + (pitemChange * dChangemodule),
          }, 800, function () {
             var $prev = _this;
+            $('.pagination-wrapper').removeClass('disabled');
             $('.p-item').removeClass("current");
             $prev.addClass("current");
             if (dChange > 0) {
