@@ -142,7 +142,6 @@ var PageTransitions = (function ($) {
             "margin-top": action + "" + (pitemChange * dChangemodule),
          }, 800, function () {
             var $prev = _this;
-            $('.pagination-wrapper').removeClass('disabled');
             $('.p-item').removeClass("current");
             $prev.addClass("current");
             if (dChange > 0) {
@@ -162,6 +161,7 @@ var PageTransitions = (function ($) {
                   $prev.removeClass("current")
                }
             }
+            $('.pagination-wrapper').removeClass('disabled');
          })
       })
       if (PTSettings.autoslide == "yes") {
@@ -207,7 +207,7 @@ var PageTransitions = (function ($) {
          }
          if ((delta / 120 > 0)) {
             event.preventDefault();
-            prevPage(PTSettings.b_effect)
+            window.scrollY < 100 && prevPage(PTSettings.b_effect)
          }
       });
       if (jQuery(window).width() <= 768) {
@@ -344,6 +344,7 @@ var PageTransitions = (function ($) {
       if (isAnimating) {
          return !1
       }
+
       window.scrollY < 100 && gotoContentSlide(page - 1);
 
       page = page - 1;
