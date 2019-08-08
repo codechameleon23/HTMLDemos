@@ -92,7 +92,7 @@ var PageTransitions = (function ($) {
       $('.pagination-wrapper').css({
          "height": pagesCount < 4 ? '90px' : '150px',
          "display": pagesCount < 2 ? 'none' : 'flex'
-      }).addClass(pagesCount == 2 ? 'has-onlyTwoOptions' : '');
+      }).addClass(pagesCount == 2 ? 'has-onlyTwoOptions' : '').append('<div class="prevent-click"></div>');
       $pages.each(function () {
          var $page = $(this);
          $page.data('originalClassList', $page.attr('class'))
@@ -122,7 +122,6 @@ var PageTransitions = (function ($) {
       });
       $(".p-item").click(function () {
          if($(this).closest('.pagination-wrapper').hasClass('disabled')){
-            console.log('out');
             event.preventDefault();
          }else{
             console.log('in');
