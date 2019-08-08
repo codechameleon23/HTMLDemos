@@ -86,7 +86,7 @@ var PageTransitions = (function ($) {
       },
       animEndEventName = animEndEventNames[Modernizr.prefixed('animation')],
       support = Modernizr.cssanimations,
-      stopClick = false;
+      $stopClick = false;
 
    function init() {
       // date:16-07-19: apply css according to the number of banner images
@@ -122,8 +122,8 @@ var PageTransitions = (function ($) {
          prevPage(12)
       });
       $(".p-item").click(function () {
-         if(stopClick) return;
-         stopClick = true;
+         if($stopClick) return;
+         $stopClick = true;
          // $('.pagination-wrapper').addClass('disabled');
          clearInterval(intervalID);
          var activeIndex = $(".p-item.current").index();
@@ -144,7 +144,6 @@ var PageTransitions = (function ($) {
          jQuery(".p-container").animate({
             "margin-top": action + "" + (pitemChange * dChangemodule),
          }, 800, function () {
-            stopClick = false;
             var $prev = _this;
             // $('.pagination-wrapper').removeClass('disabled');
             $('.p-item').removeClass("current");
@@ -205,19 +204,19 @@ var PageTransitions = (function ($) {
             // nextPage(PTSettings.f_effect)
          }
          if (event.keyCode == 38) {
-            stopClick = true;
+            $stopClick = true;
             event.preventDefault();
             prevPage(PTSettings.b_effect)
          }
          if ((delta / 120 > 0)) {
-            stopClick = true;
+            $stopClick = true;
             event.preventDefault();
             prevPage(PTSettings.b_effect)
          }
       });
       if (jQuery(window).width() <= 768) {
          jQuery("#pt-main").on("swipedown", function (event) {
-            stopClick = true;
+            $stopClick = true;
             prevPage(PTSettings.b_effect)
          })
          jQuery("#pt-main").on("swipeup", function (event) {
@@ -277,7 +276,6 @@ var PageTransitions = (function ($) {
       jQuery(".p-container").animate({
          "margin-top": "+=-" + pitemChange,
       }, 800, function () {
-         stopClick = false;
          var $next = jQuery(".p-item.current").next();
          $('.p-item').removeClass("current");
          $next.addClass("current");
@@ -332,7 +330,6 @@ var PageTransitions = (function ($) {
          jQuery(".p-container").animate({
             "margin-top": "+=" + pitemChange,
          }, 800, function () {
-            stopClick = false;
             var $prev = jQuery(".p-item.current").prev();
             $('.p-item').removeClass("current");
             $prev.addClass("current");
@@ -418,6 +415,9 @@ var PageTransitions = (function ($) {
    }
 
    function resetPage($outpage, $inpage) {
+      setTimeout(function(){
+         $stopClick = false;
+      }, 200)
       $outpage.attr('class', $outpage.data('originalClassList'));
       $inpage.attr('class', $inpage.data('originalClassList') + ' pt-page-current')
    }
