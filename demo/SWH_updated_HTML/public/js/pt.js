@@ -201,23 +201,23 @@ var PageTransitions = (function ($) {
          }
          if ((delta / 120 < 0)) {
             // console.log('delta', 2);
-            event.preventDefault();
+            // event.preventDefault();
             // nextPage(PTSettings.f_effect)
          }
          if (event.keyCode == 38) {
-            $stopClick = true;
-            event.preventDefault();
+            // $stopClick = true;
+            // event.preventDefault();
             prevPage(PTSettings.b_effect)
          }
          if ((delta / 120 > 0)) {
-            $stopClick = true;
-            event.preventDefault();
+            // $stopClick = true;
+            // event.preventDefault();
             prevPage(PTSettings.b_effect)
          }
       });
       if (jQuery(window).width() <= 768) {
          jQuery("#pt-main").on("swipedown", function (event) {
-            $stopClick = true;
+            // $stopClick = true;
             prevPage(PTSettings.b_effect)
          })
          jQuery("#pt-main").on("swipeup", function (event) {
