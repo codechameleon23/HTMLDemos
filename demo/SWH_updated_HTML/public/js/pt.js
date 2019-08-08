@@ -122,6 +122,7 @@ var PageTransitions = (function ($) {
          prevPage(12)
       });
       $(".p-item").click(function () {
+         console.log('$stopClick', $stopClick);
          if($stopClick) return;
          $stopClick = true;
          // $('.pagination-wrapper').addClass('disabled');
