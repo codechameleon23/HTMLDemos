@@ -85,14 +85,15 @@ var PageTransitions = (function ($) {
          'animation': 'animationend'
       },
       animEndEventName = animEndEventNames[Modernizr.prefixed('animation')],
-      support = Modernizr.cssanimations;
+      support = Modernizr.cssanimations,
+      stopClick = false;
 
    function init() {
       // date:16-07-19: apply css according to the number of banner images
       $('.pagination-wrapper').css({
          "height": pagesCount < 4 ? '90px' : '150px',
          "display": pagesCount < 2 ? 'none' : 'flex'
-      }).addClass(pagesCount == 2 ? 'has-onlyTwoOptions' : '').append('<div class="prevent-click"></div>');
+      }).addClass(pagesCount == 2 ? 'has-onlyTwoOptions' : '');
       $pages.each(function () {
          var $page = $(this);
          $page.data('originalClassList', $page.attr('class'))
@@ -121,53 +122,50 @@ var PageTransitions = (function ($) {
          prevPage(12)
       });
       $(".p-item").click(function () {
-         if($(this).closest('.pagination-wrapper').hasClass('disabled')){
-            event.preventDefault();
-         }else{
-            console.log('in');
-            $('.pagination-wrapper').addClass('disabled');
-            clearInterval(intervalID);
-            var activeIndex = $(".p-item.current").index();
-            var indexclick = $(this).index();
-            var action = "";
-            var dChange = indexclick - activeIndex;
-            if (dChange < 0) {
-               action = "+="
-            } else if (dChange > 0) {
-               action = "-="
-            } else {
-               return
-            }
-            var _this = $(this);
-            var dChangemodule = Math.abs(dChange)
-            $(this).data("slide_id");
-            toPage(12, $(this).data("slide_id"));
-            jQuery(".p-container").animate({
-               "margin-top": action + "" + (pitemChange * dChangemodule),
-            }, 800, function () {
-               var $prev = _this;
-               $('.p-item').removeClass("current");
-               $prev.addClass("current");
-               if (dChange > 0) {
-                  if (!$('.p-item').eq($prev.index() + 4).length) {
-                     $('.p-item[data-slide_id="' + ($prev.data("slide_id")) + '"].normal').addClass("current");
-                     var margin = -60 - (($prev.data("slide_id") - 1) * pitemChange);
-                     jQuery(".p-container").css("margin-top", margin + "px");
-                     $prev.removeClass("current")
-                  }
-               } else if (dChange < 0) {
-                  // console.log("not found");
-                  // console.log($('.p-item:nth-child(' + ($prev.index() - 2) + ')'));
-                  if (!$('.p-item:nth-child(' + ($prev.index() - 2) + ')').length) {
-                     $('.p-item[data-slide_id="' + ($prev.data("slide_id")) + '"].normal').addClass("current");
-                     var margin = -60 - (($prev.data("slide_id") - 1) * pitemChange);
-                     jQuery(".p-container").css("margin-top", margin + "px");
-                     $prev.removeClass("current")
-                  }
-               }
-               $('.pagination-wrapper').removeClass('disabled');
-            })
+         if(stopClick) return;
+         stopClick = true;
+         // $('.pagination-wrapper').addClass('disabled');
+         clearInterval(intervalID);
+         var activeIndex = $(".p-item.current").index();
+         var indexclick = $(this).index();
+         var action = "";
+         var dChange = indexclick - activeIndex;
+         if (dChange < 0) {
+            action = "+="
+         } else if (dChange > 0) {
+            action = "-="
+         } else {
+            return
          }
+         var _this = $(this);
+         var dChangemodule = Math.abs(dChange)
+         $(this).data("slide_id");
+         toPage(12, $(this).data("slide_id"));
+         jQuery(".p-container").animate({
+            "margin-top": action + "" + (pitemChange * dChangemodule),
+         }, 800, function () {
+            stopClick = false;
+            var $prev = _this;
+            // $('.pagination-wrapper').removeClass('disabled');
+            $('.p-item').removeClass("current");
+            $prev.addClass("current");
+            if (dChange > 0) {
+               if (!$('.p-item').eq($prev.index() + 4).length) {
+                  $('.p-item[data-slide_id="' + ($prev.data("slide_id")) + '"].normal').addClass("current");
+                  var margin = -60 - (($prev.data("slide_id") - 1) * pitemChange);
+                  jQuery(".p-container").css("margin-top", margin + "px");
+                  $prev.removeClass("current")
+               }
+            } else if (dChange < 0) {
+               // console.log($('.p-item:nth-child(' + ($prev.index() - 2) + ')'));
+               if (!$('.p-item:nth-child(' + ($prev.index() - 2) + ')').length) {
+                  $('.p-item[data-slide_id="' + ($prev.data("slide_id")) + '"].normal').addClass("current");
+                  var margin = -60 - (($prev.data("slide_id") - 1) * pitemChange);
+                  jQuery(".p-container").css("margin-top", margin + "px");
+                  $prev.removeClass("current")
+               }
+            }
+         })
       })
       if (PTSettings.autoslide == "yes") {
          initAutoSlide()
@@ -186,7 +184,6 @@ var PageTransitions = (function ($) {
       jQuery(window).on('mousewheel DOMMouseScroll keydown', function (event) {
          if (jQuery(".pt-slider").length == 0) return;
          event.stopPropagation();
-         $('.pagination-wrapper').addClass('disabled');
          // console.log('scroll event fired');
          // console.log(event.keyCode);
          // console.log(event.originalEvent.wheelDelta);
@@ -208,16 +205,19 @@ var PageTransitions = (function ($) {
             // nextPage(PTSettings.f_effect)
          }
          if (event.keyCode == 38) {
+            stopClick = true;
             event.preventDefault();
             prevPage(PTSettings.b_effect)
          }
          if ((delta / 120 > 0)) {
+            stopClick = true;
             event.preventDefault();
-            window.scrollY < 100 && prevPage(PTSettings.b_effect)
+            prevPage(PTSettings.b_effect)
          }
       });
       if (jQuery(window).width() <= 768) {
          jQuery("#pt-main").on("swipedown", function (event) {
+            stopClick = true;
             prevPage(PTSettings.b_effect)
          })
          jQuery("#pt-main").on("swipeup", function (event) {
@@ -277,7 +277,7 @@ var PageTransitions = (function ($) {
       jQuery(".p-container").animate({
          "margin-top": "+=-" + pitemChange,
       }, 800, function () {
-         $('.pagination-wrapper').removeClass('disabled');
+         stopClick = false;
          var $next = jQuery(".p-item.current").next();
          $('.p-item').removeClass("current");
          $next.addClass("current");
@@ -332,7 +332,7 @@ var PageTransitions = (function ($) {
          jQuery(".p-container").animate({
             "margin-top": "+=" + pitemChange,
          }, 800, function () {
-            $('.pagination-wrapper').removeClass('disabled');
+            stopClick = false;
             var $prev = jQuery(".p-item.current").prev();
             $('.p-item').removeClass("current");
             $prev.addClass("current");
@@ -352,7 +352,6 @@ var PageTransitions = (function ($) {
       if (isAnimating) {
          return !1
       }
-
       window.scrollY < 100 && gotoContentSlide(page - 1);
 
       page = page - 1;

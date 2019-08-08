@@ -1057,10 +1057,6 @@ span.p-line { background: white; width: 15px; height: 3px; display: inline-block
 
 .pagination-wrapper.has-onlyTwoOptions .pagination { margin-top: -30px; }
 
-.pagination-wrapper .prevent-click { background-color: red; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
+.pagination-wrapper.disabled, .pagination-wrapper.disabled .p-item { pointer-events: none !important; }
 
-.pagination-wrapper.disabled { pointer-events: none !important; }
-
-.pagination-wrapper.disabled .prevent-click { z-index: 99999; }
-
-.pagination-wrapper.disabled .p-item { pointer-events: none !important; }
+#pt-main.disabled { pointer-events: none; }
