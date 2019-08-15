@@ -354,7 +354,7 @@ var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 
 var lastScrollTop = 0;
 
-if(!isIE11){
+// if(!isIE11){
 
     $(window).on('scroll', function(){
 
@@ -375,4 +375,4 @@ if(!isIE11){
         
         lastScrollTop = scroll;
     });
-}
+// }

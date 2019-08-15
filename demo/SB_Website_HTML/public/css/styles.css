@@ -152,6 +152,8 @@ em { font-style: italic; }
 
 .custom-tick > input.style-checkbox:checked + .tick span:after, .custom-tick > input[type="radio"].style-checkbox:checked + .tick span:after, .custom-tick > input[type="checkbox"]:checked + .tick span:after { opacity: 1; -webkit-transform: rotate(45deg) scale(1); transform: rotate(45deg) scale(1); }
 
+.custom-tick > .related-text { display: inline-block; width: 100%; }
+
 .custom-tick > .related-text ~ .tick { margin-left: 0.5rem; }
 
 .custom-tick > input.style-radio + .tick, .custom-tick > input[type="checkbox"].style-radio + .tick, .custom-tick > input[type="radio"] + .tick { border-radius: 100%; }
@@ -1238,6 +1240,7 @@ em { font-style: italic; }
   .ratio-1x1:before { padding-top: 100%; }
   .ratio-5x2:before { padding-top: 40%; }
   .ratio-16x9:before { padding-top: 56.25%; }
+  .ratio-logo:before { padding-top: 37.19502%; }
   .ratio-logo-xlg:before { padding-top: 46.45814%; }
   .ratio-custom:before { padding-top: 68.57143%; }
   .ratio-custom_1:before { padding-top: 63.15789%; }
@@ -2004,6 +2007,7 @@ em { font-style: italic; }
   .sm\:ratio-1x1:before { padding-top: 100%; }
   .sm\:ratio-5x2:before { padding-top: 40%; }
   .sm\:ratio-16x9:before { padding-top: 56.25%; }
+  .sm\:ratio-logo:before { padding-top: 37.19502%; }
   .sm\:ratio-logo-xlg:before { padding-top: 46.45814%; }
   .sm\:ratio-custom:before { padding-top: 68.57143%; }
   .sm\:ratio-custom_1:before { padding-top: 63.15789%; }
@@ -2770,6 +2774,7 @@ em { font-style: italic; }
   .md\:ratio-1x1:before { padding-top: 100%; }
   .md\:ratio-5x2:before { padding-top: 40%; }
   .md\:ratio-16x9:before { padding-top: 56.25%; }
+  .md\:ratio-logo:before { padding-top: 37.19502%; }
   .md\:ratio-logo-xlg:before { padding-top: 46.45814%; }
   .md\:ratio-custom:before { padding-top: 68.57143%; }
   .md\:ratio-custom_1:before { padding-top: 63.15789%; }
@@ -3536,6 +3541,7 @@ em { font-style: italic; }
   .lg\:ratio-1x1:before { padding-top: 100%; }
   .lg\:ratio-5x2:before { padding-top: 40%; }
   .lg\:ratio-16x9:before { padding-top: 56.25%; }
+  .lg\:ratio-logo:before { padding-top: 37.19502%; }
   .lg\:ratio-logo-xlg:before { padding-top: 46.45814%; }
   .lg\:ratio-custom:before { padding-top: 68.57143%; }
   .lg\:ratio-custom_1:before { padding-top: 63.15789%; }
@@ -4302,6 +4308,7 @@ em { font-style: italic; }
   .xl\:ratio-1x1:before { padding-top: 100%; }
   .xl\:ratio-5x2:before { padding-top: 40%; }
   .xl\:ratio-16x9:before { padding-top: 56.25%; }
+  .xl\:ratio-logo:before { padding-top: 37.19502%; }
   .xl\:ratio-logo-xlg:before { padding-top: 46.45814%; }
   .xl\:ratio-custom:before { padding-top: 68.57143%; }
   .xl\:ratio-custom_1:before { padding-top: 63.15789%; }
@@ -4999,6 +5006,8 @@ textarea { resize: vertical; }
 
 .text-wrap > *:not(:last-child) { margin-bottom: 2rem; }
 
+.brand-logo, .unstuck-link { display: inline-block; }
+
 .unstuck-link { display: inline-block; }
 
 .unstuck-link img { max-height: 1.7rem; vertical-align: top; vertical-align: inherit; }
@@ -5050,13 +5059,14 @@ textarea { resize: vertical; }
 .sticky-header .header { position: fixed; left: 0; right: 0; z-index: 50; }
 
 @media all and (max-width: 992px) { .sticky-header main { margin-top: 7.563rem; }
-  .sticky-header .header .brand-logo { width: 13.1rem; margin-top: -4%; }
+  .sticky-header .header .brand-logo { width: 13.1rem; }
   .sticky-header .header .brand-logo > span { margin-top: 4%; } }
 
 @media all and (min-width: 992px) { .sticky-header main { margin-top: 30rem; }
   .sticky-header .header .brand-logo { width: 40.6rem; }
   .sticky-header:not(.for-home-only) main, .sticky-header.shrink main { margin-top: 20.2rem; }
-  .sticky-header:not(.for-home-only) .header .brand-logo, .sticky-header.shrink .header .brand-logo { width: 21.2rem; margin-top: -4%; }
+  .sticky-header:not(.for-home-only) .header .brand-logo, .sticky-header.shrink .header .brand-logo { width: 21.2rem; }
   .sticky-header:not(.for-home-only) .header .brand-logo > span, .sticky-header.shrink .header .brand-logo > span { margin-top: 4%; } }
 
 /*Test*/
+* { outline: 1px dashed rgba(0, 255, 127, 0.5) !important; }
