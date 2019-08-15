@@ -135,7 +135,6 @@ $(document).ready(function () {
   };
 
   // Featured Projects Carousel
-  var visibleItem = getViewportWidth() / 1225;
   var featuredProjects;
   if ($(".jsFeaturedProjectsCarousel").length) {
     featuredProjects = $(".jsFeaturedProjectsCarousel"); //Banner-carousel for Property-details page
@@ -147,16 +146,18 @@ $(document).ready(function () {
       nav: false,
       dots: false,
       margin: 25,
-      // animateIn: isIE11 || isIE10 ? "" : "slideInUp",
-      // animateOut: isIE11 || isIE10 ? "" : "slideOutUp",
       smartSpeed: 500,
       autoplay: true,
       autoplayTimeout: 7000,
       autoplayHoverPause: true,
       responsive: {
-        710: {
-          items: visibleItem,
+        900:{
           margin: 65,
+          items: getViewportWidth()/900,
+        },
+        1200: {
+          margin: 65,
+          items: getViewportWidth()/1200,
         }
       }
     });
@@ -203,6 +204,7 @@ $(document).ready(function () {
     $(window).resize(function () {
       // setBox();
       getViewportWidth() < 992 && removeBox();
+      featuredProjects.onResize();
     });
   
     function removeBox() {
@@ -249,6 +251,7 @@ $(document).ready(function () {
       }
     });
     $('.filter_dropdown').change(function () {
+      document.getElementById("filter_parent").scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
       $('.filter_tab[data-filterby=' + $(this).val() + ']').trigger('click');
     });
   };
