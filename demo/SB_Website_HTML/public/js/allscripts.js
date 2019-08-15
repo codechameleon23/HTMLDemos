@@ -116,8 +116,10 @@ $(document).ready(function () {
   if ($(".jsBannerCarousel").length) {
     bannerCarousel = $(".jsBannerCarousel"); //Banner-carousel for Property-details page
     bannerCarousel.owlCarousel({
+      center: true,
       items: 1,
-      stagePadding: -5,
+      stagePadding: 0,
+      margin: 0,
       loop: true,
       mouseDrag: true,
       nav: false,
@@ -127,7 +129,7 @@ $(document).ready(function () {
       smartSpeed: 500,
       // autoplay: true,
       autoplayTimeout: 7000,
-      autoplayHoverPause: true
+      autoplayHoverPause: true,
     });
 
   };
@@ -148,7 +150,7 @@ $(document).ready(function () {
       // animateIn: isIE11 || isIE10 ? "" : "slideInUp",
       // animateOut: isIE11 || isIE10 ? "" : "slideOutUp",
       smartSpeed: 500,
-      // autoplay: true,
+      autoplay: true,
       autoplayTimeout: 7000,
       autoplayHoverPause: true,
       responsive: {
