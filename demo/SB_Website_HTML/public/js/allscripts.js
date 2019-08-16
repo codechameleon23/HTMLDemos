@@ -147,7 +147,7 @@ $(document).ready(function () {
       dots: false,
       margin: 25,
       smartSpeed: 500,
-      autoplay: true,
+      // autoplay: true,
       autoplayTimeout: 7000,
       autoplayHoverPause: true,
       responsive: {
@@ -183,7 +183,8 @@ $(document).ready(function () {
   //Animate on scroll
   AOS.init({
     once: true,
-    easing: 'ease-in-out'
+    easing: 'ease-in-out',
+    anchorPlacement: 'top-bottom',
   });
 
   // Init Double tap in mobile

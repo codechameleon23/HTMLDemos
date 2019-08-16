@@ -19,21 +19,37 @@
 
 <body class="for-home-only jsNavbarToggle jsHeader sticky-header is-close flex-col">
    <!--! ================= HEADER -->
-   <header class="header bg-white pt-10 lg:pt-25 shadow-default">
+   <header class="header bg-white pt-10 lg:pt-25">
       <div class="container lg:container-xl mx-auto pos-relative pb-10 lg:pb-25">
          <div class="flex-row lg:flex-col">
             <!--! Logo -->
             <div class="flex-row justify-center mr-auto lg:m-auto">
-               <a href="index.html" class="
+               <div class="flex-col align-center">
+                  <a href="index.html" class="
                   brand-logo
-                  ratio-logo-xlg 
+                  ratio-logo
                   lg:icon-logo-header-xlg
                   overflow-hidden
                   transition-all">
-                  <span class="transition-all">
-                     <img src="./images/brand-logo.png" alt="" />
-                  </span>
-               </a>
+                     <span class="transition-all">
+                        <img src="./images/brand-logo.png" alt="" />
+                     </span>
+                  </a>
+                  <div class="tagline 
+                d-hidden 
+                lg:d-inline-block 
+                text-center  
+                f-size-2md 
+                f-color-primary 
+                f-weight-medium
+                overflow-hidden
+                transition-all
+                ">
+                     <div class="pt-20">
+                        Salisbury Business Improvement District
+                     </div>
+                  </div>
+               </div>
             </div>
             <!--! Social contacts -->
             <div class="-m-3_5 
@@ -49,7 +65,7 @@
                   <a href="mailto:info@salisburybid.co.uk" class="f-color-inherit no-underline hover:border-b">info@salisburybid.co.uk</a>
                </div>
                <div class="p-3_5">
-                  <div class="-m-3_5 flex-row">
+                  <div class="-m-3_5 flex-row social-icons">
                      <div class="p-3_5">
                         <a href="tel:01722 658000" class="f-color-inherit no-underline hover:border-b">01722 658000</a>
                      </div>
@@ -131,7 +147,7 @@
                <a href="mailto:info@salisburybid.co.uk" class="f-color-inherit no-underline hover:border-b">info@salisburybid.co.uk</a>
             </div>
             <div class="p-3_5">
-               <div class="-m-3_5 flex-row">
+               <div class="-m-3_5 flex-row social-icons">
                   <div class="p-3_5">
                      <a href="tel:01722 658000" class="f-color-inherit no-underline hover:border-b">01722 658000</a>
                   </div>
@@ -207,39 +223,39 @@
    </header>
    <!-- ! ================= MAIN -->
    <main class="flex-auto flex-col">
-      <!--! ================= Page titlw -->
+      <!--! ================= Page title -->
       <div class="bg-secondary py-15 text-center">
-         <h1 class="f-size-2lg f-color-white f-weight-bold">
+         <h1 class="f-size-2lg f-color-white f-weight-medium" data-aos="fade" data-aos-delay="100" data-aos-duration="700">
             Page Header H1 Coloured Banner
          </h1>
       </div>
       <div class="bg-white py-15 text-center">
-         <h1 class="f-size-2lg f-color-secondary f-weight-bold">
+         <h1 class="f-size-2lg f-color-secondary f-weight-bold" data-aos="fade" data-aos-delay="100" data-aos-duration="700">
             Page Header H1 White Banner
          </h1>
       </div>
       <!-- ! ================= BANNER CAROUSEL -->
       <div class="carousel-outer mx-auto pos-relative w-full">
          <button class="jsCarouselPrv 
-            shadow-md
-            icon icon-2md
-            arrow prev
-            pos-absolute z-40 pin-t-50 
-            pin-l 
-            -mt-10 
-            f-color-white 
-            hover:bg-primary 
-            hover:f-color-white">
+           icon icon-2md
+           arrow prev
+           pos-absolute z-40 pin-t-50 
+           pin-l 
+           -mt-10 
+           f-color-white 
+           hover:bg-primary 
+           hover:f-color-white
+           border-2 border-transparent">
             <span></span>
          </button>
-         <div class="jsBannerCarousel is-carousel owl-carousel owl-theme">
+         <div class="jsBannerCarousel is-carousel banner-carousel owl-carousel owl-theme">
             <div class="item">
                <div class="flex-col lg:flex-row pos-relative bg-secondary">
                   <section class="pos-absolute 
-                                 pin md:pin-l-auto 
-                                 md:col-5 xl:col-7
-                                 opacity-50 md:opacity-100
-                                 flex-row">
+                   pin md:pin-l-auto 
+                   md:col-5 xl:col-7
+                   opacity-50 md:opacity-100
+                   flex-row">
                      <figure class="image-media flex-stretch flex-col">
                         <div class="flex-stretch bg-bottom bg-cover" style="background-image: url('./images/IMG_3345.jpg')">
                         </div>
@@ -247,29 +263,37 @@
                   </section>
                   <div class="container container-xl mx-auto">
                      <section class="md:col-7 xl:col-5 
-                                    pos-relative
-                                    f-color-white
-                                    lg:bg-secondary
-                                    py-90 md:pr-20 lg:pr-50">
+                     pos-relative
+                     f-color-white
+                     lg:bg-secondary
+                     py-90 md:pr-20 lg:pr-50">
                         <h2 class="f-size-2lg f-weight-bold mb-30
-                        on-appear-animation_1">
-                           Featured Banner or Slider Header H1
+                     on-appear-animation_1">
+                           Representing Businesses Across Salisbury
                         </h2>
                         <div class="text-wrap mb-50
-                        on-appear-animation_2">
+                     on-appear-animation_2">
                            <p>
-                              Event quae sus alictat mint accabora volorio repedi conem ipidia suntur, consend eliquam voluptatur? Ebistis porest opturib uscienim utem num atur, nos il ium int
-                              officati occuptaquis reptate hrup.
+                              We aim to enhance the trading environment and the experience of visiting Salisbury,
+                              generating direct benefits to our business members.
                            </p>
                         </div>
                         <div class="-m-10 flex-row flex-wrap
-                        on-appear-animation_3">
+                     on-appear-animation_3">
                            <div class="p-10">
                               <a href="#" class="button bg-primary f-color-white
-                                             f-size-2sm f-weight-medium
-                                             px-30 py-10
-                                             hover:shadow-default">
-                                 Button Link
+                         f-size-2sm f-weight-medium
+                         px-30 py-10
+                         hover:shadow-md">
+                                 Opportunities
+                              </a>
+                           </div>
+                           <div class="p-10">
+                              <a href="#" class="button bg-primary f-color-white
+                         f-size-2sm f-weight-medium
+                         px-30 py-10
+                         hover:shadow-md">
+                                 Our Projects
                               </a>
                            </div>
                         </div>
@@ -280,10 +304,10 @@
             <div class="item">
                <div class="flex-col lg:flex-row pos-relative bg-secondary">
                   <section class="pos-absolute 
-                           pin md:pin-l-auto 
-                           md:col-5 xl:col-7
-                           opacity-50 md:opacity-100
-                           flex-row">
+                   pin md:pin-l-auto 
+                   md:col-5 xl:col-7
+                   opacity-50 md:opacity-100
+                   flex-row">
                      <figure class="image-media flex-stretch flex-col">
                         <div class="flex-stretch bg-bottom bg-cover" style="background-image: url('./images/IMG_3345.jpg')">
                         </div>
@@ -291,29 +315,37 @@
                   </section>
                   <div class="container container-xl mx-auto">
                      <section class="md:col-7 xl:col-5 
-                              pos-relative
-                              f-color-white
-                              lg:bg-secondary
-                              py-90 md:pr-20 lg:pr-50">
+                     pos-relative
+                     f-color-white
+                     lg:bg-secondary
+                     py-90 md:pr-20 lg:pr-50">
                         <h2 class="f-size-2lg f-weight-bold mb-30
-                        on-appear-animation_1">
-                           Featured Banner or Slider Header H1
+                     on-appear-animation_1">
+                           Representing Businesses Across Salisbury
                         </h2>
                         <div class="text-wrap mb-50
-                        on-appear-animation_2">
+                     on-appear-animation_2">
                            <p>
-                              Event quae sus alictat mint accabora volorio repedi conem ipidia suntur, consend eliquam voluptatur? Ebistis porest opturib uscienim utem num atur, nos il ium int
-                              officati occuptaquis reptate hrup.
+                              We aim to enhance the trading environment and the experience of visiting Salisbury,
+                              generating direct benefits to our business members.
                            </p>
                         </div>
                         <div class="-m-10 flex-row flex-wrap
-                        on-appear-animation_3">
+                     on-appear-animation_3">
                            <div class="p-10">
                               <a href="#" class="button bg-primary f-color-white
-                                       f-size-2sm f-weight-medium
-                                       px-30 py-10
-                                       hover:shadow-default">
-                                 Button Link
+                         f-size-2sm f-weight-medium
+                         px-30 py-10
+                         hover:shadow-md">
+                                 Opportunities
+                              </a>
+                           </div>
+                           <div class="p-10">
+                              <a href="#" class="button bg-primary f-color-white
+                         f-size-2sm f-weight-medium
+                         px-30 py-10
+                         hover:shadow-md">
+                                 Our Projects
                               </a>
                            </div>
                         </div>
@@ -323,17 +355,16 @@
             </div>
          </div>
          <button class="jsCarouselNxt 
-            shadow-md
-            icon icon-2md
-            arrow next
-            pos-absolute 
-            z-40 
-            pin-t-50 
-            pin-r 
-            -mt-10 
-            f-color-white 
-            hover:bg-primary 
-            hover:f-color-white">
+           icon icon-2md
+           arrow next
+           pos-absolute 
+           z-40 
+           pin-t-50 
+           pin-r 
+           -mt-10 
+           f-color-white 
+           hover:bg-primary 
+           hover:f-color-white">
             <span></span>
          </button>
       </div>
@@ -357,10 +388,10 @@
                               ml-auto 
                               -mt-20 -mr-20 
                               lg:-mt-35 lg:-mr-50">
-                           <figure class="image-media flex-col">
+                           <a href="projects-details.html" class="image-rollover image-media flex-col">
                               <div class="flex-stretch bg-center bg-cover" style="background-image: url('./images/69ca4299-3173-42f7-a6d7-fbc77ccfdbe4.jpg')">
                               </div>
-                           </figure>
+                           </a>
                         </section>
                         <section class="lg:col-6 
                               flex-auto
@@ -391,7 +422,7 @@
                               <a href="#" class="button bg-secondary f-color-white
                                     f-size-2sm f-weight-medium
                                     px-30 py-10
-                                    hover:shadow-default">
+                                    hover:shadow-md">
                                  Button Link
                               </a>
                            </footer>
@@ -414,10 +445,10 @@
                               mr-auto
                               -mt-20 -ml-20 
                               lg:-mt-35 lg:-ml-50">
-                           <figure class="image-media flex-col">
+                           <a href="projects-details.html" class="image-rollover image-media flex-col">
                               <div class="flex-stretch bg-center bg-cover" style="background-image: url('./images/69ca4299-3173-42f7-a6d7-fbc77ccfdbe41111.jpg')">
                               </div>
-                           </figure>
+                           </a>
                         </section>
                         <section class="lg:col-6 
                               flex-auto
@@ -448,7 +479,7 @@
                               <a href="#" class="button bg-secondary f-color-white
                                     f-size-2sm f-weight-medium
                                     px-30 py-10
-                                    hover:shadow-default">
+                                    hover:shadow-md">
                                  Button Link
                               </a>
                            </footer>
@@ -518,7 +549,7 @@
                               <a href="#" class="button bg-secondary f-color-white
                                           f-size-2sm f-weight-medium
                                           px-30 py-10
-                                          hover:shadow-default">
+                                          hover:shadow-md">
                                  Discover More
                               </a>
                            </footer>
@@ -576,7 +607,7 @@
                               <a href="#" class="button bg-secondary f-color-white
                                           f-size-2sm f-weight-medium
                                           px-30 py-10
-                                          hover:shadow-default">
+                                          hover:shadow-md">
                                  Discover More
                               </a>
                            </footer>
@@ -603,10 +634,10 @@
                   <article class="flex-col mb-20 flex-stretch
                         hover:shadow-md transition-all">
                      <section class="ratio-custom_1">
-                        <figure class="image-media flex-col">
+                        <a href="projects-details.html" class="image-rollover image-media flex-col">
                            <div class="flex-stretch bg-center bg-cover" style="background-image: url('./images/Flowers500.jpg')">
                            </div>
-                        </figure>
+                        </a>
                      </section>
                      <section class="bg-primary f-color-white
                               flex-auto
@@ -630,7 +661,7 @@
                            <a href="#" class="button bg-secondary f-color-white
                                     f-size-2sm f-weight-medium
                                     px-30 py-10
-                                    hover:shadow-default">
+                                    hover:shadow-md">
                               Button Link
                            </a>
                         </footer>
@@ -644,10 +675,10 @@
                   <article class="flex-col mb-20 flex-stretch
                         hover:shadow-md transition-all">
                      <section class="ratio-custom_1">
-                        <figure class="image-media flex-col">
+                        <a href="projects-details.html" class="image-rollover image-media flex-col">
                            <div class="flex-stretch bg-center bg-cover" style="background-image: url('./images/ladiesevening700.jpg')">
                            </div>
-                        </figure>
+                        </a>
                      </section>
                      <section class="bg-primary f-color-white
                               flex-auto
@@ -671,7 +702,7 @@
                            <a href="#" class="button bg-secondary f-color-white
                                     f-size-2sm f-weight-medium
                                     px-30 py-10
-                                    hover:shadow-default">
+                                    hover:shadow-md">
                               Button Link
                            </a>
                         </footer>
@@ -685,10 +716,10 @@
                   <article class="flex-col mb-20 flex-stretch
                         hover:shadow-md transition-all">
                      <section class="ratio-custom_1">
-                        <figure class="image-media flex-col">
+                        <a href="projects-details.html" class="image-rollover image-media flex-col">
                            <div class="flex-stretch bg-center bg-cover" style="background-image: url('./images/richgoodman400.jpg')">
                            </div>
-                        </figure>
+                        </a>
                      </section>
                      <section class="bg-primary f-color-white
                               flex-auto
@@ -710,7 +741,7 @@
                            <a href="#" class="button bg-secondary f-color-white
                                     f-size-2sm f-weight-medium
                                     px-30 py-10
-                                    hover:shadow-default">
+                                    hover:shadow-md">
                               Button Link
                            </a>
                         </footer>
@@ -724,10 +755,10 @@
                   <article class="flex-col mb-20 flex-stretch
                         hover:shadow-md transition-all">
                      <section class="ratio-custom_1">
-                        <figure class="image-media flex-col">
+                        <a href="projects-details.html" class="image-rollover image-media flex-col">
                            <div class="flex-stretch bg-center bg-cover" style="background-image: url('./images/ambassadors600.jpg')">
                            </div>
-                        </figure>
+                        </a>
                      </section>
                      <section class="bg-primary f-color-white
                               flex-auto
@@ -749,7 +780,7 @@
                            <a href="#" class="button bg-secondary f-color-white
                                     f-size-2sm f-weight-medium
                                     px-30 py-10
-                                    hover:shadow-default">
+                                    hover:shadow-md">
                               Button Link
                            </a>
                         </footer>
@@ -763,10 +794,10 @@
                   <article class="flex-col mb-20 flex-stretch
                         hover:shadow-md transition-all">
                      <section class="ratio-custom_1">
-                        <figure class="image-media flex-col">
+                        <a href="projects-details.html" class="image-rollover image-media flex-col">
                            <div class="flex-stretch bg-center bg-cover" style="background-image: url('./images/69ca4299-3173-42f7-a6d7-fbc77ccfdbe4.jpg')">
                            </div>
-                        </figure>
+                        </a>
                      </section>
                      <section class="bg-primary f-color-white
                               flex-auto
@@ -788,7 +819,7 @@
                            <a href="#" class="button bg-secondary f-color-white
                                     f-size-2sm f-weight-medium
                                     px-30 py-10
-                                    hover:shadow-default">
+                                    hover:shadow-md">
                               Button Link
                            </a>
                         </footer>
@@ -826,7 +857,7 @@
                         <a href="#" class="button bg-secondary f-color-white
                               f-size-2sm f-weight-medium
                               px-30 py-10
-                              hover:shadow-default">
+                              hover:shadow-md">
                            Button Link
                         </a>
                      </footer>
@@ -852,7 +883,7 @@
                      <a href="#" class="button bg-secondary f-color-white
                            f-size-2sm f-weight-medium
                            px-30 py-10 
-                           hover:shadow-default">
+                           hover:shadow-md">
                         Contact Us
                      </a>
                   </div>
@@ -881,12 +912,11 @@
                            p-25 
                            lg:px-30
                            lg:py-32_5" data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">
-                        <section class=" 
-                              ratio-custom_3">
-                           <figure class="image-media flex-col">
-                              <a href="./images/Maltings.jpg" class="flex-stretch bg-center bg-cover" style="background-image: url('./images/Maltings.jpg')">
-                              </a>
-                           </figure>
+                        <section class="ratio-custom_3">
+                           <a href="./images/Maltings.jpg" class="image-rollover image-media flex-col">
+                              <div class="flex-stretch bg-center bg-cover" style="background-image: url('./images/Maltings.jpg')">
+                              </div>
+                           </a>
                         </section>
                      </div>
                      <div class="col-12 md:col-6 lg:col-4 
@@ -895,13 +925,13 @@
                            lg:py-32_5" data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">
                         <section class="
                               ratio-custom_3">
-                           <figure class="image-media flex-col">
+                           <a href="https://www.youtube.com/watch?v=cKnHcB7LNrw" class="has-video image-rollover image-media flex-col">
                               <div class="flex-stretch bg-center bg-cover 
                                     flex-col justify-center align-cente
                                     hover:shadow-parent-md" style="background-image: url('./images/10.jpg')">
                                  <!-- ! Play button -->
-                                 <a href="https://www.youtube.com/watch?v=cKnHcB7LNrw" class="
-                                       has-video
+                                 <div class="
+                                       pointer-events-none
                                        icon icon-2lg
                                        bg-primary radius-full
                                        pos-absolute pin-tl-50 pin-tl50 
@@ -911,19 +941,19 @@
                                           <img src="./images/play-icon.png" alt="" />
                                        </span>
                                     </div>
-                                 </a>
+                                 </div>
                               </div>
-                           </figure>
+                           </a>
                         </section>
                      </div>
                      <div class="col-12 md:col-6 lg:col-4 
                            p-25 
                            lg:px-30
                            lg:py-32_5" data-aos="fade-up" data-aos-delay="300" data-aos-duration="700">
-                        <section data-src="./images/17.jpg" class="ratio-custom_3">
-                           <figure class="image-media flex-col">
-                              <a href="./images/17.jpg" class="flex-stretch bg-center bg-cover" style="background-image:url('./images/17.jpg')"></a>
-                           </figure>
+                        <section class="ratio-custom_3">
+                           <a href="./images/17.jpg" class="image-rollover image-media flex-col">
+                              <div class="flex-stretch bg-center bg-cover" style="background-image:url('./images/17.jpg')"></div>
+                           </a>
                         </section>
                      </div>
                      <div class="col-12 md:col-6 
@@ -932,11 +962,10 @@
                            lg:py-32_5" data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">
                         <section data-src="./images/69ca4299-3173-42f7-a6d7-fbc77ccfdbe4.jpg" class=" 
                               ratio-custom_3">
-                           <figure class="image-media flex-col">
-                              <a href="./images/69ca4299-3173-42f7-a6d7-fbc77ccfdbe4.jpg" class="flex-stretch bg-center bg-cover"
-                                 style="background-image: url('./images/69ca4299-3173-42f7-a6d7-fbc77ccfdbe4.jpg')">
-                              </a>
-                           </figure>
+                           <a href="./images/69ca4299-3173-42f7-a6d7-fbc77ccfdbe4.jpg" class="image-rollover image-media flex-col">
+                              <div class="flex-stretch bg-center bg-cover" style="background-image: url('./images/69ca4299-3173-42f7-a6d7-fbc77ccfdbe4.jpg')">
+                              </div>
+                           </a>
                         </section>
                      </div>
                      <div class="col-12 md:col-6 
@@ -945,10 +974,10 @@
                            lg:py-32_5" data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">
                         <section class="
                               ratio-custom_3">
-                           <figure class="image-media flex-col">
-                              <a href="./images/parade700.jpg" class="flex-stretch bg-center bg-cover" style="background-image: url('./images/parade700.jpg')">
-                              </a>
-                           </figure>
+                           <a href="./images/parade700.jpg" class="image-rollover image-media flex-col">
+                              <div class="flex-stretch bg-center bg-cover" style="background-image: url('./images/parade700.jpg')">
+                              </div>
+                           </a>
                         </section>
                      </div>
                      <div class="col-12 md:col-6 lg:col-12
@@ -956,11 +985,12 @@
                            lg:px-30
                            lg:py-32_5" data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">
                         <section class="flex-auto ratio-16x9 lg:ratio-5x2">
-                           <figure class="image-media flex-col
+                           <a href="https://www.youtube.com/watch?v=cKnHcB7LNrw" class="has-video image-rollover image-media flex-col
                                  hover:shadow-parent-lg">
                               <div class="flex-stretch bg-center bg-cover" style="background-image: url('./images/Salisbury-from-St-Thomas-Church-(4).jpg')">
                                  <!-- ! Play button -->
-                                 <a href="https://www.youtube.com/watch?v=cKnHcB7LNrw" class="has-video
+                                 <div class="
+                                       pointer-events-none
                                        icon icon-2lg
                                        bg-primary radius-full
                                        pos-absolute pin-tl-50 pin-tl50 
@@ -970,9 +1000,9 @@
                                           <img src="./images/play-icon.png" alt="" />
                                        </span>
                                     </div>
-                                 </a>
+                                 </div>
                               </div>
-                           </figure>
+                           </a>
                         </section>
                      </div>
                   </div>
@@ -1014,7 +1044,7 @@
                         <a href="#" class="button bg-secondary f-color-white
                                  f-size-2sm f-weight-medium
                                  px-30 py-10
-                                 hover:shadow-default">
+                                 hover:shadow-md">
                            Button Link
                         </a>
                      </footer>
@@ -1191,7 +1221,7 @@
                               <a href="#" class="button bg-secondary f-color-white
                              f-size-2sm f-weight-medium
                              px-30 py-10
-                             hover:shadow-default">
+                             hover:shadow-md">
                                  Button Link
                               </a>
                            </footer>
@@ -1229,7 +1259,7 @@
                               <a href="#" class="button bg-secondary f-color-white
                                    f-size-2sm f-weight-medium
                                    px-30 py-10
-                                   hover:shadow-default">
+                                   hover:shadow-md">
                                  Button Link
                               </a>
                            </footer>
@@ -1330,7 +1360,7 @@
                                  <button class="button bg-primary f-color-white
                                           f-size-2sm f-weight-medium
                                           px-40 py-10
-                                          hover:shadow-default">
+                                          hover:shadow-md">
                                     Sign Up
                                  </button>
                               </div>
@@ -1356,7 +1386,7 @@
    <!-- ! ================= FOOTER -->
    <!--! ================= Interested in finding out more on Salisbury BID -->
    <div class="pt-65 pb-15 lg:pb-0">
-      <div class="flex-col lg:flex-row pos-relative bg-secondary">
+      <div class="flex-col lg:flex-row pos-relative bg-secondary" data-aos="fade" data-aos-duration="700">
          <section class="pos-absolute 
                     pin md:pin-l-auto 
                     md:col-6 
@@ -1403,7 +1433,7 @@
                                          f-size-2sm f-weight-medium
                                          px-40 py-10
                                          xl:w-full
-                                         hover:shadow-default">
+                                         hover:shadow-md">
                            Sign Up
                         </button>
                      </div>
@@ -1437,7 +1467,7 @@
             <div class="p-10 xl:p-30 flex-none">
                <a href="index.html" class="d-inline-block icon-logo-footer ratio-logo">
                   <span>
-                     <img src="./images/brand-logo-2.png" alt="" />
+                     <img src="./images/brand-logo.png" alt="" />
                   </span>
                </a>
             </div>
@@ -1472,7 +1502,7 @@
                   </li>
                </ul>
             </div>
-            <div class="p-10 xl:p-30 flex-none">
+            <div class="p-10 xl:p-30 flex-none social-icons">
                <div class="-m-3_5 flex-row">
                   <div class="p-3_5">
                      <a href="#" class="icon f-color-secondary">

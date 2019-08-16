@@ -19,21 +19,37 @@
 
 <body class="for-home-only jsNavbarToggle jsHeader sticky-header is-close flex-col">
   <!--! ================= HEADER -->
-  <header class="header bg-white pt-10 lg:pt-25 shadow-default">
+  <header class="header bg-white pt-10 lg:pt-25">
     <div class="container lg:container-xl mx-auto pos-relative pb-10 lg:pb-25">
       <div class="flex-row lg:flex-col">
         <!--! Logo -->
         <div class="flex-row justify-center mr-auto lg:m-auto">
-          <a href="index.html" class="
-              brand-logo
-              ratio-logo-xlg 
-              lg:icon-logo-header-xlg
+          <div class="flex-col align-center">
+            <a href="index.html" class="
+                brand-logo
+                ratio-logo
+                lg:icon-logo-header-xlg
+                overflow-hidden
+                transition-all">
+              <span class="transition-all">
+                <img src="./images/brand-logo.png" alt="" />
+              </span>
+            </a>
+            <div class="tagline 
+              d-hidden 
+              lg:d-inline-block 
+              text-center  
+              f-size-2md 
+              f-color-primary 
+              f-weight-medium
               overflow-hidden
-              transition-all">
-            <span class="transition-all">
-              <img src="./images/brand-logo.png" alt="" />
-            </span>
-          </a>
+              transition-all
+              ">
+              <div class="pt-20">
+                Salisbury Business Improvement District
+              </div>
+            </div>
+          </div>
         </div>
         <!--! Social contacts -->
         <div class="-m-3_5 
@@ -49,7 +65,7 @@
             <a href="mailto:info@salisburybid.co.uk" class="f-color-inherit no-underline hover:border-b">info@salisburybid.co.uk</a>
           </div>
           <div class="p-3_5">
-            <div class="-m-3_5 flex-row">
+            <div class="-m-3_5 flex-row social-icons">
               <div class="p-3_5">
                 <a href="tel:01722 658000" class="f-color-inherit no-underline hover:border-b">01722 658000</a>
               </div>
@@ -131,7 +147,7 @@
           <a href="mailto:info@salisburybid.co.uk" class="f-color-inherit no-underline hover:border-b">info@salisburybid.co.uk</a>
         </div>
         <div class="p-3_5">
-          <div class="-m-3_5 flex-row">
+          <div class="-m-3_5 flex-row social-icons">
             <div class="p-3_5">
               <a href="tel:01722 658000" class="f-color-inherit no-underline hover:border-b">01722 658000</a>
             </div>
@@ -210,7 +226,6 @@
     <!-- ! ================= BANNER CAROUSEL -->
     <div class="carousel-outer mx-auto pos-relative w-full">
       <button class="jsCarouselPrv 
-        shadow-md
         icon icon-2md
         arrow prev
         pos-absolute z-40 pin-t-50 
@@ -222,7 +237,7 @@
         border-2 border-transparent">
         <span></span>
       </button>
-      <div class="jsBannerCarousel is-carousel owl-carousel owl-theme">
+      <div class="jsBannerCarousel is-carousel banner-carousel owl-carousel owl-theme">
         <div class="item">
           <div class="flex-col lg:flex-row pos-relative bg-secondary">
             <section class="pos-absolute 
@@ -258,7 +273,7 @@
                     <a href="#" class="button bg-primary f-color-white
                       f-size-2sm f-weight-medium
                       px-30 py-10
-                      hover:shadow-default">
+                      hover:shadow-md">
                       Opportunities
                     </a>
                   </div>
@@ -266,7 +281,7 @@
                     <a href="#" class="button bg-primary f-color-white
                       f-size-2sm f-weight-medium
                       px-30 py-10
-                      hover:shadow-default">
+                      hover:shadow-md">
                       Our Projects
                     </a>
                   </div>
@@ -310,7 +325,7 @@
                     <a href="#" class="button bg-primary f-color-white
                       f-size-2sm f-weight-medium
                       px-30 py-10
-                      hover:shadow-default">
+                      hover:shadow-md">
                       Opportunities
                     </a>
                   </div>
@@ -318,7 +333,7 @@
                     <a href="#" class="button bg-primary f-color-white
                       f-size-2sm f-weight-medium
                       px-30 py-10
-                      hover:shadow-default">
+                      hover:shadow-md">
                       Our Projects
                     </a>
                   </div>
@@ -329,7 +344,6 @@
         </div>
       </div>
       <button class="jsCarouselNxt 
-        shadow-md
         icon icon-2md
         arrow next
         pos-absolute 
@@ -358,7 +372,8 @@
               <div class="p-10">
                 <a href="latest-news.html" class="button bg-secondary f-color-white
                     f-size-2sm f-weight-medium
-                    px-30 py-10">
+                    px-30 py-10
+                    hover:shadow-md">
                   View All News
                 </a>
               </div>
@@ -370,11 +385,12 @@
               <div class="p-15 col-12 md:col-7 lg:col-8 flex-col" data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">
                 <!--* * BOX -->
                 <article class="flex-col mb-20 flex-stretch
-                  hover:shadow-default transition-all">
+                  hover:shadow-md transition-all">
                   <section class="ratio-custom_2 md:ratio-1x1 lg:ratio-custom_2">
-                    <figure class="image-media flex-col">
-                      <div class="flex-stretch bg-center bg-cover" style="background-image: url('./images/brandpos-600.jpg')"></div>
-                    </figure>
+                    <a href="latest-news.html" class="image-rollover image-media flex-col">
+                      <div class="flex-stretch bg-center bg-cover" style="background-image: url('./images/brandpos-600.jpg')">
+                      </div>
+                    </a>
                   </section>
                   <section class="bg-primary f-color-white
                       flex-auto
@@ -398,7 +414,8 @@
                     <footer class="pos-absolute pin-b -mb-20">
                       <a href="news.html" class="button bg-secondary f-color-white
                           f-size-2sm f-weight-medium
-                          px-30 py-10">
+                          px-30 py-10
+                          hover:shadow-md">
                         Read Full Story
                       </a>
                     </footer>
@@ -410,12 +427,12 @@
                   <div class="p-15 col-12 flex-col" data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">
                     <!--* * BOX -->
                     <article class="flex-col mb-20 flex-stretch
-                      hover:shadow-default transition-all">
+                      hover:shadow-md transition-all">
                       <section class="ratio-custom_1">
-                        <figure class="image-media flex-col">
+                        <a href="latest-news.html" class="image-rollover image-media flex-col">
                           <div class="flex-stretch bg-center bg-cover" style="background-image: url('./images/ladiesevening700.jpg')">
                           </div>
-                        </figure>
+                        </a>
                       </section>
                       <section class="bg-primary f-color-white
                           flex-auto
@@ -434,7 +451,8 @@
                         <footer class="pos-absolute pin-b -mb-20">
                           <a href="news.html" class="button bg-secondary f-color-white
                               f-size-2sm f-weight-medium
-                              px-30 py-10">
+                              px-30 py-10
+                              hover:shadow-md">
                             Read Full Story
                           </a>
                         </footer>
@@ -444,12 +462,12 @@
                   <div class="p-15 col-12 flex-col" data-aos="fade-up" data-aos-delay="300" data-aos-duration="700">
                     <!--* * BOX -->
                     <article class="flex-col mb-20 flex-stretch
-                      hover:shadow-default transition-all">
+                      hover:shadow-md transition-all">
                       <section class="ratio-custom_1">
-                        <figure class="image-media flex-col">
+                        <a href="latest-news.html" class="image-rollover image-media flex-col">
                           <div class="flex-stretch bg-center bg-cover" style="background-image: url('./images/parade700.jpg')">
                           </div>
-                        </figure>
+                        </a>
                       </section>
                       <section class="bg-primary f-color-white
                           flex-auto
@@ -467,7 +485,8 @@
                         <footer class="pos-absolute pin-b -mb-20">
                           <a href="news.html" class="button bg-secondary f-color-white
                               f-size-2sm f-weight-medium
-                              px-30 py-10">
+                              px-30 py-10
+                              hover:shadow-md">
                             Read Full Story
                           </a>
                         </footer>
@@ -481,12 +500,12 @@
                   <div class="p-15 col-12 md:col-4 flex-col" data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">
                     <!--* * BOX -->
                     <article class="flex-col mb-20 flex-stretch
-                      hover:shadow-default transition-all">
+                      hover:shadow-md transition-all">
                       <section class="ratio-custom_1">
-                        <figure class="image-media flex-col">
+                        <a href="latest-news.html" class="image-rollover image-media flex-col">
                           <div class="flex-stretch bg-center bg-cover" style="background-image: url('./images/areaframework600.jpg')">
                           </div>
-                        </figure>
+                        </a>
                       </section>
                       <section class="bg-primary f-color-white
                           flex-auto
@@ -505,7 +524,8 @@
                         <footer class="pos-absolute pin-b -mb-20">
                           <a href="news.html" class="button bg-secondary f-color-white
                               f-size-2sm f-weight-medium
-                              px-30 py-10">
+                              px-30 py-10
+                              hover:shadow-md">
                             Read Full Story
                           </a>
                         </footer>
@@ -515,12 +535,12 @@
                   <div class="p-15 col-12 md:col-4 flex-col" data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">
                     <!--* * BOX -->
                     <article class="flex-col mb-20 flex-stretch
-                      hover:shadow-default transition-all">
+                      hover:shadow-md transition-all">
                       <section class="ratio-custom_1">
-                        <figure class="image-media flex-col">
+                        <a href="latest-news.html" class="image-rollover image-media flex-col">
                           <div class="flex-stretch bg-center bg-cover" style="background-image: url('./images/ambassadors600.jpg')">
                           </div>
-                        </figure>
+                        </a>
                       </section>
                       <section class="bg-primary f-color-white
                           flex-auto
@@ -538,7 +558,8 @@
                         <footer class="pos-absolute pin-b -mb-20">
                           <a href="news.html" class="button bg-secondary f-color-white
                               f-size-2sm f-weight-medium
-                              px-30 py-10">
+                              px-30 py-10
+                              hover:shadow-md">
                             Read Full Story
                           </a>
                         </footer>
@@ -548,12 +569,12 @@
                   <div class="p-15 col-12 md:col-4 flex-col" data-aos="fade-up" data-aos-delay="300" data-aos-duration="700">
                     <!--* * BOX -->
                     <article class="flex-col mb-20 flex-stretch
-                      hover:shadow-default transition-all">
+                      hover:shadow-md transition-all">
                       <section class="ratio-custom_1">
-                        <figure class="image-media flex-col">
+                        <a href="latest-news.html" class="image-rollover image-media flex-col">
                           <div class="flex-stretch bg-center bg-cover" style="background-image: url('./images/ArmedForcesDay.jpg')">
                           </div>
-                        </figure>
+                        </a>
                       </section>
                       <section class="bg-primary f-color-white
                           flex-auto
@@ -572,7 +593,8 @@
                         <footer class="pos-absolute pin-b -mb-20">
                           <a href="news.html" class="button bg-secondary f-color-white
                               f-size-2sm f-weight-medium
-                              px-30 py-10">
+                              px-30 py-10
+                              hover:shadow-md">
                             Read Full Story
                           </a>
                         </footer>
@@ -619,7 +641,7 @@
                       <img src="./images/welcoming-n-enhancing.png" alt="" />
                     </figure>
                   </section>
-                  <section class="flex-auto" data-aos="fade" data-aos-delay="300" data-aos-duration="700">
+                  <section class="flex-auto" data-aos="fade" data-aos-delay="300" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
                     <h2 class="f-size-lg f-weight-bold f-color-secondary">
                       Welcoming & Enhancing
                     </h2>
@@ -635,7 +657,7 @@
                       <img src="./images/promoting-n-supporting.png" alt="" />
                     </figure>
                   </section>
-                  <section class="flex-auto" data-aos="fade" data-aos-delay="400" data-aos-duration="700">
+                  <section class="flex-auto" data-aos="fade" data-aos-delay="400" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
                     <h2 class="f-size-lg f-weight-bold f-color-secondary">
                       Promoting & Supporting
                     </h2>
@@ -650,7 +672,7 @@
                       <img src="./images/representing-n-Influencing.png" alt="" />
                     </figure>
                   </section>
-                  <section class="flex-auto" data-aos="fade" data-aos-delay="500" data-aos-duration="700">
+                  <section class="flex-auto" data-aos="fade" data-aos-delay="500" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
                     <h2 class="f-size-lg f-weight-bold f-color-secondary">
                       Representing & Influencing
                     </h2>
@@ -684,7 +706,7 @@
                         left 
                         bg-secondary f-color-white
                         f-size-2sm f-weight-medium
-                        hover:shadow-default">
+                        hover:shadow-md">
                       <span></span>
                     </button>
                   </div>
@@ -696,7 +718,7 @@
                       right 
                       bg-secondary f-color-white
                       f-size-2sm f-weight-medium
-                      hover:shadow-default">
+                      hover:shadow-md">
                       <span></span>
                     </button>
                   </div>
@@ -705,7 +727,7 @@
                       bg-secondary f-color-white
                       f-size-2sm f-weight-medium
                       px-30 py-10
-                      hover:shadow-default">
+                      hover:shadow-md">
                       View All Projects
                     </a>
                   </div>
@@ -719,7 +741,7 @@
           <div class="container lg:container-fluid mx-auto flex-col">
             <div class="-my-20 lg:-my-50">
               <div class="py-20 lg:py-50">
-                <div class="jsFeaturedProjectsCarousel is-carousel owl-carousel owl-theme">
+                <div class="jsFeaturedProjectsCarousel is-carousel feature-carousel owl-carousel owl-theme">
                   <div class="item">
                     <article class="pt-20 pl-20 lg:pt-35 lg:pl-50
                         shadow-parent-md lg:shadow-parent-none lg:hover:shadow-parent-md">
@@ -735,10 +757,10 @@
                             mr-auto
                             -mt-20 -ml-20 
                             lg:-mt-35 lg:-ml-50">
-                          <figure class="image-media flex-col">
+                          <a href="projects-details.html" class="image-rollover image-media flex-col">
                             <div class="flex-stretch bg-center bg-cover" style="background-image: url('./images/69ca4299-3173-42f7-a6d7-fbc77ccfdbe4.jpg')">
                             </div>
-                          </figure>
+                          </a>
                         </section>
                         <section class="lg:col-5 
                             flex-auto
@@ -746,28 +768,34 @@
                             lg:pt-50 lg:pr-50 lg:pl-30
                             pos-relative">
                           <div class="text-wrap">
-                            <h4 class="f-size-sm f-weight-bold d-inline-block">
+                            <h4 class="f-size-sm f-weight-bold d-inline-block
+                            on-appear-animation_1">
                               Project Category
                             </h4>
-                            <h2 class="f-size-lg f-weight-bold">
+                            <h2 class="f-size-lg f-weight-bold
+                            on-appear-animation_2">
                               <a href="#" class="f-color-inherit no-underline hover:border-b">
                                 Salisbury Indies Pocket Guide
                               </a>
                             </h2>
-                            <p>
-                              50,000 copies of the Salisbury Indies Pocket Guide have been printed to promote
-                              independent businesses in the city centre. This is the first major project for
-                              Salisbury Indies since the group relaunched earlier this year.
-                            </p>
-                            <p>
-                              If you’d like a stock of these guides, please contact us. The BID ...
-                            </p>
+                            <div class="text-wrap
+                            on-appear-animation_3">
+                              <p>
+                                50,000 copies of the Salisbury Indies Pocket Guide have been printed to promote
+                                independent businesses in the city centre. This is the first major project for
+                                Salisbury Indies since the group relaunched earlier this year.
+                              </p>
+                              <p>
+                                If you’d like a stock of these guides, please contact us. The BID ...
+                              </p>
+                            </div>
                           </div>
-                          <footer class="pos-absolute pin-b">
-                            <a href="#" class="button bg-secondary f-color-white
+                          <footer class="pos-absolute pin-b
+                          on-appear-animation_4">
+                            <a href="projects-details.html" class="button bg-secondary f-color-white
                                 f-size-2sm f-weight-medium
                                 px-30 py-10
-                                hover:shadow-default">
+                                hover:shadow-md">
                               Discover More
                             </a>
                           </footer>
@@ -790,10 +818,10 @@
                             mr-auto
                             -mt-20 -ml-20 
                             lg:-mt-35 lg:-ml-50">
-                          <figure class="image-media flex-col">
+                          <a href="projects-details.html" class="image-rollover image-media flex-col">
                             <div class="flex-stretch bg-center bg-cover" style="background-image: url('./images/Flowers500.jpg')">
                             </div>
-                          </figure>
+                          </a>
                         </section>
                         <section class="lg:col-5 
                             flex-auto
@@ -801,28 +829,34 @@
                             lg:pt-50 lg:pr-50 lg:pl-30
                             pos-relative">
                           <div class="text-wrap">
-                            <h4 class="f-size-sm f-weight-bold d-inline-block">
+                            <h4 class="f-size-sm f-weight-bold d-inline-block
+                            on-appear-animation_1">
                               Project Category
                             </h4>
-                            <h2 class="f-size-lg f-weight-bold">
+                            <h2 class="f-size-lg f-weight-bold
+                            on-appear-animation_2">
                               <a href="#" class="f-color-inherit no-underline hover:border-b">
                                 Salisbury Indies Pocket Guide
                               </a>
                             </h2>
-                            <p>
-                              50,000 copies of the Salisbury Indies Pocket Guide have been printed to promote
-                              independent businesses in the city centre. This is the first major project for
-                              Salisbury Indies since the group relaunched earlier this year.
-                            </p>
-                            <p>
-                              If you’d like a stock of these guides, please contact us. The BID ...
-                            </p>
+                            <div class="text-wrap
+                            on-appear-animation_3">
+                              <p>
+                                50,000 copies of the Salisbury Indies Pocket Guide have been printed to promote
+                                independent businesses in the city centre. This is the first major project for
+                                Salisbury Indies since the group relaunched earlier this year.
+                              </p>
+                              <p>
+                                If you’d like a stock of these guides, please contact us. The BID ...
+                              </p>
+                            </div>
                           </div>
-                          <footer class="pos-absolute pin-b">
-                            <a href="#" class="button bg-secondary f-color-white
+                          <footer class="pos-absolute pin-b 
+                          on-appear-animation_4">
+                            <a href="projects-details.html" class="button bg-secondary f-color-white
                                 f-size-2sm f-weight-medium
                                 px-30 py-10
-                                hover:shadow-default">
+                                hover:shadow-md">
                               Discover More
                             </a>
                           </footer>
@@ -927,7 +961,7 @@
                       <button class="button bg-primary f-color-white
                             f-size-2sm f-weight-medium
                             px-40 py-10
-                            hover:shadow-default">
+                            hover:shadow-md">
                         Sign Up
                       </button>
                     </div>
@@ -987,7 +1021,7 @@
                 <a href="#" class="button bg-secondary f-color-white
                       f-size-2sm f-weight-medium
                       px-30 py-10
-                      hover:shadow-default">
+                      hover:shadow-md">
                   View Events Calendar
                 </a>
               </div>
@@ -995,7 +1029,7 @@
                 <a href="#" class="button bg-secondary f-color-white
                       f-size-2sm f-weight-medium
                       px-30 py-10
-                      hover:shadow-default">
+                      hover:shadow-md">
                   List Your Event
                 </a>
               </div>
@@ -1010,7 +1044,7 @@
   <!-- ! ================= FOOTER -->
   <!--! ================= Interested in finding out more on Salisbury BID -->
   <div class="pt-65 pb-15 lg:pb-0">
-    <div class="flex-col lg:flex-row pos-relative bg-secondary">
+    <div class="flex-col lg:flex-row pos-relative bg-secondary" data-aos="fade" data-aos-duration="700">
       <section class="pos-absolute 
                pin md:pin-l-auto 
                md:col-6 
@@ -1057,7 +1091,7 @@
                                     f-size-2sm f-weight-medium
                                     px-40 py-10
                                     xl:w-full
-                                    hover:shadow-default">
+                                    hover:shadow-md">
                   Sign Up
                 </button>
               </div>
@@ -1091,7 +1125,7 @@
         <div class="p-10 xl:p-30 flex-none">
           <a href="index.html" class="d-inline-block icon-logo-footer ratio-logo">
             <span>
-              <img src="./images/brand-logo-2.png" alt="" />
+              <img src="./images/brand-logo.png" alt="" />
             </span>
           </a>
         </div>
@@ -1126,7 +1160,7 @@
             </li>
           </ul>
         </div>
-        <div class="p-10 xl:p-30 flex-none">
+        <div class="p-10 xl:p-30 flex-none social-icons">
           <div class="-m-3_5 flex-row">
             <div class="p-3_5">
               <a href="#" class="icon f-color-secondary">
