@@ -225,7 +225,6 @@ $(document).ready(function () {
     $(parent).find('.showInfo_Button').on('click', function () {
       clickedCard = $(this).closest('.card');
       selectedId = $(this).attr('id');
-      console.log('selectedId');
       if (!clickedCard.hasClass('selected')) {
         if(getViewportWidth() < 700){
           setTimeout(function(){
