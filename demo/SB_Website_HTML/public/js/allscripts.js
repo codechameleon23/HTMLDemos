@@ -121,7 +121,7 @@ $(document).ready(function () {
       stagePadding: 0,
       margin: 0,
       loop: true,
-      mouseDrag: true,
+      mouseDrag: false,
       nav: false,
       dots: false,
       // animateIn: isIE11 || isIE10 ? "" : "slideInUp",
@@ -142,7 +142,7 @@ $(document).ready(function () {
       center: true,
       items: 1,
       loop: true,
-      mouseDrag: true,
+      mouseDrag: false,
       nav: false,
       dots: false,
       margin: 25,
@@ -356,7 +356,7 @@ window.onload = function() {
 };
 
 /*Shrink Headrt on scroll*/
-var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
+// var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 
 var lastScrollTop = 0;
 
