@@ -712,10 +712,35 @@
       </div>
       <!-- ! Load More button -->
       <div class="pt-50 lg:pt-65">
-         <div class="flex-row justify-center">
+         <div class="flex-col align-center">
 
             <!-- add "is-loading" class for loading animation -->
-            <a href="javascript:void(0);" class="flex-row loading-button no-underline
+            <a href="javascript:void(0);" class="
+               loading-button 
+               flex-row 
+               no-underline
+               hover:shadow-md transition-all">
+               <div class="icon icon-2md lg:icon-lg bg-secondary">
+                  <div class="flex-row justify-center align-center">
+                     <span class="d-inline-block icon-sm lg:icon-2md ml-0">
+                        <img src="./images/plus-icon.png" alt="" />
+                     </span>
+                  </div>
+               </div>
+               <div class="loading-text flex-row bg-primary f-color-white f-weight-medium align-center transition-all">
+                  <span class="py-10 px-20 when-loading">
+                     Loading...
+                  </span>
+                  <span class="py-10 px-20 when-hover">
+                     View more
+                  </span>
+               </div>
+            </a>
+            <a href="javascript:void(0);" class="
+               loading-button 
+               is-loading
+               flex-row 
+               no-underline
                hover:shadow-md transition-all">
                <div class="icon icon-2md lg:icon-lg bg-secondary">
                   <div class="flex-row justify-center align-center">
