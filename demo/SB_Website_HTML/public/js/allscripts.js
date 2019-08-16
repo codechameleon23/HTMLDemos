@@ -192,7 +192,6 @@ $(document).ready(function () {
   };
 
   $('.jsCarouselPrv').on('click', function () {
-    console.log($(this).closest('.carousel-outer').find(bannerCarousel));
     $(this).closest('.carousel-outer').find(bannerCarousel).trigger('prev.owl.carousel');
     $(this).closest('.carousel-outer').find(featuredProjects).trigger('prev.owl.carousel');
   });
