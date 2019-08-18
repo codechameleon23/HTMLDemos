@@ -235,11 +235,11 @@ $(document).ready(function () {
         removeBox();
       }
     });
-    // $(window).resize(function () {
-    //   // setBox();
-    //   getViewportWidth() < 992 && removeBox();
-    //   featuredProjects.onResize();
-    // });
+    $(window).resize(function () {
+      // setBox();
+      getViewportWidth() < 992 && removeBox();
+      featuredProjects.onResize();
+    });
   
     function removeBox() {
       $('.info_Box').remove();
