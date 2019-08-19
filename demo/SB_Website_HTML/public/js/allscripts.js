@@ -155,7 +155,7 @@ $(document).ready(function () {
       // animateIn: isIE11 || isIE10 ? "" : "slideInUp",
       // animateOut: isIE11 || isIE10 ? "" : "slideOutUp",
       smartSpeed: 500,
-      // autoplay: true,
+      autoplay: true,
       autoplayTimeout: 7000,
       autoplayHoverPause: true,
     });
