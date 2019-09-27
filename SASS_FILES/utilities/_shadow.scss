@@ -1,0 +1,35 @@
+@mixin getShadowsClasses($bp: $breakPoint) {
+  @each $shadow in $shadows {
+    @if(nth($shadow, 4) == 'states'){
+      @each $state in $states {
+        .#{$bp}#{nth($state, 1)}#{nth($shadow, 1)} {
+          &-#{nth($shadow, 2)}#{nth($state, 2)} {
+            box-shadow: nth($shadow, 3);
+          }
+        }
+        .#{$bp}#{nth($state, 1)}#{nth($shadow, 1)}-parent {
+          &-#{nth($shadow, 2)}{
+            &#{nth($state, 2)} {
+              .#{nth($shadow, 1)}-child{
+                box-shadow: nth($shadow, 3);
+              }
+            }
+          }
+        }
+      }
+    }@else{
+      .#{$bp}#{nth($shadow, 1)} {
+        &-#{nth($shadow, 2)} {
+          box-shadow: nth($shadow, 3);
+        }
+      }
+      .#{$bp}#{nth($shadow, 1)}-parent {
+        &-#{nth($shadow, 2)}{
+          .#{nth($shadow, 1)}-child{
+            box-shadow: nth($shadow, 3);
+          }
+        }
+      }
+    }
+  }
+}

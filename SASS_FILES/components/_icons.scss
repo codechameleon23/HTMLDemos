@@ -1,0 +1,50 @@
+.#{$iconsSizesClassNamePrefix} {
+  @include aspect-ratio;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+
+  > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      @media all and (-ms-high-contrast: none) {
+        // IE11
+        *::-ms-backdrop,
+        & {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@mixin getIconSizeClasses($bp: $breakPoint) {
+  @each $iconsSize in $iconsSizes {
+    @if(nth($iconsSize, 2)) {
+      .#{$bp}#{$iconsSizesClassNamePrefix}-#{nth($iconsSize, 2)} {
+        width: #{nth($iconsSize, 3)};
+
+        svg,
+        img {
+          width: 100%;
+          max-height: #{nth($iconsSize, 3)};
+        }
+      }
+    }
+
+    @else {
+      .#{$bp}#{$iconsSizesClassNamePrefix} {
+        width: #{nth($iconsSize, 3)};
+        
+        svg,
+        img {
+          width: 100%;
+          max-height: #{nth($iconsSize, 3)};
+        }
+      }
+    }
+  }
+}

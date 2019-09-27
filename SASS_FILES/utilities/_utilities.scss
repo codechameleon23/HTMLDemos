@@ -1,0 +1,462 @@
+@mixin getWhitespaceAndWrappingClasses($bp: $breakPoint) {
+  .#{$bp}whitespace {
+    &-normal {
+      white-space: normal;
+    }
+
+    &-no-wrap {
+      white-space: nowrap;
+    }
+
+    &-pre {
+      white-space: pre;
+    }
+
+    &-pre-line {
+      white-space: pre-line;
+    }
+
+    &-pre-wrap {
+      white-space: pre-wrap;
+    }
+  }
+
+  .#{$bp}break {
+    &-words {
+      word-wrap: break-word;
+    }
+
+    &-normal {
+      word-wrap: normal;
+    }
+  }
+
+  .#{$bp}truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+  }
+}
+
+@mixin getStyleAndDecorationClasses($bp: $breakPoint) {
+  @each $state in $states {
+    .#{$bp}italic {
+      font-style: italic
+    };
+
+    .#{$bp}roman {
+      font-style: normal
+    };
+
+    .#{$bp}uppercase {
+      text-transform: uppercase
+    };
+
+    .#{$bp}lowercase {
+      text-transform: lowercase
+    };
+
+    .#{$bp}capitalize {
+      text-transform: capitalize
+    };
+
+    .#{$bp}normal-case {
+      text-transform: none
+    };
+    
+    // @each $borderColor in $borderColors {
+    //   @if(nth($borderColor, 4) == 'states'){
+    //     @each $state in $states {
+    //       .#{$bp}#{nth($state, 1)}underline#{nth($state, 2)} {
+    //         text-decoration: underline;
+    //       };
+    //       .#{$bp}#{nth($state, 1)}no-underline {
+    //         text-decoration: none
+    //       };
+    //     }
+    //   }@else{
+        .#{$bp}underline {
+          text-decoration: underline;
+        };
+        .#{$bp}no-underline {
+          text-decoration: none;
+        };
+    //   }
+    // }
+
+    .#{$bp}line-through {
+      text-decoration: line-through
+    };
+    
+    .#{$bp}wavy {
+      text-decoration-line: underline;
+      text-decoration-style: wavy;
+    };
+
+    
+    .#{$bp}reflect{
+      transform: scale(-1);
+    }
+    
+    .#{$bp}reflect-X{
+      transform: scaleX(-1);
+    }
+    
+    .#{$bp}reflect-Y{
+      transform: scaleY(-1);
+    }
+  }
+}
+
+@mixin getDisplayClasses($bp: $breakPoint) {
+  .#{$bp}d {
+    &-block {
+      display: block;
+    }
+
+    &-inline-block {
+      display: inline-block;
+    }
+
+    &-inline {
+      display: inline;
+    }
+
+    &-table {
+      display: table;
+    }
+
+    &-table-row {
+      display: table-row;
+    }
+
+    &-table-cell {
+      display: table-cell;
+    }
+
+    &-hidden {
+      display: none;
+    }
+
+    &-flex {
+      display: flex;
+    }
+
+    &-inline-flex {
+      display: inline-flex;
+    }
+  }
+}
+
+@mixin getPositionClasses($bp: $breakPoint) {
+  .#{$bp}pos {
+    &-static {
+      position: static;
+    }
+
+    &-fixed {
+      position: fixed;
+    }
+
+    &-absolute {
+      position: absolute;
+    }
+
+    &-relative {
+      position: relative;
+    }
+
+    &-sticky {
+      position: sticky;
+    }
+  }
+
+  .#{$bp}pin {
+
+    
+    & {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    &-t {
+      top: 0;
+    }
+
+    &-r {
+      right: 0;
+    }
+
+    &-b {
+      bottom: 0;
+    }
+
+    &-l {
+      left: 0;
+    }
+
+    &-t-50 {
+      top: 50%;
+    }
+    
+    &-tl-50 {
+      top: 50%;
+      left: 50%;
+    }
+
+    &-r-50 {
+      right: 50%;
+    }
+
+    &-b-50 {
+      bottom: 50%;
+    }
+
+    &-l-50 {
+      left: 50%;
+    }
+    
+    &-t-100 {
+      top: 100%;
+    }
+
+    &-r-100 {
+      right: 100%;
+    }
+
+    &-b-100 {
+      bottom: 100%;
+    }
+
+    &-l-100 {
+      left: 100%;
+    }
+
+    &-y {
+      top: 0;
+      bottom: 0;
+    }
+
+    &-x {
+      right: 0;
+      left: 0;
+    }
+
+    &-l50{
+      transform: translateX(-50%);
+    }
+    &-r50{
+      transform: translateX(50%);
+    }
+
+    &-t50{
+      transform: translateY(-50%);
+    }
+    &-b50{
+      transform: translateY(50%);
+    }
+    
+    &-tl50{
+      transform: translate(-50%, -50%);
+    }
+    &-tr50{
+      transform: translate(50%, 50%);
+    }
+
+    &-t0{
+      transform: translateY(0%);
+    }
+    &-b0{
+      transform: translateY(0%);
+    }
+
+    &-none {
+      top: auto;
+      right: auto;
+      bottom: auto;
+      left: auto;
+    }
+
+    &-t-auto {
+      top: auto;
+    }
+
+    &-r-auto {
+      right: auto;
+    }
+
+    &-b-auto {
+      bottom: auto;
+    }
+
+    &-l-auto {
+      left: auto;
+    }
+
+    &-y-auto {
+      top: auto;
+      bottom: auto;
+    }
+
+    &-x-auto {
+      right: auto;
+      left: auto;
+    }
+  }
+}
+
+@mixin getObjectFitClasses($bp: $breakPoint) {
+  .#{$bp}object {
+    &-contain {
+      object-fit: contain;
+    }
+
+    &-cover {
+      object-fit: cover;
+    }
+
+    &-fill {
+      object-fit: fill;
+    }
+
+    &-none {
+      object-fit: none;
+    }
+
+    &-scale-down {
+      object-fit: scale-down;
+    }
+  }
+}
+
+@mixin getObjectPositionsClasses($bp: $breakPoint) {
+  .#{$bp}object {
+    &-bottom {
+      object-position: bottom;
+    }
+
+    &-center {
+      object-position: center;
+    }
+
+    &-left {
+      object-position: left;
+    }
+
+    &-left-bottom {
+      object-position: left bottom;
+    }
+
+    &-left-top {
+      object-position: left top;
+    }
+
+    &-right {
+      object-position: right;
+    }
+
+    &-right-bottom {
+      object-position: right bottom;
+    }
+
+    &-right-top {
+      object-position: right top;
+    }
+
+    &-top {
+      object-position: top;
+    }
+  }
+}
+
+@mixin getFloatClasses($bp: $breakPoint) {
+  .#{$bp}float-right{float: right;}
+  .#{$bp}float-left{float: left;}
+  .#{$bp}float-none{float: none;}
+  .#{$bp}clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin getOverflowClasses($bp: $breakPoint) {
+  .#{$bp}overflow {
+    &-auto {
+      overflow: auto;
+    }
+
+    &-hidden {
+      overflow: hidden;
+    }
+
+    &-visible {
+      overflow: visible;
+    }
+
+    &-scroll {
+      overflow: scroll;
+    }
+
+    &-x-auto {
+      overflow-x: auto;
+    }
+
+    &-y-auto {
+      overflow-y: auto;
+    }
+
+    &-x-hidden {
+      overflow-x: hidden;
+    }
+
+    &-y-hidden {
+      overflow-y: hidden;
+    }
+
+    &-x-visible {
+      overflow-x: visible;
+    }
+
+    &-y-visible {
+      overflow-y: visible;
+    }
+
+    &-x-scroll {
+      overflow-x: scroll;
+    }
+
+    &-y-scroll {
+      overflow-y: scroll;
+    }
+  }
+
+  .#{$bp}scrolling {
+    &-touch {
+      -webkit-overflow-scrolling: touch;
+    }
+
+    &-auto {
+      -webkit-overflow-scrolling: auto;
+    }
+  }
+}
+
+@mixin getVisibilityClasses($bp: $breakPoint) {
+  .#{$bp}visible {
+    visibility: visible;
+  }
+
+  .#{$bp}invisible {
+    visibility: hidden;
+  }
+}
+
+@mixin getListResetClasses($bp: $breakPoint) {
+  .#{$bp}list-reset {
+    list-style: none;
+    padding: 0;
+  }
+}

@@ -1,0 +1,32 @@
+ul,
+ol {  
+  &.list {
+    list-style: none;
+
+    li {
+      padding-left: 1.2rem;
+      position: relative;
+      &:before {
+        content: "• ";
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+}
+
+ol.list {
+  li {
+    counter-increment: step-counter;
+    &:before {
+      content: '.'counter(step-counter);
+      display: inline-block;
+      width: 1em;
+      margin-left: -0.5em;
+      margin-right: 0.5em;
+      text-align: right;
+      direction: rtl;
+    }
+  }
+}

@@ -1,0 +1,116 @@
+.lSSlideOuter{
+    .lSPager.lSGallery li {
+        @include aspect-ratio(1, 1);
+        position: relative;
+        margin-top: 0;
+        margin-bottom: 0;
+    
+        >a {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+    
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+$gutter: 2rem;
+.imageGallery-wrapper {
+
+    .lS {
+        &Action{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+        }
+
+        &Prev,
+        &Next {
+            left: $gutter;
+            height: 20px;
+            width: 27px;
+            display: flex;
+            flex-direction: column;
+            z-index: 2;
+
+            &:before,
+            &:after {
+                content: "";
+                height: .2rem;
+                background-color: $colorWhite;
+                box-shadow: 0px 0px .1rem 0rem rgba($colorBlack, 1);
+                width: 100%;
+            }
+
+            &:before {
+                transform: rotate(-45deg);  
+            }
+
+            &:after {
+                margin-top: auto;
+                transform: rotate(45deg);
+            }
+        }
+
+        &Next {
+            left: auto;
+            right: $gutter;
+
+            &:before {
+                transform: rotate(45deg);
+            }
+
+            &:after {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}
+
+
+.imageGallery-wrapper {
+    position: relative;
+    overflow: hidden;
+
+    .lSSlideWrapper {
+        position: relative;
+        @include aspect-ratio(16, 9);
+
+        .imageGallery {
+            margin-bottom: 0;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            left: 0;
+            height: 100% !important;
+
+            li {
+                position: relative;
+                height: 100%;
+                text-align: center;
+                a {
+                    cursor: zoom-in;
+                }
+
+                > *{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            li img {
+                height: 100%;
+                object-fit: contain;
+                cursor: zoom-in;
+            }
+        }
+    }
+}

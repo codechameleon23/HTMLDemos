@@ -1,0 +1,49 @@
+$defaultPlaceHolderColor:#000000;
+@mixin PlaceHolderColor($placeHolderColor: $defaultPlaceHolderColor) {
+  ::-webkit-input-placeholder {
+    color: tint($placeHolderColor, 70%);
+  }
+  
+  ::-moz-placeholder {
+    color: tint($placeHolderColor, 70%);
+    opacity: 1;
+  }
+  
+  :-ms-input-placeholder {
+    color: tint($placeHolderColor, 70%);
+  }
+  
+  :-moz-placeholder {
+    color: tint($placeHolderColor, 70%);
+  }
+}
+@include PlaceHolderColor();
+
+.select {
+  position: relative;
+  color: inherit;
+
+  &:after {
+    content: "";
+    position: absolute;
+    height: 1rem;
+    width: 1rem;
+    color: inherit;
+    pointer-events: none;
+    top: calc(50% - 0.6rem);
+    right: 2rem;
+    transform: rotate(-45deg);
+    border: .15rem solid;
+    border-width: 0 0 .15rem .15rem;
+  }
+
+  datalist,
+  select {
+    appearance: none;
+  }
+
+  datalist::-ms-expand,
+  select::-ms-expand {
+    display: none;
+  }
+}

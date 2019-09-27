@@ -1,0 +1,27 @@
+// .#{$containerClassPrefix} {
+//   @media (max-width: $bp_lg ){
+//     width: calc(100% - 4rem);
+//   }
+// }
+
+@mixin getContainerClasses($bp: $breakPoint) {
+  @each $con in $container {
+    @if(nth($con, 2)){
+      .#{$bp}#{$containerClassPrefix} {
+        &-#{nth($con, 2)} {
+          @if(nth($con, 2) == 'fluid'){
+            width: 100%;
+          }
+          max-width: nth($con, 3);
+        }
+      }
+    }@else{
+      .#{$bp}#{$containerClassPrefix} {
+        &#{nth($con, 2)} {
+          width: nth($con, 3);
+        }
+      }
+    }
+    
+  }
+}

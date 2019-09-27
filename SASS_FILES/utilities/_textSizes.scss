@@ -1,0 +1,59 @@
+@mixin getFontSizeClasses($bp: $breakPoint) {
+  @each $fontSize in $fontSizes {
+    @if(nth($fontSize, 4) == 'states'){
+      @each $state in $states {
+        .#{$bp}#{nth($state, 1)}#{nth($fontSize, 1)} {
+          &-#{nth($fontSize, 2)} {
+            font-size: nth($fontSize, 3);
+          }
+        }
+      }
+    }@else{
+      .#{$bp}#{nth($fontSize, 1)} {
+        &-#{nth($fontSize, 2)} {
+          font-size: nth($fontSize, 3);
+        }
+      }
+    }
+  }
+}
+
+@mixin getFontWeightClasses($bp: $breakPoint) {
+  @each $fontWeight in $fontWeights {
+    @if(nth($fontWeight, 4) == 'states'){
+      @each $state in $states {
+        .#{$bp}#{nth($state, 1)}#{nth($fontWeight, 1)} {
+          &-#{nth($fontWeight, 2)}#{nth($state, 2)} {
+            font-weight: nth($fontWeight, 3);
+          }
+        }
+      }
+    }@else{
+      .#{$bp}#{nth($fontWeight, 1)} {
+        &-#{nth($fontWeight, 2)} {
+          font-weight: nth($fontWeight, 3);
+        }
+      }
+    }
+  }
+}
+
+@mixin getLineHeightClasses($bp: $breakPoint) {
+  @each $lineHeight in $lineHeights {
+    .#{$bp}#{nth($lineHeight, 1)} {
+      &-#{nth($lineHeight, 2)} {
+        line-height: nth($lineHeight, 3);
+      }
+    }
+  }
+}
+
+@mixin getLetterSpacingClasses($bp: $breakPoint) {
+  @each $letterSpacing in $letterSpacings {
+    .#{$bp}#{nth($letterSpacing, 1)} {
+      &-#{nth($letterSpacing, 2)} {
+        letter-spacing: nth($letterSpacing, 3);
+      }
+    }
+  }
+}

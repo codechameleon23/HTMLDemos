@@ -1,0 +1,43 @@
+[class*="#{$shadowOverClassPrefix}"] {
+  > *,
+  .image-holder {
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}
+
+@mixin getShadowsOverClasses($bp: $breakPoint) {
+  @each $shadow in $shadowOver {
+    @if(nth($shadow, 4) == 'states'){
+      @each $state in $states {
+        .#{$bp}#{nth($state, 1)}#{nth($shadow, 1)}{
+          &-#{nth($shadow, 2)}#{nth($state, 2)} {
+            > *,
+            .image-holder{
+              &:before {
+                background-image: nth($shadow, 3);
+              }
+            }
+          }
+        }
+      }
+    }@else{
+      .#{$bp}#{nth($shadow, 1)} {
+        &-#{nth($shadow, 2)}{
+          > *,
+          .image-holder{
+            &:before {
+              background-image: nth($shadow, 3);
+            }
+          }
+        }
+      }
+    }
+  }
+}

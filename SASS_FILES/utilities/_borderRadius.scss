@@ -1,0 +1,60 @@
+$borderRadiusDirecton: (
+  tl top left, 
+  tr top right, 
+  bl bottom left, 
+  br bottom right,
+  l top bottom left,
+  r top bottom right,
+  t top left right,
+  b bottom left right,
+);
+@mixin getBorderRadiusClasses($bp: $breakPoint) {
+  @each $borderRadius in $borderRadiuses{
+    .#{nth($borderRadius, 1)} {
+      
+      
+      @if(nth($borderRadius, 2)){
+        &-#{nth($borderRadius, 2)}{
+          border-top-left-radius: (nth($borderRadius, 3));
+          border-top-right-radius: (nth($borderRadius, 3));
+          border-bottom-right-radius: (nth($borderRadius, 3));
+          border-bottom-left-radius: (nth($borderRadius, 3));
+        }
+        @each $brd in $borderRadiusDirecton {
+          &-#{nth($brd, 1)}-#{nth($borderRadius, 2)}{
+            @if( nth($brd, 1) == l or nth($brd, 1) == r ){
+              border-#{nth($brd, 2)}-#{nth($brd, 4)}-radius: (nth($borderRadius, 3));
+              border-#{nth($brd, 3)}-#{nth($brd, 4)}-radius: (nth($borderRadius, 3));
+            }@else if(nth($brd, 1) == t or nth($brd, 1) == b){
+              border-#{nth($brd, 2)}-#{nth($brd, 3)}-radius: (nth($borderRadius, 3));
+              border-#{nth($brd, 2)}-#{nth($brd, 4)}-radius: (nth($borderRadius, 3));
+            }@else{
+              border-#{nth($brd, 2)}-#{nth($brd, 3)}-radius: (nth($borderRadius, 3));
+            }
+          }
+        }
+      }@else{
+        &{
+          border-top-left-radius: (nth($borderRadius, 3));
+          border-top-right-radius: (nth($borderRadius, 3));
+          border-bottom-right-radius: (nth($borderRadius, 3));
+          border-bottom-left-radius: (nth($borderRadius, 3));
+        }
+        @each $brd in $borderRadiusDirecton {
+          &-#{nth($brd, 1)}{
+            @if( nth($brd, 1) == l or nth($brd, 1) == r ){
+              border-#{nth($brd, 2)}-#{nth($brd, 4)}-radius: (nth($borderRadius, 3));
+              border-#{nth($brd, 3)}-#{nth($brd, 4)}-radius: (nth($borderRadius, 3));
+            }@else if(nth($brd, 1) == t or nth($brd, 1) == b){
+              border-#{nth($brd, 2)}-#{nth($brd, 3)}-radius: (nth($borderRadius, 3));
+              border-#{nth($brd, 2)}-#{nth($brd, 4)}-radius: (nth($borderRadius, 3));
+            }@else{
+              border-#{nth($brd, 2)}-#{nth($brd, 3)}-radius: (nth($borderRadius, 3));
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

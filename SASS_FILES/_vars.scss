@@ -1,0 +1,385 @@
+// font prefix
+$fontRelatedClassNamePrifix: 'font' !default;
+// Default Fonts
+$font_sans: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto,
+  Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+$font_serif: Constantia, Lucida Bright, Lucidabright, Lucida Serif, Lucida,
+  DejaVu Serif, Bitstream Vera Serif, Liberation Serif, Georgia, serif;
+$font-mono: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+
+$colorWhite: #ffffff !default;
+$colorBlack: #000000 !default;
+
+// brand colors
+$color1: #414042;
+$color2: #f85720;
+$color3: lighten(saturate(adjust-hue(#414042, -30), 1.03), 66.86);
+
+// Default body settings
+$baseSize: 10px;
+$defaultTextColor: #111111 !default;
+$defaultFontSize: 1.6rem !default;
+$defaultFontWeights: 300 !default;
+$defaultFont: $font_sans !default;
+
+// Font familty settings
+$fontFamily: () !default;
+$fontFamilyClassNamePrefix: "#{$fontRelatedClassNamePrifix}-family" !default;
+$fontFamily: (
+// [ className-prefix | attribute | value1 ]
+  $fontFamilyClassNamePrefix "default" $defaultFont,
+  $fontFamilyClassNamePrefix "secondary" $font_serif
+);
+
+// Break points vars
+$bp_sm: 576px;
+$bp_md: 710px;
+$bp_lg: 992px;
+$bp_xl: 1200px;
+// $bp_2xl: 1500px;
+
+// Break points classes and values
+$breakPoints: () !default;
+$breakPoints: (
+  null 0, 
+  sm\: $bp_sm, 
+  md\: $bp_md, 
+  lg\: $bp_lg, 
+  xl\: $bp_xl,
+  // xxl\: $bp_2xl
+);
+
+$orientations: () !default;
+$orientations: (
+  landscape\: "landscape",
+  portrait\: "portrait"
+);
+
+// Element states and values
+$states: () !default;
+$states: (
+  null null,
+  hover\: ":hover",
+  focus\: ":focus",
+  focus-within\: ":focus-within",
+  active\: null,
+);
+
+// Background color and values
+$bgColors: () !default;
+$bgColorsClassPrefix: "bg" !default;
+$bgColors: (
+  // [ className-prefix | attribute | value1 ]
+  $bgColorsClassPrefix "black" black null,
+  $bgColorsClassPrefix "white" white null,
+  $bgColorsClassPrefix "grey" grey null,
+);
+
+// Theme color and values
+$themeColorClassPrefix: 'theme' !default;
+$themeColor: (
+  $themeColorClassPrefix "black" black null,
+  $themeColorClassPrefix "white" white null,
+  $themeColorClassPrefix "grey" grey null,
+);
+
+// Text color and values
+$selectionTextColor: unset !default;
+$selectionTextBgColor: unset !default;
+
+$textColors: () !default;
+$textColorsClassPrefix: "#{$fontRelatedClassNamePrifix}-color" !default;
+$textColors: (
+// [ className-prefix | attribute | value1 ]
+  $textColorsClassPrefix "dark" #222831 null,
+  $textColorsClassPrefix "white" white null,
+  $textColorsClassPrefix "light" #eeeeee null,
+  $textColorsClassPrefix "primary" #00adb5 null,
+);
+
+// Border color and values
+$borderColors: () !default;
+$borderColorsClassPrefix: "border" !default;
+$borderColors: (
+  $borderColorsClassPrefix "transparent" transparent null,
+  $borderColorsClassPrefix "dark" #222831 null,
+  $borderColorsClassPrefix "white" white null,
+  $borderColorsClassPrefix "light" #eeeeee null,
+  $borderColorsClassPrefix "primary" #00adb5 null,
+);
+
+// Border width and values
+$borderWidth: () !default;
+$borderWidth: (
+  null .1rem null, 
+  2 .2rem null,
+);
+
+// Font-sizes
+$fontSizes: () !default;
+$fontSizesClassPrefix: "#{$fontRelatedClassNamePrifix}-size" !default;
+$fontSizes: (
+  $fontSizesClassPrefix "inherit" inherit null,
+  $fontSizesClassPrefix "xs" 1rem null,
+  $fontSizesClassPrefix "sm" 1.2rem null,
+  $fontSizesClassPrefix "base" $defaultFontSize null,
+  $fontSizesClassPrefix "md" 2rem null,
+  $fontSizesClassPrefix "2md" 2.4rem null,
+  $fontSizesClassPrefix "3md" 2.8rem null,
+  $fontSizesClassPrefix "4md" 3.2rem null,
+  $fontSizesClassPrefix "lg" 3.6rem null,
+  $fontSizesClassPrefix "2lg" 4rem null,
+  $fontSizesClassPrefix "3lg" 4.4rem null,
+  $fontSizesClassPrefix "xl" 4.8rem null,
+  $fontSizesClassPrefix "2xl" 5.2rem null,
+  $fontSizesClassPrefix "3xl" 5.6rem null,
+);
+
+// Font-weight
+$fontWeights: () !default;
+$fontWeightsClassPrefix: "#{$fontRelatedClassNamePrifix}-weight" !default;
+$fontWeights: (
+  $fontWeightsClassPrefix "inherit" inherit null,
+  $fontWeightsClassPrefix "xx-light" 100 null,
+  $fontWeightsClassPrefix "x-light" 200 null,
+  $fontWeightsClassPrefix "light" 300 null,
+  $fontWeightsClassPrefix "normal" 400 null,
+  $fontWeightsClassPrefix "medium" 500 null,
+  $fontWeightsClassPrefix "semibold" 600 null,
+  $fontWeightsClassPrefix "bold" 700 null,
+  $fontWeightsClassPrefix "extrabold" 800 null,
+  $fontWeightsClassPrefix "black" 900 null,
+);
+
+// line-height
+$lineHeights: () !default;
+$lineHeightsClassPrefix: "#{$fontRelatedClassNamePrifix}-height" !default;
+$lineHeights: (
+  $lineHeightsClassPrefix "none" 1,
+  $lineHeightsClassPrefix "tight" 1.25,
+  $lineHeightsClassPrefix "normal" "normal",
+  $lineHeightsClassPrefix "loose" 2
+);
+
+// letter-spacing
+$letterSpacings: () !default;
+$letterSpacingsClassPrefix: "#{$fontRelatedClassNamePrifix}-spacing" !default;
+$letterSpacings: (
+  $letterSpacingsClassPrefix "tight" -0.05em,
+  $letterSpacingsClassPrefix "normal" 0,
+  $letterSpacingsClassPrefix "wide" 0.05em
+);
+
+// Default paddings
+$paddings: () !default;
+$paddingsClassPrefix: "p" !default;
+$paddings: (
+  $paddingsClassPrefix "5" .5rem,
+  $paddingsClassPrefix "10" 1rem,
+  $paddingsClassPrefix "15" 1.5rem,
+  $paddingsClassPrefix "20" 2rem,
+  $paddingsClassPrefix "25" 2.5rem,
+  $paddingsClassPrefix "30" 3rem,
+  $paddingsClassPrefix "50" 4rem,
+  $paddingsClassPrefix "60" 6rem,
+  $paddingsClassPrefix "70" 7rem,
+  $paddingsClassPrefix "90" 9rem,
+  $paddingsClassPrefix "100" 10rem,
+  $paddingsClassPrefix "0" 0,
+);
+
+// Default margins
+$margins: () !default;
+$marginsClassPrefix: "m" !default;
+$margins: (
+  $marginsClassPrefix "auto" auto,
+  $marginsClassPrefix "5" .5rem,
+  $marginsClassPrefix "10" 1rem,
+  $marginsClassPrefix "15" 1.5rem,
+  $marginsClassPrefix "20" 2rem,
+  $marginsClassPrefix "25" 2.5rem,
+  $marginsClassPrefix "30" 3rem,
+  $marginsClassPrefix "50" 4rem,
+  $marginsClassPrefix "60" 6rem,
+  $marginsClassPrefix "70" 7rem,
+  $marginsClassPrefix "90" 7rem,
+  $marginsClassPrefix "100" 7rem,
+  $marginsClassPrefix "0" 0,
+);
+
+// Default -ve margins
+$negativeMargin: () !default;
+$negativeMarginClassPrefix: $marginsClassPrefix !default;
+$negativeMargin: (
+  $negativeMarginClassPrefix "5" .5rem,
+  $negativeMarginClassPrefix "10" 1rem,
+  $negativeMarginClassPrefix "15" 1.5rem,
+  $negativeMarginClassPrefix "15" 1.5rem,
+  $negativeMarginClassPrefix "20" 2rem,
+  $negativeMarginClassPrefix "25" 2.5rem,
+  $negativeMarginClassPrefix "30" 3rem,
+  $negativeMarginClassPrefix "40" 4rem,
+  $negativeMarginClassPrefix "60" 6rem,
+  $negativeMarginClassPrefix "70" 7rem,
+  $negativeMarginClassPrefix "90" 9rem,
+  $negativeMarginClassPrefix "100" 10rem,
+);
+
+// Default Shadows
+$shadows: () !default;
+$shadowsClassPrefix: "shadow" !default;
+
+$shadowDefault: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+$shadowDown: 0 5px 5px 0 rgba(0, 0, 0, 0.35), 0 10px 10px 0 rgba(0, 0, 0, 0.16);
+$shadow_md: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+$shadow_lg: 0 5px 5px 0 rgba(0, 0, 0, 0.35), 0 5px 15px 0 rgba(0, 0, 0, 0.16);
+$shadow_inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+$shadow_outline: 0 0 0 3px rgba(0, 0, 0, 0.05);
+$shadow_none: none;
+
+$shadows: (
+  $shadowsClassPrefix default $shadowDefault 'states',
+  $shadowsClassPrefix "down" $shadowDown 'no-states',
+  $shadowsClassPrefix "md" $shadow_md 'states',
+  $shadowsClassPrefix "lg" $shadow_lg 'states',
+  $shadowsClassPrefix "inner" $shadow_inner 'no-states',
+  $shadowsClassPrefix "outline" $shadow_outline 'no-states',
+  $shadowsClassPrefix "none" none 'no-states',
+);
+
+$shadowOverClassPrefix: "has-overlay" !default;
+$gredList1: linear-gradient(left, rgba(#000, 0) 0%, black 100%);
+$gredList2: linear-gradient(70deg, $color2 45%, $color3 0%);
+$shadowOver: (
+  $shadowOverClassPrefix 'dark' $gredList1 'no-states',
+  $shadowOverClassPrefix "none" none 'no-states',
+  $shadowOverClassPrefix 'primary-tilt-45' $gredList2 'no-states',
+);
+
+// z-index settings
+$zIndexs: () !default;
+$zIndexsClassPrefix: "z" !default;
+$zIndexs: (
+  $zIndexsClassPrefix "auto" "auto",
+  $zIndexsClassPrefix "0" 0,
+  $zIndexsClassPrefix "10" 10,
+  $zIndexsClassPrefix "20" 20,
+  $zIndexsClassPrefix "30" 30,
+  $zIndexsClassPrefix "40" 40,
+  $zIndexsClassPrefix "50" 50
+);
+
+$negativeZIndexes: () !default;
+$negativeZIndexesClassPrefix: $zIndexsClassPrefix !default;
+$negativeZIndexes: ($negativeZIndexesClassPrefix "1" 1,);
+
+// Opacity settings
+$opacities: () !default;
+$opacitiesClassPrefix: "opacity" !default;
+$opacities: (
+  $opacitiesClassPrefix "0" 0 'states',
+  $opacitiesClassPrefix "15" 0.15 null,
+  $opacitiesClassPrefix "25" 0.25 null,
+  $opacitiesClassPrefix "50" 0.5 null,
+  $opacitiesClassPrefix "65" 0.65 null,
+  $opacitiesClassPrefix "75" 0.75 null,
+  $opacitiesClassPrefix "85" 0.85 null,
+  $opacitiesClassPrefix "100" 1 'states',
+);
+
+// Border-radius settings
+$borderRadiuses: () !default;
+$borderRadiusesClassPrefix: "radius" !default;
+$borderRadiuses: (
+  $borderRadiusesClassPrefix "none" 0,
+  $borderRadiusesClassPrefix "sm" 0.125rem,
+  $borderRadiusesClassPrefix "default" 0.25rem,
+  $borderRadiusesClassPrefix "lg" 0.5rem,
+  $borderRadiusesClassPrefix "full" 9999px
+);
+
+// Container widths
+$container_fluid: 100% !default;
+$container_sm: 57.6rem !default;
+$container_md: 71.0rem !default;
+$container_lg: 99.2rem !default;
+$container_xl: 120rem !default;
+
+$container: () !default;
+$containerClassPrefix: "container" !default;
+$container_null: calc(100% - 5rem) !default;
+$container: (
+  $containerClassPrefix null $container_null,
+  $containerClassPrefix "fluid" $container_fluid,
+  $containerClassPrefix "sm" $container_sm,
+  $containerClassPrefix "md" $container_md,
+  $containerClassPrefix "lg" $container_lg,
+  $containerClassPrefix "xl" $container_xl
+);
+
+// Aspect Ratios
+$aspectRatios: () !default;
+$aspectRatiosClassNamePrefix: "ratio" !default;
+$aspectRatios: (
+  $aspectRatiosClassNamePrefix "1x1" 1 1,
+  $aspectRatiosClassNamePrefix "5x2" 5 2,
+  $aspectRatiosClassNamePrefix "16x9" 16 9,
+  $aspectRatiosClassNamePrefix "none" 1 0,
+);
+
+// columnd-count Content devider
+$columnCount: () !default;
+$columnCount: (0, 1, 2, 3, 4);
+
+$gridSizes: () !default;
+$gridSizesClassNamePrefix: "col" !default;
+$gridSizes: (
+  $gridSizesClassNamePrefix null 12,
+);
+
+$hasColsSizes: () !default;
+$hasColsSizesClassNamePrefix: "grid" !default;
+$hasChildColsClassNamePrefix: "column" !default;
+$hasColsSizes: (
+  $hasColsSizesClassNamePrefix null 12,
+);
+
+// Grid Gutters
+// $gridGutters: () !default;
+// $gridGutters: (
+//   null 1.2rem,
+//   "thin" 2.4rem,
+//   "zero" 0rem
+// );
+
+// Icons size
+$iconsSizes: () !default;
+$iconsSizesClassNamePrefix: "icon" !default;
+$iconsSizes: (
+  $iconsSizesClassNamePrefix null 2.4rem,
+  $iconsSizesClassNamePrefix "sm" 2.1rem,
+  $iconsSizesClassNamePrefix "md" 3.2rem,
+  $iconsSizesClassNamePrefix "2md" 3.6rem,
+  $iconsSizesClassNamePrefix "lg" 4.8rem,
+  $iconsSizesClassNamePrefix "xl" 6.4rem,
+  $iconsSizesClassNamePrefix "auto" 'auto',
+);
+
+$borderRadiusClassPrefix: "corner" !default;
+$borderRadiuses: (
+  $borderRadiusesClassPrefix null 0.5rem,
+  $borderRadiusesClassPrefix "none" 0,
+  $borderRadiusesClassPrefix "sm" 0.125rem,
+  $borderRadiusesClassPrefix "default" 0.25rem,
+  $borderRadiusesClassPrefix "lg" 0.5rem,
+  $borderRadiusesClassPrefix "full" 9999px
+);
+$shadowOverClassPrefix: "has-overlay" !default;
+$gredList1: linear-gradient(left, rgba(#000, 0) 0%, black 100%);
+$shadowOver: (
+  $shadowOverClassPrefix 'dark' $gredList1 'states',
+  $shadowOverClassPrefix "none" none 'states',
+);
+
+$iconThickNess: .12rem !default;
+

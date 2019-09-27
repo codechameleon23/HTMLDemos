@@ -1,0 +1,89 @@
+.#{$gridSizesClassNamePrefix}{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+*[class*="col-count-"]{
+  > *{
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+        break-inside: avoid;
+    }
+}
+
+@mixin getColumnClasses($bp: $breakPoint) {
+
+  @each $hasColsSize in $hasColsSizes{
+    @if(nth($hasColsSize, 2)) {
+      .#{$bp}#{$hasColsSizesClassNamePrefix}-#{nth($hasColsSize, 2)} {
+        @for $i from 1 through nth($hasColsSize, 3) {
+          &-#{$i}{
+            > .#{$hasChildColsClassNamePrefix}{
+              flex: none;
+              // width: percentage($i / nth($hasColsSize, 3));
+              width: 100% / (($i * nth($hasColsSize, 3)) / nth($hasColsSize, 3));
+            }
+          }
+        }
+      }
+    }@else{
+      .#{$bp}#{$hasColsSizesClassNamePrefix} {
+        @for $i from 1 through nth($hasColsSize, 3) {
+          &-#{$i}{
+            > .#{$hasChildColsClassNamePrefix}{
+              flex: none;
+              // width: percentage($i / nth($hasColsSize, 3));
+              width: 100% / (($i * nth($hasColsSize, 3)) / nth($hasColsSize, 3));
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @each $gridSize in $gridSizes {
+    @if(nth($gridSize, 2)) {
+      .#{$bp}#{$gridSizesClassNamePrefix}-#{nth($gridSize, 2)} {
+        @for $i from 1 through nth($gridSize, 3) {
+          &-#{$i}{
+            flex: none;
+            width: percentage($i / nth($gridSize, 3));
+          }
+        }
+      }
+    }@else{
+      .#{$bp}#{$gridSizesClassNamePrefix} {
+        @for $i from 1 through nth($gridSize, 3) {
+          &-#{$i}{
+            flex: none;
+            width: percentage($i / nth($gridSize, 3));
+          }
+        }
+      }
+    }
+  }
+
+  .#{$bp}col {
+    
+    &-auto {
+      flex: none;
+      width: auto;
+    }
+  
+    &-flex {
+      flex: 1;
+      flex: 1 1 auto;
+    }
+
+    &-unset {
+      flex: unset;
+      width: auto;
+    }
+
+    @each $colCount in $columnCount {
+      &-count-#{nth($colCount, 1)}{
+        column-count: nth($colCount, 1); 
+      }
+    }
+  }
+}

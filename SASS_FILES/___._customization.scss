@@ -1,0 +1,232 @@
+/*ImportFontsonts*/
+@import "vendors/importFonts";
+
+$colorWhite: #ffffff;
+$colorBlack: #000000;
+
+// brand colors
+$color1: #414042;
+$color2: #fed403;
+//-------------------------
+
+// $gridSizes: ();
+$orientations: (
+  // landscape\: "landscape",
+  // portrait\: "portrait"
+);
+
+$baseFont: 'Open Sans', $font_sans;
+
+$defaultFont: $baseFont;
+$defaultTextColor: $color1;
+$defaultFontWeights: 300;
+$defaultFontSize: 2rem;
+
+$fontFamily: (
+  $fontFamilyClassNamePrefix "default" $defaultFont,
+);
+
+$breakPoints: (
+  null 0, 
+  // sm\: $bp_sm, 
+  md\: $bp_md, 
+  lg\: $bp_lg,
+  xl\: $bp_xl
+);
+
+$states: (
+  null null,
+  hover\: ":hover",
+  focus\: ":focus",
+  // active\: null,
+);
+
+$bgColors: (
+  $bgColorsClassPrefix "inherit" inherit 'states',
+  $bgColorsClassPrefix "black" $colorBlack 'no-states',
+  $bgColorsClassPrefix "dark" $color1 'no-states',
+  $bgColorsClassPrefix "white" $colorWhite 'no-states',
+  $bgColorsClassPrefix "secondary" $color2 'states',
+);
+
+$themeColor: ();
+
+$borderColors: (
+  $borderColorsClassPrefix "inherit" inherit 'states',
+  $borderColorsClassPrefix "dark" $color1 'states',
+  $borderColorsClassPrefix "secondary" $color2 'states',
+);
+
+$borderWidth: (
+  null 0.1rem null,
+  2 0.2rem null,
+);
+
+
+$selectionTextColor: $colorWhite;
+$selectionTextBgColor: rgba(invert($color2), .6);
+
+$textColors: (
+  $textColorsClassPrefix "inherit" inherit 'states',
+  $textColorsClassPrefix "default" $color1 'states',
+  $textColorsClassPrefix "white" $colorWhite 'states',
+  $textColorsClassPrefix "secondary" $color2 'states',
+);
+
+$fontSizes: (
+  // $fontSizesClassPrefix "inherit" inherit null,
+  $fontSizesClassPrefix "xs" 1.3rem null,
+  $fontSizesClassPrefix "sm" 1.6rem null,
+  $fontSizesClassPrefix "2sm" 1.8rem null,
+  $fontSizesClassPrefix "rg" $defaultFontSize null,
+  $fontSizesClassPrefix "md" 2.2rem null,
+  $fontSizesClassPrefix "2md" 3.2rem null,
+  $fontSizesClassPrefix "lg" 4.2rem null,
+  $fontSizesClassPrefix "xl" 6.2rem null,
+);
+
+$fontWeights: (
+  // $fontWeightsClassPrefix "inherit" inherit null,
+  // $fontWeightsClassPrefix "hairline" 100 null,
+  // $fontWeightsClassPrefix "thin" 200 null,
+  // $fontWeightsClassPrefix "light" 300 null,
+  $fontWeightsClassPrefix "normal" 400 null,
+  // $fontWeightsClassPrefix "medium" 500 null,
+  $fontWeightsClassPrefix "semibold" 600 null,
+  $fontWeightsClassPrefix "bold" 700 'states',
+  // $fontWeightsClassPrefix "extrabold" 800 null,
+  // $fontWeightsClassPrefix "black" 900 null,
+);
+
+$lineHeights: ();
+
+$paddings: (
+  $paddingsClassPrefix "10" 1rem,
+  $paddingsClassPrefix "15" 1.5rem,
+  $paddingsClassPrefix "20" 2rem,
+  $paddingsClassPrefix "25" 2.5rem,
+  $paddingsClassPrefix "40" 5rem,
+  $paddingsClassPrefix "50" 5rem,
+  $paddingsClassPrefix "70" 7rem,
+  $paddingsClassPrefix "100" 10rem,
+  $paddingsClassPrefix "0" 0,
+);
+
+$margins: (
+  $marginsClassPrefix "auto" auto,
+  $marginsClassPrefix "5" .5rem,
+  $marginsClassPrefix "10" 1rem,
+  // $marginsClassPrefix "15" 1.5rem,
+  $marginsClassPrefix "20" 2rem,
+  $marginsClassPrefix "30" 3rem,
+  $marginsClassPrefix "100" 10rem,
+  // $marginsClassPrefix "0" 0,
+);
+
+$negativeMargin: (
+  $negativeMarginClassPrefix "10" 1rem,
+  $negativeMarginClassPrefix "20" 2rem,
+);
+
+$shadowDefault: 0px 1px 4px -1px rgba($colorBlack, 0.3);
+$shadowBottom: 0px 2px 6px -2px rgba($colorBlack, 0.8);
+$shadow_outline: 0 0 0 3px rgba($colorBlack, 0.8);
+$shadow_md: 0 4px 8px 0 rgba($colorBlack, 0.22),
+0 2px 4px 0 rgba($colorBlack, 0.08);
+$shadow_lg: 0 15px 30px 0 rgba($colorBlack, 0.21),
+0 5px 15px 0 rgba($colorBlack, 0.08);
+$shadow_inner: inset 0px 0px 3px 0px rgba($colorBlack, 0.5);
+
+$shadows: (
+  // $shadowsClassPrefix null $shadowDefault 'states',
+  $shadowsClassPrefix "bottom" $shadowBottom 'states',
+  $shadowsClassPrefix "lg" $shadow_lg null,
+  // $shadowsClassPrefix "inner" $shadow_inner null,
+  // $shadowsClassPrefix "outline" $shadow_outline null,
+  $shadowsClassPrefix "none" none null,
+);
+
+$letterSpacings: (
+  // $letterSpacingsClassPrefix "tight" -0.05em,
+  // $letterSpacingsClassPrefix "normal" 0,
+  // $letterSpacingsClassPrefix "wide" .15em,
+);
+
+$aspectRatiosClassNamePrefix: "ratio";
+$aspectRatios: (
+  // $aspectRatiosClassNamePrefix "1x1" 1 1,
+  // $aspectRatiosClassNamePrefix "5x2" 5 2,
+  $aspectRatiosClassNamePrefix "16x9" 16 9,
+  $aspectRatiosClassNamePrefix "logo" 250 195,
+  $aspectRatiosClassNamePrefix "service-icon" 522 261,
+  $aspectRatiosClassNamePrefix "unstuck-design" 150 14,
+  $aspectRatiosClassNamePrefix "none" 1 0,
+);
+
+$columnCount: ();
+$hasColsSizes: ();
+
+$iconsSizes: (
+  $iconsSizesClassNamePrefix null 2.2rem,
+  $iconsSizesClassNamePrefix "default" 2.2rem,
+  $iconsSizesClassNamePrefix "sm" 6.4rem,
+  $iconsSizesClassNamePrefix "md" 9rem,
+  $iconsSizesClassNamePrefix "lg" 12.5rem,
+  $iconsSizesClassNamePrefix "logo-header" 25rem,
+  $iconsSizesClassNamePrefix "logo-footer" 15.4rem,
+  $iconsSizesClassNamePrefix "logo-sm" 11.7rem,
+  $iconsSizesClassNamePrefix "unstuck-design" 20rem,
+  // $iconsSizesClassNamePrefix "auto" 'auto',
+);
+
+$opacities: (
+  // $opacitiesClassPrefix "0" 0 null,
+  // $opacitiesClassPrefix "15" 0.15 null,
+  // $opacitiesClassPrefix "25" 0.25 null,
+  $opacitiesClassPrefix "50" 0.5 null,
+  // $opacitiesClassPrefix "65" 0.65 null,
+  // $opacitiesClassPrefix "75" 0.75 null,
+  // $opacitiesClassPrefix "85" 0.85 null,
+  // $opacitiesClassPrefix "100" 1 null,
+);
+
+$borderRadiusClassPrefix: "radius";
+$borderRadiuses: (
+  $borderRadiusesClassPrefix "full" 9999px,
+);
+
+$container_null: calc(100% - 4rem);
+$container: (
+  $containerClassPrefix null $container_null,
+  $containerClassPrefix "fluid" $container_fluid,
+  // $containerClassPrefix "sm" $container_sm,
+  $containerClassPrefix "md" $container_md,
+  $containerClassPrefix "lg" $container_lg,
+  $containerClassPrefix "xl" $container_xl
+);
+
+$gredList1: linear-gradient(to right, rgba($colorBlack, .4) 0%, rgba($colorBlack, .85) 100%);
+$gredList3: linear-gradient(to right, rgba($colorBlack, .4) 0%, rgba($colorBlack, .4) 100%);
+$gredList4: linear-gradient(70deg, $color2 55%, transparent 0%);
+$gredList5: linear-gradient(70deg, transparent 55%, $color2 0%);
+$shadowOver: (
+  // $shadowOverClassPrefix 'default' $gredList3 'no-states',
+  // $shadowOverClassPrefix 'dark' $gredList1 'no-states',
+  // $shadowOverClassPrefix 'primary-tilt-45' $gredList2 'no-states',
+  // $shadowOverClassPrefix 'primary-tilt-55' $gredList4 'no-states',
+  // $shadowOverClassPrefix 'primary-tilt-55-rev' $gredList5 'no-states',
+  // $shadowOverClassPrefix 'primary' $gredList1 'states',
+  // $shadowOverClassPrefix "none" none 'no-states',
+);
+
+$zIndexs: (
+  // $zIndexsClassPrefix "auto" "auto",
+  // $zIndexsClassPrefix "0" 0,
+  // $zIndexsClassPrefix "10" 10,
+  // $zIndexsClassPrefix "20" 20,
+  // $zIndexsClassPrefix "30" 30,
+  // $zIndexsClassPrefix "40" 40,
+  $zIndexsClassPrefix "50" 50,
+);
+
+$iconThickNess: .1rem;

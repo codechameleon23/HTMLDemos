@@ -1,0 +1,132 @@
+.icon,
+.arrow{
+   > *{
+      color: inherit;
+      &:after,
+      &:before{
+         content: "";
+         position: absolute;
+         color: inherit;
+      }
+   }
+   &.right,
+   &.next,
+   &.left,
+   &.prev,
+   &.up,
+   &.down,
+   &.plus,
+   &.cross{
+      > *{
+         &:after,
+         &:before{
+            border: $iconThickNess solid;
+         }
+      }
+   }
+   &.right,
+   &.next,
+   &.left,
+   &.prev,
+   &.up,
+   &.down{
+      & > *{
+         &:before,
+         &:after{
+            width: calc(100% / 3);
+            height: calc(100% / 3);
+         }
+
+         &:before{
+            display: none;
+         }
+         &:after{
+            transform: rotate(-45deg);
+         }
+      }
+   }
+   &.right,
+   &.next{
+      > *{
+         &:after{
+            border-left: transparent;
+            border-top: transparent;
+            left: calc(100% / 4);
+         }   
+      }
+   }
+  
+   &.left,
+   &.prev{
+      > *{
+         &:after{
+            border-right: transparent;
+            border-bottom: transparent;
+            right: calc(100% / 4);
+         }   
+      }
+   }
+   
+   &.down > *{
+      &:after{
+         border-right: transparent;
+         border-top: transparent;
+         top: calc(100% / 4);
+      }
+   }
+
+   &.up > *{
+      &:after{
+         border-left: transparent;
+         border-bottom: transparent;
+         bottom: calc(100% / 4);
+      }
+   }
+
+   &.up,
+   &.down{
+      & > *{
+         &:after{
+            left: 33.33%;
+         }
+      }
+   }
+
+   &.right,
+   &.next,
+   &.left,
+   &.prev{
+      & > *{
+         &:after{
+            top: 33.33%;
+         }
+      }
+   }
+
+   &.plus,
+   &.cross{
+      & > * {
+         &:after,
+         &:before{
+            border-width: $iconThickNess / 1;
+         }
+         &:before{
+            width: 33.33%;
+            left: calc(33.33% + #{$iconThickNess / 2});
+            top: calc(50% - #{$iconThickNess / 2});
+         }
+         &:after{
+            height: 33.33%;
+            top: calc(33.33% + #{$iconThickNess / 2});
+            left: calc(50% - #{$iconThickNess / 1});
+         }
+      }
+   }
+
+   &.cross > *{
+      &:after,
+      &:before{
+         transform: rotate(-45deg);
+      }
+   }
+}

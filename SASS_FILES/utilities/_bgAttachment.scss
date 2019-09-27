@@ -1,0 +1,43 @@
+@mixin getBgAttachmentClasses($bp: $breakPoint) {
+  .#{$bp}bg{
+    &-fixed{background-attachment: fixed;}
+    &-local{background-attachment: local;}
+    &-scroll{background-attachment: scroll;}
+  }
+}
+
+@mixin getBgPositionClasses($bp: $breakPoint) {
+  .#{$bp}bg{
+    &-top{background-position: top;}
+    &-right{background-position: right;}
+    &-bottom{background-position: bottom;}
+    &-left{background-position: left;}
+    &-center{background-position: center;}
+    &-left-top{background-position: left top;}
+    &-left-bottom{background-position: left bottom;}
+    &-left-center{background-position: left center;}
+    &-right-top{background-position: right top;}
+    &-right-bottom{background-position: right bottom;}
+    &-right-center{background-position: right center;}
+    &-center-bottom{background-position: center bottom;}
+    &-center-top{background-position: center top;}
+  }
+}
+
+@mixin getBgRepeatClasses($bp: $breakPoint) {
+  .#{$bp}bg{
+    &-repeat{background-repeat: repeat;}
+    &-no-repeat{background-repeat: no-repeat;}
+    &-repeat-x{background-repeat: repeat-x;}
+    &-repeat-y{background-repeat: repeat-y;}
+  }
+}
+
+@mixin getBgSizeClasses($bp: $breakPoint) {
+  .#{$bp}bg{
+    &-auto{background-size: auto;}
+    &-cover{background-size: cover;}
+    &-contain{background-size: contain;}
+    &-100-x{background-size: 100%;}
+  }
+}

@@ -1,0 +1,16 @@
+@mixin getZindexClasses($bp: $breakPoint) {
+  @each $zIndex in $negativeZIndexes {
+    .#{$bp}-#{nth($zIndex, 1)} {
+      &-#{nth($zIndex, 2)} {
+        z-index: nth($zIndex, 3) * -1;
+      }
+    }
+  }
+  @each $zIndex in $zIndexs {
+    .#{$bp}#{nth($zIndex, 1)} {
+      &-#{nth($zIndex, 2)} {
+        z-index: nth($zIndex, 3);
+      }
+    }
+  }
+}

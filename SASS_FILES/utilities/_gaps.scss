@@ -1,0 +1,97 @@
+$gapDirection: (
+null null,
+t top,
+r right,
+b bottom,
+l left,
+x left right,
+y top bottom,
+);
+
+@mixin getGapsClasses($bp: $breakPoint) {
+
+  /*paddings*/
+  @each $padding in $paddings {
+    .#{$bp}#{nth($padding, 1)} {
+      @each $gd in $gapDirection {
+        @if( nth($gd, 1) == x or nth($gd, 1) == y ){
+          &#{nth($gd, 1)}-#{nth($padding, 2)}{
+            padding-#{nth($gd, 2)}: (nth($padding, 3));
+            padding-#{nth($gd, 3)}: (nth($padding, 3));
+          }
+        } @else if(nth($gd, 1)){
+          &#{nth($gd, 1)}-#{nth($padding, 2)}{
+            padding-#{nth($gd, 2)}: #{nth($padding, 3)};
+          }
+        } @else {
+          &-#{nth($padding, 2)}{
+            padding-top: #{nth($padding, 3)};
+            padding-right: #{nth($padding, 3)};
+            padding-bottom: #{nth($padding, 3)};
+            padding-left: #{nth($padding, 3)};
+          }
+        }
+      }
+    }
+  }
+
+  /*margins*/
+  @each $margin in $margins {
+    .#{$bp}#{nth($margin, 1)} {
+      @each $gd in $gapDirection {
+        @if( nth($gd, 1) == x or nth($gd, 1) == y ){
+          &#{nth($gd, 1)}-#{nth($margin, 2)}{
+            margin-#{nth($gd, 2)}: (nth($margin, 3));
+            margin-#{nth($gd, 3)}: (nth($margin, 3));
+          }
+        } @else if(nth($gd, 1)){
+          &#{nth($gd, 1)}-#{nth($margin, 2)}{
+            margin-#{nth($gd, 2)}: #{nth($margin, 3)};
+          }
+        } @else {
+          &-#{nth($margin, 2)}{
+            margin-top: #{nth($margin, 3)};
+            margin-right: #{nth($margin, 3)};
+            margin-bottom: #{nth($margin, 3)};
+            margin-left: #{nth($margin, 3)};
+          }
+        }
+      }
+    }
+  }
+
+  /*-ve margins*/
+  @each $margin in $negativeMargin {
+    .#{$bp}-#{nth($margin, 1)} {
+      @each $gd in $gapDirection {
+        @if( nth($gd, 1) == x or nth($gd, 1) == y ){
+          &#{nth($gd, 1)}-#{nth($margin, 2)}{
+            margin-#{nth($gd, 2)}: (nth($margin, 3)) * -1;
+            margin-#{nth($gd, 3)}: (nth($margin, 3)) * -1;
+            @if( nth($gd, 1) == x){
+              &[class*="#{$hasColsSizesClassNamePrefix}-"]{
+                &:first-of-type{
+                  margin-top: (nth($margin, 3)) * -1;
+                }
+                &:last-of-type{
+                  margin-bottom: (nth($margin, 3)) * -1;
+                }
+              }
+            }
+          }
+        } @else if(nth($gd, 1)){
+          &#{nth($gd, 1)}-#{nth($margin, 2)}{
+            margin-#{nth($gd, 2)}: (nth($margin, 3)) * -1;
+          }
+        } @else {
+          &-#{nth($margin, 2)}{
+            margin-top: nth($margin, 3) * -1;
+            margin-right: nth($margin, 3) * -1;
+            margin-bottom: nth($margin, 3) * -1;
+            margin-left: nth($margin, 3) * -1;
+          }
+        }
+      }
+    }
+  }
+}

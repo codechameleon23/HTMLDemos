@@ -1,0 +1,47 @@
+@mixin getColorTheme($bp: $breakPoint) {
+   @include createTheme();
+   *[class*="has-#{$themeColorClassPrefix}-"]{
+      @include createTheme();
+   }
+}
+
+@mixin createTheme() {
+   @each $theme in $themeColor {
+      .has-#{$themeColorClassPrefix}-#{nth($theme, 2)}{
+         &.theme,
+         .theme{
+            &-border{
+               border-color: nth($theme, 3);
+            }
+            &-bg{
+               background-color: nth($theme, 3);
+               &-light{
+                  background-color: nth($theme, 4);
+               }
+            }
+            &-svg,
+            &-text{
+               color: nth($theme, 3);
+               svg{
+                  color: inherit;
+               }
+            }
+         }
+         @each $state in $states {
+            .#{nth($state, 1)}theme-border#{nth($state, 2)}{
+               border-color: nth($theme, 3);
+            }
+            .#{nth($state, 1)}theme-text#{nth($state, 2)},
+            .#{nth($state, 1)}theme-link#{nth($state, 2)}{
+               color: nth($theme, 3);
+            }
+            .#{nth($state, 1)}theme-bg#{nth($state, 2)}{
+               background-color: nth($theme, 3);
+            }
+            .#{nth($state, 1)}theme-bg-light#{nth($state, 2)}{
+               background-color: nth($theme, 4);
+            }
+         }
+      }
+   }
+}

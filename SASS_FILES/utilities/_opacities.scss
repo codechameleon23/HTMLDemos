@@ -1,0 +1,19 @@
+@mixin getOpacityClasses($bp: $breakPoint) {
+  @each $opacity in $opacities {
+    @if(nth($opacity, 4) == 'states'){
+      @each $state in $states {
+        .#{$bp}#{nth($state, 1)}#{nth($opacity, 1)} {
+          &-#{nth($opacity, 2)}#{nth($state, 2)} {
+            opacity: nth($opacity, 3);
+          }
+        }
+      }
+    }@else{
+      .#{$bp}#{nth($opacity, 1)} {
+        &-#{nth($opacity, 2)} {
+          opacity: nth($opacity, 3);
+        }
+      }
+    }
+  }
+}

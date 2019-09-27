@@ -1,0 +1,39 @@
+/*Aspect ratio default layout*/
+*[class*="#{$aspectRatiosClassNamePrefix}-"]{
+  position: relative;
+	width: 100%;
+
+	&:before {
+		content: "";
+		pointer-events: none;
+		display: block;
+    width: 100%;
+  }
+
+  >*:first-child {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  // &[class*="ratio-none"]{
+  //   &:before {
+  //     display: none;
+  //   }
+  //   >*:first-child {
+  //     position: initial;
+  //   }
+  // }
+}
+
+@mixin getAspectRatioClasses($bp: $breakPoint) {
+  @each $ar in $aspectRatios {
+    .#{$bp}#{nth($ar, 1)}-#{nth($ar, 2)} {
+      &:before {
+        padding-top: (nth($ar, 4) / nth($ar, 3)) * 100%;
+      }
+    }
+  }
+}
