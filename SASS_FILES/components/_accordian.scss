@@ -18,20 +18,19 @@
         padding-right: 1rem;
         margin-bottom: 0;
       }
-
-      &.is-open+.accordion-content {
-        max-height: 5000em;
-        opacity: 1;
-
-        >.answer {
-          animation: fade-in 0.3s 0.3s ease-in-out both;
+    }
+    &.is-open{
+      >.accordion-label{
+        +.accordion-content {
+          max-height: 5000em;
+          opacity: 1;
+  
+          >.answer {
+            animation: fade-in 0.3s 0.3s ease-in-out both;
+          }
         }
-      }
-
-      &.is-open>.toggle-sign {
-        &:before {
-          transform: rotate(90deg);
-          opacity: 0;
+        >.toggle-sign {
+          transform: rotate(45deg);
         }
       }
     }
@@ -39,7 +38,7 @@
     >.accordion-content {
       max-height: 0;
       overflow: hidden;
-      transition: all 0.3s 0s ease-in-out;
+      // transition: all 0.3s 0s ease-in-out;
       opacity: 0;
     }
   }
