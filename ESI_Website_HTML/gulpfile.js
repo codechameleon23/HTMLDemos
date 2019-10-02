@@ -55,13 +55,7 @@ const PROJECT_JS_LIST = [
 const PROJECT_PAGES_LIST = [
   './src/allpages.html',
   './src/index.html',
-  './src/ewe-locations.html',
-  './src/your-locations.html',
-  './src/quick-quote.html',
-  './src/detailed-quote.html',
-  './src/extra-options.html',
-  './src/storage-period.html',
-  './src/finish.html',
+  './src/get-a-quote.html',
   './src/thank-ewe.html',
   './src/education.html',
   './src/how-it-works.html',
@@ -180,9 +174,9 @@ exports.JS_OPERATION = JS_OPERATION;
 var build = gulp.series(
   CSS_OPERATION,
   JS_OPERATION,
-  IMG_OPERATION,
+  // IMG_OPERATION,
   HTML_OPERATION,
-  CSS_PURIFY,
+  // CSS_PURIFY,
   watch
 );
 

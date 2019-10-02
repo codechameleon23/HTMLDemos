@@ -87,7 +87,7 @@ function check_if_in_view() {
   });
 }
 $window.on('scroll resize', check_if_in_view);
-$window.on('scroll resize', navBarClose);
+// $window.on('scroll resize', navBarClose);
 $window.trigger('scroll');
 
 $(document).ready(function () {
@@ -179,30 +179,60 @@ $(document).ready(function () {
 
   /*Accordion toggle*/
   $(".accordion-toggle").on('click tap',  function(){
-    var elm = $(this).closest('.accordion');
-    if(elm.hasClass("is-open")){
-      elm.closest('.accordion-wrapper').find('.accordion').removeClass('is-open');
-      elm.removeClass("is-open");
-    }else{
-      elm.closest('.accordion-wrapper').find('.accordion').removeClass('is-open');
-      elm.addClass("is-open");
-      
-      // Scroll to avoid jump when other closes
-      if(getViewportWidth() < 900){
-        setTimeout(function() {
-          var offset = elm.offset();
-          window.scrollTo(0, offset.top - 20)
-        }, 700);
-      }
+    var elm = $(this);
+    var elmAttr = elm.attr('data-filterby');
+    var parent = elm.closest('.accordion-wrapper');
+    
+    var togglable = parent.data('togglable');
+    var closeOthers = parent.data('close-others');
 
+    var targetTab = parent.find('[data-filterby="'+elmAttr+'"]');
+    var targetTabParent = targetTab.closest('.accordion');
+
+    if(togglable && targetTabParent.hasClass("is-open")){
+      parent.find('.accordion').removeClass('is-open');
+      targetTabParent.removeClass("is-open");
+    }else{
+      closeOthers && parent.find('.accordion').removeClass('is-open');
+      targetTabParent.addClass("is-open");
     }
   });
 
   // Datepicker
-  $(".datepicker").flatpickr();
+  $(".datepicker").flatpickr({
+    dateFormat: "d-M-y"
+  });
 
   // Range slider
-  $(".js-range-slider").ionRangeSlider();
+  $('.range-group').each(function(){
+    var thisGroup = $(this);
+    var eachRangeSlider = thisGroup.find('.js-range-slider');
+    var eachRangeSlider = eachRangeSlider.ionRangeSlider({
+      skin: "round"
+    });
+    var control = thisGroup.find('.range-control');
+    var output = thisGroup.find('.output');
+    var eachRangeSliderData = null;
+    var value = 0;
+    var step = eachRangeSlider.data('step');
+
+    eachRangeSlider.on('change', function(){
+      var elm = $(this);
+      value = parseInt(elm.prop('value'));
+      output.val(value);
+    })
+
+    control.on('click', function(){
+      var elm = $(this);
+      var direction = elm.attr('data-control');
+      eachRangeSliderData = eachRangeSlider.data("ionRangeSlider");
+      eachRangeSliderData.update({
+        from: direction === 'decrement' ? value - step : value + step,
+      })
+    })
+
+  })
+  // $(".js-range-slider").ionRangeSlider();
 
   //Animate on scroll
   AOS.init({
