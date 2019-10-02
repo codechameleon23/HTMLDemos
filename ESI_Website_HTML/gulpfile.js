@@ -174,9 +174,9 @@ exports.JS_OPERATION = JS_OPERATION;
 var build = gulp.series(
   CSS_OPERATION,
   JS_OPERATION,
-  // IMG_OPERATION,
+  IMG_OPERATION,
   HTML_OPERATION,
-  // CSS_PURIFY,
+  CSS_PURIFY,
   watch
 );
 

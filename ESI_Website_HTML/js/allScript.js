@@ -178,29 +178,120 @@ $(document).ready(function () {
   };
 
   /*Accordion toggle*/
-  $(".accordion-toggle").on('click tap',  function(){
-    var elm = $(this);
-    var elmAttr = elm.attr('data-filterby');
-    var parent = elm.closest('.accordion-wrapper');
+  var url_string  = new URL(window.location.href);
+  $('.accordion-wrapper').each(function(){
+    var item = $(this);
+    var tagetAccordions = item.children('.toggle-tabs, .toggle-content').children('.accordion');
+    var tagetAccordionsToggles = tagetAccordions.children('.accordion-toggle');
+    var attr = tagetAccordionsToggles.attr('data-filterby');
+    var gotToBtn = item.find('[data-goto]');
     
-    var togglable = parent.data('togglable');
-    var closeOthers = parent.data('close-others');
+    var togglable = item.data('togglable');
+    var closeOthers = item.data('close-others');
+    var seturl = item.data('seturl');
 
-    var targetTab = parent.find('[data-filterby="'+elmAttr+'"]');
-    var targetTabParent = targetTab.closest('.accordion');
+    var tabNo = attr.split('_')[1];
+    var attrname = attr.split('_')[0];
 
-    if(togglable && targetTabParent.hasClass("is-open")){
-      parent.find('.accordion').removeClass('is-open');
-      targetTabParent.removeClass("is-open");
-    }else{
-      closeOthers && parent.find('.accordion').removeClass('is-open');
-      targetTabParent.addClass("is-open");
+    var param = url_string.searchParams.get(attrname);
+    
+    if(seturl && param){
+      var tabNo = url_string.searchParams.get(attrname);
+      var elmAttr = attrname+'_'+tabNo;
+
+      tagetAccordions.removeClass('is-open');
+      defaultTargetTab = item.find('[data-filterby="'+elmAttr+'"]').closest('.accordion');
+      defaultTargetTab.addClass("is-open");
     }
+
+    tagetAccordionsToggles.on('click tap',  function(){
+      var elm = $(this);
+      var elmAttr = elm.attr('data-filterby');
+      var targetTab = item.find('[data-filterby="'+elmAttr+'"]').closest('.accordion');
+
+      if(togglable && targetTab.hasClass("is-open")){
+        tagetAccordions.removeClass('is-open');
+        targetTab.removeClass("is-open");
+      }else{
+        if(closeOthers) {
+          tagetAccordions.removeClass('is-open');
+        } 
+        targetTab.addClass("is-open");
+        seturl && setUrl(elmAttr);
+      }
+    })
+
+    gotToBtn.on('click tap', function(){
+      var elm = $(this);
+      var elmAttr = elm.attr('data-goto');
+      item.find('[data-filterby="'+elmAttr+'"]').trigger('click');
+    })
+
   });
+
+  function setUrl(step){
+    var stepNo = step.split('_')[1];
+    var attr = step.split('_')[0];
+    history.pushState({}, '', '?'+attr+'='+stepNo);
+  }
 
   // Datepicker
   $(".datepicker").flatpickr({
     dateFormat: "d-M-y"
+  });
+
+  // quantity input
+  $('.number-group').each(function(){
+    var thisGroup = $(this);
+    var control = thisGroup.find('.range-control');
+    var output = thisGroup.find('.output');
+    var btnDec = thisGroup.find('[data-control="decrement"]');
+    var btnInc = thisGroup.find('[data-control="increment"]');
+    var initialHide = thisGroup.find('.initial-hide');
+    var step = output.data('step') || 1;
+    var min = output.data('min') || 0;
+    var max = output.data('max') || 0;
+
+    var defaultVal = output.val();
+    output.val(defaultVal || min)
+    var value = value = parseInt(output.val());
+
+    value > 0 ? notMin() : onMin();
+
+    control.on('click', function(){
+      var elm = $(this);
+      var direction = elm.attr('data-control');
+      value = parseInt(output.val());
+      output.val(direction === 'decrement' ? ( value > min ? value - step : min) : (value < max ? value + step : max) )
+      value = parseInt(output.val());
+
+      value <= min ? onMin() : notMin();
+      value >= max ? onMax() : notMax();
+    })
+
+    function onMin(){
+      btnDec.addClass('opacity-50');
+      thisGroup.addClass('opacity-50');
+      initialHide.hide();
+    }
+    
+    function notMin(){
+      btnDec.removeClass('opacity-50')
+      thisGroup.removeClass('opacity-50');
+      initialHide.show()
+    }
+
+    function onMax(){
+      btnInc.addClass('opacity-50')
+      thisGroup.addClass('opacity-50');
+      initialHide.hide();
+    }
+    
+    function notMax(){
+      btnInc.removeClass('opacity-50')
+    }
+
+
   });
 
   // Range slider
@@ -210,20 +301,32 @@ $(document).ready(function () {
     var eachRangeSlider = eachRangeSlider.ionRangeSlider({
       skin: "round"
     });
-    var control = thisGroup.find('.range-control');
-    var output = thisGroup.find('.output');
+    
     var eachRangeSliderData = null;
     var value = 0;
+    
+    var control = thisGroup.find('.range-control');
+    var output = thisGroup.find('.output');
+    var btnDec = thisGroup.find('[data-control="decrement"]');
+    var btnInc = thisGroup.find('[data-control="increment"]');
+    
     var step = eachRangeSlider.data('step');
+    var min = eachRangeSlider.data('min');
+    var max = eachRangeSlider.data('max');
 
     eachRangeSlider.on('change', function(){
       var elm = $(this);
       value = parseInt(elm.prop('value'));
       output.val(value);
+
+      value <= min ? btnDec.addClass('opacity-50') : btnDec.removeClass('opacity-50');
+      value >= max ? btnInc.addClass('opacity-50') : btnInc.removeClass('opacity-50');
+
     })
 
     control.on('click', function(){
       var elm = $(this);
+      
       var direction = elm.attr('data-control');
       eachRangeSliderData = eachRangeSlider.data("ionRangeSlider");
       eachRangeSliderData.update({
