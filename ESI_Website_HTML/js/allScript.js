@@ -84,7 +84,18 @@ $window.on('scroll resize', check_if_in_view);
 // $window.on('scroll resize', navBarClose);
 $window.trigger('scroll');
 
+var defaultQuoteView = 'quick';
+function togleQuiteView(quoteView){
+  quoteView = quoteView || defaultQuoteView;
+  console.log('quoteView', quoteView);
+  $('.quote-view-wrapper').hide();
+  $('#'+quoteView+'-quoteViewWrapper').show();
+}
+
+
 $(document).ready(function () {
+
+  togleQuiteView();
 
   // Navbar toggle
   $(".hamburger").on("click", function () {
@@ -361,7 +372,6 @@ $(document).ready(function () {
     easing: 'ease-in-out',
     anchorPlacement: 'top-bottom',
   });
-
 });
 
 // iPhone page refresh on browser back button
