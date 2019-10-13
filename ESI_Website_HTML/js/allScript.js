@@ -211,6 +211,7 @@ $(document).ready(function () {
   $('.accordion-wrapper').each(function(){
     var item = $(this);
     var tagetAccordions = item.children('.toggle-tabs, .toggle-content').children('.accordion');
+
     var tagetAccordionsToggles = tagetAccordions.children('.accordion-toggle');
     var attr = tagetAccordionsToggles.attr('data-filterby');
     var gotToBtn = item.find('[data-goto]');
@@ -248,6 +249,14 @@ $(document).ready(function () {
         targetTab.addClass("is-open");
         seturl && setUrl(elmAttr);
       }
+
+      if(getViewportWidth() < 991){
+        setTimeout(function(){
+          var targetTabOffset = targetTab.last().offset().top;
+          $("html, body").animate({ scrollTop: targetTabOffset }, 'slow');
+        }, 200)
+      }
+
     })
 
     gotToBtn.on('click tap', function(){
@@ -312,8 +321,6 @@ $(document).ready(function () {
 
     function onMax(){
       btnInc.addClass('opacity-50')
-      thisGroup.addClass('opacity-50');
-      initialHide.hide();
     }
     
     function notMax(){

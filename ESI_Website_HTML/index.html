@@ -20,11 +20,11 @@
 <body class="flex-col is-close jsNavbarToggle">
   <!-- Header -->
   <header class="pin-b-auto pin-x">
-    <div class="container lg:container-xl mx-auto pos-relative py-sm">
-      <div class="flex-row justify-center align-center -mx-sm lg:align-end">
+    <div class="mx-auto container lg:container-xl pos-relative py-sm">
+      <div class="flex-row align-center justify-center -mx-sm lg:align-end">
         <div class="flex-col flex-none px-sm">
           <div class="lg:flex-stretch">
-            <a href="index.html" class="icon icon-xl lg:icon-logo-header ratio-logo">
+            <a href="index.html" class="icon icon-xl md:icon-logo-footer ratio-logo xl:icon-logo-header">
               <div>
                 <img src="images/brand-logo.svg" alt="" />
               </div>
@@ -32,22 +32,30 @@
           </div>
         </div>
         <div class="flex-stretch align-center flex-row justify-end lg:text-left text-center">
-          <nav class="flex-col pin align-center bg-white col-12 font-weight-light justify-center lg:col-auto lg:font-color-inherit lg:my-xs lg:pos-static lg:shadow-none md:col-7 navbar pin-l-auto pos-fixed shadow-lg z-50">
+          <nav class="flex-col pin align-center bg-white col-12 font-weight-light justify-center lg:bg-transparent lg:col-auto lg:font-color-inherit lg:my-xs lg:pos-static lg:shadow-none md:col-7 navbar pin-l-auto pos-fixed shadow-lg z-50">
             <div class="flex-col lg:flex-row">
-              <a class="px-sm py-xs f-size-2md font-color-inherit font-weight-inherit hover:font-weight-bold lg:f-size-2sm lg:py-0 no-underline uppercase" href="get-a-quote.html">get a QUOTE</a>
-              <a class="px-sm py-xs f-size-2md font-color-inherit font-weight-inherit hover:font-weight-bold lg:f-size-2sm lg:py-0 no-underline uppercase" href="education.html">EDUCATION</a>
-              <a class="px-sm py-xs f-size-2md font-color-inherit font-weight-inherit hover:font-weight-bold lg:f-size-2sm lg:py-0 no-underline uppercase" href="how-it-works.html">HOW IT WORKS</a>
-              <a class="px-sm py-xs f-size-2md font-color-inherit font-weight-inherit hover:font-weight-bold lg:f-size-2sm lg:py-0 no-underline uppercase" href="contact.html">CONTACT</a>
-              <a class="px-sm py-xs f-size-2md font-color-inherit font-weight-inherit hover:font-weight-bold lg:f-size-2sm lg:py-0 no-underline uppercase" href="about-ewe.html">ABOUT EWE</a>
+              <a class="font-color-inherit no-underline px-xs font-size-2sm font-weight-inherit hover:font-weight-bold lg:py-0 md:font-size-sm py-xs uppercase xl:font-size-2sm xl:px-sm lg:d-hidden" href="index.html">Home</a>
+              <a class="font-color-inherit no-underline px-xs font-size-2sm font-weight-inherit hover:font-weight-bold lg:py-0 md:font-size-sm py-xs uppercase xl:font-size-2sm xl:px-sm" href="get-a-quote.html">get a QUOTE</a>
+              <a class="font-color-inherit no-underline px-xs font-size-2sm font-weight-inherit hover:font-weight-bold lg:py-0 md:font-size-sm py-xs uppercase xl:font-size-2sm xl:px-sm" href="education.html">EDUCATION</a>
+              <a class="font-color-inherit no-underline px-xs font-size-2sm font-weight-inherit hover:font-weight-bold lg:py-0 md:font-size-sm py-xs uppercase xl:font-size-2sm xl:px-sm" href="how-it-works.html">HOW IT WORKS</a>
+              <a class="font-color-inherit no-underline px-xs font-size-2sm font-weight-inherit hover:font-weight-bold lg:py-0 md:font-size-sm py-xs uppercase xl:font-size-2sm xl:px-sm" href="contact.html">CONTACT</a>
+              <a class="font-color-inherit no-underline px-xs font-size-2sm font-weight-inherit hover:font-weight-bold lg:py-0 md:font-size-sm py-xs uppercase xl:font-size-2sm xl:px-sm" href="about-ewe.html">ABOUT EWE</a>
             </div>
           </nav>
-          <div class="font-color-white flex-row lg:pos-absolute pin-r pin-t">
-            <a href="tel:020 1234 5678" class="px-sm bg-aqua f-size-sm font-color-inherit font-weight-bold hover:bg-cyan hover:font-color-default ml-auto no-underline py-sm uppercase">CALL <span class="font-weight-light d-hidden lg:d-inline-block">020 1234 5678<span></span></span></a>
-            <a href="#" class="px-sm bg-aqua f-size-sm font-color-inherit font-weight-bold hover:bg-cyan hover:font-color-default ml-auto no-underline py-sm uppercase">Login</a>
+          <div class="flex-row font-color-white lg:pos-absolute pin-r pin-t">
+            <a href="tel:020 1234 5678" class="font-color-inherit no-underline uppercase align-center bg-aqua f-size-sm flex-row font-weight-bold hover:bg-cyan hover:font-color-default lg:mx-0 md:p-xs ml-auto mx-xxs p-xxs xl:p-sm">
+              <span class="icon lg:d-hidden"><img src="./images/phone-call.svg" alt="" /></span>
+              <span class="d-hidden md:d-inline-block px-xxs">CALL</span>
+              <span class="d-hidden font-weight-light lg:d-inline-block">020 1234 5678<span>
+                </span></span></a>
+            <a href="#" class="font-color-inherit no-underline uppercase align-center bg-aqua f-size-sm flex-row font-weight-bold hover:bg-cyan hover:font-color-default lg:mx-0 md:p-xs ml-auto mx-xxs p-xxs xl:p-sm">
+              <span class="icon lg:d-hidden"><img src="./images/login-icon.svg" alt="" /></span>
+              <span class="d-hidden md:d-inline-block px-xxs">Login</span>
+            </a>
           </div>
         </div>
         <!-- ! Hamburger -->
-        <div class="icon flex-none lg:d-hidden mx-sm">
+        <div class="icon lg:d-hidden flex-none mx-sm">
           <div>
             <div class="icon font-color-pink hamburger pointer-events-auto">
               <div>
@@ -64,30 +72,27 @@
   </header>
   <main class="flex-col flex-auto">
     <!-- inline Image right text left -->
-    <div class="flex-col lg:flex-row pos-relative bg-pink font-color-white">
+    <div class="flex-col lg:flex-row bg-pink font-color-white pos-relative">
       <section class="flex-row flex-wrap container flex-row-reverse lg:container-xl md:container-md mx-auto" data-aos="fade-up" data-aos-delay="300" data-aos-duration="700">
-        <div class="flex-col col-12 align-center justify-center lg:pl-2lg md:col-5 ml-auto py-lg xl:col-6">
-          <img src="./images/banner-1.png" alt="" />
+        <div class="flex-col col-12 align-center justify-center lg:pl-2lg md:col-5 md:py-lg ml-auto pt-md xl:col-6">
+          <img class="d-hidden md:d-inline-block" src="./images/banner-1.png" alt="" />
+          <img class="md:d-hidden" src="./images/banner-1-mobile.png" alt="" />
         </div>
-        <div class="px-sm col-12 lg:pr-2lg lg:py-2xl md:col-7 mr-auto py-2md xl:col-6">
+        <div class="col-12 px-sm lg:pr-2lg lg:py-2xl md:col-7 mr-auto py-2md xl:col-6">
           <div class="text-wrap w-full">
             <h2 class="font-size-2md lg:font-size-lg"><span>The cheaper easier way to store your stuff</span></h2>
             <h2 class="font-size-2rg lg:font-size-md"><span>Find out how much ewe can save today!</span></h2>
             <div>
               <form class="flex-col">
-                <div class="-m-xs">
+                <div class="flex-row flex-wrap -m-xs">
                   <div class="flex-col flex-auto p-xs">
-                    <input type="text" required placeholder="Start Date " class="flex-stretch bg-white border border-pink focus:shadow-lg px-2xs py-xs transition-all datepicker">
+                    <input type="text" placeholder="Start Date" class="flex-stretch bg-white border border-pink focus:shadow-lg px-2xs py-xs transition-all datepicker">
                   </div>
-                  <div class="p-xs flex-auto">
-                    <div class="flex-col -m-xs md:flex-row">
-                      <div class="flex-col flex-auto p-xs md:col-6">
-                        <input type="text" required placeholder="Postcode" class="flex-stretch bg-white border border-pink focus:shadow-lg px-2xs py-xs transition-all">
-                      </div>
-                      <div class="p-xs flex-auto md:col-6 md:flex-col">
-                        <button class="px-sm py-xs button font-color-white font-size-2sm hover:shadow-lg bg-dark">Get a quote</button>
-                      </div>
-                    </div>
+                  <div class="flex-col flex-auto p-xs md:col-6">
+                    <input type="text" placeholder="Postcode" class="flex-stretch bg-white border border-pink focus:shadow-lg px-2xs py-xs transition-all">
+                  </div>
+                  <div class="p-xs flex-auto md:col-6 md:flex-col">
+                    <button class="py-xs font-size-2sm button font-color-white hover:shadow-lg px-sm bg-dark lg:w-full">Get a quote</button>
                   </div>
                 </div>
               </form>
@@ -97,16 +102,16 @@
       </section>
     </div>
     <!-- Image right text left -->
-    <div class="flex-col lg:flex-row pos-relative">
-      <section class="ratio-16x9 lg:col-7 lg:pos-absolute pin pin-l-auto" data-aos="fade" data-aos-delay="100" data-aos-duration="700">
+    <div class="flex-col pos-relative md:flex-row">
+      <section class="mx-auto col-10 md:col-7 md:pos-absolute pin pin-l-auto ratio-16x9" data-aos="fade" data-aos-delay="100" data-aos-duration="700">
         <div class="flex-col flex-stretch pin pos-absolute bg-contain bg-no-repeat bg-left lg:my-lg" style="background-image:url('./images/ewe-store-it-cargo-truck.jpg')"></div>
       </section>
-      <section class="container lg:container-xl mx-auto md:container-md" data-aos="fade-up" data-aos-delay="300" data-aos-duration="700">
-        <div class="py-2md lg:py-2xl lg:pr-2lg mr-auto lg:col-5">
+      <section class="mx-auto container md:container-md md:container-xl" data-aos="fade-up" data-aos-delay="300" data-aos-duration="700">
+        <div class="py-2md mr-auto md:col-5 md:pr-2lg md:py-2xl">
           <div class="text-wrap w-full">
             <h2 class="font-size-2md font-color-cyan lg:font-size-lg"><span>How it works</span></h2>
             <p>We believe in a world of simplicity (not always the case) with that in mind we have tried to make a simplistic process, of course there are a lot of variables and so we have to ask questions because as much as we like simplicity we also don’t like problems. <a href="how-it-works.html" class="font-color-pink font-weight-bold no-underline">Read more</a></p>
-            <a href="#" class="px-sm py-xs button font-color-white font-size-2sm hover:shadow-lg bg-aqua">How we save ewe money</a>
+            <a href="#" class="py-xs font-size-2sm button font-color-white hover:shadow-lg px-sm bg-aqua">How we save ewe money</a>
           </div>
         </div>
       </section>
@@ -114,47 +119,47 @@
     <!-- Storage Solution -->
     <section class="@@sectionClasses">
       <div class="font-color-white bg-dark py-xl">
-        <div class="container lg:container-xl mx-auto md:container-sm">
+        <div class="mx-auto container lg:container-xl md:container-sm">
           <hgroup class="text-wrap w-full mb-md">
             <h2 class="text-center font-size-2md"><span>Choose your Storage Solution</span></h2>
           </hgroup>
-          <div class="text-center flex-row flex-wrap -m-lg">
-            <div class="flex-col col-12 lg:col-4 p-lg">
+          <div class="flex-row flex-wrap text-center lg:-m-lg">
+            <div class="flex-col col-12 lg:col-4 lg:p-lg py-sm">
               <div class="text-wrap w-full">
                 <h2 class="text-center font-size-2rg lg:font-size-md"><span>Small</span></h2>
-                <section class="ratio-1x1" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="700">
+                <section class="mx-auto col-6 lg:col-10 ratio-1x1" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="700">
                   <div class="flex-col flex-stretch bg-center bg-cover pin pos-absolute" style="background-image:url('./images/ewe-store-it-1.svg')"></div>
                 </section>
                 <div class="text-wrap w-full mt-lg" data-aos="fade" data-aos-delay="200" data-aos-duration="700">
                   <p>Bedding, PC, small TV,<br> suitcase & a few boxes</p>
                   <h2 class="font-size-2rg lg:font-size-md">From £100</h2>
-                  <a href="#" class="px-sm py-xs button font-color-white font-size-2sm hover:shadow-lg bg-aqua">Learn More</a>
+                  <a href="#" class="py-xs font-size-2sm button font-color-white hover:shadow-lg px-sm bg-aqua">Learn More</a>
                 </div>
               </div>
             </div>
-            <div class="flex-col col-12 lg:col-4 p-lg">
+            <div class="flex-col col-12 lg:col-4 lg:p-lg py-sm">
               <div class="text-wrap w-full">
                 <h2 class="text-center font-size-2rg lg:font-size-md"><span>Medium</span></h2>
-                <section class="ratio-1x1" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="700">
+                <section class="mx-auto col-6 lg:col-10 ratio-1x1" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="700">
                   <div class="flex-col flex-stretch bg-center bg-cover pin pos-absolute" style="background-image:url('./images/ewe-store-it-4.svg')"></div>
                 </section>
                 <div class="text-wrap w-full mt-lg" data-aos="fade" data-aos-delay="400" data-aos-duration="700">
                   <p>Pianos, sofas, tables, large TVs<br> & ample space for boxes</p>
                   <h2 class="font-size-2rg lg:font-size-md">From £200</h2>
-                  <a href="#" class="px-sm py-xs button font-color-white font-size-2sm hover:shadow-lg bg-aqua">Learn More</a>
+                  <a href="#" class="py-xs font-size-2sm button font-color-white hover:shadow-lg px-sm bg-aqua">Learn More</a>
                 </div>
               </div>
             </div>
-            <div class="flex-col col-12 lg:col-4 p-lg">
+            <div class="flex-col col-12 lg:col-4 lg:p-lg py-sm">
               <div class="text-wrap w-full">
                 <h2 class="text-center font-size-2rg lg:font-size-md"><span>Large</span></h2>
-                <section class="ratio-1x1" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="700">
+                <section class="mx-auto col-6 lg:col-10 ratio-1x1" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="700">
                   <div class="flex-col flex-stretch bg-center bg-cover pin pos-absolute" style="background-image:url('./images/ewe-store-it-9.svg')"></div>
                 </section>
                 <div class="text-wrap w-full mt-lg" data-aos="fade" data-aos-delay="600" data-aos-duration="700">
                   <p>Kitchen appliances, plus large pieces of furniture for the home</p>
                   <h2 class="font-size-2rg lg:font-size-md">From £300</h2>
-                  <a href="#" class="px-sm py-xs button font-color-white font-size-2sm hover:shadow-lg bg-aqua">Learn More</a>
+                  <a href="#" class="py-xs font-size-2sm button font-color-white hover:shadow-lg px-sm bg-aqua">Learn More</a>
                 </div>
               </div>
             </div>
@@ -165,7 +170,7 @@
     <!-- ribbon -->
     <section class="">
       <div class="font-color-white bg-pink md:py-md py-sm">
-        <div class="container lg:container-xl mx-auto sm:container-sm">
+        <div class="mx-auto container lg:container-xl sm:container-sm">
           <div class="flex-col lg:flex-row -m-xs align-center text-center lg:text-left">
             <div class="p-xs flex-auto">
               <div class="text-wrap w-full">
@@ -175,10 +180,10 @@
             <div class="p-xs flex-none">
               <div class="flex-row flex-wrap -m-xs">
                 <div class="p-xs">
-                  <a href="tel:020 1234 5678" class="px-sm py-xs button font-color-white font-size-2sm hover:shadow-lg bg-dark size-md">Call</a>
+                  <a href="tel:020 1234 5678" class="py-xs font-size-2sm button font-color-white hover:shadow-lg px-sm bg-dark size-md">Call</a>
                 </div>
                 <div class="p-xs">
-                  <a href="mailto:enquiries@ewestoreit.com" class="px-sm py-xs button font-color-white font-size-2sm hover:shadow-lg bg-dark size-md">Email</a>
+                  <a href="mailto:enquiries@ewestoreit.com" class="py-xs font-size-2sm button font-color-white hover:shadow-lg px-sm bg-dark size-md">Email</a>
                 </div>
               </div>
             </div>
@@ -189,18 +194,18 @@
     <!-- Image right text left -->
     <section class="py-2md lg:py-lg">
       <div class="py-2md lg:py-lg">
-        <div class="container lg:container-xl mx-auto md:container-md">
+        <div class="mx-auto container lg:container-xl md:container-md">
           <div class="flex-row flex-wrap -mx-sm -my-sm lg:flex-row-reverse xl:-mx-xs">
-            <section class="px-sm py-sm col-12 xl:px-xs lg:col-9" data-aos="fade" data-aos-delay="300" data-aos-duration="700">
+            <section class="col-12 py-sm px-sm xl:px-xs lg:col-9" data-aos="fade" data-aos-delay="300" data-aos-duration="700">
               <section class="ratio-16x9" data-aos="fade" data-aos-delay="100" data-aos-duration="700">
                 <div class="flex-col flex-stretch bg-center pin pos-absolute bg-contain bg-no-repeat" style="background-image:url('./images/savings-graph.svg')"></div>
               </section>
             </section>
-            <section class="px-sm py-sm col-12 xl:px-xs lg:col-3" data-aos="fade" data-aos-delay="100" data-aos-duration="700">
+            <section class="col-12 py-sm px-sm xl:px-xs lg:col-3" data-aos="fade" data-aos-delay="100" data-aos-duration="700">
               <div class="text-wrap w-full">
                 <h2 class="font-size-2md font-color-cyan lg:font-size-lg"><span>Save up to 55% on your storage cost.</span></h2>
                 <p>Are you a Self-Storage customer? Depending on how much access you will need to your storage we can offer you great savings on your current storage.</p>
-                <a href="#" class="px-sm py-xs button font-color-white font-size-2sm hover:shadow-lg bg-aqua">More than storage</a>
+                <a href="#" class="py-xs font-size-2sm button font-color-white hover:shadow-lg px-sm bg-aqua">More than storage</a>
               </div>
             </section>
           </div>
@@ -210,7 +215,7 @@
     <!-- call to Action -->
     <section class="">
       <div class="font-color-white bg-dark md:py-md py-sm">
-        <div class="container lg:container-xl mx-auto sm:container-sm">
+        <div class="mx-auto container lg:container-xl sm:container-sm">
           <div class="flex-col lg:flex-row -m-xs align-center text-center lg:text-left">
             <div class="p-xs flex-none">
               <div class="icon icon-lg lg:icon-xl sm:icon-2lg font-color-yellow">
@@ -288,12 +293,12 @@
     <!-- Our Storage Gallery -->
     <section class="lg:pt-2xl pt-2md">
       <div class="">
-        <div class="container lg:container-xl mx-auto md:container-sm">
+        <div class="mx-auto container lg:container-xl md:container-sm">
           <hgroup class="text-wrap w-full mb-md">
             <h2 class="text-center font-size-2md font-color-cyan"><span>Our Storage Gallery</span></h2>
           </hgroup>
-          <div class="text-center flex-row flex-wrap -m-sm js_media_Gallery_Popup">
-            <div class="flex-col col-12 lg:col-4 p-sm" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="700">
+          <div class="flex-row flex-wrap text-center -m-sm js_media_Gallery_Popup">
+            <div class="flex-col col-12 md:col-4 p-sm" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="700">
               <div class="flex-col flex-stretch">
                 <section class="ratio-custom-1">
                   <a href="./images/iStock-118238290.jpg" class="flex-col pin pos-absolute image-rollover">
@@ -302,7 +307,7 @@
                 </section>
               </div>
             </div>
-            <div class="flex-col col-12 lg:col-4 p-sm" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="700">
+            <div class="flex-col col-12 md:col-4 p-sm" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="700">
               <div class="flex-col flex-stretch">
                 <section class="ratio-custom-1">
                   <a href="./images/iStock-511308674.jpg" class="flex-col pin pos-absolute image-rollover">
@@ -311,7 +316,7 @@
                 </section>
               </div>
             </div>
-            <div class="flex-col col-12 lg:col-4 p-sm" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="700">
+            <div class="flex-col col-12 md:col-4 p-sm" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="700">
               <div class="flex-col flex-stretch">
                 <section class="ratio-custom-1">
                   <a href="./images/iStock-118238313.jpg" class="flex-col pin pos-absolute image-rollover">
@@ -326,7 +331,7 @@
     </section>
     <!-- testiminials -->
     <section class="py-2md lg:py-2xl">
-      <div class="container lg:container-xl mx-auto">
+      <div class="mx-auto container lg:container-xl">
         <article>
           <div class="text-center text-wrap w-full">
             <h2 class="font-size-2md font-color-cyan"><span>Testimonials</span></h2>
@@ -334,7 +339,7 @@
               <p>“Cat libusaeribus dolorem quas ut plicias perunti onsequiatur, sam, volupta volora il is porepudam, que dolorem. Dus, con ea dolectatus quatur aut magnietur, sed qui voloreicias corehendunte aped que cumqui delenectorit inus, hillicae ne lacid eseri cupta sin prorit que labore velectem sandipsus sam voluptas vendam sit alitatem lique pos”</p>
             </div>
             <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="700">
-              <a href="#" class="px-sm py-xs button font-color-white font-size-2sm hover:shadow-lg bg-aqua">More Reviews</a>
+              <a href="#" class="py-xs font-size-2sm button font-color-white hover:shadow-lg px-sm bg-aqua">More Reviews</a>
             </div>
           </div>
         </article>
@@ -392,8 +397,8 @@
     </section>
   </section>
   <!-- footer -->
-  <footer class="font-weight-light font-size-xs py-md">
-    <div class="container lg:container-xl mx-auto md:container-md">
+  <footer class="font-size-xs font-weight-light py-md">
+    <div class="mx-auto container lg:container-xl md:container-md">
       <div class="flex-col lg:flex-row -m-xs align-center text-center flex-wrap lg:align-end lg:text-right">
         <div class="p-xs flex-none lg:-mb-2md xl:m-0">
           <a href="index.html" class="ratio-logo brand-logo icon-logo-footer">
@@ -404,10 +409,10 @@
         </div>
         <div class="flex-col flex-auto p-xs">
           <ul class="flex-col lg:flex-row justify-end list-reset mt-auto">
-            <li class="lg:mb-0 mb-xxs"><a href="contact.html" class="font-color-inherit no-underline hover:font-color-pink px-xs">Contact us</a></li>
-            <li class="lg:mb-0 mb-xxs"><a href="#" class="font-color-inherit no-underline hover:font-color-pink px-xs">Privacy Policy</a></li>
-            <li class="lg:mb-0 mb-xxs"><a href="#" class="font-color-inherit no-underline hover:font-color-pink px-xs">Terms & Conditions</a></li>
-            <li class="lg:mb-0 mb-xxs"><a href="#" class="font-color-inherit no-underline hover:font-color-pink px-xs">Cookies Policy</a></li>
+            <li class="lg:mb-0 mb-xxs"><a href="contact.html" class="font-color-inherit no-underline px-xs hover:font-color-pink">Contact us</a></li>
+            <li class="lg:mb-0 mb-xxs"><a href="#" class="font-color-inherit no-underline px-xs hover:font-color-pink">Privacy Policy</a></li>
+            <li class="lg:mb-0 mb-xxs"><a href="#" class="font-color-inherit no-underline px-xs hover:font-color-pink">Terms & Conditions</a></li>
+            <li class="lg:mb-0 mb-xxs"><a href="#" class="font-color-inherit no-underline px-xs hover:font-color-pink">Cookies Policy</a></li>
             <li class="lg:mb-0 mb-xxs"><span class="px-xs">Copyright © <script>
                   document.write(new Date().getFullYear())
                 </script></span></li>
