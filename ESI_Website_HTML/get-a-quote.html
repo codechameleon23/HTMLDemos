@@ -365,7 +365,7 @@
                               <div class="p-xs">
                                 <label class="custom-tick">
                                   <input name="quote" type="radio" checked="checked" onclick="togleQuiteView('quick');">
-                                  <span class="border d-inline-block tick"><span class="font-color-pink bg-white radius-full"></span></span>
+                                  <span class="border d-inline-block tick"><span class="bg-white font-color-pink radius-full"></span></span>
                                   <span class="related-text"><span class="">Quick quote</span>
                                   </span>
                                 </label>
@@ -373,7 +373,7 @@
                               <div class="p-xs">
                                 <label class="custom-tick">
                                   <input name="quote" type="radio" onclick="togleQuiteView('detailed');">
-                                  <span class="border d-inline-block tick"><span class="font-color-pink bg-white radius-full"></span></span>
+                                  <span class="border d-inline-block tick"><span class="bg-white font-color-pink radius-full"></span></span>
                                   <span class="related-text"><span class="">Detailed quote</span>
                                   </span>
                                 </label>
@@ -383,26 +383,175 @@
                         </div>
                       </div>
                       <div class="px-sm col-12">
-                        <div class="bg-center pb-xxxs lg:col-6" style="background-image: url('images/border-pattern-pink.png')"></div>
+                        <div class="lg:col-6 bg-center pb-xxxs" style="background-image: url('images/border-pattern-pink.png')"></div>
                       </div>
-                      <div id="quick-quoteViewWrapper" class="p-sm col-12 quote-view-wrapper">
-                        <div class="flex-row flex-wrap -m-sm">
-                          <div class="flex-col col-12 p-sm lg:col-6">
+                      <!-- <div id="quick-quoteViewWrapper" class="quote-view-wrapper p-sm col-12">
+         <div class="-m-sm flex-row flex-wrap">
+            <div class="flex-col col-12 p-sm">
+               <h4 class="font-weight-bold font-color-pink mb-xs">Quick quote</h4>
+               <div class="-m-xs">
+                  <div class="select p-xs flex-auto flex-col font-color-pink">
+                     <select class="px-2xs py-xs flex-stretch focus:shadow-lg transition-all bg-white border border-pink font-color-default">
+                        <option>Choose your container size…</option>
+                        <option>Small</option>
+                        <option>Medium</option>
+                        <option>Big</option>
+                        <option>Extream</option>
+                     </select>
+                  </div>
+               </div>
+            </div>
+            <div class="flex-col col-12 p-sm">
+               <a href="javascript:void(0);" data-goto="step_4"  class="button font-size-2sm px-md py-xs hover:shadow-lg mt-auto ml-auto bg-aqua font-color-white size-lg">Next step</a>
+            </div>
+         </div>
+      </div> -->
+                      <div id="quick-quoteViewWrapper" class="flex-col col-12 p-sm quote-view-wrapper">
+                        <div class="flex-col flex-stretch -m-xs">
+                          <div class="p-xs">
                             <h4 class="font-color-pink font-weight-bold mb-xs">Quick quote</h4>
-                            <div class="-m-xs">
-                              <div class="p-xs flex-auto flex-col font-color-pink select">
-                                <select class="transition-all border bg-white border-pink flex-stretch focus:shadow-lg px-2xs py-xs font-color-default">
-                                  <option>Choose your container size…</option>
-                                  <option>Small</option>
-                                  <option>Medium</option>
-                                  <option>Big</option>
-                                  <option>Extream</option>
-                                </select>
+                            <div class="flex-row flex-wrap -m-xs justify-start">
+                              <div class="p-xs">
+                                <div class="w-full text-wrap">
+                                  <p>Choose your container size and qauantity…</p>
+                                </div>
                               </div>
                             </div>
                           </div>
-                          <div class="flex-col col-12 p-sm lg:col-6">
-                            <a href="javascript:void(0);" data-goto="step_4" class="font-color-white button font-size-2sm hover:shadow-lg py-xs mt-auto px-md size-lg bg-aqua ml-auto">Next step</a>
+                          <div class="p-xs">
+                            <div class="p-xxs align-center flex-row border-b border-dashed border-pink justify-space-between number-group">
+                              <div class="py-xxs">Small</div>
+                              <div class="flex-none flex-row -m-xxs align-center">
+                                <div class="p-xxs flex-none initial-hide">
+                                  <a href="javascript:void(0);" data-control="decrement" class="icon range-control font-color-dark hover:font-color-pink">
+                                    <span class="p-xxs">
+                                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357">
+                                        <path fill="currentColor" d="M323 39H115v51h357V39z" /></svg>
+                                    </span>
+                                  </a>
+                                </div>
+                                <div class="p-xxs initial-hide flex-auto">
+                                  <div class="transition-all border focus-within:shadow-lg">
+                                    <input type="number" name="folding_bed_quantity" data-min="0" data-max="10000" class="bg-white output font-size-xs px-xxs text-center">
+                                  </div>
+                                </div>
+                                <div class="p-xxs flex-none">
+                                  <a href="javascript:void(0);" data-control="increment" class="icon range-control font-color-dark hover:font-color-pink">
+                                    <span class="p-xxs">
+                                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357">
+                                        <path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                    </span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="p-xxs align-center flex-row border-b border-dashed border-pink justify-space-between number-group">
+                              <div class="py-xxs">Medium</div>
+                              <div class="flex-none flex-row -m-xxs align-center">
+                                <div class="p-xxs flex-none initial-hide">
+                                  <a href="javascript:void(0);" data-control="decrement" class="icon range-control font-color-dark hover:font-color-pink">
+                                    <span class="p-xxs">
+                                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357">
+                                        <path fill="currentColor" d="M323 39H115v51h357V39z" /></svg>
+                                    </span>
+                                  </a>
+                                </div>
+                                <div class="p-xxs initial-hide flex-auto">
+                                  <div class="transition-all border focus-within:shadow-lg">
+                                    <input type="number" name="folding_bed_quantity" data-min="0" data-max="10000" class="bg-white output font-size-xs px-xxs text-center">
+                                  </div>
+                                </div>
+                                <div class="p-xxs flex-none">
+                                  <a href="javascript:void(0);" data-control="increment" class="icon range-control font-color-dark hover:font-color-pink">
+                                    <span class="p-xxs">
+                                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357">
+                                        <path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                    </span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="p-xxs align-center flex-row border-b border-dashed border-pink justify-space-between number-group">
+                              <div class="py-xxs">Large</div>
+                              <div class="flex-none flex-row -m-xxs align-center">
+                                <div class="p-xxs flex-none initial-hide">
+                                  <a href="javascript:void(0);" data-control="decrement" class="icon range-control font-color-dark hover:font-color-pink">
+                                    <span class="p-xxs">
+                                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357">
+                                        <path fill="currentColor" d="M323 39H115v51h357V39z" /></svg>
+                                    </span>
+                                  </a>
+                                </div>
+                                <div class="p-xxs initial-hide flex-auto">
+                                  <div class="transition-all border focus-within:shadow-lg">
+                                    <input type="number" name="folding_bed_quantity" data-min="0" data-max="10000" class="bg-white output font-size-xs px-xxs text-center">
+                                  </div>
+                                </div>
+                                <div class="p-xxs flex-none">
+                                  <a href="javascript:void(0);" data-control="increment" class="icon range-control font-color-dark hover:font-color-pink">
+                                    <span class="p-xxs">
+                                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357">
+                                        <path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                    </span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="p-xxs align-center flex-row border-b border-dashed border-pink justify-space-between number-group">
+                              <div class="py-xxs">Extra Large</div>
+                              <div class="flex-none flex-row -m-xxs align-center">
+                                <div class="p-xxs flex-none initial-hide">
+                                  <a href="javascript:void(0);" data-control="decrement" class="icon range-control font-color-dark hover:font-color-pink">
+                                    <span class="p-xxs">
+                                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357">
+                                        <path fill="currentColor" d="M323 39H115v51h357V39z" /></svg>
+                                    </span>
+                                  </a>
+                                </div>
+                                <div class="p-xxs initial-hide flex-auto">
+                                  <div class="transition-all border focus-within:shadow-lg">
+                                    <input type="number" name="folding_bed_quantity" data-min="0" data-max="10000" class="bg-white output font-size-xs px-xxs text-center">
+                                  </div>
+                                </div>
+                                <div class="p-xxs flex-none">
+                                  <a href="javascript:void(0);" data-control="increment" class="icon range-control font-color-dark hover:font-color-pink">
+                                    <span class="p-xxs">
+                                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357">
+                                        <path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                    </span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="p-xxs align-center flex-row border-b border-dashed border-pink justify-space-between number-group">
+                              <div class="py-xxs">Extra Extra Large</div>
+                              <div class="flex-none flex-row -m-xxs align-center">
+                                <div class="p-xxs flex-none initial-hide">
+                                  <a href="javascript:void(0);" data-control="decrement" class="icon range-control font-color-dark hover:font-color-pink">
+                                    <span class="p-xxs">
+                                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357">
+                                        <path fill="currentColor" d="M323 39H115v51h357V39z" /></svg>
+                                    </span>
+                                  </a>
+                                </div>
+                                <div class="p-xxs initial-hide flex-auto">
+                                  <div class="transition-all border focus-within:shadow-lg">
+                                    <input type="number" name="folding_bed_quantity" data-min="0" data-max="10000" class="bg-white output font-size-xs px-xxs text-center">
+                                  </div>
+                                </div>
+                                <div class="p-xxs flex-none">
+                                  <a href="javascript:void(0);" data-control="increment" class="icon range-control font-color-dark hover:font-color-pink">
+                                    <span class="p-xxs">
+                                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357">
+                                        <path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                    </span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="p-xs text-right mt-auto">
+                            <a href="javascript:void(0);" data-goto="step_4" class="font-color-white button font-size-2sm hover:shadow-lg py-xs mt-auto px-md size-lg bg-aqua">Next step</a>
                           </div>
                         </div>
                       </div>
@@ -496,7 +645,7 @@
                                     </span>
                                   </div>
                                   <div class="accordion-content">
-                                    <div class="answer p-md">
+                                    <div class="px-md answer pt-sm">
                                       <div class="p-xxs align-center flex-row border-b border-dashed border-pink justify-space-between number-group">
                                         <div class="py-xxs">Folding Bed</div>
                                         <div class="flex-none flex-row -m-xxs align-center">
@@ -1081,7 +1230,7 @@
                                     </span>
                                   </div>
                                   <div class="accordion-content">
-                                    <div class="answer p-md">
+                                    <div class="px-md answer pt-sm">
                                       <div class="p-xxs align-center flex-row border-b border-dashed border-pink justify-space-between number-group">
                                         <div class="py-xxs">Air conditioner</div>
                                         <div class="flex-none flex-row -m-xxs align-center">
@@ -1172,7 +1321,7 @@
                                     </span>
                                   </div>
                                   <div class="accordion-content">
-                                    <div class="answer p-md">
+                                    <div class="px-md answer pt-sm">
                                       <div class="p-xxs align-center flex-row border-b border-dashed border-pink justify-space-between number-group">
                                         <div class="py-xxs">Mechanical item 1</div>
                                         <div class="flex-none flex-row -m-xxs align-center">
@@ -1263,7 +1412,7 @@
                                     </span>
                                   </div>
                                   <div class="accordion-content">
-                                    <div class="answer p-md">
+                                    <div class="px-md answer pt-sm">
                                       <div class="p-xxs align-center flex-row border-b border-dashed border-pink justify-space-between number-group">
                                         <div class="py-xxs">Personal item 1</div>
                                         <div class="flex-none flex-row -m-xxs align-center">
@@ -1354,7 +1503,7 @@
                                     </span>
                                   </div>
                                   <div class="accordion-content">
-                                    <div class="answer p-md">
+                                    <div class="px-md answer pt-sm">
                                       <div class="p-xxs align-center flex-row border-b border-dashed border-pink justify-space-between number-group">
                                         <div class="py-xxs">Clothing item 1</div>
                                         <div class="flex-none flex-row -m-xxs align-center">
@@ -1445,7 +1594,7 @@
                                     </span>
                                   </div>
                                   <div class="accordion-content">
-                                    <div class="answer p-md">
+                                    <div class="px-md answer pt-sm">
                                       <div class="p-xxs align-center flex-row border-b border-dashed border-pink justify-space-between number-group">
                                         <div class="py-xxs">Small Fragile item 1</div>
                                         <div class="flex-none flex-row -m-xxs align-center">
@@ -1536,7 +1685,7 @@
                                     </span>
                                   </div>
                                   <div class="accordion-content">
-                                    <div class="answer p-md">
+                                    <div class="px-md answer pt-sm">
                                       <div class="p-xxs align-center flex-row border-b border-dashed border-pink justify-space-between number-group">
                                         <div class="py-xxs">Other item 1</div>
                                         <div class="flex-none flex-row -m-xxs align-center">
@@ -1651,7 +1800,7 @@
                               <div class="p-xs">
                                 <label class="custom-tick">
                                   <input name="packed" type="radio">
-                                  <span class="border d-inline-block tick"><span class="font-color-pink bg-white radius-full"></span></span>
+                                  <span class="border d-inline-block tick"><span class="bg-white font-color-pink radius-full"></span></span>
                                   <span class="related-text"><span class="">Yes</span>
                                   </span>
                                 </label>
@@ -1659,7 +1808,7 @@
                               <div class="p-xs">
                                 <label class="custom-tick">
                                   <input name="packed" type="radio">
-                                  <span class="border d-inline-block tick"><span class="font-color-pink bg-white radius-full"></span></span>
+                                  <span class="border d-inline-block tick"><span class="bg-white font-color-pink radius-full"></span></span>
                                   <span class="related-text"><span class="">No</span>
                                   </span>
                                 </label>
@@ -1676,7 +1825,7 @@
                               <div class="p-xs">
                                 <label class="custom-tick">
                                   <input name="shredding" type="radio">
-                                  <span class="border d-inline-block tick"><span class="font-color-pink bg-white radius-full"></span></span>
+                                  <span class="border d-inline-block tick"><span class="bg-white font-color-pink radius-full"></span></span>
                                   <span class="related-text"><span class="">Yes</span>
                                   </span>
                                 </label>
@@ -1684,7 +1833,7 @@
                               <div class="p-xs">
                                 <label class="custom-tick">
                                   <input name="shredding" type="radio">
-                                  <span class="border d-inline-block tick"><span class="font-color-pink bg-white radius-full"></span></span>
+                                  <span class="border d-inline-block tick"><span class="bg-white font-color-pink radius-full"></span></span>
                                   <span class="related-text"><span class="">No</span>
                                   </span>
                                 </label>
@@ -1715,7 +1864,7 @@
                               <div class="p-xs">
                                 <label class="custom-tick">
                                   <input name="insurance" type="radio">
-                                  <span class="border d-inline-block tick"><span class="font-color-pink bg-white radius-full"></span></span>
+                                  <span class="border d-inline-block tick"><span class="bg-white font-color-pink radius-full"></span></span>
                                   <span class="related-text"><span class="">Yes</span>
                                   </span>
                                 </label>
@@ -1723,7 +1872,7 @@
                               <div class="p-xs">
                                 <label class="custom-tick">
                                   <input name="insurance" type="radio">
-                                  <span class="border d-inline-block tick"><span class="font-color-pink bg-white radius-full"></span></span>
+                                  <span class="border d-inline-block tick"><span class="bg-white font-color-pink radius-full"></span></span>
                                   <span class="related-text"><span class="">No</span>
                                   </span>
                                 </label>
@@ -1859,7 +2008,7 @@
                               <div class="p-xs">
                                 <label class="custom-tick">
                                   <input name="addr" type="checkbox">
-                                  <span class="border d-inline-block tick"><span class="font-color-pink bg-white"></span></span>
+                                  <span class="border d-inline-block tick"><span class="bg-white font-color-pink"></span></span>
                                   <span class="related-text"><span class="">By agreeing to the ‘Opt-in’ clause, you understand that your information will initially be used to contact you. The information will be kept and used in line with our GDPR policy, which can be found
                                       <a href="#" class="font-color-pink hover:opacity-100 opacity-50">here.</a>
                                     </span>
