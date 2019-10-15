@@ -87,7 +87,6 @@ $window.trigger('scroll');
 var defaultQuoteView = 'quick';
 function togleQuiteView(quoteView){
   quoteView = quoteView || defaultQuoteView;
-  console.log('quoteView', quoteView);
   $('.quote-view-wrapper').hide();
   $('#'+quoteView+'-quoteViewWrapper').show();
 }
