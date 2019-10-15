@@ -275,6 +275,7 @@ $(document).ready(function () {
 
   // Datepicker
   $(".datepicker").flatpickr({
+    disableMobile: true,
     dateFormat: "d-M-y"
   });
 
