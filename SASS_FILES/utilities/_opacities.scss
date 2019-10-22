@@ -7,11 +7,25 @@
             opacity: nth($opacity, 3);
           }
         }
+        .#{$bp}#{nth($state, 1)}#{nth($opacity, 1)}-parent {
+          &-#{nth($opacity, 2)}#{nth($state, 2)} {
+            .#{nth($opacity, 1)}-child{
+              opacity: nth($opacity, 3);
+            }
+          }
+        }
       }
     }@else{
       .#{$bp}#{nth($opacity, 1)} {
         &-#{nth($opacity, 2)} {
           opacity: nth($opacity, 3);
+        }
+      }
+      .#{$bp}#{nth($opacity, 1)}-parent {
+        &-#{nth($opacity, 2)} {
+          .#{nth($opacity, 1)}-child{
+            opacity: nth($opacity, 3);
+          }
         }
       }
     }
