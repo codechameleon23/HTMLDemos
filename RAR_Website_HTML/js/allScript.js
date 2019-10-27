@@ -119,8 +119,9 @@ $(document).ready(function () {
         e.stopPropagation();
         var elm = $(this);
         var ulParent = elm.closest('ul');
-        if(!elm.hasClass('this-open') && !elm.hasClass('submenuBack') && elm.find('.dropdown')){
-          elm.addClass('this-open');
+        var liParent = elm.closest('li');
+        if(!liParent.hasClass('this-open') && !elm.hasClass('submenuBack') && liParent.find('.dropdown')){
+          liParent.addClass('this-open');
           ulParent.addClass('is-open');
         }else{
           if(elm.hasClass('submenuBack')){

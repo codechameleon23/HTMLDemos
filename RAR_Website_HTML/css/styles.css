@@ -25198,6 +25198,12 @@ textarea
 
         opacity: 1;
     }
+    .jsNavbarToggle.is-open .hamburger
+    {
+        position: absolute; 
+
+        color: #fff;
+    }
 }
 
 .navbar li > a
@@ -25227,20 +25233,19 @@ textarea
         -ms-flex-direction: column;
 }
 
-.navbar .submenuBack
-{
-    display: none;
-}
-
 @media (max-width: 1300px)
 {
     .navbar
     {
-        max-width: calc(100% - 5rem); 
+        right: 0;
+        left: auto;
 
-        -webkit-transform: translateX(-100%);
-            -ms-transform: translateX(-100%);
-                transform: translateX(-100%);
+        width: calc(100% - 5rem); 
+        max-width: 34rem;
+
+        -webkit-transform: translateX(100%);
+            -ms-transform: translateX(100%);
+                transform: translateX(100%);
     }
     .navbar ul.is-open > li.this-open > .dropdown
     {
@@ -25285,6 +25290,10 @@ textarea
 
 @media (min-width: 1300px)
 {
+    .navbar .submenuBack
+    {
+        display: none;
+    }
     .navbar > ul
     {
         display: -webkit-box;

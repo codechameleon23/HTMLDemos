@@ -31,9 +31,9 @@
         </div>
         <div class="flex-col flex-auto md:pos-relative">
           <!-- Navbar -->
-          <navbar class="flex-col flex-stretch pin fcolor-white bg-primary fsize-2xs navbar pos-fixed shadow-lg xl:bg-transparent xl:fcolor-inherit xl:pos-static xl:shadow-none xl:z-10 z-50">
+          <navbar class="flex-col flex-stretch pin fcolor-white bg-primary fsize-2xs navbar pos-fixed shadow-lg xl:bg-transparent xl:fcolor-inherit xl:pos-static xl:shadow-none xl:z-10 z-30">
             <!-- Social Media Mobile -->
-            <div class="xl:d-hidden p-sm">
+            <div class="xl:d-hidden px-sm py-2md">
               <a href="#" class="fcolor-inherit hover:fcolor-secondary icon icon-sm mr-xxs">
                 <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.4 25.4">
                   <path d="M16 13.2h-2.3v5.7h-2.3v-5.7h-2v-2.3h1.9V9.6c0-.8.3-1.6.8-2.2.6-.6 1.2-.9 2-.9H16v2.3h-1.9c-.1 0-.2.1-.3.2-.1.1-.1.3-.1.5v1.2H16v2.5zm9.4-.5c0-1.8-.3-3.4-1-4.9-.7-1.5-1.6-2.9-2.7-4-1.1-1.2-2.5-2.1-4-2.7-1.5-.7-3.2-1-4.9-1S9.3.3 7.7 1c-1.5.7-2.9 1.6-4 2.7-1.1 1.2-2 2.5-2.7 4-.7 1.6-1 3.3-1 5s.3 3.4 1 4.9c.7 1.5 1.6 2.9 2.7 4s2.5 2 4 2.7c1.5.7 3.2 1 4.9 1s3.4-.3 4.9-1c1.5-.7 2.9-1.6 4-2.7s2-2.5 2.7-4c.8-1.5 1.2-3.1 1.2-4.9">
@@ -61,64 +61,70 @@
             </div>
             <ul class="">
               <li class="hover:fcolor-grey hover:bg-primary @@newsActive">
-                <a class="fcolor-inherit no-underline px-sm py-xs xl:px-xxs" href="news.html">News <span class="submenuOpen">⏵</span></a>
+                <div class="flex-stretch align-center flex-row xl:px-xxs xl:py-xs">
+                  <a class="fcolor-inherit no-underline px-sm py-xs xl:px-xxs" href="news.html">News</a>
+                  <span class="ml-auto p-xxs px-xs fcolor-white submenuOpen">⏵</span>
+                </div>
                 <div class="dropdown bg-primary xl:shadow-sm">
                   <ul class="flex-row flex-wrap bg-primary fcolor-white list-reset xl:pb-2xs xl:pt-sm">
-                    <li class="py-xs col-12 pl-sm pr-sm xl:col-6 xl:pl-md xl:pr-xs flex-row submenuBack">
-                      Back <span class="d-inline-block ml-auto">⏴</span>
+                    <li class="py-xs col-12 pl-sm xl:col-6 xl:pl-md xl:pr-sm xl:pr-xs flex-row submenuBack">
+                      Back <span class="d-inline-block ml-auto p-xxs px-xs">⏴</span>
                     </li>
-                    <li class="py-xs col-12 pl-sm pr-sm xl:col-6 xl:pl-md xl:pr-xs hover:fcolor-grey">
+                    <li class="py-xs col-12 pl-sm xl:col-6 xl:pl-md xl:pr-sm xl:pr-xs hover:fcolor-grey">
                       <a class="fcolor-inherit no-underline" href="#">All News</a>
                     </li>
-                    <li class="py-xs col-12 pl-sm pr-sm xl:col-6 xl:pl-md xl:pr-xs hover:fcolor-grey">
-                      <a class="fcolor-inherit no-underline" href="#">Association News <span class="submenuOpen">⏵</span></a>
+                    <li class="py-xs col-12 pl-sm xl:col-6 xl:pl-md xl:pr-sm xl:pr-xs hover:fcolor-grey">
+                      <div class="flex-row align-center">
+                        <a class="fcolor-inherit no-underline" href="#">Association News</a>
+                        <span class="ml-auto p-xxs px-xs fcolor-white submenuOpen">⏵</span>
+                      </div>
                       <div class="dropdown bg-primary xl:shadow-sm">
                         <ul class="flex-row flex-wrap bg-primary fcolor-white list-reset xl:pb-2xs xl:pt-sm">
-                          <li class="py-xs col-12 pl-sm pr-sm xl:col-6 xl:pl-md xl:pr-xs flex-row submenuBack">
-                            Back <span class="d-inline-block ml-auto">⏴</span>
+                          <li class="py-xs col-12 pl-sm xl:col-6 xl:pl-md xl:pr-sm xl:pr-xs flex-row submenuBack">
+                            Back <span class="d-inline-block ml-auto p-xxs px-xs">⏴</span>
                           </li>
-                          <li class="py-xs col-12 pl-sm pr-sm xl:col-6 xl:pl-md xl:pr-xs hover:fcolor-grey"><a class="fcolor-inherit no-underline" href="#">Sub Option 1</a></li>
-                          <li class="py-xs col-12 pl-sm pr-sm xl:col-6 xl:pl-md xl:pr-xs hover:fcolor-grey"><a class="fcolor-inherit no-underline" href="#">Sub Option 2</a></li>
-                          <li class="py-xs col-12 pl-sm pr-sm xl:col-6 xl:pl-md xl:pr-xs hover:fcolor-grey"><a class="fcolor-inherit no-underline" href="#">Sub Option 3</a></li>
-                          <li class="py-xs col-12 pl-sm pr-sm xl:col-6 xl:pl-md xl:pr-xs hover:fcolor-grey"><a class="fcolor-inherit no-underline" href="#">Sub Option 4</a></li>
-                          <li class="py-xs col-12 pl-sm pr-sm xl:col-6 xl:pl-md xl:pr-xs hover:fcolor-grey"><a class="fcolor-inherit no-underline" href="#">Sub Option 5</a></li>
+                          <li class="py-xs col-12 pl-sm xl:col-6 xl:pl-md xl:pr-sm xl:pr-xs hover:fcolor-grey"><a class="fcolor-inherit no-underline" href="#">Sub Option 1</a></li>
+                          <li class="py-xs col-12 pl-sm xl:col-6 xl:pl-md xl:pr-sm xl:pr-xs hover:fcolor-grey"><a class="fcolor-inherit no-underline" href="#">Sub Option 2</a></li>
+                          <li class="py-xs col-12 pl-sm xl:col-6 xl:pl-md xl:pr-sm xl:pr-xs hover:fcolor-grey"><a class="fcolor-inherit no-underline" href="#">Sub Option 3</a></li>
+                          <li class="py-xs col-12 pl-sm xl:col-6 xl:pl-md xl:pr-sm xl:pr-xs hover:fcolor-grey"><a class="fcolor-inherit no-underline" href="#">Sub Option 4</a></li>
+                          <li class="py-xs col-12 pl-sm xl:col-6 xl:pl-md xl:pr-sm xl:pr-xs hover:fcolor-grey"><a class="fcolor-inherit no-underline" href="#">Sub Option 5</a></li>
                         </ul>
                       </div>
                     </li>
-                    <li class="py-xs col-12 pl-sm pr-sm xl:col-6 xl:pl-md xl:pr-xs hover:fcolor-grey">
+                    <li class="py-xs col-12 pl-sm xl:col-6 xl:pl-md xl:pr-sm xl:pr-xs hover:fcolor-grey">
                       <a class="fcolor-inherit no-underline" href="#">Events</a>
                     </li>
-                    <li class="py-xs col-12 pl-sm pr-sm xl:col-6 xl:pl-md xl:pr-xs hover:fcolor-grey">
+                    <li class="py-xs col-12 pl-sm xl:col-6 xl:pl-md xl:pr-sm xl:pr-xs hover:fcolor-grey">
                       <a class="fcolor-inherit no-underline" href="#">Recruitment</a>
                     </li>
-                    <li class="py-xs col-12 pl-sm pr-sm xl:col-6 xl:pl-md xl:pr-xs hover:fcolor-grey">
+                    <li class="py-xs col-12 pl-sm xl:col-6 xl:pl-md xl:pr-sm xl:pr-xs hover:fcolor-grey">
                       <a class="fcolor-inherit no-underline" href="#">Operations</a>
                     </li>
-                    <li class="py-xs col-12 pl-sm pr-sm xl:col-6 xl:pl-md xl:pr-xs hover:fcolor-grey">
+                    <li class="py-xs col-12 pl-sm xl:col-6 xl:pl-md xl:pr-sm xl:pr-xs hover:fcolor-grey">
                       <a class="fcolor-inherit no-underline" href="#">Training</a>
                     </li>
-                    <li class="py-xs col-12 pl-sm pr-sm xl:col-6 xl:pl-md xl:pr-xs hover:fcolor-grey">
+                    <li class="py-xs col-12 pl-sm xl:col-6 xl:pl-md xl:pr-sm xl:pr-xs hover:fcolor-grey">
                       <a class="fcolor-inherit no-underline" href="#">Sport</a>
                     </li>
-                    <li class="py-xs col-12 pl-sm pr-sm xl:col-6 xl:pl-md xl:pr-xs hover:fcolor-grey">
+                    <li class="py-xs col-12 pl-sm xl:col-6 xl:pl-md xl:pr-sm xl:pr-xs hover:fcolor-grey">
                       <a class="fcolor-inherit no-underline" href="#">1st Battalion</a>
                     </li>
-                    <li class="py-xs col-12 pl-sm pr-sm xl:col-6 xl:pl-md xl:pr-xs hover:fcolor-grey">
+                    <li class="py-xs col-12 pl-sm xl:col-6 xl:pl-md xl:pr-sm xl:pr-xs hover:fcolor-grey">
                       <a class="fcolor-inherit no-underline" href="#">2nd Battalion</a>
                     </li>
-                    <li class="py-xs col-12 pl-sm pr-sm xl:col-6 xl:pl-md xl:pr-xs hover:fcolor-grey">
+                    <li class="py-xs col-12 pl-sm xl:col-6 xl:pl-md xl:pr-sm xl:pr-xs hover:fcolor-grey">
                       <a class="fcolor-inherit no-underline" href="#">3rd Battalion</a>
                     </li>
-                    <li class="py-xs col-12 pl-sm pr-sm xl:col-6 xl:pl-md xl:pr-xs hover:fcolor-grey">
+                    <li class="py-xs col-12 pl-sm xl:col-6 xl:pl-md xl:pr-sm xl:pr-xs hover:fcolor-grey">
                       <a class="fcolor-inherit no-underline" href="#">Band Cadets</a>
                     </li>
-                    <li class="py-xs col-12 pl-sm pr-sm xl:col-6 xl:pl-md xl:pr-xs hover:fcolor-grey">
+                    <li class="py-xs col-12 pl-sm xl:col-6 xl:pl-md xl:pr-sm xl:pr-xs hover:fcolor-grey">
                       <a class="fcolor-inherit no-underline" href="#">Museum</a>
                     </li>
-                    <li class="py-xs col-12 pl-sm pr-sm xl:col-6 xl:pl-md xl:pr-xs hover:fcolor-grey">
+                    <li class="py-xs col-12 pl-sm xl:col-6 xl:pl-md xl:pr-sm xl:pr-xs hover:fcolor-grey">
                       <a class="fcolor-inherit no-underline" href="#">Shop</a>
                     </li>
-                    <li class="py-xs col-12 pl-sm pr-sm xl:col-6 xl:pl-md xl:pr-xs hover:fcolor-grey">
+                    <li class="py-xs col-12 pl-sm xl:col-6 xl:pl-md xl:pr-sm xl:pr-xs hover:fcolor-grey">
                       <a class="fcolor-inherit no-underline" href="#">Upcoming Events</a>
                     </li>
                   </ul>
@@ -168,7 +174,7 @@
                   <path d="M224.507 6.997L217.521 0 112.256 105.258 6.998 0 .005 6.997l105.258 105.257L.005 217.512l6.993 7L112.256 119.24l105.265 105.272 6.986-7-105.258-105.258z" /></svg>
               </span>
             </a>
-            <div class="icon icon-sm mr-xxs flex-none xl:d-hidden">
+            <div class="icon icon-sm mr-xxs flex-none mr-2xs pin-r pin-y xl:d-hidden xl:mr-0 xl:pos-static z-30 z-40">
               <div>
                 <div class="icon fcolor-primary hamburger pointer-events-auto">
                   <div>
@@ -224,7 +230,7 @@
               <div class="pos-relative mx-auto container md:container-lg">
                 <article class="flex-col pr-2xs lg:col-6 col-10 md:bg-white md:col-8 md:pr-2lg pb-2xl">
                   <div class="flex-col flex-stretch">
-                    <div class="flex-col bg-secondary fcolor-white fsize-xs mr-auto px-sm text-center mb-md py-2xs">24th September 2019</div>
+                    <div class="flex-col text-center bg-secondary fcolor-white fsize-xs mr-auto px-sm mb-md py-2xs">24th September 2019</div>
                     <section class="text-wrap w-full">
                       <h2 class="fweight-semibold fsize-2lg">Main or Featured News Story Headline to go Here</h2>
                       <p>News article copy or description to introduce the article will go here Itateces rem susa ndande num. Ihillupt ationes am eariasi tatemque volorest rejk.</p>
@@ -246,7 +252,7 @@
               <div class="pos-relative mx-auto container md:container-lg">
                 <article class="flex-col pr-2xs lg:col-6 col-10 md:bg-white md:col-8 md:pr-2lg md:pb-2lg pb-2xs">
                   <div class="flex-col flex-stretch">
-                    <div class="flex-col bg-secondary fcolor-white fsize-xs mr-auto px-sm text-center mb-md py-2xs">24th September 2019</div>
+                    <div class="flex-col text-center bg-secondary fcolor-white fsize-xs mr-auto px-sm mb-md py-2xs">24th September 2019</div>
                     <section class="text-wrap w-full">
                       <h2 class="fweight-semibold fsize-2lg">2nd Main or Featured News Story Headline to go Here</h2>
                       <p>News article copy or description to introduce the article will go here Ihillupt ationes am eariasi tatemque volorest rejk.</p>
@@ -268,7 +274,7 @@
               <div class="pos-relative mx-auto container md:container-lg">
                 <article class="flex-col pr-2xs lg:col-6 col-10 md:bg-white md:col-8 md:pr-2lg pb-2xl">
                   <div class="flex-col flex-stretch">
-                    <div class="flex-col bg-secondary fcolor-white fsize-xs mr-auto px-sm text-center mb-md py-2xs">24th September 2019</div>
+                    <div class="flex-col text-center bg-secondary fcolor-white fsize-xs mr-auto px-sm mb-md py-2xs">24th September 2019</div>
                     <section class="text-wrap w-full">
                       <h2 class="fweight-semibold fsize-2lg">3rd Main or Featured News Story Headline to go Here</h2>
                       <p>News article copy or description to introduce the article will go here Itateces rem susa ndande num. Ihillupt ationes am eariasi tatemque volorest rejk.</p>
@@ -290,7 +296,7 @@
               <div class="pos-relative mx-auto container md:container-lg">
                 <article class="flex-col pr-2xs lg:col-6 col-10 md:bg-white md:col-8 md:pr-2lg pb-2xl">
                   <div class="flex-col flex-stretch">
-                    <div class="flex-col bg-secondary fcolor-white fsize-xs mr-auto px-sm text-center mb-md py-2xs">24th September 2019</div>
+                    <div class="flex-col text-center bg-secondary fcolor-white fsize-xs mr-auto px-sm mb-md py-2xs">24th September 2019</div>
                     <section class="text-wrap w-full">
                       <h2 class="fweight-semibold fsize-2lg">4th Main or Featured News Story Headline to go Here</h2>
                       <p>News article copy or description to introduce the article will go here Itateces rem susa ndande num. Ihillupt ationes am eariasi tatemque volorest rejk.</p>
@@ -366,11 +372,11 @@
     <!-- Call to action banner -->
     <section class="pt-2lg">
       <div class="pos-relative bg-primary fcolor-white">
-        <figure class="ratio-5x2 col-12 lg:ratio-none md:col-3 md:pos-absolute pin-l pin-y">
+        <figure class="ratio-5x2 col-12 d-hidden lg:ratio-none md:col-3 md:d-inline-block md:pos-absolute pin-l pin-y">
           <div class="pos-absolute pin bg-cover bg-center" style="background-image: url('./images/49651358_2123241001104035_4794322415874411030_n.jpg');"></div>
         </figure>
         <div class="pos-relative col-12 bg-inherit md:col-9 ml-auto xl:col-auto xl:container-xl xl:mx-auto">
-          <div class="flex-col pl-md pt-md align-center lg:flex-row lg:pl-lg xl:-mr-md">
+          <div class="flex-col text-center align-center lg:flex-row lg:pl-lg md:text-left pl-md pt-md xl:-mr-md">
             <div class="flex-stretch pb-md pr-md">
               <h2 class="fweight-semibold fsize-md md:fsize-2md">Use our Regimental calendar to view all of our important dates and upcoming events</h2>
             </div>
@@ -513,7 +519,7 @@
               <div class="flex-col flex-stretch pin pos-absolute align-center bg-center bg-cover card-image justify-center" style="background-image: url('./images/65777333_466209303942407_3848680817633367317_n.jpg')">
               </div>
             </a>
-            <a href="#" class="pos-absolute fcolor-white fweight-medium fsize-2xs no-underline p-xs bg-primary hover:bg-secondary mb-sm pin-b pin-l">Follow us <span class="d-hidden md:d-inline-block">on Instagram</span></a>
+            <a href="#" class="pos-absolute fcolor-white fweight-medium fsize-2xs no-underline p-xs bg-primary hover:bg-secondary d-hidden mb-sm md:d-inline-block pin-b pin-l">Follow us on Instagram</a>
           </div>
         </section>
         <section class="pr-2xs col-4 lg:col-flex lg:pr-sm lg:w-auto pb-sm">
@@ -546,6 +552,15 @@
               <div class="flex-col flex-stretch pin pos-absolute align-center bg-center bg-cover card-image justify-center" style="background-image: url('./images/65517043_2452515891646944_5946407965076686076_n.jpg')">
               </div>
             </a>
+          </div>
+        </section>
+        <section class="pr-2xs col-4 lg:col-flex lg:pr-sm lg:w-auto pb-sm md:d-hidden">
+          <div class="pos-relative ratio-1x1">
+            <a href="#" class="flex-col pos-absolute pin hover:opacity-parent-100 hover:shadow-parent-lg image-media opacity-parent-75 image-rollover">
+              <div class="flex-col flex-stretch pin pos-absolute align-center bg-center bg-cover card-image justify-center" style="background-image: url('./images/')">
+              </div>
+            </a>
+            <a href="#" class="pos-absolute pin fweight-medium fcolor-white fsize-2xs no-underline p-xs bg-primary hover:bg-secondary">Follow us on Instagram</a>
           </div>
         </section>
       </div>
