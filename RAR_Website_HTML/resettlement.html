@@ -19,7 +19,7 @@
 
 <body class="flex-col is-close jsNavbarToggle">
   <!-- Header -->
-  <header class="">
+  <header class="pos-relative">
     <div class="container lg:container-xl mx-auto">
       <div class="flex-row">
         <div class="col-none py-sm">
@@ -29,39 +29,127 @@
             </span>
           </a>
         </div>
-        <div class="flex-col flex-auto pos-relative">
+        <div class="flex-col flex-auto md:pos-relative">
           <!-- Navbar -->
-          <navbar class="flex-col flex-stretch pin bg-primary fsize-2xs navbar pos-fixed shadow-lg xl:bg-transparent xl:pos-static xl:shadow-none z-50">
-            <ul class="flex-stretch flex-row list-reset">
-              <li class="flex-col flex-stretch">
-                <a class="flex-stretch align-center justify-center fcolor-inherit flex-row hover:bg-primary hover:fcolor-white no-underline px-xxs py-xs text-center" href="#">News </a>
+          <navbar class="flex-col flex-stretch pin bg-primary fcolor-white fsize-2xs navbar pos-fixed shadow-lg xl:bg-transparent xl:fcolor-inherit xl:pos-static xl:shadow-none xl:z-10 z-50">
+            <div class="p-sm xl:d-hidden">
+              <a href="#" class="fcolor-inherit hover:fcolor-secondary icon icon-sm mr-xxs">
+                <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.4 25.4">
+                  <path d="M16 13.2h-2.3v5.7h-2.3v-5.7h-2v-2.3h1.9V9.6c0-.8.3-1.6.8-2.2.6-.6 1.2-.9 2-.9H16v2.3h-1.9c-.1 0-.2.1-.3.2-.1.1-.1.3-.1.5v1.2H16v2.5zm9.4-.5c0-1.8-.3-3.4-1-4.9-.7-1.5-1.6-2.9-2.7-4-1.1-1.2-2.5-2.1-4-2.7-1.5-.7-3.2-1-4.9-1S9.3.3 7.7 1c-1.5.7-2.9 1.6-4 2.7-1.1 1.2-2 2.5-2.7 4-.7 1.6-1 3.3-1 5s.3 3.4 1 4.9c.7 1.5 1.6 2.9 2.7 4s2.5 2 4 2.7c1.5.7 3.2 1 4.9 1s3.4-.3 4.9-1c1.5-.7 2.9-1.6 4-2.7s2-2.5 2.7-4c.8-1.5 1.2-3.1 1.2-4.9">
+                  </path>
+                </svg>
+              </a>
+              <a href="#" class="fcolor-inherit hover:fcolor-secondary icon icon-sm mr-xxs">
+                <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.4 25.4">
+                  <path d="M18.1 9.4c.3 0 .5-.1.8-.2.2-.1.5-.1.7-.2-.2.2-.4.5-.6.7-.2.2-.5.4-.7.6v.3c0 .9-.2 1.7-.5 2.6-.3.9-.8 1.6-1.4 2.3-.6.7-1.4 1.3-2.3 1.7-.9.4-2 .7-3.1.7-.7 0-1.4-.1-2.1-.3-.7-.2-1.3-.5-1.8-.8h.6c1.2 0 2.3-.4 3.2-1.1-.6 0-1.1-.2-1.5-.5-.4-.3-.7-.8-.9-1.3.2 0 .3.1.4.1h.4c.1 0 .2 0 .3-.1-.6-.1-1.1-.4-1.4-.9-.4-.5-.6-1-.6-1.6.3.2.7.3 1.2.3-.7-.5-1.1-1.2-1.1-2.1 0-.5.1-.9.3-1.3.7.8 1.4 1.4 2.3 1.9.9.5 1.9.7 3 .8 0-.2-.1-.4-.1-.6 0-.7.3-1.3.8-1.8s1.1-.8 1.8-.8c.4 0 .7.1 1 .2.3.1.6.3.8.6.3 0 .6-.1.9-.3.2 0 .5-.1.7-.3-.1.3-.3.6-.5.8-.1.3-.4.5-.6.6m7.3 3.3c0-1.8-.3-3.4-1-4.9-.7-1.5-1.6-2.9-2.7-4s-2.5-2-4-2.7c-1.5-.7-3.2-1-4.9-1S9.3.3 7.7 1c-1.5.7-2.9 1.6-4 2.7-1.2 1.2-2.1 2.5-2.7 4-.7 1.5-1 3.2-1 4.9s.3 3.4 1 4.9c.7 1.5 1.6 2.9 2.7 4 1.2 1.1 2.5 2 4 2.7 1.5.7 3.2 1 4.9 1s3.4-.3 4.9-1c1.5-.7 2.9-1.6 4-2.7s2-2.5 2.7-4c.8-1.4 1.2-3 1.2-4.8">
+                  </path>
+                </svg>
+              </a>
+              <a href="#" class="fcolor-inherit hover:fcolor-secondary icon icon-sm mr-xxs">
+                <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.4 25.4">
+                  <path d="M15.5 12.7c0-1.5-1.2-2.7-2.8-2.7s-2.8 1.2-2.8 2.7c0 1.5 1.2 2.7 2.8 2.7s2.8-1.2 2.8-2.7M18 9.5V7.9c0-.3-.3-.6-.6-.6h-1.6c-.3 0-.6.3-.6.6v1.5c0 .3.3.6.6.6h1.6c.4.1.6-.2.6-.5m0 8v-5.8h-1.2c.2.3.2.7.2 1.2 0 2.3-1.9 4.2-4.3 4.2s-4.3-1.8-4.3-4.2c0-.4 0-.8.2-1.2H7.3v5.8c0 .3.3.5.6.5h9.6c.3.1.5-.2.5-.5m1.6.4c0 1-.8 1.7-1.8 1.7H7.5c-1 0-1.8-.8-1.8-1.7V7.6c0-1 .8-1.8 1.8-1.8h10.3c1 0 1.8.8 1.8 1.8v10.3zm5.8-5.2C25.3 5.6 19.6-.1 12.7 0 5.7.1 0 5.7 0 12.7c0 7 5.7 12.7 12.7 12.7 7 0 12.7-5.7 12.7-12.7">
+                  </path>
+                </svg>
+              </a>
+              <a href="#" class="fcolor-inherit hover:fcolor-secondary icon icon-sm mr-xxs">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="-148 21 32 32">
+                  <path fill="currentColor" d="M-132 21c-8.8 0-16 7.2-16 16s7.2 16 16 16 16-7.2 16-16-7.2-16-16-16zm-4.5 22.9h-3.6V33.2h3.6v10.7zm-1.8-12.1c-1.2 0-2-.8-2-1.8s.8-1.8 2-1.8 2 .8 2 1.8-.8 1.8-2 1.8zm14.6 12.1h-3.6v-5.7c0-1.4-.5-2.4-1.8-2.4-1 0-1.6.7-1.8 1.3-.1.2-.1.5-.1.9v6h-3.6V33.3h3.6v1.5c.5-.7 1.3-1.8 3.2-1.8 2.3 0 4.1 1.5 4.1 4.8v6.1z">
+                  </path>
+                </svg>
+              </a>
+            </div>
+            <ul class="">
+              <li class="hover:fcolor-grey hover:bg-primary">
+                <a class="fcolor-inherit no-underline px-sm py-xs xl:px-xxs" href="#">News <span class="submenuOpen">⏵</span></a>
+                <div class="dropdown bg-primary xl:shadow-sm">
+                  <ul class="fcolor-white bg-primary flex-row flex-wrap list-reset xl:pb-2xs xl:pt-sm">
+                    <li class="py-xs col-12 pl-sm pr-sm xl:col-6 xl:pl-md xl:pr-xs flex-row submenuBack">
+                      Back <span class="d-inline-block ml-auto">⏴</span>
+                    </li>
+                    <li class="py-xs col-12 pl-sm pr-sm xl:col-6 xl:pl-md xl:pr-xs hover:fcolor-grey">
+                      <a class="fcolor-inherit no-underline" href="#">All News</a>
+                    </li>
+                    <li class="py-xs col-12 pl-sm pr-sm xl:col-6 xl:pl-md xl:pr-xs hover:fcolor-grey">
+                      <a class="fcolor-inherit no-underline" href="#">Association News <span class="submenuOpen">⏵</span></a>
+                      <div class="dropdown bg-primary xl:shadow-sm">
+                        <ul class="fcolor-white bg-primary flex-row flex-wrap list-reset xl:pb-2xs xl:pt-sm">
+                          <li class="py-xs col-12 pl-sm pr-sm xl:col-6 xl:pl-md xl:pr-xs flex-row submenuBack">
+                            Back <span class="d-inline-block ml-auto">⏴</span>
+                          </li>
+                          <li class="py-xs col-12 pl-sm pr-sm xl:col-6 xl:pl-md xl:pr-xs hover:fcolor-grey"><a class="fcolor-inherit no-underline" href="#">Sup Option 1</a></li>
+                          <li class="py-xs col-12 pl-sm pr-sm xl:col-6 xl:pl-md xl:pr-xs hover:fcolor-grey"><a class="fcolor-inherit no-underline" href="#">Sup Option 2</a></li>
+                          <li class="py-xs col-12 pl-sm pr-sm xl:col-6 xl:pl-md xl:pr-xs hover:fcolor-grey"><a class="fcolor-inherit no-underline" href="#">Sup Option 3</a></li>
+                          <li class="py-xs col-12 pl-sm pr-sm xl:col-6 xl:pl-md xl:pr-xs hover:fcolor-grey"><a class="fcolor-inherit no-underline" href="#">Sup Option 4</a></li>
+                          <li class="py-xs col-12 pl-sm pr-sm xl:col-6 xl:pl-md xl:pr-xs hover:fcolor-grey"><a class="fcolor-inherit no-underline" href="#">Sup Option 5</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="py-xs col-12 pl-sm pr-sm xl:col-6 xl:pl-md xl:pr-xs hover:fcolor-grey">
+                      <a class="fcolor-inherit no-underline" href="#">Events</a>
+                    </li>
+                    <li class="py-xs col-12 pl-sm pr-sm xl:col-6 xl:pl-md xl:pr-xs hover:fcolor-grey">
+                      <a class="fcolor-inherit no-underline" href="#">Recruitment</a>
+                    </li>
+                    <li class="py-xs col-12 pl-sm pr-sm xl:col-6 xl:pl-md xl:pr-xs hover:fcolor-grey">
+                      <a class="fcolor-inherit no-underline" href="#">Operations</a>
+                    </li>
+                    <li class="py-xs col-12 pl-sm pr-sm xl:col-6 xl:pl-md xl:pr-xs hover:fcolor-grey">
+                      <a class="fcolor-inherit no-underline" href="#">Training</a>
+                    </li>
+                    <li class="py-xs col-12 pl-sm pr-sm xl:col-6 xl:pl-md xl:pr-xs hover:fcolor-grey">
+                      <a class="fcolor-inherit no-underline" href="#">Sport</a>
+                    </li>
+                    <li class="py-xs col-12 pl-sm pr-sm xl:col-6 xl:pl-md xl:pr-xs hover:fcolor-grey">
+                      <a class="fcolor-inherit no-underline" href="#">1st Battalion</a>
+                    </li>
+                    <li class="py-xs col-12 pl-sm pr-sm xl:col-6 xl:pl-md xl:pr-xs hover:fcolor-grey">
+                      <a class="fcolor-inherit no-underline" href="#">2nd Battalion</a>
+                    </li>
+                    <li class="py-xs col-12 pl-sm pr-sm xl:col-6 xl:pl-md xl:pr-xs hover:fcolor-grey">
+                      <a class="fcolor-inherit no-underline" href="#">3rd Battalion</a>
+                    </li>
+                    <li class="py-xs col-12 pl-sm pr-sm xl:col-6 xl:pl-md xl:pr-xs hover:fcolor-grey">
+                      <a class="fcolor-inherit no-underline" href="#">Band Cadets</a>
+                    </li>
+                    <li class="py-xs col-12 pl-sm pr-sm xl:col-6 xl:pl-md xl:pr-xs hover:fcolor-grey">
+                      <a class="fcolor-inherit no-underline" href="#">Museum</a>
+                    </li>
+                    <li class="py-xs col-12 pl-sm pr-sm xl:col-6 xl:pl-md xl:pr-xs hover:fcolor-grey">
+                      <a class="fcolor-inherit no-underline" href="#">Shop</a>
+                    </li>
+                    <li class="py-xs col-12 pl-sm pr-sm xl:col-6 xl:pl-md xl:pr-xs hover:fcolor-grey">
+                      <a class="fcolor-inherit no-underline" href="#">Upcoming Events</a>
+                    </li>
+                  </ul>
+                </div>
               </li>
-              <li class="flex-col flex-stretch">
-                <a class="flex-stretch align-center justify-center fcolor-inherit flex-row hover:bg-primary hover:fcolor-white no-underline px-xxs py-xs text-center" href="#">Regimental Units </a>
+              <li class="hover:fcolor-grey hover:bg-primary">
+                <a class="fcolor-inherit no-underline px-sm py-xs xl:px-xxs" href="#">Regimental Units </a>
               </li>
-              <li class="flex-col flex-stretch">
-                <a class="flex-stretch align-center justify-center fcolor-inherit flex-row hover:bg-primary hover:fcolor-white no-underline px-xxs py-xs text-center" href="#">Associations & Branches </a>
+              <li class="hover:fcolor-grey hover:bg-primary">
+                <a class="fcolor-inherit no-underline px-sm py-xs xl:px-xxs" href="#">Associations & Branches </a>
               </li>
-              <li class="flex-col flex-stretch">
-                <a class="flex-stretch align-center justify-center fcolor-inherit flex-row hover:bg-primary hover:fcolor-white no-underline px-xxs py-xs text-center" href="#">Regimental Journal </a>
+              <li class="hover:fcolor-grey hover:bg-primary">
+                <a class="fcolor-inherit no-underline px-sm py-xs xl:px-xxs" href="#">Regimental Journal </a>
               </li>
-              <li class="flex-col flex-stretch">
-                <a class="flex-stretch align-center justify-center fcolor-inherit flex-row hover:bg-primary hover:fcolor-white no-underline px-xxs py-xs text-center" href="#">Resettlement </a>
+              <li class="hover:fcolor-grey hover:bg-primary">
+                <a class="fcolor-inherit no-underline px-sm py-xs xl:px-xxs" href="#">Resettlement </a>
               </li>
-              <li class="flex-col flex-stretch">
-                <a class="flex-stretch align-center justify-center fcolor-inherit flex-row hover:bg-primary hover:fcolor-white no-underline px-xxs py-xs text-center" href="#">Contact</a>
+              <li class="hover:fcolor-grey hover:bg-primary">
+                <a class="fcolor-inherit no-underline px-sm py-xs xl:px-xxs" href="#">Contact</a>
               </li>
             </ul>
           </navbar>
           <!-- Search bar -->
-          <div class="flex-col overflow-hidden pin-r pin-y pos-absolute searchBarToggle w-full">
-            <div class="flex-stretch align-center flex-row px-xs searchBar w-full">
-              <input type="text" placeholder="What are you looking for?" class="border-b-2 border-light h-full p-sm bg-white flex-auto focus:border-primary transition-all">
-              <button class="flex-none bg-light border-b-2 border-light cursor-pointer h-full hover:border-primary p-sm">
+          <div class="flex-col md:pin-t0 overflow-hidden pin-r pin-t100 pin-y pos-absolute searchBarToggle w-full z-20">
+            <div class="w-full align-center flex-row flex-stretch searchBar xl:px-xs">
+              <input type="text" placeholder="What are you looking for?" class="p-sm border-b-2 border-light h-full bg-white flex-auto focus:border-primary transition-all">
+              <button class="p-sm bg-light border-b-2 border-light cursor-pointer flex-none h-full hover:border-primary">
                 <div class="fcolor-inherit icon icon-sm">
                   <span class="p-xxxs">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52.966 52.966" fill="currentColor">
-                      <path d="M51.704 51.273L36.845 35.82c3.79-3.801 6.138-9.041 6.138-14.82 0-11.58-9.42-21-21-21s-21 9.42-21 21 9.42 21 21 21c5.083 0 9.748-1.817 13.384-4.832l14.895 15.491a.998.998 0 001.414.028 1 1 0 00.028-1.414zM21.983 40c-10.477 0-19-8.523-19-19s8.523-19 19-19 19 8.523 19 19-8.524 19-19 19z" /></svg>
+                      <path d="M51.704 51.273L36.845 35.82c3.79-3.801 6.138-9.041 6.138-14.82 0-11.58-9.42-21-21-21s-21 9.42-21 21 9.42 21 21 21c5.083 0 9.748-1.817 13.384-4.832l14.895 15.491a.998.998 0 001.414.028 1 1 0 00.028-1.414zM21.983 40c-10.477 0-19-8.523-19-19s8.523-19 19-19 19 8.523 19 19-8.524 19-19 19z" />
+                    </svg>
                   </span>
                 </div>
               </button>
@@ -73,7 +161,8 @@
             <a href="#" class="fcolor-inherit hover:fcolor-secondary icon icon-sm mr-xxs search-toggle">
               <span class="p-xxxs">
                 <svg class="search-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52.966 52.966" fill="currentColor">
-                  <path d="M51.704 51.273L36.845 35.82c3.79-3.801 6.138-9.041 6.138-14.82 0-11.58-9.42-21-21-21s-21 9.42-21 21 9.42 21 21 21c5.083 0 9.748-1.817 13.384-4.832l14.895 15.491a.998.998 0 001.414.028 1 1 0 00.028-1.414zM21.983 40c-10.477 0-19-8.523-19-19s8.523-19 19-19 19 8.523 19 19-8.524 19-19 19z" /></svg>
+                  <path d="M51.704 51.273L36.845 35.82c3.79-3.801 6.138-9.041 6.138-14.82 0-11.58-9.42-21-21-21s-21 9.42-21 21 9.42 21 21 21c5.083 0 9.748-1.817 13.384-4.832l14.895 15.491a.998.998 0 001.414.028 1 1 0 00.028-1.414zM21.983 40c-10.477 0-19-8.523-19-19s8.523-19 19-19 19 8.523 19 19-8.524 19-19 19z" />
+                </svg>
                 <svg class="search-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 224.512 224.512" fill="currentColor">
                   <path d="M224.507 6.997L217.521 0 112.256 105.258 6.998 0 .005 6.997l105.258 105.257L.005 217.512l6.993 7L112.256 119.24l105.265 105.272 6.986-7-105.258-105.258z" /></svg>
               </span>
@@ -164,38 +253,38 @@
         <div class="flex-row flex-wrap -mr-2xs lg:-mr-sm -mb-md">
           <article class="flex-col col-12 lg:pr-sm pr-2xs lg:col-4 pb-md">
             <div class="flex-col flex-stretch bg-light p-sm pt-0">
-              <div class="flex-col bg-secondary fcolor-white fweight-medium mb-sm mr-auto px-sm py-xxs text-center"><span class="fsize-xs">Step</span><span class="fsize-md">1</span></div>
+              <div class="flex-col fcolor-white bg-secondary fweight-medium mb-sm mr-auto px-sm py-xxs text-center"><span class="fsize-xs">Step</span><span class="fsize-md">1</span></div>
               <section class="w-full text-wrap">
                 <p>Before signing off or resigning your commission you should speak to the Regimental Careers Management Officer (RCMO) or the Adjutant to inform him of your intention to leave to allow him to thoroughly discuss your options. If you are adamant that ‘Civvy Street’ is your ultimate goal you will be asked to sign the necessary paperwork which will include serving out a Notice period not likely to be more than 12 months.</p>
                 <p>From this point onwards JSP 534, The Tri-Service Resettlement and Employment Support Manual will be your bible to your entitlements and how to go about preparing yourself in terms of further qualifications.</p>
               </section>
               <footer class="pt-sm mt-auto">
-                <a href="#" class="fcolor-white fweight-medium bg-primary hover:bg-secondary button capitalize hover:shadow-bottom px-md py-xs size-lg">Read Resettlement Manual</a>
+                <a href="#" class="py-xs bg-primary button capitalize fcolor-white fweight-medium hover:bg-secondary hover:shadow-bottom px-md size-lg">Read Resettlement Manual</a>
               </footer>
             </div>
           </article>
           <article class="flex-col col-12 lg:pr-sm pr-2xs lg:col-4 pb-md">
             <div class="flex-col flex-stretch bg-light p-sm pt-0">
-              <div class="flex-col bg-secondary fcolor-white fweight-medium mb-sm mr-auto px-sm py-xxs text-center"><span class="fsize-xs">Step</span><span class="fsize-md">2</span></div>
+              <div class="flex-col fcolor-white bg-secondary fweight-medium mb-sm mr-auto px-sm py-xxs text-center"><span class="fsize-xs">Step</span><span class="fsize-md">2</span></div>
               <section class="w-full text-wrap">
                 <p>Once fully engaged in the leaving process you will be in regular contact with the Career Transition Partnership(CTP), a partnering agreement between the Ministry of Defence and Right Management Ltd, which provides resettlement services for those leaving the Royal Navy, Army, Royal Air Force and Marines. Regardless of time served, all members of the Armed Forces can benefit from CTP support when leaving.</p>
                 <p>To date the CTP has assisted over 180,000 Service leavers with the transition to civilian life and supported thousands of organisations looking to employ ex-Service personnel.</p>
               </section>
               <footer class="pt-sm mt-auto">
-                <a href="#" class="fcolor-white fweight-medium bg-primary hover:bg-secondary button capitalize hover:shadow-bottom px-md py-xs size-lg">Visit the CTP Website</a>
+                <a href="#" class="py-xs bg-primary button capitalize fcolor-white fweight-medium hover:bg-secondary hover:shadow-bottom px-md size-lg">Visit the CTP Website</a>
               </footer>
             </div>
           </article>
           <article class="flex-col col-12 lg:pr-sm pr-2xs lg:col-4 pb-md">
             <div class="flex-col flex-stretch bg-light p-sm pt-0">
-              <div class="flex-col bg-secondary fcolor-white fweight-medium mb-sm mr-auto px-sm py-xxs text-center"><span class="fsize-xs">Step</span><span class="fsize-md">3</span></div>
+              <div class="flex-col fcolor-white bg-secondary fweight-medium mb-sm mr-auto px-sm py-xxs text-center"><span class="fsize-xs">Step</span><span class="fsize-md">3</span></div>
               <section class="w-full text-wrap">
                 <p>In your final months of paid service you should try to attend as many resettlement courses as you are able to endeavouring to widen your employability.</p>
                 <p>At the same time you will be starting the job search process. You will have received guidance on how to prepare your CV from the CTP, and there is a skill in tailoring your standard CV for specific roles/jobs.</p>
                 <p>Initially, you should do your utmost to seek out job opportunities yourself using your own contacts and through networking. Should you need further help with this a number of the social enterprises listed below can assist in this vital area.</p>
               </section>
               <footer class="pt-sm mt-auto">
-                <a href="#" class="fcolor-white fweight-medium bg-primary hover:bg-secondary button capitalize hover:shadow-bottom px-md py-xs size-lg">View Social Enterprises</a>
+                <a href="#" class="py-xs bg-primary button capitalize fcolor-white fweight-medium hover:bg-secondary hover:shadow-bottom px-md size-lg">View Social Enterprises</a>
               </footer>
             </div>
           </article>
@@ -216,7 +305,7 @@
                 <p>SALUTE MY JOB is a social social enterprise dedicated to providing expert, veteran focussed consultancy, recruitment and assessment services to potential employees and employers alike. By translating their knowledge, skills and experience into the language that commercial employers understand, Salute My Job can help candidates better understand the strengths they can offer a commercial employer and to provide the evidence employers require when taking someone on.</p>
               </section>
               <footer class="pt-sm mt-auto">
-                <a href="#" class="fcolor-white fweight-medium bg-primary hover:bg-secondary button capitalize hover:shadow-bottom px-md py-xs size-lg fsize-2sm">Visit Website</a>
+                <a href="#" class="py-xs bg-primary button capitalize fcolor-white fweight-medium hover:bg-secondary hover:shadow-bottom px-md size-lg fsize-2sm">Visit Website</a>
               </footer>
             </div>
           </article>
@@ -229,7 +318,7 @@
                 <p>FORCES RECRUITMENT SERVICES (FRS) was the first recruitment business founded specifically to link the ex-military and civilian jobs market. Using FRS gives employers and Service leavers looking for employment access to one of the largest and best recognised brands in military recruitment. Originally founded in Ely, Cambridgeshire in 2001, FRS has evolved to become a nationwide network of offices manned by ex-military personnel.</p>
               </section>
               <footer class="pt-sm mt-auto">
-                <a href="#" class="fcolor-white fweight-medium bg-primary hover:bg-secondary button capitalize hover:shadow-bottom px-md py-xs size-lg fsize-2sm">Visit Website</a>
+                <a href="#" class="py-xs bg-primary button capitalize fcolor-white fweight-medium hover:bg-secondary hover:shadow-bottom px-md size-lg fsize-2sm">Visit Website</a>
               </footer>
             </div>
           </article>
@@ -242,7 +331,7 @@
                 <p>BRITISH FORCES RESETTLEMENT SERVICES (BFRS) is a social enterprise created to help the Armed Forces Community with their transition into Civilian life. Understanding that resettlement is more than just the brief time around you leaving the Army BFRS offers services open to service leavers, reserve forces, veterans, civilian MOD employees, as well as partners and families. Aiming to bring the Forces Community together with employers who recognise their unique skill sets is achieved through two main channels</p>
               </section>
               <footer class="pt-sm mt-auto">
-                <a href="#" class="fcolor-white fweight-medium bg-primary hover:bg-secondary button capitalize hover:shadow-bottom px-md py-xs size-lg fsize-2sm">Visit Website</a>
+                <a href="#" class="py-xs bg-primary button capitalize fcolor-white fweight-medium hover:bg-secondary hover:shadow-bottom px-md size-lg fsize-2sm">Visit Website</a>
               </footer>
             </div>
           </article>
@@ -255,7 +344,7 @@
                 <p>THE OFFICERS’ ASSOCIATION (OA) is committed to working with other Service and civilian charities and agencies in order to provide assistance to former Officers, including improving employment prospects by offering professional, impartial and practical advice on all aspects of transition to civilian employment. Employment services include career consultations, networking opportunities, employment symposiums, and executive jobs boards.</p>
               </section>
               <footer class="pt-sm mt-auto">
-                <a href="#" class="fcolor-white fweight-medium bg-primary hover:bg-secondary button capitalize hover:shadow-bottom px-md py-xs size-lg fsize-2sm">Visit Website</a>
+                <a href="#" class="py-xs bg-primary button capitalize fcolor-white fweight-medium hover:bg-secondary hover:shadow-bottom px-md size-lg fsize-2sm">Visit Website</a>
               </footer>
             </div>
           </article>
@@ -268,7 +357,7 @@
                 <p>X-FORCES is a social enterprise offering an excellent programme providing valuable business and employment support for ex-Service personnel. It focuses on those wishing to start up their own business or to contribute to the growth of existing firms. It encourages anyone with an entrepreneurial spirit, offering Business Start Up advice and all important capital business loans.</p>
               </section>
               <footer class="pt-sm mt-auto">
-                <a href="#" class="fcolor-white fweight-medium bg-primary hover:bg-secondary button capitalize hover:shadow-bottom px-md py-xs size-lg fsize-2sm">Visit Website</a>
+                <a href="#" class="py-xs bg-primary button capitalize fcolor-white fweight-medium hover:bg-secondary hover:shadow-bottom px-md size-lg fsize-2sm">Visit Website</a>
               </footer>
             </div>
           </article>
@@ -281,7 +370,7 @@
                 <p>THE ROYAL ANGLIAN REGIMENTAL BUSINESS DIRECTORY is a live database of ex-Royal Anglian Officers and Men who now own, manage or play an integral part in the running of existing businesses.. It is in effect a Regimental business network with contacts throughout the UK and abroad. Any serving or ex-Royal Anglian can contact the regimental adjutant at RHQ in Bury St Edmunds to enjoy access to the database. It helps refine the search if you have a good idea of which County you wish to settle in as there is a strong network across our ten home counties.</p>
               </section>
               <footer class="pt-sm mt-auto">
-                <a href="#" class="fcolor-white fweight-medium bg-primary hover:bg-secondary button capitalize hover:shadow-bottom px-md py-xs size-lg fsize-2sm">Visit Website</a>
+                <a href="#" class="py-xs bg-primary button capitalize fcolor-white fweight-medium hover:bg-secondary hover:shadow-bottom px-md size-lg fsize-2sm">Visit Website</a>
               </footer>
             </div>
           </article>
@@ -294,7 +383,7 @@
                 <p>ROYAL ANGLIAN LINKEDIN is intended to provide former and serving members of the regiment a professional networking tool.</p>
               </section>
               <footer class="pt-sm mt-auto">
-                <a href="#" class="fcolor-white fweight-medium bg-primary hover:bg-secondary button capitalize hover:shadow-bottom px-md py-xs size-lg fsize-2sm">Visit Website</a>
+                <a href="#" class="py-xs bg-primary button capitalize fcolor-white fweight-medium hover:bg-secondary hover:shadow-bottom px-md size-lg fsize-2sm">Visit Website</a>
               </footer>
             </div>
           </article>
@@ -307,7 +396,7 @@
                 <p>SOTERIA DEFENCE AND SECURITY LTD was formed in 2013 to provide a specialised and dynamic consultancy services to global industry customers and the UK Ministry of Defence. At Soteria, we aim to recruit highly skilled people, often ex-military or civilians with government department experience and understanding. Soteria takes great pride in helping personnel transition from successful careers to a rewarding second career as a self employed professional contractor or help support existing consultants.</p>
               </section>
               <footer class="pt-sm mt-auto">
-                <a href="#" class="fcolor-white fweight-medium bg-primary hover:bg-secondary button capitalize hover:shadow-bottom px-md py-xs size-lg fsize-2sm">Visit Website</a>
+                <a href="#" class="py-xs bg-primary button capitalize fcolor-white fweight-medium hover:bg-secondary hover:shadow-bottom px-md size-lg fsize-2sm">Visit Website</a>
               </footer>
             </div>
           </article>
@@ -319,7 +408,7 @@
   <!-- Insta Gallery -->
   <section class="pt-2lg">
     <div class="container lg:container-xl mx-auto md:container-md">
-      <div class="flex-row justify-center -mr-2xs flex-wrap -mb-sm lg:-mr-sm">
+      <div class="flex-row flex-wrap -mr-2xs lg:-mr-sm -mb-sm justify-center">
         <section class="pr-2xs lg:pr-sm col-4 lg:col-flex lg:w-auto pb-sm">
           <div class="pos-relative ratio-1x1">
             <a href="#" class="flex-col pin pos-absolute hover:opacity-parent-100 hover:shadow-parent-lg image-media opacity-parent-75 image-rollover">
@@ -367,7 +456,7 @@
   <!-- footer -->
   <section class="pt-2lg fsize-xs">
     <div class="container lg:container-xl mx-auto">
-      <div class="flex-row align-center justify-center -mb-2xs -mr-2xs flex-wrap lg:-mb-md lg:-mr-md lg:justify-start">
+      <div class="flex-row flex-wrap -mr-2xs justify-center -mb-2xs align-center lg:-mb-md lg:-mr-md lg:justify-start">
         <div class="pr-2xs lg:pb-md lg:pr-md pb-2xs flex-none">
           <a href="index.html" class="pos-relative d-inline-block ratio-logo icon-logo-footer">
             <span class="pos-absolute pin">
@@ -377,17 +466,17 @@
         </div>
         <div class="w-full xl:d-hidden"></div>
         <div class="pr-2xs lg:pb-md lg:pr-md pb-2xs lg:flex-auto">
-          <ul class="flex-stretch list-reset col-count-1 lg:col-count-2 lg:text-left text-center">
-            <li><a class="fcolor-inherit hover:fcolor-secondary d-inline-block no-underline" href="news.html">News</a></li>
-            <li><a class="fcolor-inherit hover:fcolor-secondary d-inline-block no-underline" href="regimental-units.html">Regimental Units</a></li>
-            <li><a class="fcolor-inherit hover:fcolor-secondary d-inline-block no-underline" href="#">Associations & Branches</a></li>
-            <li><a class="fcolor-inherit hover:fcolor-secondary d-inline-block no-underline" href="regimental-journal.html">Regimental Journal</a></li>
-            <li><a class="fcolor-inherit hover:fcolor-secondary d-inline-block no-underline" href="resettlement.html">Resettlement</a></li>
-            <li><a class="fcolor-inherit hover:fcolor-secondary d-inline-block no-underline" href="contact.html">Contact</a></li>
-            <li><a class="fcolor-inherit hover:fcolor-secondary d-inline-block no-underline" href="#">Privacy Policy</a></li>
-            <li><a class="fcolor-inherit hover:fcolor-secondary d-inline-block no-underline" href="#">Terms &amp; Conditions</a></li>
-            <li><a class="fcolor-inherit hover:fcolor-secondary d-inline-block no-underline" href="#">Cookies</a></li>
-            <li><a class="fcolor-inherit hover:fcolor-secondary d-inline-block no-underline" href="#">Sitemap</a></li>
+          <ul class="col-count-1 flex-stretch lg:col-count-2 lg:text-left list-reset text-center">
+            <li><a class="fcolor-inherit no-underline d-inline-block hover:fcolor-secondary" href="news.html">News</a></li>
+            <li><a class="fcolor-inherit no-underline d-inline-block hover:fcolor-secondary" href="regimental-units.html">Regimental Units</a></li>
+            <li><a class="fcolor-inherit no-underline d-inline-block hover:fcolor-secondary" href="#">Associations & Branches</a></li>
+            <li><a class="fcolor-inherit no-underline d-inline-block hover:fcolor-secondary" href="regimental-journal.html">Regimental Journal</a></li>
+            <li><a class="fcolor-inherit no-underline d-inline-block hover:fcolor-secondary" href="resettlement.html">Resettlement</a></li>
+            <li><a class="fcolor-inherit no-underline d-inline-block hover:fcolor-secondary" href="contact.html">Contact</a></li>
+            <li><a class="fcolor-inherit no-underline d-inline-block hover:fcolor-secondary" href="#">Privacy Policy</a></li>
+            <li><a class="fcolor-inherit no-underline d-inline-block hover:fcolor-secondary" href="#">Terms &amp; Conditions</a></li>
+            <li><a class="fcolor-inherit no-underline d-inline-block hover:fcolor-secondary" href="#">Cookies</a></li>
+            <li><a class="fcolor-inherit no-underline d-inline-block hover:fcolor-secondary" href="#">Sitemap</a></li>
           </ul>
         </div>
         <div class="w-full lg:d-hidden"></div>
@@ -418,7 +507,7 @@
             <div class="mb-xs">© <script>
                 document.write(new Date().getFullYear())
               </script> The Royal Anglian Regiment</div>
-            <a class="fcolor-inherit hover:fcolor-secondary d-inline-block no-underline icon-unstuck-design mt-auto ratio-unstuck-design unstuck-link" href="http://unstuckdesign.com/" target="_blank">
+            <a class="fcolor-inherit no-underline d-inline-block hover:fcolor-secondary icon-unstuck-design mt-auto ratio-unstuck-design unstuck-link" href="http://unstuckdesign.com/" target="_blank">
               <div class="pos-absolute pin">
                 <svg class="unstuck-design" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 191 14.1">
                   <path class="st0" d="M99.6 10.8c-.1-.1-.2-.2-.2-.4 0-.3.2-.5.5-.5.1 0 .2 0 .3.1.8.6 1.7.9 2.6.9 1 0 1.7-.5 1.7-1.3s-1-1.1-2-1.4c-1.3-.4-2.7-.8-2.7-2.3 0-1.4 1.2-2.3 2.8-2.3.9 0 1.8.3 2.6.7.2.1.3.3.3.5 0 .3-.2.5-.5.5-.1 0-.2 0-.3-.1-.7-.4-1.4-.6-2.1-.6-1 0-1.6.5-1.6 1.2 0 .8 1 1.1 2.1 1.4 1.3.4 2.6.9 2.6 2.3 0 1.6-1.3 2.5-2.9 2.5-1.2-.1-2.3-.5-3.2-1.2m8.6-1.3V4.6h-.7c-.3 0-.5-.3-.5-.5 0-.3.3-.5.5-.5h.7V1.7c0-.3.3-.6.6-.6s.6.3.6.6v1.9h2.1c.3 0 .6.3.6.5 0 .3-.3.5-.6.5h-2.1v4.8c0 1 .6 1.4 1.4 1.4.4 0 .6-.1.7-.1.3 0 .5.2.5.5 0 .2-.1.4-.3.5-.3.1-.7.2-1.2.2-1.3-.1-2.3-.7-2.3-2.4m13 1.6c0 .3-.3.6-.6.6s-.6-.3-.6-.6v-.9c-.6.9-1.4 1.6-2.8 1.6-2 0-3.1-1.3-3.1-3.3V3.9c0-.3.3-.6.6-.6s.6.3.6.6v4.2c0 1.5.8 2.5 2.3 2.5 1.4 0 2.5-1 2.5-2.6V3.8c0-.3.3-.6.6-.6s.6.3.6.6l-.1 7.3zm2.2-3.5c0-2.3 1.8-4.3 4.2-4.3 1.4 0 2.3.5 3 1.2.1.1.2.2.2.4 0 .3-.3.6-.6.6-.2 0-.3-.1-.4-.1-.6-.5-1.3-1-2.2-1-1.7 0-2.9 1.4-2.9 3.2 0 1.8 1.3 3.2 3 3.2.9 0 1.7-.4 2.3-1 .1-.1.2-.2.3-.2.3 0 .6.3.6.6 0 .1-.1.3-.2.4-.8.8-1.7 1.3-3.1 1.3-2.4 0-4.2-2-4.2-4.3m9.5-7c0-.3.3-.6.6-.6s.6.3.6.6v7.5l4.4-4.5c.1-.2.3-.2.5-.2.3 0 .6.3.6.6 0 .2-.1.3-.2.5l-2.7 2.6 2.9 3.7c.1.1.2.3.2.4 0 .3-.3.6-.6.6-.2 0-.4-.1-.5-.3l-2.8-3.6-1.7 1.7v1.6c0 .3-.3.6-.6.6s-.6-.3-.6-.6L132.9.6zm9.5 7c0 2.2 1.5 3.5 3.2 3.5 1.7 0 3.3-1.4 3.3-3.5s-1.6-3.5-3.3-3.5c-1.8 0-3.2 1.3-3.2 3.5m7.2 3.7c0 .2-.2.4-.4.4s-.4-.2-.4-.4V9.8c-.7 1.1-1.7 2-3.3 2-1.9 0-3.9-1.6-3.9-4.2s2-4.2 3.9-4.2c1.6 0 2.7.9 3.3 1.9V.4c0-.2.2-.4.4-.4s.4.2.4.4v10.9zm9.1-4.1c-.1-1.6-1-3.1-2.9-3.1-1.6 0-2.8 1.4-3 3.1h5.9zm-2.8 4.6c-2.1 0-4-1.7-4-4.2 0-2.3 1.6-4.2 3.8-4.2 2.3 0 3.7 1.9 3.7 4.2 0 .2-.2.4-.4.4h-6.3c.1 2 1.6 3.2 3.2 3.2 1.2 0 2-.5 2.6-1.1.1-.1.1-.1.3-.1.2 0 .4.2.4.4 0 .1 0 .2-.1.3-.8.6-1.7 1.1-3.2 1.1m5.3-1.1c-.1 0-.1-.2-.1-.3 0-.2.2-.4.4-.4.1 0 .2 0 .3.1.8.6 1.7.9 2.7.9 1.1 0 1.9-.6 1.9-1.5 0-1-1-1.3-2.1-1.6-1.3-.4-2.8-.8-2.8-2.2 0-1.3 1.1-2.2 2.7-2.2.9 0 1.8.3 2.6.7.1.1.2.2.2.4s-.2.4-.4.4c-.1 0-.2 0-.2-.1-.7-.4-1.5-.7-2.3-.7-1.1 0-1.8.6-1.8 1.4 0 .9 1.1 1.2 2.3 1.6 1.3.4 2.7.8 2.7 2.3 0 1.4-1.2 2.4-2.8 2.4-1.2-.1-2.4-.6-3.3-1.2m8.5-6.9c0-.2.2-.4.4-.4s.4.2.4.4v7.4c0 .2-.2.4-.4.4s-.4-.2-.4-.4V3.8zm-.1-3.1c0-.3.2-.5.5-.5s.5.2.5.5V1c0 .3-.2.5-.5.5s-.5-.2-.5-.5V.7zm10.8 6.5c0-1.9-1.7-3.1-3.3-3.1-1.7 0-3.1 1.2-3.1 3.1 0 1.8 1.5 3.1 3.1 3.1 1.6-.1 3.3-1.3 3.3-3.1m-6.8 5.8c-.1-.1-.2-.2-.2-.3 0-.2.2-.4.4-.4.1 0 .2 0 .2.1.9.7 2 1 3.1 1 1.9 0 3.2-1.1 3.2-3.1V9.1c-.7 1-1.8 1.9-3.4 1.9-1.9 0-3.9-1.5-3.9-3.8s1.9-3.8 3.9-3.8c1.6 0 2.7.9 3.4 1.8V3.9c0-.2.2-.4.4-.4s.4.2.4.4v6.5c0 1.2-.4 2.1-1 2.7-.7.7-1.7 1.1-2.9 1.1-1.3 0-2.5-.4-3.6-1.2M184 3.8c0-.2.2-.4.4-.4s.4.2.4.4V5c.5-.9 1.4-1.7 2.9-1.7 2 0 3.2 1.4 3.2 3.3v4.6c0 .2-.2.4-.4.4s-.4-.2-.4-.4V6.7c0-1.7-.9-2.8-2.6-2.8-1.6 0-2.8 1.2-2.8 2.9v4.3c0 .2-.2.4-.4.4s-.4-.2-.4-.4l.1-7.3zm-86.9 8.1c-.3 0-.6-.3-.6-.6V6.2c0-.2-.1-1.8-2.3-1.8-.8 0-1.5.2-1.9.6-.5.5-.5 1.1-.5 1.1v2.2c0 1.2-1.1 1-1.1 1V6.1c0-.1 0-1.1.8-1.9.6-.6 1.5-1 2.7-1 1.1 0 2 .3 2.6.9.8.8.8 1.9.8 2v5.1c.1.5-.2.7-.5.7"></path>
