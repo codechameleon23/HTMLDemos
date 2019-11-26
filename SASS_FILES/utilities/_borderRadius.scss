@@ -10,7 +10,7 @@ $borderRadiusDirecton: (
 );
 @mixin getBorderRadiusClasses($bp: $breakPoint) {
   @each $borderRadius in $borderRadiuses{
-    .#{nth($borderRadius, 1)} {
+    .#{$bp}#{nth($borderRadius, 1)} {
       
       
       @if(nth($borderRadius, 2)){
