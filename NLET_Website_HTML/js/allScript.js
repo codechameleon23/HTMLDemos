@@ -115,32 +115,51 @@ $(document).ready(function () {
   });
 
   //Banner carousel
-  var bannerCarousel;
-  if ($(".jsBannerCarousel").length) {
-    bannerCarousel = $(".jsBannerCarousel"); //Banner-carousel for Property-details page
-    bannerCarousel.owlCarousel({
-      center: true,
-      items: 1,
+  // var bannerCarousel;
+  // if($(".jsBannerCarousel").length) {
+  //   bannerCarousel = $(".jsBannerCarousel"); //Banner-carousel for Property-details page
+  //   bannerCarousel.owlCarousel({
+  //     center: true,
+  //     items: 1,
+  //     stagePadding: 0,
+  //     margin: 0,
+  //     loop: true,
+  //     mouseDrag: false,
+  //     nav: false,
+  //     dots: true,
+  //     animateIn: isIE11 || isIE10 ? "" : "fadeIn",
+  //     animateOut: isIE11 || isIE10 ? "" : "fadeOut",
+  //     smartSpeed: 500,
+  //     autoplay: true,
+  //     autoplayTimeout: 4000,
+  //     autoplayHoverPause: true,
+  //   });
+  // };
+
+  var categoryCarousel;
+  if($(".jsCategoryCarousel").length) {
+    categoryCarousel = $(".jsCategoryCarousel");
+    categoryCarousel.owlCarousel({
+      items: 4,
       stagePadding: 0,
       margin: 0,
       loop: true,
-      mouseDrag: false,
+      mouseDrag: true,
       nav: false,
-      dots: true,
-      animateIn: isIE11 || isIE10 ? "" : "fadeIn",
-      animateOut: isIE11 || isIE10 ? "" : "fadeOut",
+      dots: false,
       smartSpeed: 500,
-      autoplay: true,
+      autoplay: false,
       autoplayTimeout: 4000,
       autoplayHoverPause: true,
     });
-
-  };
+  }
   $('.jsCarouselPrv').on('click', function () {
-    $(this).closest('.carousel-outer').find(bannerCarousel).trigger('prev.owl.carousel');
+    // $(this).closest('.carousel-outer').find(bannerCarousel).trigger('prev.owl.carousel');
+    $(this).closest('.carousel-outer').find(categoryCarousel).trigger('prev.owl.carousel');
   });
   $('.jsCarouselNxt').on('click', function () {
-    $(this).closest('.carousel-outer').find(bannerCarousel).trigger('next.owl.carousel');
+    // $(this).closest('.carousel-outer').find(bannerCarousel).trigger('next.owl.carousel');
+    $(this).closest('.carousel-outer').find(categoryCarousel).trigger('next.owl.carousel');
   });
 
   // Magnific Popup : Gallery
