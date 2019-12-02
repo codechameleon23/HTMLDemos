@@ -22,9 +22,129 @@
   <main class="flex-col flex-auto">
     <!-- Ribbon -->
     <section class="pt-0">
-      <section class="bg-shipGray fcolor-white py-md text-center">
-        <div class="container lg:container-xl md:container-md mx-auto">
-          <h1 class="fsize-4md fweight-bold">News & Events</h1>
+      <section class="fcolor-white bg-shipGray py-md text-center">
+        <div class="container md:container-md mx-auto lg:container-xl">
+          <h1 class="fweight-bold fsize-4md">News & Events</h1>
+        </div>
+      </section>
+      <!-- Accordions -->
+      <section class="-mb-md filter_parent lg:pt-xl pt-2md">
+        <div class="container md:container-md mx-auto lg:container-3lg">
+          <div class="flex-row -mr-xs d-hidden filter_tabs justify-center lg:d-flex lg:pb-xl pb-2md uppercase">
+            <div class="filter_tab mr-xs p-xs">Sort by:</div>
+            <div data-filterby="by_All" class="fweight-bold px-md py-xs border-2 filter_tab hover:fcolor-white mr-xs on-active-fcolor-white border-shipGray hover:bg-shipGray is-active on-active-bg-shipGray">All</div>
+            <div data-filterby="by_News" class="fweight-bold px-md py-xs border-2 filter_tab hover:fcolor-white mr-xs on-active-fcolor-white border-turmeric hover:bg-turmeric on-active-bg-turmeric">News</div>
+            <div data-filterby="by_Events" class="fweight-bold px-md py-xs border-2 filter_tab hover:fcolor-white mr-xs on-active-fcolor-white border-jaffa hover:bg-jaffa on-active-bg-jaffa">Events</div>
+            <div data-filterby="by_Community" class="fweight-bold px-md py-xs border-2 filter_tab hover:fcolor-white mr-xs on-active-fcolor-white border-deluge hover:bg-deluge on-active-bg-deluge">Community</div>
+          </div>
+          <div class="col-12 filter_dropdown_wrapper lg:d-hidden mb-md select shadow shadow-md">
+            <div class="flex-col col-12 flex-auto p-xxs">
+              <select class="bg-white filter_dropdown flex-stretch focus:shadow-bottom px-2xs py-xs transition-all">
+                <option value="by_All">All</option>
+                <option value="by_News">News</option>
+                <option value="by_Events">Events</option>
+                <option value="by_Community">Community</option>
+              </select>
+            </div>
+          </div>
+          <div class="-mb-md -mr-2xs filter_wrapper flex-row flex-wrap lg:-mb-lg lg:-mr-lg">
+            <article class="flex-col col-12 by_All filter_obj filtered lg:col-4 lg:pb-lg lg:pr-lg pb-md pr-2xs by_Community" data-aos="fade-up" data-aos-delay="200" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
+              <div class="lg:ratio-custom-2 ratio-16x9">
+                <div class="bg-center bg-cover pin pos-absolute" style="background-image: url('./images/iStock-899285140.jpg');">
+                </div>
+                <div class="fweight-bold fcolor-white fsize-3xs uppercase bg-shipGray p-xs pin-r pin-t pos-absolute">COMMUNITY</div>
+              </div>
+              <div class="fcolor-white p-md bg-turmeric">
+                <div class="fsize-2xs mb-xs">17 August 2019</div>
+                <section class="text-wrap w-full">
+                  <h2 class="fweight-bold fsize-4sm">A News headline here and here and here and here and here.</h2>
+                </section>
+                <footer class="pt-sm">
+                  <a href="#" class="fweight-bold fcolor-white fsize-3xs uppercase bg-flamingo button hover:shadow-md px-md py-xs">READ MORE</a>
+                </footer>
+              </div>
+            </article>
+            <article class="flex-col col-12 by_All filter_obj filtered lg:col-4 lg:pb-lg lg:pr-lg pb-md pr-2xs by_Events" data-aos="fade-up" data-aos-delay="300" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
+              <div class="lg:ratio-custom-2 ratio-16x9">
+                <div class="bg-center bg-cover pin pos-absolute" style="background-image: url('./images/iStock-811103448.jpg');">
+                </div>
+                <div class="fweight-bold fcolor-white fsize-3xs uppercase bg-shipGray p-xs pin-r pin-t pos-absolute">EVENT</div>
+              </div>
+              <div class="fcolor-white p-md bg-jaffa">
+                <div class="fsize-2xs mb-xs">17 August 2019</div>
+                <section class="text-wrap w-full">
+                  <h2 class="fweight-bold fsize-4sm">A News headline here and here and here and here and here.</h2>
+                </section>
+                <footer class="pt-sm">
+                  <a href="#" class="fweight-bold fcolor-white fsize-3xs uppercase bg-flamingo button hover:shadow-md px-md py-xs">READ MORE</a>
+                </footer>
+              </div>
+            </article>
+            <article class="flex-col col-12 by_All filter_obj filtered lg:col-4 lg:pb-lg lg:pr-lg pb-md pr-2xs by_News" data-aos="fade-up" data-aos-delay="100" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
+              <div class="lg:ratio-custom-2 ratio-16x9">
+                <div class="bg-center bg-cover pin pos-absolute" style="background-image: url('./images/iStock-891625526.jpg');">
+                </div>
+                <div class="fweight-bold fcolor-white fsize-3xs uppercase bg-shipGray p-xs pin-r pin-t pos-absolute">NEWS</div>
+              </div>
+              <div class="fcolor-white p-md bg-deluge">
+                <div class="fsize-2xs mb-xs">17 August 2019</div>
+                <section class="text-wrap w-full">
+                  <h2 class="fweight-bold fsize-4sm">A News headline here and here and here and here and here.</h2>
+                </section>
+                <footer class="pt-sm">
+                  <a href="#" class="fweight-bold fcolor-white fsize-3xs uppercase bg-flamingo button hover:shadow-md px-md py-xs">READ MORE</a>
+                </footer>
+              </div>
+            </article>
+            <article class="flex-col col-12 by_All filter_obj filtered lg:col-4 lg:pb-lg lg:pr-lg pb-md pr-2xs by_News" data-aos="fade-up" data-aos-delay="100" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
+              <div class="lg:ratio-custom-2 ratio-16x9">
+                <div class="bg-center bg-cover pin pos-absolute" style="background-image: url('./images/iStock-891625526.jpg');">
+                </div>
+                <div class="fweight-bold fcolor-white fsize-3xs uppercase bg-shipGray p-xs pin-r pin-t pos-absolute">NEWS</div>
+              </div>
+              <div class="fcolor-white p-md bg-deluge">
+                <div class="fsize-2xs mb-xs">17 August 2019</div>
+                <section class="text-wrap w-full">
+                  <h2 class="fweight-bold fsize-4sm">A News headline here and here and here and here and here.</h2>
+                </section>
+                <footer class="pt-sm">
+                  <a href="#" class="fweight-bold fcolor-white fsize-3xs uppercase bg-flamingo button hover:shadow-md px-md py-xs">READ MORE</a>
+                </footer>
+              </div>
+            </article>
+            <article class="flex-col col-12 by_All filter_obj filtered lg:col-4 lg:pb-lg lg:pr-lg pb-md pr-2xs by_Community" data-aos="fade-up" data-aos-delay="200" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
+              <div class="lg:ratio-custom-2 ratio-16x9">
+                <div class="bg-center bg-cover pin pos-absolute" style="background-image: url('./images/iStock-899285140.jpg');">
+                </div>
+                <div class="fweight-bold fcolor-white fsize-3xs uppercase bg-shipGray p-xs pin-r pin-t pos-absolute">COMMUNITY</div>
+              </div>
+              <div class="fcolor-white p-md bg-turmeric">
+                <div class="fsize-2xs mb-xs">17 August 2019</div>
+                <section class="text-wrap w-full">
+                  <h2 class="fweight-bold fsize-4sm">A News headline here and here and here and here and here.</h2>
+                </section>
+                <footer class="pt-sm">
+                  <a href="#" class="fweight-bold fcolor-white fsize-3xs uppercase bg-flamingo button hover:shadow-md px-md py-xs">READ MORE</a>
+                </footer>
+              </div>
+            </article>
+            <article class="flex-col col-12 by_All filter_obj filtered lg:col-4 lg:pb-lg lg:pr-lg pb-md pr-2xs by_Events" data-aos="fade-up" data-aos-delay="300" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
+              <div class="lg:ratio-custom-2 ratio-16x9">
+                <div class="bg-center bg-cover pin pos-absolute" style="background-image: url('./images/iStock-811103448.jpg');">
+                </div>
+                <div class="fweight-bold fcolor-white fsize-3xs uppercase bg-shipGray p-xs pin-r pin-t pos-absolute">EVENT</div>
+              </div>
+              <div class="fcolor-white p-md bg-jaffa">
+                <div class="fsize-2xs mb-xs">17 August 2019</div>
+                <section class="text-wrap w-full">
+                  <h2 class="fweight-bold fsize-4sm">A News headline here and here and here and here and here.</h2>
+                </section>
+                <footer class="pt-sm">
+                  <a href="#" class="fweight-bold fcolor-white fsize-3xs uppercase bg-flamingo button hover:shadow-md px-md py-xs">READ MORE</a>
+                </footer>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
     </section>
