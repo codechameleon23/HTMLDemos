@@ -18,14 +18,154 @@
 </head>
 
 <body class="flex-col has-theme-mauvelous is-close jsNavbarToggle">
+  <!-- Header -->
+  <div class="pos-absolute pin-t pin-x z-40">
+    <header class="pos-relative">
+      <div class="mx-auto container lg:container-xl">
+        <div class="flex-row">
+          <div class="py-xs flex-none">
+            <a href="index.html" class="pos-relative d-inline-block icon-3lg ratio-logo xl:icon-logo-header">
+              <span class="pos-absolute pin">
+                <img src="./images/brand-logo.svg" alt="" />
+              </span>
+            </a>
+          </div>
+          <div class="flex-col flex-auto md:pos-relative">
+            <!-- Navbar -->
+            <navbar class="flex-col flex-stretch pin bg-white fsize-2xs lg:bg-transparent lg:pos-static lg:shadow-none lg:z-10 navbar pos-fixed shadow-lg z-30">
+              <ul class="lg:mt-0 mt-xl">
+                <li class="hover:fcolor-flamingo on-active-fcolor-flamingo on-active-fweight-bold uppercase is-active">
+                  <a class="fcolor-inherit no-underline lg:px-xxs px-sm py-xs" href="about.html">About</a>
+                </li>
+                <li class="hover:fcolor-flamingo on-active-fcolor-flamingo on-active-fweight-bold uppercase">
+                  <div class="flex-row align-center flex-stretch lg:justify-center lg:px-xxs lg:py-xs navDrop">
+                    <a class="fcolor-inherit no-underline lg:px-xxs px-sm py-xs" href="#">Community</a>
+                    <span class="fcolor-white lg:fcolor-inherit flex-none lg:ml-0 ml-auto px-xs submenuOpen">
+                      <img src="./images/arrow.png" alt="" />
+                    </span>
+                  </div>
+                  <div class="dropdown bg-white lg:pt-xl lg:shadow-lg">
+                    <ul class="flex-row flex-wrap bg-white lg:pb-2xs lg:pt-sm list-reset">
+                      <li class="py-xs px-sm col-12 flex-row submenuBack">
+                        Back <span class="d-inline-block ml-auto px-xs"><img src="./images/arrow.png" alt="" /></span>
+                      </li>
+                      <li class="py-xs px-sm lg:px-xxs col-12">
+                        <a class="flex-row d-inline-block lg:flex-col lg:text-center no-underline fcolor-jaffa" href="#">
+                          <img class="icon lg:icon-lg lg:mb-sm mr-xs" src="./images/single-logo-jaffa.png" alt="Apprenticeship" />
+                          <strong>Apprenticeship</strong>
+                        </a>
+                      </li>
+                      <li class="py-xs px-sm lg:px-xxs col-12">
+                        <a class="flex-row d-inline-block lg:flex-col lg:text-center no-underline fcolor-flamingo" href="#">
+                          <img class="icon lg:icon-lg lg:mb-sm mr-xs" src="./images/single-logo-flamingo.png" alt="Apprenticeship" />
+                          <strong>Adult & Comunity</strong>
+                        </a>
+                      </li>
+                      <li class="py-xs px-sm lg:px-xxs col-12">
+                        <a class="flex-row d-inline-block lg:flex-col lg:text-center no-underline fcolor-java" href="#">
+                          <img class="icon lg:icon-lg lg:mb-sm mr-xs" src="./images/single-logo-java.png" alt="Apprenticeship" />
+                          <strong>Academy</strong>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="hover:fcolor-flamingo on-active-fcolor-flamingo on-active-fweight-bold uppercase">
+                  <a class="fcolor-inherit no-underline lg:px-xxs px-sm py-xs" href="regimental-journal.html">Curriculum</a>
+                </li>
+                <li class="hover:fcolor-flamingo on-active-fcolor-flamingo on-active-fweight-bold uppercase">
+                  <a class="fcolor-inherit no-underline lg:px-xxs px-sm py-xs" href="resettlement.html">Exams</a>
+                </li>
+                <li class="hover:fcolor-flamingo on-active-fcolor-flamingo on-active-fweight-bold uppercase">
+                  <a class="fcolor-inherit no-underline lg:px-xxs px-sm py-xs" href="contact.html">Student Services</a>
+                </li>
+                <li class="hover:fcolor-flamingo on-active-fcolor-flamingo on-active-fweight-bold uppercase">
+                  <a class="fcolor-inherit no-underline lg:px-xxs px-sm py-xs" href="contact.html">News & Events</a>
+                </li>
+              </ul>
+              <!-- Social Media Mobile -->
+              <div class="lg:d-hidden px-sm py-2md">
+                <a href="#" class="fcolor-inherit icon icon-md lg:icon-sm mr-xxs fcolor-java">
+                  <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.4 25.4">
+                    <path d="M16 13.2h-2.3v5.7h-2.3v-5.7h-2v-2.3h1.9V9.6c0-.8.3-1.6.8-2.2.6-.6 1.2-.9 2-.9H16v2.3h-1.9c-.1 0-.2.1-.3.2-.1.1-.1.3-.1.5v1.2H16v2.5zm9.4-.5c0-1.8-.3-3.4-1-4.9-.7-1.5-1.6-2.9-2.7-4-1.1-1.2-2.5-2.1-4-2.7-1.5-.7-3.2-1-4.9-1S9.3.3 7.7 1c-1.5.7-2.9 1.6-4 2.7-1.1 1.2-2 2.5-2.7 4-.7 1.6-1 3.3-1 5s.3 3.4 1 4.9c.7 1.5 1.6 2.9 2.7 4s2.5 2 4 2.7c1.5.7 3.2 1 4.9 1s3.4-.3 4.9-1c1.5-.7 2.9-1.6 4-2.7s2-2.5 2.7-4c.8-1.5 1.2-3.1 1.2-4.9">
+                    </path>
+                  </svg>
+                </a>
+                <a href="#" class="fcolor-inherit icon icon-md lg:icon-sm mr-xxs fcolor-jaffa">
+                  <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.4 25.4">
+                    <path d="M18.1 9.4c.3 0 .5-.1.8-.2.2-.1.5-.1.7-.2-.2.2-.4.5-.6.7-.2.2-.5.4-.7.6v.3c0 .9-.2 1.7-.5 2.6-.3.9-.8 1.6-1.4 2.3-.6.7-1.4 1.3-2.3 1.7-.9.4-2 .7-3.1.7-.7 0-1.4-.1-2.1-.3-.7-.2-1.3-.5-1.8-.8h.6c1.2 0 2.3-.4 3.2-1.1-.6 0-1.1-.2-1.5-.5-.4-.3-.7-.8-.9-1.3.2 0 .3.1.4.1h.4c.1 0 .2 0 .3-.1-.6-.1-1.1-.4-1.4-.9-.4-.5-.6-1-.6-1.6.3.2.7.3 1.2.3-.7-.5-1.1-1.2-1.1-2.1 0-.5.1-.9.3-1.3.7.8 1.4 1.4 2.3 1.9.9.5 1.9.7 3 .8 0-.2-.1-.4-.1-.6 0-.7.3-1.3.8-1.8s1.1-.8 1.8-.8c.4 0 .7.1 1 .2.3.1.6.3.8.6.3 0 .6-.1.9-.3.2 0 .5-.1.7-.3-.1.3-.3.6-.5.8-.1.3-.4.5-.6.6m7.3 3.3c0-1.8-.3-3.4-1-4.9-.7-1.5-1.6-2.9-2.7-4s-2.5-2-4-2.7c-1.5-.7-3.2-1-4.9-1S9.3.3 7.7 1c-1.5.7-2.9 1.6-4 2.7-1.2 1.2-2.1 2.5-2.7 4-.7 1.5-1 3.2-1 4.9s.3 3.4 1 4.9c.7 1.5 1.6 2.9 2.7 4 1.2 1.1 2.5 2 4 2.7 1.5.7 3.2 1 4.9 1s3.4-.3 4.9-1c1.5-.7 2.9-1.6 4-2.7s2-2.5 2.7-4c.8-1.4 1.2-3 1.2-4.8">
+                    </path>
+                  </svg>
+                </a>
+                <a href="#" class="fcolor-inherit icon icon-md lg:icon-sm mr-xxs fcolor-deluge">
+                  <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.4 25.4">
+                    <path d="M15.5 12.7c0-1.5-1.2-2.7-2.8-2.7s-2.8 1.2-2.8 2.7c0 1.5 1.2 2.7 2.8 2.7s2.8-1.2 2.8-2.7M18 9.5V7.9c0-.3-.3-.6-.6-.6h-1.6c-.3 0-.6.3-.6.6v1.5c0 .3.3.6.6.6h1.6c.4.1.6-.2.6-.5m0 8v-5.8h-1.2c.2.3.2.7.2 1.2 0 2.3-1.9 4.2-4.3 4.2s-4.3-1.8-4.3-4.2c0-.4 0-.8.2-1.2H7.3v5.8c0 .3.3.5.6.5h9.6c.3.1.5-.2.5-.5m1.6.4c0 1-.8 1.7-1.8 1.7H7.5c-1 0-1.8-.8-1.8-1.7V7.6c0-1 .8-1.8 1.8-1.8h10.3c1 0 1.8.8 1.8 1.8v10.3zm5.8-5.2C25.3 5.6 19.6-.1 12.7 0 5.7.1 0 5.7 0 12.7c0 7 5.7 12.7 12.7 12.7 7 0 12.7-5.7 12.7-12.7">
+                    </path>
+                  </svg>
+                </a>
+                <a href="#" class="fcolor-inherit icon icon-md lg:icon-sm mr-xxs fcolor-flamingo">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="-148 21 32 32">
+                    <path fill="currentColor" d="M-132 21c-8.8 0-16 7.2-16 16s7.2 16 16 16 16-7.2 16-16-7.2-16-16-16zm-4.5 22.9h-3.6V33.2h3.6v10.7zm-1.8-12.1c-1.2 0-2-.8-2-1.8s.8-1.8 2-1.8 2 .8 2 1.8-.8 1.8-2 1.8zm14.6 12.1h-3.6v-5.7c0-1.4-.5-2.4-1.8-2.4-1 0-1.6.7-1.8 1.3-.1.2-.1.5-.1.9v6h-3.6V33.3h3.6v1.5c.5-.7 1.3-1.8 3.2-1.8 2.3 0 4.1 1.5 4.1 4.8v6.1z">
+                    </path>
+                  </svg>
+                </a>
+              </div>
+            </navbar>
+          </div>
+          <div class="flex-col">
+            <div class="flex-row -mr-xxs my-auto">
+              <div class="icon icon-sm flex-none lg:d-hidden lg:mr-0 lg:pos-static pin-r pin-y z-30 z-40">
+                <div>
+                  <div class="icon fcolor-flamingo hamburger on-active-fcolor-flamingo pointer-events-auto">
+                    <div>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="d-hidden lg:d-inline-flex">
+                <a href="#" class="fcolor-inherit icon icon-md lg:icon-sm mr-xxs fcolor-java">
+                  <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.4 25.4">
+                    <path d="M16 13.2h-2.3v5.7h-2.3v-5.7h-2v-2.3h1.9V9.6c0-.8.3-1.6.8-2.2.6-.6 1.2-.9 2-.9H16v2.3h-1.9c-.1 0-.2.1-.3.2-.1.1-.1.3-.1.5v1.2H16v2.5zm9.4-.5c0-1.8-.3-3.4-1-4.9-.7-1.5-1.6-2.9-2.7-4-1.1-1.2-2.5-2.1-4-2.7-1.5-.7-3.2-1-4.9-1S9.3.3 7.7 1c-1.5.7-2.9 1.6-4 2.7-1.1 1.2-2 2.5-2.7 4-.7 1.6-1 3.3-1 5s.3 3.4 1 4.9c.7 1.5 1.6 2.9 2.7 4s2.5 2 4 2.7c1.5.7 3.2 1 4.9 1s3.4-.3 4.9-1c1.5-.7 2.9-1.6 4-2.7s2-2.5 2.7-4c.8-1.5 1.2-3.1 1.2-4.9">
+                    </path>
+                  </svg>
+                </a>
+                <a href="#" class="fcolor-inherit icon icon-md lg:icon-sm mr-xxs fcolor-jaffa">
+                  <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.4 25.4">
+                    <path d="M18.1 9.4c.3 0 .5-.1.8-.2.2-.1.5-.1.7-.2-.2.2-.4.5-.6.7-.2.2-.5.4-.7.6v.3c0 .9-.2 1.7-.5 2.6-.3.9-.8 1.6-1.4 2.3-.6.7-1.4 1.3-2.3 1.7-.9.4-2 .7-3.1.7-.7 0-1.4-.1-2.1-.3-.7-.2-1.3-.5-1.8-.8h.6c1.2 0 2.3-.4 3.2-1.1-.6 0-1.1-.2-1.5-.5-.4-.3-.7-.8-.9-1.3.2 0 .3.1.4.1h.4c.1 0 .2 0 .3-.1-.6-.1-1.1-.4-1.4-.9-.4-.5-.6-1-.6-1.6.3.2.7.3 1.2.3-.7-.5-1.1-1.2-1.1-2.1 0-.5.1-.9.3-1.3.7.8 1.4 1.4 2.3 1.9.9.5 1.9.7 3 .8 0-.2-.1-.4-.1-.6 0-.7.3-1.3.8-1.8s1.1-.8 1.8-.8c.4 0 .7.1 1 .2.3.1.6.3.8.6.3 0 .6-.1.9-.3.2 0 .5-.1.7-.3-.1.3-.3.6-.5.8-.1.3-.4.5-.6.6m7.3 3.3c0-1.8-.3-3.4-1-4.9-.7-1.5-1.6-2.9-2.7-4s-2.5-2-4-2.7c-1.5-.7-3.2-1-4.9-1S9.3.3 7.7 1c-1.5.7-2.9 1.6-4 2.7-1.2 1.2-2.1 2.5-2.7 4-.7 1.5-1 3.2-1 4.9s.3 3.4 1 4.9c.7 1.5 1.6 2.9 2.7 4 1.2 1.1 2.5 2 4 2.7 1.5.7 3.2 1 4.9 1s3.4-.3 4.9-1c1.5-.7 2.9-1.6 4-2.7s2-2.5 2.7-4c.8-1.4 1.2-3 1.2-4.8">
+                    </path>
+                  </svg>
+                </a>
+                <a href="#" class="fcolor-inherit icon icon-md lg:icon-sm mr-xxs fcolor-deluge">
+                  <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.4 25.4">
+                    <path d="M15.5 12.7c0-1.5-1.2-2.7-2.8-2.7s-2.8 1.2-2.8 2.7c0 1.5 1.2 2.7 2.8 2.7s2.8-1.2 2.8-2.7M18 9.5V7.9c0-.3-.3-.6-.6-.6h-1.6c-.3 0-.6.3-.6.6v1.5c0 .3.3.6.6.6h1.6c.4.1.6-.2.6-.5m0 8v-5.8h-1.2c.2.3.2.7.2 1.2 0 2.3-1.9 4.2-4.3 4.2s-4.3-1.8-4.3-4.2c0-.4 0-.8.2-1.2H7.3v5.8c0 .3.3.5.6.5h9.6c.3.1.5-.2.5-.5m1.6.4c0 1-.8 1.7-1.8 1.7H7.5c-1 0-1.8-.8-1.8-1.7V7.6c0-1 .8-1.8 1.8-1.8h10.3c1 0 1.8.8 1.8 1.8v10.3zm5.8-5.2C25.3 5.6 19.6-.1 12.7 0 5.7.1 0 5.7 0 12.7c0 7 5.7 12.7 12.7 12.7 7 0 12.7-5.7 12.7-12.7">
+                    </path>
+                  </svg>
+                </a>
+                <a href="#" class="fcolor-inherit icon icon-md lg:icon-sm mr-xxs fcolor-flamingo">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="-148 21 32 32">
+                    <path fill="currentColor" d="M-132 21c-8.8 0-16 7.2-16 16s7.2 16 16 16 16-7.2 16-16-7.2-16-16-16zm-4.5 22.9h-3.6V33.2h3.6v10.7zm-1.8-12.1c-1.2 0-2-.8-2-1.8s.8-1.8 2-1.8 2 .8 2 1.8-.8 1.8-2 1.8zm14.6 12.1h-3.6v-5.7c0-1.4-.5-2.4-1.8-2.4-1 0-1.6.7-1.8 1.3-.1.2-.1.5-.1.9v6h-3.6V33.3h3.6v1.5c.5-.7 1.3-1.8 3.2-1.8 2.3 0 4.1 1.5 4.1 4.8v6.1z">
+                    </path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
   <!-- Main -->
   <main class="flex-col flex-auto">
     <!-- Hero Banner -->
     <section class="flex-col pos-relative xl:py-xl">
-      <div class="pos-absolute align-center container-xl flex-row justify-end mx-auto pin-l-50 pin-l50 pin-y w-full">
+      <div class="flex-row align-center container-xl justify-end mx-auto pin-l-50 pin-l50 pin-y pos-absolute w-full">
         <div class="ratio-1x1 bg-center bg-cover bg-inherit lg:col-5 lg:mr-sm lg:opacity-100 opacity-50 xl:mr-0" style="background-image: url('./images/single-logo.png');"></div>
       </div>
-      <div class="flex-stretch flex-row pos-relative">
+      <div class="flex-row flex-stretch pos-relative">
         <div class="pos-relative container md:container-xl mx-auto pt-2lg xl:pt-xxl">
           <article class="flex-col lg:col-6 md:col-7 md:pr-2lg py-2lg">
             <div class="flex-col flex-stretch align-start">
@@ -53,7 +193,7 @@
             </div>
             <div class="flex-col align-center flex-stretch justify-center lg:px-lg p-md pin pos-absolute text-center">
               <section class="flex-col align-center text-wrap w-full">
-                <h2 class="fweight-bold fsize-4md">Mission</h2>
+                <h2 class="fsize-4md fweight-bold">Mission</h2>
                 <a href="#" class="fcolor-white button fsize-3xs fspacing-wide fweight-bold hover:shadow-md px-md py-xs uppercase bg-flamingo size-lg">Learn More</a>
               </section>
             </div>
@@ -65,7 +205,7 @@
             </div>
             <div class="flex-col align-center flex-stretch justify-center lg:px-lg p-md pin pos-absolute text-center">
               <section class="flex-col align-center text-wrap w-full">
-                <h2 class="fweight-bold fsize-4md">Policies</h2>
+                <h2 class="fsize-4md fweight-bold">Policies</h2>
                 <a href="#" class="fcolor-white button fsize-3xs fspacing-wide fweight-bold hover:shadow-md px-md py-xs uppercase bg-flamingo size-lg">Learn More</a>
               </section>
             </div>
@@ -77,7 +217,7 @@
             </div>
             <div class="flex-col align-center flex-stretch justify-center lg:px-lg p-md pin pos-absolute text-center">
               <section class="flex-col align-center text-wrap w-full">
-                <h2 class="fweight-bold fsize-4md">Vacancies</h2>
+                <h2 class="fsize-4md fweight-bold">Vacancies</h2>
                 <a href="#" class="fcolor-white button fsize-3xs fspacing-wide fweight-bold hover:shadow-md px-md py-xs uppercase bg-flamingo size-lg">Learn More</a>
               </section>
             </div>
@@ -89,7 +229,7 @@
             </div>
             <div class="flex-col align-center flex-stretch justify-center lg:px-lg p-md pin pos-absolute text-center">
               <section class="flex-col align-center text-wrap w-full">
-                <h2 class="fweight-bold fsize-4md">Contact Us</h2>
+                <h2 class="fsize-4md fweight-bold">Contact Us</h2>
                 <a href="#" class="fcolor-white button fsize-3xs fspacing-wide fweight-bold hover:shadow-md px-md py-xs uppercase bg-flamingo size-lg">Learn More</a>
               </section>
             </div>
@@ -104,7 +244,7 @@
           <article class="flex-col col-12 lg:pb-xl lg:pr-xl pb-md pr-2xs text-center" data-aos="fade" data-aos-delay="100" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
             <div class="flex-col flex-stretch">
               <section class="w-full text-wrap">
-                <h2 class="fweight-bold fsize-2lg">We care about your learning experience</h2>
+                <h2 class="fsize-2lg fweight-bold">We care about your learning experience</h2>
                 <p class="fsize-3sm">Publicatemen Itam consili stritella rei cluderebatum tus, us vivis patus fue popte, faccitiusum egilistius, medet vervil ceri strae, Cupio esiceps, nu ment.</p>
                 <p>Me publici acrist pere des! Sciaci sendemuntium oc idiisquo estem, cludes imaximovid dit. Bus no. Do, quemquodit vastiam strisservium deatum ina, urox spiortu amenius, occiam nons ius estifecrum adhum publiam pora? Fitiam alaritid nem fit; hor sentio ur. Ec mo noculto Castidem dea moercerdius int vis coentratque quit fac ficerem fin ignove,</p>
               </section>
@@ -127,7 +267,7 @@
             </div>
             <div class="pt-sm lg:col-6 lg:pr-xxl lg:py-xxl mr-auto p-md xl:pl-0">
               <section class="w-full text-wrap">
-                <h2 class="fweight-bold fsize-2lg">Location</h2>
+                <h2 class="fsize-2lg fweight-bold">Location</h2>
                 <p>Batu inatu in virit. Actandefes bonem host fex mantelu dernic intiora contisse non sidiostarium porbit iam et; nosupplicae nos, num simora revivmultuam pos hocchicerem.</p>
               </section>
               <footer class="flex-row flex-wrap -mb-sm -mr-sm pt-sm">
@@ -148,91 +288,66 @@
       <div class="flex-stretch pb-sm bg-deluge"></div>
     </div>
     <!-- footer -->
-    <footer class="fcolor-white bg-shipGray fsize-xs pt-2lg">
+    <footer class="fcolor-white bg-shipGray fsize-xs py-2lg">
       <div class="mx-auto container lg:container-xl">
-        <div class="flex-row flex-wrap -mr-2xs -mb-2xs align-center justify-center lg:-mb-md lg:-mr-md lg:justify-start">
-          <div class="pr-2xs lg:pb-md lg:pr-md pb-2xs flex-none">
-            <a href="index.html" class="d-inline-block icon-logo-footer pos-relative ratio-logo">
-              <span class="pos-absolute pin">
-                <img src="./images/brand-logo.png" alt="" />
-              </span>
-            </a>
+        <div class="flex-row flex-wrap -mr-2xs -mb-2xs justify-space-between lg:-mb-md lg:-mr-md md:text-left text-center">
+          <div class="pr-2xs col-12 lg:pb-md lg:pr-md pb-2xs md:col-4 xl:col-auto xl:flex-stretch">
+            <p>New London Educational Trust<br>
+              NLET<br>
+              Sceptre House,<br>
+              75-81 Staines Road,<br>
+              Hounslow TW3 3HW,<br>
+              United Kingdom</p>
           </div>
-          <div class="w-full xl:d-hidden"></div>
-          <div class="flex-row -mr-xxs mb-xs lg:d-hidden">
-            <a href="#" class="hover:fcolor-secondary fcolor-primary icon icon-sm mr-xxs">
-              <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.4 25.4">
-                <path d="M16 13.2h-2.3v5.7h-2.3v-5.7h-2v-2.3h1.9V9.6c0-.8.3-1.6.8-2.2.6-.6 1.2-.9 2-.9H16v2.3h-1.9c-.1 0-.2.1-.3.2-.1.1-.1.3-.1.5v1.2H16v2.5zm9.4-.5c0-1.8-.3-3.4-1-4.9-.7-1.5-1.6-2.9-2.7-4-1.1-1.2-2.5-2.1-4-2.7-1.5-.7-3.2-1-4.9-1S9.3.3 7.7 1c-1.5.7-2.9 1.6-4 2.7-1.1 1.2-2 2.5-2.7 4-.7 1.6-1 3.3-1 5s.3 3.4 1 4.9c.7 1.5 1.6 2.9 2.7 4s2.5 2 4 2.7c1.5.7 3.2 1 4.9 1s3.4-.3 4.9-1c1.5-.7 2.9-1.6 4-2.7s2-2.5 2.7-4c.8-1.5 1.2-3.1 1.2-4.9"></path>
-              </svg>
-            </a>
-            <a href="#" class="hover:fcolor-secondary fcolor-primary icon icon-sm mr-xxs">
-              <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.4 25.4">
-                <path d="M18.1 9.4c.3 0 .5-.1.8-.2.2-.1.5-.1.7-.2-.2.2-.4.5-.6.7-.2.2-.5.4-.7.6v.3c0 .9-.2 1.7-.5 2.6-.3.9-.8 1.6-1.4 2.3-.6.7-1.4 1.3-2.3 1.7-.9.4-2 .7-3.1.7-.7 0-1.4-.1-2.1-.3-.7-.2-1.3-.5-1.8-.8h.6c1.2 0 2.3-.4 3.2-1.1-.6 0-1.1-.2-1.5-.5-.4-.3-.7-.8-.9-1.3.2 0 .3.1.4.1h.4c.1 0 .2 0 .3-.1-.6-.1-1.1-.4-1.4-.9-.4-.5-.6-1-.6-1.6.3.2.7.3 1.2.3-.7-.5-1.1-1.2-1.1-2.1 0-.5.1-.9.3-1.3.7.8 1.4 1.4 2.3 1.9.9.5 1.9.7 3 .8 0-.2-.1-.4-.1-.6 0-.7.3-1.3.8-1.8s1.1-.8 1.8-.8c.4 0 .7.1 1 .2.3.1.6.3.8.6.3 0 .6-.1.9-.3.2 0 .5-.1.7-.3-.1.3-.3.6-.5.8-.1.3-.4.5-.6.6m7.3 3.3c0-1.8-.3-3.4-1-4.9-.7-1.5-1.6-2.9-2.7-4s-2.5-2-4-2.7c-1.5-.7-3.2-1-4.9-1S9.3.3 7.7 1c-1.5.7-2.9 1.6-4 2.7-1.2 1.2-2.1 2.5-2.7 4-.7 1.5-1 3.2-1 4.9s.3 3.4 1 4.9c.7 1.5 1.6 2.9 2.7 4 1.2 1.1 2.5 2 4 2.7 1.5.7 3.2 1 4.9 1s3.4-.3 4.9-1c1.5-.7 2.9-1.6 4-2.7s2-2.5 2.7-4c.8-1.4 1.2-3 1.2-4.8"></path>
-              </svg>
-            </a>
-            <a href="#" class="hover:fcolor-secondary fcolor-primary icon icon-sm mr-xxs">
-              <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.4 25.4">
-                <path d="M15.5 12.7c0-1.5-1.2-2.7-2.8-2.7s-2.8 1.2-2.8 2.7c0 1.5 1.2 2.7 2.8 2.7s2.8-1.2 2.8-2.7M18 9.5V7.9c0-.3-.3-.6-.6-.6h-1.6c-.3 0-.6.3-.6.6v1.5c0 .3.3.6.6.6h1.6c.4.1.6-.2.6-.5m0 8v-5.8h-1.2c.2.3.2.7.2 1.2 0 2.3-1.9 4.2-4.3 4.2s-4.3-1.8-4.3-4.2c0-.4 0-.8.2-1.2H7.3v5.8c0 .3.3.5.6.5h9.6c.3.1.5-.2.5-.5m1.6.4c0 1-.8 1.7-1.8 1.7H7.5c-1 0-1.8-.8-1.8-1.7V7.6c0-1 .8-1.8 1.8-1.8h10.3c1 0 1.8.8 1.8 1.8v10.3zm5.8-5.2C25.3 5.6 19.6-.1 12.7 0 5.7.1 0 5.7 0 12.7c0 7 5.7 12.7 12.7 12.7 7 0 12.7-5.7 12.7-12.7"></path>
-              </svg>
-            </a>
-            <a href="#" class="hover:fcolor-secondary fcolor-primary icon icon-sm mr-xxs">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="-148 21 32 32">
-                <path fill="currentColor" d="M-132 21c-8.8 0-16 7.2-16 16s7.2 16 16 16 16-7.2 16-16-7.2-16-16-16zm-4.5 22.9h-3.6V33.2h3.6v10.7zm-1.8-12.1c-1.2 0-2-.8-2-1.8s.8-1.8 2-1.8 2 .8 2 1.8-.8 1.8-2 1.8zm14.6 12.1h-3.6v-5.7c0-1.4-.5-2.4-1.8-2.4-1 0-1.6.7-1.8 1.3-.1.2-.1.5-.1.9v6h-3.6V33.3h3.6v1.5c.5-.7 1.3-1.8 3.2-1.8 2.3 0 4.1 1.5 4.1 4.8v6.1z"></path>
-              </svg>
-            </a>
-          </div>
-          <div class="w-full xl:d-hidden"></div>
-          <div class="pr-2xs lg:pb-md lg:pr-md pb-2xs lg:flex-auto">
-            <ul class="flex-stretch text-center col-count-1 lg:col-count-2 lg:text-left list-reset">
-              <li><a class="hover:fcolor-secondary d-inline-block fcolor-inherit no-underline d-hidden lg:d-inline-block" href="news.html">News</a></li>
-              <li><a class="hover:fcolor-secondary d-inline-block fcolor-inherit no-underline d-hidden lg:d-inline-block" href="regimental-units.html">Regimental Units</a></li>
-              <li><a class="hover:fcolor-secondary d-inline-block fcolor-inherit no-underline d-hidden lg:d-inline-block" href="#">Associations & Branches</a></li>
-              <li><a class="hover:fcolor-secondary d-inline-block fcolor-inherit no-underline d-hidden lg:d-inline-block" href="regimental-journal.html">Regimental Journal</a></li>
-              <li><a class="hover:fcolor-secondary d-inline-block fcolor-inherit no-underline d-hidden lg:d-inline-block" href="resettlement.html">Resettlement</a></li>
-              <li><a class="hover:fcolor-secondary d-inline-block fcolor-inherit no-underline" href="contact.html">Contact</a></li>
-              <li><a class="hover:fcolor-secondary d-inline-block fcolor-inherit no-underline" href="#">Privacy Policy</a></li>
-              <li><a class="hover:fcolor-secondary d-inline-block fcolor-inherit no-underline" href="#">Terms &amp; Conditions</a></li>
-              <li><a class="hover:fcolor-secondary d-inline-block fcolor-inherit no-underline" href="#">Cookies</a></li>
-              <li><a class="hover:fcolor-secondary d-inline-block fcolor-inherit no-underline" href="#">Sitemap</a></li>
-            </ul>
-          </div>
-          <div class="w-full lg:d-hidden"></div>
-          <div class="pr-2xs lg:pb-md lg:pr-md pb-2xs flex-none">
-            <div class="flex-col align-center lg:align-end">
-              <div class="flex-row -mr-xxs mb-xs d-hidden lg:d-inline-flex">
-                <a href="#" class="hover:fcolor-secondary fcolor-primary icon icon-sm mr-xxs">
+          <div class="pr-2xs col-12 lg:pb-md lg:pr-md pb-2xs md:col-4 xl:col-auto xl:flex-stretch">
+            <div class="flex-col">
+              <div class="flex-col w-full text-wrap-xs">
+                <a class="fcolor-inherit no-underline hover:fcolor-flamingo" href="tel:+44 (0)20 8570 7766">Phone: +44 (0)20 8570 7766</a>
+                <a class="fcolor-inherit no-underline hover:fcolor-flamingo" href="href:admin@nletrust.org">Email: admin@nletrust.org</a>
+              </div>
+              <div class="flex-row -mr-xxs justify-center md:justify-start mt-xs">
+                <a href="#" class="fcolor-white hover:fcolor-flamingo icon icon-sm mr-xxs">
                   <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.4 25.4">
                     <path d="M16 13.2h-2.3v5.7h-2.3v-5.7h-2v-2.3h1.9V9.6c0-.8.3-1.6.8-2.2.6-.6 1.2-.9 2-.9H16v2.3h-1.9c-.1 0-.2.1-.3.2-.1.1-.1.3-.1.5v1.2H16v2.5zm9.4-.5c0-1.8-.3-3.4-1-4.9-.7-1.5-1.6-2.9-2.7-4-1.1-1.2-2.5-2.1-4-2.7-1.5-.7-3.2-1-4.9-1S9.3.3 7.7 1c-1.5.7-2.9 1.6-4 2.7-1.1 1.2-2 2.5-2.7 4-.7 1.6-1 3.3-1 5s.3 3.4 1 4.9c.7 1.5 1.6 2.9 2.7 4s2.5 2 4 2.7c1.5.7 3.2 1 4.9 1s3.4-.3 4.9-1c1.5-.7 2.9-1.6 4-2.7s2-2.5 2.7-4c.8-1.5 1.2-3.1 1.2-4.9"></path>
                   </svg>
                 </a>
-                <a href="#" class="hover:fcolor-secondary fcolor-primary icon icon-sm mr-xxs">
+                <a href="#" class="fcolor-white hover:fcolor-flamingo icon icon-sm mr-xxs">
                   <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.4 25.4">
                     <path d="M18.1 9.4c.3 0 .5-.1.8-.2.2-.1.5-.1.7-.2-.2.2-.4.5-.6.7-.2.2-.5.4-.7.6v.3c0 .9-.2 1.7-.5 2.6-.3.9-.8 1.6-1.4 2.3-.6.7-1.4 1.3-2.3 1.7-.9.4-2 .7-3.1.7-.7 0-1.4-.1-2.1-.3-.7-.2-1.3-.5-1.8-.8h.6c1.2 0 2.3-.4 3.2-1.1-.6 0-1.1-.2-1.5-.5-.4-.3-.7-.8-.9-1.3.2 0 .3.1.4.1h.4c.1 0 .2 0 .3-.1-.6-.1-1.1-.4-1.4-.9-.4-.5-.6-1-.6-1.6.3.2.7.3 1.2.3-.7-.5-1.1-1.2-1.1-2.1 0-.5.1-.9.3-1.3.7.8 1.4 1.4 2.3 1.9.9.5 1.9.7 3 .8 0-.2-.1-.4-.1-.6 0-.7.3-1.3.8-1.8s1.1-.8 1.8-.8c.4 0 .7.1 1 .2.3.1.6.3.8.6.3 0 .6-.1.9-.3.2 0 .5-.1.7-.3-.1.3-.3.6-.5.8-.1.3-.4.5-.6.6m7.3 3.3c0-1.8-.3-3.4-1-4.9-.7-1.5-1.6-2.9-2.7-4s-2.5-2-4-2.7c-1.5-.7-3.2-1-4.9-1S9.3.3 7.7 1c-1.5.7-2.9 1.6-4 2.7-1.2 1.2-2.1 2.5-2.7 4-.7 1.5-1 3.2-1 4.9s.3 3.4 1 4.9c.7 1.5 1.6 2.9 2.7 4 1.2 1.1 2.5 2 4 2.7 1.5.7 3.2 1 4.9 1s3.4-.3 4.9-1c1.5-.7 2.9-1.6 4-2.7s2-2.5 2.7-4c.8-1.4 1.2-3 1.2-4.8"></path>
                   </svg>
                 </a>
-                <a href="#" class="hover:fcolor-secondary fcolor-primary icon icon-sm mr-xxs">
+                <a href="#" class="fcolor-white hover:fcolor-flamingo icon icon-sm mr-xxs">
                   <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.4 25.4">
                     <path d="M15.5 12.7c0-1.5-1.2-2.7-2.8-2.7s-2.8 1.2-2.8 2.7c0 1.5 1.2 2.7 2.8 2.7s2.8-1.2 2.8-2.7M18 9.5V7.9c0-.3-.3-.6-.6-.6h-1.6c-.3 0-.6.3-.6.6v1.5c0 .3.3.6.6.6h1.6c.4.1.6-.2.6-.5m0 8v-5.8h-1.2c.2.3.2.7.2 1.2 0 2.3-1.9 4.2-4.3 4.2s-4.3-1.8-4.3-4.2c0-.4 0-.8.2-1.2H7.3v5.8c0 .3.3.5.6.5h9.6c.3.1.5-.2.5-.5m1.6.4c0 1-.8 1.7-1.8 1.7H7.5c-1 0-1.8-.8-1.8-1.7V7.6c0-1 .8-1.8 1.8-1.8h10.3c1 0 1.8.8 1.8 1.8v10.3zm5.8-5.2C25.3 5.6 19.6-.1 12.7 0 5.7.1 0 5.7 0 12.7c0 7 5.7 12.7 12.7 12.7 7 0 12.7-5.7 12.7-12.7"></path>
                   </svg>
                 </a>
-                <a href="#" class="hover:fcolor-secondary fcolor-primary icon icon-sm mr-xxs">
+                <a href="#" class="fcolor-white hover:fcolor-flamingo icon icon-sm mr-xxs">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="-148 21 32 32">
                     <path fill="currentColor" d="M-132 21c-8.8 0-16 7.2-16 16s7.2 16 16 16 16-7.2 16-16-7.2-16-16-16zm-4.5 22.9h-3.6V33.2h3.6v10.7zm-1.8-12.1c-1.2 0-2-.8-2-1.8s.8-1.8 2-1.8 2 .8 2 1.8-.8 1.8-2 1.8zm14.6 12.1h-3.6v-5.7c0-1.4-.5-2.4-1.8-2.4-1 0-1.6.7-1.8 1.3-.1.2-.1.5-.1.9v6h-3.6V33.3h3.6v1.5c.5-.7 1.3-1.8 3.2-1.8 2.3 0 4.1 1.5 4.1 4.8v6.1z"></path>
                   </svg>
                 </a>
               </div>
-              <div class="mb-xs">© <script>
+              <div class="mt-xs">Copyright <script>
                   document.write(new Date().getFullYear())
-                </script> The Royal Anglian Regiment</div>
-              <a class="hover:fcolor-secondary d-inline-block fcolor-inherit no-underline icon-unstuck-design mt-auto ratio-unstuck-design unstuck-link" href="http://unstuckdesign.com/" target="_blank">
-                <div class="pos-absolute pin">
-                  <svg class="unstuck-design" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 191 14.1">
-                    <path class="st0" d="M99.6 10.8c-.1-.1-.2-.2-.2-.4 0-.3.2-.5.5-.5.1 0 .2 0 .3.1.8.6 1.7.9 2.6.9 1 0 1.7-.5 1.7-1.3s-1-1.1-2-1.4c-1.3-.4-2.7-.8-2.7-2.3 0-1.4 1.2-2.3 2.8-2.3.9 0 1.8.3 2.6.7.2.1.3.3.3.5 0 .3-.2.5-.5.5-.1 0-.2 0-.3-.1-.7-.4-1.4-.6-2.1-.6-1 0-1.6.5-1.6 1.2 0 .8 1 1.1 2.1 1.4 1.3.4 2.6.9 2.6 2.3 0 1.6-1.3 2.5-2.9 2.5-1.2-.1-2.3-.5-3.2-1.2m8.6-1.3V4.6h-.7c-.3 0-.5-.3-.5-.5 0-.3.3-.5.5-.5h.7V1.7c0-.3.3-.6.6-.6s.6.3.6.6v1.9h2.1c.3 0 .6.3.6.5 0 .3-.3.5-.6.5h-2.1v4.8c0 1 .6 1.4 1.4 1.4.4 0 .6-.1.7-.1.3 0 .5.2.5.5 0 .2-.1.4-.3.5-.3.1-.7.2-1.2.2-1.3-.1-2.3-.7-2.3-2.4m13 1.6c0 .3-.3.6-.6.6s-.6-.3-.6-.6v-.9c-.6.9-1.4 1.6-2.8 1.6-2 0-3.1-1.3-3.1-3.3V3.9c0-.3.3-.6.6-.6s.6.3.6.6v4.2c0 1.5.8 2.5 2.3 2.5 1.4 0 2.5-1 2.5-2.6V3.8c0-.3.3-.6.6-.6s.6.3.6.6l-.1 7.3zm2.2-3.5c0-2.3 1.8-4.3 4.2-4.3 1.4 0 2.3.5 3 1.2.1.1.2.2.2.4 0 .3-.3.6-.6.6-.2 0-.3-.1-.4-.1-.6-.5-1.3-1-2.2-1-1.7 0-2.9 1.4-2.9 3.2 0 1.8 1.3 3.2 3 3.2.9 0 1.7-.4 2.3-1 .1-.1.2-.2.3-.2.3 0 .6.3.6.6 0 .1-.1.3-.2.4-.8.8-1.7 1.3-3.1 1.3-2.4 0-4.2-2-4.2-4.3m9.5-7c0-.3.3-.6.6-.6s.6.3.6.6v7.5l4.4-4.5c.1-.2.3-.2.5-.2.3 0 .6.3.6.6 0 .2-.1.3-.2.5l-2.7 2.6 2.9 3.7c.1.1.2.3.2.4 0 .3-.3.6-.6.6-.2 0-.4-.1-.5-.3l-2.8-3.6-1.7 1.7v1.6c0 .3-.3.6-.6.6s-.6-.3-.6-.6L132.9.6zm9.5 7c0 2.2 1.5 3.5 3.2 3.5 1.7 0 3.3-1.4 3.3-3.5s-1.6-3.5-3.3-3.5c-1.8 0-3.2 1.3-3.2 3.5m7.2 3.7c0 .2-.2.4-.4.4s-.4-.2-.4-.4V9.8c-.7 1.1-1.7 2-3.3 2-1.9 0-3.9-1.6-3.9-4.2s2-4.2 3.9-4.2c1.6 0 2.7.9 3.3 1.9V.4c0-.2.2-.4.4-.4s.4.2.4.4v10.9zm9.1-4.1c-.1-1.6-1-3.1-2.9-3.1-1.6 0-2.8 1.4-3 3.1h5.9zm-2.8 4.6c-2.1 0-4-1.7-4-4.2 0-2.3 1.6-4.2 3.8-4.2 2.3 0 3.7 1.9 3.7 4.2 0 .2-.2.4-.4.4h-6.3c.1 2 1.6 3.2 3.2 3.2 1.2 0 2-.5 2.6-1.1.1-.1.1-.1.3-.1.2 0 .4.2.4.4 0 .1 0 .2-.1.3-.8.6-1.7 1.1-3.2 1.1m5.3-1.1c-.1 0-.1-.2-.1-.3 0-.2.2-.4.4-.4.1 0 .2 0 .3.1.8.6 1.7.9 2.7.9 1.1 0 1.9-.6 1.9-1.5 0-1-1-1.3-2.1-1.6-1.3-.4-2.8-.8-2.8-2.2 0-1.3 1.1-2.2 2.7-2.2.9 0 1.8.3 2.6.7.1.1.2.2.2.4s-.2.4-.4.4c-.1 0-.2 0-.2-.1-.7-.4-1.5-.7-2.3-.7-1.1 0-1.8.6-1.8 1.4 0 .9 1.1 1.2 2.3 1.6 1.3.4 2.7.8 2.7 2.3 0 1.4-1.2 2.4-2.8 2.4-1.2-.1-2.4-.6-3.3-1.2m8.5-6.9c0-.2.2-.4.4-.4s.4.2.4.4v7.4c0 .2-.2.4-.4.4s-.4-.2-.4-.4V3.8zm-.1-3.1c0-.3.2-.5.5-.5s.5.2.5.5V1c0 .3-.2.5-.5.5s-.5-.2-.5-.5V.7zm10.8 6.5c0-1.9-1.7-3.1-3.3-3.1-1.7 0-3.1 1.2-3.1 3.1 0 1.8 1.5 3.1 3.1 3.1 1.6-.1 3.3-1.3 3.3-3.1m-6.8 5.8c-.1-.1-.2-.2-.2-.3 0-.2.2-.4.4-.4.1 0 .2 0 .2.1.9.7 2 1 3.1 1 1.9 0 3.2-1.1 3.2-3.1V9.1c-.7 1-1.8 1.9-3.4 1.9-1.9 0-3.9-1.5-3.9-3.8s1.9-3.8 3.9-3.8c1.6 0 2.7.9 3.4 1.8V3.9c0-.2.2-.4.4-.4s.4.2.4.4v6.5c0 1.2-.4 2.1-1 2.7-.7.7-1.7 1.1-2.9 1.1-1.3 0-2.5-.4-3.6-1.2M184 3.8c0-.2.2-.4.4-.4s.4.2.4.4V5c.5-.9 1.4-1.7 2.9-1.7 2 0 3.2 1.4 3.2 3.3v4.6c0 .2-.2.4-.4.4s-.4-.2-.4-.4V6.7c0-1.7-.9-2.8-2.6-2.8-1.6 0-2.8 1.2-2.8 2.9v4.3c0 .2-.2.4-.4.4s-.4-.2-.4-.4l.1-7.3zm-86.9 8.1c-.3 0-.6-.3-.6-.6V6.2c0-.2-.1-1.8-2.3-1.8-.8 0-1.5.2-1.9.6-.5.5-.5 1.1-.5 1.1v2.2c0 1.2-1.1 1-1.1 1V6.1c0-.1 0-1.1.8-1.9.6-.6 1.5-1 2.7-1 1.1 0 2 .3 2.6.9.8.8.8 1.9.8 2v5.1c.1.5-.2.7-.5.7"></path>
-                    <path class="st0" d="M87.7 3.4c.3 0 .6.3.6.6v5.1c0 .2.1 1.8 2.3 1.8.8 0 1.5-.2 1.9-.6.5-.6.5-1.2.5-1.2V6.9c0-1.2 1.1-1 1.1-1v3.2c0 .1 0 1.1-.8 1.9-.6.6-1.5 1-2.7 1-1.1 0-2-.3-2.6-.9-.8-.8-.8-1.9-.8-2V4c0-.4.2-.6.5-.6M74.5 14c1.1 0 1.9-.6 2.5-2.1l3-7.1c0-.1.1-.2.1-.3 0-.3-.2-.6-.6-.6-.3 0-.5.2-.5.4l-2.3 6L74 4.4c-.1-.2-.3-.4-.6-.4s-.6.2-.6.6c0 .1 0 .2.1.3l3.2 6.7-.1.1c-.4.9-.8 1.3-1.5 1.3-.4 0-.6-.1-.8-.1-.1 0-.2-.1-.3-.1-.2 0-.5.2-.5.5s.2.4.4.5c.4.1.7.2 1.2.2m-6.7-3.2c-1.4 0-2.7-1.2-2.7-2.9S66.4 5 67.8 5c1.4 0 2.7 1.1 2.7 2.9 0 1.8-1.2 2.9-2.7 2.9m-3.8.3c0 .3.2.6.6.6.3 0 .6-.3.6-.6v-1c.6.9 1.5 1.6 2.9 1.6 1.8 0 3.6-1.5 3.6-3.9 0-2.5-1.8-3.9-3.6-3.9-1.4 0-2.3.8-2.9 1.7V1.4c0-.3-.2-.6-.6-.6-.3 0-.6.2-.6.6v9.7zm-6.9-.4c.1-.1.2-.2.2-.4 0-.3-.2-.5-.5-.5-.1 0-.2.1-.3.1-.6.5-1.2.9-2.2.9-1.3 0-2.5-.9-2.7-2.6h5.5c.3 0 .5-.2.5-.5 0-2-1.3-3.8-3.5-3.8-2.1 0-3.6 1.8-3.6 3.9 0 2.3 1.7 3.9 3.8 3.9 1.3.1 2.1-.3 2.8-1m-5.5-3.3c.1-1.5 1.1-2.6 2.5-2.6 1.5 0 2.3 1.2 2.4 2.6h-4.9zm-3.8 4.4c.4 0 .8-.1 1.1-.2.2-.1.3-.2.3-.4 0-.3-.2-.5-.5-.5-.1 0-.3.1-.7.1-.8 0-1.3-.3-1.3-1.3V5.1h2c.3 0 .5-.2.5-.5s-.2-.5-.5-.5h-2V2.3c0-.3-.3-.6-.6-.6s-.6.3-.6.6v1.8H45c-.3 0-.5.2-.5.5s.2.5.5.5h.6v4.6c.1 1.5 1 2.1 2.2 2.1m-6.3-.7c0 .3.2.6.6.6.3 0 .6-.2.6-.6V4.6c0-.3-.2-.6-.6-.6-.3 0-.6.3-.6.6v6.5zm-.1-9.2c0 .4.3.6.7.6.4 0 .7-.2.7-.6v-.2c0-.4-.3-.6-.7-.6-.4 0-.7.2-.7.6v.2zm-4.8 9.9c1.5 0 2.7-.8 2.7-2.3 0-1.4-1.3-1.8-2.4-2.2C35.9 7 35 6.7 35 6c0-.6.6-1.1 1.5-1.1.6 0 1.3.2 2 .6.1 0 .1.1.2.1.3 0 .5-.2.5-.5 0-.2-.1-.4-.3-.5-.7-.4-1.6-.6-2.4-.6-1.5 0-2.6.9-2.6 2.2 0 1.4 1.3 1.8 2.5 2.1 1 .3 1.9.6 1.9 1.3 0 .7-.7 1.2-1.6 1.2-.8 0-1.6-.3-2.4-.8-.1 0-.2-.1-.3-.1-.3 0-.5.2-.5.5 0 .2.1.3.2.4.8.6 1.9 1 2.9 1m-8.4-1c-1.4 0-2.7-1.2-2.7-2.9S26.8 5 28.2 5c1.4 0 2.7 1.1 2.7 2.9 0 1.8-1.2 2.9-2.7 2.9m-3.8.3c0 .3.2.6.6.6.3 0 .6-.3.6-.6v-1c.6.9 1.5 1.6 2.9 1.6 1.8 0 3.6-1.5 3.6-3.9 0-2.5-1.8-3.9-3.6-3.9-1.4 0-2.3.8-2.9 1.7V1.4c0-.3-.2-.6-.6-.6-.3 0-.6.2-.6.6v9.7zm-2.5-.4c.1-.1.2-.2.2-.4 0-.3-.2-.5-.5-.5-.1 0-.2.1-.3.1-.6.5-1.2.9-2.2.9-1.3 0-2.5-.9-2.7-2.6h5.5c.3 0 .5-.2.5-.5 0-2-1.3-3.8-3.5-3.8-2.1 0-3.6 1.8-3.6 3.9 0 2.3 1.7 3.9 3.8 3.9 1.2.1 2.1-.3 2.8-1m-5.5-3.3c.1-1.5 1.1-2.6 2.5-2.6 1.5 0 2.3 1.2 2.4 2.6h-4.9zM3.3 11.3c.1.3.3.5.6.5H4c.3 0 .5-.2.6-.5l2.7-7.9 2.7 7.9c.1.3.3.5.6.5h.1c.3 0 .5-.2.6-.5l3.3-9.1c0-.1.1-.2.1-.3 0-.3-.3-.6-.6-.6s-.5.2-.6.5L10.7 10 7.9 1.8c-.1-.3-.3-.5-.6-.5s-.5.2-.6.5L4 9.9 1.2 1.8c-.1-.3-.3-.5-.6-.5s-.6.3-.6.6c0 .1 0 .2.1.3l3.2 9.1z"></path>
-                  </svg>
-                </div>
-              </a>
+                </script>
+              </div>
             </div>
+          </div>
+          <div class="pr-2xs col-12 lg:pb-md lg:pr-md pb-2xs md:col-4 xl:col-auto xl:flex-stretch">
+            <ul class="list-reset text-wrap-xs">
+              <li><strong>Quick links</strong></li>
+              <li><a class="fcolor-inherit no-underline hover:fcolor-flamingo" href="#">Enrol Now</a></li>
+              <li><a class="fcolor-inherit no-underline hover:fcolor-flamingo" href="contact-us.html">Contact Us</a></li>
+              <li><a class="fcolor-inherit no-underline hover:fcolor-flamingo" href="#">Jobs</a></li>
+              <li><a class="fcolor-inherit no-underline hover:fcolor-flamingo" href="#">Map & Directions</a></li>
+              <li><a class="fcolor-inherit no-underline hover:fcolor-flamingo" href="#">Policies & Procedures</a></li>
+            </ul>
+          </div>
+          <div class="pr-2xs col-12 lg:pb-md lg:pr-md pb-2xs xl:col-5">
+            <ul class="list-reset text-wrap">
+              <li>New London Educational Trust is a registered charity (Charity No. 1142105) and a company limited by guarantee (Registered in England No. 06922966)</li>
+              <li>NLET is a PREVENT compliant organisation. For further information on the local PREVENT initiative please refer to <a class="fcolor-inherit no-underline hover:fcolor-flamingo break-words" href="https://www.hounslow.gov.uk/info/20047/community_and_voluntary_sector_services/1195/prevent_and_community_cohesion">​https://www.hounslow.gov.uk/info/20047/community_and_voluntary_sector_services/1195/prevent_and_community_cohesion</a></li>
+            </ul>
           </div>
         </div>
       </div>
