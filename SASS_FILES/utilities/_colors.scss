@@ -10,9 +10,17 @@
   @each $clr in $textColors {
     @if(nth($clr, 4) == 'states'){
       @each $state in $states {
-        .#{$bp}#{nth($state, 1)}#{nth($clr, 1)} {
-          &-#{nth($clr, 2)}#{nth($state, 2)} {
-            color: nth($clr, 3);
+        @if(nth($state, 1) == 'on-active'){
+          .#{$bp}#{nth($state, 1)}-#{nth($clr, 1)} {
+            &-#{nth($clr, 2)}.#{nth($state, 2)} {
+              color: nth($clr, 3);
+            }
+          }
+        }@else{
+          .#{$bp}#{nth($state, 1)}#{nth($clr, 1)} {
+            &-#{nth($clr, 2)}#{nth($state, 2)} {
+              color: nth($clr, 3);
+            }
           }
         }
       }  
@@ -30,9 +38,18 @@
   @each $clr in $bgColors {
     @if(nth($clr, 4) == 'states'){
       @each $state in $states {
-        .#{$bp}#{nth($state, 1)}#{nth($clr, 1)} {
-          &-#{nth($clr, 2)}#{nth($state, 2)} {
-            background-color: #{nth($clr, 3)};
+        @if(nth($state, 1) == 'on-active'){
+          .#{$bp}#{nth($state, 1)}-#{nth($clr, 1)} {
+            &-#{nth($clr, 2)}.#{nth($state, 2)} {
+              background-color: #{nth($clr, 3)};
+            }
+          }  
+        }
+        @else{
+          .#{$bp}#{nth($state, 1)}#{nth($clr, 1)} {
+            &-#{nth($clr, 2)}#{nth($state, 2)} {
+              background-color: #{nth($clr, 3)};
+            }
           }
         }
       }
@@ -49,9 +66,18 @@
   @each $clr in $borderColors {
     @if(nth($clr, 4) == 'states'){
       @each $state in $states {
-        .#{$bp}#{nth($state, 1)}#{nth($clr, 1)} {
-          &-#{nth($clr, 2)}#{nth($state, 2)} {
-            border-color: #{nth($clr, 3)};
+        @if(nth($state, 1) == 'on-active'){
+          .#{$bp}#{nth($state, 1)}-#{nth($clr, 1)} {
+            &-#{nth($clr, 2)}.#{nth($state, 2)} {
+              border-color: #{nth($clr, 3)};
+            }
+          }
+        }
+        @else{
+          .#{$bp}#{nth($state, 1)}#{nth($clr, 1)} {
+            &-#{nth($clr, 2)}#{nth($state, 2)} {
+              border-color: #{nth($clr, 3)};
+            }
           }
         }
       }
