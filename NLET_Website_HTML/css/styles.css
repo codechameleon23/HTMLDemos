@@ -31579,6 +31579,22 @@ em
     }
 }
 
+/*popup*/
+.popup_background
+{
+    opacity: .50 !important;
+}
+
+.popup_visible .popup
+{
+    overflow: hidden;
+
+    -webkit-perspective: 500px;
+            perspective: 500px;
+    -webkit-perspective-origin: 50% 50%;
+            perspective-origin: 50% 50%;
+}
+
 /*owlCarousel*/
 ̥
 .owl-carousel,
@@ -34993,6 +35009,38 @@ textarea
 .carousel-outer:not(:hover) .jsCarouselNxt
 {
     opacity: 0;
+}
+
+.navButtons
+{
+    -webkit-box-ordinal-group: 0;
+    -webkit-order: -1;
+    -ms-flex-order: -1;
+            order: -1;
+}
+@media (min-width: 992px)
+{
+    .navButtons
+    {
+        -webkit-box-ordinal-group: 2;
+        -webkit-order: 1;
+        -ms-flex-order: 1;
+                order: 1;
+    }
+}
+
+.popup
+{
+    overflow: hidden;
+
+    height: 0;
+
+    vertical-align: top !important;
+}
+
+.popup_visible .popup
+{
+    height: 100%;
 }
 
 /*Custom styling*/

@@ -364,16 +364,19 @@ $(document).ready(function () {
         }
     }    
   });
- 
-  // Toggle searchar
-  $('.search-toggle').on('click', function(){
-    if ($(this).hasClass("is-active")) {
-      searchBarClose();
-    } else {
-      searchBarOpen();
-    }
-  })
 
+  // Initialize the Popup
+  $("#enquire_popup").popup({
+    // scrolllock: true,
+    transition: 'all 0.7s',
+    color: "transparent",
+  });
+  $("#login_popup").popup({
+    // scrolllock: true,
+    transition: 'all 0.7s',
+    color: "transparent",
+  });
+ 
   //Animate on scroll
   AOS.init({
     once: true,
