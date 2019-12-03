@@ -9431,6 +9431,16 @@ em
         width: 100%;
         max-height: 11rem;
     }
+    .icon-xl
+    {
+        width: 14rem;
+    }
+    .icon-xl svg,
+    .icon-xl img
+    {
+        width: 100%;
+        max-height: 14rem;
+    }
     .icon-auto
     {
         width: auto;
@@ -13713,6 +13723,16 @@ em
     {
         width: 100%;
         max-height: 11rem;
+    }
+    .xs\:icon-xl
+    {
+        width: 14rem;
+    }
+    .xs\:icon-xl svg,
+    .xs\:icon-xl img
+    {
+        width: 100%;
+        max-height: 14rem;
     }
     .xs\:icon-auto
     {
@@ -17997,6 +18017,16 @@ em
         width: 100%;
         max-height: 11rem;
     }
+    .sm\:icon-xl
+    {
+        width: 14rem;
+    }
+    .sm\:icon-xl svg,
+    .sm\:icon-xl img
+    {
+        width: 100%;
+        max-height: 14rem;
+    }
     .sm\:icon-auto
     {
         width: auto;
@@ -22279,6 +22309,16 @@ em
     {
         width: 100%;
         max-height: 11rem;
+    }
+    .md\:icon-xl
+    {
+        width: 14rem;
+    }
+    .md\:icon-xl svg,
+    .md\:icon-xl img
+    {
+        width: 100%;
+        max-height: 14rem;
     }
     .md\:icon-auto
     {
@@ -26563,6 +26603,16 @@ em
         width: 100%;
         max-height: 11rem;
     }
+    .lg\:icon-xl
+    {
+        width: 14rem;
+    }
+    .lg\:icon-xl svg,
+    .lg\:icon-xl img
+    {
+        width: 100%;
+        max-height: 14rem;
+    }
     .lg\:icon-auto
     {
         width: auto;
@@ -30846,6 +30896,16 @@ em
         width: 100%;
         max-height: 11rem;
     }
+    .xl\:icon-xl
+    {
+        width: 14rem;
+    }
+    .xl\:icon-xl svg,
+    .xl\:icon-xl img
+    {
+        width: 100%;
+        max-height: 14rem;
+    }
     .xl\:icon-auto
     {
         width: auto;
@@ -35018,7 +35078,7 @@ textarea
     -ms-flex-order: -1;
             order: -1;
 }
-@media (min-width: 992px)
+@media (min-width: 1400px)
 {
     .navButtons
     {
@@ -35037,14 +35097,33 @@ textarea
 
     vertical-align: top !important;
 }
+.popup > .container
+{
+    opacity: 0;
+}
+
+.popup,
+.popup_wrapper
+{
+    overflow: hidden; 
+
+    opacity: 1 !important;
+}
 
 .popup_visible .popup
 {
     height: 100%;
 }
+.popup_visible .popup > .container
+{
+    -webkit-transition: opacity .35s .35s ease-in;
+            transition: opacity .35s .35s ease-in; 
+
+    opacity: 1;
+}
 
 /*Custom styling*/
-@media all and (max-width: 992px)
+@media all and (max-width: 1400px)
 {
     .jsNavbarToggle.is-open .navbar
     {
@@ -35087,7 +35166,7 @@ textarea
         -ms-flex-direction: column;
 }
 
-@media (max-width: 992px)
+@media (max-width: 1400px)
 {
     .navbar
     {
@@ -35148,7 +35227,7 @@ textarea
     }
 }
 
-@media (min-width: 992px)
+@media (min-width: 1400px)
 {
     .navbar .submenuBack
     {

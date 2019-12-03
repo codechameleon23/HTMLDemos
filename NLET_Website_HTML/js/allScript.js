@@ -151,6 +151,23 @@ $(document).ready(function () {
       autoplay: false,
       autoplayTimeout: 4000,
       autoplayHoverPause: true,
+      responsive : {
+        0 : {
+          items:1,
+        },
+        676:{
+          items:2,
+        },
+        992:{
+          items:3,
+        },
+        1200:{
+          items:4,
+        },
+        1400:{
+          items:5,
+        }
+      }
     });
   }
   $('.jsCarouselPrv').on('click', function () {
@@ -371,6 +388,7 @@ $(document).ready(function () {
     transition: 'all 0.7s',
     color: "transparent",
   });
+
   $("#login_popup").popup({
     // scrolllock: true,
     transition: 'all 0.7s',
