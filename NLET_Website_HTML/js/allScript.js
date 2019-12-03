@@ -402,6 +402,20 @@ $(document).ready(function () {
     // anchorPlacement: 'top-bottom',
   });
 
+  $('.map-canvas').mapify({
+    key: 'AIzaSyB1kmlnoOlwpHQQBvhhIL3joMAKpKq9Yoo',
+    points: [
+       {
+         lat: 51.467383,
+         lng: -0.369419,
+         marker: 'images/map-marker.png',
+         markerSize: [127, 127],
+         title: 'Sceptre House, 75-81 Staines Road, Hounslow, TW3 3HW',
+       },
+    ],
+    zoom: 15,
+  });
+
 });
 
 // iPhone page refresh on browser back button
