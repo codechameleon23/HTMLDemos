@@ -36644,13 +36644,6 @@ textarea
     margin-bottom: 2rem;
 }
 
-.text-wrap > * p
-{
-    display: inline-block; 
-
-    width: 100%;
-}
-
 .text-wrap-xs > *:not(:last-child)
 {
     margin-bottom: .25rem;
@@ -36775,10 +36768,13 @@ textarea
     opacity: .3;
 }
 
-.carousel-outer:not(:hover) .jsCarouselPrv,
-.carousel-outer:not(:hover) .jsCarouselNxt
+@media (min-width: 1400px)
 {
-    opacity: 0;
+    .carousel-outer:not(:hover) .jsCarouselPrv,
+    .carousel-outer:not(:hover) .jsCarouselNxt
+    {
+        opacity: 0;
+    }
 }
 
 .navButtons
