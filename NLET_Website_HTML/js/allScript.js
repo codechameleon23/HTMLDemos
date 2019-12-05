@@ -163,9 +163,6 @@ $(document).ready(function () {
         },
         1200:{
           items:4,
-        },
-        1400:{
-          items:5,
         }
       }
     });
