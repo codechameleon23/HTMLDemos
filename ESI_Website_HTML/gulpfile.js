@@ -49,6 +49,7 @@ const PROJECT_JS_LIST = [
   ROOT_JS_PATH+'/animate.on.scroll.min.js',
   ROOT_JS_PATH+'/flatpickr.min.js',
   ROOT_JS_PATH+'/ion.rangeSlider.min.js',
+  ROOT_JS_PATH+'/tooltipster.bundle.min.js',
   SRC_JS_PATH+'/scripts.js',
 ];
 
@@ -59,6 +60,7 @@ const PROJECT_PAGES_LIST = [
   './src/thank-ewe.html',
   './src/education.html',
   './src/how-it-works.html',
+  './src/gallery.html',
   './src/about-ewe.html',
   './src/contact.html',
   './src/flexibuilder.html',
