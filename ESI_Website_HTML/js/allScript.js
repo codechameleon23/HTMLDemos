@@ -400,6 +400,7 @@ $(document).ready(function () {
   
   //Animate on scroll
   AOS.init({
+    offset: 0,
     once: true,
     easing: 'ease-in-out',
     anchorPlacement: 'top-bottom',
