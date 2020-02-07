@@ -396,6 +396,7 @@ $(document).ready(function () {
     animation: 'grow',
     maxWidth: 165,
     side: 'right',
+    trigger: ('ontouchstart' in window) ? 'click' : 'hover'
   });
   
   //Animate on scroll
