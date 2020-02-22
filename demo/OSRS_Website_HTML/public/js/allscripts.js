@@ -132,6 +132,39 @@ $(document).ready(function () {
     });
   };
 
+  // latest Offers Carousel
+  if($('.js_latestOffersCarousel').length){
+    var latestOffersCarousel = $('.js_latestOffersCarousel');
+    latestOffersCarousel.owlCarousel({
+        loop:true,
+        nav:false,
+        dots:false,
+        autoplay:true,
+        autoplayTimeout:3000,
+        autoplayHoverPause:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            700:{
+                items:2
+            },
+            1150:{
+              items:3
+            },
+            1600:{
+              items:3
+            }
+        }
+    });
+    $('.jslatestOffersCarouselCarouselPrv').on('click', function () {
+      $(this).closest('.carousel-outer').find(latestOffersCarousel).trigger('prev.owl.carousel');
+    });
+    $('.jslatestOffersCarouselCarouselNxt').on('click', function () {
+      $(this).closest('.carousel-outer').find(latestOffersCarousel).trigger('next.owl.carousel');
+    });
+  }
+
   // fancybox
   $().fancybox({
     selector : '.jsPopupGallery a.JsFancyboxItem'
