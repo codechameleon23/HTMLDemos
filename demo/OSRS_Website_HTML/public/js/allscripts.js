@@ -153,7 +153,7 @@ $(document).ready(function () {
               items:3
             },
             1600:{
-              items:4
+              items:3
             }
         }
     });
@@ -168,6 +168,9 @@ $(document).ready(function () {
   // fancybox
   $().fancybox({
     selector : '.jsPopupGallery a.JsFancyboxItem'
+  });
+  $().fancybox({
+    selector : '.latestOffers-slider a.JsFancyboxItem'
   });
 
   //Animate on scroll
