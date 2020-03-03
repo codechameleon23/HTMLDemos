@@ -10325,6 +10325,7 @@ a.image-holder:after {
   display: inline-block; }
 
 footer .brand-logo {
+  width: 100%;
   max-width: 17.2rem; }
 
 .button {
@@ -10385,7 +10386,9 @@ footer .brand-logo {
   .sticky {
     position: fixed;
     top: 0;
-    bottom: auto; } }
+    bottom: auto; }
+  .no-relative-parent {
+    position: unset !important; } }
 
 nav {
   z-index: 999; }
@@ -10489,3 +10492,7 @@ nav {
 
 .title-image-wrapper {
   max-width: 740px; }
+
+@media all and (min-width: 992px) {
+  .hero-banner-holder {
+    height: 510px; } }

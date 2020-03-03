@@ -77,15 +77,12 @@ var mainSections = document.querySelectorAll("main section");
 
 var lastId;
 var cur = [];
-window.addEventListener("scroll", event => {
+window.addEventListener("scroll", function (event) {
   var fromTop = window.scrollY + 10;
-
-  mainNavLinks.forEach(link => {
+  Array.prototype.slice.call(mainNavLinks).forEach(function (link) {
     var section = document.querySelector(link.hash);
-    if (
-      section.offsetTop <= fromTop &&
-      section.offsetTop + section.offsetHeight > fromTop
-    ) {
+
+    if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
       link.classList.add("current");
     } else {
       link.classList.remove("current");
