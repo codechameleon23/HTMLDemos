@@ -116,6 +116,7 @@ $(document).ready(function () {
 
   //Banner carousel
   var bannerCarousel;
+
   if ($(".jsBannerCarousel").length) {
     bannerCarousel = $(".jsBannerCarousel"); //Banner-carousel for Property-details page
     bannerCarousel.owlCarousel({
@@ -134,13 +135,45 @@ $(document).ready(function () {
       autoplayTimeout: 4000,
       autoplayHoverPause: true,
     });
-
   };
   $('.jsCarouselPrv').on('click', function () {
     $(this).closest('.carousel-outer').find(bannerCarousel).trigger('prev.owl.carousel');
   });
   $('.jsCarouselNxt').on('click', function () {
     $(this).closest('.carousel-outer').find(bannerCarousel).trigger('next.owl.carousel');
+  });
+
+  if ($(".jsProductCarousel").length) {
+    productCarousel = $(".jsProductCarousel"); //Banner-carousel for Property-details page
+    productCarousel.owlCarousel({
+      stagePadding: 0,
+      margin: 14,
+      loop: true,
+      mouseDrag: false,
+      nav: false,
+      dots: false,
+      smartSpeed: 500,
+      // autoplay: true,
+      autoplayTimeout: 4000,
+      autoplayHoverPause: true,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        710: {
+          items: 2,
+        },
+        992: {
+          items: 4,
+        }
+      }
+    });
+  };
+  $('.jsCarouselPrv').on('click', function () {
+    $(this).closest('.carousel-outer').find(productCarousel).trigger('prev.owl.carousel');
+  });
+  $('.jsCarouselNxt').on('click', function () {
+    $(this).closest('.carousel-outer').find(productCarousel).trigger('next.owl.carousel');
   });
 
   // Magnific Popup : Gallery

@@ -1,6 +1,6 @@
 @charset 'UTF-8';
 /*ImportFontsonts*/
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;900&display=swap');
 /*Reset css*/
 html,
 body,
@@ -1257,6 +1257,11 @@ em
 .fweight-regular
 {
     font-weight: 400;
+}
+
+.fweight-medium
+{
+    font-weight: 500;
 }
 
 .fweight-semibold
@@ -4520,6 +4525,10 @@ em
     .fweight-regular
     {
         font-weight: 400;
+    }
+    .fweight-medium
+    {
+        font-weight: 500;
     }
     .fweight-semibold
     {
@@ -7936,6 +7945,10 @@ em
     {
         font-weight: 400;
     }
+    .sm\:fweight-medium
+    {
+        font-weight: 500;
+    }
     .sm\:fweight-semibold
     {
         font-weight: 600;
@@ -11350,6 +11363,10 @@ em
     .md\:fweight-regular
     {
         font-weight: 400;
+    }
+    .md\:fweight-medium
+    {
+        font-weight: 500;
     }
     .md\:fweight-semibold
     {
@@ -14766,6 +14783,10 @@ em
     {
         font-weight: 400;
     }
+    .lg\:fweight-medium
+    {
+        font-weight: 500;
+    }
     .lg\:fweight-semibold
     {
         font-weight: 600;
@@ -18180,6 +18201,10 @@ em
     .xl\:fweight-regular
     {
         font-weight: 400;
+    }
+    .xl\:fweight-medium
+    {
+        font-weight: 500;
     }
     .xl\:fweight-semibold
     {
@@ -21790,11 +21815,13 @@ strong
 
 .button
 {
+    line-height: 1.5; 
+
     position: relative;
 
     display: inline-block;
 
-    min-height: 43px; 
+    min-height: 43px;
 
     cursor: pointer;
     -webkit-transition: all .45s 0s ease-in-out;
@@ -21920,7 +21947,12 @@ textarea
 
 .banner-carousel .owl-dots
 {
-    width: calc(100% - 3rem); 
+    position: absolute;
+    right: 0;
+    left: 0;
+
+    width: calc(100% - 3rem);
+    width: 100%; 
     max-width: 120rem;
     margin: 0 auto !important;
 
@@ -22061,7 +22093,15 @@ textarea
 {
     .call-to-action
     {
-        width: calc(100% - ((100vw / 3) - ((100vw - 100%) / 2)));
+        width: calc(100% - ((100vw/2.4) - ((100vw - 100%)/2)));
+    }
+}
+
+@media (min-width: 992px)
+{
+    .call-to-action.map-view
+    {
+        width: calc(100% - ((100vw/1.72) - ((100vw - 100%)/2)));
     }
 }
 
