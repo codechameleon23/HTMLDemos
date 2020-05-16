@@ -31,19 +31,22 @@ $lineThickNess: .2rem !default;
   bottom: 0;
 }
 
-.hamburger.is-active span:nth-child(1),
-.hamburger.is-active span:nth-child(4) {
-  top: 50%;
-  bottom: 50%;
-  transform: scale(0);
-  width: 0%;
-  left: 50%;
-}
-
-.hamburger.is-active span:nth-child(2) {
-  transform: rotate(45deg);
-}
-
-.hamburger.is-active span:nth-child(3) {
-  transform: rotate(-45deg);
+.hamburger {
+  &.is-active,
+  &.cross {
+    span:nth-child(1),
+    span:nth-child(4) {
+      top: 50%;
+      bottom: 50%;
+      transform: scale(0);
+      width: 0%;
+      left: 50%;
+    }
+    span:nth-child(2) {
+      transform: rotate(45deg);
+    }
+    span:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+  }
 }
