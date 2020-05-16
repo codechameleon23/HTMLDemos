@@ -54,7 +54,66 @@ $borderDirecton: (null null, t top, r right, b bottom, l left, x left right, y t
   
             }
           }
-        }    
+        } 
+        @if(nth($bw, 4) == 'parent'){
+          .#{$bp}#{nth($state, 1)}#{$borderColorsClassPrefix}-parent#{nth($state, 2)}{
+            @each $bd in $borderDirecton{
+              @if(nth($bw, 1)){
+    
+                @if(nth($bd, 1)){
+                  @if( nth($bd, 1) == x or nth($bd, 1) == y ){
+                  .#{$borderColorsClassPrefix}-child {
+                    &-#{nth($bd, 1)}-#{nth($bw, 1)}{
+                        border-#{nth($bd, 2)}-width: (nth($bw, 2));
+                        border-#{nth($bd, 3)}-width: (nth($bw, 2));
+                      }
+                    }
+                  } @else {
+                    .#{$borderColorsClassPrefix}-child {
+                      &-#{nth($bd, 1)}-#{nth($bw, 1)}{
+                        border-#{nth($bd, 2)}-width: (nth($bw, 2));
+                      }
+                    }
+                  }
+                } @else {
+                  .#{$borderColorsClassPrefix}-child {
+                    &-#{nth($bw, 1)}{
+                      border-width: (nth($bw, 2));
+                    }
+                  }
+                }
+    
+              } @else {
+                
+                @if(nth($bd, 1)){
+    
+                  @if( nth($bd, 1) == x or nth($bd, 1) == y ){
+                    .#{$borderColorsClassPrefix}-child {
+                      &-#{nth($bd, 1)}{
+                        border-#{nth($bd, 2)}-width: (nth($bw, 2));
+                        border-#{nth($bd, 3)}-width: (nth($bw, 2));
+                      }
+                    }
+                  } @else {
+                    .#{$borderColorsClassPrefix}-child {
+                      &-#{nth($bd, 1)}{
+                        border-#{nth($bd, 2)}-width: (nth($bw, 2));
+                      }
+                    }
+                  }
+    
+                } @else {
+                  .#{$borderColorsClassPrefix}-child {
+                    &{
+                      border-width: (nth($bw, 2));
+                    }
+                  }
+                }
+    
+              }
+            }
+          }    
+        }
       }
     }@else{
       .#{$bp}#{$borderColorsClassPrefix}{
@@ -91,6 +150,65 @@ $borderDirecton: (null null, t top, r right, b bottom, l left, x left right, y t
               &{border-width: (nth($bw, 2));}
             }
 
+          }
+        }
+      }
+      @if(nth($bw, 4) == 'parent'){
+        .#{$bp}#{$borderColorsClassPrefix}-parent {
+          @each $bd in $borderDirecton{
+            @if(nth($bw, 1)){
+  
+              @if(nth($bd, 1)){
+                @if( nth($bd, 1) == x or nth($bd, 1) == y ){
+                  .#{$borderColorsClassPrefix}-child {
+                    &-#{nth($bd, 1)}-#{nth($bw, 1)}{
+                      border-#{nth($bd, 2)}-width: (nth($bw, 2));
+                      border-#{nth($bd, 3)}-width: (nth($bw, 2));
+                    }
+                  }
+                } @else {
+                  .#{$borderColorsClassPrefix}-child {
+                    &-#{nth($bd, 1)}-#{nth($bw, 1)}{
+                      border-#{nth($bd, 2)}-width: (nth($bw, 2));
+                    }
+                  }
+                }
+              } @else {
+                .#{$borderColorsClassPrefix}-child {
+                  &-#{nth($bw, 1)}{
+                    border-width: (nth($bw, 2));
+                  }
+                }
+              }
+  
+            } @else {
+              
+              @if(nth($bd, 1)){
+  
+                @if( nth($bd, 1) == x or nth($bd, 1) == y ){
+                  .#{$borderColorsClassPrefix}-child {
+                    &-#{nth($bd, 1)}{
+                      border-#{nth($bd, 2)}-width: (nth($bw, 2));
+                      border-#{nth($bd, 3)}-width: (nth($bw, 2));
+                    }
+                  }
+                } @else {
+                  .#{$borderColorsClassPrefix}-child {
+                    &-#{nth($bd, 1)}{
+                      border-#{nth($bd, 2)}-width: (nth($bw, 2));
+                    }
+                  }
+                }
+  
+              } @else {
+                .#{$borderColorsClassPrefix}-child {
+                  &{
+                    border-width: (nth($bw, 2));
+                  }
+                }
+              }
+  
+            }
           }
         }
       }

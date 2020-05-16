@@ -22,12 +22,26 @@
               color: nth($clr, 3);
             }
           }
+          @if(nth($clr, 5) == 'parent'){
+            .#{$bp}#{nth($state, 1)}#{nth($clr, 1)}-parent#{nth($state, 2)} {
+              .#{nth($clr, 1)}-child-#{nth($clr, 2)}{
+                color: nth($clr, 3);
+              }
+            }
+          }
         }
       }  
     }@else{
       .#{$bp}#{nth($clr, 1)} {
         &-#{nth($clr, 2)} {
           color: nth($clr, 3);
+        }
+      }
+      @if(nth($clr, 5) == 'parent'){
+        .#{$bp}#{nth($clr, 1)}-parent {
+          .#{nth($clr, 1)}-child-#{nth($clr, 2)} {
+            color: nth($clr, 3);
+          }
         }
       }
     }
@@ -51,12 +65,26 @@
               background-color: #{nth($clr, 3)};
             }
           }
+          @if(nth($clr, 5) == 'parent'){
+            .#{$bp}#{nth($state, 1)}#{nth($clr, 1)}-parent#{nth($state, 2)} {
+              .#{nth($clr, 1)}-child-#{nth($clr, 2)} {
+                background-color: #{nth($clr, 3)};
+              }
+            }
+          }
         }
       }
     }@else{
       .#{$bp}#{nth($clr, 1)} {
         &-#{nth($clr, 2)} {
           background-color: #{nth($clr, 3)};
+        }
+      }
+      @if(nth($clr, 5) == 'parent'){
+        .#{$bp}#{nth($clr, 1)}-parent {
+          .#{nth($clr, 1)}-child-#{nth($clr, 2)} {
+            background-color: #{nth($clr, 3)};
+          }
         }
       }
     }
@@ -79,6 +107,13 @@
               border-color: #{nth($clr, 3)};
             }
           }
+          @if(nth($clr, 5) == 'parent'){
+            .#{$bp}#{nth($state, 1)}#{nth($clr, 1)}-parent#{nth($state, 2)} {
+              .#{nth($clr, 1)}-child-#{nth($clr, 2)} {
+                border-color: #{nth($clr, 3)};
+              }
+            } 
+          }
         }
       }
     }@else{
@@ -86,6 +121,13 @@
         &-#{nth($clr, 2)} {
           border-color: #{nth($clr, 3)};
         }
+      }
+      @if(nth($clr, 5) == 'parent'){
+        .#{$bp}#{nth($clr, 1)}-parent {
+          .#{nth($clr, 1)}-child-#{nth($clr, 2)} {
+            border-color: #{nth($clr, 3)};
+          }
+        } 
       }
     }
   }

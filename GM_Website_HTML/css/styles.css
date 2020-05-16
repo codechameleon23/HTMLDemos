@@ -1188,7 +1188,17 @@ em
     border-color: #294735;
 }
 
+.border-parent .border-child-primary
+{
+    border-color: #294735;
+}
+
 .hover\:border-primary:hover
+{
+    border-color: #294735;
+}
+
+.hover\:border-parent:hover .border-child-primary
 {
     border-color: #294735;
 }
@@ -1198,7 +1208,17 @@ em
     border-color: #294735;
 }
 
+.focus\:border-parent:focus .border-child-primary
+{
+    border-color: #294735;
+}
+
 .focus-within\:border-primary:focus-within
+{
+    border-color: #294735;
+}
+
+.focus-within\:border-parent:focus-within .border-child-primary
 {
     border-color: #294735;
 }
@@ -1208,7 +1228,17 @@ em
     border-color: #e2241c;
 }
 
+.border-parent .border-child-secondary
+{
+    border-color: #e2241c;
+}
+
 .hover\:border-secondary:hover
+{
+    border-color: #e2241c;
+}
+
+.hover\:border-parent:hover .border-child-secondary
 {
     border-color: #e2241c;
 }
@@ -1218,7 +1248,17 @@ em
     border-color: #e2241c;
 }
 
+.focus\:border-parent:focus .border-child-secondary
+{
+    border-color: #e2241c;
+}
+
 .focus-within\:border-secondary:focus-within
+{
+    border-color: #e2241c;
+}
+
+.focus-within\:border-parent:focus-within .border-child-secondary
 {
     border-color: #e2241c;
 }
@@ -1241,6 +1281,11 @@ em
 .focus-within\:border-light:focus-within
 {
     border-color: #ececeb;
+}
+
+.border-medium
+{
+    border-color: #cecece;
 }
 
 /* Font Weight classes */
@@ -1332,6 +1377,58 @@ em
     border-bottom-left-radius: 9999px;
 }
 
+.radius-xs
+{
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.radius-tl-xs
+{
+    border-top-left-radius: 4px;
+}
+
+.radius-tr-xs
+{
+    border-top-right-radius: 4px;
+}
+
+.radius-bl-xs
+{
+    border-bottom-left-radius: 4px;
+}
+
+.radius-br-xs
+{
+    border-bottom-right-radius: 4px;
+}
+
+.radius-l-xs
+{
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.radius-r-xs
+{
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.radius-t-xs
+{
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.radius-b-xs
+{
+    border-bottom-right-radius: 4px; 
+    border-bottom-left-radius: 4px;
+}
+
 /* Letter Spacing classes */
 /* Line Height classes */
 /*Color Theme*/
@@ -1393,6 +1490,216 @@ em
         border-top-width: .1rem;
         border-bottom-width: .1rem;
     }
+    .border-parent .border-child
+    {
+        border-width: .1rem;
+    }
+    .border-parent .border-child-t
+    {
+        border-top-width: .1rem;
+    }
+    .border-parent .border-child-r
+    {
+        border-right-width: .1rem;
+    }
+    .border-parent .border-child-b
+    {
+        border-bottom-width: .1rem;
+    }
+    .border-parent .border-child-l
+    {
+        border-left-width: .1rem;
+    }
+    .border-parent .border-child-x
+    {
+        border-right-width: .1rem; 
+        border-left-width: .1rem;
+    }
+    .border-parent .border-child-y
+    {
+        border-top-width: .1rem;
+        border-bottom-width: .1rem;
+    }
+    .hover\:border:hover
+    {
+        border-width: .1rem;
+    }
+    .hover\:border-t:hover
+    {
+        border-top-width: .1rem;
+    }
+    .hover\:border-r:hover
+    {
+        border-right-width: .1rem;
+    }
+    .hover\:border-b:hover
+    {
+        border-bottom-width: .1rem;
+    }
+    .hover\:border-l:hover
+    {
+        border-left-width: .1rem;
+    }
+    .hover\:border-x:hover
+    {
+        border-right-width: .1rem; 
+        border-left-width: .1rem;
+    }
+    .hover\:border-y:hover
+    {
+        border-top-width: .1rem;
+        border-bottom-width: .1rem;
+    }
+    .hover\:border-parent:hover .border-child
+    {
+        border-width: .1rem;
+    }
+    .hover\:border-parent:hover .border-child-t
+    {
+        border-top-width: .1rem;
+    }
+    .hover\:border-parent:hover .border-child-r
+    {
+        border-right-width: .1rem;
+    }
+    .hover\:border-parent:hover .border-child-b
+    {
+        border-bottom-width: .1rem;
+    }
+    .hover\:border-parent:hover .border-child-l
+    {
+        border-left-width: .1rem;
+    }
+    .hover\:border-parent:hover .border-child-x
+    {
+        border-right-width: .1rem; 
+        border-left-width: .1rem;
+    }
+    .hover\:border-parent:hover .border-child-y
+    {
+        border-top-width: .1rem;
+        border-bottom-width: .1rem;
+    }
+    .focus\:border:focus
+    {
+        border-width: .1rem;
+    }
+    .focus\:border-t:focus
+    {
+        border-top-width: .1rem;
+    }
+    .focus\:border-r:focus
+    {
+        border-right-width: .1rem;
+    }
+    .focus\:border-b:focus
+    {
+        border-bottom-width: .1rem;
+    }
+    .focus\:border-l:focus
+    {
+        border-left-width: .1rem;
+    }
+    .focus\:border-x:focus
+    {
+        border-right-width: .1rem; 
+        border-left-width: .1rem;
+    }
+    .focus\:border-y:focus
+    {
+        border-top-width: .1rem;
+        border-bottom-width: .1rem;
+    }
+    .focus\:border-parent:focus .border-child
+    {
+        border-width: .1rem;
+    }
+    .focus\:border-parent:focus .border-child-t
+    {
+        border-top-width: .1rem;
+    }
+    .focus\:border-parent:focus .border-child-r
+    {
+        border-right-width: .1rem;
+    }
+    .focus\:border-parent:focus .border-child-b
+    {
+        border-bottom-width: .1rem;
+    }
+    .focus\:border-parent:focus .border-child-l
+    {
+        border-left-width: .1rem;
+    }
+    .focus\:border-parent:focus .border-child-x
+    {
+        border-right-width: .1rem; 
+        border-left-width: .1rem;
+    }
+    .focus\:border-parent:focus .border-child-y
+    {
+        border-top-width: .1rem;
+        border-bottom-width: .1rem;
+    }
+    .focus-within\:border:focus-within
+    {
+        border-width: .1rem;
+    }
+    .focus-within\:border-t:focus-within
+    {
+        border-top-width: .1rem;
+    }
+    .focus-within\:border-r:focus-within
+    {
+        border-right-width: .1rem;
+    }
+    .focus-within\:border-b:focus-within
+    {
+        border-bottom-width: .1rem;
+    }
+    .focus-within\:border-l:focus-within
+    {
+        border-left-width: .1rem;
+    }
+    .focus-within\:border-x:focus-within
+    {
+        border-right-width: .1rem; 
+        border-left-width: .1rem;
+    }
+    .focus-within\:border-y:focus-within
+    {
+        border-top-width: .1rem;
+        border-bottom-width: .1rem;
+    }
+    .focus-within\:border-parent:focus-within .border-child
+    {
+        border-width: .1rem;
+    }
+    .focus-within\:border-parent:focus-within .border-child-t
+    {
+        border-top-width: .1rem;
+    }
+    .focus-within\:border-parent:focus-within .border-child-r
+    {
+        border-right-width: .1rem;
+    }
+    .focus-within\:border-parent:focus-within .border-child-b
+    {
+        border-bottom-width: .1rem;
+    }
+    .focus-within\:border-parent:focus-within .border-child-l
+    {
+        border-left-width: .1rem;
+    }
+    .focus-within\:border-parent:focus-within .border-child-x
+    {
+        border-right-width: .1rem; 
+        border-left-width: .1rem;
+    }
+    .focus-within\:border-parent:focus-within .border-child-y
+    {
+        border-top-width: .1rem;
+        border-bottom-width: .1rem;
+    }
     .border-2
     {
         border-width: .2rem;
@@ -1419,6 +1726,216 @@ em
         border-left-width: .2rem;
     }
     .border-y-2
+    {
+        border-top-width: .2rem;
+        border-bottom-width: .2rem;
+    }
+    .border-parent .border-child-2
+    {
+        border-width: .2rem;
+    }
+    .border-parent .border-child-t-2
+    {
+        border-top-width: .2rem;
+    }
+    .border-parent .border-child-r-2
+    {
+        border-right-width: .2rem;
+    }
+    .border-parent .border-child-b-2
+    {
+        border-bottom-width: .2rem;
+    }
+    .border-parent .border-child-l-2
+    {
+        border-left-width: .2rem;
+    }
+    .border-parent .border-child-x-2
+    {
+        border-right-width: .2rem; 
+        border-left-width: .2rem;
+    }
+    .border-parent .border-child-y-2
+    {
+        border-top-width: .2rem;
+        border-bottom-width: .2rem;
+    }
+    .hover\:border-2:hover
+    {
+        border-width: .2rem;
+    }
+    .hover\:border-t-2:hover
+    {
+        border-top-width: .2rem;
+    }
+    .hover\:border-r-2:hover
+    {
+        border-right-width: .2rem;
+    }
+    .hover\:border-b-2:hover
+    {
+        border-bottom-width: .2rem;
+    }
+    .hover\:border-l-2:hover
+    {
+        border-left-width: .2rem;
+    }
+    .hover\:border-x-2:hover
+    {
+        border-right-width: .2rem; 
+        border-left-width: .2rem;
+    }
+    .hover\:border-y-2:hover
+    {
+        border-top-width: .2rem;
+        border-bottom-width: .2rem;
+    }
+    .hover\:border-parent:hover .border-child-2
+    {
+        border-width: .2rem;
+    }
+    .hover\:border-parent:hover .border-child-t-2
+    {
+        border-top-width: .2rem;
+    }
+    .hover\:border-parent:hover .border-child-r-2
+    {
+        border-right-width: .2rem;
+    }
+    .hover\:border-parent:hover .border-child-b-2
+    {
+        border-bottom-width: .2rem;
+    }
+    .hover\:border-parent:hover .border-child-l-2
+    {
+        border-left-width: .2rem;
+    }
+    .hover\:border-parent:hover .border-child-x-2
+    {
+        border-right-width: .2rem; 
+        border-left-width: .2rem;
+    }
+    .hover\:border-parent:hover .border-child-y-2
+    {
+        border-top-width: .2rem;
+        border-bottom-width: .2rem;
+    }
+    .focus\:border-2:focus
+    {
+        border-width: .2rem;
+    }
+    .focus\:border-t-2:focus
+    {
+        border-top-width: .2rem;
+    }
+    .focus\:border-r-2:focus
+    {
+        border-right-width: .2rem;
+    }
+    .focus\:border-b-2:focus
+    {
+        border-bottom-width: .2rem;
+    }
+    .focus\:border-l-2:focus
+    {
+        border-left-width: .2rem;
+    }
+    .focus\:border-x-2:focus
+    {
+        border-right-width: .2rem; 
+        border-left-width: .2rem;
+    }
+    .focus\:border-y-2:focus
+    {
+        border-top-width: .2rem;
+        border-bottom-width: .2rem;
+    }
+    .focus\:border-parent:focus .border-child-2
+    {
+        border-width: .2rem;
+    }
+    .focus\:border-parent:focus .border-child-t-2
+    {
+        border-top-width: .2rem;
+    }
+    .focus\:border-parent:focus .border-child-r-2
+    {
+        border-right-width: .2rem;
+    }
+    .focus\:border-parent:focus .border-child-b-2
+    {
+        border-bottom-width: .2rem;
+    }
+    .focus\:border-parent:focus .border-child-l-2
+    {
+        border-left-width: .2rem;
+    }
+    .focus\:border-parent:focus .border-child-x-2
+    {
+        border-right-width: .2rem; 
+        border-left-width: .2rem;
+    }
+    .focus\:border-parent:focus .border-child-y-2
+    {
+        border-top-width: .2rem;
+        border-bottom-width: .2rem;
+    }
+    .focus-within\:border-2:focus-within
+    {
+        border-width: .2rem;
+    }
+    .focus-within\:border-t-2:focus-within
+    {
+        border-top-width: .2rem;
+    }
+    .focus-within\:border-r-2:focus-within
+    {
+        border-right-width: .2rem;
+    }
+    .focus-within\:border-b-2:focus-within
+    {
+        border-bottom-width: .2rem;
+    }
+    .focus-within\:border-l-2:focus-within
+    {
+        border-left-width: .2rem;
+    }
+    .focus-within\:border-x-2:focus-within
+    {
+        border-right-width: .2rem; 
+        border-left-width: .2rem;
+    }
+    .focus-within\:border-y-2:focus-within
+    {
+        border-top-width: .2rem;
+        border-bottom-width: .2rem;
+    }
+    .focus-within\:border-parent:focus-within .border-child-2
+    {
+        border-width: .2rem;
+    }
+    .focus-within\:border-parent:focus-within .border-child-t-2
+    {
+        border-top-width: .2rem;
+    }
+    .focus-within\:border-parent:focus-within .border-child-r-2
+    {
+        border-right-width: .2rem;
+    }
+    .focus-within\:border-parent:focus-within .border-child-b-2
+    {
+        border-bottom-width: .2rem;
+    }
+    .focus-within\:border-parent:focus-within .border-child-l-2
+    {
+        border-left-width: .2rem;
+    }
+    .focus-within\:border-parent:focus-within .border-child-x-2
+    {
+        border-right-width: .2rem; 
+        border-left-width: .2rem;
+    }
+    .focus-within\:border-parent:focus-within .border-child-y-2
     {
         border-top-width: .2rem;
         border-bottom-width: .2rem;
@@ -2018,7 +2535,15 @@ em
     {
         background-color: #e2241c;
     }
+    .bg-parent .bg-child-secondary
+    {
+        background-color: #e2241c;
+    }
     .hover\:bg-secondary:hover
+    {
+        background-color: #e2241c;
+    }
+    .hover\:bg-parent:hover .bg-child-secondary
     {
         background-color: #e2241c;
     }
@@ -2026,7 +2551,15 @@ em
     {
         background-color: #e2241c;
     }
+    .focus\:bg-parent:focus .bg-child-secondary
+    {
+        background-color: #e2241c;
+    }
     .focus-within\:bg-secondary:focus-within
+    {
+        background-color: #e2241c;
+    }
+    .focus-within\:bg-parent:focus-within .bg-child-secondary
     {
         background-color: #e2241c;
     }
@@ -2045,6 +2578,10 @@ em
     .focus-within\:bg-light:focus-within
     {
         background-color: #ececeb;
+    }
+    .bg-default
+    {
+        background-color: #3c3c3b;
     }
     /* Margin Padding classes */
     /*paddings*/
@@ -4222,6 +4759,10 @@ em
     {
         max-width: 120rem;
     }
+    .container-popup-md
+    {
+        max-width: 62rem;
+    }
     /* Columns Classes */
     .col-1
     {
@@ -4627,7 +5168,15 @@ em
     {
         color: #e2241c;
     }
+    .fcolor-parent .fcolor-child-secondary
+    {
+        color: #e2241c;
+    }
     .hover\:fcolor-secondary:hover
+    {
+        color: #e2241c;
+    }
+    .hover\:fcolor-parent:hover .fcolor-child-secondary
     {
         color: #e2241c;
     }
@@ -4635,7 +5184,15 @@ em
     {
         color: #e2241c;
     }
+    .focus\:fcolor-parent:focus .fcolor-child-secondary
+    {
+        color: #e2241c;
+    }
     .focus-within\:fcolor-secondary:focus-within
+    {
+        color: #e2241c;
+    }
+    .focus-within\:fcolor-parent:focus-within .fcolor-child-secondary
     {
         color: #e2241c;
     }
@@ -4812,6 +5369,216 @@ em
         border-top-width: .1rem;
         border-bottom-width: .1rem;
     }
+    .sm\:border-parent .border-child
+    {
+        border-width: .1rem;
+    }
+    .sm\:border-parent .border-child-t
+    {
+        border-top-width: .1rem;
+    }
+    .sm\:border-parent .border-child-r
+    {
+        border-right-width: .1rem;
+    }
+    .sm\:border-parent .border-child-b
+    {
+        border-bottom-width: .1rem;
+    }
+    .sm\:border-parent .border-child-l
+    {
+        border-left-width: .1rem;
+    }
+    .sm\:border-parent .border-child-x
+    {
+        border-right-width: .1rem; 
+        border-left-width: .1rem;
+    }
+    .sm\:border-parent .border-child-y
+    {
+        border-top-width: .1rem;
+        border-bottom-width: .1rem;
+    }
+    .sm\:hover\:border:hover
+    {
+        border-width: .1rem;
+    }
+    .sm\:hover\:border-t:hover
+    {
+        border-top-width: .1rem;
+    }
+    .sm\:hover\:border-r:hover
+    {
+        border-right-width: .1rem;
+    }
+    .sm\:hover\:border-b:hover
+    {
+        border-bottom-width: .1rem;
+    }
+    .sm\:hover\:border-l:hover
+    {
+        border-left-width: .1rem;
+    }
+    .sm\:hover\:border-x:hover
+    {
+        border-right-width: .1rem; 
+        border-left-width: .1rem;
+    }
+    .sm\:hover\:border-y:hover
+    {
+        border-top-width: .1rem;
+        border-bottom-width: .1rem;
+    }
+    .sm\:hover\:border-parent:hover .border-child
+    {
+        border-width: .1rem;
+    }
+    .sm\:hover\:border-parent:hover .border-child-t
+    {
+        border-top-width: .1rem;
+    }
+    .sm\:hover\:border-parent:hover .border-child-r
+    {
+        border-right-width: .1rem;
+    }
+    .sm\:hover\:border-parent:hover .border-child-b
+    {
+        border-bottom-width: .1rem;
+    }
+    .sm\:hover\:border-parent:hover .border-child-l
+    {
+        border-left-width: .1rem;
+    }
+    .sm\:hover\:border-parent:hover .border-child-x
+    {
+        border-right-width: .1rem; 
+        border-left-width: .1rem;
+    }
+    .sm\:hover\:border-parent:hover .border-child-y
+    {
+        border-top-width: .1rem;
+        border-bottom-width: .1rem;
+    }
+    .sm\:focus\:border:focus
+    {
+        border-width: .1rem;
+    }
+    .sm\:focus\:border-t:focus
+    {
+        border-top-width: .1rem;
+    }
+    .sm\:focus\:border-r:focus
+    {
+        border-right-width: .1rem;
+    }
+    .sm\:focus\:border-b:focus
+    {
+        border-bottom-width: .1rem;
+    }
+    .sm\:focus\:border-l:focus
+    {
+        border-left-width: .1rem;
+    }
+    .sm\:focus\:border-x:focus
+    {
+        border-right-width: .1rem; 
+        border-left-width: .1rem;
+    }
+    .sm\:focus\:border-y:focus
+    {
+        border-top-width: .1rem;
+        border-bottom-width: .1rem;
+    }
+    .sm\:focus\:border-parent:focus .border-child
+    {
+        border-width: .1rem;
+    }
+    .sm\:focus\:border-parent:focus .border-child-t
+    {
+        border-top-width: .1rem;
+    }
+    .sm\:focus\:border-parent:focus .border-child-r
+    {
+        border-right-width: .1rem;
+    }
+    .sm\:focus\:border-parent:focus .border-child-b
+    {
+        border-bottom-width: .1rem;
+    }
+    .sm\:focus\:border-parent:focus .border-child-l
+    {
+        border-left-width: .1rem;
+    }
+    .sm\:focus\:border-parent:focus .border-child-x
+    {
+        border-right-width: .1rem; 
+        border-left-width: .1rem;
+    }
+    .sm\:focus\:border-parent:focus .border-child-y
+    {
+        border-top-width: .1rem;
+        border-bottom-width: .1rem;
+    }
+    .sm\:focus-within\:border:focus-within
+    {
+        border-width: .1rem;
+    }
+    .sm\:focus-within\:border-t:focus-within
+    {
+        border-top-width: .1rem;
+    }
+    .sm\:focus-within\:border-r:focus-within
+    {
+        border-right-width: .1rem;
+    }
+    .sm\:focus-within\:border-b:focus-within
+    {
+        border-bottom-width: .1rem;
+    }
+    .sm\:focus-within\:border-l:focus-within
+    {
+        border-left-width: .1rem;
+    }
+    .sm\:focus-within\:border-x:focus-within
+    {
+        border-right-width: .1rem; 
+        border-left-width: .1rem;
+    }
+    .sm\:focus-within\:border-y:focus-within
+    {
+        border-top-width: .1rem;
+        border-bottom-width: .1rem;
+    }
+    .sm\:focus-within\:border-parent:focus-within .border-child
+    {
+        border-width: .1rem;
+    }
+    .sm\:focus-within\:border-parent:focus-within .border-child-t
+    {
+        border-top-width: .1rem;
+    }
+    .sm\:focus-within\:border-parent:focus-within .border-child-r
+    {
+        border-right-width: .1rem;
+    }
+    .sm\:focus-within\:border-parent:focus-within .border-child-b
+    {
+        border-bottom-width: .1rem;
+    }
+    .sm\:focus-within\:border-parent:focus-within .border-child-l
+    {
+        border-left-width: .1rem;
+    }
+    .sm\:focus-within\:border-parent:focus-within .border-child-x
+    {
+        border-right-width: .1rem; 
+        border-left-width: .1rem;
+    }
+    .sm\:focus-within\:border-parent:focus-within .border-child-y
+    {
+        border-top-width: .1rem;
+        border-bottom-width: .1rem;
+    }
     .sm\:border-2
     {
         border-width: .2rem;
@@ -4838,6 +5605,216 @@ em
         border-left-width: .2rem;
     }
     .sm\:border-y-2
+    {
+        border-top-width: .2rem;
+        border-bottom-width: .2rem;
+    }
+    .sm\:border-parent .border-child-2
+    {
+        border-width: .2rem;
+    }
+    .sm\:border-parent .border-child-t-2
+    {
+        border-top-width: .2rem;
+    }
+    .sm\:border-parent .border-child-r-2
+    {
+        border-right-width: .2rem;
+    }
+    .sm\:border-parent .border-child-b-2
+    {
+        border-bottom-width: .2rem;
+    }
+    .sm\:border-parent .border-child-l-2
+    {
+        border-left-width: .2rem;
+    }
+    .sm\:border-parent .border-child-x-2
+    {
+        border-right-width: .2rem; 
+        border-left-width: .2rem;
+    }
+    .sm\:border-parent .border-child-y-2
+    {
+        border-top-width: .2rem;
+        border-bottom-width: .2rem;
+    }
+    .sm\:hover\:border-2:hover
+    {
+        border-width: .2rem;
+    }
+    .sm\:hover\:border-t-2:hover
+    {
+        border-top-width: .2rem;
+    }
+    .sm\:hover\:border-r-2:hover
+    {
+        border-right-width: .2rem;
+    }
+    .sm\:hover\:border-b-2:hover
+    {
+        border-bottom-width: .2rem;
+    }
+    .sm\:hover\:border-l-2:hover
+    {
+        border-left-width: .2rem;
+    }
+    .sm\:hover\:border-x-2:hover
+    {
+        border-right-width: .2rem; 
+        border-left-width: .2rem;
+    }
+    .sm\:hover\:border-y-2:hover
+    {
+        border-top-width: .2rem;
+        border-bottom-width: .2rem;
+    }
+    .sm\:hover\:border-parent:hover .border-child-2
+    {
+        border-width: .2rem;
+    }
+    .sm\:hover\:border-parent:hover .border-child-t-2
+    {
+        border-top-width: .2rem;
+    }
+    .sm\:hover\:border-parent:hover .border-child-r-2
+    {
+        border-right-width: .2rem;
+    }
+    .sm\:hover\:border-parent:hover .border-child-b-2
+    {
+        border-bottom-width: .2rem;
+    }
+    .sm\:hover\:border-parent:hover .border-child-l-2
+    {
+        border-left-width: .2rem;
+    }
+    .sm\:hover\:border-parent:hover .border-child-x-2
+    {
+        border-right-width: .2rem; 
+        border-left-width: .2rem;
+    }
+    .sm\:hover\:border-parent:hover .border-child-y-2
+    {
+        border-top-width: .2rem;
+        border-bottom-width: .2rem;
+    }
+    .sm\:focus\:border-2:focus
+    {
+        border-width: .2rem;
+    }
+    .sm\:focus\:border-t-2:focus
+    {
+        border-top-width: .2rem;
+    }
+    .sm\:focus\:border-r-2:focus
+    {
+        border-right-width: .2rem;
+    }
+    .sm\:focus\:border-b-2:focus
+    {
+        border-bottom-width: .2rem;
+    }
+    .sm\:focus\:border-l-2:focus
+    {
+        border-left-width: .2rem;
+    }
+    .sm\:focus\:border-x-2:focus
+    {
+        border-right-width: .2rem; 
+        border-left-width: .2rem;
+    }
+    .sm\:focus\:border-y-2:focus
+    {
+        border-top-width: .2rem;
+        border-bottom-width: .2rem;
+    }
+    .sm\:focus\:border-parent:focus .border-child-2
+    {
+        border-width: .2rem;
+    }
+    .sm\:focus\:border-parent:focus .border-child-t-2
+    {
+        border-top-width: .2rem;
+    }
+    .sm\:focus\:border-parent:focus .border-child-r-2
+    {
+        border-right-width: .2rem;
+    }
+    .sm\:focus\:border-parent:focus .border-child-b-2
+    {
+        border-bottom-width: .2rem;
+    }
+    .sm\:focus\:border-parent:focus .border-child-l-2
+    {
+        border-left-width: .2rem;
+    }
+    .sm\:focus\:border-parent:focus .border-child-x-2
+    {
+        border-right-width: .2rem; 
+        border-left-width: .2rem;
+    }
+    .sm\:focus\:border-parent:focus .border-child-y-2
+    {
+        border-top-width: .2rem;
+        border-bottom-width: .2rem;
+    }
+    .sm\:focus-within\:border-2:focus-within
+    {
+        border-width: .2rem;
+    }
+    .sm\:focus-within\:border-t-2:focus-within
+    {
+        border-top-width: .2rem;
+    }
+    .sm\:focus-within\:border-r-2:focus-within
+    {
+        border-right-width: .2rem;
+    }
+    .sm\:focus-within\:border-b-2:focus-within
+    {
+        border-bottom-width: .2rem;
+    }
+    .sm\:focus-within\:border-l-2:focus-within
+    {
+        border-left-width: .2rem;
+    }
+    .sm\:focus-within\:border-x-2:focus-within
+    {
+        border-right-width: .2rem; 
+        border-left-width: .2rem;
+    }
+    .sm\:focus-within\:border-y-2:focus-within
+    {
+        border-top-width: .2rem;
+        border-bottom-width: .2rem;
+    }
+    .sm\:focus-within\:border-parent:focus-within .border-child-2
+    {
+        border-width: .2rem;
+    }
+    .sm\:focus-within\:border-parent:focus-within .border-child-t-2
+    {
+        border-top-width: .2rem;
+    }
+    .sm\:focus-within\:border-parent:focus-within .border-child-r-2
+    {
+        border-right-width: .2rem;
+    }
+    .sm\:focus-within\:border-parent:focus-within .border-child-b-2
+    {
+        border-bottom-width: .2rem;
+    }
+    .sm\:focus-within\:border-parent:focus-within .border-child-l-2
+    {
+        border-left-width: .2rem;
+    }
+    .sm\:focus-within\:border-parent:focus-within .border-child-x-2
+    {
+        border-right-width: .2rem; 
+        border-left-width: .2rem;
+    }
+    .sm\:focus-within\:border-parent:focus-within .border-child-y-2
     {
         border-top-width: .2rem;
         border-bottom-width: .2rem;
@@ -5437,7 +6414,15 @@ em
     {
         background-color: #e2241c;
     }
+    .sm\:bg-parent .bg-child-secondary
+    {
+        background-color: #e2241c;
+    }
     .sm\:hover\:bg-secondary:hover
+    {
+        background-color: #e2241c;
+    }
+    .sm\:hover\:bg-parent:hover .bg-child-secondary
     {
         background-color: #e2241c;
     }
@@ -5445,7 +6430,15 @@ em
     {
         background-color: #e2241c;
     }
+    .sm\:focus\:bg-parent:focus .bg-child-secondary
+    {
+        background-color: #e2241c;
+    }
     .sm\:focus-within\:bg-secondary:focus-within
+    {
+        background-color: #e2241c;
+    }
+    .sm\:focus-within\:bg-parent:focus-within .bg-child-secondary
     {
         background-color: #e2241c;
     }
@@ -5464,6 +6457,10 @@ em
     .sm\:focus-within\:bg-light:focus-within
     {
         background-color: #ececeb;
+    }
+    .sm\:bg-default
+    {
+        background-color: #3c3c3b;
     }
     /* Margin Padding classes */
     /*paddings*/
@@ -7641,6 +8638,10 @@ em
     {
         max-width: 120rem;
     }
+    .sm\:container-popup-md
+    {
+        max-width: 62rem;
+    }
     /* Columns Classes */
     .sm\:col-1
     {
@@ -8046,7 +9047,15 @@ em
     {
         color: #e2241c;
     }
+    .sm\:fcolor-parent .fcolor-child-secondary
+    {
+        color: #e2241c;
+    }
     .sm\:hover\:fcolor-secondary:hover
+    {
+        color: #e2241c;
+    }
+    .sm\:hover\:fcolor-parent:hover .fcolor-child-secondary
     {
         color: #e2241c;
     }
@@ -8054,7 +9063,15 @@ em
     {
         color: #e2241c;
     }
+    .sm\:focus\:fcolor-parent:focus .fcolor-child-secondary
+    {
+        color: #e2241c;
+    }
     .sm\:focus-within\:fcolor-secondary:focus-within
+    {
+        color: #e2241c;
+    }
+    .sm\:focus-within\:fcolor-parent:focus-within .fcolor-child-secondary
     {
         color: #e2241c;
     }
@@ -8231,6 +9248,216 @@ em
         border-top-width: .1rem;
         border-bottom-width: .1rem;
     }
+    .md\:border-parent .border-child
+    {
+        border-width: .1rem;
+    }
+    .md\:border-parent .border-child-t
+    {
+        border-top-width: .1rem;
+    }
+    .md\:border-parent .border-child-r
+    {
+        border-right-width: .1rem;
+    }
+    .md\:border-parent .border-child-b
+    {
+        border-bottom-width: .1rem;
+    }
+    .md\:border-parent .border-child-l
+    {
+        border-left-width: .1rem;
+    }
+    .md\:border-parent .border-child-x
+    {
+        border-right-width: .1rem; 
+        border-left-width: .1rem;
+    }
+    .md\:border-parent .border-child-y
+    {
+        border-top-width: .1rem;
+        border-bottom-width: .1rem;
+    }
+    .md\:hover\:border:hover
+    {
+        border-width: .1rem;
+    }
+    .md\:hover\:border-t:hover
+    {
+        border-top-width: .1rem;
+    }
+    .md\:hover\:border-r:hover
+    {
+        border-right-width: .1rem;
+    }
+    .md\:hover\:border-b:hover
+    {
+        border-bottom-width: .1rem;
+    }
+    .md\:hover\:border-l:hover
+    {
+        border-left-width: .1rem;
+    }
+    .md\:hover\:border-x:hover
+    {
+        border-right-width: .1rem; 
+        border-left-width: .1rem;
+    }
+    .md\:hover\:border-y:hover
+    {
+        border-top-width: .1rem;
+        border-bottom-width: .1rem;
+    }
+    .md\:hover\:border-parent:hover .border-child
+    {
+        border-width: .1rem;
+    }
+    .md\:hover\:border-parent:hover .border-child-t
+    {
+        border-top-width: .1rem;
+    }
+    .md\:hover\:border-parent:hover .border-child-r
+    {
+        border-right-width: .1rem;
+    }
+    .md\:hover\:border-parent:hover .border-child-b
+    {
+        border-bottom-width: .1rem;
+    }
+    .md\:hover\:border-parent:hover .border-child-l
+    {
+        border-left-width: .1rem;
+    }
+    .md\:hover\:border-parent:hover .border-child-x
+    {
+        border-right-width: .1rem; 
+        border-left-width: .1rem;
+    }
+    .md\:hover\:border-parent:hover .border-child-y
+    {
+        border-top-width: .1rem;
+        border-bottom-width: .1rem;
+    }
+    .md\:focus\:border:focus
+    {
+        border-width: .1rem;
+    }
+    .md\:focus\:border-t:focus
+    {
+        border-top-width: .1rem;
+    }
+    .md\:focus\:border-r:focus
+    {
+        border-right-width: .1rem;
+    }
+    .md\:focus\:border-b:focus
+    {
+        border-bottom-width: .1rem;
+    }
+    .md\:focus\:border-l:focus
+    {
+        border-left-width: .1rem;
+    }
+    .md\:focus\:border-x:focus
+    {
+        border-right-width: .1rem; 
+        border-left-width: .1rem;
+    }
+    .md\:focus\:border-y:focus
+    {
+        border-top-width: .1rem;
+        border-bottom-width: .1rem;
+    }
+    .md\:focus\:border-parent:focus .border-child
+    {
+        border-width: .1rem;
+    }
+    .md\:focus\:border-parent:focus .border-child-t
+    {
+        border-top-width: .1rem;
+    }
+    .md\:focus\:border-parent:focus .border-child-r
+    {
+        border-right-width: .1rem;
+    }
+    .md\:focus\:border-parent:focus .border-child-b
+    {
+        border-bottom-width: .1rem;
+    }
+    .md\:focus\:border-parent:focus .border-child-l
+    {
+        border-left-width: .1rem;
+    }
+    .md\:focus\:border-parent:focus .border-child-x
+    {
+        border-right-width: .1rem; 
+        border-left-width: .1rem;
+    }
+    .md\:focus\:border-parent:focus .border-child-y
+    {
+        border-top-width: .1rem;
+        border-bottom-width: .1rem;
+    }
+    .md\:focus-within\:border:focus-within
+    {
+        border-width: .1rem;
+    }
+    .md\:focus-within\:border-t:focus-within
+    {
+        border-top-width: .1rem;
+    }
+    .md\:focus-within\:border-r:focus-within
+    {
+        border-right-width: .1rem;
+    }
+    .md\:focus-within\:border-b:focus-within
+    {
+        border-bottom-width: .1rem;
+    }
+    .md\:focus-within\:border-l:focus-within
+    {
+        border-left-width: .1rem;
+    }
+    .md\:focus-within\:border-x:focus-within
+    {
+        border-right-width: .1rem; 
+        border-left-width: .1rem;
+    }
+    .md\:focus-within\:border-y:focus-within
+    {
+        border-top-width: .1rem;
+        border-bottom-width: .1rem;
+    }
+    .md\:focus-within\:border-parent:focus-within .border-child
+    {
+        border-width: .1rem;
+    }
+    .md\:focus-within\:border-parent:focus-within .border-child-t
+    {
+        border-top-width: .1rem;
+    }
+    .md\:focus-within\:border-parent:focus-within .border-child-r
+    {
+        border-right-width: .1rem;
+    }
+    .md\:focus-within\:border-parent:focus-within .border-child-b
+    {
+        border-bottom-width: .1rem;
+    }
+    .md\:focus-within\:border-parent:focus-within .border-child-l
+    {
+        border-left-width: .1rem;
+    }
+    .md\:focus-within\:border-parent:focus-within .border-child-x
+    {
+        border-right-width: .1rem; 
+        border-left-width: .1rem;
+    }
+    .md\:focus-within\:border-parent:focus-within .border-child-y
+    {
+        border-top-width: .1rem;
+        border-bottom-width: .1rem;
+    }
     .md\:border-2
     {
         border-width: .2rem;
@@ -8257,6 +9484,216 @@ em
         border-left-width: .2rem;
     }
     .md\:border-y-2
+    {
+        border-top-width: .2rem;
+        border-bottom-width: .2rem;
+    }
+    .md\:border-parent .border-child-2
+    {
+        border-width: .2rem;
+    }
+    .md\:border-parent .border-child-t-2
+    {
+        border-top-width: .2rem;
+    }
+    .md\:border-parent .border-child-r-2
+    {
+        border-right-width: .2rem;
+    }
+    .md\:border-parent .border-child-b-2
+    {
+        border-bottom-width: .2rem;
+    }
+    .md\:border-parent .border-child-l-2
+    {
+        border-left-width: .2rem;
+    }
+    .md\:border-parent .border-child-x-2
+    {
+        border-right-width: .2rem; 
+        border-left-width: .2rem;
+    }
+    .md\:border-parent .border-child-y-2
+    {
+        border-top-width: .2rem;
+        border-bottom-width: .2rem;
+    }
+    .md\:hover\:border-2:hover
+    {
+        border-width: .2rem;
+    }
+    .md\:hover\:border-t-2:hover
+    {
+        border-top-width: .2rem;
+    }
+    .md\:hover\:border-r-2:hover
+    {
+        border-right-width: .2rem;
+    }
+    .md\:hover\:border-b-2:hover
+    {
+        border-bottom-width: .2rem;
+    }
+    .md\:hover\:border-l-2:hover
+    {
+        border-left-width: .2rem;
+    }
+    .md\:hover\:border-x-2:hover
+    {
+        border-right-width: .2rem; 
+        border-left-width: .2rem;
+    }
+    .md\:hover\:border-y-2:hover
+    {
+        border-top-width: .2rem;
+        border-bottom-width: .2rem;
+    }
+    .md\:hover\:border-parent:hover .border-child-2
+    {
+        border-width: .2rem;
+    }
+    .md\:hover\:border-parent:hover .border-child-t-2
+    {
+        border-top-width: .2rem;
+    }
+    .md\:hover\:border-parent:hover .border-child-r-2
+    {
+        border-right-width: .2rem;
+    }
+    .md\:hover\:border-parent:hover .border-child-b-2
+    {
+        border-bottom-width: .2rem;
+    }
+    .md\:hover\:border-parent:hover .border-child-l-2
+    {
+        border-left-width: .2rem;
+    }
+    .md\:hover\:border-parent:hover .border-child-x-2
+    {
+        border-right-width: .2rem; 
+        border-left-width: .2rem;
+    }
+    .md\:hover\:border-parent:hover .border-child-y-2
+    {
+        border-top-width: .2rem;
+        border-bottom-width: .2rem;
+    }
+    .md\:focus\:border-2:focus
+    {
+        border-width: .2rem;
+    }
+    .md\:focus\:border-t-2:focus
+    {
+        border-top-width: .2rem;
+    }
+    .md\:focus\:border-r-2:focus
+    {
+        border-right-width: .2rem;
+    }
+    .md\:focus\:border-b-2:focus
+    {
+        border-bottom-width: .2rem;
+    }
+    .md\:focus\:border-l-2:focus
+    {
+        border-left-width: .2rem;
+    }
+    .md\:focus\:border-x-2:focus
+    {
+        border-right-width: .2rem; 
+        border-left-width: .2rem;
+    }
+    .md\:focus\:border-y-2:focus
+    {
+        border-top-width: .2rem;
+        border-bottom-width: .2rem;
+    }
+    .md\:focus\:border-parent:focus .border-child-2
+    {
+        border-width: .2rem;
+    }
+    .md\:focus\:border-parent:focus .border-child-t-2
+    {
+        border-top-width: .2rem;
+    }
+    .md\:focus\:border-parent:focus .border-child-r-2
+    {
+        border-right-width: .2rem;
+    }
+    .md\:focus\:border-parent:focus .border-child-b-2
+    {
+        border-bottom-width: .2rem;
+    }
+    .md\:focus\:border-parent:focus .border-child-l-2
+    {
+        border-left-width: .2rem;
+    }
+    .md\:focus\:border-parent:focus .border-child-x-2
+    {
+        border-right-width: .2rem; 
+        border-left-width: .2rem;
+    }
+    .md\:focus\:border-parent:focus .border-child-y-2
+    {
+        border-top-width: .2rem;
+        border-bottom-width: .2rem;
+    }
+    .md\:focus-within\:border-2:focus-within
+    {
+        border-width: .2rem;
+    }
+    .md\:focus-within\:border-t-2:focus-within
+    {
+        border-top-width: .2rem;
+    }
+    .md\:focus-within\:border-r-2:focus-within
+    {
+        border-right-width: .2rem;
+    }
+    .md\:focus-within\:border-b-2:focus-within
+    {
+        border-bottom-width: .2rem;
+    }
+    .md\:focus-within\:border-l-2:focus-within
+    {
+        border-left-width: .2rem;
+    }
+    .md\:focus-within\:border-x-2:focus-within
+    {
+        border-right-width: .2rem; 
+        border-left-width: .2rem;
+    }
+    .md\:focus-within\:border-y-2:focus-within
+    {
+        border-top-width: .2rem;
+        border-bottom-width: .2rem;
+    }
+    .md\:focus-within\:border-parent:focus-within .border-child-2
+    {
+        border-width: .2rem;
+    }
+    .md\:focus-within\:border-parent:focus-within .border-child-t-2
+    {
+        border-top-width: .2rem;
+    }
+    .md\:focus-within\:border-parent:focus-within .border-child-r-2
+    {
+        border-right-width: .2rem;
+    }
+    .md\:focus-within\:border-parent:focus-within .border-child-b-2
+    {
+        border-bottom-width: .2rem;
+    }
+    .md\:focus-within\:border-parent:focus-within .border-child-l-2
+    {
+        border-left-width: .2rem;
+    }
+    .md\:focus-within\:border-parent:focus-within .border-child-x-2
+    {
+        border-right-width: .2rem; 
+        border-left-width: .2rem;
+    }
+    .md\:focus-within\:border-parent:focus-within .border-child-y-2
     {
         border-top-width: .2rem;
         border-bottom-width: .2rem;
@@ -8856,7 +10293,15 @@ em
     {
         background-color: #e2241c;
     }
+    .md\:bg-parent .bg-child-secondary
+    {
+        background-color: #e2241c;
+    }
     .md\:hover\:bg-secondary:hover
+    {
+        background-color: #e2241c;
+    }
+    .md\:hover\:bg-parent:hover .bg-child-secondary
     {
         background-color: #e2241c;
     }
@@ -8864,7 +10309,15 @@ em
     {
         background-color: #e2241c;
     }
+    .md\:focus\:bg-parent:focus .bg-child-secondary
+    {
+        background-color: #e2241c;
+    }
     .md\:focus-within\:bg-secondary:focus-within
+    {
+        background-color: #e2241c;
+    }
+    .md\:focus-within\:bg-parent:focus-within .bg-child-secondary
     {
         background-color: #e2241c;
     }
@@ -8883,6 +10336,10 @@ em
     .md\:focus-within\:bg-light:focus-within
     {
         background-color: #ececeb;
+    }
+    .md\:bg-default
+    {
+        background-color: #3c3c3b;
     }
     /* Margin Padding classes */
     /*paddings*/
@@ -11060,6 +12517,10 @@ em
     {
         max-width: 120rem;
     }
+    .md\:container-popup-md
+    {
+        max-width: 62rem;
+    }
     /* Columns Classes */
     .md\:col-1
     {
@@ -11465,7 +12926,15 @@ em
     {
         color: #e2241c;
     }
+    .md\:fcolor-parent .fcolor-child-secondary
+    {
+        color: #e2241c;
+    }
     .md\:hover\:fcolor-secondary:hover
+    {
+        color: #e2241c;
+    }
+    .md\:hover\:fcolor-parent:hover .fcolor-child-secondary
     {
         color: #e2241c;
     }
@@ -11473,7 +12942,15 @@ em
     {
         color: #e2241c;
     }
+    .md\:focus\:fcolor-parent:focus .fcolor-child-secondary
+    {
+        color: #e2241c;
+    }
     .md\:focus-within\:fcolor-secondary:focus-within
+    {
+        color: #e2241c;
+    }
+    .md\:focus-within\:fcolor-parent:focus-within .fcolor-child-secondary
     {
         color: #e2241c;
     }
@@ -11650,6 +13127,216 @@ em
         border-top-width: .1rem;
         border-bottom-width: .1rem;
     }
+    .lg\:border-parent .border-child
+    {
+        border-width: .1rem;
+    }
+    .lg\:border-parent .border-child-t
+    {
+        border-top-width: .1rem;
+    }
+    .lg\:border-parent .border-child-r
+    {
+        border-right-width: .1rem;
+    }
+    .lg\:border-parent .border-child-b
+    {
+        border-bottom-width: .1rem;
+    }
+    .lg\:border-parent .border-child-l
+    {
+        border-left-width: .1rem;
+    }
+    .lg\:border-parent .border-child-x
+    {
+        border-right-width: .1rem; 
+        border-left-width: .1rem;
+    }
+    .lg\:border-parent .border-child-y
+    {
+        border-top-width: .1rem;
+        border-bottom-width: .1rem;
+    }
+    .lg\:hover\:border:hover
+    {
+        border-width: .1rem;
+    }
+    .lg\:hover\:border-t:hover
+    {
+        border-top-width: .1rem;
+    }
+    .lg\:hover\:border-r:hover
+    {
+        border-right-width: .1rem;
+    }
+    .lg\:hover\:border-b:hover
+    {
+        border-bottom-width: .1rem;
+    }
+    .lg\:hover\:border-l:hover
+    {
+        border-left-width: .1rem;
+    }
+    .lg\:hover\:border-x:hover
+    {
+        border-right-width: .1rem; 
+        border-left-width: .1rem;
+    }
+    .lg\:hover\:border-y:hover
+    {
+        border-top-width: .1rem;
+        border-bottom-width: .1rem;
+    }
+    .lg\:hover\:border-parent:hover .border-child
+    {
+        border-width: .1rem;
+    }
+    .lg\:hover\:border-parent:hover .border-child-t
+    {
+        border-top-width: .1rem;
+    }
+    .lg\:hover\:border-parent:hover .border-child-r
+    {
+        border-right-width: .1rem;
+    }
+    .lg\:hover\:border-parent:hover .border-child-b
+    {
+        border-bottom-width: .1rem;
+    }
+    .lg\:hover\:border-parent:hover .border-child-l
+    {
+        border-left-width: .1rem;
+    }
+    .lg\:hover\:border-parent:hover .border-child-x
+    {
+        border-right-width: .1rem; 
+        border-left-width: .1rem;
+    }
+    .lg\:hover\:border-parent:hover .border-child-y
+    {
+        border-top-width: .1rem;
+        border-bottom-width: .1rem;
+    }
+    .lg\:focus\:border:focus
+    {
+        border-width: .1rem;
+    }
+    .lg\:focus\:border-t:focus
+    {
+        border-top-width: .1rem;
+    }
+    .lg\:focus\:border-r:focus
+    {
+        border-right-width: .1rem;
+    }
+    .lg\:focus\:border-b:focus
+    {
+        border-bottom-width: .1rem;
+    }
+    .lg\:focus\:border-l:focus
+    {
+        border-left-width: .1rem;
+    }
+    .lg\:focus\:border-x:focus
+    {
+        border-right-width: .1rem; 
+        border-left-width: .1rem;
+    }
+    .lg\:focus\:border-y:focus
+    {
+        border-top-width: .1rem;
+        border-bottom-width: .1rem;
+    }
+    .lg\:focus\:border-parent:focus .border-child
+    {
+        border-width: .1rem;
+    }
+    .lg\:focus\:border-parent:focus .border-child-t
+    {
+        border-top-width: .1rem;
+    }
+    .lg\:focus\:border-parent:focus .border-child-r
+    {
+        border-right-width: .1rem;
+    }
+    .lg\:focus\:border-parent:focus .border-child-b
+    {
+        border-bottom-width: .1rem;
+    }
+    .lg\:focus\:border-parent:focus .border-child-l
+    {
+        border-left-width: .1rem;
+    }
+    .lg\:focus\:border-parent:focus .border-child-x
+    {
+        border-right-width: .1rem; 
+        border-left-width: .1rem;
+    }
+    .lg\:focus\:border-parent:focus .border-child-y
+    {
+        border-top-width: .1rem;
+        border-bottom-width: .1rem;
+    }
+    .lg\:focus-within\:border:focus-within
+    {
+        border-width: .1rem;
+    }
+    .lg\:focus-within\:border-t:focus-within
+    {
+        border-top-width: .1rem;
+    }
+    .lg\:focus-within\:border-r:focus-within
+    {
+        border-right-width: .1rem;
+    }
+    .lg\:focus-within\:border-b:focus-within
+    {
+        border-bottom-width: .1rem;
+    }
+    .lg\:focus-within\:border-l:focus-within
+    {
+        border-left-width: .1rem;
+    }
+    .lg\:focus-within\:border-x:focus-within
+    {
+        border-right-width: .1rem; 
+        border-left-width: .1rem;
+    }
+    .lg\:focus-within\:border-y:focus-within
+    {
+        border-top-width: .1rem;
+        border-bottom-width: .1rem;
+    }
+    .lg\:focus-within\:border-parent:focus-within .border-child
+    {
+        border-width: .1rem;
+    }
+    .lg\:focus-within\:border-parent:focus-within .border-child-t
+    {
+        border-top-width: .1rem;
+    }
+    .lg\:focus-within\:border-parent:focus-within .border-child-r
+    {
+        border-right-width: .1rem;
+    }
+    .lg\:focus-within\:border-parent:focus-within .border-child-b
+    {
+        border-bottom-width: .1rem;
+    }
+    .lg\:focus-within\:border-parent:focus-within .border-child-l
+    {
+        border-left-width: .1rem;
+    }
+    .lg\:focus-within\:border-parent:focus-within .border-child-x
+    {
+        border-right-width: .1rem; 
+        border-left-width: .1rem;
+    }
+    .lg\:focus-within\:border-parent:focus-within .border-child-y
+    {
+        border-top-width: .1rem;
+        border-bottom-width: .1rem;
+    }
     .lg\:border-2
     {
         border-width: .2rem;
@@ -11676,6 +13363,216 @@ em
         border-left-width: .2rem;
     }
     .lg\:border-y-2
+    {
+        border-top-width: .2rem;
+        border-bottom-width: .2rem;
+    }
+    .lg\:border-parent .border-child-2
+    {
+        border-width: .2rem;
+    }
+    .lg\:border-parent .border-child-t-2
+    {
+        border-top-width: .2rem;
+    }
+    .lg\:border-parent .border-child-r-2
+    {
+        border-right-width: .2rem;
+    }
+    .lg\:border-parent .border-child-b-2
+    {
+        border-bottom-width: .2rem;
+    }
+    .lg\:border-parent .border-child-l-2
+    {
+        border-left-width: .2rem;
+    }
+    .lg\:border-parent .border-child-x-2
+    {
+        border-right-width: .2rem; 
+        border-left-width: .2rem;
+    }
+    .lg\:border-parent .border-child-y-2
+    {
+        border-top-width: .2rem;
+        border-bottom-width: .2rem;
+    }
+    .lg\:hover\:border-2:hover
+    {
+        border-width: .2rem;
+    }
+    .lg\:hover\:border-t-2:hover
+    {
+        border-top-width: .2rem;
+    }
+    .lg\:hover\:border-r-2:hover
+    {
+        border-right-width: .2rem;
+    }
+    .lg\:hover\:border-b-2:hover
+    {
+        border-bottom-width: .2rem;
+    }
+    .lg\:hover\:border-l-2:hover
+    {
+        border-left-width: .2rem;
+    }
+    .lg\:hover\:border-x-2:hover
+    {
+        border-right-width: .2rem; 
+        border-left-width: .2rem;
+    }
+    .lg\:hover\:border-y-2:hover
+    {
+        border-top-width: .2rem;
+        border-bottom-width: .2rem;
+    }
+    .lg\:hover\:border-parent:hover .border-child-2
+    {
+        border-width: .2rem;
+    }
+    .lg\:hover\:border-parent:hover .border-child-t-2
+    {
+        border-top-width: .2rem;
+    }
+    .lg\:hover\:border-parent:hover .border-child-r-2
+    {
+        border-right-width: .2rem;
+    }
+    .lg\:hover\:border-parent:hover .border-child-b-2
+    {
+        border-bottom-width: .2rem;
+    }
+    .lg\:hover\:border-parent:hover .border-child-l-2
+    {
+        border-left-width: .2rem;
+    }
+    .lg\:hover\:border-parent:hover .border-child-x-2
+    {
+        border-right-width: .2rem; 
+        border-left-width: .2rem;
+    }
+    .lg\:hover\:border-parent:hover .border-child-y-2
+    {
+        border-top-width: .2rem;
+        border-bottom-width: .2rem;
+    }
+    .lg\:focus\:border-2:focus
+    {
+        border-width: .2rem;
+    }
+    .lg\:focus\:border-t-2:focus
+    {
+        border-top-width: .2rem;
+    }
+    .lg\:focus\:border-r-2:focus
+    {
+        border-right-width: .2rem;
+    }
+    .lg\:focus\:border-b-2:focus
+    {
+        border-bottom-width: .2rem;
+    }
+    .lg\:focus\:border-l-2:focus
+    {
+        border-left-width: .2rem;
+    }
+    .lg\:focus\:border-x-2:focus
+    {
+        border-right-width: .2rem; 
+        border-left-width: .2rem;
+    }
+    .lg\:focus\:border-y-2:focus
+    {
+        border-top-width: .2rem;
+        border-bottom-width: .2rem;
+    }
+    .lg\:focus\:border-parent:focus .border-child-2
+    {
+        border-width: .2rem;
+    }
+    .lg\:focus\:border-parent:focus .border-child-t-2
+    {
+        border-top-width: .2rem;
+    }
+    .lg\:focus\:border-parent:focus .border-child-r-2
+    {
+        border-right-width: .2rem;
+    }
+    .lg\:focus\:border-parent:focus .border-child-b-2
+    {
+        border-bottom-width: .2rem;
+    }
+    .lg\:focus\:border-parent:focus .border-child-l-2
+    {
+        border-left-width: .2rem;
+    }
+    .lg\:focus\:border-parent:focus .border-child-x-2
+    {
+        border-right-width: .2rem; 
+        border-left-width: .2rem;
+    }
+    .lg\:focus\:border-parent:focus .border-child-y-2
+    {
+        border-top-width: .2rem;
+        border-bottom-width: .2rem;
+    }
+    .lg\:focus-within\:border-2:focus-within
+    {
+        border-width: .2rem;
+    }
+    .lg\:focus-within\:border-t-2:focus-within
+    {
+        border-top-width: .2rem;
+    }
+    .lg\:focus-within\:border-r-2:focus-within
+    {
+        border-right-width: .2rem;
+    }
+    .lg\:focus-within\:border-b-2:focus-within
+    {
+        border-bottom-width: .2rem;
+    }
+    .lg\:focus-within\:border-l-2:focus-within
+    {
+        border-left-width: .2rem;
+    }
+    .lg\:focus-within\:border-x-2:focus-within
+    {
+        border-right-width: .2rem; 
+        border-left-width: .2rem;
+    }
+    .lg\:focus-within\:border-y-2:focus-within
+    {
+        border-top-width: .2rem;
+        border-bottom-width: .2rem;
+    }
+    .lg\:focus-within\:border-parent:focus-within .border-child-2
+    {
+        border-width: .2rem;
+    }
+    .lg\:focus-within\:border-parent:focus-within .border-child-t-2
+    {
+        border-top-width: .2rem;
+    }
+    .lg\:focus-within\:border-parent:focus-within .border-child-r-2
+    {
+        border-right-width: .2rem;
+    }
+    .lg\:focus-within\:border-parent:focus-within .border-child-b-2
+    {
+        border-bottom-width: .2rem;
+    }
+    .lg\:focus-within\:border-parent:focus-within .border-child-l-2
+    {
+        border-left-width: .2rem;
+    }
+    .lg\:focus-within\:border-parent:focus-within .border-child-x-2
+    {
+        border-right-width: .2rem; 
+        border-left-width: .2rem;
+    }
+    .lg\:focus-within\:border-parent:focus-within .border-child-y-2
     {
         border-top-width: .2rem;
         border-bottom-width: .2rem;
@@ -12275,7 +14172,15 @@ em
     {
         background-color: #e2241c;
     }
+    .lg\:bg-parent .bg-child-secondary
+    {
+        background-color: #e2241c;
+    }
     .lg\:hover\:bg-secondary:hover
+    {
+        background-color: #e2241c;
+    }
+    .lg\:hover\:bg-parent:hover .bg-child-secondary
     {
         background-color: #e2241c;
     }
@@ -12283,7 +14188,15 @@ em
     {
         background-color: #e2241c;
     }
+    .lg\:focus\:bg-parent:focus .bg-child-secondary
+    {
+        background-color: #e2241c;
+    }
     .lg\:focus-within\:bg-secondary:focus-within
+    {
+        background-color: #e2241c;
+    }
+    .lg\:focus-within\:bg-parent:focus-within .bg-child-secondary
     {
         background-color: #e2241c;
     }
@@ -12302,6 +14215,10 @@ em
     .lg\:focus-within\:bg-light:focus-within
     {
         background-color: #ececeb;
+    }
+    .lg\:bg-default
+    {
+        background-color: #3c3c3b;
     }
     /* Margin Padding classes */
     /*paddings*/
@@ -14479,6 +16396,10 @@ em
     {
         max-width: 120rem;
     }
+    .lg\:container-popup-md
+    {
+        max-width: 62rem;
+    }
     /* Columns Classes */
     .lg\:col-1
     {
@@ -14884,7 +16805,15 @@ em
     {
         color: #e2241c;
     }
+    .lg\:fcolor-parent .fcolor-child-secondary
+    {
+        color: #e2241c;
+    }
     .lg\:hover\:fcolor-secondary:hover
+    {
+        color: #e2241c;
+    }
+    .lg\:hover\:fcolor-parent:hover .fcolor-child-secondary
     {
         color: #e2241c;
     }
@@ -14892,7 +16821,15 @@ em
     {
         color: #e2241c;
     }
+    .lg\:focus\:fcolor-parent:focus .fcolor-child-secondary
+    {
+        color: #e2241c;
+    }
     .lg\:focus-within\:fcolor-secondary:focus-within
+    {
+        color: #e2241c;
+    }
+    .lg\:focus-within\:fcolor-parent:focus-within .fcolor-child-secondary
     {
         color: #e2241c;
     }
@@ -15069,6 +17006,216 @@ em
         border-top-width: .1rem;
         border-bottom-width: .1rem;
     }
+    .xl\:border-parent .border-child
+    {
+        border-width: .1rem;
+    }
+    .xl\:border-parent .border-child-t
+    {
+        border-top-width: .1rem;
+    }
+    .xl\:border-parent .border-child-r
+    {
+        border-right-width: .1rem;
+    }
+    .xl\:border-parent .border-child-b
+    {
+        border-bottom-width: .1rem;
+    }
+    .xl\:border-parent .border-child-l
+    {
+        border-left-width: .1rem;
+    }
+    .xl\:border-parent .border-child-x
+    {
+        border-right-width: .1rem; 
+        border-left-width: .1rem;
+    }
+    .xl\:border-parent .border-child-y
+    {
+        border-top-width: .1rem;
+        border-bottom-width: .1rem;
+    }
+    .xl\:hover\:border:hover
+    {
+        border-width: .1rem;
+    }
+    .xl\:hover\:border-t:hover
+    {
+        border-top-width: .1rem;
+    }
+    .xl\:hover\:border-r:hover
+    {
+        border-right-width: .1rem;
+    }
+    .xl\:hover\:border-b:hover
+    {
+        border-bottom-width: .1rem;
+    }
+    .xl\:hover\:border-l:hover
+    {
+        border-left-width: .1rem;
+    }
+    .xl\:hover\:border-x:hover
+    {
+        border-right-width: .1rem; 
+        border-left-width: .1rem;
+    }
+    .xl\:hover\:border-y:hover
+    {
+        border-top-width: .1rem;
+        border-bottom-width: .1rem;
+    }
+    .xl\:hover\:border-parent:hover .border-child
+    {
+        border-width: .1rem;
+    }
+    .xl\:hover\:border-parent:hover .border-child-t
+    {
+        border-top-width: .1rem;
+    }
+    .xl\:hover\:border-parent:hover .border-child-r
+    {
+        border-right-width: .1rem;
+    }
+    .xl\:hover\:border-parent:hover .border-child-b
+    {
+        border-bottom-width: .1rem;
+    }
+    .xl\:hover\:border-parent:hover .border-child-l
+    {
+        border-left-width: .1rem;
+    }
+    .xl\:hover\:border-parent:hover .border-child-x
+    {
+        border-right-width: .1rem; 
+        border-left-width: .1rem;
+    }
+    .xl\:hover\:border-parent:hover .border-child-y
+    {
+        border-top-width: .1rem;
+        border-bottom-width: .1rem;
+    }
+    .xl\:focus\:border:focus
+    {
+        border-width: .1rem;
+    }
+    .xl\:focus\:border-t:focus
+    {
+        border-top-width: .1rem;
+    }
+    .xl\:focus\:border-r:focus
+    {
+        border-right-width: .1rem;
+    }
+    .xl\:focus\:border-b:focus
+    {
+        border-bottom-width: .1rem;
+    }
+    .xl\:focus\:border-l:focus
+    {
+        border-left-width: .1rem;
+    }
+    .xl\:focus\:border-x:focus
+    {
+        border-right-width: .1rem; 
+        border-left-width: .1rem;
+    }
+    .xl\:focus\:border-y:focus
+    {
+        border-top-width: .1rem;
+        border-bottom-width: .1rem;
+    }
+    .xl\:focus\:border-parent:focus .border-child
+    {
+        border-width: .1rem;
+    }
+    .xl\:focus\:border-parent:focus .border-child-t
+    {
+        border-top-width: .1rem;
+    }
+    .xl\:focus\:border-parent:focus .border-child-r
+    {
+        border-right-width: .1rem;
+    }
+    .xl\:focus\:border-parent:focus .border-child-b
+    {
+        border-bottom-width: .1rem;
+    }
+    .xl\:focus\:border-parent:focus .border-child-l
+    {
+        border-left-width: .1rem;
+    }
+    .xl\:focus\:border-parent:focus .border-child-x
+    {
+        border-right-width: .1rem; 
+        border-left-width: .1rem;
+    }
+    .xl\:focus\:border-parent:focus .border-child-y
+    {
+        border-top-width: .1rem;
+        border-bottom-width: .1rem;
+    }
+    .xl\:focus-within\:border:focus-within
+    {
+        border-width: .1rem;
+    }
+    .xl\:focus-within\:border-t:focus-within
+    {
+        border-top-width: .1rem;
+    }
+    .xl\:focus-within\:border-r:focus-within
+    {
+        border-right-width: .1rem;
+    }
+    .xl\:focus-within\:border-b:focus-within
+    {
+        border-bottom-width: .1rem;
+    }
+    .xl\:focus-within\:border-l:focus-within
+    {
+        border-left-width: .1rem;
+    }
+    .xl\:focus-within\:border-x:focus-within
+    {
+        border-right-width: .1rem; 
+        border-left-width: .1rem;
+    }
+    .xl\:focus-within\:border-y:focus-within
+    {
+        border-top-width: .1rem;
+        border-bottom-width: .1rem;
+    }
+    .xl\:focus-within\:border-parent:focus-within .border-child
+    {
+        border-width: .1rem;
+    }
+    .xl\:focus-within\:border-parent:focus-within .border-child-t
+    {
+        border-top-width: .1rem;
+    }
+    .xl\:focus-within\:border-parent:focus-within .border-child-r
+    {
+        border-right-width: .1rem;
+    }
+    .xl\:focus-within\:border-parent:focus-within .border-child-b
+    {
+        border-bottom-width: .1rem;
+    }
+    .xl\:focus-within\:border-parent:focus-within .border-child-l
+    {
+        border-left-width: .1rem;
+    }
+    .xl\:focus-within\:border-parent:focus-within .border-child-x
+    {
+        border-right-width: .1rem; 
+        border-left-width: .1rem;
+    }
+    .xl\:focus-within\:border-parent:focus-within .border-child-y
+    {
+        border-top-width: .1rem;
+        border-bottom-width: .1rem;
+    }
     .xl\:border-2
     {
         border-width: .2rem;
@@ -15095,6 +17242,216 @@ em
         border-left-width: .2rem;
     }
     .xl\:border-y-2
+    {
+        border-top-width: .2rem;
+        border-bottom-width: .2rem;
+    }
+    .xl\:border-parent .border-child-2
+    {
+        border-width: .2rem;
+    }
+    .xl\:border-parent .border-child-t-2
+    {
+        border-top-width: .2rem;
+    }
+    .xl\:border-parent .border-child-r-2
+    {
+        border-right-width: .2rem;
+    }
+    .xl\:border-parent .border-child-b-2
+    {
+        border-bottom-width: .2rem;
+    }
+    .xl\:border-parent .border-child-l-2
+    {
+        border-left-width: .2rem;
+    }
+    .xl\:border-parent .border-child-x-2
+    {
+        border-right-width: .2rem; 
+        border-left-width: .2rem;
+    }
+    .xl\:border-parent .border-child-y-2
+    {
+        border-top-width: .2rem;
+        border-bottom-width: .2rem;
+    }
+    .xl\:hover\:border-2:hover
+    {
+        border-width: .2rem;
+    }
+    .xl\:hover\:border-t-2:hover
+    {
+        border-top-width: .2rem;
+    }
+    .xl\:hover\:border-r-2:hover
+    {
+        border-right-width: .2rem;
+    }
+    .xl\:hover\:border-b-2:hover
+    {
+        border-bottom-width: .2rem;
+    }
+    .xl\:hover\:border-l-2:hover
+    {
+        border-left-width: .2rem;
+    }
+    .xl\:hover\:border-x-2:hover
+    {
+        border-right-width: .2rem; 
+        border-left-width: .2rem;
+    }
+    .xl\:hover\:border-y-2:hover
+    {
+        border-top-width: .2rem;
+        border-bottom-width: .2rem;
+    }
+    .xl\:hover\:border-parent:hover .border-child-2
+    {
+        border-width: .2rem;
+    }
+    .xl\:hover\:border-parent:hover .border-child-t-2
+    {
+        border-top-width: .2rem;
+    }
+    .xl\:hover\:border-parent:hover .border-child-r-2
+    {
+        border-right-width: .2rem;
+    }
+    .xl\:hover\:border-parent:hover .border-child-b-2
+    {
+        border-bottom-width: .2rem;
+    }
+    .xl\:hover\:border-parent:hover .border-child-l-2
+    {
+        border-left-width: .2rem;
+    }
+    .xl\:hover\:border-parent:hover .border-child-x-2
+    {
+        border-right-width: .2rem; 
+        border-left-width: .2rem;
+    }
+    .xl\:hover\:border-parent:hover .border-child-y-2
+    {
+        border-top-width: .2rem;
+        border-bottom-width: .2rem;
+    }
+    .xl\:focus\:border-2:focus
+    {
+        border-width: .2rem;
+    }
+    .xl\:focus\:border-t-2:focus
+    {
+        border-top-width: .2rem;
+    }
+    .xl\:focus\:border-r-2:focus
+    {
+        border-right-width: .2rem;
+    }
+    .xl\:focus\:border-b-2:focus
+    {
+        border-bottom-width: .2rem;
+    }
+    .xl\:focus\:border-l-2:focus
+    {
+        border-left-width: .2rem;
+    }
+    .xl\:focus\:border-x-2:focus
+    {
+        border-right-width: .2rem; 
+        border-left-width: .2rem;
+    }
+    .xl\:focus\:border-y-2:focus
+    {
+        border-top-width: .2rem;
+        border-bottom-width: .2rem;
+    }
+    .xl\:focus\:border-parent:focus .border-child-2
+    {
+        border-width: .2rem;
+    }
+    .xl\:focus\:border-parent:focus .border-child-t-2
+    {
+        border-top-width: .2rem;
+    }
+    .xl\:focus\:border-parent:focus .border-child-r-2
+    {
+        border-right-width: .2rem;
+    }
+    .xl\:focus\:border-parent:focus .border-child-b-2
+    {
+        border-bottom-width: .2rem;
+    }
+    .xl\:focus\:border-parent:focus .border-child-l-2
+    {
+        border-left-width: .2rem;
+    }
+    .xl\:focus\:border-parent:focus .border-child-x-2
+    {
+        border-right-width: .2rem; 
+        border-left-width: .2rem;
+    }
+    .xl\:focus\:border-parent:focus .border-child-y-2
+    {
+        border-top-width: .2rem;
+        border-bottom-width: .2rem;
+    }
+    .xl\:focus-within\:border-2:focus-within
+    {
+        border-width: .2rem;
+    }
+    .xl\:focus-within\:border-t-2:focus-within
+    {
+        border-top-width: .2rem;
+    }
+    .xl\:focus-within\:border-r-2:focus-within
+    {
+        border-right-width: .2rem;
+    }
+    .xl\:focus-within\:border-b-2:focus-within
+    {
+        border-bottom-width: .2rem;
+    }
+    .xl\:focus-within\:border-l-2:focus-within
+    {
+        border-left-width: .2rem;
+    }
+    .xl\:focus-within\:border-x-2:focus-within
+    {
+        border-right-width: .2rem; 
+        border-left-width: .2rem;
+    }
+    .xl\:focus-within\:border-y-2:focus-within
+    {
+        border-top-width: .2rem;
+        border-bottom-width: .2rem;
+    }
+    .xl\:focus-within\:border-parent:focus-within .border-child-2
+    {
+        border-width: .2rem;
+    }
+    .xl\:focus-within\:border-parent:focus-within .border-child-t-2
+    {
+        border-top-width: .2rem;
+    }
+    .xl\:focus-within\:border-parent:focus-within .border-child-r-2
+    {
+        border-right-width: .2rem;
+    }
+    .xl\:focus-within\:border-parent:focus-within .border-child-b-2
+    {
+        border-bottom-width: .2rem;
+    }
+    .xl\:focus-within\:border-parent:focus-within .border-child-l-2
+    {
+        border-left-width: .2rem;
+    }
+    .xl\:focus-within\:border-parent:focus-within .border-child-x-2
+    {
+        border-right-width: .2rem; 
+        border-left-width: .2rem;
+    }
+    .xl\:focus-within\:border-parent:focus-within .border-child-y-2
     {
         border-top-width: .2rem;
         border-bottom-width: .2rem;
@@ -15694,7 +18051,15 @@ em
     {
         background-color: #e2241c;
     }
+    .xl\:bg-parent .bg-child-secondary
+    {
+        background-color: #e2241c;
+    }
     .xl\:hover\:bg-secondary:hover
+    {
+        background-color: #e2241c;
+    }
+    .xl\:hover\:bg-parent:hover .bg-child-secondary
     {
         background-color: #e2241c;
     }
@@ -15702,7 +18067,15 @@ em
     {
         background-color: #e2241c;
     }
+    .xl\:focus\:bg-parent:focus .bg-child-secondary
+    {
+        background-color: #e2241c;
+    }
     .xl\:focus-within\:bg-secondary:focus-within
+    {
+        background-color: #e2241c;
+    }
+    .xl\:focus-within\:bg-parent:focus-within .bg-child-secondary
     {
         background-color: #e2241c;
     }
@@ -15721,6 +18094,10 @@ em
     .xl\:focus-within\:bg-light:focus-within
     {
         background-color: #ececeb;
+    }
+    .xl\:bg-default
+    {
+        background-color: #3c3c3b;
     }
     /* Margin Padding classes */
     /*paddings*/
@@ -17898,6 +20275,10 @@ em
     {
         max-width: 120rem;
     }
+    .xl\:container-popup-md
+    {
+        max-width: 62rem;
+    }
     /* Columns Classes */
     .xl\:col-1
     {
@@ -18303,7 +20684,15 @@ em
     {
         color: #e2241c;
     }
+    .xl\:fcolor-parent .fcolor-child-secondary
+    {
+        color: #e2241c;
+    }
     .xl\:hover\:fcolor-secondary:hover
+    {
+        color: #e2241c;
+    }
+    .xl\:hover\:fcolor-parent:hover .fcolor-child-secondary
     {
         color: #e2241c;
     }
@@ -18311,7 +20700,15 @@ em
     {
         color: #e2241c;
     }
+    .xl\:focus\:fcolor-parent:focus .fcolor-child-secondary
+    {
+        color: #e2241c;
+    }
     .xl\:focus-within\:fcolor-secondary:focus-within
+    {
+        color: #e2241c;
+    }
+    .xl\:focus-within\:fcolor-parent:focus-within .fcolor-child-secondary
     {
         color: #e2241c;
     }
@@ -18587,6 +20984,22 @@ em
         -webkit-transform: rotate(3deg);
                 transform: rotate(3deg);
     }
+}
+
+/*popup*/
+.popup_background
+{
+    opacity: .50 !important;
+}
+
+.popup_visible .popup
+{
+    overflow: hidden;
+
+    -webkit-perspective: 500px;
+            perspective: 500px;
+    -webkit-perspective-origin: 50% 50%;
+            perspective-origin: 50% 50%;
 }
 
 /*owlCarousel*/
@@ -21730,6 +24143,120 @@ body[data-aos-easing='ease-in-out'] [data-aos],
  * Flip animations:
  * flip-left, flip-right, flip-up, flip-down
  */
+/*animation on Scroll*/
+/*override default table syles for hidden tr / tds */
+.sr-table-tr td
+{
+    padding: 0 0 0 0; 
+
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+}
+
+/*visible stacked row styles*/
+.sr-table-tr.even .sr-table-div
+{
+    background: #f8f8f8;
+}
+
+.sr-table-div
+{
+    padding: 35px 30px 25px 30px;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.sr-tr-last .sr-table-div
+{
+    border-bottom: none;
+}
+
+.sr-table-record-div
+{
+    margin-bottom: 14px;
+    padding-bottom: 10px; 
+
+    border-bottom: 1px dashed #e2e2e2;
+}
+
+.sr-table-tr.even .sr-table-record-div
+{
+    border-bottom: 1px dashed #d5d5d5;
+}
+
+.sr-table-record-div:last-child
+{
+    padding-bottom: 0; 
+
+    border-bottom: none !important;
+}
+
+.sr-table-record-div input,
+.sr-table-record-div textarea,
+.sr-table-record-div .uneditable-input,
+.sr-table-record-div select
+{
+    margin-top: 3px; 
+    margin-bottom: 10px;
+}
+
+.sr-table-div,
+.sr-table-record-div.blankValue.blankLabel,
+.sr-table-record-div.blankValue p,
+.sr-table-record-div.blankLabel label
+{
+    display: none;
+}
+
+.sr-table-div img
+{
+    width: 100%; 
+    max-width: 100%;
+}
+
+.sr-table-record-div.blankValue label
+{
+    margin-bottom: 10px;
+}
+
+.sr-table-record-div.blankLabel p,
+.sr-table-record-div.blankLabel textarea
+{
+    margin-top: 10px;
+}
+
+.sr-table-div label
+{
+    font-size: 11px;
+    font-style: italic;
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #aeaeae;
+}
+
+.sr-table-div label.hidden
+{
+    display: none;
+}
+
+@media (max-width: 767px)
+{
+    .sr-hide,
+    .sr-header
+    {
+        display: none;
+    }
+    .sr-table-div
+    {
+        display: block;
+    }
+}
+
 /*Custom styling*/
 .add-animation *[class*='on-appear-']
 {
@@ -22102,6 +24629,98 @@ textarea
     .call-to-action.map-view
     {
         width: calc(100% - ((100vw/1.72) - ((100vw - 100%)/2)));
+    }
+}
+
+@media (max-width: 992px)
+{
+    .jsFilter
+    {
+        overflow: hidden;
+
+        max-height: 500rem;
+
+        opacity: 1;
+    }
+    .jsFilter:not(.is-open)
+    {
+        max-height: 0;
+
+        opacity: 0;
+    }
+}
+
+@media (max-width: 710px)
+{
+    table.stacked .sr-table-div
+    {
+        padding: 1.5rem;
+    }
+    table.stacked .sr-table-div label
+    {
+        font-weight: bold; 
+
+        color: #294735;
+    }
+    table.stacked .sr-table-tr.even .sr-table-div
+    {
+        background-color: #ececeb;
+    }
+    table.stacked .sr-table-record-div:last-child
+    {
+        text-align: right;
+    }
+}
+
+.popup_visible .popup
+{
+    overflow: hidden;
+
+    -webkit-animation: fade-in-fwd .6s cubic-bezier(.39, .575, .565, 1) both;
+            animation: fade-in-fwd .6s cubic-bezier(.39, .575, .565, 1) both;
+}
+
+.popup_wrapper
+{
+    -webkit-perspective: 500px;
+            perspective: 500px;
+    -webkit-perspective-origin: 50% 50%;
+            perspective-origin: 50% 50%;
+}
+
+@-webkit-keyframes fade-in-fwd
+{
+    0%
+    {
+        -webkit-transform: translateZ(-20px);
+                transform: translateZ(-20px);
+
+        opacity: 0;
+    }
+    100%
+    {
+        -webkit-transform: translateZ(0);
+                transform: translateZ(0);
+
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-fwd
+{
+    0%
+    {
+        -webkit-transform: translateZ(-20px);
+                transform: translateZ(-20px);
+
+        opacity: 0;
+    }
+    100%
+    {
+        -webkit-transform: translateZ(0);
+                transform: translateZ(0);
+
+        opacity: 1;
     }
 }
 

@@ -41,7 +41,7 @@ const SRC_SELECT_IMG = SRC_IMG_PATH+"/**/*.*";
 const PROJECT_JS_LIST = [
   ROOT_JS_PATH+'/jquery-3.3.1.min.js',
   ROOT_JS_PATH+'/magnific.popup.min.js',
-  ROOT_JS_PATH+'/jquery.popupoverlay.js',
+  ROOT_JS_PATH+'/popupoverlay/jquery.popupoverlay-v2.1.5.js',
   ROOT_JS_PATH+'/jquery.mapify.min.js',
   ROOT_JS_PATH+'/jquery-doubletaptogo.min.js',
   ROOT_JS_PATH+'/owl.carousel.min.js',
@@ -49,6 +49,7 @@ const PROJECT_JS_LIST = [
   ROOT_JS_PATH+'/animate.on.scroll.min.js',
   ROOT_JS_PATH+'/flatpickr.min.js',
   ROOT_JS_PATH+'/ion.rangeSlider.min.js',
+  ROOT_JS_PATH+'/stackedrows.js',
   SRC_JS_PATH+'/scripts.js',
 ];
 
@@ -60,6 +61,7 @@ const PROJECT_PAGES_LIST = [
   './src/event-details.html',
   './src/shop.html',
   './src/product-details.html',
+  './src/basket.html',
   './src/explore-and-research.html',
   './src/history-and-collections.html',
   './src/item-details.html',
