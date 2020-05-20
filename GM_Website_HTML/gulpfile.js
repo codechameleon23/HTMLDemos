@@ -43,7 +43,7 @@ const PROJECT_JS_LIST = [
   ROOT_JS_PATH+'/magnific.popup.min.js',
   ROOT_JS_PATH+'/jquery.popupoverlay.js',
   ROOT_JS_PATH+'/jquery.mapify.min.js',
-  ROOT_JS_PATH+'/jquery-doubletaptogo.min.js',
+  // ROOT_JS_PATH+'/jquery-doubletaptogo.min.js',
   ROOT_JS_PATH+'/owl.carousel.min.js',
   // ROOT_JS_PATH+'/mCustomScrollbar.min.js',
   ROOT_JS_PATH+'/animate.on.scroll.min.js',

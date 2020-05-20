@@ -239,7 +239,7 @@ function filterOpen() {
 
 $(document).ready(function () {
 
-  $('.navbar').doubleTapToGo();
+  // $('.navbar').doubleTapToGo();
 
   $('.jsFilterToggle').on('click', function(){
     if ($(this).hasClass("is-active")) {

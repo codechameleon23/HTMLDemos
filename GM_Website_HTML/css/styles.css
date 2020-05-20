@@ -22529,9 +22529,19 @@ strong
     text-align: center;
     text-decoration: none;
 }
-.button:not(.w-auto)
+@media (max-width: 710px)
 {
-    min-width: 22rem;
+    .button
+    {
+        min-width: 15rem;
+    }
+}
+@media (min-width: 710px)
+{
+    .button:not(.w-auto)
+    {
+        min-width: 22rem;
+    }
 }
 
 .size-md
@@ -22760,7 +22770,7 @@ body.search-is-open .searchBarToggle
 
 .page-banner
 {
-    min-height: 23.75rem;
+    min-height: 22rem;
 }
 @media (min-width: 992px)
 {
