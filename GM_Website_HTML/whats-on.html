@@ -25,8 +25,8 @@
   <!-- Header -->
   <header class="pos-relative">
     <div class="mx-auto container lg:container-xl pos-relative">
-      <div class="flex-row">
-        <div class="col-none pt-2xs lg:pt-sm">
+      <div class="flex-col lg:flex-row flex-wrap">
+        <div class="pos-absolute lg:pos-static col-none pt-2xs lg:pt-sm">
           <a href="index.html" class="icon-logo-header-small md:icon-logo-header ratio-logo pos-relative d-inline-block">
             <span class="pos-absolute pin">
               <img src="./images/brand-logo.png" alt="" />
@@ -37,7 +37,7 @@
           <div class="flex-col justify-end lg:flex-row-reverse lg:justify-start lg:align-center lg:mb-xs">
             <div class="flex-row justify-end lg:mb-auto -mr-2xs lg:mr-0">
               <a href="basket.html" class="no-animate d-inline-block no-underline fweight-regular fcolor-white capitalize p-xxs px-2sm hover:shadow-bottom bg-primary lg:py-2xs">
-                <div class="flex-row align-center justify-center">
+                <div class="flex-row flex-wrap align-center justify-center">
                   <span>0</span>
                   <span class="ml-xs fcolor-inherit icon icon- xs">
                     <span class="">
@@ -106,7 +106,7 @@
                 </div>
                 <span class="border-r border-medium mx-xs d-hidden lg:d-inline-block"></span>
                 <a href="#" class="search-toggle fcolor-inherit icon icon-sm mr-xxs">
-                  <span class="p-xxs">
+                  <span class="p-xxxs">
                     <svg class="search-open" stroke="currentColor" fill="none" stroke-width="4.86px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.64 41.64">
                       <circle cx="16.97" cy="16.97" r="14.54" />
                       <path d="M26.69 26.69l13.23 13.23" />
@@ -132,101 +132,77 @@
               </div>
             </div>
           </div>
-          <!-- Navbar -->
-          <navbar class="navbar bg-light fcolor-default flex-col flex-stretch fsize-2xs fweight-semibold pos-fixed pin shadow-lg z-30 lg:mb-sm lg:z-10 lg:bg-transparent lg:fcolor-inherit lg:pos-static lg:shadow-none">
-            <div class="icon icon-sm pos-absolute pin-t pin-r lg:d-hidden m-xs">
-              <div>
-                <div class="icon hamburger cross pointer-events-auto">
-                  <div>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </div>
+        </div>
+        <!-- Navbar -->
+        <navbar class="navbar bg-light fcolor-default flex-col flex-stretch fsize-md lg:fsize-2xs fweight-semibold lg:flex-inherit lg:-mt-2md lg:mb-sm lg:bg-transparent lg:fcolor-inherit lg:ml-3xl">
+          <ul class="list-reset lg:ml-md lg:flex-row justify-space-between">
+            <li class="">
+              <a class="py-xs px-2xs lg:px-0 flex-row align-center fcolor-inherit no-underline" href="plan-a-visit.html"><span>Visit Us</span></a>
+            </li>
+            <li class="is-active">
+              <a class="py-xs px-2xs lg:px-0 flex-row align-center fcolor-inherit no-underline" href="whats-on.html"><span>What's on</span></a>
+            </li>
+            <li class="">
+              <a class="py-xs px-2xs lg:px-0 flex-row align-center fcolor-inherit no-underline" href="shop.html"><span>Shop</span></a>
+            </li>
+            <li class="">
+              <a class="py-xs px-2xs lg:px-0 flex-row align-center fcolor-inherit no-underline" href="explore-and-research.html"><span>Explore & Research</span></a>
+            </li>
+            <li class="has-dropdown">
+              <a class="py-xs px-2xs lg:px-0 flex-row align-center fcolor-inherit no-underline" href="join-and-support.html">
+                <span>Join & support</span>
+              </a>
+              <div class="dropdown w-full lg:shadow-lg fsize-4sm lg:fsize-xxs bg-light fcolor-default lg:bg-primary lg:fcolor-white flex-col">
+                <div class="p-sm lg:p-0 flex-auto flex-col lg:flex-row pos-relative">
+                  <ul class="list-reset fweight-light flex-auto list-reset lg:p-sm lg:col-count-2 xl:col-count-3">
+                    <li class="lg:hover:fcolor-medium">
+                      <a class="py-xs px-2xs lg:px-0 flex-row align-center fcolor-inherit no-underline" href="become-a-friend.html"><span>Become a Friend</span></a>
+                    </li>
+                    <li class="lg:hover:fcolor-medium">
+                      <a class="py-xs px-2xs lg:px-0 flex-row align-center fcolor-inherit no-underline" href="#"><span>Corporate Packages</span></a>
+                    </li>
+                    <li class="lg:hover:fcolor-medium">
+                      <a class="py-xs px-2xs lg:px-0 flex-row align-center fcolor-inherit no-underline" href="#"><span>Bequest a Gift</span></a>
+                    </li>
+                    <li class="lg:hover:fcolor-medium">
+                      <a class="py-xs px-2xs lg:px-0 flex-row align-center fcolor-inherit no-underline" href="#"><span>Volunteer</span></a>
+                    </li>
+                    <li class="lg:hover:fcolor-medium">
+                      <a class="py-xs px-2xs lg:px-0 flex-row align-center fcolor-inherit no-underline" href="#"><span>Donate an Item</span></a>
+                    </li>
+                  </ul>
+                  <a href="#" class="d-hidden lg:d-inline-flex jsDonationPopup_open button flex-none fcolor-white no-underline bg-secondary p-xs xl:p-md flex-col align-center justify-center text-center fweight-light fsize-2xs">
+                    <span>Support Us Now<br />
+                      <b>Make a Donation<br></b></span>
+                  </a>
                 </div>
               </div>
-            </div>
-            <ul class="mt-xl lg:mt-0 lg:ml-lg lg:flex-row justify-space-between">
-              <li class="flex-row align-center">
-                <a class="py-xs px-sm lg:px-0 lg:px-xxs fcolor-inherit no-underline" href="plan-a-visit.html">Visit Us</a>
-              </li>
-              <li class="flex-row align-center is-active">
-                <a class="py-xs px-sm lg:px-0 lg:px-xxs fcolor-inherit no-underline" href="whats-on.html">What's on</a>
-              </li>
-              <li class="flex-row align-center">
-                <a class="py-xs px-sm lg:px-0 lg:px-xxs fcolor-inherit no-underline" href="shop.html">Shop</a>
-              </li>
-              <li class="flex-row align-center">
-                <a class="py-xs px-sm lg:px-0 lg:px-xxs fcolor-inherit no-underline" href="explore-and-research.html">Explore & Research</a>
-              </li>
-              <li class="flex-row align-center">
-                <a class="py-xs px-sm lg:px-0 lg:px-xxs fcolor-inherit no-underline" href="join-and-support.html">Join & support</a>
-                <span class="icon icon-md lg:icon-xs fcolor-inherit flex-none submenuOpen my-auto ml-auto mr-xs">
-                  <span class="p-xs lg:p-0">
-                    <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490.651 490.651">
-                      <path d="M370.2 237.787L135.533 3.12c-4.16-4.16-10.923-4.16-15.083 0s-4.16 10.923 0 15.083l227.136 227.115-227.135 227.135c-4.16 4.16-4.16 10.923 0 15.083 2.091 2.069 4.821 3.115 7.552 3.115s5.461-1.045 7.531-3.115L370.2 252.869c4.16-4.16 4.16-10.922 0-15.082z" /></svg>
-                  </span>
+            </li>
+            <li class="">
+              <a class="py-xs px-2xs lg:px-0 flex-row align-center fcolor-inherit no-underline" href="about-us.html">About Us</a>
+            </li>
+            <li class="">
+              <a class="py-xs px-2xs lg:px-0 flex-row align-center fcolor-inherit no-underline" href="#">Nepali</a>
+            </li>
+            <li class="">
+              <a class="d-hidden lg:d-inline-block jsDonationPopup_open button-animate py-xs px-2md fcolor-white bg-secondary hover:shadow-bottom no-underline" href="#">Donate</a>
+            </li>
+          </ul>
+        </navbar>
+        <!-- Search bar -->
+        <div class="searchBarToggle pos-absolute z-20 pin-r pin-y flex-col overflow-hidden w-full pin-t100 shadow-lg">
+          <div class="searchBar flex-row flex-wrap align-center flex-stretch w-full">
+            <input type="text" placeholder="What are you looking for?" class="h-full p-xs flex-auto transition-all bg-white border-light">
+            <button class="h-full flex-none px-xs border-light cursor-pointer bg-secondary">
+              <div class="fcolor-white icon">
+                <span class="">
+                  <svg class="search-open" stroke="currentColor" fill="none" stroke-width="4.86px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.64 41.64">
+                    <circle cx="16.97" cy="16.97" r="14.54" />
+                    <path d="M26.69 26.69l13.23 13.23" />
+                  </svg>
                 </span>
-                <div class="dropdown lg:shadow-lg fsize-xxs bg-light fcolor-default lg:bg-primary lg:fcolor-white flex-col">
-                  <div class="flex-auto flex-col lg:flex-row pos-relative">
-                    <ul class="col-count-1 fweight-light flex-auto list-reset lg:pt-sm lg:px-sm lg:pb-2xs lg:col-count-2 xl:col-count-3">
-                      <li class="py-xs submenuBack flex-row align-center fcolor-primary fweight-bold">
-                        <span class="icon icon-md fcolor-inherit flex-none my-auto">
-                          <span class="p-xs">
-                            <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490.651 490.651">
-                              <path d="M370.2 237.787L135.533 3.12c-4.16-4.16-10.923-4.16-15.083 0s-4.16 10.923 0 15.083l227.136 227.115-227.135 227.135c-4.16 4.16-4.16 10.923 0 15.083 2.091 2.069 4.821 3.115 7.552 3.115s5.461-1.045 7.531-3.115L370.2 252.869c4.16-4.16 4.16-10.922 0-15.082z" /></svg>
-                          </span>
-                        </span> Back
-                      </li>
-                      <li class="lg:hover:fcolor-medium">
-                        <a class="py-xs px-sm lg:px-xxs no-underline fcolor-inherit" href="become-a-friend.html">Become a Friend</a>
-                      </li>
-                      <li class="lg:hover:fcolor-medium">
-                        <a class="py-xs px-sm lg:px-xxs no-underline fcolor-inherit" href="#">Corporate Packages</a>
-                      </li>
-                      <li class="lg:hover:fcolor-medium">
-                        <a class="py-xs px-sm lg:px-xxs no-underline fcolor-inherit" href="#">Bequest a Gift</a>
-                      </li>
-                      <li class="lg:hover:fcolor-medium">
-                        <a class="py-xs px-sm lg:px-xxs no-underline fcolor-inherit" href="#">Volunteer</a>
-                      </li>
-                      <li class="lg:hover:fcolor-medium">
-                        <a class="py-xs px-sm lg:px-xxs no-underline fcolor-inherit" href="#">Donate an Item</a>
-                      </li>
-                    </ul>
-                    <a href="#" class="jsDonationPopup_open button flex-none fcolor-white no-underline bg-secondary p-xs xl:p-md flex-col align-center justify-center text-center fweight-light fsize-2xs">
-                      <span>Support Us Now<br />
-                        <b>Make a Donation<br></b></span>
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li class="flex-row align-center">
-                <a class="py-xs px-sm lg:px-0 lg:px-xxs fcolor-inherit no-underline" href="about-us.html">About Us</a>
-              </li>
-              <li class="flex-row align-center">
-                <a class="py-xs px-sm lg:px-0 lg:px-xxs fcolor-inherit no-underline" href="#">Nepali</a>
-              </li>
-              <li class="flex-row align-center d-hidden lg:d-inline-block">
-                <a class="jsDonationPopup_open button-animate py-xs px-2md fcolor-white bg-secondary hover:shadow-bottom no-underline" href="#">Donate</a>
-              </li>
-            </ul>
-          </navbar>
-          <!-- Search bar -->
-          <div class="searchBarToggle pos-absolute z-20 pin-r pin-y flex-col overflow-hidden w-full pin-t100 shadow-lg">
-            <div class="searchBar flex-row align-center flex-stretch w-full">
-              <input type="text" placeholder="What are you looking for?" class="h-full p-xs flex-auto transition-all bg-white border-light">
-              <button class="h-full flex-none p-xs border-light cursor-pointer bg-secondary">
-                <div class="fcolor-white icon icon-sm">
-                  <span class="p-xxxs">
-                    <svg class="search-open" stroke="currentColor" fill="none" stroke-width="4.86px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.64 41.64">
-                      <circle cx="16.97" cy="16.97" r="14.54" />
-                      <path d="M26.69 26.69l13.23 13.23" />
-                    </svg>
-                  </span>
-                </div>
-              </button>
-            </div>
+              </div>
+            </button>
           </div>
         </div>
       </div>
@@ -237,11 +213,11 @@
     <!-- Ribbon -->
     <section class="bg-primary fcolor-white py-2sm">
       <div class="container mx-auto md:container-sm lg:container-lg lg:flex-row lg:flex-wrap xl:container-xl">
-        <h1 class="fsize-md fweight-bold md:fsize-2lg">What’s On at the Gurkha Museum</h1>
+        <h1 class="fweight-bold fsize-2lg">What’s On at the Gurkha Museum</h1>
       </div>
     </section>
     <!-- Three Columns -->
-    <section class="pt-2lg">
+    <section class="pt-2md lg:pt-2lg">
       <div class="container mx-auto md:container-sm lg:container-lg lg:flex-row lg:flex-wrap xl:container-xl">
         <div class="flex-stretch flex-row flex-wrap -mb-md lg:-mr-md xl:-mr-xl">
           <article class="col-12 flex-col mb-md lg:pr-md lg:col-4 xl:pr-xl hover:border-parent" data-aos="fade-up" data-aos-delay="100" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
@@ -445,7 +421,7 @@
         </div>
       </div>
     </section>
-    <div class="pt-2lg">
+    <div class="pt-2md lg:pt-2lg">
       <div class="container mx-auto md:container-sm lg:container-lg lg:flex-row lg:flex-wrap xl:container-xl">
         <div class="flex-row justify-center -mx-xxs fcolor-primary md:ml-auto">
           <a href="#" class="d-inline-block mx-xxs border border-primary fcolor-inherit hover:bg-primary hover:fcolor-white"><span class="icon icon-md bg-primary fcolor-white"><span class="fcolor-inherit">1</span></span></a>
@@ -457,7 +433,7 @@
       </div>
     </div>
     <!-- Entertain the Kids During the School Holidays -->
-    <section class="pt-2lg">
+    <section class="pt-2md lg:pt-2lg">
       <section class="banner-wrapper flex-col flex-stretch bg-primary pos-relative pt-md lg:py-0">
         <figure class="banner-bg-image bg-cover bg-center pin pos-absolute" style="background-image: url('./images/CAMO.png');"></figure>
         <div class="banner-inner-wrapper container mx-auto md:container-sm lg:container-lg xl:container-xl">
@@ -470,7 +446,7 @@
               <section class="pos-relative fcolor-white mr-auto call-to-action lg:pt-lg lg:pr-lg xl:pr-2xl">
                 <div class="flex-col flex-auto w-full">
                   <div class="text-wrap w-full">
-                    <h2 class="fsize-md fweight-bold md:fsize-2lg">Entertain the Kids During the School Holidays</h2>
+                    <h2 class="fweight-bold fsize-2lg">Entertain the Kids During the School Holidays</h2>
                     <p>With a wide range of events and entertainment specifically curated for children the Gurkha Museum offers the perfect day out for all the family.</p>
                   </div>
                 </div>
@@ -541,7 +517,7 @@
     </div>
   </div>
   <!-- Insta Gallery -->
-  <section class="pt-2lg lg:pt-2xl overflow-hidden">
+  <section class="pt-2md lg:pt-2lg xl:pt-2xl overflow-hidden">
     <div class="container-fluid mx-auto">
       <div class="flex-row flex-wrap -mr-xs -mb-xs">
         <article class="pr-xs pb-xs col-4 lg:w-auto lg:col-flex">
@@ -601,11 +577,10 @@
     </div>
   </section>
   <!-- footer -->
-  <!-- mt-2lg lg:mt-2xl -->
-  <footer class="mt-2lg lg:mt-2xl py-2sm lg:py-2lg bg-primary">
+  <footer class="mt-2md lg:mt-2xl py-2sm lg:py-2lg bg-primary">
     <div class="container mx-auto md:container-sm lg:container-lg lg:flex-row lg:flex-wrap xl:container-xl">
       <div class="md:-mb-md w-full col-count-3 md:col-count-3 lg:col-count-4">
-        <div class="flex-col fsize-xxs fcolor-white mb-md">
+        <div class="flex-col fsize-xxs fcolor-white pb-md">
           <h3 class="mb-xs fweight-black">Visit Us</h3>
           <ul class="list-reset">
             <li class="mb-xxs"><a href="#" class="fcolor-inherit no-underline hover:fcolor-secondary">Opening Times</a></li>
@@ -615,7 +590,7 @@
             <li class="mb-xxs"><a href="#" class="fcolor-inherit no-underline hover:fcolor-secondary">Venue Hire</a></li>
           </ul>
         </div>
-        <div class="flex-col fsize-xxs fcolor-white mb-md">
+        <div class="flex-col fsize-xxs fcolor-white pb-md">
           <h3 class="mb-xs fweight-black">What’s On</h3>
           <ul class="list-reset">
             <li class="mb-xxs"><a href="#" class="fcolor-inherit no-underline hover:fcolor-secondary">Lectures</a></li>
@@ -624,7 +599,7 @@
             <li class="mb-xxs"><a href="#" class="fcolor-inherit no-underline hover:fcolor-secondary">School Holidays</a></li>
           </ul>
         </div>
-        <div class="flex-col fsize-xxs fcolor-white mb-md">
+        <div class="flex-col fsize-xxs fcolor-white pb-md">
           <h3 class="mb-xs fweight-black">Explore & Research</h3>
           <ul class="list-reset">
             <li class="mb-xxs"><a href="#" class="fcolor-inherit no-underline hover:fcolor-secondary">Research Facilities</a></li>
@@ -632,7 +607,7 @@
             <li class="mb-xxs"><a href="history-and-collections.html" class="fcolor-inherit no-underline hover:fcolor-secondary">History & Collections</a></li>
           </ul>
         </div>
-        <div class="flex-col fsize-xxs fcolor-white mb-md">
+        <div class="flex-col fsize-xxs fcolor-white pb-md">
           <h3 class="mb-xs fweight-black">About Us</h3>
           <ul class="list-reset">
             <li class="mb-xxs"><a href="#" class="fcolor-inherit no-underline hover:fcolor-secondary">Trustees & Patrons</a></li>
@@ -642,7 +617,7 @@
             <li class="mb-xxs"><a href="#" class="fcolor-inherit no-underline hover:fcolor-secondary">Nepali</a></li>
           </ul>
         </div>
-        <div class="flex-col fsize-xxs fcolor-white mb-md">
+        <div class="flex-col fsize-xxs fcolor-white pb-md">
           <h3 class="mb-xs fweight-black">Join & Support</h3>
           <ul class="list-reset">
             <li class="mb-xxs"><a href="become-a-friend.html" class="fcolor-inherit no-underline hover:fcolor-secondary">Become a Friend</a></li>
@@ -653,7 +628,7 @@
             <li class="mb-xxs"><a href="shop.html" class="fcolor-inherit no-underline hover:fcolor-secondary">Shop</a></li>
           </ul>
         </div>
-        <div class="flex-col fsize-xxs fcolor-white mb-md">
+        <div class="flex-col fsize-xxs fcolor-white pb-md">
           <h3 class="mb-xs fweight-black">Legal</h3>
           <ul class="list-reset">
             <li class="mb-xxs"><a href="#" class="fcolor-inherit no-underline hover:fcolor-secondary">Terms & Conditions</a></li>
@@ -661,7 +636,7 @@
             <li class="mb-xxs"><a href="#" class="fcolor-inherit no-underline hover:fcolor-secondary">Sitemap</a></li>
           </ul>
         </div>
-        <div class="flex-col fsize-xxs fcolor-white mb-md">
+        <div class="d-hidden md:d-inline-flex flex-col fsize-xxs fcolor-white pb-md">
           <h3 class="mb-xs fweight-black">Contact</h3>
           <ul class="list-reset">
             <li class="mb-xxs"><a href="tel:01962 842832" class="fcolor-inherit no-underline hover:fcolor-secondary">01962 842832</a></li>
@@ -705,6 +680,57 @@
               </div>
             </li>
           </ul>
+        </div>
+      </div>
+      <div class="md:-mb-md w-full">
+        <div class="md:d-hidden flex-col fsize-xxs fcolor-white pb-md">
+          <h3 class="mb-xs fweight-black">Contact</h3>
+          <div class="flex-row flex-wrap -mr-sm">
+            <ul class="list-reset pr-sm">
+              <li class="mb-xxs">
+                The Gurkha Museum<br />
+                Peninsula Barracks<br />
+                Romsey Road<br />
+                Winchester<br />
+                SO23 8TS
+              </li>
+            </ul>
+            <ul class="list-reset pr-sm">
+              <li class="mb-xxs"><a href="tel:01962 842832" class="fcolor-inherit no-underline hover:fcolor-secondary">01962 842832</a></li>
+              <li class="mb-xxs"><a href="mailto:admin@thegurkhamuseum.co.uk" class="fcolor-inherit no-underline hover:fcolor-secondary">admin@thegurkhamuseum.co.uk</a></li>
+              <li class="mb-xxs pt-sm">
+                <div class="flex-row -mr-xxs mb-xs">
+                  <a href="#" class="fcolor-inherit hover:fcolor-secondary icon icon-sm mr-xxs">
+                    <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.4 25.4">
+                      <path d="M16 13.2h-2.3v5.7h-2.3v-5.7h-2v-2.3h1.9V9.6c0-.8.3-1.6.8-2.2.6-.6 1.2-.9 2-.9H16v2.3h-1.9c-.1 0-.2.1-.3.2-.1.1-.1.3-.1.5v1.2H16v2.5zm9.4-.5c0-1.8-.3-3.4-1-4.9-.7-1.5-1.6-2.9-2.7-4-1.1-1.2-2.5-2.1-4-2.7-1.5-.7-3.2-1-4.9-1S9.3.3 7.7 1c-1.5.7-2.9 1.6-4 2.7-1.1 1.2-2 2.5-2.7 4-.7 1.6-1 3.3-1 5s.3 3.4 1 4.9c.7 1.5 1.6 2.9 2.7 4s2.5 2 4 2.7c1.5.7 3.2 1 4.9 1s3.4-.3 4.9-1c1.5-.7 2.9-1.6 4-2.7s2-2.5 2.7-4c.8-1.5 1.2-3.1 1.2-4.9"></path>
+                    </svg>
+                  </a>
+                  <a href="#" class="fcolor-inherit hover:fcolor-secondary icon icon-sm mr-xxs">
+                    <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.4 25.4">
+                      <path d="M18.1 9.4c.3 0 .5-.1.8-.2.2-.1.5-.1.7-.2-.2.2-.4.5-.6.7-.2.2-.5.4-.7.6v.3c0 .9-.2 1.7-.5 2.6-.3.9-.8 1.6-1.4 2.3-.6.7-1.4 1.3-2.3 1.7-.9.4-2 .7-3.1.7-.7 0-1.4-.1-2.1-.3-.7-.2-1.3-.5-1.8-.8h.6c1.2 0 2.3-.4 3.2-1.1-.6 0-1.1-.2-1.5-.5-.4-.3-.7-.8-.9-1.3.2 0 .3.1.4.1h.4c.1 0 .2 0 .3-.1-.6-.1-1.1-.4-1.4-.9-.4-.5-.6-1-.6-1.6.3.2.7.3 1.2.3-.7-.5-1.1-1.2-1.1-2.1 0-.5.1-.9.3-1.3.7.8 1.4 1.4 2.3 1.9.9.5 1.9.7 3 .8 0-.2-.1-.4-.1-.6 0-.7.3-1.3.8-1.8s1.1-.8 1.8-.8c.4 0 .7.1 1 .2.3.1.6.3.8.6.3 0 .6-.1.9-.3.2 0 .5-.1.7-.3-.1.3-.3.6-.5.8-.1.3-.4.5-.6.6m7.3 3.3c0-1.8-.3-3.4-1-4.9-.7-1.5-1.6-2.9-2.7-4s-2.5-2-4-2.7c-1.5-.7-3.2-1-4.9-1S9.3.3 7.7 1c-1.5.7-2.9 1.6-4 2.7-1.2 1.2-2.1 2.5-2.7 4-.7 1.5-1 3.2-1 4.9s.3 3.4 1 4.9c.7 1.5 1.6 2.9 2.7 4 1.2 1.1 2.5 2 4 2.7 1.5.7 3.2 1 4.9 1s3.4-.3 4.9-1c1.5-.7 2.9-1.6 4-2.7s2-2.5 2.7-4c.8-1.4 1.2-3 1.2-4.8"></path>
+                    </svg>
+                  </a>
+                  <a href="#" class="fcolor-inherit hover:fcolor-secondary icon icon-sm mr-xxs">
+                    <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.4 25.4">
+                      <path d="M15.5 12.7c0-1.5-1.2-2.7-2.8-2.7s-2.8 1.2-2.8 2.7c0 1.5 1.2 2.7 2.8 2.7s2.8-1.2 2.8-2.7M18 9.5V7.9c0-.3-.3-.6-.6-.6h-1.6c-.3 0-.6.3-.6.6v1.5c0 .3.3.6.6.6h1.6c.4.1.6-.2.6-.5m0 8v-5.8h-1.2c.2.3.2.7.2 1.2 0 2.3-1.9 4.2-4.3 4.2s-4.3-1.8-4.3-4.2c0-.4 0-.8.2-1.2H7.3v5.8c0 .3.3.5.6.5h9.6c.3.1.5-.2.5-.5m1.6.4c0 1-.8 1.7-1.8 1.7H7.5c-1 0-1.8-.8-1.8-1.7V7.6c0-1 .8-1.8 1.8-1.8h10.3c1 0 1.8.8 1.8 1.8v10.3zm5.8-5.2C25.3 5.6 19.6-.1 12.7 0 5.7.1 0 5.7 0 12.7c0 7 5.7 12.7 12.7 12.7 7 0 12.7-5.7 12.7-12.7"></path>
+                    </svg>
+                  </a>
+                  <a href="#" class="fcolor-inherit hover:fcolor-secondary icon icon-sm mr-xxs">
+                    <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50.01 50.08">
+                      <defs>
+                        <clipPath id="a" transform="translate(-.03 .01)">
+                          <path fill="none" d="M.03-.01h50.01v50.08H.03z" />
+                        </clipPath>
+                      </defs>
+                      <g clip-path="url(#a)">
+                        <path d="M19.62 26.71a3 3 0 1 1-3-3 3 3 0 0 1 3 3m-3-5.56a5.59 5.59 0 1 0 5.55 5.58 5.55 5.55 0 0 0-5.55-5.58m14.42-2.87a16.55 16.55 0 0 0-12.2 0c3.25 1.49 5.43 3.72 6.1 7.26.65-3.55 2.87-5.77 6.1-7.27m5.24 8.46a3 3 0 1 1-3-3 3 3 0 0 1 3 3m2.57 0a5.54 5.54 0 0 0-5.52-5.61 5.59 5.59 0 1 0 5.52 5.61m2.87-9.22l-2.73 3a8.39 8.39 0 0 1 2.62 7.12 8.15 8.15 0 0 1-2.34 4.91 8.47 8.47 0 0 1-11.7.37l-2.6 2.92-2.66-2.88a8.47 8.47 0 0 1-7.32 2 8.24 8.24 0 0 1-4.92-3 8.47 8.47 0 0 1 .9-11.4l-2.73-2.94c.31 0 .48-.07.64-.07h1.51c2.33.16 4.59.06 6.53-1.47a18.85 18.85 0 0 1 18.14 1.09 2.72 2.72 0 0 0 1.26.36h5.43m8.22 7.56a24.46 24.46 0 0 0-2-9.76 25.59 25.59 0 0 0-5.34-8 24.87 24.87 0 0 0-7.87-5.31 24.45 24.45 0 0 0-9.79-2 24.45 24.45 0 0 0-9.76 2A24.85 24.85 0 0 0 7.3 7.34a25.59 25.59 0 0 0-5.34 8 24.43 24.43 0 0 0-2 9.76 24.43 24.43 0 0 0 2 9.76 24.93 24.93 0 0 0 13.28 13.26 24.45 24.45 0 0 0 9.76 2 24.45 24.45 0 0 0 9.76-2 24.93 24.93 0 0 0 13.28-13.28 24.46 24.46 0 0 0 2-9.76" />
+                      </g>
+                    </svg>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

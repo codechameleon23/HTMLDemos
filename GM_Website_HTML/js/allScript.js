@@ -37,9 +37,9 @@ function navBarOpen() {
    $(".jsNavbarToggle").addClass("is-open");
 }
 
-$(window).on('scroll resize', function () {
-   navBarClose();
-});
+// $(window).on('scroll resize', function () {
+//    navBarClose();
+// });
 
 $(document).ready(function () {
    $(".hamburger").on("click", function () {
@@ -239,7 +239,7 @@ function filterOpen() {
 
 $(document).ready(function () {
 
-  $('.navbar').doubleTapToGo();
+  $('.navbar .has-dropdown > a').doubleTapToGo();
 
   $('.jsFilterToggle').on('click', function(){
     if ($(this).hasClass("is-active")) {
