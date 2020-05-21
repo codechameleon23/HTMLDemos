@@ -239,7 +239,16 @@ function filterOpen() {
 
 $(document).ready(function () {
 
-  $('.navbar .has-dropdown > a').doubleTapToGo();
+  $('.navbar .has-dropdown').doubleTapToGo();
+
+  $('.toggle').on('click', function(){
+    var parent = $(this).closest('.has-dropdown');
+    if(parent.hasClass('is-open')){
+      parent.removeClass('is-open')
+    }else{
+      parent.addClass('is-open')
+    }
+  })
 
   $('.jsFilterToggle').on('click', function(){
     if ($(this).hasClass("is-active")) {
