@@ -24019,21 +24019,43 @@ body.search-is-open .searchBarToggle
 
     opacity: 0;
 }
-.navbar > ul > li:hover.has-dropdown > .toggle:before
+@media (max-width: 992px)
 {
-    -webkit-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-            transform: rotate(90deg); 
+    .navbar > ul > li.is-open.has-dropdown > .toggle:before
+    {
+        -webkit-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+                transform: rotate(90deg); 
 
-    opacity: 0;
+        opacity: 0;
+    }
+    .navbar > ul > li.is-open > .dropdown
+    {
+        overflow: visible; 
+
+        max-height: 100rem;
+
+        opacity: 1;
+    }
 }
-.navbar > ul > li:hover > .dropdown
+@media (min-width: 992px)
 {
-    overflow: visible; 
+    .navbar > ul > li:hover.has-dropdown > .toggle:before
+    {
+        -webkit-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+                transform: rotate(90deg); 
 
-    max-height: 100rem;
+        opacity: 0;
+    }
+    .navbar > ul > li:hover > .dropdown
+    {
+        overflow: visible; 
 
-    opacity: 1;
+        max-height: 100rem;
+
+        opacity: 1;
+    }
 }
 @media (max-width: 992px)
 {
