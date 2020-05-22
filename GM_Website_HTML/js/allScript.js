@@ -82,7 +82,6 @@ $(document).ready(function () {
     itemCarousel = $(".jsProductCarousel"); //Banner-carousel for Property-details page
     itemCarousel.owlCarousel({
       stagePadding: 0,
-      margin: 14,
       loop: true,
       mouseDrag: false,
       nav: false,
@@ -94,12 +93,18 @@ $(document).ready(function () {
       responsive: {
         0: {
           items: 1,
+          margin: 29,
+          center:true,
         },
         710: {
           items: 2,
+          margin: 14,
+          center:false,
         },
         992: {
           items: 4,
+          margin: 14,
+          center:false,
         }
       }
     });
@@ -227,15 +232,15 @@ $(document).ready(function () {
 
   $('.navbar .has-dropdown').doubleTapToGo();
 
-  // $('.toggle').on('click', function(){
-  //   var parent = $(this).closest('.has-dropdown');
-  //   if(parent.hasClass('is-open')){
-  //     parent.removeClass('is-open');
-  //     $('body').trigger('click');
-  //   }else{
-  //     parent.addClass('is-open');
-  //   }
-  // })
+  $('.toggle').on('click', function(){
+    var parent = $(this).closest('.has-dropdown');
+    if(parent.hasClass('is-open')){
+      parent.removeClass('is-open');
+    
+    }else{
+      parent.addClass('is-open');
+    }
+  })
 
   $('.search-toggle').on('click', function(){
     if ($(this).hasClass("is-active")) {
@@ -260,7 +265,7 @@ $(document).ready(function () {
 
   // $('.popup').popup();
   $('#jsAnnoncementPopup').popup({
-    autoopen: true
+    // autoopen: true
   });
 
 });
