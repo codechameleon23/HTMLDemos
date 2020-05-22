@@ -265,7 +265,7 @@ $(document).ready(function () {
 
   // $('.popup').popup();
   $('#jsAnnoncementPopup').popup({
-    // autoopen: true
+    autoopen: true
   });
 
 });
