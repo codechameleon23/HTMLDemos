@@ -24039,11 +24039,34 @@ body.search-is-open .searchBarToggle
 }
 @media (min-width: 992px)
 {
-    .navbar > ul > li.is-active
+    .navbar > ul > li:not(.no-hover) > a
     {
-        margin-bottom: -2px;
+        position: relative;
+    }
+    .navbar > ul > li:not(.no-hover) > a:after
+    {
+        position: absolute;
+        top: 100%;
+        left: 50%;
 
-        border-bottom: 2px solid #e2241c;
+        width: 100%;
+        max-width: 0;
+        height: .2rem;
+
+        content: '';
+        -webkit-transition: max-width .35s ease-in-out 0s;
+                transition: max-width .35s ease-in-out 0s; 
+        -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
+
+        border-radius: .5rem;
+        background-color: #e2241c;
+    }
+    .navbar > ul > li:not(.no-hover).is-active > a:after,
+    .navbar > ul > li:not(.no-hover):hover > a:after
+    {
+        max-width: 100%;
     }
     .navbar > ul > li:hover.has-dropdown > .toggle:before
     {
