@@ -229,22 +229,27 @@ $negativeMargin: (
 $shadows: () !default;
 $shadowsClassPrefix: "shadow" !default;
 
-$shadowDefault: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
-$shadowDown: 0 5px 5px 0 rgba(0, 0, 0, 0.35), 0 10px 10px 0 rgba(0, 0, 0, 0.16);
-$shadow_md: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-$shadow_lg: 0 5px 5px 0 rgba(0, 0, 0, 0.35), 0 5px 15px 0 rgba(0, 0, 0, 0.16);
+$shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+$shadow_xs: 0 0 0 1px rgba(0, 0, 0, 0.05);
+$shadow_sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$shadow_md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$shadow_lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+$shadow_xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+$shadow_2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 $shadow_inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
-$shadow_outline: 0 0 0 3px rgba(0, 0, 0, 0.05);
-$shadow_none: none;
+$shadow_outline: 0 0 0 3px rgba(66, 153, 225, 0.5);
 
 $shadows: (
-  $shadowsClassPrefix default $shadowDefault 'states',
-  $shadowsClassPrefix "down" $shadowDown 'no-states',
+  $shadowsClassPrefix null $shadow 'states',
+  $shadowsClassPrefix "xs" $shadow_xs 'states',
+  $shadowsClassPrefix "sm" $shadow_sm 'states',
   $shadowsClassPrefix "md" $shadow_md 'states',
   $shadowsClassPrefix "lg" $shadow_lg 'states',
-  $shadowsClassPrefix "inner" $shadow_inner 'no-states',
-  $shadowsClassPrefix "outline" $shadow_outline 'no-states',
-  $shadowsClassPrefix "none" none 'no-states',
+  $shadowsClassPrefix "xl" $shadow_xl 'states',
+  $shadowsClassPrefix "2xl" $shadow_2xl 'states',
+  $shadowsClassPrefix "inner" $shadow_inner 'states',
+  $shadowsClassPrefix "outline" $shadow_outline 'states',
+  $shadowsClassPrefix "none" none 'states',
 );
 
 $shadowOverClassPrefix: "has-overlay" !default;
