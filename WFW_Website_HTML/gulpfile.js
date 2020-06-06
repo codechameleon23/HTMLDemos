@@ -51,17 +51,19 @@ const PROJECT_JS_LIST = [
   // ROOT_JS_PATH+'/flatpickr.min.js',
   // ROOT_JS_PATH+'/ion.rangeSlider.min.js',
   // ROOT_JS_PATH+'/stackedrows.min.js',
-  // SRC_JS_PATH+'/hamburgerToggle.js',
-  // SRC_JS_PATH+'/searchbarToggle.js',
-  // SRC_JS_PATH+'/submenutoggle.js',
-  // SRC_JS_PATH+'/bannerCarousel.js',
-  SRC_JS_PATH+'/itemCarousel.js',
-  // SRC_JS_PATH+'/popup.js',
-  SRC_JS_PATH+'/magnificPopup.js',
-  SRC_JS_PATH+'/scripts.js',
-  SRC_JS_PATH+'/aos.js',
-  SRC_JS_PATH+'/iphonePageHack.js',
-  // SRC_JS_PATH+'/accordion.js',
+  SRC_JS_PATH+'/_commonFunc.js',
+  SRC_JS_PATH+'/_docReady.js',
+  SRC_JS_PATH+'/_hamburgerToggle.js',
+  // SRC_JS_PATH+'/_searchbarToggle.js',
+  // SRC_JS_PATH+'/_submenutoggle.js',
+  // SRC_JS_PATH+'/_bannerCarousel.js',
+  SRC_JS_PATH+'/_itemCarousel.js',
+  // SRC_JS_PATH+'/_popup.js',
+  SRC_JS_PATH+'/_magnificPopup.js',
+  SRC_JS_PATH+'/_aos.js',
+  // SRC_JS_PATH+'/_accordion.js',
+  SRC_JS_PATH+'/_docReadyEnds.js',
+  SRC_JS_PATH+'/_iphonePageHack.js',
 ];
 
 const PROJECT_PAGES_LIST = [
@@ -87,7 +89,7 @@ function CSS_OPERATION() {
 function CSS_PURIFY() {
   return gulp
     .src(DEST_SELECT_CSS)
-    .pipe(purify([DEST_SELECT_JS, DEST_SELECT_HTML]))
+    // .pipe(purify([DEST_SELECT_JS, DEST_SELECT_HTML]))
     .pipe(cleanCSS({format: 'keep-breaks'}))
     .pipe(gulp.dest(DEST_CSS_PATH))
     .pipe(browserSync.stream());
@@ -185,9 +187,9 @@ exports.JS_OPERATION = JS_OPERATION;
 var build = gulp.series(
   CSS_OPERATION,
   JS_OPERATION,
-  IMG_OPERATION,
   HTML_OPERATION,
   CSS_PURIFY,
+  IMG_OPERATION,
   watch
 );
 
