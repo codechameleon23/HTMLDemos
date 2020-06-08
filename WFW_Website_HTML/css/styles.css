@@ -40,6 +40,11 @@ em{font-style:italic}
 .hamburger.cross span:nth-child(2),.hamburger.is-active span:nth-child(2){-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}
 .hamburger.cross span:nth-child(3),.hamburger.is-active span:nth-child(3){-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);transform:rotate(-45deg)}
 [class*=overlay] .image-holder:before,[class*=overlay]>:before{position:absolute;top:0;right:0;bottom:0;left:0;content:''}
+ol.list,ul.list{list-style:none}
+ol.list li,ul.list li{position:relative}
+ol.list li:before,ul.list li:before{position:absolute;top:0;left:0;content:'• '}
+ol.list li{counter-increment:step-counter}
+ol.list li:before{display:inline-block;width:1em;margin-right:.5em;margin-left:-.5em;content:'.' counter(step-counter);text-align:right;direction:rtl}
 ::-webkit-input-placeholder{color:#b3b3b3}
 ::-moz-placeholder{opacity:1;color:#b3b3b3}
 :-ms-input-placeholder{color:#b3b3b3}
@@ -5926,10 +5931,14 @@ button.mfp-arrow::after{top:unset;left:unset;width:2rem;height:2rem;margin:0;col
 button.mfp-arrow-left::after{margin-left:.5rem;-webkit-transform:rotate(-45deg) translate(2px,2px);-ms-transform:rotate(-45deg) translate(2px,2px);transform:rotate(-45deg) translate(2px,2px);border-right:transparent;border-bottom:transparent}
 button.mfp-arrow-right::after{margin-right:.5rem;-webkit-transform:rotate(-45deg) translate(-2px,-2px);-ms-transform:rotate(-45deg) translate(-2px,-2px);transform:rotate(-45deg) translate(-2px,-2px);border-top:transparent;border-left:transparent}
 .mfp-bottom-bar{display:none}
+.overlay-cover-image{background-image:url(../images/gred-hero-overlay.png)}
 .navbar ul>li>a{position:relative}
-.navbar ul>li>a:after{position:absolute;top:calc(100% - .2rem);left:10%;width:100%;max-width:0;height:.2rem;content:'';-webkit-transition:all .35s ease-in-out 0s;transition:all .35s ease-in-out 0s;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%);opacity:0;color:inherit;border:.1rem solid;border-radius:.5rem}
+.navbar ul>li>a:after{position:absolute;top:calc(100% - .2rem);left:1.25rem;width:100%;max-width:0;height:.2rem;content:'';-webkit-transition:all .35s ease-in-out 0s;transition:all .35s ease-in-out 0s;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%);opacity:0;color:inherit;border:.1rem solid;border-radius:.5rem}
 @media (min-width:992px){
 .navbar ul>li>a:after{left:50%}
+}
+@media (max-width:992px){
+.navbar ul>li.is-active>a,.navbar ul>li:hover>a{color:#fff}
 }
 .navbar ul>li.is-active>a:after,.navbar ul>li:hover>a:after{max-width:2.3rem;opacity:1}
 .jsNavbarToggle.is-open .hamburger{top:3.8rem;right:1.5rem}
