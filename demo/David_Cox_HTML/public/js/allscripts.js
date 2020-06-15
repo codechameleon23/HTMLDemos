@@ -142,8 +142,11 @@ $(document).ready(function() {
     //create empty LatLngBounds object
     var bounds = new google.maps.LatLngBounds();
     var locations = [
-      ['London Hospital', 51.526599, -0.123598],
-      ['Salisbury Hospital', 51.071293, -1.794611]
+      ['NEW HALL HOSPITAL', 51.032634, -1.763546],
+      ['THE LONDON CLINIC', 51.523027, -0.149862],
+      ['PRIVATE CONSULTING ROOMS', 51.521774, -0.149596],
+      ['LYCAHEALTH CANARY WHARF', 51.506506, -0.026563],
+      ['NUFFIELD HEALTH WESSEX HOSPITAL', 50.996747, -1.359447],
     ];
     var map = new google.maps.Map($('.map-canvas')[0], {
       // zoom: 16,
