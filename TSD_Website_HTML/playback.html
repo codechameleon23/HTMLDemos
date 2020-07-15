@@ -17,7 +17,7 @@
   <meta name="format-detection" content="address=no">
   <meta name="format-detection" content="email=no">
   <link rel="icon" href="./images/favicon.png" />
-  <title>Dashboard | Thermal System</title>
+  <title>Playback | Thermal System</title>
   <!-- <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;600&display=swap" rel="stylesheet"> -->
   <link rel="stylesheet" href="./css/styles.css" />
 </head>
@@ -51,14 +51,37 @@
               </span>
             </div>
           </a>
-          <button class="button flex-row align-center mr-sm">
-            <div class="icon md:icon-2md mr-xs">
-              <span class="rounded-full bg-primary-light bg-cover bg-center" style="background-image: url('https://picsum.photos/200');"></span>
+          <div class="dropdown">
+            <button class="dropdown-trigger button flex-row align-center mr-sm">
+              <div class="icon md:icon-2md mr-xs">
+                <span class="rounded-full bg-primary-light bg-cover bg-center" style="background-image: url('https://picsum.photos/200');"></span>
+              </div>
+              <span class="icon">
+                <i data-feather="chevron-down"></i>
+              </span>
+            </button>
+            <div class="dropdown-content -mr-sm">
+              <div class="bg-white py-xs shadow-md m-sm">
+                <ul class="list-reset">
+                  <li>
+                    <a href="#" class="no-underline flex-row px-sm py-xs f-color-inherit hover:bg-primary-light">
+                      <span class="mr-xs"><i data-feather="settings"></i></span> Settings
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="no-underline flex-row px-sm py-xs f-color-inherit hover:bg-primary-light">
+                      <span class="mr-xs"><i data-feather="user"></i></span> Profile
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="no-underline flex-row px-sm py-xs f-color-inherit hover:bg-primary-light">
+                      <span class="mr-xs"><i data-feather="log-out"></i></span> Logout
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <span class="icon">
-              <i data-feather="chevron-down"></i>
-            </span>
-          </button>
+          </div>
         </div>
       </div>
     </div>
@@ -70,7 +93,7 @@
       <div class="pos-relative flex-col">
         <nav class="side-navbar bg-white border-default border-r shadow-md xxl:shadow-none flex-stetch min-h-full">
           <ul class="list-reset flex-col w-full">
-            <li class="border-l-thik hover:border-primary border-primary bg-light">
+            <li class="border-l-thik hover:border-primary border-light">
               <a href="index.html" class="flex-row p-md	align-center f-size-3sm f-color-secondary no-underline">
                 <span class="icon mr-xs flex-none f-color-primary"><i data-feather="grid"></i></span>
                 <span>Dashboard</span>
@@ -88,7 +111,7 @@
                 <span>Multiscreen</span>
               </a>
             </li>
-            <li class="border-l-thik hover:border-primary border-light">
+            <li class="border-l-thik hover:border-primary border-primary bg-light">
               <a href="playback.html" class="flex-row p-md	align-center f-size-3sm f-color-secondary no-underline">
                 <span class="icon mr-xs flex-none f-color-primary"><i data-feather="play"></i></span>
                 <span>Playback</span>
@@ -100,214 +123,247 @@
       <div class="flex-auto flex-col">
         <section class="flex-auto flex-col">
           <div class="container mx-auto xl:px-xs">
-            <header class="flex-row justify-space-between align-center py-sm">
-              <h2 class="f-size-md f-weight-semibold md:f-weight-light md:f-size-xl f-weight-light">Dashboard</h2>
-              <button class="button bg-primary f-color-white f-size-2sm f-weight-semibold hover:shadow-md transition-all py-xs px-2xs">
-                <span class="mr-xs md:d-hidden"><i data-feather="plus-circle"></i></span>
-                <span class="d-hidden md:d-inline">Add&nbsp;</span><span>Device</span>
-              </button>
+            <!-- Page Heading -->
+            <header class="flex-row flex-wrap justify-space-between align-center py-sm">
+              <h2 class="f-size-md f-weight-semibold md:f-weight-light md:f-size-xl f-weight-light mr-sm">Playback</h2>
+              <div class="flex-row align-center ml-auto">
+                <h3 class="mr-xs">Select&nbsp;Date</h3>
+                <div class="flex-col w-full">
+                  <input type="text" class="datepicker py-2xs px-xs bg-primary f-color-white flex-stretch focus:shadow transition-all w-full text-center">
+                </div>
+              </div>
             </header>
             <section>
               <div class="flex-row flex-wrap -mr-md -mb-sm">
-                <div class="col-12 lg:col-6 pr-md pb-sm flex-col">
-                  <div class="flex-row flex-wrap -mr-sm">
-                    <div class="col-4 pr-sm pb-sm flex-col">
-                      <div class="flex-stretch p-sm bg-primary f-color-white f-size-xxs md:f-size-4sm flex-col justify-center text-center shadow-md-primary capitalize">
-                        <h2 class="f-size-md md:f-size-xl">11</h2>
-                        <p>Total Installed</p>
-                      </div>
-                    </div>
-                    <div class="col-4 pr-sm pb-sm flex-col">
-                      <div class="flex-stretch p-sm bg-success f-color-white f-size-xxs md:f-size-4sm flex-col justify-center text-center shadow-md-success capitalize">
-                        <h2 class="f-size-md md:f-size-xl">5</h2>
-                        <p>Online</p>
-                      </div>
-                    </div>
-                    <div class="col-4 pr-sm pb-sm flex-col">
-                      <div class="flex-stretch p-sm bg-warning f-color-white f-size-xxs md:f-size-4sm flex-col justify-center text-center shadow-md-warning capitalize">
-                        <h2 class="f-size-md md:f-size-xl">6</h2>
-                        <p>Offline</p>
-                      </div>
-                    </div>
-                  </div>
+                <div class="col-12 lg:col-4 xl:col-3 pr-md pb-sm flex-col">
                   <div class="bg-white shadow">
-                    <table class="stacked table-zebra w-full text-center capitalize">
-                      <thead class="f-size-sm f-color-secondary border-default border-b">
-                        <tr>
-                          <th class="py-sm px-sm" width="100px">Status</th>
-                          <th class="py-sm px-sm text-left">Device name</th>
-                          <th class="py-sm px-sm text-right">Action</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td class="py-xs px-sm">
-                            <div class="icon rounded-full bg-success"></div>
-                          </td>
-                          <td class="py-xs px-sm text-left">Main Loby</td>
-                          <td class="py-xs px-sm text-right">
-                            <div class="-mr-xs flex-row justify-end">
-                              <button class="button f-color-primary opacity-50 hover:opacity-100 hover:f-color-secondary mr-xs" title="Watch" aria-label="Watch" data-microtip-position="top" role="tooltip"><i data-feather="eye"></i></button>
-                              <a href="javascript:void(0);" class="jsSettingsPopup_open button f-color-primary opacity-50 hover:opacity-100 hover:f-color-secondary mr-xs" title="Settings" aria-label="Settings" data-microtip-position="top" role="tooltip"><i data-feather="settings"></i></a>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr class="bg-light">
-                          <td class="py-xs px-sm">
-                            <div class="icon rounded-full bg-success"></div>
-                          </td>
-                          <td class="py-xs px-sm text-left">Cam 1</td>
-                          <td class="py-xs px-sm text-right">
-                            <div class="-mr-xs flex-row justify-end">
-                              <button class="button f-color-primary opacity-50 hover:opacity-100 hover:f-color-secondary mr-xs" title="Watch" aria-label="Watch" data-microtip-position="top" role="tooltip"><i data-feather="eye"></i></button>
-                              <a href="javascript:void(0);" class="jsSettingsPopup_open button f-color-primary opacity-50 hover:opacity-100 hover:f-color-secondary mr-xs" title="Settings" aria-label="Settings" data-microtip-position="top" role="tooltip"><i data-feather="settings"></i></a>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="py-xs px-sm">
-                            <div class="icon rounded-full bg-warning"></div>
-                          </td>
-                          <td class="py-xs px-sm text-left">Cam 3</td>
-                          <td class="py-xs px-sm text-right">
-                            <div class="-mr-xs flex-row justify-end">
-                              <a href="javascript:void(0);" class="jsSettingsPopup_open button f-color-primary opacity-50 hover:opacity-100 hover:f-color-secondary mr-xs" title="Settings" aria-label="Settings" data-microtip-position="top" role="tooltip"><i data-feather="settings"></i></a>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr class="bg-primary-light">
-                          <td class="py-xs px-sm">
-                            <div class="icon rounded-full bg-success"></div>
-                          </td>
-                          <td class="py-xs px-sm text-left">parking cam</td>
-                          <td class="py-xs px-sm text-right">
-                            <div class="-mr-xs flex-row justify-end">
-                              <button class="button f-color-secondary opacity-100 mr-xs" title="Watch" aria-label="Watch" data-microtip-position="top" role="tooltip"><i data-feather="eye"></i></button>
-                              <a href="javascript:void(0);" class="jsSettingsPopup_open button f-color-primary opacity-50 hover:opacity-100 hover:f-color-secondary mr-xs" title="Settings" aria-label="Settings" data-microtip-position="top" role="tooltip"><i data-feather="settings"></i></a>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="py-xs px-sm">
-                            <div class="icon rounded-full bg-warning"></div>
-                          </td>
-                          <td class="py-xs px-sm text-left">Office Outside</td>
-                          <td class="py-xs px-sm text-right">
-                            <div class="-mr-xs flex-row justify-end">
-                              <a href="javascript:void(0);" class="jsSettingsPopup_open button f-color-primary opacity-50 hover:opacity-100 hover:f-color-secondary mr-xs" title="Settings" aria-label="Settings" data-microtip-position="top" role="tooltip"><i data-feather="settings"></i></a>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr class="bg-light">
-                          <td class="py-xs px-sm">
-                            <div class="icon rounded-full bg-warning"></div>
-                          </td>
-                          <td class="py-xs px-sm text-left">Office 1</td>
-                          <td class="py-xs px-sm text-right">
-                            <div class="-mr-xs flex-row justify-end">
-                              <a href="javascript:void(0);" class="jsSettingsPopup_open button f-color-primary opacity-50 hover:opacity-100 hover:f-color-secondary mr-xs" title="Settings" aria-label="Settings" data-microtip-position="top" role="tooltip"><i data-feather="settings"></i></a>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="py-xs px-sm">
-                            <div class="icon rounded-full bg-success"></div>
-                          </td>
-                          <td class="py-xs px-sm text-left">Office 2</td>
-                          <td class="py-xs px-sm text-right">
-                            <div class="-mr-xs flex-row justify-end">
-                              <button class="button f-color-primary opacity-50 hover:opacity-100 hover:f-color-secondary mr-xs" title="Watch" aria-label="Watch" data-microtip-position="top" role="tooltip"><i data-feather="eye"></i></button>
-                              <a href="javascript:void(0);" class="jsSettingsPopup_open button f-color-primary opacity-50 hover:opacity-100 hover:f-color-secondary mr-xs" title="Settings" aria-label="Settings" data-microtip-position="top" role="tooltip"><i data-feather="settings"></i></a>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr class="bg-light">
-                          <td class="py-xs px-sm">
-                            <div class="icon rounded-full bg-success"></div>
-                          </td>
-                          <td class="py-xs px-sm text-left">Office 3</td>
-                          <td class="py-xs px-sm text-right">
-                            <div class="-mr-xs flex-row justify-end">
-                              <button class="button f-color-primary opacity-50 hover:opacity-100 hover:f-color-secondary mr-xs" title="Watch" aria-label="Watch" data-microtip-position="top" role="tooltip"><i data-feather="eye"></i></button>
-                              <a href="javascript:void(0);" class="jsSettingsPopup_open button f-color-primary opacity-50 hover:opacity-100 hover:f-color-secondary mr-xs" title="Settings" aria-label="Settings" data-microtip-position="top" role="tooltip"><i data-feather="settings"></i></a>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="py-xs px-sm">
-                            <div class="icon rounded-full bg-warning"></div>
-                          </td>
-                          <td class="py-xs px-sm text-left">Office 4</td>
-                          <td class="py-xs px-sm text-right">
-                            <div class="-mr-xs flex-row justify-end">
-                              <a href="javascript:void(0);" class="jsSettingsPopup_open button f-color-primary opacity-50 hover:opacity-100 hover:f-color-secondary mr-xs" title="Settings" aria-label="Settings" data-microtip-position="top" role="tooltip"><i data-feather="settings"></i></a>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr class="bg-light">
-                          <td class="py-xs px-sm">
-                            <div class="icon rounded-full bg-warning"></div>
-                          </td>
-                          <td class="py-xs px-sm text-left">Video Wall 4G PTZ</td>
-                          <td class="py-xs px-sm text-right">
-                            <div class="-mr-xs flex-row justify-end">
-                              <a href="javascript:void(0);" class="jsSettingsPopup_open button f-color-primary opacity-50 hover:opacity-100 hover:f-color-secondary mr-xs" title="Settings" aria-label="Settings" data-microtip-position="top" role="tooltip"><i data-feather="settings"></i></a>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="py-xs px-sm">
-                            <div class="icon rounded-full bg-warning"></div>
-                          </td>
-                          <td class="py-xs px-sm text-left">Marketing</td>
-                          <td class="py-xs px-sm text-right">
-                            <div class="-mr-xs flex-row justify-end">
-                              <a href="javascript:void(0);" class="jsSettingsPopup_open button f-color-primary opacity-50 hover:opacity-100 hover:f-color-secondary mr-xs" title="Settings" aria-label="Settings" data-microtip-position="top" role="tooltip"><i data-feather="settings"></i></a>
-                            </div>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                    <header class="f-color-secondary py-sm px-xs border-default border-b flex-row flex-wrap justify-space-between align-center">
+                      <div class="searchBar flex-row flex-stretch bg-white">
+                        <button class="flex-none px-xs py-xs border-light cursor-pointer hover:bg-secondary hover:f-color-white">
+                          <div class="icon">
+                            <span class="">
+                              <i data-feather="search"></i>
+                            </span>
+                          </div>
+                        </button>
+                        <input type="text" placeholder="Search Camera" class="h-full p-xs flex-auto transition-all bg-white border-light text-right italic focus:bg-light">
+                      </div>
+                    </header>
+                    <div class="bg-dark f-color-white f-size-xxs p-thin text-center">Drag camera to side screens for live preview</div>
+                    <section class="py-sm pl-sm">
+                      <div class="mCustomScrollbar dropDownListWrapper" data-mcs-theme="minimal-dark">
+                        <ul class="jSDropDownList dropDownList list-reset f-color-secondary">
+                          <li>
+                            <a href="javascript:void(0);" class="f-size-3sm f-color-primary flex-row align-center no-underline py-xs">
+                              <h2>Vmukti South</h2>
+                              <span class="arrow-icon ml-xs flex-row align-center"><i data-feather="chevron-down"></i></span>
+                            </a>
+                            <ul class="list-reset">
+                              <li>
+                                <a href="javascript:void(0);" class="f-size-2sm f-color-inherit flex-row align-center no-underline py-xs">
+                                  <h2>Parking Area</h2>
+                                  <span class="arrow-icon ml-xs flex-row align-center"><i data-feather="chevron-down"></i></span>
+                                </a>
+                                <ul class="list-reset">
+                                  <li>
+                                    <a href="javascript:void(0);" class="flex-row f-color-inherit align-center no-underline py-xs">
+                                      <h2>Parking Cam</h2>
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="javascript:void(0);" class="flex-row f-color-inherit align-center no-underline py-xs">
+                                      <h2>Office Outside</h2>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li>
+                                <a href="javascript:void(0);" class="f-size-2sm f-color-inherit flex-row align-center no-underline py-xs">
+                                  <h2>Office Area</h2>
+                                  <span class="arrow-icon ml-xs flex-row align-center"><i data-feather="chevron-down"></i></span>
+                                </a>
+                                <ul class="list-reset">
+                                  <li>
+                                    <a href="javascript:void(0);" class="flex-row f-color-inherit align-center no-underline py-xs">
+                                      <h2>Office 1</h2>
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="javascript:void(0);" class="flex-row f-color-inherit align-center no-underline py-xs">
+                                      <h2>Office 2</h2>
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="javascript:void(0);" class="flex-row f-color-inherit align-center no-underline py-xs">
+                                      <h2>Office 3</h2>
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="javascript:void(0);" class="flex-row f-color-inherit align-center no-underline py-xs">
+                                      <h2>Office 4</h2>
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="javascript:void(0);" class="flex-row f-color-inherit align-center no-underline py-xs">
+                                      <h2>Video Wall 4G PTZ</h2>
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="javascript:void(0);" class="flex-row f-color-inherit align-center no-underline py-xs">
+                                      <h2>Marketing</h2>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li>
+                                <a href="javascript:void(0);" class="f-size-2sm f-color-inherit flex-row align-center no-underline py-xs">
+                                  <h2>Admin</h2>
+                                  <span class="arrow-icon ml-xs flex-row align-center"><i data-feather="chevron-down"></i></span>
+                                </a>
+                                <ul class="list-reset d-hidden">
+                                  <li>
+                                    <a href="javascript:void(0);" class="flex-row f-color-inherit align-center no-underline py-xs">
+                                      <h2>Parking Cam</h2>
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="javascript:void(0);" class="flex-row f-color-inherit align-center no-underline py-xs">
+                                      <h2>Office Outside</h2>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <a href="javascript:void(0);" class="f-size-3sm f-color-primary flex-row align-center no-underline py-xs">
+                              <h2>Vmukti North</h2>
+                              <span class="arrow-icon ml-xs flex-row align-center"><i data-feather="chevron-down"></i></span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </section>
                   </div>
                 </div>
-                <div class="col-12 lg:col-6 pr-md pb-sm flex-col">
+                <div id="jsFullScreenEnable" class="col-8 sm:col-9 lg:col-6 xl:col-7 pr-md pb-sm flex-col">
                   <div class="bg-white shadow">
-                    <header class="f-color-secondary p-md border-default border-b flex-row flex-wrap justify-space-between align-center">
-                      <h2 class="f-size-md">Live Preview</h2>
-                      <p>Live preview of your selected camera</p>
+                    <header class="f-color-secondary pl-sm pt-sm border-default border-b flex-row flex-wrap justify-space-between align-center">
+                      <div class="flex-row align-center flex-none ml-auto pr-sm pb-sm">
+                        <div class="flex-row align-center -mr-sm">
+                          <div class="mr-sm" aria-label="2x2" data-microtip-position="top" role="tooltip">
+                            <button data-grid="2" class="jsGridToggleButton button grid-2x2 icon icon-2sm hover:shadow-md f-color-secondary hover:f-color-primary is-active">
+                              <span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                              </span>
+                            </button>
+                          </div>
+                          <div class="mr-sm" aria-label="3x3" data-microtip-position="top" role="tooltip">
+                            <button data-grid="3" class="jsGridToggleButton button grid-3x3 icon icon-2sm hover:shadow-md f-color-secondary hover:f-color-primary">
+                              <span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                              </span>
+                            </button>
+                          </div>
+                          <div class="mr-sm" aria-label="4x4" data-microtip-position="top" role="tooltip">
+                            <button data-grid="4" class="jsGridToggleButton button grid-4x4 icon icon-2sm hover:shadow-md f-color-secondary hover:f-color-primary">
+                              <span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                              </span>
+                            </button>
+                          </div>
+                          <div class="mr-sm">
+                            <button data-fullscreen-target="jsFullScreenEnable" aria-label="Full Screen" data-microtip-position="top" role="tooltip" class="JSFullScreenTrigger button bg-primary f-color-white f-weight-semibold hover:shadow-md transition-all p-xs">
+                              <span class="icon icon-maximize">
+                                <i data-feather="maximize"></i>
+                              </span>
+                              <span class="icon icon-minimize">
+                                <i data-feather="minimize"></i>
+                              </span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
                     </header>
-                    <section class="p-md">
-                      <div class="flex-row flex-wrap -mr-sm -mb-sm f-color-primary f-size-sm">
-                        <div class="col-12 lg:col-6 flex-row pr-sm pb-sm">
-                          <h3 class="f-color-secondary mr-xs">Device Name:</h3>
-                          <p>Parking Cam</p>
+                    <section class="p-sm">
+                      <div data-grid="2" class="jsGridToggleWrapper grid-wrapper flex-row flex-wrap -mr-sm -mb-sm">
+                        <div class="grid-col pr-sm pb-sm">
+                          <section class="ratio-16x9 bg-black">
+                            <iframe class="pos-absolute pin w-full h-full"></iframe>
+                          </section>
                         </div>
-                        <div class="col-12 lg:col-6 flex-row pr-sm pb-sm">
-                          <h3 class="f-color-secondary mr-xs">Device ID:</h3>
-                          <p>AAA-12356-AAAA</p>
+                        <div class="grid-col pr-sm pb-sm">
+                          <section class="ratio-16x9 bg-black">
+                            <iframe class="pos-absolute pin w-full h-full"></iframe>
+                          </section>
                         </div>
-                        <div class="col-12 lg:col-6 flex-row pr-sm pb-sm">
-                          <h3 class="f-color-secondary mr-xs">Device Zone:</h3>
-                          <p>VMukti South</p>
+                        <div class="grid-col pr-sm pb-sm">
+                          <section class="ratio-16x9 bg-black">
+                            <iframe class="pos-absolute pin w-full h-full"></iframe>
+                          </section>
                         </div>
-                        <div class="col-12 lg:col-6 flex-row pr-sm pb-sm">
-                          <h3 class="f-color-secondary mr-xs">Device Ward:</h3>
-                          <p>Parking Area</p>
+                        <div class="grid-col pr-sm pb-sm">
+                          <section class="ratio-16x9 bg-black">
+                            <iframe class="pos-absolute pin w-full h-full"></iframe>
+                          </section>
+                        </div>
+                        <div class="grid-col pr-sm pb-sm">
+                          <section class="ratio-16x9 bg-black">
+                            <iframe class="pos-absolute pin w-full h-full"></iframe>
+                          </section>
+                        </div>
+                        <div class="grid-col pr-sm pb-sm">
+                          <section class="ratio-16x9 bg-black">
+                            <iframe class="pos-absolute pin w-full h-full"></iframe>
+                          </section>
+                        </div>
+                        <div class="grid-col pr-sm pb-sm">
+                          <section class="ratio-16x9 bg-black">
+                            <iframe class="pos-absolute pin w-full h-full"></iframe>
+                          </section>
+                        </div>
+                        <div class="grid-col pr-sm pb-sm">
+                          <section class="ratio-16x9 bg-black">
+                            <iframe class="pos-absolute pin w-full h-full"></iframe>
+                          </section>
+                        </div>
+                        <div class="grid-col pr-sm pb-sm">
+                          <section class="ratio-16x9 bg-black">
+                            <iframe class="pos-absolute pin w-full h-full"></iframe>
+                          </section>
                         </div>
                       </div>
                     </section>
-                    <section class="ratio-16x9 bg-black">
-                      <iframe class="pos-absolute pin w-full h-full"></iframe>
-                      <button title="Full Screen" class="icon icon-md cursor-pointer bg-primary f-color-white f-size-2sm f-weight-semibold hover:shadow-md transition-all pos-absolute pin-t pin-r">
-                        <span class="p-xs">
-                          <i data-feather="maximize"></i>
-                        </span>
-                      </button>
-                    </section>
-                    <footer class="p-md text-center">
-                      <span class="f-color-secondary">Not able to view? <a href="#" class="f-color-primary">Click here for system test</a></span>
-                    </footer>
                   </div>
+                </div>
+                <div class="col-4 sm:col-3 lg:col-2 xl:col-2 pr-md pb-sm flex-col">
+                  <div class="bg-white shadow flex-stretch"></div>
                 </div>
               </div>
             </section>
@@ -321,98 +377,6 @@
               </script> VMukti Solutions Pvt. Ltd. All rights reserved.</span>
           </div>
         </footer>
-      </div>
-    </div>
-    <!-- Settings Popup -->
-    <div id="jsSettingsPopup" class="d-hidden container-popup-md popup shadow-lg bg-white mx-xs my-xs">
-      <div class="flex-col w-full flex-stretch popup-wrap">
-        <button class="jsSettingsPopup_close pos-absolute pin-t pin-r z-10 mt-sm mr-sm d-inline-block ml-auto">
-          <span class="fcolor-inherit icon icon-xxs">
-            <span class="p-xxs">
-              <i data-feather="x"></i>
-            </span>
-          </span>
-        </button>
-        <div class="flex-stretch overflow-auto popup-body">
-          <header class="p-sm border-default border-b">
-            <h2 class="f-size-md f-color-secondary">Settings</h2>
-          </header>
-          <form class="flex-col p-sm">
-            <div class="flex-row align-center pb-sm">
-              <div class="col-6">
-                <h3>Alarm Switch</h3>
-              </div>
-              <div class="col-6">
-                <div class="flex-col w-full">
-                  <div class="select">
-                    <select class="py-2xs px-xs bg-light f-color-secondary flex-stretch focus:shadow transition-all w-full text-right">
-                      <option>ON</option>
-                      <option>OFF</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="flex-row align-center pb-sm">
-              <div class="col-6">
-                <h3>Highlimit</h3>
-              </div>
-              <div class="col-6">
-                <div class="flex-col w-full">
-                  <input type="text" class="py-2xs px-xs bg-light f-color-secondary flex-stretch focus:shadow transition-all w-full text-right">
-                </div>
-              </div>
-            </div>
-            <div class="flex-row align-center pb-sm">
-              <div class="col-6">
-                <h3>Duration</h3>
-              </div>
-              <div class="col-6">
-                <div class="flex-col w-full">
-                  <input type="text" class="py-2xs px-xs bg-light f-color-secondary flex-stretch focus:shadow transition-all w-full text-right">
-                </div>
-              </div>
-            </div>
-            <div class="flex-row align-center pb-sm">
-              <div class="col-6">
-                <h3>Image Path</h3>
-              </div>
-              <div class="col-6">
-                <div class="flex-col w-full">
-                  <input type="text" class="py-2xs px-xs bg-light f-color-secondary flex-stretch focus:shadow transition-all w-full text-right">
-                </div>
-              </div>
-            </div>
-            <div class="flex-row align-center pb-sm">
-              <div class="col-6">
-                <h3>Face Deduplication</h3>
-              </div>
-              <div class="col-6">
-                <div class="flex-col w-full">
-                  <input type="text" class="py-2xs px-xs bg-light f-color-secondary flex-stretch focus:shadow transition-all w-full text-right">
-                </div>
-              </div>
-            </div>
-            <div class="flex-row align-center pb-sm">
-              <div class="col-6">
-                <h3>Capture Interval</h3>
-              </div>
-              <div class="col-6">
-                <div class="flex-col w-full">
-                  <input type="text" class="py-2xs px-xs bg-light f-color-secondary flex-stretch focus:shadow transition-all w-full text-right">
-                </div>
-              </div>
-            </div>
-          </form>
-          <header class="p-sm pt-0 border-default border-b flex-row justify-center">
-            <button class="button mx-xs bg-primary f-color-white f-size-2sm f-weight-semibold hover:shadow-md transition-all py-xs px-2xs">
-              <span>Update</span>
-            </button>
-            <button class="button mx-xs bg-secondary f-color-white f-size-2sm f-weight-semibold hover:shadow-md transition-all py-xs px-2xs">
-              <span>Cancel</span>
-            </button>
-          </header>
-        </div>
       </div>
     </div>
   </main>
