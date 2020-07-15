@@ -1,0 +1,38 @@
+/* The switch - the box around the slider */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  border-radius: 5rem;
+  > input, > span {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+  }
+  > input {
+    cursor: pointer;
+    z-index: 1;
+    &:checked + span {
+      background-color: dodgerblue;
+      &:before {
+        transform: translateX(100%);
+      }
+    }
+  }
+  > span {
+    display: flex;
+    color: inherit;
+    background-color: lightgray;
+    border-radius: inherit;
+    &:before {
+      content: "";
+      width: 50%;
+      width: 50%;
+      border-radius: inherit;
+      box-shadow: 0 0 3px;
+      background-color: white;
+      transition: transform .15s ease-in-out;
+    }
+  }
+}
