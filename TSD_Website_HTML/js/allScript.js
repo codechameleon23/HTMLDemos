@@ -160,6 +160,17 @@ $('table.stacked').stackedRows();
    });
 
 //  -------------------------------------------
+//  time picker
+//  -------------------------------------------
+   $(".timepicker").flatpickr({
+      enableTime: true,
+      noCalendar: true,
+      dateFormat: "H:i K",
+      defaultDate: new Date(),
+      time_24hr: false,
+   });
+
+//  -------------------------------------------
 //  Drop down 
 //  -------------------------------------------
    $('.dropdown-trigger').on('click', function(){

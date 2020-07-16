@@ -20,6 +20,7 @@
   <title>Playback | Thermal System</title>
   <!-- <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;600&display=swap" rel="stylesheet"> -->
   <link rel="stylesheet" href="./css/styles.css" />
+  <script src="../../GM_Website_HTML/gulpfile.js"></script>
 </head>
 
 <body class="jsNavbarToggle is-close flex-col bg-light">
@@ -124,12 +125,27 @@
         <section class="flex-auto flex-col">
           <div class="container mx-auto xl:px-xs">
             <!-- Page Heading -->
-            <header class="flex-row flex-wrap justify-space-between align-center py-sm">
-              <h2 class="f-size-md f-weight-semibold md:f-weight-light md:f-size-xl f-weight-light mr-sm">Playback</h2>
-              <div class="flex-row align-center ml-auto">
-                <h3 class="mr-xs">Select&nbsp;Date</h3>
-                <div class="flex-col w-full">
-                  <input type="text" class="datepicker py-2xs px-xs bg-primary f-color-white flex-stretch focus:shadow transition-all w-full text-center">
+            <header class="pt-sm">
+              <div class="flex-row flex-wrap justify-space-between align-center -mr-sm">
+                <div class="pr-sm pb-sm">
+                  <h2 class="f-size-md f-weight-semibold md:f-weight-light md:f-size-xl f-weight-light">Playback</h2>
+                </div>
+                <div class="pr-sm pb-sm ml-auto">
+                  <div class="flex-row flex-wrap md:align-center -mr-sm -mb-sm">
+                    <div class="pr-sm pb-sm">
+                      <span>Select&nbsp;Date and time</span>
+                    </div>
+                    <div class="pr-sm pb-sm flex-auto">
+                      <div class="flex-col w-full">
+                        <input type="text" class="datepicker py-2xs px-xs bg-primary f-color-white flex-stretch focus:shadow transition-all w-full text-center">
+                      </div>
+                    </div>
+                    <div class="pr-sm pb-sm flex-auto">
+                      <div class="flex-col w-full">
+                        <input type="text" class="timepicker py-2xs px-xs bg-primary f-color-white flex-stretch focus:shadow transition-all w-full text-center">
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </header>
@@ -246,7 +262,7 @@
                     </section>
                   </div>
                 </div>
-                <div id="jsFullScreenEnable" class="col-8 sm:col-9 lg:col-6 xl:col-7 pr-md pb-sm flex-col">
+                <div id="jsFullScreenEnable" class="col-12 lg:col-8 xl:col-9 pr-md pb-sm flex-col">
                   <div class="bg-white shadow">
                     <header class="f-color-secondary pl-sm pt-sm border-default border-b flex-row flex-wrap justify-space-between align-center">
                       <div class="flex-row align-center flex-none ml-auto pr-sm pb-sm">
@@ -362,9 +378,9 @@
                     </section>
                   </div>
                 </div>
-                <div class="col-4 sm:col-3 lg:col-2 xl:col-2 pr-md pb-sm flex-col">
-                  <div class="bg-white shadow flex-stretch"></div>
-                </div>
+                <!--								<div class="col-4 sm:col-3 lg:col-2 xl:col-2 pr-md pb-sm flex-col">-->
+                <!--									<div class="bg-white shadow flex-stretch"></div>-->
+                <!--								</div>-->
               </div>
             </section>
           </div>
