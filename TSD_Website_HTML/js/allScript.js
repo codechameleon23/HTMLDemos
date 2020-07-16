@@ -167,7 +167,6 @@ $('table.stacked').stackedRows();
       noCalendar: true,
       dateFormat: "H:i K",
       defaultDate: new Date(),
-      time_24hr: false,
    });
 
 //  -------------------------------------------
