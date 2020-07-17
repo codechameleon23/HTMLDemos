@@ -49,9 +49,10 @@ const PROJECT_JS_LIST = [
   ROOT_JS_PATH+'/mCustomScrollbar.min.js',
   // ROOT_JS_PATH+'/animate.on.scroll.min.js',
   ROOT_JS_PATH+'/flatpickr.min.js',
-  // ROOT_JS_PATH+'/ion.rangeSlider.min.js',
+  ROOT_JS_PATH+'/ion.rangeSlider.min.js',
   ROOT_JS_PATH+'/stackedrows.min.js',
   ROOT_JS_PATH+'/feather.min.js',
+  ROOT_JS_PATH+'/moment.min.js',
 
   SRC_JS_PATH+'/_commonFunc.js',
   SRC_JS_PATH+'/_featherIcons.js',

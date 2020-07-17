@@ -18,7 +18,6 @@
   <meta name="format-detection" content="email=no">
   <link rel="icon" href="./images/favicon.png" />
   <title>Playback | Thermal System</title>
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;600&display=swap" rel="stylesheet"> -->
   <link rel="stylesheet" href="./css/styles.css" />
   <script src="../../GM_Website_HTML/gulpfile.js"></script>
 </head>
@@ -140,11 +139,11 @@
                         <input type="text" class="datepicker py-2xs px-xs bg-primary f-color-white flex-stretch focus:shadow transition-all w-full text-center">
                       </div>
                     </div>
-                    <div class="pr-sm pb-sm flex-auto">
-                      <div class="flex-col w-full">
-                        <input type="text" class="timepicker py-2xs px-xs bg-primary f-color-white flex-stretch focus:shadow transition-all w-full text-center">
-                      </div>
-                    </div>
+                    <!--                                        <div class="pr-sm pb-sm flex-auto">-->
+                    <!--                                            <div class="flex-col w-full">-->
+                    <!--                                                <input type="text" class="timepicker py-2xs px-xs bg-primary f-color-white flex-stretch focus:shadow transition-all w-full text-center">-->
+                    <!--                                            </div>-->
+                    <!--                                        </div>-->
                   </div>
                 </div>
               </div>
@@ -263,6 +262,22 @@
                   </div>
                 </div>
                 <div id="jsFullScreenEnable" class="col-12 lg:col-8 xl:col-9 pr-md pb-sm flex-col">
+                  <section class="flex-col timeSliderWrapper">
+                    <div class="-mr-sm flex-col xl:flex-row-reverse">
+                      <div class="pr-sm pb-sm flex-none flex-row">
+                        <div class="ml-auto switch-field mt-auto">
+                          <input type="radio" id="radio-am" name="switch-am-pm" value="yes" checked="checked" />
+                          <label class="p-thin" for="radio-am">AM</label>
+                          <input type="radio" id="radio-pm" name="switch-am-pm" value="no" />
+                          <label class="p-thin" for="radio-pm">PM</label>
+                        </div>
+                      </div>
+                      <div class="pr-sm pb-sm flex-auto">
+                        <!-- Time slider -->
+                        <input class="jsTimeRange" type="text" id="ion" name="time-range" value="" />
+                      </div>
+                    </div>
+                  </section>
                   <div class="bg-white shadow">
                     <header class="f-color-secondary pl-sm pt-sm border-default border-b flex-row flex-wrap justify-space-between align-center">
                       <div class="flex-row align-center flex-none ml-auto pr-sm pb-sm">
