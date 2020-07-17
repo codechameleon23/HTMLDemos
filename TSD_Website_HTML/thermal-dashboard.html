@@ -66,7 +66,7 @@
                 </div>
               </section>
               <footer class="p-sm flex-row justify-center">
-                <button class="button mx-xs bg-primary f-color-white f-weight-semibold hover:shadow-md transition-all py-xs px-2xs">
+                <button class="jsSettingsPopup_open button mx-xs bg-primary f-color-white f-weight-semibold hover:shadow-md transition-all py-xs px-2xs">
                   <span class="mr-xs"><i data-feather="settings"></i></span><span>Setting</span>
                 </button>
                 <button class="jsSettingsPopup_close button mx-xs bg-secondary f-color-white f-weight-semibold hover:shadow-md transition-all py-xs px-2xs">
@@ -139,6 +139,102 @@
       </div>
     </div>
   </main>
+  <!-- Settings Popup -->
+  <div id="jsSettingsPopup" class="d-hidden container-popup-md popup shadow-lg bg-white mx-xs my-xs">
+    <div class="flex-col w-full flex-stretch popup-wrap">
+      <!-- <button class="jsSettingsPopup_close pos-absolute pin-t pin-r z-10 mt-sm mr-sm d-inline-block ml-auto">
+            <span class="fcolor-inherit icon icon-xxs">
+                <span class="p-xxs">
+                    <i data-feather="x"></i>
+                </span>
+            </span>
+        </button> -->
+      <div class="flex-stretch overflow-auto popup-body">
+        <header class="p-sm border-default border-b">
+          <h2 class="f-size-md f-color-secondary">Settings</h2>
+        </header>
+        <form class="flex-col p-sm">
+          <div class="flex-row align-center pb-sm">
+            <div class="col-6">
+              <h3>Alarm Switch</h3>
+            </div>
+            <div class="col-6">
+              <div class="flex-col w-full">
+                <label class="switch ratio-switch icon-lg ml-auto">
+                  <input name="alarm-switch" type="checkbox">
+                  <span class="slider round"></span>
+                </label>
+                <!-- <div class="select">
+                                <select class="py-2xs px-xs bg-light f-color-secondary flex-stretch focus:shadow transition-all w-full text-right">
+                                    <option>ON</option>
+                                    <option>OFF</option>
+                                </select>
+                            </div> -->
+              </div>
+            </div>
+          </div>
+          <div class="flex-row align-center pb-sm">
+            <div class="col-6">
+              <h3>Highlimit</h3>
+            </div>
+            <div class="col-6">
+              <div class="flex-col w-full">
+                <input type="text" class="py-2xs px-xs bg-light f-color-secondary flex-stretch focus:shadow transition-all w-full text-right">
+              </div>
+            </div>
+          </div>
+          <div class="flex-row align-center pb-sm">
+            <div class="col-6">
+              <h3>Duration</h3>
+            </div>
+            <div class="col-6">
+              <div class="flex-col w-full">
+                <input type="text" class="py-2xs px-xs bg-light f-color-secondary flex-stretch focus:shadow transition-all w-full text-right">
+              </div>
+            </div>
+          </div>
+          <div class="flex-row align-center pb-sm">
+            <div class="col-6">
+              <h3>Image Path</h3>
+            </div>
+            <div class="col-6">
+              <div class="flex-col w-full">
+                <input type="text" class="py-2xs px-xs bg-light f-color-secondary flex-stretch focus:shadow transition-all w-full text-right">
+              </div>
+            </div>
+          </div>
+          <div class="flex-row align-center pb-sm">
+            <div class="col-6">
+              <h3>Face Deduplication</h3>
+            </div>
+            <div class="col-6">
+              <div class="flex-col w-full">
+                <input type="text" class="py-2xs px-xs bg-light f-color-secondary flex-stretch focus:shadow transition-all w-full text-right">
+              </div>
+            </div>
+          </div>
+          <div class="flex-row align-center pb-sm">
+            <div class="col-6">
+              <h3>Capture Interval</h3>
+            </div>
+            <div class="col-6">
+              <div class="flex-col w-full">
+                <input type="text" class="py-2xs px-xs bg-light f-color-secondary flex-stretch focus:shadow transition-all w-full text-right">
+              </div>
+            </div>
+          </div>
+        </form>
+        <header class="p-sm pt-0 border-default border-b flex-row justify-center">
+          <button class="button mx-xs bg-primary f-color-white f-weight-semibold hover:shadow-md transition-all py-xs px-2xs">
+            <span>Update</span>
+          </button>
+          <button class="jsSettingsPopup_close button mx-xs bg-secondary f-color-white f-weight-semibold hover:shadow-md transition-all py-xs px-2xs">
+            <span>Cancel</span>
+          </button>
+        </header>
+      </div>
+    </div>
+  </div>
   <!-- Footer -->
   <footer class="container mx-auto py-md">
     <div class="text-center f-color-light">
