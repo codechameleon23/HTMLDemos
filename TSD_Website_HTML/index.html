@@ -74,7 +74,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="no-underline flex-row px-sm py-xs f-color-inherit hover:bg-primary-light">
+                    <a href="login.html" class="no-underline flex-row px-sm py-xs f-color-inherit hover:bg-primary-light">
                       <span class="mr-xs"><i data-feather="log-out"></i></span> Logout
                     </a>
                   </li>
@@ -326,13 +326,18 @@
                         </div>
                       </div>
                     </section>
-                    <section class="ratio-16x9 bg-black">
+                    <section id="jsFullScreenVideoEnable" class="ratio-16x9 bg-black">
                       <iframe class="pos-absolute pin w-full h-full"></iframe>
-                      <button title="Full Screen" class="icon icon-md cursor-pointer bg-primary f-color-white f-size-2sm f-weight-semibold hover:shadow-md transition-all pos-absolute pin-t pin-r">
-                        <span class="p-xs">
-                          <i data-feather="maximize"></i>
-                        </span>
-                      </button>
+                      <div class="pos-absolute pin-t pin-r">
+                        <button class="JSFullScreenTrigger button bg-primary f-color-white f-weight-semibold hover:shadow-md transition-all p-xs" data-fullscreen-target="jsFullScreenVideoEnable" aria-label="Full Screen" data-microtip-position="top" role="tooltip">
+                          <span class="icon icon-maximize">
+                            <i data-feather="maximize"></i>
+                          </span>
+                          <span class="icon icon-minimize">
+                            <i data-feather="minimize"></i>
+                          </span>
+                        </button>
+                      </div>
                     </section>
                     <footer class="p-md text-center">
                       <span class="f-color-secondary">Not able to view? <a href="#" class="f-color-primary">Click here for system test</a></span>
@@ -374,7 +379,7 @@
                     <div class="flex-col w-full">
                       <label class="switch ratio-switch icon-2md ml-auto">
                         <input name="alarm-switch" type="checkbox">
-                        <span class="slider round"></span>
+                        <span class="slider"></span>
                       </label>
                     </div>
                   </div>
@@ -389,7 +394,7 @@
                     <div class="flex-col w-full">
                       <label class="switch ratio-switch icon-2md ml-auto">
                         <input name="alarm-switch" type="checkbox">
-                        <span class="slider round"></span>
+                        <span class="slider"></span>
                       </label>
                     </div>
                   </div>
@@ -404,7 +409,7 @@
                     <div class="flex-col w-full">
                       <label class="switch ratio-switch icon-2md ml-auto">
                         <input name="alarm-switch" type="checkbox">
-                        <span class="slider round"></span>
+                        <span class="slider"></span>
                       </label>
                     </div>
                   </div>
@@ -419,7 +424,7 @@
                     <div class="flex-col w-full">
                       <label class="switch ratio-switch icon-2md ml-auto">
                         <input name="alarm-switch" type="checkbox">
-                        <span class="slider round"></span>
+                        <span class="slider"></span>
                       </label>
                     </div>
                   </div>
@@ -434,7 +439,7 @@
                     <div class="flex-col w-full">
                       <label class="switch ratio-switch icon-2md ml-auto">
                         <input name="alarm-switch" type="checkbox">
-                        <span class="slider round"></span>
+                        <span class="slider"></span>
                       </label>
                     </div>
                   </div>
@@ -545,14 +550,14 @@
               </div>
             </div>
           </form>
-          <header class="p-sm pt-0 border-default border-b flex-row justify-center">
+          <footer class="p-sm pt-0 flex-row justify-center">
             <button class="button mx-xs bg-primary f-color-white f-weight-semibold hover:shadow-md transition-all py-xs px-2xs">
               <span>Update</span>
             </button>
             <button class="jsSettingsPopup_close button mx-xs bg-secondary f-color-white f-weight-semibold hover:shadow-md transition-all py-xs px-2xs">
               <span>Cancel</span>
             </button>
-          </header>
+          </footer>
         </div>
       </div>
     </div>
@@ -617,14 +622,14 @@
               </div>
             </div>
           </form>
-          <header class="p-sm pt-0 border-default border-b flex-row justify-center">
+          <footer class="p-sm pt-0 flex-row justify-center">
             <button class="button mx-xs bg-primary f-color-white f-weight-semibold hover:shadow-md transition-all py-xs px-2xs">
               <span>Submit</span>
             </button>
             <button class="jsSettingsPopup_close button mx-xs bg-secondary f-color-white f-weight-semibold hover:shadow-md transition-all py-xs px-2xs">
               <span>Cancel</span>
             </button>
-          </header>
+          </footer>
         </div>
       </div>
     </div>

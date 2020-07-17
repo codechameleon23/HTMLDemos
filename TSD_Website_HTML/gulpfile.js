@@ -72,10 +72,12 @@ const PROJECT_JS_LIST = [
 ];
 
 const PROJECT_PAGES_LIST = [
+  './src/login.html',
   './src/index.html',
   './src/multiscreen.html',
   './src/analytics.html',
   './src/playback.html',
+  './src/thermal-dashboard.html',
 ]
 
 function CSS_OPERATION() {

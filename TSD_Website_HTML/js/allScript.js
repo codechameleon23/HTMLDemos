@@ -127,7 +127,8 @@ $('table.stacked').stackedRows();
    $('.JSFullScreenTrigger').on('click', function(){
       var trigger = $(this);
       var fullScreenTarget = trigger.data('fullscreen-target');
-      var elem = fullScreenTarget ? document.getElementById(fullScreenTarget) : document.documentElement;
+      var selectTarget = document.getElementById(fullScreenTarget) ;
+      var elem = selectTarget || document.documentElement;
       if(trigger.hasClass('is-fullscreen')){
          trigger.removeClass('is-fullscreen');
          trigger.attr('aria-label', 'Full screen');

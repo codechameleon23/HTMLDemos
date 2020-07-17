@@ -1324,6 +1324,58 @@ ol.list li:before
 }
 
 /* Border Radius classes */
+.rounded
+{
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+.rounded-tl
+{
+    border-top-left-radius: 2px;
+}
+
+.rounded-tr
+{
+    border-top-right-radius: 2px;
+}
+
+.rounded-bl
+{
+    border-bottom-left-radius: 2px;
+}
+
+.rounded-br
+{
+    border-bottom-right-radius: 2px;
+}
+
+.rounded-l
+{
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+.rounded-r
+{
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.rounded-t
+{
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.rounded-b
+{
+    border-bottom-right-radius: 2px; 
+    border-bottom-left-radius: 2px;
+}
+
 .rounded-full
 {
     border-top-left-radius: 9999px;
@@ -33659,12 +33711,53 @@ strong
     display: none;
 }
 
-.JSFullScreenTrigger:not(.is-fullscreen) .icon-minimize
+.JSFullScreenTrigger .icon-minimize
 {
     display: none;
 }
 
-.JSFullScreenTrigger.is-fullscreen .icon-maximize
+:-webkit-full-screen .JSFullScreenTrigger .icon-minimize
+{
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display:         inline-flex;
+}
+
+:-moz-full-screen .JSFullScreenTrigger .icon-minimize
+{
+    display: inline-flex;
+}
+
+:-ms-fullscreen .JSFullScreenTrigger .icon-minimize
+{
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
+
+:fullscreen .JSFullScreenTrigger .icon-minimize
+{
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display:         inline-flex;
+}
+
+:-webkit-full-screen .JSFullScreenTrigger .icon-maximize
+{
+    display: none;
+}
+
+:-moz-full-screen .JSFullScreenTrigger .icon-maximize
+{
+    display: none;
+}
+
+:-ms-fullscreen .JSFullScreenTrigger .icon-maximize
+{
+    display: none;
+}
+
+:fullscreen .JSFullScreenTrigger .icon-maximize
 {
     display: none;
 }
