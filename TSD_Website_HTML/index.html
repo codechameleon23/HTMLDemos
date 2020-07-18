@@ -339,6 +339,22 @@
                         </button>
                       </div>
                     </section>
+                    <section class="flex-col timeSliderWrapper px-sm pt-sm bg-semi-light">
+                      <div class="-mr-sm flex-col xl:flex-row-reverse">
+                        <div class="pr-sm pb-sm flex-none flex-row">
+                          <div class="ml-auto switch-field mt-auto">
+                            <input type="radio" id="radio-am" name="switch-am-pm" value="yes" checked="checked" />
+                            <label class="p-thin" for="radio-am">AM</label>
+                            <input type="radio" id="radio-pm" name="switch-am-pm" value="no" />
+                            <label class="p-thin" for="radio-pm">PM</label>
+                          </div>
+                        </div>
+                        <div class="pr-sm pb-sm flex-auto">
+                          <!-- Time slider -->
+                          <input class="jsTimeRange" type="text" id="ion" name="time-range" value="" />
+                        </div>
+                      </div>
+                    </section>
                     <footer class="p-md text-center">
                       <span class="f-color-secondary">Not able to view? <a href="#" class="f-color-primary">Click here for system test</a></span>
                     </footer>
