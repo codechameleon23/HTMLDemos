@@ -254,13 +254,13 @@ em
 
 ::-moz-selection
 {
-    color: #365c24;
+    color: #fff;
     background: #c9a3db;
 }
 
 ::selection
 {
-    color: #365c24;
+    color: #fff;
     background: #c9a3db;
 }
 
@@ -2458,6 +2458,22 @@ ol.list li:before
     .focus-within\:bg-primary:focus-within
     {
         background-color: #365c24;
+    }
+    .bg-primary-light
+    {
+        background-color: #c3cebd;
+    }
+    .hover\:bg-primary-light:hover
+    {
+        background-color: #c3cebd;
+    }
+    .focus\:bg-primary-light:focus
+    {
+        background-color: #c3cebd;
+    }
+    .focus-within\:bg-primary-light:focus-within
+    {
+        background-color: #c3cebd;
     }
     .bg-primary-dark
     {
@@ -4952,7 +4968,19 @@ ol.list li:before
     }
     .ratio-custom:before
     {
-        padding-top: 66.12022%;
+        padding-top: 75.13661%;
+    }
+    .ratio-custom-2:before
+    {
+        padding-top: 66.08696%;
+    }
+    .ratio-custom-3:before
+    {
+        padding-top: 57.54717%;
+    }
+    .ratio-custom-4:before
+    {
+        padding-top: 111.05263%;
     }
     .ratio-1x1:before
     {
@@ -5149,24 +5177,6 @@ ol.list li:before
             -ms-flex: inherit;
                 flex: inherit;
     }
-    .col-count-1
-    {
-        -webkit-column-count: 1;
-           -moz-column-count: 1;
-                column-count: 1;
-    }
-    .col-count-3
-    {
-        -webkit-column-count: 3;
-           -moz-column-count: 3;
-                column-count: 3;
-    }
-    .col-count-5
-    {
-        -webkit-column-count: 5;
-           -moz-column-count: 5;
-                column-count: 5;
-    }
     /* Icons sizes classes */
     .icon
     {
@@ -5186,17 +5196,19 @@ ol.list li:before
     .icon-logo img
     {
         width: 100%;
+        height: auto; 
         max-height: 33.8rem;
     }
     .icon-logo-ch
     {
-        width: 11.8rem;
+        width: 8.8rem;
     }
     .icon-logo-ch svg,
     .icon-logo-ch img
     {
         width: 100%;
-        max-height: 11.8rem;
+        height: auto; 
+        max-height: 8.8rem;
     }
     .icon-logo-ch-lg
     {
@@ -5206,6 +5218,7 @@ ol.list li:before
     .icon-logo-ch-lg img
     {
         width: 100%;
+        height: auto; 
         max-height: 13.7rem;
     }
     .icon-logo-medium
@@ -5216,6 +5229,7 @@ ol.list li:before
     .icon-logo-medium img
     {
         width: 100%;
+        height: auto; 
         max-height: 27.4rem;
     }
     .icon-unstuck-design
@@ -5226,6 +5240,7 @@ ol.list li:before
     .icon-unstuck-design img
     {
         width: 100%;
+        height: auto; 
         max-height: 20rem;
     }
     .icon-xs
@@ -5236,6 +5251,7 @@ ol.list li:before
     .icon-xs img
     {
         width: 100%;
+        height: auto; 
         max-height: 1.7rem;
     }
     .icon-md
@@ -5246,6 +5262,7 @@ ol.list li:before
     .icon-md img
     {
         width: 100%;
+        height: auto; 
         max-height: 4rem;
     }
     .icon-2md
@@ -5256,7 +5273,30 @@ ol.list li:before
     .icon-2md img
     {
         width: 100%;
+        height: auto; 
         max-height: 4.8rem;
+    }
+    .icon-lg
+    {
+        width: 6.4rem;
+    }
+    .icon-lg svg,
+    .icon-lg img
+    {
+        width: 100%;
+        height: auto; 
+        max-height: 6.4rem;
+    }
+    .icon-3lg
+    {
+        width: 12rem;
+    }
+    .icon-3lg svg,
+    .icon-3lg img
+    {
+        width: 100%;
+        height: auto; 
+        max-height: 12rem;
     }
     .icon-auto
     {
@@ -5266,6 +5306,7 @@ ol.list li:before
     .icon-auto img
     {
         width: 100%;
+        height: auto; 
         max-height: auto;
     }
     /* Display classes */
@@ -5408,6 +5449,24 @@ ol.list li:before
     /* Shade overlay*/
     .overlay-cover > *:before,
     .overlay-cover .image-holder:before
+    {
+        background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
+        background-image:         linear-gradient(to bottom, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
+    }
+    .hover\:overlay-cover:hover > *:before,
+    .hover\:overlay-cover:hover .image-holder:before
+    {
+        background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
+        background-image:         linear-gradient(to bottom, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
+    }
+    .focus\:overlay-cover:focus > *:before,
+    .focus\:overlay-cover:focus .image-holder:before
+    {
+        background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
+        background-image:         linear-gradient(to bottom, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
+    }
+    .focus-within\:overlay-cover:focus-within > *:before,
+    .focus-within\:overlay-cover:focus-within .image-holder:before
     {
         background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
         background-image:         linear-gradient(to bottom, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
@@ -6594,6 +6653,22 @@ ol.list li:before
     .sm\:focus-within\:bg-primary:focus-within
     {
         background-color: #365c24;
+    }
+    .sm\:bg-primary-light
+    {
+        background-color: #c3cebd;
+    }
+    .sm\:hover\:bg-primary-light:hover
+    {
+        background-color: #c3cebd;
+    }
+    .sm\:focus\:bg-primary-light:focus
+    {
+        background-color: #c3cebd;
+    }
+    .sm\:focus-within\:bg-primary-light:focus-within
+    {
+        background-color: #c3cebd;
     }
     .sm\:bg-primary-dark
     {
@@ -9088,7 +9163,19 @@ ol.list li:before
     }
     .sm\:ratio-custom:before
     {
-        padding-top: 66.12022%;
+        padding-top: 75.13661%;
+    }
+    .sm\:ratio-custom-2:before
+    {
+        padding-top: 66.08696%;
+    }
+    .sm\:ratio-custom-3:before
+    {
+        padding-top: 57.54717%;
+    }
+    .sm\:ratio-custom-4:before
+    {
+        padding-top: 111.05263%;
     }
     .sm\:ratio-1x1:before
     {
@@ -9285,24 +9372,6 @@ ol.list li:before
             -ms-flex: inherit;
                 flex: inherit;
     }
-    .sm\:col-count-1
-    {
-        -webkit-column-count: 1;
-           -moz-column-count: 1;
-                column-count: 1;
-    }
-    .sm\:col-count-3
-    {
-        -webkit-column-count: 3;
-           -moz-column-count: 3;
-                column-count: 3;
-    }
-    .sm\:col-count-5
-    {
-        -webkit-column-count: 5;
-           -moz-column-count: 5;
-                column-count: 5;
-    }
     /* Icons sizes classes */
     .sm\:icon
     {
@@ -9322,17 +9391,19 @@ ol.list li:before
     .sm\:icon-logo img
     {
         width: 100%;
+        height: auto; 
         max-height: 33.8rem;
     }
     .sm\:icon-logo-ch
     {
-        width: 11.8rem;
+        width: 8.8rem;
     }
     .sm\:icon-logo-ch svg,
     .sm\:icon-logo-ch img
     {
         width: 100%;
-        max-height: 11.8rem;
+        height: auto; 
+        max-height: 8.8rem;
     }
     .sm\:icon-logo-ch-lg
     {
@@ -9342,6 +9413,7 @@ ol.list li:before
     .sm\:icon-logo-ch-lg img
     {
         width: 100%;
+        height: auto; 
         max-height: 13.7rem;
     }
     .sm\:icon-logo-medium
@@ -9352,6 +9424,7 @@ ol.list li:before
     .sm\:icon-logo-medium img
     {
         width: 100%;
+        height: auto; 
         max-height: 27.4rem;
     }
     .sm\:icon-unstuck-design
@@ -9362,6 +9435,7 @@ ol.list li:before
     .sm\:icon-unstuck-design img
     {
         width: 100%;
+        height: auto; 
         max-height: 20rem;
     }
     .sm\:icon-xs
@@ -9372,6 +9446,7 @@ ol.list li:before
     .sm\:icon-xs img
     {
         width: 100%;
+        height: auto; 
         max-height: 1.7rem;
     }
     .sm\:icon-md
@@ -9382,6 +9457,7 @@ ol.list li:before
     .sm\:icon-md img
     {
         width: 100%;
+        height: auto; 
         max-height: 4rem;
     }
     .sm\:icon-2md
@@ -9392,7 +9468,30 @@ ol.list li:before
     .sm\:icon-2md img
     {
         width: 100%;
+        height: auto; 
         max-height: 4.8rem;
+    }
+    .sm\:icon-lg
+    {
+        width: 6.4rem;
+    }
+    .sm\:icon-lg svg,
+    .sm\:icon-lg img
+    {
+        width: 100%;
+        height: auto; 
+        max-height: 6.4rem;
+    }
+    .sm\:icon-3lg
+    {
+        width: 12rem;
+    }
+    .sm\:icon-3lg svg,
+    .sm\:icon-3lg img
+    {
+        width: 100%;
+        height: auto; 
+        max-height: 12rem;
     }
     .sm\:icon-auto
     {
@@ -9402,6 +9501,7 @@ ol.list li:before
     .sm\:icon-auto img
     {
         width: 100%;
+        height: auto; 
         max-height: auto;
     }
     /* Display classes */
@@ -9544,6 +9644,24 @@ ol.list li:before
     /* Shade overlay*/
     .sm\:overlay-cover > *:before,
     .sm\:overlay-cover .image-holder:before
+    {
+        background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
+        background-image:         linear-gradient(to bottom, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
+    }
+    .sm\:hover\:overlay-cover:hover > *:before,
+    .sm\:hover\:overlay-cover:hover .image-holder:before
+    {
+        background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
+        background-image:         linear-gradient(to bottom, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
+    }
+    .sm\:focus\:overlay-cover:focus > *:before,
+    .sm\:focus\:overlay-cover:focus .image-holder:before
+    {
+        background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
+        background-image:         linear-gradient(to bottom, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
+    }
+    .sm\:focus-within\:overlay-cover:focus-within > *:before,
+    .sm\:focus-within\:overlay-cover:focus-within .image-holder:before
     {
         background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
         background-image:         linear-gradient(to bottom, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
@@ -10730,6 +10848,22 @@ ol.list li:before
     .md\:focus-within\:bg-primary:focus-within
     {
         background-color: #365c24;
+    }
+    .md\:bg-primary-light
+    {
+        background-color: #c3cebd;
+    }
+    .md\:hover\:bg-primary-light:hover
+    {
+        background-color: #c3cebd;
+    }
+    .md\:focus\:bg-primary-light:focus
+    {
+        background-color: #c3cebd;
+    }
+    .md\:focus-within\:bg-primary-light:focus-within
+    {
+        background-color: #c3cebd;
     }
     .md\:bg-primary-dark
     {
@@ -13224,7 +13358,19 @@ ol.list li:before
     }
     .md\:ratio-custom:before
     {
-        padding-top: 66.12022%;
+        padding-top: 75.13661%;
+    }
+    .md\:ratio-custom-2:before
+    {
+        padding-top: 66.08696%;
+    }
+    .md\:ratio-custom-3:before
+    {
+        padding-top: 57.54717%;
+    }
+    .md\:ratio-custom-4:before
+    {
+        padding-top: 111.05263%;
     }
     .md\:ratio-1x1:before
     {
@@ -13421,24 +13567,6 @@ ol.list li:before
             -ms-flex: inherit;
                 flex: inherit;
     }
-    .md\:col-count-1
-    {
-        -webkit-column-count: 1;
-           -moz-column-count: 1;
-                column-count: 1;
-    }
-    .md\:col-count-3
-    {
-        -webkit-column-count: 3;
-           -moz-column-count: 3;
-                column-count: 3;
-    }
-    .md\:col-count-5
-    {
-        -webkit-column-count: 5;
-           -moz-column-count: 5;
-                column-count: 5;
-    }
     /* Icons sizes classes */
     .md\:icon
     {
@@ -13458,17 +13586,19 @@ ol.list li:before
     .md\:icon-logo img
     {
         width: 100%;
+        height: auto; 
         max-height: 33.8rem;
     }
     .md\:icon-logo-ch
     {
-        width: 11.8rem;
+        width: 8.8rem;
     }
     .md\:icon-logo-ch svg,
     .md\:icon-logo-ch img
     {
         width: 100%;
-        max-height: 11.8rem;
+        height: auto; 
+        max-height: 8.8rem;
     }
     .md\:icon-logo-ch-lg
     {
@@ -13478,6 +13608,7 @@ ol.list li:before
     .md\:icon-logo-ch-lg img
     {
         width: 100%;
+        height: auto; 
         max-height: 13.7rem;
     }
     .md\:icon-logo-medium
@@ -13488,6 +13619,7 @@ ol.list li:before
     .md\:icon-logo-medium img
     {
         width: 100%;
+        height: auto; 
         max-height: 27.4rem;
     }
     .md\:icon-unstuck-design
@@ -13498,6 +13630,7 @@ ol.list li:before
     .md\:icon-unstuck-design img
     {
         width: 100%;
+        height: auto; 
         max-height: 20rem;
     }
     .md\:icon-xs
@@ -13508,6 +13641,7 @@ ol.list li:before
     .md\:icon-xs img
     {
         width: 100%;
+        height: auto; 
         max-height: 1.7rem;
     }
     .md\:icon-md
@@ -13518,6 +13652,7 @@ ol.list li:before
     .md\:icon-md img
     {
         width: 100%;
+        height: auto; 
         max-height: 4rem;
     }
     .md\:icon-2md
@@ -13528,7 +13663,30 @@ ol.list li:before
     .md\:icon-2md img
     {
         width: 100%;
+        height: auto; 
         max-height: 4.8rem;
+    }
+    .md\:icon-lg
+    {
+        width: 6.4rem;
+    }
+    .md\:icon-lg svg,
+    .md\:icon-lg img
+    {
+        width: 100%;
+        height: auto; 
+        max-height: 6.4rem;
+    }
+    .md\:icon-3lg
+    {
+        width: 12rem;
+    }
+    .md\:icon-3lg svg,
+    .md\:icon-3lg img
+    {
+        width: 100%;
+        height: auto; 
+        max-height: 12rem;
     }
     .md\:icon-auto
     {
@@ -13538,6 +13696,7 @@ ol.list li:before
     .md\:icon-auto img
     {
         width: 100%;
+        height: auto; 
         max-height: auto;
     }
     /* Display classes */
@@ -13680,6 +13839,24 @@ ol.list li:before
     /* Shade overlay*/
     .md\:overlay-cover > *:before,
     .md\:overlay-cover .image-holder:before
+    {
+        background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
+        background-image:         linear-gradient(to bottom, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
+    }
+    .md\:hover\:overlay-cover:hover > *:before,
+    .md\:hover\:overlay-cover:hover .image-holder:before
+    {
+        background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
+        background-image:         linear-gradient(to bottom, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
+    }
+    .md\:focus\:overlay-cover:focus > *:before,
+    .md\:focus\:overlay-cover:focus .image-holder:before
+    {
+        background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
+        background-image:         linear-gradient(to bottom, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
+    }
+    .md\:focus-within\:overlay-cover:focus-within > *:before,
+    .md\:focus-within\:overlay-cover:focus-within .image-holder:before
     {
         background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
         background-image:         linear-gradient(to bottom, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
@@ -14866,6 +15043,22 @@ ol.list li:before
     .lg\:focus-within\:bg-primary:focus-within
     {
         background-color: #365c24;
+    }
+    .lg\:bg-primary-light
+    {
+        background-color: #c3cebd;
+    }
+    .lg\:hover\:bg-primary-light:hover
+    {
+        background-color: #c3cebd;
+    }
+    .lg\:focus\:bg-primary-light:focus
+    {
+        background-color: #c3cebd;
+    }
+    .lg\:focus-within\:bg-primary-light:focus-within
+    {
+        background-color: #c3cebd;
     }
     .lg\:bg-primary-dark
     {
@@ -17360,7 +17553,19 @@ ol.list li:before
     }
     .lg\:ratio-custom:before
     {
-        padding-top: 66.12022%;
+        padding-top: 75.13661%;
+    }
+    .lg\:ratio-custom-2:before
+    {
+        padding-top: 66.08696%;
+    }
+    .lg\:ratio-custom-3:before
+    {
+        padding-top: 57.54717%;
+    }
+    .lg\:ratio-custom-4:before
+    {
+        padding-top: 111.05263%;
     }
     .lg\:ratio-1x1:before
     {
@@ -17557,24 +17762,6 @@ ol.list li:before
             -ms-flex: inherit;
                 flex: inherit;
     }
-    .lg\:col-count-1
-    {
-        -webkit-column-count: 1;
-           -moz-column-count: 1;
-                column-count: 1;
-    }
-    .lg\:col-count-3
-    {
-        -webkit-column-count: 3;
-           -moz-column-count: 3;
-                column-count: 3;
-    }
-    .lg\:col-count-5
-    {
-        -webkit-column-count: 5;
-           -moz-column-count: 5;
-                column-count: 5;
-    }
     /* Icons sizes classes */
     .lg\:icon
     {
@@ -17594,17 +17781,19 @@ ol.list li:before
     .lg\:icon-logo img
     {
         width: 100%;
+        height: auto; 
         max-height: 33.8rem;
     }
     .lg\:icon-logo-ch
     {
-        width: 11.8rem;
+        width: 8.8rem;
     }
     .lg\:icon-logo-ch svg,
     .lg\:icon-logo-ch img
     {
         width: 100%;
-        max-height: 11.8rem;
+        height: auto; 
+        max-height: 8.8rem;
     }
     .lg\:icon-logo-ch-lg
     {
@@ -17614,6 +17803,7 @@ ol.list li:before
     .lg\:icon-logo-ch-lg img
     {
         width: 100%;
+        height: auto; 
         max-height: 13.7rem;
     }
     .lg\:icon-logo-medium
@@ -17624,6 +17814,7 @@ ol.list li:before
     .lg\:icon-logo-medium img
     {
         width: 100%;
+        height: auto; 
         max-height: 27.4rem;
     }
     .lg\:icon-unstuck-design
@@ -17634,6 +17825,7 @@ ol.list li:before
     .lg\:icon-unstuck-design img
     {
         width: 100%;
+        height: auto; 
         max-height: 20rem;
     }
     .lg\:icon-xs
@@ -17644,6 +17836,7 @@ ol.list li:before
     .lg\:icon-xs img
     {
         width: 100%;
+        height: auto; 
         max-height: 1.7rem;
     }
     .lg\:icon-md
@@ -17654,6 +17847,7 @@ ol.list li:before
     .lg\:icon-md img
     {
         width: 100%;
+        height: auto; 
         max-height: 4rem;
     }
     .lg\:icon-2md
@@ -17664,7 +17858,30 @@ ol.list li:before
     .lg\:icon-2md img
     {
         width: 100%;
+        height: auto; 
         max-height: 4.8rem;
+    }
+    .lg\:icon-lg
+    {
+        width: 6.4rem;
+    }
+    .lg\:icon-lg svg,
+    .lg\:icon-lg img
+    {
+        width: 100%;
+        height: auto; 
+        max-height: 6.4rem;
+    }
+    .lg\:icon-3lg
+    {
+        width: 12rem;
+    }
+    .lg\:icon-3lg svg,
+    .lg\:icon-3lg img
+    {
+        width: 100%;
+        height: auto; 
+        max-height: 12rem;
     }
     .lg\:icon-auto
     {
@@ -17674,6 +17891,7 @@ ol.list li:before
     .lg\:icon-auto img
     {
         width: 100%;
+        height: auto; 
         max-height: auto;
     }
     /* Display classes */
@@ -17816,6 +18034,24 @@ ol.list li:before
     /* Shade overlay*/
     .lg\:overlay-cover > *:before,
     .lg\:overlay-cover .image-holder:before
+    {
+        background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
+        background-image:         linear-gradient(to bottom, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
+    }
+    .lg\:hover\:overlay-cover:hover > *:before,
+    .lg\:hover\:overlay-cover:hover .image-holder:before
+    {
+        background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
+        background-image:         linear-gradient(to bottom, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
+    }
+    .lg\:focus\:overlay-cover:focus > *:before,
+    .lg\:focus\:overlay-cover:focus .image-holder:before
+    {
+        background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
+        background-image:         linear-gradient(to bottom, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
+    }
+    .lg\:focus-within\:overlay-cover:focus-within > *:before,
+    .lg\:focus-within\:overlay-cover:focus-within .image-holder:before
     {
         background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
         background-image:         linear-gradient(to bottom, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
@@ -19002,6 +19238,22 @@ ol.list li:before
     .xl\:focus-within\:bg-primary:focus-within
     {
         background-color: #365c24;
+    }
+    .xl\:bg-primary-light
+    {
+        background-color: #c3cebd;
+    }
+    .xl\:hover\:bg-primary-light:hover
+    {
+        background-color: #c3cebd;
+    }
+    .xl\:focus\:bg-primary-light:focus
+    {
+        background-color: #c3cebd;
+    }
+    .xl\:focus-within\:bg-primary-light:focus-within
+    {
+        background-color: #c3cebd;
     }
     .xl\:bg-primary-dark
     {
@@ -21496,7 +21748,19 @@ ol.list li:before
     }
     .xl\:ratio-custom:before
     {
-        padding-top: 66.12022%;
+        padding-top: 75.13661%;
+    }
+    .xl\:ratio-custom-2:before
+    {
+        padding-top: 66.08696%;
+    }
+    .xl\:ratio-custom-3:before
+    {
+        padding-top: 57.54717%;
+    }
+    .xl\:ratio-custom-4:before
+    {
+        padding-top: 111.05263%;
     }
     .xl\:ratio-1x1:before
     {
@@ -21693,24 +21957,6 @@ ol.list li:before
             -ms-flex: inherit;
                 flex: inherit;
     }
-    .xl\:col-count-1
-    {
-        -webkit-column-count: 1;
-           -moz-column-count: 1;
-                column-count: 1;
-    }
-    .xl\:col-count-3
-    {
-        -webkit-column-count: 3;
-           -moz-column-count: 3;
-                column-count: 3;
-    }
-    .xl\:col-count-5
-    {
-        -webkit-column-count: 5;
-           -moz-column-count: 5;
-                column-count: 5;
-    }
     /* Icons sizes classes */
     .xl\:icon
     {
@@ -21730,17 +21976,19 @@ ol.list li:before
     .xl\:icon-logo img
     {
         width: 100%;
+        height: auto; 
         max-height: 33.8rem;
     }
     .xl\:icon-logo-ch
     {
-        width: 11.8rem;
+        width: 8.8rem;
     }
     .xl\:icon-logo-ch svg,
     .xl\:icon-logo-ch img
     {
         width: 100%;
-        max-height: 11.8rem;
+        height: auto; 
+        max-height: 8.8rem;
     }
     .xl\:icon-logo-ch-lg
     {
@@ -21750,6 +21998,7 @@ ol.list li:before
     .xl\:icon-logo-ch-lg img
     {
         width: 100%;
+        height: auto; 
         max-height: 13.7rem;
     }
     .xl\:icon-logo-medium
@@ -21760,6 +22009,7 @@ ol.list li:before
     .xl\:icon-logo-medium img
     {
         width: 100%;
+        height: auto; 
         max-height: 27.4rem;
     }
     .xl\:icon-unstuck-design
@@ -21770,6 +22020,7 @@ ol.list li:before
     .xl\:icon-unstuck-design img
     {
         width: 100%;
+        height: auto; 
         max-height: 20rem;
     }
     .xl\:icon-xs
@@ -21780,6 +22031,7 @@ ol.list li:before
     .xl\:icon-xs img
     {
         width: 100%;
+        height: auto; 
         max-height: 1.7rem;
     }
     .xl\:icon-md
@@ -21790,6 +22042,7 @@ ol.list li:before
     .xl\:icon-md img
     {
         width: 100%;
+        height: auto; 
         max-height: 4rem;
     }
     .xl\:icon-2md
@@ -21800,7 +22053,30 @@ ol.list li:before
     .xl\:icon-2md img
     {
         width: 100%;
+        height: auto; 
         max-height: 4.8rem;
+    }
+    .xl\:icon-lg
+    {
+        width: 6.4rem;
+    }
+    .xl\:icon-lg svg,
+    .xl\:icon-lg img
+    {
+        width: 100%;
+        height: auto; 
+        max-height: 6.4rem;
+    }
+    .xl\:icon-3lg
+    {
+        width: 12rem;
+    }
+    .xl\:icon-3lg svg,
+    .xl\:icon-3lg img
+    {
+        width: 100%;
+        height: auto; 
+        max-height: 12rem;
     }
     .xl\:icon-auto
     {
@@ -21810,6 +22086,7 @@ ol.list li:before
     .xl\:icon-auto img
     {
         width: 100%;
+        height: auto; 
         max-height: auto;
     }
     /* Display classes */
@@ -21952,6 +22229,24 @@ ol.list li:before
     /* Shade overlay*/
     .xl\:overlay-cover > *:before,
     .xl\:overlay-cover .image-holder:before
+    {
+        background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
+        background-image:         linear-gradient(to bottom, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
+    }
+    .xl\:hover\:overlay-cover:hover > *:before,
+    .xl\:hover\:overlay-cover:hover .image-holder:before
+    {
+        background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
+        background-image:         linear-gradient(to bottom, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
+    }
+    .xl\:focus\:overlay-cover:focus > *:before,
+    .xl\:focus\:overlay-cover:focus .image-holder:before
+    {
+        background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
+        background-image:         linear-gradient(to bottom, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
+    }
+    .xl\:focus-within\:overlay-cover:focus-within > *:before,
+    .xl\:focus-within\:overlay-cover:focus-within .image-holder:before
     {
         background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
         background-image:         linear-gradient(to bottom, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
@@ -23138,6 +23433,22 @@ ol.list li:before
     .xxl\:focus-within\:bg-primary:focus-within
     {
         background-color: #365c24;
+    }
+    .xxl\:bg-primary-light
+    {
+        background-color: #c3cebd;
+    }
+    .xxl\:hover\:bg-primary-light:hover
+    {
+        background-color: #c3cebd;
+    }
+    .xxl\:focus\:bg-primary-light:focus
+    {
+        background-color: #c3cebd;
+    }
+    .xxl\:focus-within\:bg-primary-light:focus-within
+    {
+        background-color: #c3cebd;
     }
     .xxl\:bg-primary-dark
     {
@@ -25632,7 +25943,19 @@ ol.list li:before
     }
     .xxl\:ratio-custom:before
     {
-        padding-top: 66.12022%;
+        padding-top: 75.13661%;
+    }
+    .xxl\:ratio-custom-2:before
+    {
+        padding-top: 66.08696%;
+    }
+    .xxl\:ratio-custom-3:before
+    {
+        padding-top: 57.54717%;
+    }
+    .xxl\:ratio-custom-4:before
+    {
+        padding-top: 111.05263%;
     }
     .xxl\:ratio-1x1:before
     {
@@ -25829,24 +26152,6 @@ ol.list li:before
             -ms-flex: inherit;
                 flex: inherit;
     }
-    .xxl\:col-count-1
-    {
-        -webkit-column-count: 1;
-           -moz-column-count: 1;
-                column-count: 1;
-    }
-    .xxl\:col-count-3
-    {
-        -webkit-column-count: 3;
-           -moz-column-count: 3;
-                column-count: 3;
-    }
-    .xxl\:col-count-5
-    {
-        -webkit-column-count: 5;
-           -moz-column-count: 5;
-                column-count: 5;
-    }
     /* Icons sizes classes */
     .xxl\:icon
     {
@@ -25866,17 +26171,19 @@ ol.list li:before
     .xxl\:icon-logo img
     {
         width: 100%;
+        height: auto; 
         max-height: 33.8rem;
     }
     .xxl\:icon-logo-ch
     {
-        width: 11.8rem;
+        width: 8.8rem;
     }
     .xxl\:icon-logo-ch svg,
     .xxl\:icon-logo-ch img
     {
         width: 100%;
-        max-height: 11.8rem;
+        height: auto; 
+        max-height: 8.8rem;
     }
     .xxl\:icon-logo-ch-lg
     {
@@ -25886,6 +26193,7 @@ ol.list li:before
     .xxl\:icon-logo-ch-lg img
     {
         width: 100%;
+        height: auto; 
         max-height: 13.7rem;
     }
     .xxl\:icon-logo-medium
@@ -25896,6 +26204,7 @@ ol.list li:before
     .xxl\:icon-logo-medium img
     {
         width: 100%;
+        height: auto; 
         max-height: 27.4rem;
     }
     .xxl\:icon-unstuck-design
@@ -25906,6 +26215,7 @@ ol.list li:before
     .xxl\:icon-unstuck-design img
     {
         width: 100%;
+        height: auto; 
         max-height: 20rem;
     }
     .xxl\:icon-xs
@@ -25916,6 +26226,7 @@ ol.list li:before
     .xxl\:icon-xs img
     {
         width: 100%;
+        height: auto; 
         max-height: 1.7rem;
     }
     .xxl\:icon-md
@@ -25926,6 +26237,7 @@ ol.list li:before
     .xxl\:icon-md img
     {
         width: 100%;
+        height: auto; 
         max-height: 4rem;
     }
     .xxl\:icon-2md
@@ -25936,7 +26248,30 @@ ol.list li:before
     .xxl\:icon-2md img
     {
         width: 100%;
+        height: auto; 
         max-height: 4.8rem;
+    }
+    .xxl\:icon-lg
+    {
+        width: 6.4rem;
+    }
+    .xxl\:icon-lg svg,
+    .xxl\:icon-lg img
+    {
+        width: 100%;
+        height: auto; 
+        max-height: 6.4rem;
+    }
+    .xxl\:icon-3lg
+    {
+        width: 12rem;
+    }
+    .xxl\:icon-3lg svg,
+    .xxl\:icon-3lg img
+    {
+        width: 100%;
+        height: auto; 
+        max-height: 12rem;
     }
     .xxl\:icon-auto
     {
@@ -25946,6 +26281,7 @@ ol.list li:before
     .xxl\:icon-auto img
     {
         width: 100%;
+        height: auto; 
         max-height: auto;
     }
     /* Display classes */
@@ -26092,6 +26428,24 @@ ol.list li:before
         background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
         background-image:         linear-gradient(to bottom, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
     }
+    .xxl\:hover\:overlay-cover:hover > *:before,
+    .xxl\:hover\:overlay-cover:hover .image-holder:before
+    {
+        background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
+        background-image:         linear-gradient(to bottom, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
+    }
+    .xxl\:focus\:overlay-cover:focus > *:before,
+    .xxl\:focus\:overlay-cover:focus .image-holder:before
+    {
+        background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
+        background-image:         linear-gradient(to bottom, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
+    }
+    .xxl\:focus-within\:overlay-cover:focus-within > *:before,
+    .xxl\:focus-within\:overlay-cover:focus-within .image-holder:before
+    {
+        background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
+        background-image:         linear-gradient(to bottom, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 100%);
+    }
     /* Overflow classes */
     .xxl\:overflow-auto
     {
@@ -26184,97 +26538,104 @@ ol.list li:before
     }
 }
 
-/*googleMap*/
-/*Map Marker*/
-#map-canvas img[src*='images/map-marker']
+/*accordian*/
+.accordion-wrapper .accordion
 {
-    -webkit-transform-origin: 50% 100% 0;
-        -ms-transform-origin: 50% 100% 0;
-            transform-origin: 50% 100% 0;
-    -webkit-animation: shake-bottom 10s cubic-bezier(.455, .03, .515, .955) infinite both;
-            animation: shake-bottom 10s cubic-bezier(.455, .03, .515, .955) infinite both;
+    position: relative;
+
+    overflow: hidden; 
+
+    width: 100%;
+}
+.accordion-wrapper .accordion > .accordion-label
+{
+    position: relative;
+
+    display: block;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+
+    cursor: pointer;
+
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+            align-items: center;
+}
+.accordion-wrapper .accordion > .accordion-label > .question
+{
+    margin-bottom: 0; 
+    padding-right: 1rem;
+
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+}
+.accordion-wrapper .accordion.is-open > .accordion-label + .accordion-content
+{
+    max-height: 5000em;
+
+    opacity: 1;
+}
+.accordion-wrapper .accordion.is-open > .accordion-label + .accordion-content > .answer
+{
+    -webkit-animation: fade-in .3s .3s ease-in-out both;
+            animation: fade-in .3s .3s ease-in-out both;
+}
+.accordion-wrapper .accordion.is-open > .accordion-label > .toggle-sign
+{
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
+.accordion-wrapper .accordion > .accordion-content
+{
+    overflow: hidden;
+
+    max-height: 0;
+
+    opacity: 0;
 }
 
-@-webkit-keyframes shake-bottom
+/*filter tab*/
+.filter_parent .filter_wrapper
 {
-    0%,
-    100%
-    {
-        -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-        -webkit-transform-origin: 50% 100%;
-                transform-origin: 50% 100%;
-    }
-    10%
-    {
-        -webkit-transform: rotate(3deg);
-                transform: rotate(3deg);
-    }
-    20%,
-    40%,
-    60%
-    {
-        -webkit-transform: rotate(-6deg);
-                transform: rotate(-6deg);
-    }
-    30%,
-    50%,
-    70%
-    {
-        -webkit-transform: rotate(6deg);
-                transform: rotate(6deg);
-    }
-    80%
-    {
-        -webkit-transform: rotate(-3deg);
-                transform: rotate(-3deg);
-    }
-    90%
-    {
-        -webkit-transform: rotate(3deg);
-                transform: rotate(3deg);
-    }
+    min-height: 50vh;
 }
 
-@keyframes shake-bottom
+.filter_parent .filter_obj:not(.filtered)
 {
-    0%,
-    100%
-    {
-        -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-        -webkit-transform-origin: 50% 100%;
-                transform-origin: 50% 100%;
-    }
-    10%
-    {
-        -webkit-transform: rotate(3deg);
-                transform: rotate(3deg);
-    }
-    20%,
-    40%,
-    60%
-    {
-        -webkit-transform: rotate(-6deg);
-                transform: rotate(-6deg);
-    }
-    30%,
-    50%,
-    70%
-    {
-        -webkit-transform: rotate(6deg);
-                transform: rotate(6deg);
-    }
-    80%
-    {
-        -webkit-transform: rotate(-3deg);
-                transform: rotate(-3deg);
-    }
-    90%
-    {
-        -webkit-transform: rotate(3deg);
-                transform: rotate(3deg);
-    }
+    display: none;
+
+    opacity: 0;
+}
+
+.filter_parent .filter_tab:not(.is-active)
+{
+    cursor: pointer;
+}
+
+/*popup*/
+.popup_background
+{
+    opacity: .50 !important;
+}
+
+.popup_visible .popup
+{
+    overflow: hidden;
+
+    -webkit-perspective: 500px;
+            perspective: 500px;
+    -webkit-perspective-origin: 50% 50%;
+            perspective-origin: 50% 50%;
 }
 
 /*owlCarousel*/
@@ -26307,6 +26668,11 @@ ol.list li:before
 
     -ms-touch-action: pan-Y;
     -moz-backface-visibility: hidden;
+}
+
+.owl-carousel .owl-auto-height .owl-stage
+{
+    display: block;
 }
 
 .owl-carousel .owl-stage:after
@@ -27767,13 +28133,13 @@ strong
 
 .page-banner
 {
-    min-height: 22rem;
+    min-height: 32rem;
 }
 @media (min-width: 992px)
 {
     .page-banner
     {
-        min-height: 34.6rem;
+        min-height: 44.6rem;
     }
 }
 
@@ -27785,6 +28151,11 @@ strong
 .text-wrap > *:not(:last-child):not(.line-divider):not(.free-child)
 {
     margin-bottom: 2rem;
+}
+
+.text-wrap-md > *:not(:last-child):not(.line-divider):not(.free-child)
+{
+    margin-bottom: 2.5rem;
 }
 
 .text-wrap-sm > *:not(:last-child):not(.line-divider):not(.free-child)
@@ -27961,7 +28332,135 @@ button.mfp-arrow-right::after
     border-left: transparent;
 }
 
+.filter_parent .filter_wrapper
+{
+    min-height: auto;
+}
+@media (min-width: 992px)
+{
+    .filter_parent .filter_wrapper
+    {
+        min-height: 50vh;
+    }
+}
+
+.filter_parent .filter_tab.is-active
+{
+    font-weight: 600;
+
+    color: #365c24;
+}
+
+.accordion-wrapper .accordion.is-open > .accordion-label + .accordion-content
+{
+    max-height: 40em;
+}
+
+.Repair-table th:first-child,
+.Repair-table td:first-child
+{
+    width: 150px;
+}
+
+.Repair-table th:last-child,
+.Repair-table th:nth-last-child(2),
+.Repair-table td:last-child,
+.Repair-table td:nth-last-child(2)
+{
+    width: 50px;
+    max-width: 50px;
+}
+
+.popup_visible .popup
+{
+    -webkit-animation: fade-in-fwd .35s cubic-bezier(.39, .575, .565, 1) both;
+            animation: fade-in-fwd .35s cubic-bezier(.39, .575, .565, 1) both;
+}
+
+.popup
+{
+    max-height: calc(100% - 2rem);
+}
+.popup_wrapper
+{
+    -webkit-perspective: 500px;
+            perspective: 500px;
+    -webkit-perspective-origin: 50% 50%;
+            perspective-origin: 50% 50%;
+}
+
+@-webkit-keyframes fade-in-fwd
+{
+    0%
+    {
+        -webkit-transform: translateZ(-20px);
+                transform: translateZ(-20px);
+
+        opacity: 0;
+    }
+    100%
+    {
+        -webkit-transform: translateZ(0);
+                transform: translateZ(0);
+
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-fwd
+{
+    0%
+    {
+        -webkit-transform: translateZ(-20px);
+                transform: translateZ(-20px);
+
+        opacity: 0;
+    }
+    100%
+    {
+        -webkit-transform: translateZ(0);
+                transform: translateZ(0);
+
+        opacity: 1;
+    }
+}
+
+.mfp-counter
+{
+    display: none;
+}
+
+.mfp-title
+{
+    padding-right: 0;
+}
+
 .mfp-bottom-bar
+{
+    top: auto;
+    bottom: 40px;
+}
+
+.mfp-content.caption-close .caption-wrapper
+{
+    overflow: hidden; 
+
+    max-height: 0;
+}
+.mfp-content.caption-close .caption-wrapper .caption-toggle .plus
+{
+    display: block;
+}
+.mfp-content.caption-close .caption-wrapper .caption-toggle .minus
+{
+    display: none;
+}
+
+.mfp-content .caption-toggle
+{
+    font-weight: 600;
+}
+.mfp-content .caption-toggle .plus
 {
     display: none;
 }
