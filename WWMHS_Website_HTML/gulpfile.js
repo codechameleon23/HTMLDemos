@@ -76,7 +76,6 @@ const PROJECT_JS_LIST = [
 const PROJECT_PAGES_LIST = [
   './src/allpages.html',
   './src/index.html',
-  './src/announcements.html',
   './src/paying-rent.html',
   './src/repairs.html',
   './src/about-society.html',

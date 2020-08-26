@@ -252,10 +252,10 @@ if ($('.js_media_Gallery_Popup').length) { //if element exists
 
   $('.accordion-wrapper').each(function () {
     var item = $(this);
-    var tagetAccordions = item.find('.toggle-tabs, .toggle-content').find('.accordion');
+    var targetAccordions = item.find('.toggle-tabs, .toggle-content').find('.accordion');
 
-    var tagetAccordionsToggles = tagetAccordions.find('.accordion-toggle');
-    var attr = tagetAccordionsToggles.attr('data-filterby');
+    var targetAccordionsToggles = targetAccordions.find('.accordion-toggle');
+    var attr = targetAccordionsToggles.attr('data-filterby');
     var gotToBtn = item.find('[data-goto]');
 
     var togglable = item.data('togglable');
@@ -263,7 +263,7 @@ if ($('.js_media_Gallery_Popup').length) { //if element exists
     var seturl = item.data('seturl');
     var scrollAdjust = item.data('scroll-adjust');
 
-    var tabNo = attr.split('_')[1];
+    // var tabNo = attr.split('_')[1];
     var attrname = attr.split('_')[0];
 
     var paramVal = url_obj[attrname];
@@ -272,22 +272,26 @@ if ($('.js_media_Gallery_Popup').length) { //if element exists
       var tabNo = paramVal;
       var elmAttr = attrname + '_' + tabNo;
 
-      tagetAccordions.removeClass('is-open');
+      targetAccordions.removeClass('is-open');
       defaultTargetTab = item.find('[data-filterby="' + elmAttr + '"]').closest('.accordion');
       defaultTargetTab.addClass("is-open");
     }
 
-    tagetAccordionsToggles.on('click tap', function () {
+    targetAccordionsToggles.on('click tap', function () {
       var elm = $(this);
       var elmAttr = elm.attr('data-filterby');
       var targetTab = item.find('[data-filterby="' + elmAttr + '"]').closest('.accordion');
 
       if (togglable && targetTab.hasClass("is-open")) {
-        tagetAccordions.removeClass('is-open');
+        console.log('togglable', togglable);
+        if (closeOthers) {
+          targetAccordions.removeClass('is-open');
+        }
         targetTab.removeClass("is-open");
       } else {
+        console.log('closeOthers', closeOthers);
         if (closeOthers) {
-          tagetAccordions.removeClass('is-open');
+          targetAccordions.removeClass('is-open');
         }
         targetTab.addClass("is-open");
         seturl && setUrl(elmAttr);
