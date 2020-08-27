@@ -315,8 +315,79 @@
     </section>
   </main>
   <!-- Footer -->
+  <!--Repair Popup-->
+  <div id="jsRepairPopup" class="d-hidden container container-md popup shadow-lg bg-primary f-color-white mx-xs my-xs">
+    <div class="flex-col w-full flex-stretch popup-wrap">
+      <button class="jsRepairPopup_close pos-absolute pin-t pin-r z-10 mt-sm mr-sm d-inline-block fweight-regular capitalize fcolor-white hover:bg-secondary ml-auto">
+        <span class="f-color-white icon">
+          <i class="f-color-inherit" data-feather="x" stroke-width="2.5"></i>
+        </span>
+      </button>
+      <div class="flex-stretch overflow-auto popup-body p-md">
+        <div class="carousel-wrapper carousel-outer">
+          <div class="jsRepairFormSlides is-carousel banner-carousel owl-carousel owl-theme">
+            <div class="item">
+              <div class="text-wrap-md">
+                <h2 class="f-weight-regular f-size-7 mb-2md">Submit a Repair Request</h2>
+                <p>Before you submit your repair request it is important that you have checked some basic things that could be the cause of a problem. Have you checked:</p>
+                <ul class="ml-md text-wrap-sm f-weight-semibold">
+                  <li>If there is a general powercut in the area?</li>
+                  <li>That the waste pipe of your sink is not blocked?</li>
+                  <li>That there isn’t a simple fix, such as oiling a hinge?</li>
+                  <li>Em quae conetur rectior aliquiatio in nis autestis utem que?</li>
+                  <li>Berferi reprovit remporem que iunt?</li>
+                  <li>Asimagn imilita quam coreper erfero quam abor autatur aspello reruptis plandit unti id mo qui omnis sinvelibusae ped es quod quisi simi?</li>
+                  <li>Sam, sa nimagnienias eossuscit ea sum etur aut libus molor ma vita sinis plitest eum fuga?</li>
+                </ul>
+                <p>If you have checked all of the above and there is still a problem, then the next step is to submit a repair request form.</p>
+                <button class="jsRepairFormSlidesNxt button rounded-full transition-all px-md py-xxs bg-primary f-color-white border-2 border-white hover:border-primary hover:shadow-md hover:bg-primary-dark">Continue to Repair Form</button>
+              </div>
+            </div>
+            <div class="item">
+              <div class="text-wrap-md mb-md">
+                <h2 class="f-weight-regular f-size-7 mb-2md">Submit a Repair Request</h2>
+                <p>Do you have a maintenance issue you wish to submit? Use the repair request form below to submit details of your issue and we will respond as soon as possible.</p>
+                <p>It is always important to give your name, address, contact number/email for us to speak with you, and a brief description of the problem.</p>
+              </div>
+              <form class="flex-row flex-wrap -m-xs">
+                <div class="col-12 lg:col-6 flex-col w-full flex-auto p-xs">
+                  <input type="text" placeholder="Full Name" class="py-xs border border-medium px-2xs bg-white flex-stretch focus:shadow transition-all">
+                </div>
+                <div class="col-12 lg:col-6 flex-col w-full flex-auto p-xs">
+                  <input type="email" placeholder="Email" class="py-xs border border-medium px-2xs bg-white flex-stretch focus:shadow transition-all">
+                </div>
+                <div class="col-12 lg:col-6 flex-col w-full flex-auto p-xs">
+                  <input type="tel" placeholder="Phone" class="py-xs border border-medium px-2xs bg-white flex-stretch focus:shadow transition-all">
+                </div>
+                <div class="col-12 lg:col-6 flex-col w-full flex-auto p-xs">
+                  <input type="text" placeholder="Address" class="py-xs border border-medium px-2xs bg-white flex-stretch focus:shadow transition-all">
+                </div>
+                <div class="col-12 flex-col w-full flex-auto p-xs">
+                  <textarea rows="6" placeholder="Details of repair needed" class="py-xs border border-medium px-2xs bg-white flex-stretch focus:shadow transition-all" spellcheck="false"></textarea>
+                </div>
+                <div class="col-12 flex-row flex-wrap align-center justify-space-between">
+                  <div class="col-12 md:col-auto p-xs">
+                    <label class="w-full custom-tick">
+                      <input name="addr" type="checkbox">
+                      <span class="d-inline-block mt-5 tick"><span class="bg-white border f-color-primary radius-full"></span></span>
+                      <span class="related-text f-weight-regular">
+                        <span class="f-color-inherit">I have read and agreed to your</span>
+                        <a href="#" class="f-color-inherit no-underline">privacy policy</a>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="col-12 md:col-auto p-xs text-right">
+                    <button class="button rounded-full transition-all px-md py-xxs bg-primary f-color-white border-2 border-white hover:border-primary hover:shadow-md hover:bg-primary-dark">Get in Touch</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- Footer services -->
-  <link rel="stylesheet" href="../../../SASS_FILES/grid/_cols.scss">
   <section class="bg-primary f-color-white">
     <div class="container md:container-sm lg:container-lg xl:container-xl mx-auto pb-2md lg:py-xl">
       <div class="flex-col lg:flex-row">
@@ -359,7 +430,7 @@
             </span>
             <h3 class="f-weight-regular f-size-7">Submit a Repair Request</h3>
             <p>Do you have a maintenance issue you wish to submit? Use the repair request form to submit details of your issue so we can make sure the right person is sent to deal with the problem.</p>
-            <a href="contact.html" class="button rounded-full transition-all px-md py-xxs bg-primary f-color-white border-2 border-white hover:border-primary hover:shadow-md hover:bg-primary-dark">Send Request</a>
+            <a href="#" class="jsRepairPopup_open button rounded-full transition-all px-md py-xxs bg-primary f-color-white border-2 border-white hover:border-primary hover:shadow-md hover:bg-primary-dark">Send Request</a>
           </div>
         </article>
       </div>
