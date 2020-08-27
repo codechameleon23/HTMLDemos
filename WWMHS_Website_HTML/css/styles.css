@@ -28281,14 +28281,17 @@ strong
     }
 }
 
-.hero-banner
+@media (min-width: 992px)
 {
-    min-height: 65rem;
+    .hero-banner
+    {
+        min-height: 65rem;
+    }
 }
 
 .page-banner
 {
-    min-height: 32rem;
+    min-height: 23rem;
 }
 @media (min-width: 992px)
 {
@@ -28296,11 +28299,6 @@ strong
     {
         min-height: 44.6rem;
     }
-}
-
-.map-banner
-{
-    min-height: 47.6rem;
 }
 
 .text-wrap > *:not(:last-child):not(.line-divider):not(.free-child)
@@ -28321,20 +28319,6 @@ strong
 .text-wrap-xs > *:not(:last-child):not(.line-divider):not(.free-child)
 {
     margin-bottom: .5rem;
-}
-
-.line-divider
-{
-    width: 100%;
-    height: .2rem;
-}
-.line-divider span
-{
-    display: inline-block;
-
-    width: 2.5rem;
-
-    vertical-align: top;
 }
 
 .image-rollover
@@ -28359,22 +28343,6 @@ strong
     -webkit-transform: scale(.955);
         -ms-transform: scale(.955);
             transform: scale(.955);
-}
-
-@media (min-width: 992px)
-{
-    .call-to-action
-    {
-        width: calc(100% - ((100vw/2.98) - ((100vw - 100%)/2)));
-    }
-}
-
-@media (min-width: 992px)
-{
-    .full-card
-    {
-        width: calc(100% - ((100vw/2) - ((100vw - 100%)/2)));
-    }
 }
 
 .owl-carousel .owl-stage-outer
@@ -28713,6 +28681,7 @@ button.mfp-arrow-right::after
 
 .jsNavbarToggle.is-open .hamburger
 {
+    top: 1.5rem;
     right: 1.5rem; 
 
     color: white;
