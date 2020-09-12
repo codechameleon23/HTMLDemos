@@ -389,7 +389,7 @@ em
     display: block;
 
     width: 100%;
-    height: .28rem;
+    height: 2px;
 
     -webkit-transition: .25s ease-in-out;
             transition: .25s ease-in-out; 
@@ -411,7 +411,7 @@ em
 {
     top: 50%;
 
-    margin-top: -.14rem;
+    margin-top: -1px;
 }
 
 .hamburger span:nth-child(4)
@@ -1103,6 +1103,21 @@ ol.list li:before
     border-color: transparent;
 }
 
+.border-white
+{
+    border-color: #fff;
+}
+
+.hover\:border-white:hover
+{
+    border-color: #fff;
+}
+
+.focus\:border-white:focus
+{
+    border-color: #fff;
+}
+
 .border-primary
 {
     border-color: #6ba3bc;
@@ -1116,6 +1131,11 @@ ol.list li:before
 .focus\:border-primary:focus
 {
     border-color: #6ba3bc;
+}
+
+.border-dark
+{
+    border-color: #11262d;
 }
 
 /* Font Weight classes */
@@ -1162,6 +1182,11 @@ ol.list li:before
 /* Border Radius classes */
 /* Letter Spacing classes */
 /* Line Height classes */
+.f-height-ease
+{
+    line-height: 1.5;
+}
+
 /*Color Theme*/
 @media (min-width: 0)
 {
@@ -1221,36 +1246,6 @@ ol.list li:before
         border-top-width: .1rem;
         border-bottom-width: .1rem;
     }
-    .border-parent .border-child
-    {
-        border-width: .1rem;
-    }
-    .border-parent .border-child-t
-    {
-        border-top-width: .1rem;
-    }
-    .border-parent .border-child-r
-    {
-        border-right-width: .1rem;
-    }
-    .border-parent .border-child-b
-    {
-        border-bottom-width: .1rem;
-    }
-    .border-parent .border-child-l
-    {
-        border-left-width: .1rem;
-    }
-    .border-parent .border-child-x
-    {
-        border-right-width: .1rem; 
-        border-left-width: .1rem;
-    }
-    .border-parent .border-child-y
-    {
-        border-top-width: .1rem;
-        border-bottom-width: .1rem;
-    }
     .hover\:border:hover
     {
         border-width: .1rem;
@@ -1277,36 +1272,6 @@ ol.list li:before
         border-left-width: .1rem;
     }
     .hover\:border-y:hover
-    {
-        border-top-width: .1rem;
-        border-bottom-width: .1rem;
-    }
-    .hover\:border-parent:hover .border-child
-    {
-        border-width: .1rem;
-    }
-    .hover\:border-parent:hover .border-child-t
-    {
-        border-top-width: .1rem;
-    }
-    .hover\:border-parent:hover .border-child-r
-    {
-        border-right-width: .1rem;
-    }
-    .hover\:border-parent:hover .border-child-b
-    {
-        border-bottom-width: .1rem;
-    }
-    .hover\:border-parent:hover .border-child-l
-    {
-        border-left-width: .1rem;
-    }
-    .hover\:border-parent:hover .border-child-x
-    {
-        border-right-width: .1rem; 
-        border-left-width: .1rem;
-    }
-    .hover\:border-parent:hover .border-child-y
     {
         border-top-width: .1rem;
         border-bottom-width: .1rem;
@@ -1341,36 +1306,6 @@ ol.list li:before
         border-top-width: .1rem;
         border-bottom-width: .1rem;
     }
-    .focus\:border-parent:focus .border-child
-    {
-        border-width: .1rem;
-    }
-    .focus\:border-parent:focus .border-child-t
-    {
-        border-top-width: .1rem;
-    }
-    .focus\:border-parent:focus .border-child-r
-    {
-        border-right-width: .1rem;
-    }
-    .focus\:border-parent:focus .border-child-b
-    {
-        border-bottom-width: .1rem;
-    }
-    .focus\:border-parent:focus .border-child-l
-    {
-        border-left-width: .1rem;
-    }
-    .focus\:border-parent:focus .border-child-x
-    {
-        border-right-width: .1rem; 
-        border-left-width: .1rem;
-    }
-    .focus\:border-parent:focus .border-child-y
-    {
-        border-top-width: .1rem;
-        border-bottom-width: .1rem;
-    }
     .border-2
     {
         border-width: .2rem;
@@ -1397,36 +1332,6 @@ ol.list li:before
         border-left-width: .2rem;
     }
     .border-y-2
-    {
-        border-top-width: .2rem;
-        border-bottom-width: .2rem;
-    }
-    .border-parent .border-child-2
-    {
-        border-width: .2rem;
-    }
-    .border-parent .border-child-t-2
-    {
-        border-top-width: .2rem;
-    }
-    .border-parent .border-child-r-2
-    {
-        border-right-width: .2rem;
-    }
-    .border-parent .border-child-b-2
-    {
-        border-bottom-width: .2rem;
-    }
-    .border-parent .border-child-l-2
-    {
-        border-left-width: .2rem;
-    }
-    .border-parent .border-child-x-2
-    {
-        border-right-width: .2rem; 
-        border-left-width: .2rem;
-    }
-    .border-parent .border-child-y-2
     {
         border-top-width: .2rem;
         border-bottom-width: .2rem;
@@ -1461,36 +1366,6 @@ ol.list li:before
         border-top-width: .2rem;
         border-bottom-width: .2rem;
     }
-    .hover\:border-parent:hover .border-child-2
-    {
-        border-width: .2rem;
-    }
-    .hover\:border-parent:hover .border-child-t-2
-    {
-        border-top-width: .2rem;
-    }
-    .hover\:border-parent:hover .border-child-r-2
-    {
-        border-right-width: .2rem;
-    }
-    .hover\:border-parent:hover .border-child-b-2
-    {
-        border-bottom-width: .2rem;
-    }
-    .hover\:border-parent:hover .border-child-l-2
-    {
-        border-left-width: .2rem;
-    }
-    .hover\:border-parent:hover .border-child-x-2
-    {
-        border-right-width: .2rem; 
-        border-left-width: .2rem;
-    }
-    .hover\:border-parent:hover .border-child-y-2
-    {
-        border-top-width: .2rem;
-        border-bottom-width: .2rem;
-    }
     .focus\:border-2:focus
     {
         border-width: .2rem;
@@ -1517,36 +1392,6 @@ ol.list li:before
         border-left-width: .2rem;
     }
     .focus\:border-y-2:focus
-    {
-        border-top-width: .2rem;
-        border-bottom-width: .2rem;
-    }
-    .focus\:border-parent:focus .border-child-2
-    {
-        border-width: .2rem;
-    }
-    .focus\:border-parent:focus .border-child-t-2
-    {
-        border-top-width: .2rem;
-    }
-    .focus\:border-parent:focus .border-child-r-2
-    {
-        border-right-width: .2rem;
-    }
-    .focus\:border-parent:focus .border-child-b-2
-    {
-        border-bottom-width: .2rem;
-    }
-    .focus\:border-parent:focus .border-child-l-2
-    {
-        border-left-width: .2rem;
-    }
-    .focus\:border-parent:focus .border-child-x-2
-    {
-        border-right-width: .2rem; 
-        border-left-width: .2rem;
-    }
-    .focus\:border-parent:focus .border-child-y-2
     {
         border-top-width: .2rem;
         border-bottom-width: .2rem;
@@ -2018,7 +1863,19 @@ ol.list li:before
             -ms-transform: translateY(0%);
                 transform: translateY(0%);
     }
+    .pin-r0
+    {
+        -webkit-transform: translateY(0%);
+            -ms-transform: translateY(0%);
+                transform: translateY(0%);
+    }
     .pin-b0
+    {
+        -webkit-transform: translateY(0%);
+            -ms-transform: translateY(0%);
+                transform: translateY(0%);
+    }
+    .pin-l0
     {
         -webkit-transform: translateY(0%);
             -ms-transform: translateY(0%);
@@ -2654,6 +2511,39 @@ ol.list li:before
         padding-top: 10rem;
         padding-bottom: 10rem;
     }
+    .p-12
+    {
+        padding-top: 12rem;
+        padding-right: 12rem;
+        padding-bottom: 12rem;
+        padding-left: 12rem;
+    }
+    .pt-12
+    {
+        padding-top: 12rem;
+    }
+    .pr-12
+    {
+        padding-right: 12rem;
+    }
+    .pb-12
+    {
+        padding-bottom: 12rem;
+    }
+    .pl-12
+    {
+        padding-left: 12rem;
+    }
+    .px-12
+    {
+        padding-right: 12rem; 
+        padding-left: 12rem;
+    }
+    .py-12
+    {
+        padding-top: 12rem;
+        padding-bottom: 12rem;
+    }
     .p-0
     {
         padding-top: 0;
@@ -3182,6 +3072,39 @@ ol.list li:before
     {
         margin-top: 10rem;
         margin-bottom: 10rem;
+    }
+    .m-12
+    {
+        margin-top: 12rem;
+        margin-right: 12rem;
+        margin-bottom: 12rem;
+        margin-left: 12rem;
+    }
+    .mt-12
+    {
+        margin-top: 12rem;
+    }
+    .mr-12
+    {
+        margin-right: 12rem;
+    }
+    .mb-12
+    {
+        margin-bottom: 12rem;
+    }
+    .ml-12
+    {
+        margin-left: 12rem;
+    }
+    .mx-12
+    {
+        margin-right: 12rem; 
+        margin-left: 12rem;
+    }
+    .my-12
+    {
+        margin-top: 12rem;
+        margin-bottom: 12rem;
     }
     .m-0
     {
@@ -3790,6 +3713,47 @@ ol.list li:before
     {
         margin-top: -10rem;
         margin-bottom: -10rem;
+    }
+    .-m-12
+    {
+        margin-top: -12rem;
+        margin-right: -12rem;
+        margin-bottom: -12rem;
+        margin-left: -12rem;
+    }
+    .-mt-12
+    {
+        margin-top: -12rem;
+    }
+    .-mr-12
+    {
+        margin-right: -12rem;
+    }
+    .-mb-12
+    {
+        margin-bottom: -12rem;
+    }
+    .-ml-12
+    {
+        margin-left: -12rem;
+    }
+    .-mx-12
+    {
+        margin-right: -12rem; 
+        margin-left: -12rem;
+    }
+    .-mx-12[class*='grid-']:first-of-type
+    {
+        margin-top: -12rem;
+    }
+    .-mx-12[class*='grid-']:last-of-type
+    {
+        margin-bottom: -12rem;
+    }
+    .-my-12
+    {
+        margin-top: -12rem;
+        margin-bottom: -12rem;
     }
     .-m-0
     {
@@ -4513,6 +4477,10 @@ ol.list li:before
     {
         padding-top: 12.77955%;
     }
+    .ratio-custom:before
+    {
+        padding-top: 35%;
+    }
     .ratio-1x1:before
     {
         padding-top: 100%;
@@ -4523,7 +4491,7 @@ ol.list li:before
     }
     .ratio-unstuck-design:before
     {
-        padding-top: 8%;
+        padding-top: 10%;
     }
     .ratio-none:before
     {
@@ -4561,7 +4529,7 @@ ol.list li:before
     }
     .container-intro
     {
-        max-width: 84rem;
+        max-width: 90rem;
     }
     /* Columns Classes */
     .col-1
@@ -4754,6 +4722,17 @@ ol.list li:before
         width: 100%;
         height: auto; 
         max-height: 4.5rem;
+    }
+    .icon-5
+    {
+        width: 6rem;
+    }
+    .icon-5 svg,
+    .icon-5 img
+    {
+        width: 100%;
+        height: auto; 
+        max-height: 6rem;
     }
     .icon-logo
     {
@@ -5094,36 +5073,6 @@ ol.list li:before
         border-top-width: .1rem;
         border-bottom-width: .1rem;
     }
-    .sm\:border-parent .border-child
-    {
-        border-width: .1rem;
-    }
-    .sm\:border-parent .border-child-t
-    {
-        border-top-width: .1rem;
-    }
-    .sm\:border-parent .border-child-r
-    {
-        border-right-width: .1rem;
-    }
-    .sm\:border-parent .border-child-b
-    {
-        border-bottom-width: .1rem;
-    }
-    .sm\:border-parent .border-child-l
-    {
-        border-left-width: .1rem;
-    }
-    .sm\:border-parent .border-child-x
-    {
-        border-right-width: .1rem; 
-        border-left-width: .1rem;
-    }
-    .sm\:border-parent .border-child-y
-    {
-        border-top-width: .1rem;
-        border-bottom-width: .1rem;
-    }
     .sm\:hover\:border:hover
     {
         border-width: .1rem;
@@ -5150,36 +5099,6 @@ ol.list li:before
         border-left-width: .1rem;
     }
     .sm\:hover\:border-y:hover
-    {
-        border-top-width: .1rem;
-        border-bottom-width: .1rem;
-    }
-    .sm\:hover\:border-parent:hover .border-child
-    {
-        border-width: .1rem;
-    }
-    .sm\:hover\:border-parent:hover .border-child-t
-    {
-        border-top-width: .1rem;
-    }
-    .sm\:hover\:border-parent:hover .border-child-r
-    {
-        border-right-width: .1rem;
-    }
-    .sm\:hover\:border-parent:hover .border-child-b
-    {
-        border-bottom-width: .1rem;
-    }
-    .sm\:hover\:border-parent:hover .border-child-l
-    {
-        border-left-width: .1rem;
-    }
-    .sm\:hover\:border-parent:hover .border-child-x
-    {
-        border-right-width: .1rem; 
-        border-left-width: .1rem;
-    }
-    .sm\:hover\:border-parent:hover .border-child-y
     {
         border-top-width: .1rem;
         border-bottom-width: .1rem;
@@ -5214,36 +5133,6 @@ ol.list li:before
         border-top-width: .1rem;
         border-bottom-width: .1rem;
     }
-    .sm\:focus\:border-parent:focus .border-child
-    {
-        border-width: .1rem;
-    }
-    .sm\:focus\:border-parent:focus .border-child-t
-    {
-        border-top-width: .1rem;
-    }
-    .sm\:focus\:border-parent:focus .border-child-r
-    {
-        border-right-width: .1rem;
-    }
-    .sm\:focus\:border-parent:focus .border-child-b
-    {
-        border-bottom-width: .1rem;
-    }
-    .sm\:focus\:border-parent:focus .border-child-l
-    {
-        border-left-width: .1rem;
-    }
-    .sm\:focus\:border-parent:focus .border-child-x
-    {
-        border-right-width: .1rem; 
-        border-left-width: .1rem;
-    }
-    .sm\:focus\:border-parent:focus .border-child-y
-    {
-        border-top-width: .1rem;
-        border-bottom-width: .1rem;
-    }
     .sm\:border-2
     {
         border-width: .2rem;
@@ -5270,36 +5159,6 @@ ol.list li:before
         border-left-width: .2rem;
     }
     .sm\:border-y-2
-    {
-        border-top-width: .2rem;
-        border-bottom-width: .2rem;
-    }
-    .sm\:border-parent .border-child-2
-    {
-        border-width: .2rem;
-    }
-    .sm\:border-parent .border-child-t-2
-    {
-        border-top-width: .2rem;
-    }
-    .sm\:border-parent .border-child-r-2
-    {
-        border-right-width: .2rem;
-    }
-    .sm\:border-parent .border-child-b-2
-    {
-        border-bottom-width: .2rem;
-    }
-    .sm\:border-parent .border-child-l-2
-    {
-        border-left-width: .2rem;
-    }
-    .sm\:border-parent .border-child-x-2
-    {
-        border-right-width: .2rem; 
-        border-left-width: .2rem;
-    }
-    .sm\:border-parent .border-child-y-2
     {
         border-top-width: .2rem;
         border-bottom-width: .2rem;
@@ -5334,36 +5193,6 @@ ol.list li:before
         border-top-width: .2rem;
         border-bottom-width: .2rem;
     }
-    .sm\:hover\:border-parent:hover .border-child-2
-    {
-        border-width: .2rem;
-    }
-    .sm\:hover\:border-parent:hover .border-child-t-2
-    {
-        border-top-width: .2rem;
-    }
-    .sm\:hover\:border-parent:hover .border-child-r-2
-    {
-        border-right-width: .2rem;
-    }
-    .sm\:hover\:border-parent:hover .border-child-b-2
-    {
-        border-bottom-width: .2rem;
-    }
-    .sm\:hover\:border-parent:hover .border-child-l-2
-    {
-        border-left-width: .2rem;
-    }
-    .sm\:hover\:border-parent:hover .border-child-x-2
-    {
-        border-right-width: .2rem; 
-        border-left-width: .2rem;
-    }
-    .sm\:hover\:border-parent:hover .border-child-y-2
-    {
-        border-top-width: .2rem;
-        border-bottom-width: .2rem;
-    }
     .sm\:focus\:border-2:focus
     {
         border-width: .2rem;
@@ -5390,36 +5219,6 @@ ol.list li:before
         border-left-width: .2rem;
     }
     .sm\:focus\:border-y-2:focus
-    {
-        border-top-width: .2rem;
-        border-bottom-width: .2rem;
-    }
-    .sm\:focus\:border-parent:focus .border-child-2
-    {
-        border-width: .2rem;
-    }
-    .sm\:focus\:border-parent:focus .border-child-t-2
-    {
-        border-top-width: .2rem;
-    }
-    .sm\:focus\:border-parent:focus .border-child-r-2
-    {
-        border-right-width: .2rem;
-    }
-    .sm\:focus\:border-parent:focus .border-child-b-2
-    {
-        border-bottom-width: .2rem;
-    }
-    .sm\:focus\:border-parent:focus .border-child-l-2
-    {
-        border-left-width: .2rem;
-    }
-    .sm\:focus\:border-parent:focus .border-child-x-2
-    {
-        border-right-width: .2rem; 
-        border-left-width: .2rem;
-    }
-    .sm\:focus\:border-parent:focus .border-child-y-2
     {
         border-top-width: .2rem;
         border-bottom-width: .2rem;
@@ -5891,7 +5690,19 @@ ol.list li:before
             -ms-transform: translateY(0%);
                 transform: translateY(0%);
     }
+    .sm\:pin-r0
+    {
+        -webkit-transform: translateY(0%);
+            -ms-transform: translateY(0%);
+                transform: translateY(0%);
+    }
     .sm\:pin-b0
+    {
+        -webkit-transform: translateY(0%);
+            -ms-transform: translateY(0%);
+                transform: translateY(0%);
+    }
+    .sm\:pin-l0
     {
         -webkit-transform: translateY(0%);
             -ms-transform: translateY(0%);
@@ -6527,6 +6338,39 @@ ol.list li:before
         padding-top: 10rem;
         padding-bottom: 10rem;
     }
+    .sm\:p-12
+    {
+        padding-top: 12rem;
+        padding-right: 12rem;
+        padding-bottom: 12rem;
+        padding-left: 12rem;
+    }
+    .sm\:pt-12
+    {
+        padding-top: 12rem;
+    }
+    .sm\:pr-12
+    {
+        padding-right: 12rem;
+    }
+    .sm\:pb-12
+    {
+        padding-bottom: 12rem;
+    }
+    .sm\:pl-12
+    {
+        padding-left: 12rem;
+    }
+    .sm\:px-12
+    {
+        padding-right: 12rem; 
+        padding-left: 12rem;
+    }
+    .sm\:py-12
+    {
+        padding-top: 12rem;
+        padding-bottom: 12rem;
+    }
     .sm\:p-0
     {
         padding-top: 0;
@@ -7055,6 +6899,39 @@ ol.list li:before
     {
         margin-top: 10rem;
         margin-bottom: 10rem;
+    }
+    .sm\:m-12
+    {
+        margin-top: 12rem;
+        margin-right: 12rem;
+        margin-bottom: 12rem;
+        margin-left: 12rem;
+    }
+    .sm\:mt-12
+    {
+        margin-top: 12rem;
+    }
+    .sm\:mr-12
+    {
+        margin-right: 12rem;
+    }
+    .sm\:mb-12
+    {
+        margin-bottom: 12rem;
+    }
+    .sm\:ml-12
+    {
+        margin-left: 12rem;
+    }
+    .sm\:mx-12
+    {
+        margin-right: 12rem; 
+        margin-left: 12rem;
+    }
+    .sm\:my-12
+    {
+        margin-top: 12rem;
+        margin-bottom: 12rem;
     }
     .sm\:m-0
     {
@@ -7663,6 +7540,47 @@ ol.list li:before
     {
         margin-top: -10rem;
         margin-bottom: -10rem;
+    }
+    .sm\:-m-12
+    {
+        margin-top: -12rem;
+        margin-right: -12rem;
+        margin-bottom: -12rem;
+        margin-left: -12rem;
+    }
+    .sm\:-mt-12
+    {
+        margin-top: -12rem;
+    }
+    .sm\:-mr-12
+    {
+        margin-right: -12rem;
+    }
+    .sm\:-mb-12
+    {
+        margin-bottom: -12rem;
+    }
+    .sm\:-ml-12
+    {
+        margin-left: -12rem;
+    }
+    .sm\:-mx-12
+    {
+        margin-right: -12rem; 
+        margin-left: -12rem;
+    }
+    .sm\:-mx-12[class*='grid-']:first-of-type
+    {
+        margin-top: -12rem;
+    }
+    .sm\:-mx-12[class*='grid-']:last-of-type
+    {
+        margin-bottom: -12rem;
+    }
+    .sm\:-my-12
+    {
+        margin-top: -12rem;
+        margin-bottom: -12rem;
     }
     .sm\:-m-0
     {
@@ -8386,6 +8304,10 @@ ol.list li:before
     {
         padding-top: 12.77955%;
     }
+    .sm\:ratio-custom:before
+    {
+        padding-top: 35%;
+    }
     .sm\:ratio-1x1:before
     {
         padding-top: 100%;
@@ -8396,7 +8318,7 @@ ol.list li:before
     }
     .sm\:ratio-unstuck-design:before
     {
-        padding-top: 8%;
+        padding-top: 10%;
     }
     .sm\:ratio-none:before
     {
@@ -8434,7 +8356,7 @@ ol.list li:before
     }
     .sm\:container-intro
     {
-        max-width: 84rem;
+        max-width: 90rem;
     }
     /* Columns Classes */
     .sm\:col-1
@@ -8627,6 +8549,17 @@ ol.list li:before
         width: 100%;
         height: auto; 
         max-height: 4.5rem;
+    }
+    .sm\:icon-5
+    {
+        width: 6rem;
+    }
+    .sm\:icon-5 svg,
+    .sm\:icon-5 img
+    {
+        width: 100%;
+        height: auto; 
+        max-height: 6rem;
     }
     .sm\:icon-logo
     {
@@ -8967,36 +8900,6 @@ ol.list li:before
         border-top-width: .1rem;
         border-bottom-width: .1rem;
     }
-    .md\:border-parent .border-child
-    {
-        border-width: .1rem;
-    }
-    .md\:border-parent .border-child-t
-    {
-        border-top-width: .1rem;
-    }
-    .md\:border-parent .border-child-r
-    {
-        border-right-width: .1rem;
-    }
-    .md\:border-parent .border-child-b
-    {
-        border-bottom-width: .1rem;
-    }
-    .md\:border-parent .border-child-l
-    {
-        border-left-width: .1rem;
-    }
-    .md\:border-parent .border-child-x
-    {
-        border-right-width: .1rem; 
-        border-left-width: .1rem;
-    }
-    .md\:border-parent .border-child-y
-    {
-        border-top-width: .1rem;
-        border-bottom-width: .1rem;
-    }
     .md\:hover\:border:hover
     {
         border-width: .1rem;
@@ -9023,36 +8926,6 @@ ol.list li:before
         border-left-width: .1rem;
     }
     .md\:hover\:border-y:hover
-    {
-        border-top-width: .1rem;
-        border-bottom-width: .1rem;
-    }
-    .md\:hover\:border-parent:hover .border-child
-    {
-        border-width: .1rem;
-    }
-    .md\:hover\:border-parent:hover .border-child-t
-    {
-        border-top-width: .1rem;
-    }
-    .md\:hover\:border-parent:hover .border-child-r
-    {
-        border-right-width: .1rem;
-    }
-    .md\:hover\:border-parent:hover .border-child-b
-    {
-        border-bottom-width: .1rem;
-    }
-    .md\:hover\:border-parent:hover .border-child-l
-    {
-        border-left-width: .1rem;
-    }
-    .md\:hover\:border-parent:hover .border-child-x
-    {
-        border-right-width: .1rem; 
-        border-left-width: .1rem;
-    }
-    .md\:hover\:border-parent:hover .border-child-y
     {
         border-top-width: .1rem;
         border-bottom-width: .1rem;
@@ -9087,36 +8960,6 @@ ol.list li:before
         border-top-width: .1rem;
         border-bottom-width: .1rem;
     }
-    .md\:focus\:border-parent:focus .border-child
-    {
-        border-width: .1rem;
-    }
-    .md\:focus\:border-parent:focus .border-child-t
-    {
-        border-top-width: .1rem;
-    }
-    .md\:focus\:border-parent:focus .border-child-r
-    {
-        border-right-width: .1rem;
-    }
-    .md\:focus\:border-parent:focus .border-child-b
-    {
-        border-bottom-width: .1rem;
-    }
-    .md\:focus\:border-parent:focus .border-child-l
-    {
-        border-left-width: .1rem;
-    }
-    .md\:focus\:border-parent:focus .border-child-x
-    {
-        border-right-width: .1rem; 
-        border-left-width: .1rem;
-    }
-    .md\:focus\:border-parent:focus .border-child-y
-    {
-        border-top-width: .1rem;
-        border-bottom-width: .1rem;
-    }
     .md\:border-2
     {
         border-width: .2rem;
@@ -9143,36 +8986,6 @@ ol.list li:before
         border-left-width: .2rem;
     }
     .md\:border-y-2
-    {
-        border-top-width: .2rem;
-        border-bottom-width: .2rem;
-    }
-    .md\:border-parent .border-child-2
-    {
-        border-width: .2rem;
-    }
-    .md\:border-parent .border-child-t-2
-    {
-        border-top-width: .2rem;
-    }
-    .md\:border-parent .border-child-r-2
-    {
-        border-right-width: .2rem;
-    }
-    .md\:border-parent .border-child-b-2
-    {
-        border-bottom-width: .2rem;
-    }
-    .md\:border-parent .border-child-l-2
-    {
-        border-left-width: .2rem;
-    }
-    .md\:border-parent .border-child-x-2
-    {
-        border-right-width: .2rem; 
-        border-left-width: .2rem;
-    }
-    .md\:border-parent .border-child-y-2
     {
         border-top-width: .2rem;
         border-bottom-width: .2rem;
@@ -9207,36 +9020,6 @@ ol.list li:before
         border-top-width: .2rem;
         border-bottom-width: .2rem;
     }
-    .md\:hover\:border-parent:hover .border-child-2
-    {
-        border-width: .2rem;
-    }
-    .md\:hover\:border-parent:hover .border-child-t-2
-    {
-        border-top-width: .2rem;
-    }
-    .md\:hover\:border-parent:hover .border-child-r-2
-    {
-        border-right-width: .2rem;
-    }
-    .md\:hover\:border-parent:hover .border-child-b-2
-    {
-        border-bottom-width: .2rem;
-    }
-    .md\:hover\:border-parent:hover .border-child-l-2
-    {
-        border-left-width: .2rem;
-    }
-    .md\:hover\:border-parent:hover .border-child-x-2
-    {
-        border-right-width: .2rem; 
-        border-left-width: .2rem;
-    }
-    .md\:hover\:border-parent:hover .border-child-y-2
-    {
-        border-top-width: .2rem;
-        border-bottom-width: .2rem;
-    }
     .md\:focus\:border-2:focus
     {
         border-width: .2rem;
@@ -9263,36 +9046,6 @@ ol.list li:before
         border-left-width: .2rem;
     }
     .md\:focus\:border-y-2:focus
-    {
-        border-top-width: .2rem;
-        border-bottom-width: .2rem;
-    }
-    .md\:focus\:border-parent:focus .border-child-2
-    {
-        border-width: .2rem;
-    }
-    .md\:focus\:border-parent:focus .border-child-t-2
-    {
-        border-top-width: .2rem;
-    }
-    .md\:focus\:border-parent:focus .border-child-r-2
-    {
-        border-right-width: .2rem;
-    }
-    .md\:focus\:border-parent:focus .border-child-b-2
-    {
-        border-bottom-width: .2rem;
-    }
-    .md\:focus\:border-parent:focus .border-child-l-2
-    {
-        border-left-width: .2rem;
-    }
-    .md\:focus\:border-parent:focus .border-child-x-2
-    {
-        border-right-width: .2rem; 
-        border-left-width: .2rem;
-    }
-    .md\:focus\:border-parent:focus .border-child-y-2
     {
         border-top-width: .2rem;
         border-bottom-width: .2rem;
@@ -9764,7 +9517,19 @@ ol.list li:before
             -ms-transform: translateY(0%);
                 transform: translateY(0%);
     }
+    .md\:pin-r0
+    {
+        -webkit-transform: translateY(0%);
+            -ms-transform: translateY(0%);
+                transform: translateY(0%);
+    }
     .md\:pin-b0
+    {
+        -webkit-transform: translateY(0%);
+            -ms-transform: translateY(0%);
+                transform: translateY(0%);
+    }
+    .md\:pin-l0
     {
         -webkit-transform: translateY(0%);
             -ms-transform: translateY(0%);
@@ -10400,6 +10165,39 @@ ol.list li:before
         padding-top: 10rem;
         padding-bottom: 10rem;
     }
+    .md\:p-12
+    {
+        padding-top: 12rem;
+        padding-right: 12rem;
+        padding-bottom: 12rem;
+        padding-left: 12rem;
+    }
+    .md\:pt-12
+    {
+        padding-top: 12rem;
+    }
+    .md\:pr-12
+    {
+        padding-right: 12rem;
+    }
+    .md\:pb-12
+    {
+        padding-bottom: 12rem;
+    }
+    .md\:pl-12
+    {
+        padding-left: 12rem;
+    }
+    .md\:px-12
+    {
+        padding-right: 12rem; 
+        padding-left: 12rem;
+    }
+    .md\:py-12
+    {
+        padding-top: 12rem;
+        padding-bottom: 12rem;
+    }
     .md\:p-0
     {
         padding-top: 0;
@@ -10928,6 +10726,39 @@ ol.list li:before
     {
         margin-top: 10rem;
         margin-bottom: 10rem;
+    }
+    .md\:m-12
+    {
+        margin-top: 12rem;
+        margin-right: 12rem;
+        margin-bottom: 12rem;
+        margin-left: 12rem;
+    }
+    .md\:mt-12
+    {
+        margin-top: 12rem;
+    }
+    .md\:mr-12
+    {
+        margin-right: 12rem;
+    }
+    .md\:mb-12
+    {
+        margin-bottom: 12rem;
+    }
+    .md\:ml-12
+    {
+        margin-left: 12rem;
+    }
+    .md\:mx-12
+    {
+        margin-right: 12rem; 
+        margin-left: 12rem;
+    }
+    .md\:my-12
+    {
+        margin-top: 12rem;
+        margin-bottom: 12rem;
     }
     .md\:m-0
     {
@@ -11536,6 +11367,47 @@ ol.list li:before
     {
         margin-top: -10rem;
         margin-bottom: -10rem;
+    }
+    .md\:-m-12
+    {
+        margin-top: -12rem;
+        margin-right: -12rem;
+        margin-bottom: -12rem;
+        margin-left: -12rem;
+    }
+    .md\:-mt-12
+    {
+        margin-top: -12rem;
+    }
+    .md\:-mr-12
+    {
+        margin-right: -12rem;
+    }
+    .md\:-mb-12
+    {
+        margin-bottom: -12rem;
+    }
+    .md\:-ml-12
+    {
+        margin-left: -12rem;
+    }
+    .md\:-mx-12
+    {
+        margin-right: -12rem; 
+        margin-left: -12rem;
+    }
+    .md\:-mx-12[class*='grid-']:first-of-type
+    {
+        margin-top: -12rem;
+    }
+    .md\:-mx-12[class*='grid-']:last-of-type
+    {
+        margin-bottom: -12rem;
+    }
+    .md\:-my-12
+    {
+        margin-top: -12rem;
+        margin-bottom: -12rem;
     }
     .md\:-m-0
     {
@@ -12259,6 +12131,10 @@ ol.list li:before
     {
         padding-top: 12.77955%;
     }
+    .md\:ratio-custom:before
+    {
+        padding-top: 35%;
+    }
     .md\:ratio-1x1:before
     {
         padding-top: 100%;
@@ -12269,7 +12145,7 @@ ol.list li:before
     }
     .md\:ratio-unstuck-design:before
     {
-        padding-top: 8%;
+        padding-top: 10%;
     }
     .md\:ratio-none:before
     {
@@ -12307,7 +12183,7 @@ ol.list li:before
     }
     .md\:container-intro
     {
-        max-width: 84rem;
+        max-width: 90rem;
     }
     /* Columns Classes */
     .md\:col-1
@@ -12500,6 +12376,17 @@ ol.list li:before
         width: 100%;
         height: auto; 
         max-height: 4.5rem;
+    }
+    .md\:icon-5
+    {
+        width: 6rem;
+    }
+    .md\:icon-5 svg,
+    .md\:icon-5 img
+    {
+        width: 100%;
+        height: auto; 
+        max-height: 6rem;
     }
     .md\:icon-logo
     {
@@ -12840,36 +12727,6 @@ ol.list li:before
         border-top-width: .1rem;
         border-bottom-width: .1rem;
     }
-    .lg\:border-parent .border-child
-    {
-        border-width: .1rem;
-    }
-    .lg\:border-parent .border-child-t
-    {
-        border-top-width: .1rem;
-    }
-    .lg\:border-parent .border-child-r
-    {
-        border-right-width: .1rem;
-    }
-    .lg\:border-parent .border-child-b
-    {
-        border-bottom-width: .1rem;
-    }
-    .lg\:border-parent .border-child-l
-    {
-        border-left-width: .1rem;
-    }
-    .lg\:border-parent .border-child-x
-    {
-        border-right-width: .1rem; 
-        border-left-width: .1rem;
-    }
-    .lg\:border-parent .border-child-y
-    {
-        border-top-width: .1rem;
-        border-bottom-width: .1rem;
-    }
     .lg\:hover\:border:hover
     {
         border-width: .1rem;
@@ -12896,36 +12753,6 @@ ol.list li:before
         border-left-width: .1rem;
     }
     .lg\:hover\:border-y:hover
-    {
-        border-top-width: .1rem;
-        border-bottom-width: .1rem;
-    }
-    .lg\:hover\:border-parent:hover .border-child
-    {
-        border-width: .1rem;
-    }
-    .lg\:hover\:border-parent:hover .border-child-t
-    {
-        border-top-width: .1rem;
-    }
-    .lg\:hover\:border-parent:hover .border-child-r
-    {
-        border-right-width: .1rem;
-    }
-    .lg\:hover\:border-parent:hover .border-child-b
-    {
-        border-bottom-width: .1rem;
-    }
-    .lg\:hover\:border-parent:hover .border-child-l
-    {
-        border-left-width: .1rem;
-    }
-    .lg\:hover\:border-parent:hover .border-child-x
-    {
-        border-right-width: .1rem; 
-        border-left-width: .1rem;
-    }
-    .lg\:hover\:border-parent:hover .border-child-y
     {
         border-top-width: .1rem;
         border-bottom-width: .1rem;
@@ -12960,36 +12787,6 @@ ol.list li:before
         border-top-width: .1rem;
         border-bottom-width: .1rem;
     }
-    .lg\:focus\:border-parent:focus .border-child
-    {
-        border-width: .1rem;
-    }
-    .lg\:focus\:border-parent:focus .border-child-t
-    {
-        border-top-width: .1rem;
-    }
-    .lg\:focus\:border-parent:focus .border-child-r
-    {
-        border-right-width: .1rem;
-    }
-    .lg\:focus\:border-parent:focus .border-child-b
-    {
-        border-bottom-width: .1rem;
-    }
-    .lg\:focus\:border-parent:focus .border-child-l
-    {
-        border-left-width: .1rem;
-    }
-    .lg\:focus\:border-parent:focus .border-child-x
-    {
-        border-right-width: .1rem; 
-        border-left-width: .1rem;
-    }
-    .lg\:focus\:border-parent:focus .border-child-y
-    {
-        border-top-width: .1rem;
-        border-bottom-width: .1rem;
-    }
     .lg\:border-2
     {
         border-width: .2rem;
@@ -13016,36 +12813,6 @@ ol.list li:before
         border-left-width: .2rem;
     }
     .lg\:border-y-2
-    {
-        border-top-width: .2rem;
-        border-bottom-width: .2rem;
-    }
-    .lg\:border-parent .border-child-2
-    {
-        border-width: .2rem;
-    }
-    .lg\:border-parent .border-child-t-2
-    {
-        border-top-width: .2rem;
-    }
-    .lg\:border-parent .border-child-r-2
-    {
-        border-right-width: .2rem;
-    }
-    .lg\:border-parent .border-child-b-2
-    {
-        border-bottom-width: .2rem;
-    }
-    .lg\:border-parent .border-child-l-2
-    {
-        border-left-width: .2rem;
-    }
-    .lg\:border-parent .border-child-x-2
-    {
-        border-right-width: .2rem; 
-        border-left-width: .2rem;
-    }
-    .lg\:border-parent .border-child-y-2
     {
         border-top-width: .2rem;
         border-bottom-width: .2rem;
@@ -13080,36 +12847,6 @@ ol.list li:before
         border-top-width: .2rem;
         border-bottom-width: .2rem;
     }
-    .lg\:hover\:border-parent:hover .border-child-2
-    {
-        border-width: .2rem;
-    }
-    .lg\:hover\:border-parent:hover .border-child-t-2
-    {
-        border-top-width: .2rem;
-    }
-    .lg\:hover\:border-parent:hover .border-child-r-2
-    {
-        border-right-width: .2rem;
-    }
-    .lg\:hover\:border-parent:hover .border-child-b-2
-    {
-        border-bottom-width: .2rem;
-    }
-    .lg\:hover\:border-parent:hover .border-child-l-2
-    {
-        border-left-width: .2rem;
-    }
-    .lg\:hover\:border-parent:hover .border-child-x-2
-    {
-        border-right-width: .2rem; 
-        border-left-width: .2rem;
-    }
-    .lg\:hover\:border-parent:hover .border-child-y-2
-    {
-        border-top-width: .2rem;
-        border-bottom-width: .2rem;
-    }
     .lg\:focus\:border-2:focus
     {
         border-width: .2rem;
@@ -13136,36 +12873,6 @@ ol.list li:before
         border-left-width: .2rem;
     }
     .lg\:focus\:border-y-2:focus
-    {
-        border-top-width: .2rem;
-        border-bottom-width: .2rem;
-    }
-    .lg\:focus\:border-parent:focus .border-child-2
-    {
-        border-width: .2rem;
-    }
-    .lg\:focus\:border-parent:focus .border-child-t-2
-    {
-        border-top-width: .2rem;
-    }
-    .lg\:focus\:border-parent:focus .border-child-r-2
-    {
-        border-right-width: .2rem;
-    }
-    .lg\:focus\:border-parent:focus .border-child-b-2
-    {
-        border-bottom-width: .2rem;
-    }
-    .lg\:focus\:border-parent:focus .border-child-l-2
-    {
-        border-left-width: .2rem;
-    }
-    .lg\:focus\:border-parent:focus .border-child-x-2
-    {
-        border-right-width: .2rem; 
-        border-left-width: .2rem;
-    }
-    .lg\:focus\:border-parent:focus .border-child-y-2
     {
         border-top-width: .2rem;
         border-bottom-width: .2rem;
@@ -13637,7 +13344,19 @@ ol.list li:before
             -ms-transform: translateY(0%);
                 transform: translateY(0%);
     }
+    .lg\:pin-r0
+    {
+        -webkit-transform: translateY(0%);
+            -ms-transform: translateY(0%);
+                transform: translateY(0%);
+    }
     .lg\:pin-b0
+    {
+        -webkit-transform: translateY(0%);
+            -ms-transform: translateY(0%);
+                transform: translateY(0%);
+    }
+    .lg\:pin-l0
     {
         -webkit-transform: translateY(0%);
             -ms-transform: translateY(0%);
@@ -14273,6 +13992,39 @@ ol.list li:before
         padding-top: 10rem;
         padding-bottom: 10rem;
     }
+    .lg\:p-12
+    {
+        padding-top: 12rem;
+        padding-right: 12rem;
+        padding-bottom: 12rem;
+        padding-left: 12rem;
+    }
+    .lg\:pt-12
+    {
+        padding-top: 12rem;
+    }
+    .lg\:pr-12
+    {
+        padding-right: 12rem;
+    }
+    .lg\:pb-12
+    {
+        padding-bottom: 12rem;
+    }
+    .lg\:pl-12
+    {
+        padding-left: 12rem;
+    }
+    .lg\:px-12
+    {
+        padding-right: 12rem; 
+        padding-left: 12rem;
+    }
+    .lg\:py-12
+    {
+        padding-top: 12rem;
+        padding-bottom: 12rem;
+    }
     .lg\:p-0
     {
         padding-top: 0;
@@ -14801,6 +14553,39 @@ ol.list li:before
     {
         margin-top: 10rem;
         margin-bottom: 10rem;
+    }
+    .lg\:m-12
+    {
+        margin-top: 12rem;
+        margin-right: 12rem;
+        margin-bottom: 12rem;
+        margin-left: 12rem;
+    }
+    .lg\:mt-12
+    {
+        margin-top: 12rem;
+    }
+    .lg\:mr-12
+    {
+        margin-right: 12rem;
+    }
+    .lg\:mb-12
+    {
+        margin-bottom: 12rem;
+    }
+    .lg\:ml-12
+    {
+        margin-left: 12rem;
+    }
+    .lg\:mx-12
+    {
+        margin-right: 12rem; 
+        margin-left: 12rem;
+    }
+    .lg\:my-12
+    {
+        margin-top: 12rem;
+        margin-bottom: 12rem;
     }
     .lg\:m-0
     {
@@ -15409,6 +15194,47 @@ ol.list li:before
     {
         margin-top: -10rem;
         margin-bottom: -10rem;
+    }
+    .lg\:-m-12
+    {
+        margin-top: -12rem;
+        margin-right: -12rem;
+        margin-bottom: -12rem;
+        margin-left: -12rem;
+    }
+    .lg\:-mt-12
+    {
+        margin-top: -12rem;
+    }
+    .lg\:-mr-12
+    {
+        margin-right: -12rem;
+    }
+    .lg\:-mb-12
+    {
+        margin-bottom: -12rem;
+    }
+    .lg\:-ml-12
+    {
+        margin-left: -12rem;
+    }
+    .lg\:-mx-12
+    {
+        margin-right: -12rem; 
+        margin-left: -12rem;
+    }
+    .lg\:-mx-12[class*='grid-']:first-of-type
+    {
+        margin-top: -12rem;
+    }
+    .lg\:-mx-12[class*='grid-']:last-of-type
+    {
+        margin-bottom: -12rem;
+    }
+    .lg\:-my-12
+    {
+        margin-top: -12rem;
+        margin-bottom: -12rem;
     }
     .lg\:-m-0
     {
@@ -16132,6 +15958,10 @@ ol.list li:before
     {
         padding-top: 12.77955%;
     }
+    .lg\:ratio-custom:before
+    {
+        padding-top: 35%;
+    }
     .lg\:ratio-1x1:before
     {
         padding-top: 100%;
@@ -16142,7 +15972,7 @@ ol.list li:before
     }
     .lg\:ratio-unstuck-design:before
     {
-        padding-top: 8%;
+        padding-top: 10%;
     }
     .lg\:ratio-none:before
     {
@@ -16180,7 +16010,7 @@ ol.list li:before
     }
     .lg\:container-intro
     {
-        max-width: 84rem;
+        max-width: 90rem;
     }
     /* Columns Classes */
     .lg\:col-1
@@ -16373,6 +16203,17 @@ ol.list li:before
         width: 100%;
         height: auto; 
         max-height: 4.5rem;
+    }
+    .lg\:icon-5
+    {
+        width: 6rem;
+    }
+    .lg\:icon-5 svg,
+    .lg\:icon-5 img
+    {
+        width: 100%;
+        height: auto; 
+        max-height: 6rem;
     }
     .lg\:icon-logo
     {
@@ -16713,36 +16554,6 @@ ol.list li:before
         border-top-width: .1rem;
         border-bottom-width: .1rem;
     }
-    .xl\:border-parent .border-child
-    {
-        border-width: .1rem;
-    }
-    .xl\:border-parent .border-child-t
-    {
-        border-top-width: .1rem;
-    }
-    .xl\:border-parent .border-child-r
-    {
-        border-right-width: .1rem;
-    }
-    .xl\:border-parent .border-child-b
-    {
-        border-bottom-width: .1rem;
-    }
-    .xl\:border-parent .border-child-l
-    {
-        border-left-width: .1rem;
-    }
-    .xl\:border-parent .border-child-x
-    {
-        border-right-width: .1rem; 
-        border-left-width: .1rem;
-    }
-    .xl\:border-parent .border-child-y
-    {
-        border-top-width: .1rem;
-        border-bottom-width: .1rem;
-    }
     .xl\:hover\:border:hover
     {
         border-width: .1rem;
@@ -16769,36 +16580,6 @@ ol.list li:before
         border-left-width: .1rem;
     }
     .xl\:hover\:border-y:hover
-    {
-        border-top-width: .1rem;
-        border-bottom-width: .1rem;
-    }
-    .xl\:hover\:border-parent:hover .border-child
-    {
-        border-width: .1rem;
-    }
-    .xl\:hover\:border-parent:hover .border-child-t
-    {
-        border-top-width: .1rem;
-    }
-    .xl\:hover\:border-parent:hover .border-child-r
-    {
-        border-right-width: .1rem;
-    }
-    .xl\:hover\:border-parent:hover .border-child-b
-    {
-        border-bottom-width: .1rem;
-    }
-    .xl\:hover\:border-parent:hover .border-child-l
-    {
-        border-left-width: .1rem;
-    }
-    .xl\:hover\:border-parent:hover .border-child-x
-    {
-        border-right-width: .1rem; 
-        border-left-width: .1rem;
-    }
-    .xl\:hover\:border-parent:hover .border-child-y
     {
         border-top-width: .1rem;
         border-bottom-width: .1rem;
@@ -16833,36 +16614,6 @@ ol.list li:before
         border-top-width: .1rem;
         border-bottom-width: .1rem;
     }
-    .xl\:focus\:border-parent:focus .border-child
-    {
-        border-width: .1rem;
-    }
-    .xl\:focus\:border-parent:focus .border-child-t
-    {
-        border-top-width: .1rem;
-    }
-    .xl\:focus\:border-parent:focus .border-child-r
-    {
-        border-right-width: .1rem;
-    }
-    .xl\:focus\:border-parent:focus .border-child-b
-    {
-        border-bottom-width: .1rem;
-    }
-    .xl\:focus\:border-parent:focus .border-child-l
-    {
-        border-left-width: .1rem;
-    }
-    .xl\:focus\:border-parent:focus .border-child-x
-    {
-        border-right-width: .1rem; 
-        border-left-width: .1rem;
-    }
-    .xl\:focus\:border-parent:focus .border-child-y
-    {
-        border-top-width: .1rem;
-        border-bottom-width: .1rem;
-    }
     .xl\:border-2
     {
         border-width: .2rem;
@@ -16889,36 +16640,6 @@ ol.list li:before
         border-left-width: .2rem;
     }
     .xl\:border-y-2
-    {
-        border-top-width: .2rem;
-        border-bottom-width: .2rem;
-    }
-    .xl\:border-parent .border-child-2
-    {
-        border-width: .2rem;
-    }
-    .xl\:border-parent .border-child-t-2
-    {
-        border-top-width: .2rem;
-    }
-    .xl\:border-parent .border-child-r-2
-    {
-        border-right-width: .2rem;
-    }
-    .xl\:border-parent .border-child-b-2
-    {
-        border-bottom-width: .2rem;
-    }
-    .xl\:border-parent .border-child-l-2
-    {
-        border-left-width: .2rem;
-    }
-    .xl\:border-parent .border-child-x-2
-    {
-        border-right-width: .2rem; 
-        border-left-width: .2rem;
-    }
-    .xl\:border-parent .border-child-y-2
     {
         border-top-width: .2rem;
         border-bottom-width: .2rem;
@@ -16953,36 +16674,6 @@ ol.list li:before
         border-top-width: .2rem;
         border-bottom-width: .2rem;
     }
-    .xl\:hover\:border-parent:hover .border-child-2
-    {
-        border-width: .2rem;
-    }
-    .xl\:hover\:border-parent:hover .border-child-t-2
-    {
-        border-top-width: .2rem;
-    }
-    .xl\:hover\:border-parent:hover .border-child-r-2
-    {
-        border-right-width: .2rem;
-    }
-    .xl\:hover\:border-parent:hover .border-child-b-2
-    {
-        border-bottom-width: .2rem;
-    }
-    .xl\:hover\:border-parent:hover .border-child-l-2
-    {
-        border-left-width: .2rem;
-    }
-    .xl\:hover\:border-parent:hover .border-child-x-2
-    {
-        border-right-width: .2rem; 
-        border-left-width: .2rem;
-    }
-    .xl\:hover\:border-parent:hover .border-child-y-2
-    {
-        border-top-width: .2rem;
-        border-bottom-width: .2rem;
-    }
     .xl\:focus\:border-2:focus
     {
         border-width: .2rem;
@@ -17009,36 +16700,6 @@ ol.list li:before
         border-left-width: .2rem;
     }
     .xl\:focus\:border-y-2:focus
-    {
-        border-top-width: .2rem;
-        border-bottom-width: .2rem;
-    }
-    .xl\:focus\:border-parent:focus .border-child-2
-    {
-        border-width: .2rem;
-    }
-    .xl\:focus\:border-parent:focus .border-child-t-2
-    {
-        border-top-width: .2rem;
-    }
-    .xl\:focus\:border-parent:focus .border-child-r-2
-    {
-        border-right-width: .2rem;
-    }
-    .xl\:focus\:border-parent:focus .border-child-b-2
-    {
-        border-bottom-width: .2rem;
-    }
-    .xl\:focus\:border-parent:focus .border-child-l-2
-    {
-        border-left-width: .2rem;
-    }
-    .xl\:focus\:border-parent:focus .border-child-x-2
-    {
-        border-right-width: .2rem; 
-        border-left-width: .2rem;
-    }
-    .xl\:focus\:border-parent:focus .border-child-y-2
     {
         border-top-width: .2rem;
         border-bottom-width: .2rem;
@@ -17510,7 +17171,19 @@ ol.list li:before
             -ms-transform: translateY(0%);
                 transform: translateY(0%);
     }
+    .xl\:pin-r0
+    {
+        -webkit-transform: translateY(0%);
+            -ms-transform: translateY(0%);
+                transform: translateY(0%);
+    }
     .xl\:pin-b0
+    {
+        -webkit-transform: translateY(0%);
+            -ms-transform: translateY(0%);
+                transform: translateY(0%);
+    }
+    .xl\:pin-l0
     {
         -webkit-transform: translateY(0%);
             -ms-transform: translateY(0%);
@@ -18146,6 +17819,39 @@ ol.list li:before
         padding-top: 10rem;
         padding-bottom: 10rem;
     }
+    .xl\:p-12
+    {
+        padding-top: 12rem;
+        padding-right: 12rem;
+        padding-bottom: 12rem;
+        padding-left: 12rem;
+    }
+    .xl\:pt-12
+    {
+        padding-top: 12rem;
+    }
+    .xl\:pr-12
+    {
+        padding-right: 12rem;
+    }
+    .xl\:pb-12
+    {
+        padding-bottom: 12rem;
+    }
+    .xl\:pl-12
+    {
+        padding-left: 12rem;
+    }
+    .xl\:px-12
+    {
+        padding-right: 12rem; 
+        padding-left: 12rem;
+    }
+    .xl\:py-12
+    {
+        padding-top: 12rem;
+        padding-bottom: 12rem;
+    }
     .xl\:p-0
     {
         padding-top: 0;
@@ -18674,6 +18380,39 @@ ol.list li:before
     {
         margin-top: 10rem;
         margin-bottom: 10rem;
+    }
+    .xl\:m-12
+    {
+        margin-top: 12rem;
+        margin-right: 12rem;
+        margin-bottom: 12rem;
+        margin-left: 12rem;
+    }
+    .xl\:mt-12
+    {
+        margin-top: 12rem;
+    }
+    .xl\:mr-12
+    {
+        margin-right: 12rem;
+    }
+    .xl\:mb-12
+    {
+        margin-bottom: 12rem;
+    }
+    .xl\:ml-12
+    {
+        margin-left: 12rem;
+    }
+    .xl\:mx-12
+    {
+        margin-right: 12rem; 
+        margin-left: 12rem;
+    }
+    .xl\:my-12
+    {
+        margin-top: 12rem;
+        margin-bottom: 12rem;
     }
     .xl\:m-0
     {
@@ -19282,6 +19021,47 @@ ol.list li:before
     {
         margin-top: -10rem;
         margin-bottom: -10rem;
+    }
+    .xl\:-m-12
+    {
+        margin-top: -12rem;
+        margin-right: -12rem;
+        margin-bottom: -12rem;
+        margin-left: -12rem;
+    }
+    .xl\:-mt-12
+    {
+        margin-top: -12rem;
+    }
+    .xl\:-mr-12
+    {
+        margin-right: -12rem;
+    }
+    .xl\:-mb-12
+    {
+        margin-bottom: -12rem;
+    }
+    .xl\:-ml-12
+    {
+        margin-left: -12rem;
+    }
+    .xl\:-mx-12
+    {
+        margin-right: -12rem; 
+        margin-left: -12rem;
+    }
+    .xl\:-mx-12[class*='grid-']:first-of-type
+    {
+        margin-top: -12rem;
+    }
+    .xl\:-mx-12[class*='grid-']:last-of-type
+    {
+        margin-bottom: -12rem;
+    }
+    .xl\:-my-12
+    {
+        margin-top: -12rem;
+        margin-bottom: -12rem;
     }
     .xl\:-m-0
     {
@@ -20005,6 +19785,10 @@ ol.list li:before
     {
         padding-top: 12.77955%;
     }
+    .xl\:ratio-custom:before
+    {
+        padding-top: 35%;
+    }
     .xl\:ratio-1x1:before
     {
         padding-top: 100%;
@@ -20015,7 +19799,7 @@ ol.list li:before
     }
     .xl\:ratio-unstuck-design:before
     {
-        padding-top: 8%;
+        padding-top: 10%;
     }
     .xl\:ratio-none:before
     {
@@ -20053,7 +19837,7 @@ ol.list li:before
     }
     .xl\:container-intro
     {
-        max-width: 84rem;
+        max-width: 90rem;
     }
     /* Columns Classes */
     .xl\:col-1
@@ -20246,6 +20030,17 @@ ol.list li:before
         width: 100%;
         height: auto; 
         max-height: 4.5rem;
+    }
+    .xl\:icon-5
+    {
+        width: 6rem;
+    }
+    .xl\:icon-5 svg,
+    .xl\:icon-5 img
+    {
+        width: 100%;
+        height: auto; 
+        max-height: 6rem;
     }
     .xl\:icon-logo
     {
@@ -20586,36 +20381,6 @@ ol.list li:before
         border-top-width: .1rem;
         border-bottom-width: .1rem;
     }
-    .xxl\:border-parent .border-child
-    {
-        border-width: .1rem;
-    }
-    .xxl\:border-parent .border-child-t
-    {
-        border-top-width: .1rem;
-    }
-    .xxl\:border-parent .border-child-r
-    {
-        border-right-width: .1rem;
-    }
-    .xxl\:border-parent .border-child-b
-    {
-        border-bottom-width: .1rem;
-    }
-    .xxl\:border-parent .border-child-l
-    {
-        border-left-width: .1rem;
-    }
-    .xxl\:border-parent .border-child-x
-    {
-        border-right-width: .1rem; 
-        border-left-width: .1rem;
-    }
-    .xxl\:border-parent .border-child-y
-    {
-        border-top-width: .1rem;
-        border-bottom-width: .1rem;
-    }
     .xxl\:hover\:border:hover
     {
         border-width: .1rem;
@@ -20642,36 +20407,6 @@ ol.list li:before
         border-left-width: .1rem;
     }
     .xxl\:hover\:border-y:hover
-    {
-        border-top-width: .1rem;
-        border-bottom-width: .1rem;
-    }
-    .xxl\:hover\:border-parent:hover .border-child
-    {
-        border-width: .1rem;
-    }
-    .xxl\:hover\:border-parent:hover .border-child-t
-    {
-        border-top-width: .1rem;
-    }
-    .xxl\:hover\:border-parent:hover .border-child-r
-    {
-        border-right-width: .1rem;
-    }
-    .xxl\:hover\:border-parent:hover .border-child-b
-    {
-        border-bottom-width: .1rem;
-    }
-    .xxl\:hover\:border-parent:hover .border-child-l
-    {
-        border-left-width: .1rem;
-    }
-    .xxl\:hover\:border-parent:hover .border-child-x
-    {
-        border-right-width: .1rem; 
-        border-left-width: .1rem;
-    }
-    .xxl\:hover\:border-parent:hover .border-child-y
     {
         border-top-width: .1rem;
         border-bottom-width: .1rem;
@@ -20706,36 +20441,6 @@ ol.list li:before
         border-top-width: .1rem;
         border-bottom-width: .1rem;
     }
-    .xxl\:focus\:border-parent:focus .border-child
-    {
-        border-width: .1rem;
-    }
-    .xxl\:focus\:border-parent:focus .border-child-t
-    {
-        border-top-width: .1rem;
-    }
-    .xxl\:focus\:border-parent:focus .border-child-r
-    {
-        border-right-width: .1rem;
-    }
-    .xxl\:focus\:border-parent:focus .border-child-b
-    {
-        border-bottom-width: .1rem;
-    }
-    .xxl\:focus\:border-parent:focus .border-child-l
-    {
-        border-left-width: .1rem;
-    }
-    .xxl\:focus\:border-parent:focus .border-child-x
-    {
-        border-right-width: .1rem; 
-        border-left-width: .1rem;
-    }
-    .xxl\:focus\:border-parent:focus .border-child-y
-    {
-        border-top-width: .1rem;
-        border-bottom-width: .1rem;
-    }
     .xxl\:border-2
     {
         border-width: .2rem;
@@ -20762,36 +20467,6 @@ ol.list li:before
         border-left-width: .2rem;
     }
     .xxl\:border-y-2
-    {
-        border-top-width: .2rem;
-        border-bottom-width: .2rem;
-    }
-    .xxl\:border-parent .border-child-2
-    {
-        border-width: .2rem;
-    }
-    .xxl\:border-parent .border-child-t-2
-    {
-        border-top-width: .2rem;
-    }
-    .xxl\:border-parent .border-child-r-2
-    {
-        border-right-width: .2rem;
-    }
-    .xxl\:border-parent .border-child-b-2
-    {
-        border-bottom-width: .2rem;
-    }
-    .xxl\:border-parent .border-child-l-2
-    {
-        border-left-width: .2rem;
-    }
-    .xxl\:border-parent .border-child-x-2
-    {
-        border-right-width: .2rem; 
-        border-left-width: .2rem;
-    }
-    .xxl\:border-parent .border-child-y-2
     {
         border-top-width: .2rem;
         border-bottom-width: .2rem;
@@ -20826,36 +20501,6 @@ ol.list li:before
         border-top-width: .2rem;
         border-bottom-width: .2rem;
     }
-    .xxl\:hover\:border-parent:hover .border-child-2
-    {
-        border-width: .2rem;
-    }
-    .xxl\:hover\:border-parent:hover .border-child-t-2
-    {
-        border-top-width: .2rem;
-    }
-    .xxl\:hover\:border-parent:hover .border-child-r-2
-    {
-        border-right-width: .2rem;
-    }
-    .xxl\:hover\:border-parent:hover .border-child-b-2
-    {
-        border-bottom-width: .2rem;
-    }
-    .xxl\:hover\:border-parent:hover .border-child-l-2
-    {
-        border-left-width: .2rem;
-    }
-    .xxl\:hover\:border-parent:hover .border-child-x-2
-    {
-        border-right-width: .2rem; 
-        border-left-width: .2rem;
-    }
-    .xxl\:hover\:border-parent:hover .border-child-y-2
-    {
-        border-top-width: .2rem;
-        border-bottom-width: .2rem;
-    }
     .xxl\:focus\:border-2:focus
     {
         border-width: .2rem;
@@ -20882,36 +20527,6 @@ ol.list li:before
         border-left-width: .2rem;
     }
     .xxl\:focus\:border-y-2:focus
-    {
-        border-top-width: .2rem;
-        border-bottom-width: .2rem;
-    }
-    .xxl\:focus\:border-parent:focus .border-child-2
-    {
-        border-width: .2rem;
-    }
-    .xxl\:focus\:border-parent:focus .border-child-t-2
-    {
-        border-top-width: .2rem;
-    }
-    .xxl\:focus\:border-parent:focus .border-child-r-2
-    {
-        border-right-width: .2rem;
-    }
-    .xxl\:focus\:border-parent:focus .border-child-b-2
-    {
-        border-bottom-width: .2rem;
-    }
-    .xxl\:focus\:border-parent:focus .border-child-l-2
-    {
-        border-left-width: .2rem;
-    }
-    .xxl\:focus\:border-parent:focus .border-child-x-2
-    {
-        border-right-width: .2rem; 
-        border-left-width: .2rem;
-    }
-    .xxl\:focus\:border-parent:focus .border-child-y-2
     {
         border-top-width: .2rem;
         border-bottom-width: .2rem;
@@ -21383,7 +20998,19 @@ ol.list li:before
             -ms-transform: translateY(0%);
                 transform: translateY(0%);
     }
+    .xxl\:pin-r0
+    {
+        -webkit-transform: translateY(0%);
+            -ms-transform: translateY(0%);
+                transform: translateY(0%);
+    }
     .xxl\:pin-b0
+    {
+        -webkit-transform: translateY(0%);
+            -ms-transform: translateY(0%);
+                transform: translateY(0%);
+    }
+    .xxl\:pin-l0
     {
         -webkit-transform: translateY(0%);
             -ms-transform: translateY(0%);
@@ -22019,6 +21646,39 @@ ol.list li:before
         padding-top: 10rem;
         padding-bottom: 10rem;
     }
+    .xxl\:p-12
+    {
+        padding-top: 12rem;
+        padding-right: 12rem;
+        padding-bottom: 12rem;
+        padding-left: 12rem;
+    }
+    .xxl\:pt-12
+    {
+        padding-top: 12rem;
+    }
+    .xxl\:pr-12
+    {
+        padding-right: 12rem;
+    }
+    .xxl\:pb-12
+    {
+        padding-bottom: 12rem;
+    }
+    .xxl\:pl-12
+    {
+        padding-left: 12rem;
+    }
+    .xxl\:px-12
+    {
+        padding-right: 12rem; 
+        padding-left: 12rem;
+    }
+    .xxl\:py-12
+    {
+        padding-top: 12rem;
+        padding-bottom: 12rem;
+    }
     .xxl\:p-0
     {
         padding-top: 0;
@@ -22547,6 +22207,39 @@ ol.list li:before
     {
         margin-top: 10rem;
         margin-bottom: 10rem;
+    }
+    .xxl\:m-12
+    {
+        margin-top: 12rem;
+        margin-right: 12rem;
+        margin-bottom: 12rem;
+        margin-left: 12rem;
+    }
+    .xxl\:mt-12
+    {
+        margin-top: 12rem;
+    }
+    .xxl\:mr-12
+    {
+        margin-right: 12rem;
+    }
+    .xxl\:mb-12
+    {
+        margin-bottom: 12rem;
+    }
+    .xxl\:ml-12
+    {
+        margin-left: 12rem;
+    }
+    .xxl\:mx-12
+    {
+        margin-right: 12rem; 
+        margin-left: 12rem;
+    }
+    .xxl\:my-12
+    {
+        margin-top: 12rem;
+        margin-bottom: 12rem;
     }
     .xxl\:m-0
     {
@@ -23155,6 +22848,47 @@ ol.list li:before
     {
         margin-top: -10rem;
         margin-bottom: -10rem;
+    }
+    .xxl\:-m-12
+    {
+        margin-top: -12rem;
+        margin-right: -12rem;
+        margin-bottom: -12rem;
+        margin-left: -12rem;
+    }
+    .xxl\:-mt-12
+    {
+        margin-top: -12rem;
+    }
+    .xxl\:-mr-12
+    {
+        margin-right: -12rem;
+    }
+    .xxl\:-mb-12
+    {
+        margin-bottom: -12rem;
+    }
+    .xxl\:-ml-12
+    {
+        margin-left: -12rem;
+    }
+    .xxl\:-mx-12
+    {
+        margin-right: -12rem; 
+        margin-left: -12rem;
+    }
+    .xxl\:-mx-12[class*='grid-']:first-of-type
+    {
+        margin-top: -12rem;
+    }
+    .xxl\:-mx-12[class*='grid-']:last-of-type
+    {
+        margin-bottom: -12rem;
+    }
+    .xxl\:-my-12
+    {
+        margin-top: -12rem;
+        margin-bottom: -12rem;
     }
     .xxl\:-m-0
     {
@@ -23878,6 +23612,10 @@ ol.list li:before
     {
         padding-top: 12.77955%;
     }
+    .xxl\:ratio-custom:before
+    {
+        padding-top: 35%;
+    }
     .xxl\:ratio-1x1:before
     {
         padding-top: 100%;
@@ -23888,7 +23626,7 @@ ol.list li:before
     }
     .xxl\:ratio-unstuck-design:before
     {
-        padding-top: 8%;
+        padding-top: 10%;
     }
     .xxl\:ratio-none:before
     {
@@ -23926,7 +23664,7 @@ ol.list li:before
     }
     .xxl\:container-intro
     {
-        max-width: 84rem;
+        max-width: 90rem;
     }
     /* Columns Classes */
     .xxl\:col-1
@@ -24119,6 +23857,17 @@ ol.list li:before
         width: 100%;
         height: auto; 
         max-height: 4.5rem;
+    }
+    .xxl\:icon-5
+    {
+        width: 6rem;
+    }
+    .xxl\:icon-5 svg,
+    .xxl\:icon-5 img
+    {
+        width: 100%;
+        height: auto; 
+        max-height: 6rem;
     }
     .xxl\:icon-logo
     {
@@ -25921,8 +25670,13 @@ strong
 .transition-all *[class*='hover:'],
 .transition-all *[class*='focus:']
 {
-    -webkit-transition: all .35s 0s ease-in-out;
-            transition: all .35s 0s ease-in-out;
+    -webkit-transition: all .45s 0s ease-in-out;
+            transition: all .45s 0s ease-in-out;
+}
+
+a.button
+{
+    color: inherit;
 }
 
 .button
@@ -25937,8 +25691,6 @@ strong
 
     cursor: pointer;
     text-decoration: none;
-
-    color: inherit;
 
     -webkit-box-align: center;
     -webkit-align-items: center;
@@ -25988,6 +25740,11 @@ strong
     margin-bottom: 2rem;
 }
 
+.text-wrap-lg > *:not(:last-child):not(.line-divider):not(.free-child)
+{
+    margin-bottom: 4rem;
+}
+
 .text-wrap-md > *:not(:last-child):not(.line-divider):not(.free-child)
 {
     margin-bottom: 2.5rem;
@@ -26001,30 +25758,6 @@ strong
 .text-wrap-xs > *:not(:last-child):not(.line-divider):not(.free-child)
 {
     margin-bottom: .5rem;
-}
-
-.image-rollover
-{
-    overflow: hidden;
-}
-.image-rollover .card-image
-{
-    -webkit-transition: all .45s 0s ease-in-out;
-            transition: all .45s 0s ease-in-out;
-}
-.image-rollover-parent:hover .image-rollover .card-image,
-.image-rollover:hover .card-image
-{
-    -webkit-transform: scale(1.045);
-        -ms-transform: scale(1.045);
-            transform: scale(1.045);
-}
-.image-rollover-parent:hover .image-rollover .play-button,
-.image-rollover:hover .play-button
-{
-    -webkit-transform: scale(.955);
-        -ms-transform: scale(.955);
-            transform: scale(.955);
 }
 
 .owl-carousel .owl-stage-outer
@@ -26137,61 +25870,16 @@ button.mfp-arrow-right::after
     border-left: transparent;
 }
 
-.filter_parent .filter_wrapper
-{
-    min-height: auto;
-}
-@media (min-width: 992px)
-{
-    .filter_parent .filter_wrapper
-    {
-        min-height: 50vh;
-    }
-}
-
-.filter_parent .filter_tab.is-active
-{
-    font-weight: 600;
-
-    color: #6ba3bc;
-}
-
 .accordion-wrapper .accordion.is-open > .accordion-label + .accordion-content
 {
     max-height: 40em;
 }
 
-.Repair-table th:first-child,
-.Repair-table td:first-child
+.accordion-wrapper .accordion.is-open > .accordion-label > .toggle-sign
 {
-    width: 85px;
-}
-@media (min-width: 710px)
-{
-    .Repair-table th:first-child,
-    .Repair-table td:first-child
-    {
-        width: 140px;
-    }
-}
-
-.Repair-table th:last-child,
-.Repair-table th:nth-last-child(2),
-.Repair-table td:last-child,
-.Repair-table td:nth-last-child(2)
-{
-    width: 40px;
-    max-width: 30px;
-}
-@media (min-width: 992px)
-{
-    .Repair-table th:last-child,
-    .Repair-table th:nth-last-child(2),
-    .Repair-table td:last-child,
-    .Repair-table td:nth-last-child(2)
-    {
-        max-width: 50px;
-    }
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
 }
 
 .popup_visible .popup
@@ -26254,55 +25942,50 @@ button.mfp-arrow-right::after
     }
 }
 
-.mfp-counter
-{
-    display: none;
-}
-
-.mfp-title
-{
-    padding-right: 0;
-}
-
-@media (min-width: 992px)
-{
-    .mfp-bottom-bar
-    {
-        top: auto;
-        bottom: 40px;
-    }
-}
-
-.mfp-content.caption-close .caption-wrapper
-{
-    overflow: hidden; 
-
-    max-height: 0;
-}
-.mfp-content.caption-close .caption-wrapper .caption-toggle .plus
-{
-    display: block;
-}
-.mfp-content.caption-close .caption-wrapper .caption-toggle .minus
-{
-    display: none;
-}
-
-.mfp-content .caption-toggle
-{
-    font-weight: 600;
-}
-.mfp-content .caption-toggle .plus
-{
-    display: none;
-}
-
 .image-placeholder
 {
     background-color: #f0f6f8; 
     background-image: url('../images/favicon.png');
     background-repeat: no-repeat;
     background-position: center;
+}
+
+@media (max-width: 576px)
+{
+    a[href^='http']
+    {
+        display: inline-block;
+        overflow: hidden;
+
+        max-width: 100%; 
+
+        text-overflow: ellipsis;
+    }
+}
+
+@media (min-width: 992px)
+{
+    .hero-content
+    {
+        width: calc(100% - ((100vw/1.72) - ((100vw - 100%)/2)));
+    }
+}
+
+.header-home
+{
+    color: #6ba3bc;
+}
+@media (min-width: 992px)
+{
+    .header-home
+    {
+        color: #fff;
+    }
+}
+
+:not(.header-home) .social-icon:not(:hover)
+{
+    color: #6ba3bc;
 }
 
 /*Custom styling*/
@@ -26313,10 +25996,10 @@ button.mfp-arrow-right::after
 .navbar ul > li > a:after
 {
     position: absolute;
-    top: calc(100% - .2rem);
+    top: calc(100% + .2rem);
     left: 1.25rem;
 
-    width: 100%;
+    width: 3rem;
     max-width: 0;
     height: .2rem;
 
@@ -26328,7 +26011,7 @@ button.mfp-arrow-right::after
             transform: translateX(-50%);
 
     opacity: 0; 
-    color: inherit;
+    color: #6ba3bc;
     border: .1rem solid;
     border-radius: .5rem;
 }
@@ -26344,18 +26027,7 @@ button.mfp-arrow-right::after
 {
     .navbar ul > li.is-active
     {
-        font-weight: 400; 
-
-        color: #6ba3bc;
-    }
-}
-
-@media (min-width: 992px)
-{
-    .navbar ul > li.is-active > a,
-    .navbar ul > li:hover > a
-    {
-        color: #6ba3bc;
+        font-weight: 400;
     }
 }
 
@@ -26385,9 +26057,17 @@ button.mfp-arrow-right::after
     opacity: 1;
 }
 
+@media all and (max-width: 992px)
+{
+    .navbar
+    {
+        max-width: calc(100% - 5rem);
+    }
+}
+
 .jsNavbarToggle.is-open .hamburger
 {
-    top: 1.5rem;
+    top: 2.8rem;
     right: 1.5rem; 
 
     color: white;
