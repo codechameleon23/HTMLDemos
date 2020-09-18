@@ -68,7 +68,7 @@ const PROJECT_JS_LIST = [
   SRC_JS_PATH+'/_accordion.js',
   // SRC_JS_PATH+'/_galleryFilter.js',
   // SRC_JS_PATH+'/_tableStackedRows.js',
-  SRC_JS_PATH+'/_myScript.js',
+  // SRC_JS_PATH+'/_myScript.js',
   SRC_JS_PATH+'/_docReadyEnds.js',
   SRC_JS_PATH+'/_iphonePageHack.js',
 ];
