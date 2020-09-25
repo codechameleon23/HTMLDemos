@@ -14,7 +14,7 @@ const gulp = require("gulp"),
   svgo = require('gulp-svgo');
 
 const WEBSITE_NAME = 'Live Webinar';
-const PROJECT_NAME = 'LW_Website_HTML';
+const PROJECT_NAME = 'ENTOD_Website_HTML';
 const PROJECT_PATH = ".";
 
 const DEST_CSS_PATH = PROJECT_PATH+"/css";
