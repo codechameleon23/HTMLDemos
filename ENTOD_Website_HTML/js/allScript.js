@@ -22,29 +22,6 @@ $(document).ready(function () {
       autoplayTimeout: 4000,
       autoplayHoverPause: true,
       items: 1,
-      // responsive: {
-      //   0: {
-      //     items: 2,
-      //     margin: 20,
-      //     center:true,
-      //   },
-      //   710: {
-      //     items: 3,
-      //     margin: 20,
-      //     center:false,
-      //   },
-      //   992: {
-      //     items: 5,
-      //     margin: 30,
-      //     center:false,
-      //   }
-      // }
     });
   };
-  // $('.jsCarouselPrv').on('click', function () {
-  //   $(this).closest('.carousel-outer').find(itemCarousel).trigger('prev.owl.carousel');
-  // });
-  // $('.jsCarouselNxt').on('click', function () {
-  //   $(this).closest('.carousel-outer').find(itemCarousel).trigger('next.owl.carousel');
-  // });
 });
