@@ -27252,6 +27252,45 @@ button.mfp-arrow-right::after
     }
 }
 
+.tilted-left.tilted-small > *:before
+{
+    margin-right: 0;
+}
+
+@media (max-width: 992px)
+{
+    .tilted-left.tilted-small.pin-t50
+    {
+        -webkit-transform: translateY(-70%);
+            -ms-transform: translateY(-70%);
+                transform: translateY(-70%);
+    }
+}
+
+@media (min-width: 992px)
+{
+    .tilted-left.tilted-small
+    {
+        width: calc(100% - ((100vw / 1.6) - ((100vw - 100%) / 2)));
+    }
+}
+
+@media (min-width: 1200px)
+{
+    .tilted-left.tilted-small
+    {
+        width: calc(100% - ((100vw / 1.5) - ((100vw - 100%) / 2)));
+    }
+}
+
+@media (min-width: 1400px)
+{
+    .tilted-left.tilted-small
+    {
+        width: calc(100% - ((100vw / 2) - ((100vw - 100%) / 2)));
+    }
+}
+
 @media (min-width: 992px)
 {
     .tilted-left-reverse > *:before
