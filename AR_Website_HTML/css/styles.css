@@ -27373,9 +27373,20 @@ button.mfp-arrow-right::after
 
 .text-grad
 {
+    color: #4f2e8c;
+    background-image: none;
     -webkit-background-clip: text;
 
     -webkit-text-fill-color: transparent;
+}
+
+@supports not (-ms-high-contrast: none)
+{
+    .text-grad
+    {
+        background-image: -webkit-linear-gradient(left, #4f2e8c 0%, #e81c89 50%);
+        background-image:         linear-gradient(to right, #4f2e8c 0%, #e81c89 50%);
+    }
 }
 
 /*Custom styling*/
