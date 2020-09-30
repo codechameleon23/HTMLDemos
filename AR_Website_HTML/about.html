@@ -23,7 +23,7 @@
 
 <body class="jsNavbarToggle is-close flex-col">
   <!-- Header -->
-  <header class="header py-2 pos-fixed pin-x pin-t z-10 bg-white">
+  <header class="header pos-fixed pin-x pin-t z-10 bg-white flex-col justify-center">
     <div class="container lg:container-xl mx-auto pos-relative">
       <div class="flex-row align-center">
         <a href="index.html" title="Autonomous Robotics" class="mr-2 icon icon-logo md:icon-logo ratio-logo pos-relative d-inline-block">
@@ -33,20 +33,55 @@
         </a>
         <nav class="navbar col-12 flex-col flex-stretch justify-center pos-fixed pin pin-l-auto z-50 f-weight-light f-color-white f-size-4 lg:f-size-2 lg:f-color-inherit bg-dark shadow-lg md:col-6 lg:ml-auto lg:col-auto lg:pos-static lg:bg-transparent lg:shadow-none">
           <ul class="list-reset md:flex-row justify-space-between capitalize lg:-mx-3">
-            <li class="px-3 d-inline-block lg:d-hidden">
-              <a class="f-color-inherit uppercase d-inline-block no-underline pt-2 pb-1 lg:pt-0 lg:pb-0 pl-1 lg:pl-0" href="index.html">Home</a>
+            <li class="lg:px-3 lg:py-3 d-flex lg:d-hidden">
+              <a class="f-color-inherit uppercase d-flex no-underline py-2 lg:py-0 px-2 lg:px-0" href="index.html">Home</a>
             </li>
-            <li class="is-active px-3">
-              <a class="f-color-inherit uppercase d-inline-block no-underline pt-2 pb-1 lg:pt-0 lg:pb-0 pl-1 lg:pl-0" href="about.html">About</a>
+            <li class="lg:px-3 lg:py-3 is-active has-dropdown">
+              <a class="f-color-inherit uppercase no-underline py-1_5 lg:py-0 px-2 lg:px-0">
+                <span>About</span>
+                <i data-feather="chevron-down" class="toggle"></i>
+              </a>
+              <div class="dropdown mt-thin w-full lg:shadow-lg bg-light f-weight-inherit flex-col lg:-ml-3 bg-grad-primary pb-flat">
+                <ul class="list-reset flex-col flex-auto list-reset py-2 lg:py-3 uppercase bg-light f-color-default lg:f-color-inherit f-size-2">
+                  <li class="lg:hover:f-color-primary">
+                    <a class="py-1 lg:py-1_5 px-3 f-color-inherit no-underline d-inline-block" href="about.html"><span>About Us</span></a>
+                  </li>
+                  <li class="lg:hover:f-color-primary">
+                    <a class="py-1 lg:py-1_5 px-3 f-color-inherit no-underline d-inline-block" href="about.html#auv_technology"><span>Auv Technology</span></a>
+                  </li>
+                  <li class="lg:hover:f-color-primary">
+                    <a class="py-1 lg:py-1_5 px-3 f-color-inherit no-underline d-inline-block" href="about.html#thalassa"><span>Thalassa</span></a>
+                  </li>
+                </ul>
+              </div>
             </li>
-            <li class="px-3">
-              <a class="f-color-inherit uppercase d-inline-block no-underline pt-2 pb-1 lg:pt-0 lg:pb-0 pl-1 lg:pl-0" href="marine.html">Marine</a>
+            <li class="lg:px-3 lg:py-3 has-dropdown">
+              <a class="f-color-inherit uppercase no-underline py-1_5 lg:py-0 px-2 lg:px-0">
+                <span>Marine</span>
+                <i data-feather="chevron-down" class="toggle"></i>
+              </a>
+              <div class="dropdown mt-thin w-full lg:shadow-lg bg-light f-weight-inherit flex-col lg:-ml-3 bg-grad-primary pb-flat">
+                <ul class="list-reset flex-col flex-auto list-reset py-2 lg:py-3 uppercase bg-light f-color-default lg:f-color-inherit f-size-2">
+                  <li class="lg:hover:f-color-primary">
+                    <a class="py-1 lg:py-1_5 px-3 f-color-inherit no-underline d-inline-block" href="marine.html"><span>MARINE APPLICATION</span></a>
+                  </li>
+                  <li class="lg:hover:f-color-primary">
+                    <a class="py-1 lg:py-1_5 px-3 f-color-inherit no-underline d-inline-block" href="marine-details.html"><span>ENVIRONMENTAL APPLICATION</span></a>
+                  </li>
+                  <li class="lg:hover:f-color-primary">
+                    <a class="py-1 lg:py-1_5 px-3 f-color-inherit no-underline d-inline-block" href="marine-details.html"><span>OFF SHOREAPPLICATION</span></a>
+                  </li>
+                  <li class="lg:hover:f-color-primary">
+                    <a class="py-1 lg:py-1_5 px-3 f-color-inherit no-underline d-inline-block" href="marine-details.html"><span>DEFENCE APPLICATION</span></a>
+                  </li>
+                </ul>
+              </div>
             </li>
-            <li class="px-3">
-              <a class="f-color-inherit uppercase d-inline-block no-underline pt-2 pb-1 lg:pt-0 lg:pb-0 pl-1 lg:pl-0" href="careers.html">Careers</a>
+            <li class="lg:px-3 lg:py-3">
+              <a class="f-color-inherit uppercase d-inline-block no-underline py-1_5 lg:py-0 px-2 lg:px-0" href="careers.html">Careers</a>
             </li>
-            <li class="px-3">
-              <a class="f-color-inherit uppercase d-inline-block no-underline pt-2 pb-1 lg:pt-0 lg:pb-0 pl-1 lg:pl-0" href="contact.html">Contact</a>
+            <li class="lg:px-3 lg:py-3">
+              <a class="f-color-inherit uppercase d-inline-block no-underline py-1_5 lg:py-0 px-2 lg:px-0" href="contact.html">Contact</a>
             </li>
           </ul>
         </nav>
@@ -110,6 +145,11 @@
       </div>
     </section>
     <!--AUV Technology-->
+    <div class="pos-relative">
+      <div id="auv_technology" class="-mt-9 pos-absolute">
+        <!--ID for Scroll to AUV Technology-->
+      </div>
+    </div>
     <section class="py-4 bg-secondary f-color-white">
       <div class="container md:container-sm lg:container-lg xl:container-xl mx-auto">
         <div class="text-wrap-md">
@@ -137,6 +177,11 @@
       </div>
     </section>
     <!--Thalassa-->
+    <div class="pos-relative">
+      <div id="thalassa" class="-mt-9 pos-absolute">
+        <!--ID for Scroll to Thalassa-->
+      </div>
+    </div>
     <section class="pos-relative my-4 lg:my-8">
       <div class="container md:container-sm lg:container-lg xl:container-xl mx-auto">
         <div class="flex-col lg:flex-row lg:align-center">
