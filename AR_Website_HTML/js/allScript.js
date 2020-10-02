@@ -167,9 +167,10 @@ if ($('.js_media_Gallery_Popup').length) { //if element exists
 //  Animate on scroll
 //  -------------------------------------------
   AOS.init({
+    duration: 700,
     once: true,
     easing: 'ease-in-out',
-    // anchorPlacement: 'top-bottom',
+    anchorPlacement: 'top-bottom',
   });
 });
 //  -------------------------------------------
