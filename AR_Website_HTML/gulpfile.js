@@ -60,6 +60,7 @@ const PROJECT_JS_LIST = [
   SRC_JS_PATH+'/_hamburgerToggle.js',
   // SRC_JS_PATH+'/_searchbarToggle.js',
   // SRC_JS_PATH+'/_submenutoggle.js',
+  // SRC_JS_PATH+'/_navbarDoubleTap.js',
   SRC_JS_PATH+'/_subMenuDropdown.js',
   // SRC_JS_PATH+'/_bannerCarousel.js',
   // SRC_JS_PATH+'/_itemCarousel.js',
