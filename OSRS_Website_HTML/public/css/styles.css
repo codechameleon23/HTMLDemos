@@ -2540,7 +2540,7 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
   .font-sm {
     font-size: 1.2rem; }
   .font-sm2 {
-    font-size: 1.7rem; }
+    font-size: 1.6rem; }
   .font-base {
     font-size: 1.7rem; }
   .font-md {
@@ -3465,6 +3465,8 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
     padding-top: 100%; }
   .ar-16x9:before {
     padding-top: 56.25%; }
+  .ar-logo:before {
+    padding-top: 54.63415%; }
   .ar-custom-1:before {
     padding-top: 48.95636%; }
   .ar-custom-2:before {
@@ -4300,7 +4302,7 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
   .sm\:font-sm {
     font-size: 1.2rem; }
   .sm\:font-sm2 {
-    font-size: 1.7rem; }
+    font-size: 1.6rem; }
   .sm\:font-base {
     font-size: 1.7rem; }
   .sm\:font-md {
@@ -5225,6 +5227,8 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
     padding-top: 100%; }
   .sm\:ar-16x9:before {
     padding-top: 56.25%; }
+  .sm\:ar-logo:before {
+    padding-top: 54.63415%; }
   .sm\:ar-custom-1:before {
     padding-top: 48.95636%; }
   .sm\:ar-custom-2:before {
@@ -6060,7 +6064,7 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
   .md\:font-sm {
     font-size: 1.2rem; }
   .md\:font-sm2 {
-    font-size: 1.7rem; }
+    font-size: 1.6rem; }
   .md\:font-base {
     font-size: 1.7rem; }
   .md\:font-md {
@@ -6985,6 +6989,8 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
     padding-top: 100%; }
   .md\:ar-16x9:before {
     padding-top: 56.25%; }
+  .md\:ar-logo:before {
+    padding-top: 54.63415%; }
   .md\:ar-custom-1:before {
     padding-top: 48.95636%; }
   .md\:ar-custom-2:before {
@@ -7820,7 +7826,7 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
   .lg\:font-sm {
     font-size: 1.2rem; }
   .lg\:font-sm2 {
-    font-size: 1.7rem; }
+    font-size: 1.6rem; }
   .lg\:font-base {
     font-size: 1.7rem; }
   .lg\:font-md {
@@ -8745,6 +8751,8 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
     padding-top: 100%; }
   .lg\:ar-16x9:before {
     padding-top: 56.25%; }
+  .lg\:ar-logo:before {
+    padding-top: 54.63415%; }
   .lg\:ar-custom-1:before {
     padding-top: 48.95636%; }
   .lg\:ar-custom-2:before {
@@ -9580,7 +9588,7 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
   .xl\:font-sm {
     font-size: 1.2rem; }
   .xl\:font-sm2 {
-    font-size: 1.7rem; }
+    font-size: 1.6rem; }
   .xl\:font-base {
     font-size: 1.7rem; }
   .xl\:font-md {
@@ -10505,6 +10513,8 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
     padding-top: 100%; }
   .xl\:ar-16x9:before {
     padding-top: 56.25%; }
+  .xl\:ar-logo:before {
+    padding-top: 54.63415%; }
   .xl\:ar-custom-1:before {
     padding-top: 48.95636%; }
   .xl\:ar-custom-2:before {
@@ -10825,7 +10835,7 @@ a.image-holder:after {
       padding-right: 1rem;
       margin-bottom: 0; }
   .accordion-wrapper .accordion.is-open > .accordion-label + .accordion-content {
-    max-height: 5000em;
+    max-height: 80em;
     opacity: 1; }
     .accordion-wrapper .accordion.is-open > .accordion-label + .accordion-content > .answer {
       -webkit-animation: fade-in 0.3s 0.3s ease-in-out both;
@@ -10841,6 +10851,8 @@ a.image-holder:after {
 
 .brand-logo {
   display: inline-block; }
+  .brand-logo img {
+    width: 100%; }
 
 footer .brand-logo {
   width: 100%;
@@ -11024,6 +11036,9 @@ nav {
 .rounded-thumb {
   max-width: 260px; }
 
+.tabs .tab {
+  margin: 0 -0.2rem; }
+
 .tabs .tab:not(.active) {
   cursor: pointer; }
 
@@ -11032,7 +11047,9 @@ nav {
 
 .tabs .active.tab {
   cursor: default;
-  background-color: #2e3a5e; }
+  background-color: #2e3a5e;
+  position: relative;
+  border-color: #2e3a5e; }
 
 .transition-all,
 .transition-all *[class*='hover:'],
@@ -11042,21 +11059,24 @@ nav {
   transition: all .45s 0s ease-in-out; }
 
 .brand-logo-small {
-  max-width: 13.5rem; }
+  max-width: 14.5rem; }
   @media (min-width: 992px) {
     .brand-logo-small {
       max-width: 20.5rem; } }
 
 .icon-unstuck-design {
-  width: 24rem;
   display: inline-block;
-  vertical-align: bottom; }
+  vertical-align: bottom;
+  width: 19rem; }
   .icon-unstuck-design:before {
     padding-top: 10%;
     display: block;
     width: 100%;
     content: '';
     pointer-events: none; }
+  @media (min-width: 576px) {
+    .icon-unstuck-design {
+      width: 24rem; } }
 
 /*googleMap*/
 /*Map Marker*/
@@ -11120,3 +11140,12 @@ nav {
   90% {
     -webkit-transform: rotate(3deg);
             transform: rotate(3deg); } }
+
+.long-email {
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  max-width: 100%; }
+  @media (max-width: 576px) {
+    .long-email {
+      display: inline-block; } }
