@@ -14,7 +14,7 @@ const gulp = require("gulp"),
   svgo = require('gulp-svgo');
 
 const WEBSITE_NAME = 'Gujarat Energy';
-const PROJECT_NAME = 'SOLAR_Website_HTML';
+const PROJECT_NAME = 'GEIN_Website_HTML';
 const PROJECT_PATH = ".";
 
 const DEST_CSS_PATH = PROJECT_PATH+"/css";
