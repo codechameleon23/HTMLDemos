@@ -24425,3 +24425,22 @@ a.button
         text-overflow: ellipsis;
     }
 }
+
+.logo-shadow
+{
+    position: relative;
+}
+.logo-shadow:before
+{
+    position: absolute;
+    z-index: -1;
+    top: 50%; 
+    left: 50%;
+
+    width: 70%;
+    height: 0;
+
+    content: '';
+
+    box-shadow: -200px 0 200px 100px rgba(0, 0, 0, .5);
+}
