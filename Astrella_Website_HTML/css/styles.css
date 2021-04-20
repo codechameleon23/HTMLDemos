@@ -28453,12 +28453,19 @@ a[href]:not(:hover)
 {
     overflow: hidden; 
 
-    height: 7.7rem;
+    height: 3.6rem;
+}
+@media (min-width: 710px)
+{
+    .sliding-text
+    {
+        height: 7.7rem;
+    }
 }
 .sliding-text ul
 {
-    -webkit-animation: change 24s infinite;
-            animation: change 24s infinite;
+    -webkit-animation: changeLineOne 18s infinite;
+            animation: changeLineOne 18s infinite;
 }
 .sliding-text li
 {
@@ -28467,58 +28474,94 @@ a[href]:not(:hover)
 
 .sliding-text-2 ul
 {
-    -webkit-animation: change 24s 8s infinite;
-            animation: change 24s 8s infinite;
+    -webkit-animation: changeLineTwo 18s infinite;
+            animation: changeLineTwo 18s infinite;
 }
 
-@-webkit-keyframes change
+@-webkit-keyframes changeLineOne
 {
     0%,
-    12.66%,
-    83.3%,
-    95.96%,
-    100%
+    15%,
+    80%
     {
         -webkit-transform: translate3d(0, 0, 0);
                 transform: translate3d(0, 0, 0);
     }
-    16.66%,
-    29.32%,
-    66.64%,
-    79.3%
+    16.5%,
+    49%
     {
         -webkit-transform: translate3d(0, -33.33%, 0);
                 transform: translate3d(0, -33.33%, 0);
     }
-    33.32%,
-    45.98%
+    50%,
+    79%
     {
         -webkit-transform: translate3d(0, -66.66%, 0);
                 transform: translate3d(0, -66.66%, 0);
     }
 }
 
-@keyframes change
+@keyframes changeLineOne
 {
     0%,
-    12.66%,
-    83.3%,
-    95.96%,
-    100%
+    15%,
+    80%
     {
         -webkit-transform: translate3d(0, 0, 0);
                 transform: translate3d(0, 0, 0);
     }
-    16.66%,
-    29.32%,
-    66.64%,
-    79.3%
+    16.5%,
+    49%
     {
         -webkit-transform: translate3d(0, -33.33%, 0);
                 transform: translate3d(0, -33.33%, 0);
     }
-    33.32%,
-    45.98%
+    50%,
+    79%
+    {
+        -webkit-transform: translate3d(0, -66.66%, 0);
+                transform: translate3d(0, -66.66%, 0);
+    }
+}
+
+@-webkit-keyframes changeLineTwo
+{
+    0%,
+    32%
+    {
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+    }
+    33%,
+    65%
+    {
+        -webkit-transform: translate3d(0, -33.33%, 0);
+                transform: translate3d(0, -33.33%, 0);
+    }
+    66%,
+    99%
+    {
+        -webkit-transform: translate3d(0, -66.66%, 0);
+                transform: translate3d(0, -66.66%, 0);
+    }
+}
+
+@keyframes changeLineTwo
+{
+    0%,
+    32%
+    {
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+    }
+    33%,
+    65%
+    {
+        -webkit-transform: translate3d(0, -33.33%, 0);
+                transform: translate3d(0, -33.33%, 0);
+    }
+    66%,
+    99%
     {
         -webkit-transform: translate3d(0, -66.66%, 0);
                 transform: translate3d(0, -66.66%, 0);
