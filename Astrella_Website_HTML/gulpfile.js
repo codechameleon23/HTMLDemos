@@ -78,10 +78,6 @@ const PROJECT_JS_LIST = [
 const PROJECT_PAGES_LIST = [
   './src/allpages.html',
   './src/index.html',
-  './src/about.html',
-  './src/marine.html',
-  './src/marine-details.html',
-  './src/careers.html',
   './src/contact.html',
   './src/flexibuilder.html',
 ]
