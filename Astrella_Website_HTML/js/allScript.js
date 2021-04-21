@@ -112,7 +112,7 @@ $(document).ready(function () {
       animateIn: isIE11 || isIE10 ? "" : "fadeIn",
       animateOut: isIE11 || isIE10 ? "" : "fadeOut",
       smartSpeed: 500,
-      // autoplay: true,
+      autoplay: true,
       autoplayTimeout: 4000,
       autoplayHoverPause: true,
     });
@@ -247,7 +247,7 @@ if ($('.js_media_Gallery_Popup').length) { //if element exists
       // animateIn: isIE11 || isIE10 ? "" : "fadeIn",
       // animateOut: isIE11 || isIE10 ? "" : "fadeOut",
       smartSpeed: 500,
-      // autoplay: true,
+      autoplay: true,
       autoplayTimeout: 4000,
       autoplayHoverPause: true,
       responsive: {
