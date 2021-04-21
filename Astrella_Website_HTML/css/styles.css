@@ -28536,125 +28536,6 @@ a[href]:not(:hover)
     max-width: 12rem;
 }
 
-.moving-up-text
-{
-    overflow: hidden; 
-
-    height: 3.6rem;
-}
-@media (min-width: 710px)
-{
-    .moving-up-text
-    {
-        height: 7.7rem;
-    }
-}
-.moving-up-text ul
-{
-    -webkit-animation: movingLineOne 18s infinite;
-            animation: movingLineOne 18s infinite;
-}
-.moving-up-text li
-{
-    line-height: 1;
-}
-
-.moving-up-text-2 ul
-{
-    -webkit-animation: movingLineTwo 18s infinite;
-            animation: movingLineTwo 18s infinite;
-}
-
-@-webkit-keyframes movingLineOne
-{
-    0%,
-    15%,
-    80%
-    {
-        -webkit-transform: translate3d(0, 0, 0);
-                transform: translate3d(0, 0, 0);
-    }
-    16.5%,
-    49%
-    {
-        -webkit-transform: translate3d(0, -33.33%, 0);
-                transform: translate3d(0, -33.33%, 0);
-    }
-    50%,
-    79%
-    {
-        -webkit-transform: translate3d(0, -66.66%, 0);
-                transform: translate3d(0, -66.66%, 0);
-    }
-}
-
-@keyframes movingLineOne
-{
-    0%,
-    15%,
-    80%
-    {
-        -webkit-transform: translate3d(0, 0, 0);
-                transform: translate3d(0, 0, 0);
-    }
-    16.5%,
-    49%
-    {
-        -webkit-transform: translate3d(0, -33.33%, 0);
-                transform: translate3d(0, -33.33%, 0);
-    }
-    50%,
-    79%
-    {
-        -webkit-transform: translate3d(0, -66.66%, 0);
-                transform: translate3d(0, -66.66%, 0);
-    }
-}
-
-@-webkit-keyframes movingLineTwo
-{
-    0%,
-    32%
-    {
-        -webkit-transform: translate3d(0, 0, 0);
-                transform: translate3d(0, 0, 0);
-    }
-    33%,
-    65%
-    {
-        -webkit-transform: translate3d(0, -33.33%, 0);
-                transform: translate3d(0, -33.33%, 0);
-    }
-    66%,
-    99%
-    {
-        -webkit-transform: translate3d(0, -66.66%, 0);
-                transform: translate3d(0, -66.66%, 0);
-    }
-}
-
-@keyframes movingLineTwo
-{
-    0%,
-    32%
-    {
-        -webkit-transform: translate3d(0, 0, 0);
-                transform: translate3d(0, 0, 0);
-    }
-    33%,
-    65%
-    {
-        -webkit-transform: translate3d(0, -33.33%, 0);
-                transform: translate3d(0, -33.33%, 0);
-    }
-    66%,
-    99%
-    {
-        -webkit-transform: translate3d(0, -66.66%, 0);
-                transform: translate3d(0, -66.66%, 0);
-    }
-}
-
 .sliding-text
 {
     overflow: hidden;
@@ -28670,10 +28551,21 @@ a[href]:not(:hover)
 
     width: 300%;
 
-    -webkit-transition: all .3s;
-            transition: all .3s; 
-    -webkit-animation: slidingLineOne 18s infinite;
-            animation: slidingLineOne 18s infinite;
+    -webkit-transition: all 1000ms cubic-bezier(.39, .575, .565, 1);
+            transition: all 1000ms cubic-bezier(.39, .575, .565, 1);
+    /* easeOutSine */
+    -webkit-transition-timing-function: cubic-bezier(.39, .575, .565, 1);
+            transition-timing-function: cubic-bezier(.39, .575, .565, 1);
+    -webkit-animation-name: slidingLineOne;
+            animation-name: slidingLineOne;
+    -webkit-animation-duration: 15s;
+            animation-duration: 15s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    /* easeOutSine */
 }
 .sliding-text ul li
 {
@@ -28689,27 +28581,27 @@ a[href]:not(:hover)
 
 .sliding-text-2 ul
 {
-    -webkit-animation: slidingLineTwo 18s infinite;
-            animation: slidingLineTwo 18s infinite;
+    -webkit-animation-name: slidingLineTwo;
+            animation-name: slidingLineTwo;
 }
 
 @-webkit-keyframes slidingLineOne
 {
     0%,
-    15%,
+    13%,
     80%
     {
         -webkit-transform: translateX(0);
                 transform: translateX(0);
     }
     16.5%,
-    49%
+    47%
     {
         -webkit-transform: translateX(-33.33%);
                 transform: translateX(-33.33%);
     }
     50%,
-    79%
+    77%
     {
         -webkit-transform: translateX(-66.66%);
                 transform: translateX(-66.66%);
@@ -28719,20 +28611,20 @@ a[href]:not(:hover)
 @keyframes slidingLineOne
 {
     0%,
-    15%,
+    13%,
     80%
     {
         -webkit-transform: translateX(0);
                 transform: translateX(0);
     }
     16.5%,
-    49%
+    47%
     {
         -webkit-transform: translateX(-33.33%);
                 transform: translateX(-33.33%);
     }
     50%,
-    79%
+    77%
     {
         -webkit-transform: translateX(-66.66%);
                 transform: translateX(-66.66%);
@@ -28742,19 +28634,19 @@ a[href]:not(:hover)
 @-webkit-keyframes slidingLineTwo
 {
     0%,
-    32%
+    30%
     {
         -webkit-transform: translate(0);
                 transform: translate(0);
     }
     33%,
-    65%
+    63%
     {
         -webkit-transform: translate(-33.33%);
                 transform: translate(-33.33%);
     }
     66%,
-    99%
+    97%
     {
         -webkit-transform: translate(-66.66%);
                 transform: translate(-66.66%);
@@ -28764,19 +28656,19 @@ a[href]:not(:hover)
 @keyframes slidingLineTwo
 {
     0%,
-    32%
+    30%
     {
         -webkit-transform: translate(0);
                 transform: translate(0);
     }
     33%,
-    65%
+    63%
     {
         -webkit-transform: translate(-33.33%);
                 transform: translate(-33.33%);
     }
     66%,
-    99%
+    97%
     {
         -webkit-transform: translate(-66.66%);
                 transform: translate(-66.66%);
