@@ -1,0 +1,248 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Simple Transactional Email</title>
+  <style>
+    /* -------------------------------------
+          GLOBAL RESETS
+      ------------------------------------- */
+
+    /*All the styling goes here*/
+    @import url('https://use.typekit.net/syc4fer.css');
+
+    img {
+      border: none;
+      -ms-interpolation-mode: bicubic;
+      max-width: 100%;
+    }
+
+    body {
+      background-color: #f6f6f6;
+      color: #3c3c3b;
+      -webkit-font-smoothing: antialiased;
+      margin: 0;
+      padding: 0;
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+
+      font-family: 'proxima-nova', system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+      font-size: 17px;
+      font-weight: 300;
+      font-style: normal;
+      line-height: 1.2;
+      letter-spacing: .02em;
+
+    }
+
+    table {
+      border-collapse: separate;
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+      width: 100%;
+    }
+
+    table td {
+      vertical-align: top;
+    }
+
+    /* -------------------------------------
+          BODY & CONTAINER
+      ------------------------------------- */
+
+    .body {
+      background-color: #f6f6f6;
+      width: 100%;
+    }
+
+    /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
+    .container {
+      display: block;
+      margin: 0 auto !important;
+      /* makes it centered */
+      max-width: 750px;
+      padding: 10px;
+      width: 750px;
+    }
+
+    /* This should also be a block element, so that it will fill 100% of the .container */
+    .content {
+      box-sizing: border-box;
+      display: block;
+      margin: 0 auto;
+      max-width: 750px;
+    }
+
+    /* -------------------------------------
+          HEADER, FOOTER, MAIN
+      ------------------------------------- */
+    .main {
+      background: #ffffff;
+      width: 100%;
+    }
+
+    .wrapper {
+      box-sizing: border-box;
+      padding: 0px;
+    }
+
+    .header {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .hero {
+      background-color: #365c24;
+      color: white;
+      padding: 40px 50px;
+    }
+
+    .middle {
+      background-color: #ececeb;
+      padding: 40px 50px;
+    }
+
+    .footer {
+      padding: 40px 50px;
+      font-size: 14px;
+    }
+
+    .w-logo {
+      width: 22.7%;
+    }
+
+    .logo {
+      width: 67.1%;
+    }
+
+    /* -------------------------------------
+          TYPOGRAPHY
+      ------------------------------------- */
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-weight: 400;
+      line-height: 1.4;
+      margin: 0;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 36px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 30px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    h4 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+    }
+
+    /* -------------------------------------
+          BUTTONS
+      ------------------------------------- */
+    .btn-primary {
+      font-size: 18px;
+      display: inline-block;
+      cursor: pointer;
+      text-decoration: none;
+      text-transform: capitalize;
+      letter-spacing: .08em;
+      background-color: #365c24;
+      padding-right: 3rem;
+      padding-left: 3rem;
+      padding-top: .8rem;
+      padding-bottom: .8rem;
+      color: #fff;
+      border-radius: 9999px;
+    }
+
+    .btn-primary:hover {
+      background-color: #264019;
+    }
+
+    /* -------------------------------------
+          RESPONSIVE AND MOBILE FRIENDLY STYLES
+      ------------------------------------- */
+    @media only screen and (max-width: 620px) {
+      table[class=body] .container {
+        padding: 0 !important;
+        width: 100% !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="">
+  <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="body">
+    <tr>
+      <td>&nbsp;</td>
+      <td class="container">
+        <div class="content">
+          <!-- START CENTERED WHITE CONTAINER -->
+          <table role="presentation" class="main">
+            <!-- START MAIN CONTENT AREA -->
+            <tr>
+              <td class="wrapper">
+                <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td class="header" align="center">
+                      <img class="logo" src="./images/email-logo.png" alt="" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="hero" align="center">
+                      <h1>Latest Announcements</h1>
+                      <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td class="w-logo">
+                            <img src="./images/email-w-logo.jpg" alt="" />
+                          </td>
+                          <td style="padding-left: 20px">
+                            <h4 class="title">Coronavirus Restrictions | 14th May 2020</h4>
+                            <p>Society staff are working remotely, so please contact us if you need to, using mobile phone numbers and email to help us reply to you more quickly. We can help you with repair and maintenance advice, or with anything to do with your tenancy that you may be worried about.</p>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="middle" align="center">
+                      <h2>Visit our website for more information</h2>
+                      <a href="#" class="btn-primary">Visit Website</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="footer" align="center">
+                      <p>Registered Office: 6a Ronald Bowker Court, Greenhill Road, Winchester, SO22 5EA. A charitable registered provider of social housing. Regulator: L2732. Registrar: 5338R.</p>
+                      <p>Click here to <a href="#">unsubscribe</a> and stop receiving these email updates..</p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- END MAIN CONTENT AREA -->
+          </table>
+          <!-- END CENTERED WHITE CONTAINER -->
+        </div>
+      </td>
+      <td>&nbsp;</td>
+    </tr>
+  </table>
+</body>
+
+</html>

@@ -82,6 +82,7 @@ const PROJECT_PAGES_LIST = [
   './src/waiting-list.html',
   './src/gallery.html',
   './src/contact.html',
+  './src/emailer.html',
 ]
 
 function CSS_OPERATION() {
