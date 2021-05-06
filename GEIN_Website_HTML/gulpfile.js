@@ -78,7 +78,7 @@ const PROJECT_PAGES_LIST = [
   './src/index.html',
   './src/services.html',
   './src/about.html',
-  './src/reviews.html',
+  // './src/reviews.html',
   './src/contact.html',
 ]
 
