@@ -70,7 +70,7 @@ $(document).ready(function () {
 //  Animate on scroll
 //  -------------------------------------------
   AOS.init({
-    duration: 700,
+    duration: 1000,
     once: true,
     easing: 'ease-in-out',
     anchorPlacement: 'top-bottom',
