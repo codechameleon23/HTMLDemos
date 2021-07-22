@@ -77,6 +77,7 @@ const PROJECT_JS_LIST = [
 
 const PROJECT_PAGES_LIST = [
   './src/index.html',
+  './src/the-awards.html',
   './src/apply-now.html',
 ]
 
