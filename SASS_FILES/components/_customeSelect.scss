@@ -1,20 +1,21 @@
-$defaultPlaceHolderColor:#000000;
+$defaultPlaceHolderColor:#999999 !default;
+$color-input-text: #000000 !default;
 @mixin PlaceHolderColor($placeHolderColor: $defaultPlaceHolderColor) {
   ::-webkit-input-placeholder {
-    color: tint($placeHolderColor, 70%);
+    color: $placeHolderColor;
   }
   
   ::-moz-placeholder {
-    color: tint($placeHolderColor, 70%);
+    color: $placeHolderColor;
     opacity: 1;
   }
   
   :-ms-input-placeholder {
-    color: tint($placeHolderColor, 70%);
+    color: $placeHolderColor;
   }
   
   :-moz-placeholder {
-    color: tint($placeHolderColor, 70%);
+    color: $placeHolderColor;
   }
 }
 @include PlaceHolderColor();
@@ -45,5 +46,19 @@ $defaultPlaceHolderColor:#000000;
   datalist::-ms-expand,
   select::-ms-expand {
     display: none;
+  }
+
+  select {
+    &:invalid {
+      color: $color-text-placeholder;
+    }
+
+    option {
+      color: $color-input-text;
+
+      &[value=""] {
+        color: $color-text-placeholder !important;
+      }
+    }
   }
 }

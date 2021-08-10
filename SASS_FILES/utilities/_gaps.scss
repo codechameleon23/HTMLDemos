@@ -94,4 +94,13 @@ y top bottom,
       }
     }
   }
+
+  /*Column count gap*/
+  @each $colGap in $columnCountGaps {
+    .#{$bp}#{nth($colGap, 1)} {
+      &-#{nth($colGap, 2)}{
+        column-gap: #{nth($colGap, 3)};
+      }
+    }
+  }
 }
