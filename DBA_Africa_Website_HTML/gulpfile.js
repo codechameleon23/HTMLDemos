@@ -70,7 +70,7 @@ const PROJECT_JS_LIST = [
   // SRC_JS_PATH+'/_accordion.js',
   // SRC_JS_PATH+'/_galleryFilter.js',
   // SRC_JS_PATH+'/_tableStackedRows.js',
-  SRC_JS_PATH+'/_myScript.js',
+  // SRC_JS_PATH+'/_myScript.js',
   SRC_JS_PATH+'/_docReadyEnds.js',
   SRC_JS_PATH+'/_iphonePageHack.js',
 ];
@@ -105,6 +105,9 @@ function CSS_PURIFY() {
     .src(DEST_SELECT_CSS)
     // .pipe(purify([DEST_SELECT_JS, DEST_SELECT_HTML]))
     .pipe(cleanCSS({format: 'keep-breaks'}))
+    // .pipe(beautify.css({
+    //   indent_size: 2
+    // }))
     .pipe(gulp.dest(DEST_CSS_PATH))
     .pipe(browserSync.stream());
 }
@@ -112,8 +115,8 @@ function CSS_PURIFY() {
 function IMG_OPERATION() {
   return gulp
     .src(SRC_SELECT_IMG)
-    // .pipe(svgo())
-    // .pipe(imagemin())
+    .pipe(svgo())
+    .pipe(imagemin())
     .pipe(gulp.dest(DEST_IMG_PATH))
     .pipe(browserSync.stream());
 }

@@ -101,6 +101,9 @@ $(document).ready(function () {
     });
   };
 
+//  -------------------------------------------
+//  Banner carousel Center
+//  -------------------------------------------
   var bannerCarouselCenter;
   if ($(".jsBannerCarouselCenter").length) {
     bannerCarouselCenter = $(".jsBannerCarouselCenter"); //Banner-carousel for Property-details page
@@ -116,19 +119,13 @@ $(document).ready(function () {
       // animateIn: isIE11 || isIE10 ? "" : "fadeIn",
       // animateOut: isIE11 || isIE10 ? "" : "fadeOut",
       smartSpeed: 500,
-      autoplay: true,
+      // autoplay: true,
       autoplayTimeout: 4000,
       autoplayHoverPause: true,
       responsive:{
         1024:{
-          items: 1.42
+          autoWidth:true,
         },
-        1200:{
-          items: 1.27
-        },
-        1400:{
-          items: 1.55
-        }
       }
     });
     $('.jsCarouselPrv').on('click', function () {
@@ -206,27 +203,6 @@ if ($('.js_media_Gallery_Popup').length) { //if element exists
     once: true,
     easing: 'ease-in-out',
     anchorPlacement: 'top-bottom',
-  });
-
-//  -------------------------------------------
-//  Set active on scroll
-//  -------------------------------------------
-  var mainNavLinks = document.querySelectorAll("nav ul li a");
-  var mainSections = document.querySelectorAll("main section");
-
-  var lastId;
-  var cur = [];
-  window.addEventListener("scroll", function (event) {
-    var fromTop = window.scrollY + 10;
-    Array.prototype.slice.call(mainNavLinks).forEach(function (link) {
-      var section = document.querySelector(link.hash);
-
-      if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
-        link.classList.add("current");
-      } else {
-        link.classList.remove("current");
-      }
-    });
   });
 });
 //  -------------------------------------------

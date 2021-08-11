@@ -23,7 +23,7 @@
 
 <body class="jsNavbarToggle is-close flex-col">
   <!-- Header -->
-  <header class="header flex-col z-50 bg-white w-full">
+  <header class="header flex-col z-50 bg-white w-full pos-absolute pin-x">
     <div class="container lg:container-xl mx-auto my-auto pos-relative">
       <div class="flex-row lg:flex-col align-center lg:align-stretch z-50">
         <a class="lg:d-hidden lg:px-20 d-inline-block hover:f-color-red" href="index.html">
@@ -33,7 +33,7 @@
             </span>
           </span>
         </a>
-        <nav class="navbar w-full flex-col justify-center pos-fixed lg:pos-static pin pin-l-auto z-40 lg:z-40 bg-light lg:bg-white shadow-lg lg:shadow-none f-weight-regular f-family-secondary">
+        <nav class="navbar col-12 sm:col-6 lg:col-auto flex-col justify-center pos-fixed lg:pos-static pin pin-l-auto z-40 lg:z-40 bg-light lg:bg-white shadow-lg lg:shadow-none f-weight-regular f-family-secondary">
           <ul class="list-reset flex-col lg:flex-row lg:-mx-20 align-center justify-space-between f-size-24 lg:f-size-18 xl:f-size-24 text-center">
             <li class="lg:d-hidden"><a class="lg:px-20 py-10 d-inline-block hover:f-color-red" href="index.html">Home</a></li>
             <li><a class="lg:px-20 py-10 d-inline-block hover:f-color-red" href="who-we-are.html">Who We Are</a></li>
@@ -117,6 +117,10 @@
       </div>
     </div>
   </header>
+  <!-- Section Divider -->
+  <section class="-mb-1 -z-1">
+    <div class="mx-auto border-b container sm:container-sm md:container-md lg:container-xl"></div>
+  </section>
   <!-- Main -->
   <main class="flex-auto flex-col">
     <!--Banner with call to action-->
@@ -135,11 +139,11 @@
       <section class="pos-relative font-color-white -mt-60 overflow-hidden">
         <div class="bg-cover bg-center bg-repeat-x pos-absolute pin -z-1" style="background-image: url('./images/DBA-edges-red-repeat.png')"></div>
         <div class="container sm:container-sm md:container-md lg:container-lg xl:container-xl mx-auto py-80">
-          <div class="flex-col lg:flex-row align-center justify-space-between f-color-white -m-20">
-            <div class="p-20 lg:col-auto flex-auto">
+          <div class="flex-col lg:flex-row align-center justify-space-between f-color-white -m-15 text-center lg:text-left">
+            <div class="p-15 lg:col-auto flex-auto">
               <h1 class="font-weight-bold f-size-56 uppercase">interested in supporting our academies?</h1>
             </div>
-            <div class="p-20 lg:col-auto flex-auto">
+            <div class="p-15 lg:col-auto flex-auto">
               <a href="contact.html" class="button py-5 px-20 lg:px-80 border-2 border-white f-color-white hover:f-color-white hover:bg-dark hover:border-dark hover:shadow-md transition-all"><span>find out how</span></a>
             </div>
           </div>
@@ -220,7 +224,7 @@
                 <h2 class="font-weight-bold f-size-40 uppercase">Interested in coaching or volunteering with DBA africa?</h2>
                 <a href="contact.html" class="button hover:f-color-white transition-all -mx-10 px-10 hover:bg-dark">
                   <span>get in touch</span>
-                  <span class="icon icon-15 f-color-red ml-5">
+                  <span class="icon icon-15 f-color-white ml-5">
                     <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.3 21.3">
                       <path d="M1.6 0L0 1.6l9.1 9.1L0 19.8l1.6 1.5 9-9 1.7-1.7-1.6-1.5z" />
                     </svg>
@@ -236,7 +240,7 @@
                 <h2 class="font-weight-bold f-size-40 uppercase">Looking to enroll your child in one of our sports academies? </h2>
                 <a href="contact.html" class="button hover:f-color-white transition-all -mx-10 px-10 hover:bg-dark">
                   <span>get in touch</span>
-                  <span class="icon icon-15 f-color-red ml-5">
+                  <span class="icon icon-15 f-color-white ml-5">
                     <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.3 21.3">
                       <path d="M1.6 0L0 1.6l9.1 9.1L0 19.8l1.6 1.5 9-9 1.7-1.7-1.6-1.5z" />
                     </svg>
@@ -253,7 +257,7 @@
   <footer class="pos-relative mt-60 py-35 bg-dark f-color-white">
     <div class="container md:container-sm lg:container-lg xl:container-xl mx-auto flex-col lg:flex-row align-center">
       <div class="flex-auto">
-        <ul class="footer-links list-reset flex-col align-center lg:flex-row f-size-15 -mx-10">
+        <ul class="footer-links list-reset flex-col align-center lg:flex-row lg:align-center f-size-15 -mx-10">
           <li class="py-10 px-10 lg:py-0">
             © DBA Africa
           </li>
@@ -264,7 +268,7 @@
             <a href="#" class="f-color-inherit hover:f-color-red no-underline transition-all">Sitemap</a>
           </li>
           <li class="py-10 px-10 lg:py-0">
-            <a class="f-color-inherit hover:f-color-red no-underline transition-all d-inline-block icon-unstuck-design ratio-unstuck-design unstuck-link" href="http://unstuckdesign.com/" target="_blank">
+            <a class="icon-unstuck-design ratio-unstuck-design unstuck-link f-color-inherit hover:f-color-red no-underline transition-all d-inline-block" href="http://unstuckdesign.com/" target="_blank">
               <span class="pos-absolute pin">
                 <svg class="unstuck-design" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 191 14.1">
                   <path d="M99.6 10.8c-.1-.1-.2-.2-.2-.4 0-.3.2-.5.5-.5.1 0 .2 0 .3.1.8.6 1.7.9 2.6.9 1 0 1.7-.5 1.7-1.3s-1-1.1-2-1.4c-1.3-.4-2.7-.8-2.7-2.3 0-1.4 1.2-2.3 2.8-2.3.9 0 1.8.3 2.6.7.2.1.3.3.3.5 0 .3-.2.5-.5.5-.1 0-.2 0-.3-.1-.7-.4-1.4-.6-2.1-.6-1 0-1.6.5-1.6 1.2 0 .8 1 1.1 2.1 1.4 1.3.4 2.6.9 2.6 2.3 0 1.6-1.3 2.5-2.9 2.5-1.2-.1-2.3-.5-3.2-1.2m8.6-1.3V4.6h-.7c-.3 0-.5-.3-.5-.5 0-.3.3-.5.5-.5h.7V1.7c0-.3.3-.6.6-.6s.6.3.6.6v1.9h2.1c.3 0 .6.3.6.5 0 .3-.3.5-.6.5h-2.1v4.8c0 1 .6 1.4 1.4 1.4.4 0 .6-.1.7-.1.3 0 .5.2.5.5 0 .2-.1.4-.3.5-.3.1-.7.2-1.2.2-1.3-.1-2.3-.7-2.3-2.4m13 1.6c0 .3-.3.6-.6.6s-.6-.3-.6-.6v-.9c-.6.9-1.4 1.6-2.8 1.6-2 0-3.1-1.3-3.1-3.3V3.9c0-.3.3-.6.6-.6s.6.3.6.6v4.2c0 1.5.8 2.5 2.3 2.5 1.4 0 2.5-1 2.5-2.6V3.8c0-.3.3-.6.6-.6s.6.3.6.6l-.1 7.3zm2.2-3.5c0-2.3 1.8-4.3 4.2-4.3 1.4 0 2.3.5 3 1.2.1.1.2.2.2.4 0 .3-.3.6-.6.6-.2 0-.3-.1-.4-.1-.6-.5-1.3-1-2.2-1-1.7 0-2.9 1.4-2.9 3.2 0 1.8 1.3 3.2 3 3.2.9 0 1.7-.4 2.3-1 .1-.1.2-.2.3-.2.3 0 .6.3.6.6 0 .1-.1.3-.2.4-.8.8-1.7 1.3-3.1 1.3-2.4 0-4.2-2-4.2-4.3m9.5-7c0-.3.3-.6.6-.6s.6.3.6.6v7.5l4.4-4.5c.1-.2.3-.2.5-.2.3 0 .6.3.6.6 0 .2-.1.3-.2.5l-2.7 2.6 2.9 3.7c.1.1.2.3.2.4 0 .3-.3.6-.6.6-.2 0-.4-.1-.5-.3l-2.8-3.6-1.7 1.7v1.6c0 .3-.3.6-.6.6s-.6-.3-.6-.6L132.9.6zm9.5 7c0 2.2 1.5 3.5 3.2 3.5 1.7 0 3.3-1.4 3.3-3.5s-1.6-3.5-3.3-3.5c-1.8 0-3.2 1.3-3.2 3.5m7.2 3.7c0 .2-.2.4-.4.4s-.4-.2-.4-.4V9.8c-.7 1.1-1.7 2-3.3 2-1.9 0-3.9-1.6-3.9-4.2s2-4.2 3.9-4.2c1.6 0 2.7.9 3.3 1.9V.4c0-.2.2-.4.4-.4s.4.2.4.4v10.9zm9.1-4.1c-.1-1.6-1-3.1-2.9-3.1-1.6 0-2.8 1.4-3 3.1h5.9zm-2.8 4.6c-2.1 0-4-1.7-4-4.2 0-2.3 1.6-4.2 3.8-4.2 2.3 0 3.7 1.9 3.7 4.2 0 .2-.2.4-.4.4h-6.3c.1 2 1.6 3.2 3.2 3.2 1.2 0 2-.5 2.6-1.1.1-.1.1-.1.3-.1.2 0 .4.2.4.4 0 .1 0 .2-.1.3-.8.6-1.7 1.1-3.2 1.1m5.3-1.1c-.1 0-.1-.2-.1-.3 0-.2.2-.4.4-.4.1 0 .2 0 .3.1.8.6 1.7.9 2.7.9 1.1 0 1.9-.6 1.9-1.5 0-1-1-1.3-2.1-1.6-1.3-.4-2.8-.8-2.8-2.2 0-1.3 1.1-2.2 2.7-2.2.9 0 1.8.3 2.6.7.1.1.2.2.2.4s-.2.4-.4.4c-.1 0-.2 0-.2-.1-.7-.4-1.5-.7-2.3-.7-1.1 0-1.8.6-1.8 1.4 0 .9 1.1 1.2 2.3 1.6 1.3.4 2.7.8 2.7 2.3 0 1.4-1.2 2.4-2.8 2.4-1.2-.1-2.4-.6-3.3-1.2m8.5-6.9c0-.2.2-.4.4-.4s.4.2.4.4v7.4c0 .2-.2.4-.4.4s-.4-.2-.4-.4V3.8zm-.1-3.1c0-.3.2-.5.5-.5s.5.2.5.5V1c0 .3-.2.5-.5.5s-.5-.2-.5-.5V.7zm10.8 6.5c0-1.9-1.7-3.1-3.3-3.1-1.7 0-3.1 1.2-3.1 3.1 0 1.8 1.5 3.1 3.1 3.1 1.6-.1 3.3-1.3 3.3-3.1m-6.8 5.8c-.1-.1-.2-.2-.2-.3 0-.2.2-.4.4-.4.1 0 .2 0 .2.1.9.7 2 1 3.1 1 1.9 0 3.2-1.1 3.2-3.1V9.1c-.7 1-1.8 1.9-3.4 1.9-1.9 0-3.9-1.5-3.9-3.8s1.9-3.8 3.9-3.8c1.6 0 2.7.9 3.4 1.8V3.9c0-.2.2-.4.4-.4s.4.2.4.4v6.5c0 1.2-.4 2.1-1 2.7-.7.7-1.7 1.1-2.9 1.1-1.3 0-2.5-.4-3.6-1.2M184 3.8c0-.2.2-.4.4-.4s.4.2.4.4V5c.5-.9 1.4-1.7 2.9-1.7 2 0 3.2 1.4 3.2 3.3v4.6c0 .2-.2.4-.4.4s-.4-.2-.4-.4V6.7c0-1.7-.9-2.8-2.6-2.8-1.6 0-2.8 1.2-2.8 2.9v4.3c0 .2-.2.4-.4.4s-.4-.2-.4-.4l.1-7.3zm-86.9 8.1c-.3 0-.6-.3-.6-.6V6.2c0-.2-.1-1.8-2.3-1.8-.8 0-1.5.2-1.9.6-.5.5-.5 1.1-.5 1.1v2.2c0 1.2-1.1 1-1.1 1V6.1c0-.1 0-1.1.8-1.9.6-.6 1.5-1 2.7-1 1.1 0 2 .3 2.6.9.8.8.8 1.9.8 2v5.1c.1.5-.2.7-.5.7">

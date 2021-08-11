@@ -23,7 +23,7 @@
 
 <body class="jsNavbarToggle is-close flex-col">
   <!-- Header -->
-  <header class="header flex-col z-50 bg-white w-full">
+  <header class="header flex-col z-50 bg-white w-full pos-absolute pin-x">
     <div class="container lg:container-xl mx-auto my-auto pos-relative">
       <div class="flex-row lg:flex-col align-center lg:align-stretch z-50">
         <a class="lg:d-hidden lg:px-20 d-inline-block hover:f-color-red" href="index.html">
@@ -33,7 +33,7 @@
             </span>
           </span>
         </a>
-        <nav class="navbar w-full flex-col justify-center pos-fixed lg:pos-static pin pin-l-auto z-40 lg:z-40 bg-light lg:bg-white shadow-lg lg:shadow-none f-weight-regular f-family-secondary">
+        <nav class="navbar col-12 sm:col-6 lg:col-auto flex-col justify-center pos-fixed lg:pos-static pin pin-l-auto z-40 lg:z-40 bg-light lg:bg-white shadow-lg lg:shadow-none f-weight-regular f-family-secondary">
           <ul class="list-reset flex-col lg:flex-row lg:-mx-20 align-center justify-space-between f-size-24 lg:f-size-18 xl:f-size-24 text-center">
             <li class="lg:d-hidden"><a class="lg:px-20 py-10 d-inline-block hover:f-color-red" href="index.html">Home</a></li>
             <li><a class="lg:px-20 py-10 d-inline-block hover:f-color-red" href="who-we-are.html">Who We Are</a></li>
@@ -117,16 +117,20 @@
       </div>
     </div>
   </header>
+  <!-- Section Divider -->
+  <section class="-mb-1 -z-1">
+    <div class="mx-auto border-b container sm:container-sm md:container-md lg:container-xl"></div>
+  </section>
   <!-- Main -->
   <main class="flex-auto flex-col">
     <!--Content center align-->
     <section class="pt-60">
       <div class="container sm:container-sm md:container-md mx-auto">
         <div class="text-wrap text-center">
-          <h1 class="font-weight-bold f-size-56 lg:f-size-70 uppercase">H1 header left</h1>
+          <h1 class="font-weight-bold f-size-56 lg:f-size-70 uppercase">H1 header centred</h1>
           <p>Gende nonetusapis quat quam eos ea seque elibusant et rerovitaes sinis ipid eos non es nonsequatis am, nonse molo cum am hicidicatur, volupis ciaerit, quas atur? Gia pre et, sedis eumendi tatur? Igendes tiatemporero magnam, ulpa volorro dolore dunt liquam quame vent as repudae strume planimolut lanienectem fugiatur, officabori doluptatet </p>
           <p>Conetusam que as sundi corepe aut officae poreper epediorro te doloremquae quisquate magnitaqui beaquam voluptaessit ut earis restecabo. Nam voluptiam re expliqu assinvendi dolorerum quodit, sim que sandescia eicabor sint quos magnatis etur.</p>
-          <h2 class="uppercase font-weight-bold f-size-48 uppercase">H2 header left</h2>
+          <h2 class="uppercase font-weight-bold f-size-48 uppercase">H2 header centred</h2>
           <p>Gende nonetusapis quat quam eos ea seque elibusant et rerovitaes sinis ipid eos non es nonsequatis am, nonse molo cum am hicidicatur, volupis ciaerit, quas atur? Gia pre et, sedis eumendi tatur? Igendes tiatemporero magnam, ulpa volorro dolore dunt liquam quame vent as repudae strume planimolut lanienectem fugiatur, officabori doluptatet.</p>
           <p>Conetusam que as sundi corepe aut officae poreper epediorro te doloremquae quisquate magnitaqui beaquam voluptaessit ut earis restecabo. Nam voluptiam re expliqu assinvendi dolorerum quodit, sim que sandescia eicabor sint quos magnatis etur.</p>
           <a href="#" class="button hover:f-color-white transition-all -mx-10 px-10 hover:bg-dark">
@@ -173,7 +177,7 @@
     </section>
     <!-- banner -->
     <section class="py-160 mt-60 pos-relative">
-      <figure class="pos-absolute pin bg-center bg-cover bg-no-repeat -z-1" style="background-image: url('./images/IMG_0222-cropped.jpg')"></figure>
+      <figure class="pos-absolute pin bg-center bg-cover bg-no-repeat -z-1" style="background-image: url('./images/IMG_0154.jpg')"></figure>
       <div class="container sm:container-sm md:container-md lg:container-lg xl:container-xl mx-auto">
         <div class="col-12 lg:col-7 text-wrap p-40 bg-dark_50 f-color-white f-size-22 f-height-ease" data-aos="fade-up" data-aos-delay="100">
           <h1 class="font-weight-bold f-size-56 lg:f-size-70 uppercase">H1 header left</h1>
@@ -183,13 +187,13 @@
     </section>
     <!-- Item Cards -->
     <section class="mt-60 pos-relative">
-      <div class="container-fluid sm:container-md lg:container-fluid mx-auto">
+      <div class="container-fluid">
         <div class="flex-row flex-wrap -m-1">
           <div class="col-12 sm:col-6 lg:col-3 p-1">
             <article class="card" data-aos="fade-up" data-aos-delay="100">
-              <a href="#" class="ratio-custom img-media img-rollover image-placeholder flex-col image-media">
+              <a href="#" class="ratio-custom img-media img-rollover image-placeholder flex-col image-media hover:bg-parent">
                 <figure class="card-image pos-absolute pin bg-cover bg-center" style="background-image: url('./images/PHOTO-2021-03-04-07-51-00-8-cropped.jpg');">
-                  <div class="pos-absolute bg-grad-dark-10 pin"></div>
+                  <div class="pos-absolute bg-grad-dark-10 bg-child-grad-dark-50 pin"></div>
                 </figure>
                 <section class="pos-absolute pin z-0 flex-col">
                   <div class="mt-auto f-color-white pt-20 px-20">
@@ -211,9 +215,9 @@
           </div>
           <div class="col-12 sm:col-6 lg:col-3 p-1">
             <article class="card" data-aos="fade-up" data-aos-delay="200">
-              <a href="#" class="ratio-custom img-media img-rollover image-placeholder flex-col image-media">
+              <a href="#" class="ratio-custom img-media img-rollover image-placeholder flex-col image-media hover:bg-parent">
                 <figure class="card-image pos-absolute pin bg-cover bg-center" style="background-image: url('./images/PHOTO-2021-03-04-07-51-00 5.jpg');">
-                  <div class="pos-absolute bg-grad-dark-10 pin"></div>
+                  <div class="pos-absolute bg-grad-dark-10 bg-child-grad-dark-50 pin"></div>
                 </figure>
                 <section class="pos-absolute pin z-0 flex-col">
                   <div class="mt-auto f-color-white pt-20 px-20">
@@ -235,9 +239,9 @@
           </div>
           <div class="col-12 sm:col-6 lg:col-3 p-1">
             <article class="card" data-aos="fade-up" data-aos-delay="300">
-              <a href="#" class="ratio-custom img-media img-rollover image-placeholder flex-col image-media">
+              <a href="#" class="ratio-custom img-media img-rollover image-placeholder flex-col image-media hover:bg-parent">
                 <figure class="card-image pos-absolute pin bg-cover bg-center" style="background-image: url('./images/IMG_0109-cropped.jpg');">
-                  <div class="pos-absolute bg-grad-dark-10 pin"></div>
+                  <div class="pos-absolute bg-grad-dark-10 bg-child-grad-dark-50 pin"></div>
                 </figure>
                 <section class="pos-absolute pin z-0 flex-col">
                   <div class="mt-auto f-color-white pt-20 px-20">
@@ -259,9 +263,9 @@
           </div>
           <div class="col-12 sm:col-6 lg:col-3 p-1">
             <article class="card" data-aos="fade-up" data-aos-delay="400">
-              <a href="#" class="ratio-custom img-media img-rollover image-placeholder flex-col image-media">
+              <a href="#" class="ratio-custom img-media img-rollover image-placeholder flex-col image-media hover:bg-parent">
                 <figure class="card-image pos-absolute pin bg-cover bg-center" style="background-image: url('./images/PHOTO-2021-03-04-07-51-39 5.jpg');">
-                  <div class="pos-absolute bg-grad-dark-10 pin"></div>
+                  <div class="pos-absolute bg-grad-dark-10 bg-child-grad-dark-50 pin"></div>
                 </figure>
                 <section class="pos-absolute pin z-0 flex-col">
                   <div class="mt-auto f-color-white pt-20 px-20">
@@ -287,18 +291,18 @@
     <!-- CTA -->
     <section class="mt-60 pos-relative font-color-white overflow-hidden">
       <div class="bg-cover bg-center bg-repeat-x pos-absolute pin -z-1" style="background-image: url('./images/DBA-edges-2-green-repeat.png')"></div>
-      <div class="container sm:container-sm md:container-md lg:container-lg xl:container-xl mx-auto py-80">
-        <div class="flex-col lg:flex-row align-center justify-space-between f-color-white -m-20">
-          <div class="p-20 lg:col-4">
+      <div class="container sm:container-sm md:container-md lg:container-lg xl:container-xl mx-auto pt-100 pb-60">
+        <div class="flex-col lg:flex-row align-center justify-space-between f-color-white -m-15 text-center lg:text-left">
+          <div class="p-15 lg:col-4">
             <h1 class="font-weight-bold f-size-56 uppercase">Call to action</h1>
           </div>
-          <div class="p-20 lg:col-auto flex-auto">
+          <div class="p-15 lg:col-auto flex-auto">
             <div class="text-wrap">
               <p>Andis quam exeribus et earum venimossim quodio. Inis imos aute nus. Vit aut reperes reperem consectus inctur?</p>
             </div>
           </div>
-          <div class="p-20 lg:col-auto flex-auto">
-            <a href="#" class="button py-5 px-20 lg:px-80 border-2 border-white f-color-white hover:f-color-white hover:bg-dark hover:border-dark hover:shadow-md transition-all"><span>button 2</span></a>
+          <div class="p-15 lg:col-auto flex-auto">
+            <a href="#" class="button px-20 lg:px-60 border-2 border-white f-color-white hover:f-color-white hover:bg-dark hover:border-dark hover:shadow-md transition-all"><span>button 2</span></a>
           </div>
         </div>
       </div>
@@ -349,12 +353,12 @@
     <section class="mt-60 pos-relative font-color-white overflow-hidden">
       <div class="bg-cover bg-center bg-repeat-x pos-absolute pin -z-1" style="background-image: url('./images/DBA-edges-red-repeat.png')"></div>
       <div class="container sm:container-sm md:container-md lg:container-lg xl:container-xl mx-auto py-80">
-        <div class="flex-col lg:flex-row align-center justify-space-between f-color-white -m-20">
-          <div class="p-20 lg:col-auto flex-auto">
+        <div class="flex-col lg:flex-row align-center justify-space-between f-color-white -m-15 text-center lg:text-left">
+          <div class="p-15 lg:col-auto flex-auto">
             <h1 class="font-weight-bold f-size-56 uppercase">Call to action headline no other text</h1>
           </div>
-          <div class="p-20 lg:col-auto flex-auto">
-            <a href="#" class="button py-5 px-20 lg:px-80 border-2 border-white f-color-white hover:f-color-white hover:bg-dark hover:border-dark hover:shadow-md transition-all"><span>button 2</span></a>
+          <div class="p-15 lg:col-auto flex-auto">
+            <a href="#" class="button px-20 lg:px-60 border-2 border-white f-color-white hover:f-color-white hover:bg-dark hover:border-dark hover:shadow-md transition-all"><span>button 2</span></a>
           </div>
         </div>
       </div>
@@ -417,8 +421,8 @@
               <div class="text-wrap f-color-white">
                 <h2 class="font-weight-bold f-size-40 uppercase">side by side call to action<br /> smaller header</h2>
                 <a href="#" class="button hover:f-color-white transition-all -mx-10 px-10 hover:bg-dark">
-                  <span>button 1</span>
-                  <span class="icon icon-15 f-color-red ml-5">
+                  <span>button 3</span>
+                  <span class="icon icon-15 f-color-white ml-5">
                     <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.3 21.3">
                       <path d="M1.6 0L0 1.6l9.1 9.1L0 19.8l1.6 1.5 9-9 1.7-1.7-1.6-1.5z" />
                     </svg>
@@ -433,8 +437,8 @@
               <div class="text-wrap f-color-white">
                 <h2 class="font-weight-bold f-size-40 uppercase">side by side call to action<br /> smaller header</h2>
                 <a href="#" class="button hover:f-color-white transition-all -mx-10 px-10 hover:bg-dark">
-                  <span>button 1</span>
-                  <span class="icon icon-15 f-color-red ml-5">
+                  <span>button 3</span>
+                  <span class="icon icon-15 f-color-white ml-5">
                     <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.3 21.3">
                       <path d="M1.6 0L0 1.6l9.1 9.1L0 19.8l1.6 1.5 9-9 1.7-1.7-1.6-1.5z" />
                     </svg>
@@ -461,18 +465,18 @@
       <!-- CTA -->
       <section class="pos-relative font-color-white -mt-60 overflow-hidden">
         <div class="bg-cover bg-center bg-repeat-x pos-absolute pin -z-1" style="background-image: url('./images/DBA-edges-2-green-repeat.png')"></div>
-        <div class="container sm:container-sm md:container-md lg:container-lg xl:container-xl mx-auto py-80">
-          <div class="flex-col lg:flex-row align-center justify-space-between f-color-white -m-20">
-            <div class="p-20 lg:col-4">
-              <h1 class="font-weight-bold f-size-56 uppercase">Call to action</h1>
+        <div class="container sm:container-sm md:container-md lg:container-lg xl:container-xl mx-auto pt-100 pb-60">
+          <div class="flex-col lg:flex-row align-center justify-space-between f-color-white -m-15 text-center lg:text-left">
+            <div class="p-15 lg:col-4">
+              <h1 class="font-weight-bold f-size-56 uppercase">Call to action1111</h1>
             </div>
-            <div class="p-20 lg:col-auto flex-auto">
+            <div class="p-15 lg:col-auto flex-auto">
               <div class="text-wrap">
                 <p>Andis quam exeribus et earum venimossim quodio. Inis imos aute nus. Vit aut reperes reperem consectus inctur?</p>
               </div>
             </div>
-            <div class="p-20 lg:col-auto flex-auto">
-              <a href="#" class="button py-5 px-20 lg:px-80 border-2 border-white f-color-white hover:f-color-white hover:bg-dark hover:border-dark hover:shadow-md transition-all"><span>button 2</span></a>
+            <div class="p-15 lg:col-auto flex-auto">
+              <a href="#" class="button px-20 lg:px-60 border-2 border-white f-color-white hover:f-color-white hover:bg-dark hover:border-dark hover:shadow-md transition-all"><span>button 2</span></a>
             </div>
           </div>
         </div>
@@ -553,7 +557,7 @@
           <div class="col-12 p-10 lg:p-15" data-aos="fade" data-aos-delay="100">
             <a href="https://www.youtube.com/embed/zfO9wNp3qCU" class="has-video ratio-custom-3 d-inline-block image-placeholder img-rollover">
               <div class="card-image pos-absolute pin bg-center bg-cover bg-no-repeat flex-col justify-center align-center" style="background-image: url('./images/IMG_0127.jpg')">
-                <span class="play-button icon icon-80 rounded-full f-color-white hover:f-color-red opacity-50">
+                <span class="play-button icon icon-80 rounded-full f-color-light hover:f-color-red opacity-75 shadow-md">
                   <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 80 80">
                     <path d="M56.8 40L33.1 56.6V23.4L56.8 40zM80 40C80 17.9 62.1 0 40 0S0 17.9 0 40s17.9 40 40 40 40-17.9 40-40" clip-path="url(#f)" />
                   </svg>
@@ -572,13 +576,13 @@
         </div>
         <div class="flex-row flex-wrap -m-20">
           <div class="flex-col col-12 lg:col-6 p-20 align-center" data-aos="fade" data-aos-delay="100">
-            <article class="flex-col text-wrap">
+            <article class="flex-col text-wrap w-full">
               <h2 class="f-family-secondary f-size-40 uppercase">H2 header left 2 column text</h2>
               <p>Ugitate ligenet omnimus aut rat. Fersper eiusam, voluptatust pari nimet aut magnim quo qui illestota sitatur? Ximustiis ut et reicit autem ligendes volorrum ex elit pedit as modi rerspel enditioria voluptatur, omnime non natet acerspellis utem inciis Res aut occae con conet la cuptiore santio cupturescit adiantur Um aute pelibusanis qui numentio qui nitas simoluptat as sintem esenim quissum eostium quiditin.</p>
             </article>
           </div>
           <div class="flex-col col-12 lg:col-6 p-20 align-center" data-aos="fade" data-aos-delay="200">
-            <article class="flex-col text-wrap">
+            <article class="flex-col text-wrap w-full">
               <h2 class="f-family-secondary f-size-40 uppercase">H2 header left 2 column text</h2>
               <p>Ugitate ligenet omnimus aut rat. Fersper eiusam, voluptatust pari nimet aut magnim quo qui illestota sitatur? Ximustiis ut et reicit autem ligendes volorrum ex elit pedit as modi rerspel enditioria voluptatur, omnime non natet acerspellis utem inciis Res aut occae con conet la cuptiore santio cupturescit adiantur Um aute pelibusanis qui numentio qui nitas simoluptat as sintem esenim quissum eostium quiditin.</p>
             </article>
@@ -590,37 +594,37 @@
     <section class="py-60">
       <div class="container sm:container-sm lg:container-lg xl:container-xl mx-auto">
         <div class="flex-row flex-wrap -m-10">
-          <div class="flex-col col-12 md:col-6 lg:col-3 p-10 align-center" data-aos="fade-up" data-aos-delay="100">
-            <article class="flex-col text-wrap text-center">
-              <figure class="ratio-1x1 pos-relative">
-                <div class="pos-absolute pin bg-cover bg-center" style="background-image: url('../images/IMG_0119-1x1.jpg')"></div>
+          <div class="col-12 md:col-6 lg:col-3 p-10 align-center" data-aos="fade-up" data-aos-delay="100">
+            <a href="athlete-profile.html" class="img-media img-rollover image-placeholder no-underline flex-col text-wrap text-center hover:f-color-red">
+              <figure class="ratio-1x1 pos-relative flex-none overflow-hidden">
+                <div class="card-image pos-absolute pin bg-cover bg-center" style="background-image: url('../images/IMG_0119-1x1.jpg')"></div>
               </figure>
               <h2 class="f-family-secondary f-size-30 uppercase">4 column with image and title</h2>
-            </article>
+            </a>
           </div>
-          <div class="flex-col col-12 md:col-6 lg:col-3 p-10 align-center" data-aos="fade-up" data-aos-delay="200">
-            <article class="flex-col text-wrap text-center">
-              <figure class="ratio-1x1 pos-relative">
-                <div class="pos-absolute pin bg-cover bg-center" style="background-image: url('../images/IMG_0127-1x1.jpg')"></div>
+          <div class="col-12 md:col-6 lg:col-3 p-10 align-center" data-aos="fade-up" data-aos-delay="200">
+            <a href="athlete-profile.html" class="img-media img-rollover image-placeholder no-underline flex-col text-wrap text-center hover:f-color-red">
+              <figure class="ratio-1x1 pos-relative flex-none overflow-hidden">
+                <div class="card-image pos-absolute pin bg-cover bg-center" style="background-image: url('../images/IMG_0127-1x1.jpg')"></div>
               </figure>
               <h2 class="f-family-secondary f-size-30 uppercase">4 column with image and title</h2>
-            </article>
+            </a>
           </div>
-          <div class="flex-col col-12 md:col-6 lg:col-3 p-10 align-center" data-aos="fade-up" data-aos-delay="300">
-            <article class="flex-col text-wrap text-center">
-              <figure class="ratio-1x1 pos-relative">
-                <div class="pos-absolute pin bg-cover bg-center" style="background-image: url('../images/IMG_0150-(1)-1x1.jpg')"></div>
+          <div class="col-12 md:col-6 lg:col-3 p-10 align-center" data-aos="fade-up" data-aos-delay="300">
+            <a href="athlete-profile.html" class="img-media img-rollover image-placeholder no-underline flex-col text-wrap text-center hover:f-color-red">
+              <figure class="ratio-1x1 pos-relative flex-none overflow-hidden">
+                <div class="card-image pos-absolute pin bg-cover bg-center" style="background-image: url('../images/IMG_0150-(1)-1x1.jpg')"></div>
               </figure>
               <h2 class="f-family-secondary f-size-30 uppercase">4 column with image and title</h2>
-            </article>
+            </a>
           </div>
-          <div class="flex-col col-12 md:col-6 lg:col-3 p-10 align-center" data-aos="fade-up" data-aos-delay="400">
-            <article class="flex-col text-wrap text-center">
-              <figure class="ratio-1x1 pos-relative">
-                <div class="pos-absolute pin bg-cover bg-center" style="background-image: url('../images/IMG_9739-1x1.jpg')"></div>
+          <div class="col-12 md:col-6 lg:col-3 p-10 align-center" data-aos="fade-up" data-aos-delay="400">
+            <a href="athlete-profile.html" class="img-media img-rollover image-placeholder no-underline flex-col text-wrap text-center hover:f-color-red">
+              <figure class="ratio-1x1 pos-relative flex-none overflow-hidden">
+                <div class="card-image pos-absolute pin bg-cover bg-center" style="background-image: url('../images/IMG_9739-1x1.jpg')"></div>
               </figure>
               <h2 class="f-family-secondary f-size-30 uppercase">4 column with image and title</h2>
-            </article>
+            </a>
           </div>
         </div>
       </div>
@@ -633,7 +637,7 @@
         </div>
         <div class="flex-row flex-wrap -m-20">
           <div class="flex-col col-12 lg:col-4 p-20 align-center" data-aos="fade-up" data-aos-delay="100">
-            <article class="flex-col text-wrap">
+            <article class="flex-col text-wrap w-full">
               <figure class="ratio-1x1 pos-relative">
                 <div class="pos-absolute pin bg-cover bg-center" style="background-image: url('../images/Untitled (12).jpg')"></div>
               </figure>
@@ -642,7 +646,7 @@
             </article>
           </div>
           <div class="flex-col col-12 lg:col-4 p-20 align-center" data-aos="fade-up" data-aos-delay="200">
-            <article class="flex-col text-wrap">
+            <article class="flex-col text-wrap w-full">
               <figure class="ratio-1x1 pos-relative">
                 <div class="pos-absolute pin bg-cover bg-center" style="background-image: url('../images/Untitled (12).jpg')"></div>
               </figure>
@@ -651,7 +655,7 @@
             </article>
           </div>
           <div class="flex-col col-12 lg:col-4 p-20 align-center" data-aos="fade-up" data-aos-delay="300">
-            <article class="flex-col text-wrap">
+            <article class="flex-col text-wrap w-full">
               <figure class="ratio-1x1 pos-relative">
                 <div class="pos-absolute pin bg-cover bg-center" style="background-image: url('../images/Untitled (12).jpg')"></div>
               </figure>
@@ -670,7 +674,7 @@
         </div>
         <div class="flex-row flex-wrap -m-20">
           <div class="flex-col col-12 lg:col-4 p-20 align-center" data-aos="fade-up" data-aos-delay="100">
-            <article class="flex-col text-wrap">
+            <article class="flex-col text-wrap w-full">
               <figure class="ratio-1x1 pos-relative">
                 <div class="pos-absolute pin bg-cover bg-center" style="background-image: url('../images/Untitled (12).jpg')"></div>
               </figure>
@@ -679,7 +683,7 @@
             </article>
           </div>
           <div class="flex-col col-12 lg:col-4 p-20 align-center" data-aos="fade-up" data-aos-delay="200">
-            <article class="flex-col text-wrap">
+            <article class="flex-col text-wrap w-full">
               <figure class="ratio-1x1 pos-relative">
                 <div class="pos-absolute pin bg-cover bg-center" style="background-image: url('../images/Untitled (12).jpg')"></div>
               </figure>
@@ -688,7 +692,7 @@
             </article>
           </div>
           <div class="flex-col col-12 lg:col-4 p-20 align-center" data-aos="fade-up" data-aos-delay="300">
-            <article class="flex-col text-wrap">
+            <article class="flex-col text-wrap w-full">
               <figure class="ratio-1x1 pos-relative">
                 <div class="pos-absolute pin bg-cover bg-center" style="background-image: url('../images/Untitled (12).jpg')"></div>
               </figure>
@@ -701,7 +705,7 @@
     </section>
   </main>
   <!-- Section Divider -->
-  <section class="@@sectionSx">
+  <section class="">
     <div class="mx-auto border-b container sm:container-sm md:container-md lg:container-xl"></div>
   </section>
   <!-- Instagram Feeds -->
@@ -750,14 +754,14 @@
       <div class="mb-40 text-center f-family-secondary">
         <h1 class="uppercase font-weight-bold f-size-48 uppercase">Get in touch</h1>
       </div>
-      <div class="flex-row flex-wrap -m-20">
-        <div class="flex-col col-12 lg:col-4 p-20 align-center" data-aos="fade" data-aos-delay="100">
+      <div class="flex-row flex-wrap -m-15">
+        <div class="flex-col col-12 lg:col-4 p-15 align-center" data-aos="fade" data-aos-delay="100">
           <span class="icon icon-44 mb-20 44 f-color-red">
             <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 44.7 44.7">
               <path d="M32.5 44.7c-3.1 0-6.3-1.2-8.7-3.6L3.6 20.9c-4.8-4.8-4.8-12.5 0-17.3L6.5.7c.4-.5 1-.7 1.6-.7.6 0 1.2.2 1.6.7L18 9c.4.4.7 1 .7 1.6 0 .6-.2 1.2-.7 1.6l-3.6 3.6c-.9.9-.9 2.4 0 3.3l11.1 11.1c.9.9 2.4.9 3.3 0l3.6-3.6c.9-.9 2.3-.9 3.2 0L44 35c.9.9.9 2.3 0 3.2l-2.9 2.9c-2.4 2.4-5.5 3.6-8.6 3.6" clip-path="url(#b)" />
             </svg>
           </span>
-          <div class="text-wrap text-center">
+          <div class="text-wrap text-center w-full">
             <p>
               <a href="tel:+44 2036 910238" title="Call us" class="f-size-22 no-underline hover:f-color-red">UK: +44 2036 910238</a>
               <br />
@@ -765,7 +769,7 @@
             </p>
           </div>
         </div>
-        <div class="flex-col col-12 lg:col-4 p-20 align-center" data-aos="fade" data-aos-delay="200">
+        <div class="flex-col col-12 lg:col-4 p-15 align-center" data-aos="fade" data-aos-delay="200">
           <span class="icon icon-44 mb-20 4 f-color-dark">
             <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Layer_1" x="0" y="0" version="1.1" viewBox="0 0 28.7 40.8" xml:space="preserve">
               <g>
@@ -775,20 +779,20 @@
               </g>
             </svg>
           </span>
-          <div class="text-wrap text-center">
+          <div class="text-wrap text-center w-full">
             <p>
               <a href="https://goo.gl/maps/vMkQwRx4g51c6ALy8" title="See on Map" target="_blank" class="f-size-22 no-underline hover:f-color-red">Unit 13, Barnack Business Centre, Blakey Rd, Salisbury, Wiltshire, SP1 2LP, UK</a>
             </p>
           </div>
         </div>
-        <div class="flex-col col-12 lg:col-4 p-20 align-center" data-aos="fade" data-aos-delay="300">
+        <div class="flex-col col-12 lg:col-4 p-15 align-center" data-aos="fade" data-aos-delay="300">
           <span class="icon icon-44 mb-20 f-color-green">
             <svg stroke="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 44.7 33.6">
               <path fill="currentColor" d="M0 0h44.7v33.6H0z" />
               <path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3.9l19.3 15.6L41 3.9" clip-path="url(#b)" />
             </svg>
           </span>
-          <div class="text-wrap text-center">
+          <div class="text-wrap text-center w-full">
             <p>
               <a href="mailto:info@dbaafrica.com" title="email us" class="f-size-22 no-underline hover:f-color-red">UK: info@dbaafrica.com</a>
             </p>
@@ -801,7 +805,7 @@
   <footer class="pos-relative mt-60 py-35 bg-dark f-color-white">
     <div class="container md:container-sm lg:container-lg xl:container-xl mx-auto flex-col lg:flex-row align-center">
       <div class="flex-auto">
-        <ul class="footer-links list-reset flex-col align-center lg:flex-row f-size-15 -mx-10">
+        <ul class="footer-links list-reset flex-col align-center lg:flex-row lg:align-center f-size-15 -mx-10">
           <li class="py-10 px-10 lg:py-0">
             © DBA Africa
           </li>
@@ -812,7 +816,7 @@
             <a href="#" class="f-color-inherit hover:f-color-red no-underline transition-all">Sitemap</a>
           </li>
           <li class="py-10 px-10 lg:py-0">
-            <a class="f-color-inherit hover:f-color-red no-underline transition-all d-inline-block icon-unstuck-design ratio-unstuck-design unstuck-link" href="http://unstuckdesign.com/" target="_blank">
+            <a class="icon-unstuck-design ratio-unstuck-design unstuck-link f-color-inherit hover:f-color-red no-underline transition-all d-inline-block" href="http://unstuckdesign.com/" target="_blank">
               <span class="pos-absolute pin">
                 <svg class="unstuck-design" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 191 14.1">
                   <path d="M99.6 10.8c-.1-.1-.2-.2-.2-.4 0-.3.2-.5.5-.5.1 0 .2 0 .3.1.8.6 1.7.9 2.6.9 1 0 1.7-.5 1.7-1.3s-1-1.1-2-1.4c-1.3-.4-2.7-.8-2.7-2.3 0-1.4 1.2-2.3 2.8-2.3.9 0 1.8.3 2.6.7.2.1.3.3.3.5 0 .3-.2.5-.5.5-.1 0-.2 0-.3-.1-.7-.4-1.4-.6-2.1-.6-1 0-1.6.5-1.6 1.2 0 .8 1 1.1 2.1 1.4 1.3.4 2.6.9 2.6 2.3 0 1.6-1.3 2.5-2.9 2.5-1.2-.1-2.3-.5-3.2-1.2m8.6-1.3V4.6h-.7c-.3 0-.5-.3-.5-.5 0-.3.3-.5.5-.5h.7V1.7c0-.3.3-.6.6-.6s.6.3.6.6v1.9h2.1c.3 0 .6.3.6.5 0 .3-.3.5-.6.5h-2.1v4.8c0 1 .6 1.4 1.4 1.4.4 0 .6-.1.7-.1.3 0 .5.2.5.5 0 .2-.1.4-.3.5-.3.1-.7.2-1.2.2-1.3-.1-2.3-.7-2.3-2.4m13 1.6c0 .3-.3.6-.6.6s-.6-.3-.6-.6v-.9c-.6.9-1.4 1.6-2.8 1.6-2 0-3.1-1.3-3.1-3.3V3.9c0-.3.3-.6.6-.6s.6.3.6.6v4.2c0 1.5.8 2.5 2.3 2.5 1.4 0 2.5-1 2.5-2.6V3.8c0-.3.3-.6.6-.6s.6.3.6.6l-.1 7.3zm2.2-3.5c0-2.3 1.8-4.3 4.2-4.3 1.4 0 2.3.5 3 1.2.1.1.2.2.2.4 0 .3-.3.6-.6.6-.2 0-.3-.1-.4-.1-.6-.5-1.3-1-2.2-1-1.7 0-2.9 1.4-2.9 3.2 0 1.8 1.3 3.2 3 3.2.9 0 1.7-.4 2.3-1 .1-.1.2-.2.3-.2.3 0 .6.3.6.6 0 .1-.1.3-.2.4-.8.8-1.7 1.3-3.1 1.3-2.4 0-4.2-2-4.2-4.3m9.5-7c0-.3.3-.6.6-.6s.6.3.6.6v7.5l4.4-4.5c.1-.2.3-.2.5-.2.3 0 .6.3.6.6 0 .2-.1.3-.2.5l-2.7 2.6 2.9 3.7c.1.1.2.3.2.4 0 .3-.3.6-.6.6-.2 0-.4-.1-.5-.3l-2.8-3.6-1.7 1.7v1.6c0 .3-.3.6-.6.6s-.6-.3-.6-.6L132.9.6zm9.5 7c0 2.2 1.5 3.5 3.2 3.5 1.7 0 3.3-1.4 3.3-3.5s-1.6-3.5-3.3-3.5c-1.8 0-3.2 1.3-3.2 3.5m7.2 3.7c0 .2-.2.4-.4.4s-.4-.2-.4-.4V9.8c-.7 1.1-1.7 2-3.3 2-1.9 0-3.9-1.6-3.9-4.2s2-4.2 3.9-4.2c1.6 0 2.7.9 3.3 1.9V.4c0-.2.2-.4.4-.4s.4.2.4.4v10.9zm9.1-4.1c-.1-1.6-1-3.1-2.9-3.1-1.6 0-2.8 1.4-3 3.1h5.9zm-2.8 4.6c-2.1 0-4-1.7-4-4.2 0-2.3 1.6-4.2 3.8-4.2 2.3 0 3.7 1.9 3.7 4.2 0 .2-.2.4-.4.4h-6.3c.1 2 1.6 3.2 3.2 3.2 1.2 0 2-.5 2.6-1.1.1-.1.1-.1.3-.1.2 0 .4.2.4.4 0 .1 0 .2-.1.3-.8.6-1.7 1.1-3.2 1.1m5.3-1.1c-.1 0-.1-.2-.1-.3 0-.2.2-.4.4-.4.1 0 .2 0 .3.1.8.6 1.7.9 2.7.9 1.1 0 1.9-.6 1.9-1.5 0-1-1-1.3-2.1-1.6-1.3-.4-2.8-.8-2.8-2.2 0-1.3 1.1-2.2 2.7-2.2.9 0 1.8.3 2.6.7.1.1.2.2.2.4s-.2.4-.4.4c-.1 0-.2 0-.2-.1-.7-.4-1.5-.7-2.3-.7-1.1 0-1.8.6-1.8 1.4 0 .9 1.1 1.2 2.3 1.6 1.3.4 2.7.8 2.7 2.3 0 1.4-1.2 2.4-2.8 2.4-1.2-.1-2.4-.6-3.3-1.2m8.5-6.9c0-.2.2-.4.4-.4s.4.2.4.4v7.4c0 .2-.2.4-.4.4s-.4-.2-.4-.4V3.8zm-.1-3.1c0-.3.2-.5.5-.5s.5.2.5.5V1c0 .3-.2.5-.5.5s-.5-.2-.5-.5V.7zm10.8 6.5c0-1.9-1.7-3.1-3.3-3.1-1.7 0-3.1 1.2-3.1 3.1 0 1.8 1.5 3.1 3.1 3.1 1.6-.1 3.3-1.3 3.3-3.1m-6.8 5.8c-.1-.1-.2-.2-.2-.3 0-.2.2-.4.4-.4.1 0 .2 0 .2.1.9.7 2 1 3.1 1 1.9 0 3.2-1.1 3.2-3.1V9.1c-.7 1-1.8 1.9-3.4 1.9-1.9 0-3.9-1.5-3.9-3.8s1.9-3.8 3.9-3.8c1.6 0 2.7.9 3.4 1.8V3.9c0-.2.2-.4.4-.4s.4.2.4.4v6.5c0 1.2-.4 2.1-1 2.7-.7.7-1.7 1.1-2.9 1.1-1.3 0-2.5-.4-3.6-1.2M184 3.8c0-.2.2-.4.4-.4s.4.2.4.4V5c.5-.9 1.4-1.7 2.9-1.7 2 0 3.2 1.4 3.2 3.3v4.6c0 .2-.2.4-.4.4s-.4-.2-.4-.4V6.7c0-1.7-.9-2.8-2.6-2.8-1.6 0-2.8 1.2-2.8 2.9v4.3c0 .2-.2.4-.4.4s-.4-.2-.4-.4l.1-7.3zm-86.9 8.1c-.3 0-.6-.3-.6-.6V6.2c0-.2-.1-1.8-2.3-1.8-.8 0-1.5.2-1.9.6-.5.5-.5 1.1-.5 1.1v2.2c0 1.2-1.1 1-1.1 1V6.1c0-.1 0-1.1.8-1.9.6-.6 1.5-1 2.7-1 1.1 0 2 .3 2.6.9.8.8.8 1.9.8 2v5.1c.1.5-.2.7-.5.7">
