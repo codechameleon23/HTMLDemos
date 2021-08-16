@@ -34,6 +34,18 @@ function getViewportWidth() {
     return 0;
   }
 }
+//  -------------------------------------------
+//  Empty Select
+//  -------------------------------------------
+$('select').on('change', function(){
+  if($(this).val()){
+    $(this).removeClass('not-selected')
+  } else {
+    $(this).addClass('not-selected')
+  }
+})
+
+
 $(document).ready(function () {
 //  -------------------------------------------
 // Navbar toggle
@@ -89,7 +101,7 @@ $(document).ready(function () {
       // animateIn: isIE11 || isIE10 ? "" : "fadeIn",
       // animateOut: isIE11 || isIE10 ? "" : "fadeOut",
       smartSpeed: 500,
-      // autoplay: true,
+      autoplay: true,
       autoplayTimeout: 4000,
       autoplayHoverPause: true,
     });
@@ -113,7 +125,7 @@ $(document).ready(function () {
       // animateIn: isIE11 || isIE10 ? "" : "fadeIn",
       // animateOut: isIE11 || isIE10 ? "" : "fadeOut",
       smartSpeed: 500,
-      // autoplay: true,
+      autoplay: true,
       autoplayTimeout: 4000,
       autoplayHoverPause: true,
       responsive:{
