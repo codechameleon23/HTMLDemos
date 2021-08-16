@@ -24640,6 +24640,11 @@ button.mfp-arrow-right::after
     }
 }
 
+.card .brief
+{
+    padding-top: 10px;
+}
+
 @media (min-width: 992px)
 {
     .card .brief
@@ -24647,30 +24652,20 @@ button.mfp-arrow-right::after
         overflow: hidden;
 
         max-height: 0;
+        padding-top: 0;
 
-        opacity: .2;
+        -webkit-transition: max-height .45s 0s ease-in-out;
+                transition: max-height .45s 0s ease-in-out; 
+
+        opacity: 0;
     }
-}
+    .card:hover .brief
+    {
+        max-height: 50em; 
+        padding-top: 10px;
 
-.card .brief
-{
-    opacity: 0;
-}
-
-.card .brief
-{
-    -webkit-transition: all .45s 0s ease-in-out;
-            transition: all .45s 0s ease-in-out;
-}
-
-.card:hover .brief
-{
-    opacity: 1;
-}
-
-.card:hover .brief
-{
-    max-height: 50em;
+        opacity: 1;
+    }
 }
 
 .select-small
