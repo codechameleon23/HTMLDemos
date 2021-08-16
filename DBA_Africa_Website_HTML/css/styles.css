@@ -4589,6 +4589,18 @@ ol.list li:before
         height: auto; 
         max-height: 100%;
     }
+    .icon-135
+    {
+        width: 13.5rem;
+    }
+    .icon-135 svg,
+    .icon-135 img
+    {
+        width: 100%;
+        max-width: 13.5rem;
+        height: auto; 
+        max-height: 100%;
+    }
     .icon-165
     {
         width: 16.5rem;
@@ -8194,6 +8206,18 @@ ol.list li:before
     {
         width: 100%;
         max-width: 8rem;
+        height: auto; 
+        max-height: 100%;
+    }
+    .sm\:icon-135
+    {
+        width: 13.5rem;
+    }
+    .sm\:icon-135 svg,
+    .sm\:icon-135 img
+    {
+        width: 100%;
+        max-width: 13.5rem;
         height: auto; 
         max-height: 100%;
     }
@@ -11805,6 +11829,18 @@ ol.list li:before
         height: auto; 
         max-height: 100%;
     }
+    .md\:icon-135
+    {
+        width: 13.5rem;
+    }
+    .md\:icon-135 svg,
+    .md\:icon-135 img
+    {
+        width: 100%;
+        max-width: 13.5rem;
+        height: auto; 
+        max-height: 100%;
+    }
     .md\:icon-165
     {
         width: 16.5rem;
@@ -15410,6 +15446,18 @@ ol.list li:before
     {
         width: 100%;
         max-width: 8rem;
+        height: auto; 
+        max-height: 100%;
+    }
+    .lg\:icon-135
+    {
+        width: 13.5rem;
+    }
+    .lg\:icon-135 svg,
+    .lg\:icon-135 img
+    {
+        width: 100%;
+        max-width: 13.5rem;
         height: auto; 
         max-height: 100%;
     }
@@ -19021,6 +19069,18 @@ ol.list li:before
         height: auto; 
         max-height: 100%;
     }
+    .xl\:icon-135
+    {
+        width: 13.5rem;
+    }
+    .xl\:icon-135 svg,
+    .xl\:icon-135 img
+    {
+        width: 100%;
+        max-width: 13.5rem;
+        height: auto; 
+        max-height: 100%;
+    }
     .xl\:icon-165
     {
         width: 16.5rem;
@@ -22629,6 +22689,18 @@ ol.list li:before
         height: auto; 
         max-height: 100%;
     }
+    .xxl\:icon-135
+    {
+        width: 13.5rem;
+    }
+    .xxl\:icon-135 svg,
+    .xxl\:icon-135 img
+    {
+        width: 100%;
+        max-width: 13.5rem;
+        height: auto; 
+        max-height: 100%;
+    }
     .xxl\:icon-165
     {
         width: 16.5rem;
@@ -24647,6 +24719,11 @@ button.mfp-arrow-right::after
 
 @media (min-width: 992px)
 {
+    .card .icon,
+    .card .brief
+    {
+        opacity: 0;
+    }
     .card .brief
     {
         overflow: hidden;
@@ -24655,16 +24732,17 @@ button.mfp-arrow-right::after
         padding-top: 0;
 
         -webkit-transition: max-height .45s 0s ease-in-out;
-                transition: max-height .45s 0s ease-in-out; 
-
-        opacity: 0;
+                transition: max-height .45s 0s ease-in-out;
+    }
+    .card:hover .icon,
+    .card:hover .brief
+    {
+        opacity: 1;
     }
     .card:hover .brief
     {
         max-height: 50em; 
         padding-top: 10px;
-
-        opacity: 1;
     }
 }
 
