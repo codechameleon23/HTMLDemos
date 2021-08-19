@@ -53,6 +53,7 @@ const PROJECT_JS_LIST = [
   // ROOT_JS_PATH+'/stackedrows.min.js',
   // ROOT_JS_PATH+'/feather.min.js',
   // ROOT_JS_PATH+'/moment.min.js',
+  ROOT_JS_PATH+'/jquery.inview.js',
 
   SRC_JS_PATH+'/_commonFunc.js',
   // SRC_JS_PATH+'/_featherIcons.js',
@@ -70,6 +71,7 @@ const PROJECT_JS_LIST = [
   // SRC_JS_PATH+'/_accordion.js',
   // SRC_JS_PATH+'/_galleryFilter.js',
   // SRC_JS_PATH+'/_tableStackedRows.js',
+  SRC_JS_PATH+'/_inView.js',
   // SRC_JS_PATH+'/_myScript.js',
   SRC_JS_PATH+'/_docReadyEnds.js',
   SRC_JS_PATH+'/_iphonePageHack.js',

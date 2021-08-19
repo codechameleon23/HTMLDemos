@@ -5003,6 +5003,43 @@ a[href^=http]{display:inline-block;overflow:hidden;max-width:100%;text-overflow:
 @media (min-width:992px){
 .jsBannerCarouselCenter .item{width:96rem}
 }
+.sliceIn-parent{opacity:0}
+.sliceIn-parent.in-view{-webkit-animation:sliceInParent .75s ease-in-out;animation:sliceInParent .75s ease-in-out;opacity:1}
+.sliceIn-parent.in-view .sliceIn-child{-webkit-animation:sliceInChild .75s ease-in-out;animation:sliceInChild .75s ease-in-out}
+.sliceIn-parent.in-view.sliceIn-from-left{-webkit-animation:sliceInFromLeftParent .75s ease-in-out;animation:sliceInFromLeftParent .75s ease-in-out}
+.sliceIn-parent.in-view.sliceIn-from-left .sliceIn-child{-webkit-animation:sliceInFromLeftChild .75s ease-in-out;animation:sliceInFromLeftChild .75s ease-in-out}
+@-webkit-keyframes sliceInParent{
+from{-webkit-transform:translateX(-100%);transform:translateX(-100%)}
+to{-webkit-transform:translateX(0);transform:translateX(0)}
+}
+@keyframes sliceInParent{
+from{-webkit-transform:translateX(-100%);transform:translateX(-100%)}
+to{-webkit-transform:translateX(0);transform:translateX(0)}
+}
+@-webkit-keyframes sliceInChild{
+from{-webkit-transform:translateX(100%);transform:translateX(100%)}
+to{-webkit-transform:translateX(0);transform:translateX(0)}
+}
+@keyframes sliceInChild{
+from{-webkit-transform:translateX(100%);transform:translateX(100%)}
+to{-webkit-transform:translateX(0);transform:translateX(0)}
+}
+@-webkit-keyframes sliceInFromLeftParent{
+from{-webkit-transform:translateX(100%);transform:translateX(100%)}
+to{-webkit-transform:translateX(0);transform:translateX(0)}
+}
+@keyframes sliceInFromLeftParent{
+from{-webkit-transform:translateX(100%);transform:translateX(100%)}
+to{-webkit-transform:translateX(0);transform:translateX(0)}
+}
+@-webkit-keyframes sliceInFromLeftChild{
+from{-webkit-transform:translateX(-100%);transform:translateX(-100%)}
+to{-webkit-transform:translateX(0);transform:translateX(0)}
+}
+@keyframes sliceInFromLeftChild{
+from{-webkit-transform:translateX(-100%);transform:translateX(-100%)}
+to{-webkit-transform:translateX(0);transform:translateX(0)}
+}
 @media all and (max-width:992px){
 .navbar{max-width:calc(100% - 6rem)}
 }
