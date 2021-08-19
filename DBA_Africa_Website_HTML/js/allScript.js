@@ -233,15 +233,22 @@ if ($('.js_media_Gallery_Popup').length) { //if element exists
 //  When element in view on browser
 //  -------------------------------------------
   var ctaBannerInViewJS = $('.ctaBannerInViewJS');
-  checkVisibility();
+  var sectionBannerInViewJS = $('.sectionBannerInViewJS');
+
   function checkVisibility() {
     ctaBannerInViewJS.each(function(){
-      var elm = $(this);
-      if (elm.inView("topOnly", 100)) {
-        elm.addClass("in-view");
+      if ($(this).inView("topOnly", 100)) {
+        $(this).addClass("in-view");
+      }
+    });
+    sectionBannerInViewJS.each(function(){
+      if ($(this).inView("bottomOnly", -100)) {
+        $(this).addClass("in-view");
       }
     });
   }
+
+  checkVisibility();
 
   $(window).scroll(function() {
     checkVisibility();
