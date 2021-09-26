@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta property="og:title" content="Carter & May" />
+  <meta property="og:description" content="" />
+  <meta property="og:image" content="http://codechameleon.in/CM_Website_HTML/images/preview-1200x630.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="****WEBSITE-URL****" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="date=no">
+  <meta name="format-detection" content="address=no">
+  <meta name="format-detection" content="email=no">
+  <link rel="icon" href="./images/favicon.png" />
+  <title>Home | Carter & May</title>
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body class="jsNavbarToggle is-close flex-col">
+  <!-- Header -->
+  <!--      "home": "true"-->
+  <!--	})-->
+  <!-- Main -->
+  <main class="flex-auto flex-col">
+    <section class="ratio-5x2 pos-relative">
+      <div id="map-canvas" class="pos-absolute pin"></div>
+    </section>
+    <!-- Inro -->
+    <section class="py-65 xl:py-100">
+      <div class="container sm:container-sm lg:container-article mx-auto">
+        <article class="text-wrap-lg text-center f-size-26">
+          <hgroup class="text-wrap">
+            <h3 class="f-color-secondary uppercase">CONTACT US</h3>
+            <h3 class="f-color-primary f-size-38 f-weight-bold">We’d love to hear from you,<br /> and discuss your next move…</h3>
+          </hgroup>
+          <div class="flex-row flex-wrap justify-center -m-10">
+            <div class="p-10">
+              <a href="#" class="button secondary">
+                <span>REGISTER TODAY</span>
+              </a>
+            </div>
+            <div class="p-10">
+              <a href="#" class="button primary">
+                <span>BOOK A VALUATION</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!-- Contact details -->
+    <section class="pb-65 xl:pb-100">
+      <div class="container sm:container-sm lg:container-lg xl:container-xl mx-auto">
+        <div class="flex-row flex-wrap align-center">
+          <div class="col-12 lg:col-6 lg:pr-100 pb-100">
+            <div class="w-full pos-relative">
+              <img src="./images/Rectangle-161@2x.jpg" />
+              <div class="pos-absolute pin-b pin-l-50 pin-bl50">
+                <div class="icon icon-244 shadow-lg rounded-full border-4 border-secondary bg-white f-color-primary f-size-24 flex-col justify-center align-center">
+                  <span class="p-20 text-center">Note: need to add a new photo of office</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 lg:col-6 py-20 pl-65 pr-40 border-l-4 border-secondary">
+            <div class="text-wrap f-size-26">
+              <h2 class="f-color-primary">Head Office</h2>
+              <p><a href="https://goo.gl/maps/V6EVTGLEJ35s6YaE6" target="_blank">87 Castle Street, Salisbury, SP1 3SP.</a></p>
+              <h2 class="f-color-primary">Telephone</h2>
+              <ul class="list-reset">
+                <li>
+                  Salisbury Tel <a href="tel:01722 331993">01722 331993</a><br />
+                </li>
+                <li>
+                  Amesbury Tel <a href="tel:01980 669751">01980 669751</a><br />
+                </li>
+                <li>
+                  New Forest Tel <a href="tel:01425 541575">01425 541575</a>
+                </li>
+              </ul>
+              <h2 class="f-color-primary">Email</h2>
+              <p><a href="mailto:info@cartermay.co.uk">info@cartermay.co.uk</a></p>
+              <h2 class="f-color-primary">Opening Hours</h2>
+              <ul class="list-reset">
+                <li>
+                  Monday to Friday<br />8:30am - 6:00pm
+                </li>
+                <li>
+                  Saturday<br />9:00am - 4:00pm
+                </li>
+                <li>
+                  Sunday<br />Closed
+                </li>
+              </ul>
+              <p>For all our landlords, your dedicated member of staff is available on the telephone for out of hours emergencies and this will be given to you upon instruction of our fully managed service.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!--	&lt;!&ndash; Footer &ndash;&gt;-->
+  <script src="js/allScript.js"></script>
+  <script>
+    $('#map-canvas').mapify({
+      options: {
+        styles: snazzymapsColorStyle,
+      },
+      key: 'AIzaSyB1kmlnoOlwpHQQBvhhIL3joMAKpKq9Yoo',
+      points: [{
+        lat: 51.072179790741586,
+        lng: -1.796327589700179,
+        marker: 'images/map-marker.png',
+        markerSize: [226, 226],
+        title: '87 Castle Street, Salisbury, SP1 3SP.',
+      }, ],
+      zoom: 12,
+    });
+  </script>
+</body>
+
+</html>
