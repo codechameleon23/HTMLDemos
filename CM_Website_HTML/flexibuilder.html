@@ -29,7 +29,75 @@
   <main class="flex-auto flex-col">
     Hello
   </main>
-  <!--	&lt;!&ndash; Footer &ndash;&gt;-->
+  <!-- Footer -->
+  <!-- Request a Valuation popup -->
+  <section id="jsRequestValuationPopup" class="d-hidden popup bg-primary f-color-white flex-col w-full h-full">
+    <div class="popup-body pos-absolute pin flex-col overflow-x-hidden overflow-y-auto">
+      <div class="container container-md my-20 mx-auto">
+        <div class="text-wrap-md">
+          <div class="icon-165 mx-auto"><img src="./images/CM_Logo_Submark.png" /></div>
+          <div class="text-center text-wrap-md">
+            <hgroup class="text-wrap-xs">
+              <h3 class="f-color-secondary f-size-17 uppercase">CONTACT US</h3>
+              <h2 class="f-size-39 f-family-secondary f-weight-bold">Request a valuation.</h2>
+            </hgroup>
+            <p>Fill out the form below to request a free valuation<br /> at a time to suit you: or call us on <a href="tel:01722 331 993">01722 331 993</a></p>
+          </div>
+          <form class="flex-col -m-8 f-color-primary">
+            <div class="col-12 flex-col p-8">
+              <input type="text" required="" placeholder="Full name" name="fullName" class="w-full border-2 bg-white f-color-inherit p-10 flex-stretch focus:border-secondary focus:shadow-md transition-all">
+            </div>
+            <div class="col-12 flex-col p-8">
+              <input type="email" required="" placeholder="Email" name="email" class="w-full border-2 bg-white f-color-inherit p-10 flex-stretch focus:border-secondary focus:shadow-md transition-all">
+            </div>
+            <div class="col-12 flex-col p-8">
+              <input type="text" required="" placeholder="Telephone" name="telephone" class="w-full border-2 bg-white f-color-inherit p-10 flex-stretch focus:border-secondary focus:shadow-md transition-all">
+            </div>
+            <div class="col-12 flex-col p-8">
+              <textarea rows="10" placeholder="Message" name="message" class="w-full border-2 bg-white f-color-inherit p-10 flex-stretch focus:border-secondary focus:shadow-md transition-all"></textarea>
+            </div>
+            <div class="col-12 flex-col p-8">
+              <div class="select">
+                <select name="enquiryType" class="w-full border-2 border-white bg-white f-color-inherit p-10 flex-stretch focus:border-secondary focus:shadow-md transition-all not-selected">
+                  <option value="" selected="selected">How did you hear about us?</option>
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-12 flex-row flex-wrap justify-space-between align-center px-8">
+              <label class="w-auto custom-tick my-auto my-8">
+                <input name="addr" type="checkbox" class="style-radio">
+                <span class="d-inline-block tick"><span class="border border-secondary border-2 f-color-secondary rounded-full"></span></span>
+                <span class="related-text f-size-14">
+                  <span class="f-color-white">I have read and agree to your</span>
+                  <a href="#" class="f-color-secondary underline">privacy policy</a>
+                </span>
+              </label>
+              <button class="button secondary auto-width my-8"><span>BOOK A VALUATION</span></button>
+            </div>
+          </form>
+          <footer class="flex-row justify-center no-text-wrap">
+            <button class="jsRequestValuationPopup_close">
+              <span class="icon icon-30 f-weight-regular rounded-full f-color-secondary hover:bg-secondary hover:f-color-white shadow-lg">
+                <span class="p-8">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 224.512 224.512" fill="currentColor">
+                    <path d="M224.507 6.997L217.521 0 112.256 105.258 6.998 0 .005 6.997l105.258 105.257L.005 217.512l6.993 7L112.256 119.24l105.265 105.272 6.986-7-105.258-105.258z"></path>
+                  </svg>
+                </span>
+              </span>
+            </button>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="pos-relative bg-primary f-color-white">
+    <div class="container md:container-sm lg:container-lg xl:container-xl mx-auto">
+      Footer
+    </div>
+  </footer>
   <script src="js/allScript.js"></script>
 </body>
 
