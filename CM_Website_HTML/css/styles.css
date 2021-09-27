@@ -23551,6 +23551,72 @@ ol.list li:before
     }
 }
 
+/*accordian*/
+.accordion-wrapper .accordion
+{
+    position: relative;
+
+    overflow: hidden; 
+
+    width: 100%;
+}
+.accordion-wrapper .accordion > .accordion-label
+{
+    position: relative;
+
+    display: block;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+
+    cursor: pointer;
+
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+            align-items: center;
+}
+.accordion-wrapper .accordion > .accordion-label > .question
+{
+    margin-bottom: 0; 
+    padding-right: 1rem;
+
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+}
+.accordion-wrapper .accordion.is-open > .accordion-label + .accordion-content
+{
+    max-height: 80em;
+
+    opacity: 1;
+}
+.accordion-wrapper .accordion.is-open > .accordion-label + .accordion-content > .answer
+{
+    -webkit-animation: fade-in .3s .3s ease-in-out both;
+            animation: fade-in .3s .3s ease-in-out both;
+}
+.accordion-wrapper .accordion.is-open > .accordion-label > .toggle-sign
+{
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
+.accordion-wrapper .accordion > .accordion-content
+{
+    overflow: hidden;
+
+    max-height: 0;
+
+    opacity: 0;
+}
+
 /*googleMap*/
 /*Map Marker*/
 #map-canvas img[src*='images/map-marker']
@@ -25184,6 +25250,40 @@ body[data-aos-easing='ease-in-out'] [data-aos],
     }
 }
 
+.select:after
+{
+    top: calc(50% - .2rem);
+    right: 1.2rem;
+
+    width: .8rem;
+    height: .8rem;
+
+    -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+        -ms-transform: translate(-50%, -50%) rotate(-45deg);
+            transform: translate(-50%, -50%) rotate(-45deg); 
+
+    color: #fff;
+}
+
+.select:before
+{
+    position: absolute;
+    top: 50%;
+    right: 0;
+
+    width: 2rem;
+    height: 2rem;
+
+    content: '';
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    pointer-events: none; 
+
+    border-radius: 9999px;
+    background-color: #be9f56;
+}
+
 .banner-carousel .owl-item
 {
     margin-left: 1px;
@@ -25212,18 +25312,24 @@ body[data-aos-easing='ease-in-out'] [data-aos],
     background-color: #be9f56;
 }
 
-.popup_visible .popup
-{
-    -webkit-animation: fade-in-fwd .6s cubic-bezier(.39, .575, .565, 1) both;
-            animation: fade-in-fwd .6s cubic-bezier(.39, .575, .565, 1) both;
-}
-
 .popup_wrapper
 {
     -webkit-perspective: 500px;
             perspective: 500px;
     -webkit-perspective-origin: 50% 50%;
             perspective-origin: 50% 50%;
+}
+
+.popup_visible #jsTeamMemberPopup
+{
+    -webkit-animation: fade-in-fwd .6s cubic-bezier(.39, .575, .565, 1) both;
+            animation: fade-in-fwd .6s cubic-bezier(.39, .575, .565, 1) both;
+}
+
+.popup_visible #jsRequestValuationPopup
+{
+    -webkit-animation: scale-in-center .5s cubic-bezier(.25, .46, .45, .94) both;
+            animation: scale-in-center .5s cubic-bezier(.25, .46, .45, .94) both;
 }
 
 #jsTeamMemberPopup
@@ -25272,36 +25378,100 @@ body[data-aos-easing='ease-in-out'] [data-aos],
     }
 }
 
-.select:after
+@-webkit-keyframes scale-in-center
 {
-    top: calc(50% - .2rem);
-    right: 1.2rem;
+    0%
+    {
+        -webkit-transform: scale(0);
+                transform: scale(0);
 
-    width: .8rem;
-    height: .8rem;
+        opacity: 1;
+    }
+    100%
+    {
+        -webkit-transform: scale(1);
+                transform: scale(1);
 
-    -webkit-transform: translate(-50%, -50%) rotate(-45deg);
-        -ms-transform: translate(-50%, -50%) rotate(-45deg);
-            transform: translate(-50%, -50%) rotate(-45deg); 
-
-    color: #fff;
+        opacity: 1;
+    }
 }
 
-.select:before
+@keyframes scale-in-center
 {
-    position: absolute;
-    top: 50%;
-    right: 0;
+    0%
+    {
+        -webkit-transform: scale(0);
+                transform: scale(0);
 
-    width: 2rem;
-    height: 2rem;
+        opacity: 1;
+    }
+    100%
+    {
+        -webkit-transform: scale(1);
+                transform: scale(1);
 
-    content: '';
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    pointer-events: none; 
+        opacity: 1;
+    }
+}
 
-    border-radius: 9999px;
+.accordion-tabs-wrapper > .toggle-tabs > .accordion
+{
+    width: auto;
+}
+.accordion-tabs-wrapper > .toggle-tabs > .accordion.is-open
+{
+    color: #fff; 
     background-color: #be9f56;
+}
+.accordion-tabs-wrapper > .toggle-tabs > .accordion:not(.is-open)
+{
+    background-color: #fff;
+}
+
+@media (min-width: 992px)
+{
+    .accordion-tabs-wrapper > .toggle-content > .accordion:not(.is-open),
+    .accordion-tabs-wrapper > .toggle-content > .accordion > .accordion-toggle
+    {
+        display: none;
+    }
+}
+
+.accordion-tabs-wrapper:not(.transition-all) .accordion.is-open > .accordion-label + .accordion-content,
+.accordion-wrapper:not(.transition-all) .accordion.is-open > .accordion-label + .accordion-content
+{
+    max-height: unset;
+}
+
+.accordion-tabs-wrapper.transition-all .accordion > .accordion-label + .accordion-content,
+.accordion-wrapper.transition-all .accordion > .accordion-label + .accordion-content
+{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+            flex-direction: column;
+
+    -webkit-transition: all .45s 0s ease-in-out;
+            transition: all .45s 0s ease-in-out; 
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+}
+.accordion-tabs-wrapper.transition-all .accordion > .accordion-label + .accordion-content .answer,
+.accordion-wrapper.transition-all .accordion > .accordion-label + .accordion-content .answer
+{
+    overflow: auto;
+}
+
+.list-primary ::marker
+{
+    color: #0b303e;
+}
+
+.list-secondary ::marker
+{
+    color: #be9f56;
 }
