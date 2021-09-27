@@ -1133,6 +1133,80 @@ ol.list li:before
             transform: scaleY(-1);
 }
 
+.italic
+{
+    font-style: italic;
+}
+
+.roman
+{
+    font-style: normal;
+}
+
+.uppercase
+{
+    text-transform: uppercase;
+}
+
+.lowercase
+{
+    text-transform: lowercase;
+}
+
+.capitalize
+{
+    text-transform: capitalize;
+}
+
+.normal-case
+{
+    text-transform: none;
+}
+
+.underline
+{
+    text-decoration: underline;
+}
+
+.no-underline
+{
+    text-decoration: none;
+}
+
+.line-through
+{
+    text-decoration: line-through;
+}
+
+.wavy
+{
+    -webkit-text-decoration-line: underline;
+            text-decoration-line: underline;
+    -webkit-text-decoration-style: wavy;
+            text-decoration-style: wavy;
+}
+
+.reflect
+{
+    -webkit-transform: scale(-1);
+        -ms-transform: scale(-1);
+            transform: scale(-1);
+}
+
+.reflect-X
+{
+    -webkit-transform: scaleX(-1);
+        -ms-transform: scaleX(-1);
+            transform: scaleX(-1);
+}
+
+.reflect-Y
+{
+    -webkit-transform: scaleY(-1);
+        -ms-transform: scaleY(-1);
+            transform: scaleY(-1);
+}
+
 /* White space classes */
 .whitespace-normal
 {
@@ -1233,6 +1307,11 @@ ol.list li:before
     border-color: inherit;
 }
 
+.focus-within\:border-inherit:focus-within
+{
+    border-color: inherit;
+}
+
 .border-transparent
 {
     border-color: transparent;
@@ -1244,6 +1323,11 @@ ol.list li:before
 }
 
 .focus\:border-transparent:focus
+{
+    border-color: transparent;
+}
+
+.focus-within\:border-transparent:focus-within
 {
     border-color: transparent;
 }
@@ -1263,6 +1347,11 @@ ol.list li:before
     border-color: #0b303e;
 }
 
+.focus-within\:border-primary:focus-within
+{
+    border-color: #0b303e;
+}
+
 .border-secondary
 {
     border-color: #be9f56;
@@ -1274,6 +1363,11 @@ ol.list li:before
 }
 
 .focus\:border-secondary:focus
+{
+    border-color: #be9f56;
+}
+
+.focus-within\:border-secondary:focus-within
 {
     border-color: #be9f56;
 }
@@ -1293,6 +1387,11 @@ ol.list li:before
     border-color: #f9f5ee;
 }
 
+.focus-within\:border-light:focus-within
+{
+    border-color: #f9f5ee;
+}
+
 .border-white
 {
     border-color: #fff;
@@ -1304,6 +1403,11 @@ ol.list li:before
 }
 
 .focus\:border-white:focus
+{
+    border-color: #fff;
+}
+
+.focus-within\:border-white:focus-within
 {
     border-color: #fff;
 }
@@ -1325,6 +1429,11 @@ ol.list li:before
 }
 
 .focus\:f-weight-regular:focus
+{
+    font-weight: 400;
+}
+
+.focus-within\:f-weight-regular:focus-within
 {
     font-weight: 400;
 }
@@ -1523,6 +1632,36 @@ ol.list li:before
         border-top-width: .1rem;
         border-bottom-width: .1rem;
     }
+    .focus-within\:border:focus-within
+    {
+        border-width: .1rem;
+    }
+    .focus-within\:border-t:focus-within
+    {
+        border-top-width: .1rem;
+    }
+    .focus-within\:border-r:focus-within
+    {
+        border-right-width: .1rem;
+    }
+    .focus-within\:border-b:focus-within
+    {
+        border-bottom-width: .1rem;
+    }
+    .focus-within\:border-l:focus-within
+    {
+        border-left-width: .1rem;
+    }
+    .focus-within\:border-x:focus-within
+    {
+        border-right-width: .1rem; 
+        border-left-width: .1rem;
+    }
+    .focus-within\:border-y:focus-within
+    {
+        border-top-width: .1rem;
+        border-bottom-width: .1rem;
+    }
     .border-2
     {
         border-width: .2rem;
@@ -1613,6 +1752,36 @@ ol.list li:before
         border-top-width: .2rem;
         border-bottom-width: .2rem;
     }
+    .focus-within\:border-2:focus-within
+    {
+        border-width: .2rem;
+    }
+    .focus-within\:border-t-2:focus-within
+    {
+        border-top-width: .2rem;
+    }
+    .focus-within\:border-r-2:focus-within
+    {
+        border-right-width: .2rem;
+    }
+    .focus-within\:border-b-2:focus-within
+    {
+        border-bottom-width: .2rem;
+    }
+    .focus-within\:border-l-2:focus-within
+    {
+        border-left-width: .2rem;
+    }
+    .focus-within\:border-x-2:focus-within
+    {
+        border-right-width: .2rem; 
+        border-left-width: .2rem;
+    }
+    .focus-within\:border-y-2:focus-within
+    {
+        border-top-width: .2rem;
+        border-bottom-width: .2rem;
+    }
     .border-4
     {
         border-width: .4rem;
@@ -1699,6 +1868,36 @@ ol.list li:before
         border-left-width: .4rem;
     }
     .focus\:border-y-4:focus
+    {
+        border-top-width: .4rem;
+        border-bottom-width: .4rem;
+    }
+    .focus-within\:border-4:focus-within
+    {
+        border-width: .4rem;
+    }
+    .focus-within\:border-t-4:focus-within
+    {
+        border-top-width: .4rem;
+    }
+    .focus-within\:border-r-4:focus-within
+    {
+        border-right-width: .4rem;
+    }
+    .focus-within\:border-b-4:focus-within
+    {
+        border-bottom-width: .4rem;
+    }
+    .focus-within\:border-l-4:focus-within
+    {
+        border-left-width: .4rem;
+    }
+    .focus-within\:border-x-4:focus-within
+    {
+        border-right-width: .4rem; 
+        border-left-width: .4rem;
+    }
+    .focus-within\:border-y-4:focus-within
     {
         border-top-width: .4rem;
         border-bottom-width: .4rem;
@@ -2338,6 +2537,10 @@ ol.list li:before
     {
         background-color: #f5f7f7;
     }
+    .focus-within\:bg-$color-placeholder:focus-within
+    {
+        background-color: #f5f7f7;
+    }
     .bg-inherit
     {
         background-color: inherit;
@@ -2347,6 +2550,10 @@ ol.list li:before
         background-color: inherit;
     }
     .focus\:bg-inherit:focus
+    {
+        background-color: inherit;
+    }
+    .focus-within\:bg-inherit:focus-within
     {
         background-color: inherit;
     }
@@ -2362,6 +2569,10 @@ ol.list li:before
     {
         background-color: transparent;
     }
+    .focus-within\:bg-transparent:focus-within
+    {
+        background-color: transparent;
+    }
     .bg-primary
     {
         background-color: #0b303e;
@@ -2371,6 +2582,10 @@ ol.list li:before
         background-color: #0b303e;
     }
     .focus\:bg-primary:focus
+    {
+        background-color: #0b303e;
+    }
+    .focus-within\:bg-primary:focus-within
     {
         background-color: #0b303e;
     }
@@ -2386,6 +2601,10 @@ ol.list li:before
     {
         background-color: #be9f56;
     }
+    .focus-within\:bg-secondary:focus-within
+    {
+        background-color: #be9f56;
+    }
     .bg-light
     {
         background-color: #f9f5ee;
@@ -2398,6 +2617,10 @@ ol.list li:before
     {
         background-color: #f9f5ee;
     }
+    .focus-within\:bg-light:focus-within
+    {
+        background-color: #f9f5ee;
+    }
     .bg-white
     {
         background-color: #fff;
@@ -2407,6 +2630,10 @@ ol.list li:before
         background-color: #fff;
     }
     .focus\:bg-white:focus
+    {
+        background-color: #fff;
+    }
+    .focus-within\:bg-white:focus-within
     {
         background-color: #fff;
     }
@@ -2675,6 +2902,39 @@ ol.list li:before
     {
         padding-top: 3rem;
         padding-bottom: 3rem;
+    }
+    .p-36
+    {
+        padding-top: 3.6rem;
+        padding-right: 3.6rem;
+        padding-bottom: 3.6rem;
+        padding-left: 3.6rem;
+    }
+    .pt-36
+    {
+        padding-top: 3.6rem;
+    }
+    .pr-36
+    {
+        padding-right: 3.6rem;
+    }
+    .pb-36
+    {
+        padding-bottom: 3.6rem;
+    }
+    .pl-36
+    {
+        padding-left: 3.6rem;
+    }
+    .px-36
+    {
+        padding-right: 3.6rem; 
+        padding-left: 3.6rem;
+    }
+    .py-36
+    {
+        padding-top: 3.6rem;
+        padding-bottom: 3.6rem;
     }
     .p-40
     {
@@ -3171,6 +3431,39 @@ ol.list li:before
     {
         margin-top: 3rem;
         margin-bottom: 3rem;
+    }
+    .m-36
+    {
+        margin-top: 3.6rem;
+        margin-right: 3.6rem;
+        margin-bottom: 3.6rem;
+        margin-left: 3.6rem;
+    }
+    .mt-36
+    {
+        margin-top: 3.6rem;
+    }
+    .mr-36
+    {
+        margin-right: 3.6rem;
+    }
+    .mb-36
+    {
+        margin-bottom: 3.6rem;
+    }
+    .ml-36
+    {
+        margin-left: 3.6rem;
+    }
+    .mx-36
+    {
+        margin-right: 3.6rem; 
+        margin-left: 3.6rem;
+    }
+    .my-36
+    {
+        margin-top: 3.6rem;
+        margin-bottom: 3.6rem;
     }
     .m-40
     {
@@ -3699,6 +3992,47 @@ ol.list li:before
         margin-top: -3rem;
         margin-bottom: -3rem;
     }
+    .-m-36
+    {
+        margin-top: -3.6rem;
+        margin-right: -3.6rem;
+        margin-bottom: -3.6rem;
+        margin-left: -3.6rem;
+    }
+    .-mt-36
+    {
+        margin-top: -3.6rem;
+    }
+    .-mr-36
+    {
+        margin-right: -3.6rem;
+    }
+    .-mb-36
+    {
+        margin-bottom: -3.6rem;
+    }
+    .-ml-36
+    {
+        margin-left: -3.6rem;
+    }
+    .-mx-36
+    {
+        margin-right: -3.6rem; 
+        margin-left: -3.6rem;
+    }
+    .-mx-36[class*='grid-']:first-of-type
+    {
+        margin-top: -3.6rem;
+    }
+    .-mx-36[class*='grid-']:last-of-type
+    {
+        margin-bottom: -3.6rem;
+    }
+    .-my-36
+    {
+        margin-top: -3.6rem;
+        margin-bottom: -3.6rem;
+    }
     .-m-40
     {
         margin-top: -4rem;
@@ -3977,6 +4311,14 @@ ol.list li:before
     {
         box-shadow: 0 1px 3px 0 rgba(11, 48, 62, .1), 0 1px 2px 0 rgba(11, 48, 62, .06);
     }
+    .focus-within\:shadow:focus-within
+    {
+        box-shadow: 0 1px 3px 0 rgba(11, 48, 62, .1), 0 1px 2px 0 rgba(11, 48, 62, .06);
+    }
+    .focus-within\:shadow-parent:focus-within .shadow-child
+    {
+        box-shadow: 0 1px 3px 0 rgba(11, 48, 62, .1), 0 1px 2px 0 rgba(11, 48, 62, .06);
+    }
     .shadow-md
     {
         box-shadow: 0 4px 6px -1px rgba(11, 48, 62, .45), 0 2px 4px -1px rgba(11, 48, 62, .06);
@@ -3998,6 +4340,14 @@ ol.list li:before
         box-shadow: 0 4px 6px -1px rgba(11, 48, 62, .45), 0 2px 4px -1px rgba(11, 48, 62, .06);
     }
     .focus\:shadow-parent-md:focus .shadow-child
+    {
+        box-shadow: 0 4px 6px -1px rgba(11, 48, 62, .45), 0 2px 4px -1px rgba(11, 48, 62, .06);
+    }
+    .focus-within\:shadow-md:focus-within
+    {
+        box-shadow: 0 4px 6px -1px rgba(11, 48, 62, .45), 0 2px 4px -1px rgba(11, 48, 62, .06);
+    }
+    .focus-within\:shadow-parent-md:focus-within .shadow-child
     {
         box-shadow: 0 4px 6px -1px rgba(11, 48, 62, .45), 0 2px 4px -1px rgba(11, 48, 62, .06);
     }
@@ -4025,6 +4375,14 @@ ol.list li:before
     {
         box-shadow: 0 6px 12px 6px rgba(0, 0, 0, .15);
     }
+    .focus-within\:shadow-lg:focus-within
+    {
+        box-shadow: 0 6px 12px 6px rgba(0, 0, 0, .15);
+    }
+    .focus-within\:shadow-parent-lg:focus-within .shadow-child
+    {
+        box-shadow: 0 6px 12px 6px rgba(0, 0, 0, .15);
+    }
     .shadow-none
     {
         box-shadow: none;
@@ -4046,6 +4404,14 @@ ol.list li:before
         box-shadow: none;
     }
     .focus\:shadow-parent-none:focus .shadow-child
+    {
+        box-shadow: none;
+    }
+    .focus-within\:shadow-none:focus-within
+    {
+        box-shadow: none;
+    }
+    .focus-within\:shadow-parent-none:focus-within .shadow-child
     {
         box-shadow: none;
     }
@@ -4720,6 +5086,18 @@ ol.list li:before
         height: auto; 
         max-height: 100%;
     }
+    .icon-15
+    {
+        width: 1.5rem;
+    }
+    .icon-15 svg,
+    .icon-15 img
+    {
+        width: 100%;
+        max-width: 1.5rem;
+        height: auto; 
+        max-height: 100%;
+    }
     .icon-30
     {
         width: 3rem;
@@ -4729,6 +5107,18 @@ ol.list li:before
     {
         width: 100%;
         max-width: 3rem;
+        height: auto; 
+        max-height: 100%;
+    }
+    .icon-40
+    {
+        width: 4rem;
+    }
+    .icon-40 svg,
+    .icon-40 img
+    {
+        width: 100%;
+        max-width: 4rem;
         height: auto; 
         max-height: 100%;
     }
@@ -4866,13 +5256,13 @@ ol.list li:before
     }
     .icon-logo-sm
     {
-        width: 11.1rem;
+        width: 16.66rem;
     }
     .icon-logo-sm svg,
     .icon-logo-sm img
     {
         width: 100%;
-        max-width: 11.1rem;
+        max-width: 16.66rem;
         height: auto; 
         max-height: 100%;
     }
@@ -4948,6 +5338,10 @@ ol.list li:before
     {
         font-weight: 400;
     }
+    .focus-within\:f-weight-regular:focus-within
+    {
+        font-weight: 400;
+    }
     .f-weight-bold
     {
         font-weight: 700;
@@ -4965,6 +5359,10 @@ ol.list li:before
     {
         color: inherit;
     }
+    .focus-within\:f-color-inherit:focus-within
+    {
+        color: inherit;
+    }
     .f-color-default
     {
         color: #6f6f6f;
@@ -4974,6 +5372,10 @@ ol.list li:before
         color: #6f6f6f;
     }
     .focus\:f-color-default:focus
+    {
+        color: #6f6f6f;
+    }
+    .focus-within\:f-color-default:focus-within
     {
         color: #6f6f6f;
     }
@@ -4989,6 +5391,10 @@ ol.list li:before
     {
         color: #0b303e;
     }
+    .focus-within\:f-color-primary:focus-within
+    {
+        color: #0b303e;
+    }
     .f-color-secondary
     {
         color: #be9f56;
@@ -5001,6 +5407,10 @@ ol.list li:before
     {
         color: #be9f56;
     }
+    .focus-within\:f-color-secondary:focus-within
+    {
+        color: #be9f56;
+    }
     .f-color-white
     {
         color: #fff;
@@ -5010,6 +5420,10 @@ ol.list li:before
         color: #fff;
     }
     .focus\:f-color-white:focus
+    {
+        color: #fff;
+    }
+    .focus-within\:f-color-white:focus-within
     {
         color: #fff;
     }
@@ -5028,6 +5442,12 @@ ol.list li:before
     }
     .focus\:overlay-grad-1:focus > *:before,
     .focus\:overlay-grad-1:focus .image-holder:before
+    {
+        background-image: -webkit-linear-gradient(bottom, rgba(2, 0, 0, .7) 0%, rgba(240, 240, 240, .06) 80%, rgba(255, 255, 255, 0) 100%);
+        background-image:         linear-gradient(0deg, rgba(2, 0, 0, .7) 0%, rgba(240, 240, 240, .06) 80%, rgba(255, 255, 255, 0) 100%);
+    }
+    .focus-within\:overlay-grad-1:focus-within > *:before,
+    .focus-within\:overlay-grad-1:focus-within .image-holder:before
     {
         background-image: -webkit-linear-gradient(bottom, rgba(2, 0, 0, .7) 0%, rgba(240, 240, 240, .06) 80%, rgba(255, 255, 255, 0) 100%);
         background-image:         linear-gradient(0deg, rgba(2, 0, 0, .7) 0%, rgba(240, 240, 240, .06) 80%, rgba(255, 255, 255, 0) 100%);
@@ -5242,6 +5662,36 @@ ol.list li:before
         border-top-width: .1rem;
         border-bottom-width: .1rem;
     }
+    .sm\:focus-within\:border:focus-within
+    {
+        border-width: .1rem;
+    }
+    .sm\:focus-within\:border-t:focus-within
+    {
+        border-top-width: .1rem;
+    }
+    .sm\:focus-within\:border-r:focus-within
+    {
+        border-right-width: .1rem;
+    }
+    .sm\:focus-within\:border-b:focus-within
+    {
+        border-bottom-width: .1rem;
+    }
+    .sm\:focus-within\:border-l:focus-within
+    {
+        border-left-width: .1rem;
+    }
+    .sm\:focus-within\:border-x:focus-within
+    {
+        border-right-width: .1rem; 
+        border-left-width: .1rem;
+    }
+    .sm\:focus-within\:border-y:focus-within
+    {
+        border-top-width: .1rem;
+        border-bottom-width: .1rem;
+    }
     .sm\:border-2
     {
         border-width: .2rem;
@@ -5332,6 +5782,36 @@ ol.list li:before
         border-top-width: .2rem;
         border-bottom-width: .2rem;
     }
+    .sm\:focus-within\:border-2:focus-within
+    {
+        border-width: .2rem;
+    }
+    .sm\:focus-within\:border-t-2:focus-within
+    {
+        border-top-width: .2rem;
+    }
+    .sm\:focus-within\:border-r-2:focus-within
+    {
+        border-right-width: .2rem;
+    }
+    .sm\:focus-within\:border-b-2:focus-within
+    {
+        border-bottom-width: .2rem;
+    }
+    .sm\:focus-within\:border-l-2:focus-within
+    {
+        border-left-width: .2rem;
+    }
+    .sm\:focus-within\:border-x-2:focus-within
+    {
+        border-right-width: .2rem; 
+        border-left-width: .2rem;
+    }
+    .sm\:focus-within\:border-y-2:focus-within
+    {
+        border-top-width: .2rem;
+        border-bottom-width: .2rem;
+    }
     .sm\:border-4
     {
         border-width: .4rem;
@@ -5418,6 +5898,36 @@ ol.list li:before
         border-left-width: .4rem;
     }
     .sm\:focus\:border-y-4:focus
+    {
+        border-top-width: .4rem;
+        border-bottom-width: .4rem;
+    }
+    .sm\:focus-within\:border-4:focus-within
+    {
+        border-width: .4rem;
+    }
+    .sm\:focus-within\:border-t-4:focus-within
+    {
+        border-top-width: .4rem;
+    }
+    .sm\:focus-within\:border-r-4:focus-within
+    {
+        border-right-width: .4rem;
+    }
+    .sm\:focus-within\:border-b-4:focus-within
+    {
+        border-bottom-width: .4rem;
+    }
+    .sm\:focus-within\:border-l-4:focus-within
+    {
+        border-left-width: .4rem;
+    }
+    .sm\:focus-within\:border-x-4:focus-within
+    {
+        border-right-width: .4rem; 
+        border-left-width: .4rem;
+    }
+    .sm\:focus-within\:border-y-4:focus-within
     {
         border-top-width: .4rem;
         border-bottom-width: .4rem;
@@ -6057,6 +6567,10 @@ ol.list li:before
     {
         background-color: #f5f7f7;
     }
+    .sm\:focus-within\:bg-$color-placeholder:focus-within
+    {
+        background-color: #f5f7f7;
+    }
     .sm\:bg-inherit
     {
         background-color: inherit;
@@ -6066,6 +6580,10 @@ ol.list li:before
         background-color: inherit;
     }
     .sm\:focus\:bg-inherit:focus
+    {
+        background-color: inherit;
+    }
+    .sm\:focus-within\:bg-inherit:focus-within
     {
         background-color: inherit;
     }
@@ -6081,6 +6599,10 @@ ol.list li:before
     {
         background-color: transparent;
     }
+    .sm\:focus-within\:bg-transparent:focus-within
+    {
+        background-color: transparent;
+    }
     .sm\:bg-primary
     {
         background-color: #0b303e;
@@ -6090,6 +6612,10 @@ ol.list li:before
         background-color: #0b303e;
     }
     .sm\:focus\:bg-primary:focus
+    {
+        background-color: #0b303e;
+    }
+    .sm\:focus-within\:bg-primary:focus-within
     {
         background-color: #0b303e;
     }
@@ -6105,6 +6631,10 @@ ol.list li:before
     {
         background-color: #be9f56;
     }
+    .sm\:focus-within\:bg-secondary:focus-within
+    {
+        background-color: #be9f56;
+    }
     .sm\:bg-light
     {
         background-color: #f9f5ee;
@@ -6117,6 +6647,10 @@ ol.list li:before
     {
         background-color: #f9f5ee;
     }
+    .sm\:focus-within\:bg-light:focus-within
+    {
+        background-color: #f9f5ee;
+    }
     .sm\:bg-white
     {
         background-color: #fff;
@@ -6126,6 +6660,10 @@ ol.list li:before
         background-color: #fff;
     }
     .sm\:focus\:bg-white:focus
+    {
+        background-color: #fff;
+    }
+    .sm\:focus-within\:bg-white:focus-within
     {
         background-color: #fff;
     }
@@ -6394,6 +6932,39 @@ ol.list li:before
     {
         padding-top: 3rem;
         padding-bottom: 3rem;
+    }
+    .sm\:p-36
+    {
+        padding-top: 3.6rem;
+        padding-right: 3.6rem;
+        padding-bottom: 3.6rem;
+        padding-left: 3.6rem;
+    }
+    .sm\:pt-36
+    {
+        padding-top: 3.6rem;
+    }
+    .sm\:pr-36
+    {
+        padding-right: 3.6rem;
+    }
+    .sm\:pb-36
+    {
+        padding-bottom: 3.6rem;
+    }
+    .sm\:pl-36
+    {
+        padding-left: 3.6rem;
+    }
+    .sm\:px-36
+    {
+        padding-right: 3.6rem; 
+        padding-left: 3.6rem;
+    }
+    .sm\:py-36
+    {
+        padding-top: 3.6rem;
+        padding-bottom: 3.6rem;
     }
     .sm\:p-40
     {
@@ -6890,6 +7461,39 @@ ol.list li:before
     {
         margin-top: 3rem;
         margin-bottom: 3rem;
+    }
+    .sm\:m-36
+    {
+        margin-top: 3.6rem;
+        margin-right: 3.6rem;
+        margin-bottom: 3.6rem;
+        margin-left: 3.6rem;
+    }
+    .sm\:mt-36
+    {
+        margin-top: 3.6rem;
+    }
+    .sm\:mr-36
+    {
+        margin-right: 3.6rem;
+    }
+    .sm\:mb-36
+    {
+        margin-bottom: 3.6rem;
+    }
+    .sm\:ml-36
+    {
+        margin-left: 3.6rem;
+    }
+    .sm\:mx-36
+    {
+        margin-right: 3.6rem; 
+        margin-left: 3.6rem;
+    }
+    .sm\:my-36
+    {
+        margin-top: 3.6rem;
+        margin-bottom: 3.6rem;
     }
     .sm\:m-40
     {
@@ -7418,6 +8022,47 @@ ol.list li:before
         margin-top: -3rem;
         margin-bottom: -3rem;
     }
+    .sm\:-m-36
+    {
+        margin-top: -3.6rem;
+        margin-right: -3.6rem;
+        margin-bottom: -3.6rem;
+        margin-left: -3.6rem;
+    }
+    .sm\:-mt-36
+    {
+        margin-top: -3.6rem;
+    }
+    .sm\:-mr-36
+    {
+        margin-right: -3.6rem;
+    }
+    .sm\:-mb-36
+    {
+        margin-bottom: -3.6rem;
+    }
+    .sm\:-ml-36
+    {
+        margin-left: -3.6rem;
+    }
+    .sm\:-mx-36
+    {
+        margin-right: -3.6rem; 
+        margin-left: -3.6rem;
+    }
+    .sm\:-mx-36[class*='grid-']:first-of-type
+    {
+        margin-top: -3.6rem;
+    }
+    .sm\:-mx-36[class*='grid-']:last-of-type
+    {
+        margin-bottom: -3.6rem;
+    }
+    .sm\:-my-36
+    {
+        margin-top: -3.6rem;
+        margin-bottom: -3.6rem;
+    }
     .sm\:-m-40
     {
         margin-top: -4rem;
@@ -7696,6 +8341,14 @@ ol.list li:before
     {
         box-shadow: 0 1px 3px 0 rgba(11, 48, 62, .1), 0 1px 2px 0 rgba(11, 48, 62, .06);
     }
+    .sm\:focus-within\:shadow:focus-within
+    {
+        box-shadow: 0 1px 3px 0 rgba(11, 48, 62, .1), 0 1px 2px 0 rgba(11, 48, 62, .06);
+    }
+    .sm\:focus-within\:shadow-parent:focus-within .shadow-child
+    {
+        box-shadow: 0 1px 3px 0 rgba(11, 48, 62, .1), 0 1px 2px 0 rgba(11, 48, 62, .06);
+    }
     .sm\:shadow-md
     {
         box-shadow: 0 4px 6px -1px rgba(11, 48, 62, .45), 0 2px 4px -1px rgba(11, 48, 62, .06);
@@ -7717,6 +8370,14 @@ ol.list li:before
         box-shadow: 0 4px 6px -1px rgba(11, 48, 62, .45), 0 2px 4px -1px rgba(11, 48, 62, .06);
     }
     .sm\:focus\:shadow-parent-md:focus .shadow-child
+    {
+        box-shadow: 0 4px 6px -1px rgba(11, 48, 62, .45), 0 2px 4px -1px rgba(11, 48, 62, .06);
+    }
+    .sm\:focus-within\:shadow-md:focus-within
+    {
+        box-shadow: 0 4px 6px -1px rgba(11, 48, 62, .45), 0 2px 4px -1px rgba(11, 48, 62, .06);
+    }
+    .sm\:focus-within\:shadow-parent-md:focus-within .shadow-child
     {
         box-shadow: 0 4px 6px -1px rgba(11, 48, 62, .45), 0 2px 4px -1px rgba(11, 48, 62, .06);
     }
@@ -7744,6 +8405,14 @@ ol.list li:before
     {
         box-shadow: 0 6px 12px 6px rgba(0, 0, 0, .15);
     }
+    .sm\:focus-within\:shadow-lg:focus-within
+    {
+        box-shadow: 0 6px 12px 6px rgba(0, 0, 0, .15);
+    }
+    .sm\:focus-within\:shadow-parent-lg:focus-within .shadow-child
+    {
+        box-shadow: 0 6px 12px 6px rgba(0, 0, 0, .15);
+    }
     .sm\:shadow-none
     {
         box-shadow: none;
@@ -7765,6 +8434,14 @@ ol.list li:before
         box-shadow: none;
     }
     .sm\:focus\:shadow-parent-none:focus .shadow-child
+    {
+        box-shadow: none;
+    }
+    .sm\:focus-within\:shadow-none:focus-within
+    {
+        box-shadow: none;
+    }
+    .sm\:focus-within\:shadow-parent-none:focus-within .shadow-child
     {
         box-shadow: none;
     }
@@ -8439,6 +9116,18 @@ ol.list li:before
         height: auto; 
         max-height: 100%;
     }
+    .sm\:icon-15
+    {
+        width: 1.5rem;
+    }
+    .sm\:icon-15 svg,
+    .sm\:icon-15 img
+    {
+        width: 100%;
+        max-width: 1.5rem;
+        height: auto; 
+        max-height: 100%;
+    }
     .sm\:icon-30
     {
         width: 3rem;
@@ -8448,6 +9137,18 @@ ol.list li:before
     {
         width: 100%;
         max-width: 3rem;
+        height: auto; 
+        max-height: 100%;
+    }
+    .sm\:icon-40
+    {
+        width: 4rem;
+    }
+    .sm\:icon-40 svg,
+    .sm\:icon-40 img
+    {
+        width: 100%;
+        max-width: 4rem;
         height: auto; 
         max-height: 100%;
     }
@@ -8585,13 +9286,13 @@ ol.list li:before
     }
     .sm\:icon-logo-sm
     {
-        width: 11.1rem;
+        width: 16.66rem;
     }
     .sm\:icon-logo-sm svg,
     .sm\:icon-logo-sm img
     {
         width: 100%;
-        max-width: 11.1rem;
+        max-width: 16.66rem;
         height: auto; 
         max-height: 100%;
     }
@@ -8667,6 +9368,10 @@ ol.list li:before
     {
         font-weight: 400;
     }
+    .sm\:focus-within\:f-weight-regular:focus-within
+    {
+        font-weight: 400;
+    }
     .sm\:f-weight-bold
     {
         font-weight: 700;
@@ -8684,6 +9389,10 @@ ol.list li:before
     {
         color: inherit;
     }
+    .sm\:focus-within\:f-color-inherit:focus-within
+    {
+        color: inherit;
+    }
     .sm\:f-color-default
     {
         color: #6f6f6f;
@@ -8693,6 +9402,10 @@ ol.list li:before
         color: #6f6f6f;
     }
     .sm\:focus\:f-color-default:focus
+    {
+        color: #6f6f6f;
+    }
+    .sm\:focus-within\:f-color-default:focus-within
     {
         color: #6f6f6f;
     }
@@ -8708,6 +9421,10 @@ ol.list li:before
     {
         color: #0b303e;
     }
+    .sm\:focus-within\:f-color-primary:focus-within
+    {
+        color: #0b303e;
+    }
     .sm\:f-color-secondary
     {
         color: #be9f56;
@@ -8720,6 +9437,10 @@ ol.list li:before
     {
         color: #be9f56;
     }
+    .sm\:focus-within\:f-color-secondary:focus-within
+    {
+        color: #be9f56;
+    }
     .sm\:f-color-white
     {
         color: #fff;
@@ -8729,6 +9450,10 @@ ol.list li:before
         color: #fff;
     }
     .sm\:focus\:f-color-white:focus
+    {
+        color: #fff;
+    }
+    .sm\:focus-within\:f-color-white:focus-within
     {
         color: #fff;
     }
@@ -8747,6 +9472,12 @@ ol.list li:before
     }
     .sm\:focus\:overlay-grad-1:focus > *:before,
     .sm\:focus\:overlay-grad-1:focus .image-holder:before
+    {
+        background-image: -webkit-linear-gradient(bottom, rgba(2, 0, 0, .7) 0%, rgba(240, 240, 240, .06) 80%, rgba(255, 255, 255, 0) 100%);
+        background-image:         linear-gradient(0deg, rgba(2, 0, 0, .7) 0%, rgba(240, 240, 240, .06) 80%, rgba(255, 255, 255, 0) 100%);
+    }
+    .sm\:focus-within\:overlay-grad-1:focus-within > *:before,
+    .sm\:focus-within\:overlay-grad-1:focus-within .image-holder:before
     {
         background-image: -webkit-linear-gradient(bottom, rgba(2, 0, 0, .7) 0%, rgba(240, 240, 240, .06) 80%, rgba(255, 255, 255, 0) 100%);
         background-image:         linear-gradient(0deg, rgba(2, 0, 0, .7) 0%, rgba(240, 240, 240, .06) 80%, rgba(255, 255, 255, 0) 100%);
@@ -8961,6 +9692,36 @@ ol.list li:before
         border-top-width: .1rem;
         border-bottom-width: .1rem;
     }
+    .md\:focus-within\:border:focus-within
+    {
+        border-width: .1rem;
+    }
+    .md\:focus-within\:border-t:focus-within
+    {
+        border-top-width: .1rem;
+    }
+    .md\:focus-within\:border-r:focus-within
+    {
+        border-right-width: .1rem;
+    }
+    .md\:focus-within\:border-b:focus-within
+    {
+        border-bottom-width: .1rem;
+    }
+    .md\:focus-within\:border-l:focus-within
+    {
+        border-left-width: .1rem;
+    }
+    .md\:focus-within\:border-x:focus-within
+    {
+        border-right-width: .1rem; 
+        border-left-width: .1rem;
+    }
+    .md\:focus-within\:border-y:focus-within
+    {
+        border-top-width: .1rem;
+        border-bottom-width: .1rem;
+    }
     .md\:border-2
     {
         border-width: .2rem;
@@ -9051,6 +9812,36 @@ ol.list li:before
         border-top-width: .2rem;
         border-bottom-width: .2rem;
     }
+    .md\:focus-within\:border-2:focus-within
+    {
+        border-width: .2rem;
+    }
+    .md\:focus-within\:border-t-2:focus-within
+    {
+        border-top-width: .2rem;
+    }
+    .md\:focus-within\:border-r-2:focus-within
+    {
+        border-right-width: .2rem;
+    }
+    .md\:focus-within\:border-b-2:focus-within
+    {
+        border-bottom-width: .2rem;
+    }
+    .md\:focus-within\:border-l-2:focus-within
+    {
+        border-left-width: .2rem;
+    }
+    .md\:focus-within\:border-x-2:focus-within
+    {
+        border-right-width: .2rem; 
+        border-left-width: .2rem;
+    }
+    .md\:focus-within\:border-y-2:focus-within
+    {
+        border-top-width: .2rem;
+        border-bottom-width: .2rem;
+    }
     .md\:border-4
     {
         border-width: .4rem;
@@ -9137,6 +9928,36 @@ ol.list li:before
         border-left-width: .4rem;
     }
     .md\:focus\:border-y-4:focus
+    {
+        border-top-width: .4rem;
+        border-bottom-width: .4rem;
+    }
+    .md\:focus-within\:border-4:focus-within
+    {
+        border-width: .4rem;
+    }
+    .md\:focus-within\:border-t-4:focus-within
+    {
+        border-top-width: .4rem;
+    }
+    .md\:focus-within\:border-r-4:focus-within
+    {
+        border-right-width: .4rem;
+    }
+    .md\:focus-within\:border-b-4:focus-within
+    {
+        border-bottom-width: .4rem;
+    }
+    .md\:focus-within\:border-l-4:focus-within
+    {
+        border-left-width: .4rem;
+    }
+    .md\:focus-within\:border-x-4:focus-within
+    {
+        border-right-width: .4rem; 
+        border-left-width: .4rem;
+    }
+    .md\:focus-within\:border-y-4:focus-within
     {
         border-top-width: .4rem;
         border-bottom-width: .4rem;
@@ -9776,6 +10597,10 @@ ol.list li:before
     {
         background-color: #f5f7f7;
     }
+    .md\:focus-within\:bg-$color-placeholder:focus-within
+    {
+        background-color: #f5f7f7;
+    }
     .md\:bg-inherit
     {
         background-color: inherit;
@@ -9785,6 +10610,10 @@ ol.list li:before
         background-color: inherit;
     }
     .md\:focus\:bg-inherit:focus
+    {
+        background-color: inherit;
+    }
+    .md\:focus-within\:bg-inherit:focus-within
     {
         background-color: inherit;
     }
@@ -9800,6 +10629,10 @@ ol.list li:before
     {
         background-color: transparent;
     }
+    .md\:focus-within\:bg-transparent:focus-within
+    {
+        background-color: transparent;
+    }
     .md\:bg-primary
     {
         background-color: #0b303e;
@@ -9809,6 +10642,10 @@ ol.list li:before
         background-color: #0b303e;
     }
     .md\:focus\:bg-primary:focus
+    {
+        background-color: #0b303e;
+    }
+    .md\:focus-within\:bg-primary:focus-within
     {
         background-color: #0b303e;
     }
@@ -9824,6 +10661,10 @@ ol.list li:before
     {
         background-color: #be9f56;
     }
+    .md\:focus-within\:bg-secondary:focus-within
+    {
+        background-color: #be9f56;
+    }
     .md\:bg-light
     {
         background-color: #f9f5ee;
@@ -9836,6 +10677,10 @@ ol.list li:before
     {
         background-color: #f9f5ee;
     }
+    .md\:focus-within\:bg-light:focus-within
+    {
+        background-color: #f9f5ee;
+    }
     .md\:bg-white
     {
         background-color: #fff;
@@ -9845,6 +10690,10 @@ ol.list li:before
         background-color: #fff;
     }
     .md\:focus\:bg-white:focus
+    {
+        background-color: #fff;
+    }
+    .md\:focus-within\:bg-white:focus-within
     {
         background-color: #fff;
     }
@@ -10113,6 +10962,39 @@ ol.list li:before
     {
         padding-top: 3rem;
         padding-bottom: 3rem;
+    }
+    .md\:p-36
+    {
+        padding-top: 3.6rem;
+        padding-right: 3.6rem;
+        padding-bottom: 3.6rem;
+        padding-left: 3.6rem;
+    }
+    .md\:pt-36
+    {
+        padding-top: 3.6rem;
+    }
+    .md\:pr-36
+    {
+        padding-right: 3.6rem;
+    }
+    .md\:pb-36
+    {
+        padding-bottom: 3.6rem;
+    }
+    .md\:pl-36
+    {
+        padding-left: 3.6rem;
+    }
+    .md\:px-36
+    {
+        padding-right: 3.6rem; 
+        padding-left: 3.6rem;
+    }
+    .md\:py-36
+    {
+        padding-top: 3.6rem;
+        padding-bottom: 3.6rem;
     }
     .md\:p-40
     {
@@ -10609,6 +11491,39 @@ ol.list li:before
     {
         margin-top: 3rem;
         margin-bottom: 3rem;
+    }
+    .md\:m-36
+    {
+        margin-top: 3.6rem;
+        margin-right: 3.6rem;
+        margin-bottom: 3.6rem;
+        margin-left: 3.6rem;
+    }
+    .md\:mt-36
+    {
+        margin-top: 3.6rem;
+    }
+    .md\:mr-36
+    {
+        margin-right: 3.6rem;
+    }
+    .md\:mb-36
+    {
+        margin-bottom: 3.6rem;
+    }
+    .md\:ml-36
+    {
+        margin-left: 3.6rem;
+    }
+    .md\:mx-36
+    {
+        margin-right: 3.6rem; 
+        margin-left: 3.6rem;
+    }
+    .md\:my-36
+    {
+        margin-top: 3.6rem;
+        margin-bottom: 3.6rem;
     }
     .md\:m-40
     {
@@ -11137,6 +12052,47 @@ ol.list li:before
         margin-top: -3rem;
         margin-bottom: -3rem;
     }
+    .md\:-m-36
+    {
+        margin-top: -3.6rem;
+        margin-right: -3.6rem;
+        margin-bottom: -3.6rem;
+        margin-left: -3.6rem;
+    }
+    .md\:-mt-36
+    {
+        margin-top: -3.6rem;
+    }
+    .md\:-mr-36
+    {
+        margin-right: -3.6rem;
+    }
+    .md\:-mb-36
+    {
+        margin-bottom: -3.6rem;
+    }
+    .md\:-ml-36
+    {
+        margin-left: -3.6rem;
+    }
+    .md\:-mx-36
+    {
+        margin-right: -3.6rem; 
+        margin-left: -3.6rem;
+    }
+    .md\:-mx-36[class*='grid-']:first-of-type
+    {
+        margin-top: -3.6rem;
+    }
+    .md\:-mx-36[class*='grid-']:last-of-type
+    {
+        margin-bottom: -3.6rem;
+    }
+    .md\:-my-36
+    {
+        margin-top: -3.6rem;
+        margin-bottom: -3.6rem;
+    }
     .md\:-m-40
     {
         margin-top: -4rem;
@@ -11415,6 +12371,14 @@ ol.list li:before
     {
         box-shadow: 0 1px 3px 0 rgba(11, 48, 62, .1), 0 1px 2px 0 rgba(11, 48, 62, .06);
     }
+    .md\:focus-within\:shadow:focus-within
+    {
+        box-shadow: 0 1px 3px 0 rgba(11, 48, 62, .1), 0 1px 2px 0 rgba(11, 48, 62, .06);
+    }
+    .md\:focus-within\:shadow-parent:focus-within .shadow-child
+    {
+        box-shadow: 0 1px 3px 0 rgba(11, 48, 62, .1), 0 1px 2px 0 rgba(11, 48, 62, .06);
+    }
     .md\:shadow-md
     {
         box-shadow: 0 4px 6px -1px rgba(11, 48, 62, .45), 0 2px 4px -1px rgba(11, 48, 62, .06);
@@ -11436,6 +12400,14 @@ ol.list li:before
         box-shadow: 0 4px 6px -1px rgba(11, 48, 62, .45), 0 2px 4px -1px rgba(11, 48, 62, .06);
     }
     .md\:focus\:shadow-parent-md:focus .shadow-child
+    {
+        box-shadow: 0 4px 6px -1px rgba(11, 48, 62, .45), 0 2px 4px -1px rgba(11, 48, 62, .06);
+    }
+    .md\:focus-within\:shadow-md:focus-within
+    {
+        box-shadow: 0 4px 6px -1px rgba(11, 48, 62, .45), 0 2px 4px -1px rgba(11, 48, 62, .06);
+    }
+    .md\:focus-within\:shadow-parent-md:focus-within .shadow-child
     {
         box-shadow: 0 4px 6px -1px rgba(11, 48, 62, .45), 0 2px 4px -1px rgba(11, 48, 62, .06);
     }
@@ -11463,6 +12435,14 @@ ol.list li:before
     {
         box-shadow: 0 6px 12px 6px rgba(0, 0, 0, .15);
     }
+    .md\:focus-within\:shadow-lg:focus-within
+    {
+        box-shadow: 0 6px 12px 6px rgba(0, 0, 0, .15);
+    }
+    .md\:focus-within\:shadow-parent-lg:focus-within .shadow-child
+    {
+        box-shadow: 0 6px 12px 6px rgba(0, 0, 0, .15);
+    }
     .md\:shadow-none
     {
         box-shadow: none;
@@ -11484,6 +12464,14 @@ ol.list li:before
         box-shadow: none;
     }
     .md\:focus\:shadow-parent-none:focus .shadow-child
+    {
+        box-shadow: none;
+    }
+    .md\:focus-within\:shadow-none:focus-within
+    {
+        box-shadow: none;
+    }
+    .md\:focus-within\:shadow-parent-none:focus-within .shadow-child
     {
         box-shadow: none;
     }
@@ -12158,6 +13146,18 @@ ol.list li:before
         height: auto; 
         max-height: 100%;
     }
+    .md\:icon-15
+    {
+        width: 1.5rem;
+    }
+    .md\:icon-15 svg,
+    .md\:icon-15 img
+    {
+        width: 100%;
+        max-width: 1.5rem;
+        height: auto; 
+        max-height: 100%;
+    }
     .md\:icon-30
     {
         width: 3rem;
@@ -12167,6 +13167,18 @@ ol.list li:before
     {
         width: 100%;
         max-width: 3rem;
+        height: auto; 
+        max-height: 100%;
+    }
+    .md\:icon-40
+    {
+        width: 4rem;
+    }
+    .md\:icon-40 svg,
+    .md\:icon-40 img
+    {
+        width: 100%;
+        max-width: 4rem;
         height: auto; 
         max-height: 100%;
     }
@@ -12304,13 +13316,13 @@ ol.list li:before
     }
     .md\:icon-logo-sm
     {
-        width: 11.1rem;
+        width: 16.66rem;
     }
     .md\:icon-logo-sm svg,
     .md\:icon-logo-sm img
     {
         width: 100%;
-        max-width: 11.1rem;
+        max-width: 16.66rem;
         height: auto; 
         max-height: 100%;
     }
@@ -12386,6 +13398,10 @@ ol.list li:before
     {
         font-weight: 400;
     }
+    .md\:focus-within\:f-weight-regular:focus-within
+    {
+        font-weight: 400;
+    }
     .md\:f-weight-bold
     {
         font-weight: 700;
@@ -12403,6 +13419,10 @@ ol.list li:before
     {
         color: inherit;
     }
+    .md\:focus-within\:f-color-inherit:focus-within
+    {
+        color: inherit;
+    }
     .md\:f-color-default
     {
         color: #6f6f6f;
@@ -12412,6 +13432,10 @@ ol.list li:before
         color: #6f6f6f;
     }
     .md\:focus\:f-color-default:focus
+    {
+        color: #6f6f6f;
+    }
+    .md\:focus-within\:f-color-default:focus-within
     {
         color: #6f6f6f;
     }
@@ -12427,6 +13451,10 @@ ol.list li:before
     {
         color: #0b303e;
     }
+    .md\:focus-within\:f-color-primary:focus-within
+    {
+        color: #0b303e;
+    }
     .md\:f-color-secondary
     {
         color: #be9f56;
@@ -12439,6 +13467,10 @@ ol.list li:before
     {
         color: #be9f56;
     }
+    .md\:focus-within\:f-color-secondary:focus-within
+    {
+        color: #be9f56;
+    }
     .md\:f-color-white
     {
         color: #fff;
@@ -12448,6 +13480,10 @@ ol.list li:before
         color: #fff;
     }
     .md\:focus\:f-color-white:focus
+    {
+        color: #fff;
+    }
+    .md\:focus-within\:f-color-white:focus-within
     {
         color: #fff;
     }
@@ -12466,6 +13502,12 @@ ol.list li:before
     }
     .md\:focus\:overlay-grad-1:focus > *:before,
     .md\:focus\:overlay-grad-1:focus .image-holder:before
+    {
+        background-image: -webkit-linear-gradient(bottom, rgba(2, 0, 0, .7) 0%, rgba(240, 240, 240, .06) 80%, rgba(255, 255, 255, 0) 100%);
+        background-image:         linear-gradient(0deg, rgba(2, 0, 0, .7) 0%, rgba(240, 240, 240, .06) 80%, rgba(255, 255, 255, 0) 100%);
+    }
+    .md\:focus-within\:overlay-grad-1:focus-within > *:before,
+    .md\:focus-within\:overlay-grad-1:focus-within .image-holder:before
     {
         background-image: -webkit-linear-gradient(bottom, rgba(2, 0, 0, .7) 0%, rgba(240, 240, 240, .06) 80%, rgba(255, 255, 255, 0) 100%);
         background-image:         linear-gradient(0deg, rgba(2, 0, 0, .7) 0%, rgba(240, 240, 240, .06) 80%, rgba(255, 255, 255, 0) 100%);
@@ -12680,6 +13722,36 @@ ol.list li:before
         border-top-width: .1rem;
         border-bottom-width: .1rem;
     }
+    .lg\:focus-within\:border:focus-within
+    {
+        border-width: .1rem;
+    }
+    .lg\:focus-within\:border-t:focus-within
+    {
+        border-top-width: .1rem;
+    }
+    .lg\:focus-within\:border-r:focus-within
+    {
+        border-right-width: .1rem;
+    }
+    .lg\:focus-within\:border-b:focus-within
+    {
+        border-bottom-width: .1rem;
+    }
+    .lg\:focus-within\:border-l:focus-within
+    {
+        border-left-width: .1rem;
+    }
+    .lg\:focus-within\:border-x:focus-within
+    {
+        border-right-width: .1rem; 
+        border-left-width: .1rem;
+    }
+    .lg\:focus-within\:border-y:focus-within
+    {
+        border-top-width: .1rem;
+        border-bottom-width: .1rem;
+    }
     .lg\:border-2
     {
         border-width: .2rem;
@@ -12770,6 +13842,36 @@ ol.list li:before
         border-top-width: .2rem;
         border-bottom-width: .2rem;
     }
+    .lg\:focus-within\:border-2:focus-within
+    {
+        border-width: .2rem;
+    }
+    .lg\:focus-within\:border-t-2:focus-within
+    {
+        border-top-width: .2rem;
+    }
+    .lg\:focus-within\:border-r-2:focus-within
+    {
+        border-right-width: .2rem;
+    }
+    .lg\:focus-within\:border-b-2:focus-within
+    {
+        border-bottom-width: .2rem;
+    }
+    .lg\:focus-within\:border-l-2:focus-within
+    {
+        border-left-width: .2rem;
+    }
+    .lg\:focus-within\:border-x-2:focus-within
+    {
+        border-right-width: .2rem; 
+        border-left-width: .2rem;
+    }
+    .lg\:focus-within\:border-y-2:focus-within
+    {
+        border-top-width: .2rem;
+        border-bottom-width: .2rem;
+    }
     .lg\:border-4
     {
         border-width: .4rem;
@@ -12856,6 +13958,36 @@ ol.list li:before
         border-left-width: .4rem;
     }
     .lg\:focus\:border-y-4:focus
+    {
+        border-top-width: .4rem;
+        border-bottom-width: .4rem;
+    }
+    .lg\:focus-within\:border-4:focus-within
+    {
+        border-width: .4rem;
+    }
+    .lg\:focus-within\:border-t-4:focus-within
+    {
+        border-top-width: .4rem;
+    }
+    .lg\:focus-within\:border-r-4:focus-within
+    {
+        border-right-width: .4rem;
+    }
+    .lg\:focus-within\:border-b-4:focus-within
+    {
+        border-bottom-width: .4rem;
+    }
+    .lg\:focus-within\:border-l-4:focus-within
+    {
+        border-left-width: .4rem;
+    }
+    .lg\:focus-within\:border-x-4:focus-within
+    {
+        border-right-width: .4rem; 
+        border-left-width: .4rem;
+    }
+    .lg\:focus-within\:border-y-4:focus-within
     {
         border-top-width: .4rem;
         border-bottom-width: .4rem;
@@ -13495,6 +14627,10 @@ ol.list li:before
     {
         background-color: #f5f7f7;
     }
+    .lg\:focus-within\:bg-$color-placeholder:focus-within
+    {
+        background-color: #f5f7f7;
+    }
     .lg\:bg-inherit
     {
         background-color: inherit;
@@ -13504,6 +14640,10 @@ ol.list li:before
         background-color: inherit;
     }
     .lg\:focus\:bg-inherit:focus
+    {
+        background-color: inherit;
+    }
+    .lg\:focus-within\:bg-inherit:focus-within
     {
         background-color: inherit;
     }
@@ -13519,6 +14659,10 @@ ol.list li:before
     {
         background-color: transparent;
     }
+    .lg\:focus-within\:bg-transparent:focus-within
+    {
+        background-color: transparent;
+    }
     .lg\:bg-primary
     {
         background-color: #0b303e;
@@ -13528,6 +14672,10 @@ ol.list li:before
         background-color: #0b303e;
     }
     .lg\:focus\:bg-primary:focus
+    {
+        background-color: #0b303e;
+    }
+    .lg\:focus-within\:bg-primary:focus-within
     {
         background-color: #0b303e;
     }
@@ -13543,6 +14691,10 @@ ol.list li:before
     {
         background-color: #be9f56;
     }
+    .lg\:focus-within\:bg-secondary:focus-within
+    {
+        background-color: #be9f56;
+    }
     .lg\:bg-light
     {
         background-color: #f9f5ee;
@@ -13555,6 +14707,10 @@ ol.list li:before
     {
         background-color: #f9f5ee;
     }
+    .lg\:focus-within\:bg-light:focus-within
+    {
+        background-color: #f9f5ee;
+    }
     .lg\:bg-white
     {
         background-color: #fff;
@@ -13564,6 +14720,10 @@ ol.list li:before
         background-color: #fff;
     }
     .lg\:focus\:bg-white:focus
+    {
+        background-color: #fff;
+    }
+    .lg\:focus-within\:bg-white:focus-within
     {
         background-color: #fff;
     }
@@ -13832,6 +14992,39 @@ ol.list li:before
     {
         padding-top: 3rem;
         padding-bottom: 3rem;
+    }
+    .lg\:p-36
+    {
+        padding-top: 3.6rem;
+        padding-right: 3.6rem;
+        padding-bottom: 3.6rem;
+        padding-left: 3.6rem;
+    }
+    .lg\:pt-36
+    {
+        padding-top: 3.6rem;
+    }
+    .lg\:pr-36
+    {
+        padding-right: 3.6rem;
+    }
+    .lg\:pb-36
+    {
+        padding-bottom: 3.6rem;
+    }
+    .lg\:pl-36
+    {
+        padding-left: 3.6rem;
+    }
+    .lg\:px-36
+    {
+        padding-right: 3.6rem; 
+        padding-left: 3.6rem;
+    }
+    .lg\:py-36
+    {
+        padding-top: 3.6rem;
+        padding-bottom: 3.6rem;
     }
     .lg\:p-40
     {
@@ -14328,6 +15521,39 @@ ol.list li:before
     {
         margin-top: 3rem;
         margin-bottom: 3rem;
+    }
+    .lg\:m-36
+    {
+        margin-top: 3.6rem;
+        margin-right: 3.6rem;
+        margin-bottom: 3.6rem;
+        margin-left: 3.6rem;
+    }
+    .lg\:mt-36
+    {
+        margin-top: 3.6rem;
+    }
+    .lg\:mr-36
+    {
+        margin-right: 3.6rem;
+    }
+    .lg\:mb-36
+    {
+        margin-bottom: 3.6rem;
+    }
+    .lg\:ml-36
+    {
+        margin-left: 3.6rem;
+    }
+    .lg\:mx-36
+    {
+        margin-right: 3.6rem; 
+        margin-left: 3.6rem;
+    }
+    .lg\:my-36
+    {
+        margin-top: 3.6rem;
+        margin-bottom: 3.6rem;
     }
     .lg\:m-40
     {
@@ -14856,6 +16082,47 @@ ol.list li:before
         margin-top: -3rem;
         margin-bottom: -3rem;
     }
+    .lg\:-m-36
+    {
+        margin-top: -3.6rem;
+        margin-right: -3.6rem;
+        margin-bottom: -3.6rem;
+        margin-left: -3.6rem;
+    }
+    .lg\:-mt-36
+    {
+        margin-top: -3.6rem;
+    }
+    .lg\:-mr-36
+    {
+        margin-right: -3.6rem;
+    }
+    .lg\:-mb-36
+    {
+        margin-bottom: -3.6rem;
+    }
+    .lg\:-ml-36
+    {
+        margin-left: -3.6rem;
+    }
+    .lg\:-mx-36
+    {
+        margin-right: -3.6rem; 
+        margin-left: -3.6rem;
+    }
+    .lg\:-mx-36[class*='grid-']:first-of-type
+    {
+        margin-top: -3.6rem;
+    }
+    .lg\:-mx-36[class*='grid-']:last-of-type
+    {
+        margin-bottom: -3.6rem;
+    }
+    .lg\:-my-36
+    {
+        margin-top: -3.6rem;
+        margin-bottom: -3.6rem;
+    }
     .lg\:-m-40
     {
         margin-top: -4rem;
@@ -15134,6 +16401,14 @@ ol.list li:before
     {
         box-shadow: 0 1px 3px 0 rgba(11, 48, 62, .1), 0 1px 2px 0 rgba(11, 48, 62, .06);
     }
+    .lg\:focus-within\:shadow:focus-within
+    {
+        box-shadow: 0 1px 3px 0 rgba(11, 48, 62, .1), 0 1px 2px 0 rgba(11, 48, 62, .06);
+    }
+    .lg\:focus-within\:shadow-parent:focus-within .shadow-child
+    {
+        box-shadow: 0 1px 3px 0 rgba(11, 48, 62, .1), 0 1px 2px 0 rgba(11, 48, 62, .06);
+    }
     .lg\:shadow-md
     {
         box-shadow: 0 4px 6px -1px rgba(11, 48, 62, .45), 0 2px 4px -1px rgba(11, 48, 62, .06);
@@ -15155,6 +16430,14 @@ ol.list li:before
         box-shadow: 0 4px 6px -1px rgba(11, 48, 62, .45), 0 2px 4px -1px rgba(11, 48, 62, .06);
     }
     .lg\:focus\:shadow-parent-md:focus .shadow-child
+    {
+        box-shadow: 0 4px 6px -1px rgba(11, 48, 62, .45), 0 2px 4px -1px rgba(11, 48, 62, .06);
+    }
+    .lg\:focus-within\:shadow-md:focus-within
+    {
+        box-shadow: 0 4px 6px -1px rgba(11, 48, 62, .45), 0 2px 4px -1px rgba(11, 48, 62, .06);
+    }
+    .lg\:focus-within\:shadow-parent-md:focus-within .shadow-child
     {
         box-shadow: 0 4px 6px -1px rgba(11, 48, 62, .45), 0 2px 4px -1px rgba(11, 48, 62, .06);
     }
@@ -15182,6 +16465,14 @@ ol.list li:before
     {
         box-shadow: 0 6px 12px 6px rgba(0, 0, 0, .15);
     }
+    .lg\:focus-within\:shadow-lg:focus-within
+    {
+        box-shadow: 0 6px 12px 6px rgba(0, 0, 0, .15);
+    }
+    .lg\:focus-within\:shadow-parent-lg:focus-within .shadow-child
+    {
+        box-shadow: 0 6px 12px 6px rgba(0, 0, 0, .15);
+    }
     .lg\:shadow-none
     {
         box-shadow: none;
@@ -15203,6 +16494,14 @@ ol.list li:before
         box-shadow: none;
     }
     .lg\:focus\:shadow-parent-none:focus .shadow-child
+    {
+        box-shadow: none;
+    }
+    .lg\:focus-within\:shadow-none:focus-within
+    {
+        box-shadow: none;
+    }
+    .lg\:focus-within\:shadow-parent-none:focus-within .shadow-child
     {
         box-shadow: none;
     }
@@ -15877,6 +17176,18 @@ ol.list li:before
         height: auto; 
         max-height: 100%;
     }
+    .lg\:icon-15
+    {
+        width: 1.5rem;
+    }
+    .lg\:icon-15 svg,
+    .lg\:icon-15 img
+    {
+        width: 100%;
+        max-width: 1.5rem;
+        height: auto; 
+        max-height: 100%;
+    }
     .lg\:icon-30
     {
         width: 3rem;
@@ -15886,6 +17197,18 @@ ol.list li:before
     {
         width: 100%;
         max-width: 3rem;
+        height: auto; 
+        max-height: 100%;
+    }
+    .lg\:icon-40
+    {
+        width: 4rem;
+    }
+    .lg\:icon-40 svg,
+    .lg\:icon-40 img
+    {
+        width: 100%;
+        max-width: 4rem;
         height: auto; 
         max-height: 100%;
     }
@@ -16023,13 +17346,13 @@ ol.list li:before
     }
     .lg\:icon-logo-sm
     {
-        width: 11.1rem;
+        width: 16.66rem;
     }
     .lg\:icon-logo-sm svg,
     .lg\:icon-logo-sm img
     {
         width: 100%;
-        max-width: 11.1rem;
+        max-width: 16.66rem;
         height: auto; 
         max-height: 100%;
     }
@@ -16105,6 +17428,10 @@ ol.list li:before
     {
         font-weight: 400;
     }
+    .lg\:focus-within\:f-weight-regular:focus-within
+    {
+        font-weight: 400;
+    }
     .lg\:f-weight-bold
     {
         font-weight: 700;
@@ -16122,6 +17449,10 @@ ol.list li:before
     {
         color: inherit;
     }
+    .lg\:focus-within\:f-color-inherit:focus-within
+    {
+        color: inherit;
+    }
     .lg\:f-color-default
     {
         color: #6f6f6f;
@@ -16131,6 +17462,10 @@ ol.list li:before
         color: #6f6f6f;
     }
     .lg\:focus\:f-color-default:focus
+    {
+        color: #6f6f6f;
+    }
+    .lg\:focus-within\:f-color-default:focus-within
     {
         color: #6f6f6f;
     }
@@ -16146,6 +17481,10 @@ ol.list li:before
     {
         color: #0b303e;
     }
+    .lg\:focus-within\:f-color-primary:focus-within
+    {
+        color: #0b303e;
+    }
     .lg\:f-color-secondary
     {
         color: #be9f56;
@@ -16158,6 +17497,10 @@ ol.list li:before
     {
         color: #be9f56;
     }
+    .lg\:focus-within\:f-color-secondary:focus-within
+    {
+        color: #be9f56;
+    }
     .lg\:f-color-white
     {
         color: #fff;
@@ -16167,6 +17510,10 @@ ol.list li:before
         color: #fff;
     }
     .lg\:focus\:f-color-white:focus
+    {
+        color: #fff;
+    }
+    .lg\:focus-within\:f-color-white:focus-within
     {
         color: #fff;
     }
@@ -16185,6 +17532,12 @@ ol.list li:before
     }
     .lg\:focus\:overlay-grad-1:focus > *:before,
     .lg\:focus\:overlay-grad-1:focus .image-holder:before
+    {
+        background-image: -webkit-linear-gradient(bottom, rgba(2, 0, 0, .7) 0%, rgba(240, 240, 240, .06) 80%, rgba(255, 255, 255, 0) 100%);
+        background-image:         linear-gradient(0deg, rgba(2, 0, 0, .7) 0%, rgba(240, 240, 240, .06) 80%, rgba(255, 255, 255, 0) 100%);
+    }
+    .lg\:focus-within\:overlay-grad-1:focus-within > *:before,
+    .lg\:focus-within\:overlay-grad-1:focus-within .image-holder:before
     {
         background-image: -webkit-linear-gradient(bottom, rgba(2, 0, 0, .7) 0%, rgba(240, 240, 240, .06) 80%, rgba(255, 255, 255, 0) 100%);
         background-image:         linear-gradient(0deg, rgba(2, 0, 0, .7) 0%, rgba(240, 240, 240, .06) 80%, rgba(255, 255, 255, 0) 100%);
@@ -16399,6 +17752,36 @@ ol.list li:before
         border-top-width: .1rem;
         border-bottom-width: .1rem;
     }
+    .xl\:focus-within\:border:focus-within
+    {
+        border-width: .1rem;
+    }
+    .xl\:focus-within\:border-t:focus-within
+    {
+        border-top-width: .1rem;
+    }
+    .xl\:focus-within\:border-r:focus-within
+    {
+        border-right-width: .1rem;
+    }
+    .xl\:focus-within\:border-b:focus-within
+    {
+        border-bottom-width: .1rem;
+    }
+    .xl\:focus-within\:border-l:focus-within
+    {
+        border-left-width: .1rem;
+    }
+    .xl\:focus-within\:border-x:focus-within
+    {
+        border-right-width: .1rem; 
+        border-left-width: .1rem;
+    }
+    .xl\:focus-within\:border-y:focus-within
+    {
+        border-top-width: .1rem;
+        border-bottom-width: .1rem;
+    }
     .xl\:border-2
     {
         border-width: .2rem;
@@ -16489,6 +17872,36 @@ ol.list li:before
         border-top-width: .2rem;
         border-bottom-width: .2rem;
     }
+    .xl\:focus-within\:border-2:focus-within
+    {
+        border-width: .2rem;
+    }
+    .xl\:focus-within\:border-t-2:focus-within
+    {
+        border-top-width: .2rem;
+    }
+    .xl\:focus-within\:border-r-2:focus-within
+    {
+        border-right-width: .2rem;
+    }
+    .xl\:focus-within\:border-b-2:focus-within
+    {
+        border-bottom-width: .2rem;
+    }
+    .xl\:focus-within\:border-l-2:focus-within
+    {
+        border-left-width: .2rem;
+    }
+    .xl\:focus-within\:border-x-2:focus-within
+    {
+        border-right-width: .2rem; 
+        border-left-width: .2rem;
+    }
+    .xl\:focus-within\:border-y-2:focus-within
+    {
+        border-top-width: .2rem;
+        border-bottom-width: .2rem;
+    }
     .xl\:border-4
     {
         border-width: .4rem;
@@ -16575,6 +17988,36 @@ ol.list li:before
         border-left-width: .4rem;
     }
     .xl\:focus\:border-y-4:focus
+    {
+        border-top-width: .4rem;
+        border-bottom-width: .4rem;
+    }
+    .xl\:focus-within\:border-4:focus-within
+    {
+        border-width: .4rem;
+    }
+    .xl\:focus-within\:border-t-4:focus-within
+    {
+        border-top-width: .4rem;
+    }
+    .xl\:focus-within\:border-r-4:focus-within
+    {
+        border-right-width: .4rem;
+    }
+    .xl\:focus-within\:border-b-4:focus-within
+    {
+        border-bottom-width: .4rem;
+    }
+    .xl\:focus-within\:border-l-4:focus-within
+    {
+        border-left-width: .4rem;
+    }
+    .xl\:focus-within\:border-x-4:focus-within
+    {
+        border-right-width: .4rem; 
+        border-left-width: .4rem;
+    }
+    .xl\:focus-within\:border-y-4:focus-within
     {
         border-top-width: .4rem;
         border-bottom-width: .4rem;
@@ -17214,6 +18657,10 @@ ol.list li:before
     {
         background-color: #f5f7f7;
     }
+    .xl\:focus-within\:bg-$color-placeholder:focus-within
+    {
+        background-color: #f5f7f7;
+    }
     .xl\:bg-inherit
     {
         background-color: inherit;
@@ -17223,6 +18670,10 @@ ol.list li:before
         background-color: inherit;
     }
     .xl\:focus\:bg-inherit:focus
+    {
+        background-color: inherit;
+    }
+    .xl\:focus-within\:bg-inherit:focus-within
     {
         background-color: inherit;
     }
@@ -17238,6 +18689,10 @@ ol.list li:before
     {
         background-color: transparent;
     }
+    .xl\:focus-within\:bg-transparent:focus-within
+    {
+        background-color: transparent;
+    }
     .xl\:bg-primary
     {
         background-color: #0b303e;
@@ -17247,6 +18702,10 @@ ol.list li:before
         background-color: #0b303e;
     }
     .xl\:focus\:bg-primary:focus
+    {
+        background-color: #0b303e;
+    }
+    .xl\:focus-within\:bg-primary:focus-within
     {
         background-color: #0b303e;
     }
@@ -17262,6 +18721,10 @@ ol.list li:before
     {
         background-color: #be9f56;
     }
+    .xl\:focus-within\:bg-secondary:focus-within
+    {
+        background-color: #be9f56;
+    }
     .xl\:bg-light
     {
         background-color: #f9f5ee;
@@ -17274,6 +18737,10 @@ ol.list li:before
     {
         background-color: #f9f5ee;
     }
+    .xl\:focus-within\:bg-light:focus-within
+    {
+        background-color: #f9f5ee;
+    }
     .xl\:bg-white
     {
         background-color: #fff;
@@ -17283,6 +18750,10 @@ ol.list li:before
         background-color: #fff;
     }
     .xl\:focus\:bg-white:focus
+    {
+        background-color: #fff;
+    }
+    .xl\:focus-within\:bg-white:focus-within
     {
         background-color: #fff;
     }
@@ -17551,6 +19022,39 @@ ol.list li:before
     {
         padding-top: 3rem;
         padding-bottom: 3rem;
+    }
+    .xl\:p-36
+    {
+        padding-top: 3.6rem;
+        padding-right: 3.6rem;
+        padding-bottom: 3.6rem;
+        padding-left: 3.6rem;
+    }
+    .xl\:pt-36
+    {
+        padding-top: 3.6rem;
+    }
+    .xl\:pr-36
+    {
+        padding-right: 3.6rem;
+    }
+    .xl\:pb-36
+    {
+        padding-bottom: 3.6rem;
+    }
+    .xl\:pl-36
+    {
+        padding-left: 3.6rem;
+    }
+    .xl\:px-36
+    {
+        padding-right: 3.6rem; 
+        padding-left: 3.6rem;
+    }
+    .xl\:py-36
+    {
+        padding-top: 3.6rem;
+        padding-bottom: 3.6rem;
     }
     .xl\:p-40
     {
@@ -18047,6 +19551,39 @@ ol.list li:before
     {
         margin-top: 3rem;
         margin-bottom: 3rem;
+    }
+    .xl\:m-36
+    {
+        margin-top: 3.6rem;
+        margin-right: 3.6rem;
+        margin-bottom: 3.6rem;
+        margin-left: 3.6rem;
+    }
+    .xl\:mt-36
+    {
+        margin-top: 3.6rem;
+    }
+    .xl\:mr-36
+    {
+        margin-right: 3.6rem;
+    }
+    .xl\:mb-36
+    {
+        margin-bottom: 3.6rem;
+    }
+    .xl\:ml-36
+    {
+        margin-left: 3.6rem;
+    }
+    .xl\:mx-36
+    {
+        margin-right: 3.6rem; 
+        margin-left: 3.6rem;
+    }
+    .xl\:my-36
+    {
+        margin-top: 3.6rem;
+        margin-bottom: 3.6rem;
     }
     .xl\:m-40
     {
@@ -18575,6 +20112,47 @@ ol.list li:before
         margin-top: -3rem;
         margin-bottom: -3rem;
     }
+    .xl\:-m-36
+    {
+        margin-top: -3.6rem;
+        margin-right: -3.6rem;
+        margin-bottom: -3.6rem;
+        margin-left: -3.6rem;
+    }
+    .xl\:-mt-36
+    {
+        margin-top: -3.6rem;
+    }
+    .xl\:-mr-36
+    {
+        margin-right: -3.6rem;
+    }
+    .xl\:-mb-36
+    {
+        margin-bottom: -3.6rem;
+    }
+    .xl\:-ml-36
+    {
+        margin-left: -3.6rem;
+    }
+    .xl\:-mx-36
+    {
+        margin-right: -3.6rem; 
+        margin-left: -3.6rem;
+    }
+    .xl\:-mx-36[class*='grid-']:first-of-type
+    {
+        margin-top: -3.6rem;
+    }
+    .xl\:-mx-36[class*='grid-']:last-of-type
+    {
+        margin-bottom: -3.6rem;
+    }
+    .xl\:-my-36
+    {
+        margin-top: -3.6rem;
+        margin-bottom: -3.6rem;
+    }
     .xl\:-m-40
     {
         margin-top: -4rem;
@@ -18853,6 +20431,14 @@ ol.list li:before
     {
         box-shadow: 0 1px 3px 0 rgba(11, 48, 62, .1), 0 1px 2px 0 rgba(11, 48, 62, .06);
     }
+    .xl\:focus-within\:shadow:focus-within
+    {
+        box-shadow: 0 1px 3px 0 rgba(11, 48, 62, .1), 0 1px 2px 0 rgba(11, 48, 62, .06);
+    }
+    .xl\:focus-within\:shadow-parent:focus-within .shadow-child
+    {
+        box-shadow: 0 1px 3px 0 rgba(11, 48, 62, .1), 0 1px 2px 0 rgba(11, 48, 62, .06);
+    }
     .xl\:shadow-md
     {
         box-shadow: 0 4px 6px -1px rgba(11, 48, 62, .45), 0 2px 4px -1px rgba(11, 48, 62, .06);
@@ -18874,6 +20460,14 @@ ol.list li:before
         box-shadow: 0 4px 6px -1px rgba(11, 48, 62, .45), 0 2px 4px -1px rgba(11, 48, 62, .06);
     }
     .xl\:focus\:shadow-parent-md:focus .shadow-child
+    {
+        box-shadow: 0 4px 6px -1px rgba(11, 48, 62, .45), 0 2px 4px -1px rgba(11, 48, 62, .06);
+    }
+    .xl\:focus-within\:shadow-md:focus-within
+    {
+        box-shadow: 0 4px 6px -1px rgba(11, 48, 62, .45), 0 2px 4px -1px rgba(11, 48, 62, .06);
+    }
+    .xl\:focus-within\:shadow-parent-md:focus-within .shadow-child
     {
         box-shadow: 0 4px 6px -1px rgba(11, 48, 62, .45), 0 2px 4px -1px rgba(11, 48, 62, .06);
     }
@@ -18901,6 +20495,14 @@ ol.list li:before
     {
         box-shadow: 0 6px 12px 6px rgba(0, 0, 0, .15);
     }
+    .xl\:focus-within\:shadow-lg:focus-within
+    {
+        box-shadow: 0 6px 12px 6px rgba(0, 0, 0, .15);
+    }
+    .xl\:focus-within\:shadow-parent-lg:focus-within .shadow-child
+    {
+        box-shadow: 0 6px 12px 6px rgba(0, 0, 0, .15);
+    }
     .xl\:shadow-none
     {
         box-shadow: none;
@@ -18922,6 +20524,14 @@ ol.list li:before
         box-shadow: none;
     }
     .xl\:focus\:shadow-parent-none:focus .shadow-child
+    {
+        box-shadow: none;
+    }
+    .xl\:focus-within\:shadow-none:focus-within
+    {
+        box-shadow: none;
+    }
+    .xl\:focus-within\:shadow-parent-none:focus-within .shadow-child
     {
         box-shadow: none;
     }
@@ -19596,6 +21206,18 @@ ol.list li:before
         height: auto; 
         max-height: 100%;
     }
+    .xl\:icon-15
+    {
+        width: 1.5rem;
+    }
+    .xl\:icon-15 svg,
+    .xl\:icon-15 img
+    {
+        width: 100%;
+        max-width: 1.5rem;
+        height: auto; 
+        max-height: 100%;
+    }
     .xl\:icon-30
     {
         width: 3rem;
@@ -19605,6 +21227,18 @@ ol.list li:before
     {
         width: 100%;
         max-width: 3rem;
+        height: auto; 
+        max-height: 100%;
+    }
+    .xl\:icon-40
+    {
+        width: 4rem;
+    }
+    .xl\:icon-40 svg,
+    .xl\:icon-40 img
+    {
+        width: 100%;
+        max-width: 4rem;
         height: auto; 
         max-height: 100%;
     }
@@ -19742,13 +21376,13 @@ ol.list li:before
     }
     .xl\:icon-logo-sm
     {
-        width: 11.1rem;
+        width: 16.66rem;
     }
     .xl\:icon-logo-sm svg,
     .xl\:icon-logo-sm img
     {
         width: 100%;
-        max-width: 11.1rem;
+        max-width: 16.66rem;
         height: auto; 
         max-height: 100%;
     }
@@ -19824,6 +21458,10 @@ ol.list li:before
     {
         font-weight: 400;
     }
+    .xl\:focus-within\:f-weight-regular:focus-within
+    {
+        font-weight: 400;
+    }
     .xl\:f-weight-bold
     {
         font-weight: 700;
@@ -19841,6 +21479,10 @@ ol.list li:before
     {
         color: inherit;
     }
+    .xl\:focus-within\:f-color-inherit:focus-within
+    {
+        color: inherit;
+    }
     .xl\:f-color-default
     {
         color: #6f6f6f;
@@ -19850,6 +21492,10 @@ ol.list li:before
         color: #6f6f6f;
     }
     .xl\:focus\:f-color-default:focus
+    {
+        color: #6f6f6f;
+    }
+    .xl\:focus-within\:f-color-default:focus-within
     {
         color: #6f6f6f;
     }
@@ -19865,6 +21511,10 @@ ol.list li:before
     {
         color: #0b303e;
     }
+    .xl\:focus-within\:f-color-primary:focus-within
+    {
+        color: #0b303e;
+    }
     .xl\:f-color-secondary
     {
         color: #be9f56;
@@ -19877,6 +21527,10 @@ ol.list li:before
     {
         color: #be9f56;
     }
+    .xl\:focus-within\:f-color-secondary:focus-within
+    {
+        color: #be9f56;
+    }
     .xl\:f-color-white
     {
         color: #fff;
@@ -19886,6 +21540,10 @@ ol.list li:before
         color: #fff;
     }
     .xl\:focus\:f-color-white:focus
+    {
+        color: #fff;
+    }
+    .xl\:focus-within\:f-color-white:focus-within
     {
         color: #fff;
     }
@@ -19904,6 +21562,12 @@ ol.list li:before
     }
     .xl\:focus\:overlay-grad-1:focus > *:before,
     .xl\:focus\:overlay-grad-1:focus .image-holder:before
+    {
+        background-image: -webkit-linear-gradient(bottom, rgba(2, 0, 0, .7) 0%, rgba(240, 240, 240, .06) 80%, rgba(255, 255, 255, 0) 100%);
+        background-image:         linear-gradient(0deg, rgba(2, 0, 0, .7) 0%, rgba(240, 240, 240, .06) 80%, rgba(255, 255, 255, 0) 100%);
+    }
+    .xl\:focus-within\:overlay-grad-1:focus-within > *:before,
+    .xl\:focus-within\:overlay-grad-1:focus-within .image-holder:before
     {
         background-image: -webkit-linear-gradient(bottom, rgba(2, 0, 0, .7) 0%, rgba(240, 240, 240, .06) 80%, rgba(255, 255, 255, 0) 100%);
         background-image:         linear-gradient(0deg, rgba(2, 0, 0, .7) 0%, rgba(240, 240, 240, .06) 80%, rgba(255, 255, 255, 0) 100%);
@@ -20118,6 +21782,36 @@ ol.list li:before
         border-top-width: .1rem;
         border-bottom-width: .1rem;
     }
+    .xxl\:focus-within\:border:focus-within
+    {
+        border-width: .1rem;
+    }
+    .xxl\:focus-within\:border-t:focus-within
+    {
+        border-top-width: .1rem;
+    }
+    .xxl\:focus-within\:border-r:focus-within
+    {
+        border-right-width: .1rem;
+    }
+    .xxl\:focus-within\:border-b:focus-within
+    {
+        border-bottom-width: .1rem;
+    }
+    .xxl\:focus-within\:border-l:focus-within
+    {
+        border-left-width: .1rem;
+    }
+    .xxl\:focus-within\:border-x:focus-within
+    {
+        border-right-width: .1rem; 
+        border-left-width: .1rem;
+    }
+    .xxl\:focus-within\:border-y:focus-within
+    {
+        border-top-width: .1rem;
+        border-bottom-width: .1rem;
+    }
     .xxl\:border-2
     {
         border-width: .2rem;
@@ -20208,6 +21902,36 @@ ol.list li:before
         border-top-width: .2rem;
         border-bottom-width: .2rem;
     }
+    .xxl\:focus-within\:border-2:focus-within
+    {
+        border-width: .2rem;
+    }
+    .xxl\:focus-within\:border-t-2:focus-within
+    {
+        border-top-width: .2rem;
+    }
+    .xxl\:focus-within\:border-r-2:focus-within
+    {
+        border-right-width: .2rem;
+    }
+    .xxl\:focus-within\:border-b-2:focus-within
+    {
+        border-bottom-width: .2rem;
+    }
+    .xxl\:focus-within\:border-l-2:focus-within
+    {
+        border-left-width: .2rem;
+    }
+    .xxl\:focus-within\:border-x-2:focus-within
+    {
+        border-right-width: .2rem; 
+        border-left-width: .2rem;
+    }
+    .xxl\:focus-within\:border-y-2:focus-within
+    {
+        border-top-width: .2rem;
+        border-bottom-width: .2rem;
+    }
     .xxl\:border-4
     {
         border-width: .4rem;
@@ -20294,6 +22018,36 @@ ol.list li:before
         border-left-width: .4rem;
     }
     .xxl\:focus\:border-y-4:focus
+    {
+        border-top-width: .4rem;
+        border-bottom-width: .4rem;
+    }
+    .xxl\:focus-within\:border-4:focus-within
+    {
+        border-width: .4rem;
+    }
+    .xxl\:focus-within\:border-t-4:focus-within
+    {
+        border-top-width: .4rem;
+    }
+    .xxl\:focus-within\:border-r-4:focus-within
+    {
+        border-right-width: .4rem;
+    }
+    .xxl\:focus-within\:border-b-4:focus-within
+    {
+        border-bottom-width: .4rem;
+    }
+    .xxl\:focus-within\:border-l-4:focus-within
+    {
+        border-left-width: .4rem;
+    }
+    .xxl\:focus-within\:border-x-4:focus-within
+    {
+        border-right-width: .4rem; 
+        border-left-width: .4rem;
+    }
+    .xxl\:focus-within\:border-y-4:focus-within
     {
         border-top-width: .4rem;
         border-bottom-width: .4rem;
@@ -20933,6 +22687,10 @@ ol.list li:before
     {
         background-color: #f5f7f7;
     }
+    .xxl\:focus-within\:bg-$color-placeholder:focus-within
+    {
+        background-color: #f5f7f7;
+    }
     .xxl\:bg-inherit
     {
         background-color: inherit;
@@ -20942,6 +22700,10 @@ ol.list li:before
         background-color: inherit;
     }
     .xxl\:focus\:bg-inherit:focus
+    {
+        background-color: inherit;
+    }
+    .xxl\:focus-within\:bg-inherit:focus-within
     {
         background-color: inherit;
     }
@@ -20957,6 +22719,10 @@ ol.list li:before
     {
         background-color: transparent;
     }
+    .xxl\:focus-within\:bg-transparent:focus-within
+    {
+        background-color: transparent;
+    }
     .xxl\:bg-primary
     {
         background-color: #0b303e;
@@ -20966,6 +22732,10 @@ ol.list li:before
         background-color: #0b303e;
     }
     .xxl\:focus\:bg-primary:focus
+    {
+        background-color: #0b303e;
+    }
+    .xxl\:focus-within\:bg-primary:focus-within
     {
         background-color: #0b303e;
     }
@@ -20981,6 +22751,10 @@ ol.list li:before
     {
         background-color: #be9f56;
     }
+    .xxl\:focus-within\:bg-secondary:focus-within
+    {
+        background-color: #be9f56;
+    }
     .xxl\:bg-light
     {
         background-color: #f9f5ee;
@@ -20993,6 +22767,10 @@ ol.list li:before
     {
         background-color: #f9f5ee;
     }
+    .xxl\:focus-within\:bg-light:focus-within
+    {
+        background-color: #f9f5ee;
+    }
     .xxl\:bg-white
     {
         background-color: #fff;
@@ -21002,6 +22780,10 @@ ol.list li:before
         background-color: #fff;
     }
     .xxl\:focus\:bg-white:focus
+    {
+        background-color: #fff;
+    }
+    .xxl\:focus-within\:bg-white:focus-within
     {
         background-color: #fff;
     }
@@ -21270,6 +23052,39 @@ ol.list li:before
     {
         padding-top: 3rem;
         padding-bottom: 3rem;
+    }
+    .xxl\:p-36
+    {
+        padding-top: 3.6rem;
+        padding-right: 3.6rem;
+        padding-bottom: 3.6rem;
+        padding-left: 3.6rem;
+    }
+    .xxl\:pt-36
+    {
+        padding-top: 3.6rem;
+    }
+    .xxl\:pr-36
+    {
+        padding-right: 3.6rem;
+    }
+    .xxl\:pb-36
+    {
+        padding-bottom: 3.6rem;
+    }
+    .xxl\:pl-36
+    {
+        padding-left: 3.6rem;
+    }
+    .xxl\:px-36
+    {
+        padding-right: 3.6rem; 
+        padding-left: 3.6rem;
+    }
+    .xxl\:py-36
+    {
+        padding-top: 3.6rem;
+        padding-bottom: 3.6rem;
     }
     .xxl\:p-40
     {
@@ -21766,6 +23581,39 @@ ol.list li:before
     {
         margin-top: 3rem;
         margin-bottom: 3rem;
+    }
+    .xxl\:m-36
+    {
+        margin-top: 3.6rem;
+        margin-right: 3.6rem;
+        margin-bottom: 3.6rem;
+        margin-left: 3.6rem;
+    }
+    .xxl\:mt-36
+    {
+        margin-top: 3.6rem;
+    }
+    .xxl\:mr-36
+    {
+        margin-right: 3.6rem;
+    }
+    .xxl\:mb-36
+    {
+        margin-bottom: 3.6rem;
+    }
+    .xxl\:ml-36
+    {
+        margin-left: 3.6rem;
+    }
+    .xxl\:mx-36
+    {
+        margin-right: 3.6rem; 
+        margin-left: 3.6rem;
+    }
+    .xxl\:my-36
+    {
+        margin-top: 3.6rem;
+        margin-bottom: 3.6rem;
     }
     .xxl\:m-40
     {
@@ -22294,6 +24142,47 @@ ol.list li:before
         margin-top: -3rem;
         margin-bottom: -3rem;
     }
+    .xxl\:-m-36
+    {
+        margin-top: -3.6rem;
+        margin-right: -3.6rem;
+        margin-bottom: -3.6rem;
+        margin-left: -3.6rem;
+    }
+    .xxl\:-mt-36
+    {
+        margin-top: -3.6rem;
+    }
+    .xxl\:-mr-36
+    {
+        margin-right: -3.6rem;
+    }
+    .xxl\:-mb-36
+    {
+        margin-bottom: -3.6rem;
+    }
+    .xxl\:-ml-36
+    {
+        margin-left: -3.6rem;
+    }
+    .xxl\:-mx-36
+    {
+        margin-right: -3.6rem; 
+        margin-left: -3.6rem;
+    }
+    .xxl\:-mx-36[class*='grid-']:first-of-type
+    {
+        margin-top: -3.6rem;
+    }
+    .xxl\:-mx-36[class*='grid-']:last-of-type
+    {
+        margin-bottom: -3.6rem;
+    }
+    .xxl\:-my-36
+    {
+        margin-top: -3.6rem;
+        margin-bottom: -3.6rem;
+    }
     .xxl\:-m-40
     {
         margin-top: -4rem;
@@ -22572,6 +24461,14 @@ ol.list li:before
     {
         box-shadow: 0 1px 3px 0 rgba(11, 48, 62, .1), 0 1px 2px 0 rgba(11, 48, 62, .06);
     }
+    .xxl\:focus-within\:shadow:focus-within
+    {
+        box-shadow: 0 1px 3px 0 rgba(11, 48, 62, .1), 0 1px 2px 0 rgba(11, 48, 62, .06);
+    }
+    .xxl\:focus-within\:shadow-parent:focus-within .shadow-child
+    {
+        box-shadow: 0 1px 3px 0 rgba(11, 48, 62, .1), 0 1px 2px 0 rgba(11, 48, 62, .06);
+    }
     .xxl\:shadow-md
     {
         box-shadow: 0 4px 6px -1px rgba(11, 48, 62, .45), 0 2px 4px -1px rgba(11, 48, 62, .06);
@@ -22593,6 +24490,14 @@ ol.list li:before
         box-shadow: 0 4px 6px -1px rgba(11, 48, 62, .45), 0 2px 4px -1px rgba(11, 48, 62, .06);
     }
     .xxl\:focus\:shadow-parent-md:focus .shadow-child
+    {
+        box-shadow: 0 4px 6px -1px rgba(11, 48, 62, .45), 0 2px 4px -1px rgba(11, 48, 62, .06);
+    }
+    .xxl\:focus-within\:shadow-md:focus-within
+    {
+        box-shadow: 0 4px 6px -1px rgba(11, 48, 62, .45), 0 2px 4px -1px rgba(11, 48, 62, .06);
+    }
+    .xxl\:focus-within\:shadow-parent-md:focus-within .shadow-child
     {
         box-shadow: 0 4px 6px -1px rgba(11, 48, 62, .45), 0 2px 4px -1px rgba(11, 48, 62, .06);
     }
@@ -22620,6 +24525,14 @@ ol.list li:before
     {
         box-shadow: 0 6px 12px 6px rgba(0, 0, 0, .15);
     }
+    .xxl\:focus-within\:shadow-lg:focus-within
+    {
+        box-shadow: 0 6px 12px 6px rgba(0, 0, 0, .15);
+    }
+    .xxl\:focus-within\:shadow-parent-lg:focus-within .shadow-child
+    {
+        box-shadow: 0 6px 12px 6px rgba(0, 0, 0, .15);
+    }
     .xxl\:shadow-none
     {
         box-shadow: none;
@@ -22641,6 +24554,14 @@ ol.list li:before
         box-shadow: none;
     }
     .xxl\:focus\:shadow-parent-none:focus .shadow-child
+    {
+        box-shadow: none;
+    }
+    .xxl\:focus-within\:shadow-none:focus-within
+    {
+        box-shadow: none;
+    }
+    .xxl\:focus-within\:shadow-parent-none:focus-within .shadow-child
     {
         box-shadow: none;
     }
@@ -23315,6 +25236,18 @@ ol.list li:before
         height: auto; 
         max-height: 100%;
     }
+    .xxl\:icon-15
+    {
+        width: 1.5rem;
+    }
+    .xxl\:icon-15 svg,
+    .xxl\:icon-15 img
+    {
+        width: 100%;
+        max-width: 1.5rem;
+        height: auto; 
+        max-height: 100%;
+    }
     .xxl\:icon-30
     {
         width: 3rem;
@@ -23324,6 +25257,18 @@ ol.list li:before
     {
         width: 100%;
         max-width: 3rem;
+        height: auto; 
+        max-height: 100%;
+    }
+    .xxl\:icon-40
+    {
+        width: 4rem;
+    }
+    .xxl\:icon-40 svg,
+    .xxl\:icon-40 img
+    {
+        width: 100%;
+        max-width: 4rem;
         height: auto; 
         max-height: 100%;
     }
@@ -23461,13 +25406,13 @@ ol.list li:before
     }
     .xxl\:icon-logo-sm
     {
-        width: 11.1rem;
+        width: 16.66rem;
     }
     .xxl\:icon-logo-sm svg,
     .xxl\:icon-logo-sm img
     {
         width: 100%;
-        max-width: 11.1rem;
+        max-width: 16.66rem;
         height: auto; 
         max-height: 100%;
     }
@@ -23543,6 +25488,10 @@ ol.list li:before
     {
         font-weight: 400;
     }
+    .xxl\:focus-within\:f-weight-regular:focus-within
+    {
+        font-weight: 400;
+    }
     .xxl\:f-weight-bold
     {
         font-weight: 700;
@@ -23560,6 +25509,10 @@ ol.list li:before
     {
         color: inherit;
     }
+    .xxl\:focus-within\:f-color-inherit:focus-within
+    {
+        color: inherit;
+    }
     .xxl\:f-color-default
     {
         color: #6f6f6f;
@@ -23569,6 +25522,10 @@ ol.list li:before
         color: #6f6f6f;
     }
     .xxl\:focus\:f-color-default:focus
+    {
+        color: #6f6f6f;
+    }
+    .xxl\:focus-within\:f-color-default:focus-within
     {
         color: #6f6f6f;
     }
@@ -23584,6 +25541,10 @@ ol.list li:before
     {
         color: #0b303e;
     }
+    .xxl\:focus-within\:f-color-primary:focus-within
+    {
+        color: #0b303e;
+    }
     .xxl\:f-color-secondary
     {
         color: #be9f56;
@@ -23596,6 +25557,10 @@ ol.list li:before
     {
         color: #be9f56;
     }
+    .xxl\:focus-within\:f-color-secondary:focus-within
+    {
+        color: #be9f56;
+    }
     .xxl\:f-color-white
     {
         color: #fff;
@@ -23605,6 +25570,10 @@ ol.list li:before
         color: #fff;
     }
     .xxl\:focus\:f-color-white:focus
+    {
+        color: #fff;
+    }
+    .xxl\:focus-within\:f-color-white:focus-within
     {
         color: #fff;
     }
@@ -23623,6 +25592,12 @@ ol.list li:before
     }
     .xxl\:focus\:overlay-grad-1:focus > *:before,
     .xxl\:focus\:overlay-grad-1:focus .image-holder:before
+    {
+        background-image: -webkit-linear-gradient(bottom, rgba(2, 0, 0, .7) 0%, rgba(240, 240, 240, .06) 80%, rgba(255, 255, 255, 0) 100%);
+        background-image:         linear-gradient(0deg, rgba(2, 0, 0, .7) 0%, rgba(240, 240, 240, .06) 80%, rgba(255, 255, 255, 0) 100%);
+    }
+    .xxl\:focus-within\:overlay-grad-1:focus-within > *:before,
+    .xxl\:focus-within\:overlay-grad-1:focus-within .image-holder:before
     {
         background-image: -webkit-linear-gradient(bottom, rgba(2, 0, 0, .7) 0%, rgba(240, 240, 240, .06) 80%, rgba(255, 255, 255, 0) 100%);
         background-image:         linear-gradient(0deg, rgba(2, 0, 0, .7) 0%, rgba(240, 240, 240, .06) 80%, rgba(255, 255, 255, 0) 100%);
@@ -25166,113 +27141,166 @@ body[data-aos-easing='ease-in-out'] [data-aos],
  * Flip animations:
  * flip-left, flip-right, flip-up, flip-down
  */
-/*Custom styling*/
-.navbar li
+/*navbar styling*/
+.navbar
 {
-    position: relative;
+    -webkit-transition: all .35s 0s ease;
+            transition: all .35s 0s ease;
 }
-.navbar li:after
+.navbar ul > li > a
 {
-    position: absolute;
-    bottom: 1rem;
-    left: 50%;
+    display: inline-block; 
 
-    display: block;
-    clear: both;
-
-    width: 50%;
-    height: 0;
-    margin: 0;
-
-    content: '';
-    -webkit-transition: opacity .7s .2s ease-in-out;
-            transition: opacity .7s .2s ease-in-out;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
-    -webkit-transform-origin: center;
-        -ms-transform-origin: center;
-            transform-origin: center; 
-
-    opacity: 0;
-    color: inherit;
-    border: .1rem solid;
-    border-width: 0 0 .1rem 0;
+    text-decoration: none;
 }
-.navbar li.active:after
+.navbar ul > li > a,
+.navbar ul > li > .submenu-trigger
 {
-    width: 2.5rem;
-
-    -webkit-animation: fadeIn 1s .5s ease-in-out both;
-            animation: fadeIn 1s .5s ease-in-out both; 
-
-    opacity: 1;
+    text-transform: uppercase;
 }
-
-.navbar a
+.navbar .is-active,
+.navbar .is-open
 {
-    text-decoration: none !important;
+    color: #be9f56;
 }
-
-@media all and (max-width: 992px)
+@media (max-width: 1200px)
 {
     .navbar
     {
-        max-width: calc(100% - 2.5rem); 
+        overflow: hidden; 
 
-        -webkit-transform: translateX(100%);
-            -ms-transform: translateX(100%);
-                transform: translateX(100%);
+        max-width: 100%;
+        max-height: 0;
 
         opacity: 0;
     }
-    .navbar ul
-    {
-                flex-direction: column; 
-
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -webkit-flex-direction: column;
-            -ms-flex-direction: column;
-    }
-    .nav-transition .navbar
-    {
-        -webkit-transition: all .7s .2s ease-in-out;
-                transition: all .7s .2s ease-in-out;
-    }
 }
-
-@media all and (max-width: 992px)
-{
-    .jsNavbarToggle.is-open .navbar
-    {
-        -webkit-transform: translateX(0);
-            -ms-transform: translateX(0);
-                transform: translateX(0); 
-
-        opacity: 1;
-    }
-    .jsNavbarToggle.is-open .hamburger
-    {
-        position: fixed;
-        z-index: 9999;
-        top: 2.8rem;
-        right: 2rem;
-    }
-}
-
-/*navbar styling*/
-@media all and (max-width: 992px)
+@media (min-width: 1200px)
 {
     .navbar
     {
-        max-width: calc(100% - 6rem);
+        margin-top: 8.8rem;
+    }
+}
+.navbar .is-open .submenu
+{
+    overflow: auto;
+
+    opacity: 1;
+}
+@media (max-width: 1200px)
+{
+    .navbar .is-open .submenu
+    {
+        -webkit-transform: translateX(0);
+            -ms-transform: translateX(0);
+                transform: translateX(0);
+    }
+}
+@media (min-width: 1200px)
+{
+    .navbar .is-open .submenu
+    {
+        overflow: auto;
+
+        max-height: 100vh;
+
+        opacity: 1;
+    }
+}
+.navbar .is-open .submenu-trigger .close-icon
+{
+    -webkit-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+            transform: translateY(-100%); 
+
+    opacity: 1;
+}
+.navbar .is-open .submenu-trigger .down-icon
+{
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%); 
+
+    opacity: 0;
+}
+
+.submenu
+{
+    overflow: hidden;
+
+    padding-top: 14.8rem; 
+
+    -webkit-transition: all .35s 0s ease;
+            transition: all .35s 0s ease;
+
+    opacity: 0;
+}
+.submenu p
+{
+    font-weight: normal;
+
+    color: #6f6f6f;
+}
+@media (max-width: 1200px)
+{
+    .submenu
+    {
+        -webkit-transform: translateX(100%);
+            -ms-transform: translateX(100%);
+                transform: translateX(100%);
+    }
+}
+@media (min-width: 710px)
+{
+    .submenu
+    {
+        padding-top: 12.2rem;
+    }
+}
+@media (min-width: 1200px)
+{
+    .submenu
+    {
+        overflow: hidden; 
+
+        max-width: 100%;
+        max-height: 0;
+        margin-top: 13.6rem;
+        padding-top: 1.5rem;
+
+        opacity: 0;
     }
 }
 
-.jsNavbarToggle.is-open .header
+.submenu-trigger
 {
-    position: fixed;
+    position: relative;
+}
+.submenu-trigger .close-icon,
+.submenu-trigger .down-icon
+{
+    position: absolute;
+    right: 0; 
+
+    -webkit-transition: all .35s 0s ease;
+            transition: all .35s 0s ease;
+}
+.submenu-trigger .close-icon
+{
+    -webkit-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+            transform: translateY(0%); 
+
+    opacity: 0;
+}
+.submenu-trigger .down-icon
+{
+    -webkit-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+            transform: translateY(0%); 
+
+    opacity: 1;
 }
 
 .jsNavbarToggle.is-open .hamburger
@@ -25282,12 +27310,58 @@ body[data-aos-easing='ease-in-out'] [data-aos],
     right: 0;
 }
 
+.jsNavbarToggle.is-open .navbar
+{
+    overflow: auto;
+
+    max-height: 100vh;
+
+    opacity: 1;
+}
+@media (max-width: 1200px)
+{
+    .jsNavbarToggle.is-open .navbar
+    {
+        padding-top: 14.8rem;
+    }
+}
+@media (min-width: 710px)
+{
+    .jsNavbarToggle.is-open .navbar
+    {
+        padding-top: 12.2rem;
+    }
+}
+
 /*Custom styling*/
+main
+{
+    margin-top: 6.8rem;
+}
 @media (min-width: 992px)
+{
+    main
+    {
+        margin-top: 8.2rem;
+    }
+}
+@media (min-width: 1200px)
+{
+    main
+    {
+        margin-top: 12.4rem;
+    }
+}
+
+.header
+{
+    min-height: 6.8rem;
+}
+@media (min-width: 1200px)
 {
     .header
     {
-        min-height: 15rem;
+        min-height: 8.8rem;
     }
 }
 
@@ -25299,7 +27373,7 @@ body[data-aos-easing='ease-in-out'] [data-aos],
 .button
 {
     font-family: 'Lato', Constantia, Lucida Bright, Lucidabright, Lucida Serif, Lucida, DejaVu Serif, Bitstream Vera Serif, Liberation Serif, Georgia, serif;
-    font-size: 1.5rem;
+    font-size: 1.5rem; 
     line-height: 1.2;
 
     position: relative;
@@ -25309,11 +27383,9 @@ body[data-aos-easing='ease-in-out'] [data-aos],
     display: -ms-inline-flexbox;
     display:         inline-flex;
 
-    padding: 10px 30px;
-
     cursor: pointer;
     -webkit-transition: all .125s 0s ease-out;
-            transition: all .125s 0s ease-out; 
+            transition: all .125s 0s ease-out;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
@@ -25327,7 +27399,11 @@ body[data-aos-easing='ease-in-out'] [data-aos],
     -ms-flex-pack: center;
             justify-content: center;
 }
-.button:not(.auto-width)
+.button:not(.custom)
+{
+    padding: 10px 30px;
+}
+.button:not(.custom):not(.auto-width)
 {
     min-width: 20.6rem;
 }

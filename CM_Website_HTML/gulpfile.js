@@ -60,6 +60,7 @@ const PROJECT_JS_LIST = [
   // SRC_JS_PATH+'/_featherIcons.js',
   SRC_JS_PATH+'/_docReady.js',
   SRC_JS_PATH+'/_hamburgerToggle.js',
+  SRC_JS_PATH+'/_subNavToggle.js',
   // SRC_JS_PATH+'/_searchbarToggle.js',
   // SRC_JS_PATH+'/_submenutoggle.js',
   // SRC_JS_PATH+'/_navbarDoubleTap.js',
@@ -88,7 +89,6 @@ const PROJECT_PAGES_LIST = [
   './src/contact.html',
   './src/flexibuilder.html',
   './src/all-pages.html',
-  './src/404.html',
 ]
 
 function CSS_OPERATION() {
