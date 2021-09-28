@@ -23,18 +23,222 @@
 
 <body class="jsNavbarToggle is-close flex-col">
   <!-- Header -->
-  <!--      "home": "true"-->
-  <!--	})-->
+  <header class="header w-full pos-fixed pin-t pin-x pt-15 pb-15 xl:pt-36 xl:pb-0 flex-col z-50 bg-white">
+    <div class="container lg:container-lg xl:container-xl xxl:container-xxl mx-auto">
+      <div class="flex-row align-center">
+        <a class="brand-logo mr-auto" href="index.html">
+          <span class="icon icon-logo-sm lg:icon-logo ratio-logo">
+            <span>
+              <img class="w-full h-full object-contain" src="./images/CM_Logo.png">
+            </span>
+          </span>
+        </a>
+        <div class="flex-row flex-wrap align-center justify-end -m-8">
+          <div class="p-8">
+            <a href="#" class="button custom secondary f-size-14 p-10"><span>BOOK A VALUATION</span></a>
+          </div>
+          <div class="p-8 pos-absolute pin-t-100 pin-x md:pos-relative md:pin-t">
+            <form class="flex-row bg-white focus-within:shadow-lg transition-all">
+              <input type="text" placeholder="Search Property" name="searchProperty" class="f-size-14 f-color-primary flex-auto bg-white f-color-primary p-10 uppercase">
+              <button class="icon icon-40 f-color-primary">
+                <span class="p-5">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search" viewBox="0 0 24 24">
+                    <circle cx="11" cy="11" r="8" />
+                    <path d="m21 21-4.35-4.35" />
+                  </svg>
+                </span>
+              </button>
+            </form>
+          </div>
+          <div class="p-8">
+            <div class="navbar-toggle f-color-primary d-inline-flex xl:d-hidden z-50">
+              <div class="icon hamburger pointer-events-auto transition-all">
+                <div class="m-1 lg:m-1_5">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <nav class="w-full navbar pos-fixed pin z-30 bg-primary f-color-white f-size-15 xl:bg-white xl:f-color-primary xl:pin-b-auto xl:-mt-15">
+    <div class="container lg:container-lg xl:container-xl xxl:container-xxl mx-auto">
+      <div class="flex-col xl:align-end">
+        <ul class="list-reset flex-col xl:flex-row">
+          <li class="">
+            <div class="submenu-trigger p-15 flex-row align-center">
+              <span>
+                BUYING
+              </span>
+              <span class="icon icon-15 ml-8 flex-none f-color-secondary">
+                <span class="down-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down" viewBox="0 0 24 24">
+                    <path d="m6 9 6 6 6-6" /></svg>
+                </span>
+                <span class="close-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x" viewBox="0 0 24 24">
+                    <path d="M18 6 6 18M6 6l12 12" /></svg>
+                </span>
+              </span>
+            </div>
+            <div class="p-15 submenu pos-fixed pin z-40 bg-primary f-color-white">
+              <div class="container lg:container-lg xl:container-xl xxl:container-xxl mx-auto">
+                <div class="p-15 flex-row align-center justify-space-between xl:d-hidden">
+                  <button class="back-button uppercase f-color-inherit flex-row align-center">
+                    <span class="icon icon-15 mr-8 flex-none f-color-secondary">
+                      <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="111 237 192 320">
+                        <path d="M303 269.4L270.7 237 111 397l159.7 160 32.3-32.4L175.7 397z" />
+                      </svg>
+                    </span>
+                    <em>Back</em>
+                  </button>
+                  <h3><em>BUYING</em></h3>
+                </div>
+                <ul class="list-reset flex-col px-15">
+                  <li class="border-b border-light">
+                    <a href="about.html" class="text-wrap-xs p-20">
+                      <h3>Submenu link 1</h3>
+                      <div class="flex-row align-start">
+                        <p>The leading estate agency for Salisbury and beyond.. </p>
+                        <span class="icon icon-15 flex-none mt-5 ml-8 f-color-secondary">
+                          <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="111 237 192 320">
+                            <path d="M111 269.4l32.3-32.4L303 397 143.3 557 111 524.6 238.3 397z" /></svg>
+                        </span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="border-b border-light">
+                    <a href="team.html" class="text-wrap-xs p-20">
+                      <h3>Submenu link 2</h3>
+                      <div class="flex-row align-start">
+                        <p>Salisbury’s award winning and number one estate agency.</p>
+                        <span class="icon icon-15 flex-none mt-5 ml-8 f-color-secondary">
+                          <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="111 237 192 320">
+                            <path d="M111 269.4l32.3-32.4L303 397 143.3 557 111 524.6 238.3 397z" /></svg>
+                        </span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="border-b border-light">
+                    <a href="about.html" class="text-wrap-xs p-20">
+                      <h3>Submenu link 3</h3>
+                      <div class="flex-row align-start">
+                        <p>The leading estate agency for Salisbury and beyond.. </p>
+                        <span class="icon icon-15 flex-none mt-5 ml-8 f-color-secondary">
+                          <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="111 237 192 320">
+                            <path d="M111 269.4l32.3-32.4L303 397 143.3 557 111 524.6 238.3 397z" /></svg>
+                        </span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="border-b border-light">
+                    <a href="team.html" class="text-wrap-xs p-20">
+                      <h3>Submenu link 4</h3>
+                      <div class="flex-row align-start">
+                        <p>Salisbury’s award winning and number one estate agency.</p>
+                        <span class="icon icon-15 flex-none mt-5 ml-8 f-color-secondary">
+                          <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="111 237 192 320">
+                            <path d="M111 269.4l32.3-32.4L303 397 143.3 557 111 524.6 238.3 397z" /></svg>
+                        </span>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="">
+            <div class="submenu-trigger p-15">LETTINGS</div>
+          </li>
+          <li class="">
+            <a class="p-15" href="selling.html">SELLING</a>
+          </li>
+          <li class="">
+            <div class="submenu-trigger p-15 flex-row align-center">
+              <span>
+                ABOUT US
+              </span>
+              <span class="icon icon-15 ml-8 flex-none f-color-secondary">
+                <span class="down-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down" viewBox="0 0 24 24">
+                    <path d="m6 9 6 6 6-6" /></svg>
+                </span>
+                <span class="close-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x" viewBox="0 0 24 24">
+                    <path d="M18 6 6 18M6 6l12 12" /></svg>
+                </span>
+              </span>
+            </div>
+            <div class="p-15 submenu pos-fixed pin z-40 bg-primary f-color-white">
+              <div class="container lg:container-lg xl:container-xl xxl:container-xxl mx-auto">
+                <div class="p-15 flex-row align-center justify-space-between xl:d-hidden">
+                  <button class="back-button uppercase f-color-inherit flex-row align-center">
+                    <span class="icon icon-15 mr-8 flex-none f-color-secondary">
+                      <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="111 237 192 320">
+                        <path d="M303 269.4L270.7 237 111 397l159.7 160 32.3-32.4L175.7 397z" />
+                      </svg>
+                    </span>
+                    <em>Back</em>
+                  </button>
+                  <h3><em>ABOUT US</em></h3>
+                </div>
+                <ul class="list-reset flex-col px-15">
+                  <li class="border-b border-light">
+                    <a href="about.html" class="text-wrap-xs p-20">
+                      <h3>About us</h3>
+                      <div class="flex-row align-start">
+                        <p>The leading estate agency for Salisbury and beyond.. </p>
+                        <span class="icon icon-15 flex-none mt-5 ml-8 f-color-secondary">
+                          <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="111 237 192 320">
+                            <path d="M111 269.4l32.3-32.4L303 397 143.3 557 111 524.6 238.3 397z" /></svg>
+                        </span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="border-b border-light">
+                    <a href="team.html" class="text-wrap-xs p-20">
+                      <h3>OUR PEOPLE</h3>
+                      <div class="flex-row align-start">
+                        <p>Salisbury’s award winning and number one estate agency.</p>
+                        <span class="icon icon-15 flex-none mt-5 ml-8 f-color-secondary">
+                          <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="111 237 192 320">
+                            <path d="M111 269.4l32.3-32.4L303 397 143.3 557 111 524.6 238.3 397z" /></svg>
+                        </span>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="">
+            <div class="p-15">LOCAL AREA</div>
+          </li>
+          <li class="">
+            <a class="p-15" href="#">REGISTER</a>
+          </li>
+          <li class="is-active">
+            <a class="p-15" href="contact.html">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
   <!-- Main -->
   <main class="flex-auto flex-col">
     <!-- Hero Carousel or Single banner -->
-    <section class="hero-banner rollover-wrap image-placeholder flex-col py-100 h-screen md:h-auto lg:h-screen md:ratio-custom-2 bg-light pos-relative">
+    <section class="hero-banner rollover-wrap image-placeholder flex-col py-100 h-screen md:h-auto lg:h-screen md:ratio-custom-2 bg-light pos-relative" data-aos="fade-in" data-aos-delay="200">
       <figure class="rollover-effect bg-center bg-cover pin pos-absolute" style="background-image: url('./images/Rectangle-145@2x.png');">
         <div class="w-full h-full bg-primary opacity-35"></div>
       </figure>
       <section class="pos-relative md:pos-absolute pin flex-col my-auto">
         <div class="container container-lg m-auto">
-          <div class="flex-col align-center">
+          <div class="flex-col align-center" data-aos="fade-up" data-aos-delay="500">
             <hgroup class="border-l-4 border-secondary pl-40 py-20 text-wrap-sx f-color-white">
               <h1 class="f-size-36 md:f-size-55 f-family-secondary">HEADING ONE</h1>
               <h2 class="f-size-24 md:f-size-37 font-weight-bold">Sub heading banner</h2>
@@ -72,10 +276,10 @@
       <div class="container sm:text-wrap container-sm xl:container-xl mx-auto">
         <div class="flex-row flex-wrap">
           <div class="col-12 xl:col-6 pl-40 pr-40 py-40 xl:py-0 xl:pl-0 xl:pr-100 flex-col justify-center border-secondary border-r-4 border-b-4 xl:border-b-0">
-            <img src="./images/Rectangle-191@2x.png" />
+            <img src="./images/Rectangle-191@2x.png" data-aos="fade-left" data-aos-delay="100" />
           </div>
           <div class="col-12 xl:col-6 pl-40 pr-40 py-40 xl:py-0 xl:pl-100 xl:pr-0 flex-col justify-center border-secondary border-l-4 border-b-4 xl:border-l-0 xl:border-b-0">
-            <article class="text-wrap-md">
+            <article class="text-wrap-md" data-aos="fade-right" data-aos-delay="300">
               <hgroup class="text-wrap-xs">
                 <h3 class="f-color-secondary f-size-14 uppercase">PROPERTY SEARCH</h3>
                 <h2 class="f-size-36 f-color-primary f-family-secondary f-weight-bold">Your gateway to a new beginning</h2>
@@ -87,7 +291,7 @@
         </div>
         <div class="flex-row flex-wrap">
           <div class="col-12 xl:col-6 pl-40 pr-40 py-40 xl:py-0 xl:pl-0 xl:pr-100 flex-col justify-center border-secondary border-r-4 border-b-4 xl:border-b-0">
-            <blockquote class="text-wrap-md">
+            <blockquote class="text-wrap-md" data-aos="fade-left" data-aos-delay="100">
               <div class="uppercase f-size-24 xl:f-size-38 f-color-secondary f-family-secondary">
                 <p>“I have nothing but positive feedback having INSTRUCTED CARTER & MAY. ”</p>
               </div>
@@ -97,15 +301,15 @@
             </blockquote>
           </div>
           <div class="col-12 xl:col-6 pl-40 pr-40 py-40 xl:py-0 xl:pl-100 xl:pr-0 flex-col justify-center border-secondary border-l-4 border-b-4 xl:border-l-0 xl:border-b-0">
-            <img src="./images/Rectangle-119@2x.png" />
+            <img src="./images/Rectangle-119@2x.png" data-aos="fade-right" data-aos-delay="300" />
           </div>
         </div>
         <div class="flex-row flex-wrap">
           <div class="col-12 xl:col-6 pl-40 pr-40 py-40 xl:py-0 xl:pl-0 xl:pr-100 flex-col justify-center border-secondary border-r-4 border-b-4 xl:border-b-0">
-            <img src="./images/Rectangle-1119@2x.png" />
+            <img src="./images/Rectangle-1119@2x.png" data-aos="fade-left" data-aos-delay="100" />
           </div>
           <div class="col-12 xl:col-6 pl-40 pr-40 py-40 xl:py-0 xl:pl-100 xl:pr-0 flex-col justify-center border-secondary border-l-4 xl:border-l-0">
-            <article class="text-wrap-md">
+            <article class="text-wrap-md" data-aos="fade-right" data-aos-delay="300">
               <hgroup class="text-wrap-xs">
                 <h3 class="f-color-secondary f-size-14 uppercase">SELL YOUR PROPERTY</h3>
                 <h2 class="f-size-36 f-color-primary f-family-secondary f-weight-bold">Trusted and recognised high street presence</h2>
@@ -124,7 +328,7 @@
       <div class="container sm:container-sm md:container-md lg:container-lg xl:container-xl mx-auto pos-relative">
         <div class="flex-col lg:flex-row lg:align-center">
           <section class="lg:col-5 ml-auto">
-            <div class="border-l-4 border-secondary px-40 py-40">
+            <div class="border-l-4 border-secondary px-40 py-40" data-aos="fade-up" data-aos-delay="300">
               <div class="text-wrap">
                 <h2 class="f-size-45 font-weight-bold f-family-secondary">Do you know what your property is worth?</h2>
                 <p>Thinking of selling your property or just interested in how much your house is worth? Carter & May provide free, no-obligation market appraisals.</p>
@@ -141,11 +345,11 @@
     <section class="pos-relative flex-col justify-center horizontal-card mt-65 xl:mt-100">
       <div class="flex-col align-center">
         <div class="col-12 xl:col-6 ratio-16x9 lg:ratio-5x2 xl:ratio-none pos-relative xl:pos-absolute pin-y pin-r pin-l-auto image-placeholder">
-          <figure class="pos-absolute pin bg-cover bg-center -ml-65" style="background-image: url('./images/Group-1941@2x.jpg');"></figure>
+          <figure class="pos-absolute pin bg-cover bg-center -ml-65" style="background-image: url('./images/Group-1941@2x.jpg');" data-aos="fade-in" data-aos-delay="100"></figure>
         </div>
         <div class="container sm:container-sm md:container-md xl:container-xl xxl:container-xxl mx-auto">
           <div class="col-12 py-100 xl:col-5 xl:pr-40">
-            <section class="no-text-wrap text-wrap border-l-4 border-secondary pl-40 py-40 mt-54 xl:mt-0">
+            <section class="no-text-wrap text-wrap border-l-4 border-secondary pl-40 py-40 mt-54 xl:mt-0" data-aos="fade-up" data-aos-delay="300">
               <h2 class="f-color-primary f-family-secondary f-size-45">Your own dedicated property expert</h2>
               <p>You have a dedicated point of contact for the whole process. So the person who values your property also conducts the viewings and helps with negotiating any offers – as well as liaising with solicitors, banks, mortgage brokers and other estate agents whenever needed. They hold catch-up calls with you every Wednesday to update you on progress, and stay with you through to the exchange of contracts and completion of the sale. In short, they make sure everything goes smoothly from start to finish.</p>
             </section>
@@ -157,11 +361,11 @@
     <section class="pos-relative flex-col justify-center horizontal-card mt-65 xl:mt-100">
       <div class="flex-col align-center">
         <div class="col-12 xl:col-6 ratio-16x9 lg:ratio-5x2 xl:ratio-none pos-relative xl:pos-absolute pin-y pin-l pin-r-auto image-placeholder">
-          <figure class="pos-absolute pin bg-cover bg-center -mr-65" style="background-image: url('./images/Group-201@2x.jpg');"></figure>
+          <figure class="pos-absolute pin bg-cover bg-center -mr-65" style="background-image: url('./images/Group-201@2x.jpg');" data-aos="fade-in" data-aos-delay="100"></figure>
         </div>
         <div class="container sm:container-sm md:container-md xl:container-xl xxl:container-xxl mx-auto">
           <div class="col-12 py-100 xl:col-5 xl:pl-40 xl:ml-auto">
-            <section class="no-text-wrap text-wrap border-l-4 border-secondary pl-40 py-40 mt-54 xl:mt-0">
+            <section class="no-text-wrap text-wrap border-l-4 border-secondary pl-40 py-40 mt-54 xl:mt-0" data-aos="fade-up" data-aos-delay="300">
               <h2 class="f-color-primary f-family-secondary f-size-45">Attention to all the details from start to finish</h2>
               <p>A vital part of every successful sale is diligent management of the whole chain of purchases – not just your immediate buyers. We have a team member who is responsible for this, who ensures any obstacles are overcome.</p>
               <p>We know this approach works. With one person following the whole transaction, and a specialist keeping a keen eye on the chain, our sales go through successfully.</p>
@@ -287,55 +491,61 @@
       <div class="container container-fluid mx-auto">
         <div class="flex-row flex-wrap p-10">
           <div class="col-12 sm:col-6 lg:col-4 p-10 flex-col">
-            <a href="#" class="text-wrap-md rollover-wrap flex-stretch flex-col hover:bg-parent transition-all no-underline">
+            <a href="#" class="text-wrap-md rollover-wrap flex-stretch flex-col hover:bg-parent transition-all no-underline" data-aos="fade-up" data-aos-delay="100">
               <figure class="ratio-1x1 rollover-wrap image-placeholder pos-relative">
                 <div class="rollover-effect pos-absolute pin bg-cover bg-center overlay-grad-1" style="background-image: url('./images/Rectangle-196@2x.jpg');">
                   <div></div>
                 </div>
               </figure>
-              <hgroup class="text-wrap-xs">
-                <h3 class="f-color-secondary f-size-14 uppercase">Section intro text if needed</h3>
-                <h2 class="f-size-36 f-color-primary f-family-secondary f-weight-bold">Over 150 years of experience.. </h2>
-              </hgroup>
-              <section class="text-wrap-md mt-auto">
+              <section class="text-wrap-md">
+                <hgroup class="text-wrap-xs">
+                  <h3 class="f-color-secondary f-size-14 uppercase">Section intro text if needed</h3>
+                  <h2 class="f-size-36 f-color-primary f-family-secondary f-weight-bold">Over 150 years of experience.. </h2>
+                </hgroup>
                 <p>Salisbury – much more than just a Cathedral, albeit a stunning example of medieval architecture boasting the highest spire in the country! Salisbury is without doubt a wonderful place to live. A thriving community with a strong emphasis on moving to the future without losing the beauty of t</p>
-                <div class="button secondary outline"><span>VIEW OUR AWARDS</span></div>
               </section>
+              <footer class="mt-auto">
+                <div class="button secondary outline"><span>VIEW OUR AWARDS</span></div>
+              </footer>
             </a>
           </div>
           <div class="col-12 sm:col-6 lg:col-4 p-10 flex-col">
-            <a href="#" class="text-wrap-md rollover-wrap flex-stretch flex-col hover:bg-parent transition-all no-underline">
+            <a href="#" class="text-wrap-md rollover-wrap flex-stretch flex-col hover:bg-parent transition-all no-underline" data-aos="fade-up" data-aos-delay="100">
               <figure class="ratio-1x1 rollover-wrap image-placeholder pos-relative">
                 <div class="rollover-effect pos-absolute pin bg-cover bg-center overlay-grad-1" style="background-image: url('./images/Rectangle-197@2x.jpg');">
                   <div></div>
                 </div>
               </figure>
-              <hgroup class="text-wrap-xs">
-                <h3 class="f-color-secondary f-size-14 uppercase">Section intro text if needed</h3>
-                <h2 class="f-size-36 f-color-primary f-family-secondary f-weight-bold">15 experience.. </h2>
-              </hgroup>
-              <section class="text-wrap-md mt-auto">
-                <p>Salisbury – much more than just a Cathedral, albeit a stunning example of medieval architecture boasting the highest spire in the country! Salisbury is without doubt a wonderful place to live. A thriving community with a strong emphasis on moving to the future without losing the beauty of t</p>
-                <div class="button secondary outline"><span>VIEW OUR AWARDS</span></div>
+              <section class="text-wrap-md">
+                <hgroup class="text-wrap-xs">
+                  <h3 class="f-color-secondary f-size-14 uppercase">Section intro text if needed</h3>
+                  <h2 class="f-size-36 f-color-primary f-family-secondary f-weight-bold">15 experience.. </h2>
+                </hgroup>
+                <p>Salisbury – much more than just a Cathedral, albeit a stunning example of medieval architecture boasting the highest spire in the country! Salisbury is without doubt a wonderful place to live.</p>
               </section>
+              <footer class="mt-auto">
+                <div class="button secondary outline"><span>VIEW OUR AWARDS</span></div>
+              </footer>
             </a>
           </div>
           <div class="col-12 sm:col-6 lg:col-4 p-10 flex-col">
             <article class="card flex-stretch flex-col" data-aos="fade-up" data-aos-delay="100">
-              <a href="#" class="text-wrap-md rollover-wrap flex-stretch flex-col hover:bg-parent transition-all no-underline">
+              <a href="#" class="text-wrap-md rollover-wrap flex-stretch flex-col hover:bg-parent transition-all no-underline" data-aos="fade-up" data-aos-delay="100">
                 <figure class="ratio-1x1 rollover-wrap image-placeholder pos-relative">
                   <div class="rollover-effect pos-absolute pin bg-cover bg-center overlay-grad-1" style="background-image: url('./images/Rectangle-198@2x.jpg');">
                     <div></div>
                   </div>
                 </figure>
-                <hgroup class="text-wrap-xs">
-                  <h3 class="f-color-secondary f-size-14 uppercase">Section intro text if needed</h3>
-                  <h2 class="f-size-36 f-color-primary f-family-secondary f-weight-bold">Over 150 years of experience.. </h2>
-                </hgroup>
-                <section class="text-wrap-md mt-auto">
+                <section class="text-wrap-md">
+                  <hgroup class="text-wrap-xs">
+                    <h3 class="f-color-secondary f-size-14 uppercase">Section intro text if needed</h3>
+                    <h2 class="f-size-36 f-color-primary f-family-secondary f-weight-bold">Over 150 years of experience.. </h2>
+                  </hgroup>
                   <p>Salisbury – much more than just a Cathedral, albeit a stunning example of medieval architecture boasting the highest spire in the country! Salisbury is without doubt a wonderful place to live. A thriving community with a strong emphasis on moving to the future without losing the beauty of t</p>
-                  <div class="button secondary outline"><span>VIEW OUR AWARDS</span></div>
                 </section>
+                <footer class="mt-auto">
+                  <div class="button secondary outline"><span>VIEW OUR AWARDS</span></div>
+                </footer>
               </a>
             </article>
           </div>
@@ -350,58 +560,64 @@
         <div class="flex-row flex-wrap -m-10">
           <div class="col-12 sm:col-6 lg:col-4 p-10 flex-col">
             <article class="card flex-stretch flex-col" data-aos="fade-up" data-aos-delay="100">
-              <a href="#" class="text-wrap-md rollover-wrap flex-stretch flex-col hover:bg-parent transition-all no-underline">
+              <a href="#" class="text-wrap-md rollover-wrap flex-stretch flex-col hover:bg-parent transition-all no-underline" data-aos="fade-up" data-aos-delay="100">
                 <figure class="ratio-1x1 rollover-wrap image-placeholder pos-relative">
                   <div class="rollover-effect pos-absolute pin bg-cover bg-center overlay-grad-1" style="background-image: url('./images/Rectangle-196@2x.jpg');">
                     <div></div>
                   </div>
                 </figure>
-                <hgroup class="text-wrap-xs">
-                  <h3 class="f-color-secondary f-size-14 uppercase">Section intro text if needed</h3>
-                  <h2 class="f-size-36 f-color-primary f-family-secondary f-weight-bold">Over 150 years of experience.. </h2>
-                </hgroup>
-                <section class="text-wrap-md mt-auto">
+                <section class="text-wrap-md">
+                  <hgroup class="text-wrap-xs">
+                    <h3 class="f-color-secondary f-size-14 uppercase">Section intro text if needed</h3>
+                    <h2 class="f-size-36 f-color-primary f-family-secondary f-weight-bold">Over 150 years of experience.. </h2>
+                  </hgroup>
                   <p>Salisbury – much more than just a Cathedral, albeit a stunning example of medieval architecture boasting the highest spire in the country! Salisbury is without doubt a wonderful place to live. A thriving community with a strong emphasis on moving to the future without losing the beauty of t</p>
-                  <div class="button secondary outline"><span>VIEW OUR AWARDS</span></div>
                 </section>
+                <footer class="mt-auto">
+                  <div class="button secondary outline"><span>VIEW OUR AWARDS</span></div>
+                </footer>
               </a>
             </article>
           </div>
           <div class="col-12 sm:col-6 lg:col-4 p-10 flex-col">
             <article class="card flex-stretch flex-col" data-aos="fade-up" data-aos-delay="100">
-              <a href="#" class="text-wrap-md rollover-wrap flex-stretch flex-col hover:bg-parent transition-all no-underline">
+              <a href="#" class="text-wrap-md rollover-wrap flex-stretch flex-col hover:bg-parent transition-all no-underline" data-aos="fade-up" data-aos-delay="100">
                 <figure class="ratio-1x1 rollover-wrap image-placeholder pos-relative">
                   <div class="rollover-effect pos-absolute pin bg-cover bg-center overlay-grad-1" style="background-image: url('./images/Rectangle-197@2x.jpg');">
                     <div></div>
                   </div>
                 </figure>
-                <hgroup class="text-wrap-xs">
-                  <h3 class="f-color-secondary f-size-14 uppercase">Section intro text if needed</h3>
-                  <h2 class="f-size-36 f-color-primary f-family-secondary f-weight-bold">15 experience.. </h2>
-                </hgroup>
-                <section class="text-wrap-md mt-auto">
+                <section class="text-wrap-md">
+                  <hgroup class="text-wrap-xs">
+                    <h3 class="f-color-secondary f-size-14 uppercase">Section intro text if needed</h3>
+                    <h2 class="f-size-36 f-color-primary f-family-secondary f-weight-bold">15 experience.. </h2>
+                  </hgroup>
                   <p>Salisbury – much more than just a Cathedral, albeit a stunning example of medieval architecture boasting the highest spire in the country! Salisbury is without doubt a wonderful place to live. A thriving community with a strong emphasis on moving to the future without losing the beauty of t</p>
-                  <div class="button secondary outline"><span>VIEW OUR AWARDS</span></div>
                 </section>
+                <footer class="mt-auto">
+                  <div class="button secondary outline"><span>VIEW OUR AWARDS</span></div>
+                </footer>
               </a>
             </article>
           </div>
           <div class="col-12 sm:col-6 lg:col-4 p-10 flex-col">
             <article class="card flex-stretch flex-col" data-aos="fade-up" data-aos-delay="100">
-              <a href="#" class="text-wrap-md rollover-wrap flex-stretch flex-col hover:bg-parent transition-all no-underline">
+              <a href="#" class="text-wrap-md rollover-wrap flex-stretch flex-col hover:bg-parent transition-all no-underline" data-aos="fade-up" data-aos-delay="100">
                 <figure class="ratio-1x1 rollover-wrap image-placeholder pos-relative">
                   <div class="rollover-effect pos-absolute pin bg-cover bg-center overlay-grad-1" style="background-image: url('./images/Rectangle-198@2x.jpg');">
                     <div></div>
                   </div>
                 </figure>
-                <hgroup class="text-wrap-xs">
-                  <h3 class="f-color-secondary f-size-14 uppercase">Section intro text if needed</h3>
-                  <h2 class="f-size-36 f-color-primary f-family-secondary f-weight-bold">Over 150 years of experience.. </h2>
-                </hgroup>
-                <section class="text-wrap-md mt-auto">
+                <section class="text-wrap-md">
+                  <hgroup class="text-wrap-xs">
+                    <h3 class="f-color-secondary f-size-14 uppercase">Section intro text if needed</h3>
+                    <h2 class="f-size-36 f-color-primary f-family-secondary f-weight-bold">Over 150 years of experience.. </h2>
+                  </hgroup>
                   <p>Salisbury – much more than just a Cathedral, albeit a stunning example of medieval architecture boasting the highest spire in the country! Salisbury is without doubt a wonderful place to live. A thriving community with a strong emphasis on moving to the future without losing the beauty of t</p>
-                  <div class="button secondary outline"><span>VIEW OUR AWARDS</span></div>
                 </section>
+                <footer class="mt-auto">
+                  <div class="button secondary outline"><span>VIEW OUR AWARDS</span></div>
+                </footer>
               </a>
             </article>
           </div>
@@ -475,7 +691,7 @@
       </div>
     </section>
     <!-- Single banner -->
-    <section class="ratio-custom-4 image-placeholder flex-col bg-light pos-relative">
+    <section class="ratio-custom-4 image-placeholder flex-col bg-light pos-relative" data-aos="fade-in" data-aos-delay="300">
       <figure class="bg-center bg-cover pin pos-absolute" style="background-image: url('./images/Rectangle-33@2x.jpg');">
       </figure>
     </section>
