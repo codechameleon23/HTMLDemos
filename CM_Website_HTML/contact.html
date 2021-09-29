@@ -26,233 +26,209 @@
   <header class="header w-full pos-fixed pin-t pin-x pt-15 pb-15 xl:pt-36 xl:pb-0 flex-col z-50 bg-white">
     <div class="container lg:container-lg xl:container-xl xxl:container-xxl mx-auto">
       <div class="flex-row align-center">
-        <a class="brand-logo mr-auto" href="index.html">
+        <a class="brand-logo mr-auto xl:-mt-30" href="index.html">
           <span class="icon icon-logo-sm lg:icon-logo ratio-logo">
             <span>
               <img class="w-full h-full object-contain" src="./images/CM_Logo.png">
             </span>
           </span>
         </a>
-        <div class="flex-row flex-wrap align-center justify-end xl:-m-5">
-          <div class="xl:p-5">
-            <a href="#" class="jsRequestValuationPopup_open button secondary auto-width"><span>BOOK A VALUATION</span></a>
+        <div class="flex-row flex-wrap align-center justify-end xl:-m-5 pos-absolute pin-x pin-t-100 md:pos-static">
+          <div class="xl:p-5 col-6 md:col-auto">
+            <a href="#" class="jsRequestValuationPopup_open button secondary auto-width w-full md:w-auto"><span>BOOK A VALUATION</span></a>
           </div>
-          <div class="xl:p-5">
-            <a href="#" class="button primary outline custom py-5 px-20 auto-width f-color-primary hover:bg-primary hover:f-color-white">
-              <span>Search Property</span>
-              <span class="icon icon-38 f-color-inherit">
-                <span class="p-5">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search" viewBox="0 0 24 24">
-                    <circle cx="11" cy="11" r="8" />
-                    <path d="m21 21-4.35-4.35" />
-                  </svg>
+          <div class="xl:p-5 col-6 md:col-auto">
+            <a href="#" class="jsRequestValuationPopup_open button primary auto-width w-full md:w-auto">
+              <span>
+                Search Property
+                <span class="icon icon-15 ml-5 mt-2 f-color-inherit">
+                  <span class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search" viewBox="0 0 24 24">
+                      <circle cx="11" cy="11" r="8" />
+                      <path d="m21 21-4.35-4.35" />
+                    </svg>
+                  </span>
                 </span>
               </span>
             </a>
           </div>
-          <!-- <div class="p-8 
-               pos-absolute 
-               pin-t-100 
-               pin-x 
-               md:pos-relative 
-               md:pin-t">
-               <form class="
-                  flex-row 
-                  bg-white 
-                  focus-within:shadow-lg 
-                  transition-all
-               ">
-                  <input type="text" placeholder="Search Property" name="searchProperty" class="f-size-14 f-color-primary flex-auto bg-white f-color-primary p-10 uppercase">
-                  <button class="icon icon-40 f-color-primary">
-                     <span class="p-5">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"
-                           viewBox="0 0 24 24">
-                           <circle cx="11" cy="11" r="8" />
-                           <path d="m21 21-4.35-4.35" />
-                        </svg>
-                     </span>
-                  </button>
-               </form>
-            </div> -->
-          <div class="p-8">
-            <div class="navbar-toggle f-color-primary d-inline-flex xl:d-hidden z-50">
-              <div class="icon hamburger pointer-events-auto transition-all">
-                <div class="m-1 lg:m-1_5">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
+          <nav class="navbar pos-fixed pin-x z-30 bg-primary f-color-white xl:f-size-15 xl:bg-transparent xl:f-color-primary xl:pin-none xl:pos-static xl:col-12 xl:p-5">
+            <div class="container lg:container-lg xl:container-xl xxl:container-xxl mx-auto">
+              <div class="flex-col xl:align-end">
+                <ul class="list-reset flex-col xl:flex-row">
+                  <li class="">
+                    <div class="submenu-trigger p-15 flex-row align-center">
+                      <span>
+                        BUYING
+                      </span>
+                      <span class="icon icon-15 ml-8 flex-none f-color-secondary">
+                        <span class="down-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down" viewBox="0 0 24 24">
+                            <path d="m6 9 6 6 6-6" /></svg>
+                        </span>
+                        <span class="close-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x" viewBox="0 0 24 24">
+                            <path d="M18 6 6 18M6 6l12 12" /></svg>
+                        </span>
+                      </span>
+                    </div>
+                    <div class="submenu pos-fixed pin-x z-40 bg-primary f-color-white">
+                      <div class="container lg:container-lg xl:container-xl xxl:container-xxl mx-auto">
+                        <div class="p-15 flex-row align-center justify-space-between xl:d-hidden">
+                          <button class="back-button uppercase f-color-inherit flex-row align-center">
+                            <span class="icon icon-15 mr-8 flex-none f-color-secondary">
+                              <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="111 237 192 320">
+                                <path d="M303 269.4L270.7 237 111 397l159.7 160 32.3-32.4L175.7 397z" />
+                              </svg>
+                            </span>
+                            Back
+                          </button>
+                          <h3>BUYING</h3>
+                        </div>
+                        <ul class="list-reset flex-col">
+                          <li class="border-b border-light">
+                            <a href="about.html" class="text-wrap-xs p-20">
+                              <h3 class="f-size-24">Submenu link 1</h3>
+                              <div class="flex-row align-start">
+                                <p>The leading estate agency for Salisbury and beyond.. </p>
+                                <span class="icon icon-10 flex-none mt-5 ml-8 f-color-secondary">
+                                  <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="111 237 192 320">
+                                    <path d="M111 269.4l32.3-32.4L303 397 143.3 557 111 524.6 238.3 397z" /></svg>
+                                </span>
+                              </div>
+                            </a>
+                          </li>
+                          <li class="border-b border-light">
+                            <a href="team.html" class="text-wrap-xs p-20">
+                              <h3 class="f-size-24">Submenu link 2</h3>
+                              <div class="flex-row align-start">
+                                <p>Salisbury’s award winning and number one estate agency.</p>
+                                <span class="icon icon-10 flex-none mt-5 ml-8 f-color-secondary">
+                                  <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="111 237 192 320">
+                                    <path d="M111 269.4l32.3-32.4L303 397 143.3 557 111 524.6 238.3 397z" /></svg>
+                                </span>
+                              </div>
+                            </a>
+                          </li>
+                          <li class="border-b border-light">
+                            <a href="about.html" class="text-wrap-xs p-20">
+                              <h3 class="f-size-24">Submenu link 3</h3>
+                              <div class="flex-row align-start">
+                                <p>The leading estate agency for Salisbury and beyond.. </p>
+                                <span class="icon icon-10 flex-none mt-5 ml-8 f-color-secondary">
+                                  <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="111 237 192 320">
+                                    <path d="M111 269.4l32.3-32.4L303 397 143.3 557 111 524.6 238.3 397z" /></svg>
+                                </span>
+                              </div>
+                            </a>
+                          </li>
+                          <li class="border-b border-light">
+                            <a href="team.html" class="text-wrap-xs p-20">
+                              <h3 class="f-size-24">Submenu link 4</h3>
+                              <div class="flex-row align-start">
+                                <p>Salisbury’s award winning and number one estate agency.</p>
+                                <span class="icon icon-10 flex-none mt-5 ml-8 f-color-secondary">
+                                  <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="111 237 192 320">
+                                    <path d="M111 269.4l32.3-32.4L303 397 143.3 557 111 524.6 238.3 397z" /></svg>
+                                </span>
+                              </div>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="">
+                    <div class="submenu-trigger p-15">LETTINGS</div>
+                  </li>
+                  <li class="">
+                    <a class="p-15" href="selling.html">SELLING</a>
+                  </li>
+                  <li class="">
+                    <div class="submenu-trigger p-15 flex-row align-center">
+                      <span>
+                        ABOUT US
+                      </span>
+                      <span class="icon icon-15 ml-8 flex-none f-color-secondary">
+                        <span class="down-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down" viewBox="0 0 24 24">
+                            <path d="m6 9 6 6 6-6" /></svg>
+                        </span>
+                        <span class="close-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x" viewBox="0 0 24 24">
+                            <path d="M18 6 6 18M6 6l12 12" /></svg>
+                        </span>
+                      </span>
+                    </div>
+                    <div class="submenu pos-fixed pin-x z-40 bg-primary f-color-white">
+                      <div class="container lg:container-lg xl:container-xl xxl:container-xxl mx-auto">
+                        <div class="p-15 flex-row align-center justify-space-between xl:d-hidden">
+                          <button class="back-button uppercase f-color-inherit flex-row align-center">
+                            <span class="icon icon-15 mr-8 flex-none f-color-secondary">
+                              <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="111 237 192 320">
+                                <path d="M303 269.4L270.7 237 111 397l159.7 160 32.3-32.4L175.7 397z" />
+                              </svg>
+                            </span>
+                            Back
+                          </button>
+                          <h3>ABOUT US</h3>
+                        </div>
+                        <ul class="list-reset flex-col">
+                          <li class="border-b border-light">
+                            <a href="about.html" class="text-wrap-xs p-20">
+                              <h3 class="f-size-24">About us</h3>
+                              <div class="flex-row align-start">
+                                <p>The leading estate agency for Salisbury and beyond.. </p>
+                                <span class="icon icon-10 flex-none mt-5 ml-8 f-color-secondary">
+                                  <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="111 237 192 320">
+                                    <path d="M111 269.4l32.3-32.4L303 397 143.3 557 111 524.6 238.3 397z" /></svg>
+                                </span>
+                              </div>
+                            </a>
+                          </li>
+                          <li class="border-b border-light">
+                            <a href="team.html" class="text-wrap-xs p-20">
+                              <h3 class="f-size-24">OUR PEOPLE</h3>
+                              <div class="flex-row align-start">
+                                <p>Salisbury’s award winning and number one estate agency.</p>
+                                <span class="icon icon-10 flex-none mt-5 ml-8 f-color-secondary">
+                                  <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="111 237 192 320">
+                                    <path d="M111 269.4l32.3-32.4L303 397 143.3 557 111 524.6 238.3 397z" /></svg>
+                                </span>
+                              </div>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="">
+                    <div class="p-15">LOCAL AREA</div>
+                  </li>
+                  <li class="">
+                    <a class="p-15" href="#">REGISTER</a>
+                  </li>
+                  <li class="is-active">
+                    <a class="p-15" href="contact.html">CONTACT</a>
+                  </li>
+                </ul>
               </div>
+            </div>
+          </nav>
+        </div>
+        <div class="navbar-toggle f-color-primary d-inline-flex xl:d-hidden z-50 m-8">
+          <div class="icon hamburger pointer-events-auto transition-all">
+            <div class="m-1 lg:m-1_5">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
           </div>
         </div>
       </div>
     </div>
   </header>
-  <nav class="w-full navbar pos-fixed pin z-30 bg-primary f-color-white f-size-15 xl:bg-white xl:f-color-primary xl:pin-b-auto xl:-mt-15">
-    <div class="container lg:container-lg xl:container-xl xxl:container-xxl mx-auto">
-      <div class="flex-col xl:align-end">
-        <ul class="list-reset flex-col xl:flex-row">
-          <li class="">
-            <div class="submenu-trigger p-15 flex-row align-center">
-              <span>
-                BUYING
-              </span>
-              <span class="icon icon-15 ml-8 flex-none f-color-secondary">
-                <span class="down-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down" viewBox="0 0 24 24">
-                    <path d="m6 9 6 6 6-6" /></svg>
-                </span>
-                <span class="close-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x" viewBox="0 0 24 24">
-                    <path d="M18 6 6 18M6 6l12 12" /></svg>
-                </span>
-              </span>
-            </div>
-            <div class="submenu pos-fixed pin z-40 bg-primary f-color-white">
-              <div class="container lg:container-lg xl:container-xl xxl:container-xxl mx-auto">
-                <div class="p-15 flex-row align-center justify-space-between xl:d-hidden">
-                  <button class="back-button uppercase f-color-inherit flex-row align-center">
-                    <span class="icon icon-15 mr-8 flex-none f-color-secondary">
-                      <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="111 237 192 320">
-                        <path d="M303 269.4L270.7 237 111 397l159.7 160 32.3-32.4L175.7 397z" />
-                      </svg>
-                    </span>
-                    <em>Back</em>
-                  </button>
-                  <h3><em>BUYING</em></h3>
-                </div>
-                <ul class="list-reset flex-col px-15">
-                  <li class="border-b border-light">
-                    <a href="about.html" class="text-wrap-xs p-20">
-                      <h3>Submenu link 1</h3>
-                      <div class="flex-row align-start">
-                        <p>The leading estate agency for Salisbury and beyond.. </p>
-                        <span class="icon icon-10 flex-none mt-5 ml-8 f-color-secondary">
-                          <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="111 237 192 320">
-                            <path d="M111 269.4l32.3-32.4L303 397 143.3 557 111 524.6 238.3 397z" /></svg>
-                        </span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="border-b border-light">
-                    <a href="team.html" class="text-wrap-xs p-20">
-                      <h3>Submenu link 2</h3>
-                      <div class="flex-row align-start">
-                        <p>Salisbury’s award winning and number one estate agency.</p>
-                        <span class="icon icon-10 flex-none mt-5 ml-8 f-color-secondary">
-                          <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="111 237 192 320">
-                            <path d="M111 269.4l32.3-32.4L303 397 143.3 557 111 524.6 238.3 397z" /></svg>
-                        </span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="border-b border-light">
-                    <a href="about.html" class="text-wrap-xs p-20">
-                      <h3>Submenu link 3</h3>
-                      <div class="flex-row align-start">
-                        <p>The leading estate agency for Salisbury and beyond.. </p>
-                        <span class="icon icon-10 flex-none mt-5 ml-8 f-color-secondary">
-                          <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="111 237 192 320">
-                            <path d="M111 269.4l32.3-32.4L303 397 143.3 557 111 524.6 238.3 397z" /></svg>
-                        </span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="border-b border-light">
-                    <a href="team.html" class="text-wrap-xs p-20">
-                      <h3>Submenu link 4</h3>
-                      <div class="flex-row align-start">
-                        <p>Salisbury’s award winning and number one estate agency.</p>
-                        <span class="icon icon-10 flex-none mt-5 ml-8 f-color-secondary">
-                          <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="111 237 192 320">
-                            <path d="M111 269.4l32.3-32.4L303 397 143.3 557 111 524.6 238.3 397z" /></svg>
-                        </span>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li class="">
-            <div class="submenu-trigger p-15">LETTINGS</div>
-          </li>
-          <li class="">
-            <a class="p-15" href="selling.html">SELLING</a>
-          </li>
-          <li class="">
-            <div class="submenu-trigger p-15 flex-row align-center">
-              <span>
-                ABOUT US
-              </span>
-              <span class="icon icon-15 ml-8 flex-none f-color-secondary">
-                <span class="down-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down" viewBox="0 0 24 24">
-                    <path d="m6 9 6 6 6-6" /></svg>
-                </span>
-                <span class="close-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x" viewBox="0 0 24 24">
-                    <path d="M18 6 6 18M6 6l12 12" /></svg>
-                </span>
-              </span>
-            </div>
-            <div class="submenu pos-fixed pin z-40 bg-primary f-color-white">
-              <div class="container lg:container-lg xl:container-xl xxl:container-xxl mx-auto">
-                <div class="p-15 flex-row align-center justify-space-between xl:d-hidden">
-                  <button class="back-button uppercase f-color-inherit flex-row align-center">
-                    <span class="icon icon-15 mr-8 flex-none f-color-secondary">
-                      <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="111 237 192 320">
-                        <path d="M303 269.4L270.7 237 111 397l159.7 160 32.3-32.4L175.7 397z" />
-                      </svg>
-                    </span>
-                    <em>Back</em>
-                  </button>
-                  <h3><em>ABOUT US</em></h3>
-                </div>
-                <ul class="list-reset flex-col px-15">
-                  <li class="border-b border-light">
-                    <a href="about.html" class="text-wrap-xs p-20">
-                      <h3>About us</h3>
-                      <div class="flex-row align-start">
-                        <p>The leading estate agency for Salisbury and beyond.. </p>
-                        <span class="icon icon-10 flex-none mt-5 ml-8 f-color-secondary">
-                          <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="111 237 192 320">
-                            <path d="M111 269.4l32.3-32.4L303 397 143.3 557 111 524.6 238.3 397z" /></svg>
-                        </span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="border-b border-light">
-                    <a href="team.html" class="text-wrap-xs p-20">
-                      <h3>OUR PEOPLE</h3>
-                      <div class="flex-row align-start">
-                        <p>Salisbury’s award winning and number one estate agency.</p>
-                        <span class="icon icon-10 flex-none mt-5 ml-8 f-color-secondary">
-                          <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="111 237 192 320">
-                            <path d="M111 269.4l32.3-32.4L303 397 143.3 557 111 524.6 238.3 397z" /></svg>
-                        </span>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li class="">
-            <div class="p-15">LOCAL AREA</div>
-          </li>
-          <li class="">
-            <a class="p-15" href="#">REGISTER</a>
-          </li>
-          <li class="is-active">
-            <a class="p-15" href="contact.html">CONTACT</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
   <!-- Main -->
   <main class="flex-auto flex-col">
     <section class="ratio-5x2 pos-relative">
