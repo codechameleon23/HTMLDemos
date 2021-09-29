@@ -201,3 +201,17 @@ main {
    margin-top: $headerHeight_xl;
   }
 }
+
+.hero-banner {
+  height: calc(100vh - #{$headerHeight});
+  @media (min-width: $bp_md) {
+   height: calc(100vh - #{$headerHeight_md});
+  }
+  @media (min-width: $bp_lg) {
+    height: auto;
+    max-height: calc(100vh - #{$headerHeight_lg});
+  }
+  @media (min-width: $bp_xl) {
+    max-height: calc(100vh - #{$headerHeight_xl});
+  }
+}
