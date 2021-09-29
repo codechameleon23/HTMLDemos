@@ -295,15 +295,18 @@ a
             transition: all .45s 0s ease-in-out;
 }
 
-.rollover-wrap
+.rollover-wrap .figure,
+.rollover-wrap figure
 {
     overflow: hidden;
 }
+
 .rollover-wrap .rollover-effect
 {
     -webkit-transition: all .35s 0s;
             transition: all .35s 0s;
 }
+
 .rollover-wrap-parent:hover .rollover-wrap .rollover-effect,
 .rollover-wrap:hover .rollover-effect
 {
@@ -5287,6 +5290,12 @@ ol.list li:before
         -webkit-column-count: 2;
            -moz-column-count: 2;
                 column-count: 2;
+    }
+    .col-count-3
+    {
+        -webkit-column-count: 3;
+           -moz-column-count: 3;
+                column-count: 3;
     }
     /* Icons sizes classes */
     .icon
@@ -10832,6 +10841,12 @@ ol.list li:before
            -moz-column-count: 2;
                 column-count: 2;
     }
+    .sm\:col-count-3
+    {
+        -webkit-column-count: 3;
+           -moz-column-count: 3;
+                column-count: 3;
+    }
     /* Icons sizes classes */
     .sm\:icon
     {
@@ -16375,6 +16390,12 @@ ol.list li:before
         -webkit-column-count: 2;
            -moz-column-count: 2;
                 column-count: 2;
+    }
+    .md\:col-count-3
+    {
+        -webkit-column-count: 3;
+           -moz-column-count: 3;
+                column-count: 3;
     }
     /* Icons sizes classes */
     .md\:icon
@@ -21920,6 +21941,12 @@ ol.list li:before
            -moz-column-count: 2;
                 column-count: 2;
     }
+    .lg\:col-count-3
+    {
+        -webkit-column-count: 3;
+           -moz-column-count: 3;
+                column-count: 3;
+    }
     /* Icons sizes classes */
     .lg\:icon
     {
@@ -27463,6 +27490,12 @@ ol.list li:before
         -webkit-column-count: 2;
            -moz-column-count: 2;
                 column-count: 2;
+    }
+    .xl\:col-count-3
+    {
+        -webkit-column-count: 3;
+           -moz-column-count: 3;
+                column-count: 3;
     }
     /* Icons sizes classes */
     .xl\:icon
@@ -33008,6 +33041,12 @@ ol.list li:before
            -moz-column-count: 2;
                 column-count: 2;
     }
+    .xxl\:col-count-3
+    {
+        -webkit-column-count: 3;
+           -moz-column-count: 3;
+                column-count: 3;
+    }
     /* Icons sizes classes */
     .xxl\:icon
     {
@@ -36245,10 +36284,10 @@ body[data-aos-easing='ease-in-out'] [data-aos],
 {
     top: 11.96rem;
 
-    height: 0;
+    height: calc(100vh - 11.96rem); 
 
-    -webkit-transition: opacity .35s 0s ease;
-            transition: opacity .35s 0s ease;
+    -webkit-transition: all .35s 0s ease;
+            transition: all .35s 0s ease;
 
     opacity: 0;
 }
@@ -36264,6 +36303,8 @@ body[data-aos-easing='ease-in-out'] [data-aos],
     .navbar
     {
         top: 7.8rem;
+
+        height: calc(100vh - 7.8rem);
     }
 }
 @media (min-width: 992px)
@@ -36271,6 +36312,8 @@ body[data-aos-easing='ease-in-out'] [data-aos],
     .navbar
     {
         top: 8.2rem;
+
+        height: calc(100vh - 8.2rem);
     }
 }
 @media (min-width: 1200px)
@@ -36286,9 +36329,11 @@ body[data-aos-easing='ease-in-out'] [data-aos],
 }
 @media (max-width: 1200px)
 {
-    .navbar > .container
+    .navbar > .container,
+    .navbar .submenu > .container
     {
         padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
     }
 }
 .navbar ul > li
@@ -36423,13 +36468,6 @@ body[data-aos-easing='ease-in-out'] [data-aos],
         opacity: 0;
     }
 }
-@media (max-width: 1200px)
-{
-    .submenu > .container
-    {
-        padding-top: 1.5rem;
-    }
-}
 .submenu ul > li
 {
     border-bottom-color: #6f6f6f;
@@ -36458,6 +36496,7 @@ body[data-aos-easing='ease-in-out'] [data-aos],
 }
 .submenu p
 {
+    font-size: 1.9rem;
     font-weight: normal;
 
     -webkit-transition: all .45s 0s ease-in-out;
@@ -36512,25 +36551,9 @@ body[data-aos-easing='ease-in-out'] [data-aos],
 {
     overflow: auto;
 
-    height: calc(100vh - 11.96rem);
-
     pointer-events: all;
 
     opacity: 1;
-}
-@media (min-width: 710px)
-{
-    .jsNavbarToggle.is-open .navbar
-    {
-        height: calc(100vh - 7.8rem);
-    }
-}
-@media (min-width: 992px)
-{
-    .jsNavbarToggle.is-open .navbar
-    {
-        height: calc(100vh - 8.2rem);
-    }
 }
 
 main
@@ -36636,13 +36659,13 @@ main
     -webkit-transition: height .3s 0s ease-out;
             transition: height .3s 0s ease-out;
 }
-.button:hover
-{
-    box-shadow: 0 6px 12px 6px rgba(0, 0, 0, .15);
-}
 .button:hover:before
 {
     height: 0;
+}
+.button:hover:not(.no-shadow)
+{
+    box-shadow: 0 6px 12px 6px rgba(0, 0, 0, .15);
 }
 .button > span
 {
