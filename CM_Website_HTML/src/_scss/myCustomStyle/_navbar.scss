@@ -1,13 +1,14 @@
-$headerHeight: 12.46rem;
+$headerHeight: 11.96rem;
 $headerHeight_md: 7.8rem;
 $headerHeight_lg: 8.2rem;
 $headerHeight_xl: 15.8rem;
 
 .navbar {
-  transition: all .35s 0s ease;
+  transition: opacity .35s 0s ease;
   height: 0;
   top: $headerHeight;
   opacity: 0;
+  pointer-events: none;
 
   @media (min-width: $bp_md) {
     top: $headerHeight_md;
@@ -170,6 +171,7 @@ $headerHeight_xl: 15.8rem;
     }
 
     .navbar{
+      pointer-events: all;
       height: calc(100vh - #{$headerHeight});
       overflow: auto;
       opacity: 1;
@@ -185,7 +187,7 @@ $headerHeight_xl: 15.8rem;
 }
 
 main {
-  margin-top: 6.8rem;
+  margin-top: $headerHeight;
   @media (min-width: $bp_md) {
    margin-top: $headerHeight_md;
   }
