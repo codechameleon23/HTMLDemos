@@ -22,13 +22,72 @@
           }
         }@else{
           .#{$bp}#{nth($state, 1)}#{nth($clr, 1)} {
-            &-#{nth($clr, 2)}#{nth($state, 2)} {
+             &-#{nth($clr, 2)}#{nth($state, 2)} {
               @if(nth($clr, 6) != null){
                 #{nth($clr, 6)}: #{nth($clr, 3)};
               }@else {
                 color: nth($clr, 3);
+                &, &::-webkit-input-placeholder {
+                  color: nth($clr, 3);
+                }
+                
+                &, &::-moz-placeholder {
+                  color: nth($clr, 3);
+                  opacity: 1;
+                }
+                
+                &, &:-ms-input-placeholder {
+                  color: nth($clr, 3);
+                }
+                
+                &, &:-moz-placeholder {
+                  color: nth($clr, 3);
+                }
+                &:invalid, &.not-selected {
+                  color: nth($clr, 3);
+                }
+                option {
+                  &[value=""] {
+                    color: nth($clr, 3) !important;
+                  }
+                }
               }
             }
+          }
+          .select select {
+            &.#{$bp}#{nth($state, 1)}#{nth($clr, 1)} {
+              &-#{nth($clr, 2)}#{nth($state, 2)} {
+               @if(nth($clr, 6) != null){
+                 #{nth($clr, 6)}: #{nth($clr, 3)};
+               }@else {
+                 color: nth($clr, 3);
+                 &, &::-webkit-input-placeholder {
+                   color: nth($clr, 3);
+                 }
+                 
+                 &, &::-moz-placeholder {
+                   color: nth($clr, 3);
+                   opacity: 1;
+                 }
+                 
+                 &, &:-ms-input-placeholder {
+                   color: nth($clr, 3);
+                 }
+                 
+                 &, &:-moz-placeholder {
+                   color: nth($clr, 3);
+                 }
+                 &:invalid, &.not-selected {
+                   color: nth($clr, 3);
+                 }
+                 option {
+                  &[value=""] {
+                    color: nth($clr, 3) !important;
+                  }
+                }
+               }
+             }
+           }  
           }
           @if(nth($clr, 5) == 'parent'){
             .#{$bp}#{nth($state, 1)}#{nth($clr, 1)}-parent#{nth($state, 2)} {
@@ -50,6 +109,65 @@
             #{nth($clr, 6)}: #{nth($clr, 3)};
           }@else {
             color: nth($clr, 3);
+            &::-webkit-input-placeholder {
+              color: nth($clr, 3);
+            }
+            
+            &::-moz-placeholder {
+              color: nth($clr, 3);
+              opacity: 1;
+            }
+            
+            &:-ms-input-placeholder {
+              color: nth($clr, 3);
+            }
+            
+            &:-moz-placeholder {
+              color: nth($clr, 3);
+            }
+            &:invalid, &.not-selected {
+              color: nth($clr, 3);
+            }
+            option {
+              &[value=""] {
+                color: nth($clr, 3) !important;
+              }
+            }
+          }
+        }
+      }
+      .select select {
+        &.#{$bp}#{nth($clr, 1)} {
+          &-#{nth($clr, 2)} {
+            @if(nth($clr, 6) != null){
+              #{nth($clr, 6)}: #{nth($clr, 3)};
+            }@else {
+              color: nth($clr, 3);
+              &::-webkit-input-placeholder {
+                color: nth($clr, 3);
+              }
+              
+              &::-moz-placeholder {
+                color: nth($clr, 3);
+                opacity: 1;
+              }
+              
+              &:-ms-input-placeholder {
+                color: nth($clr, 3);
+              }
+              
+              &:-moz-placeholder {
+                color: nth($clr, 3);
+              }
+              &:invalid, &.not-selected {
+                color: nth($clr, 3);
+              }
+              option {
+                &[value=""] {
+                  color: nth($clr, 3) !important;
+                }
+              }
+            }
           }
         }
       }
