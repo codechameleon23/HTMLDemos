@@ -8,8 +8,11 @@ $headerHeight_xl: 15.8rem;
   height: 0;
   top: $headerHeight;
   opacity: 0;
-  pointer-events: none;
 
+  @media (max-width: $bp_xl) {
+    pointer-events: none;
+  }
+  
   @media (min-width: $bp_md) {
     top: $headerHeight_md;
   }

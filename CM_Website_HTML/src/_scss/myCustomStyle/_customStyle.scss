@@ -54,23 +54,26 @@
       bottom: auto;
       top: 0;
     }
-    &.primary {
-      border-color: $color-primary;
-    }
-    &.secondary {
-      border-color: $color-secondary;
-    }
-    &:hover {
-      &.primary, &.secondary {
-        &:before {
-          height: 100%;
-        }
-        color: $color-white;
-      }
-    }
     &:not(.custom){
       color: inherit;
-      border: 1px solid;
+      border: .2rem solid;
+      padding: 1.3rem 1.8rem;
+      &.primary {
+        border-color: $color-primary;
+        color: $color-primary;
+      }
+      &.secondary {
+        border-color: $color-secondary;
+        color: $color-secondary;
+      }
+      &:hover {
+        &.primary, &.secondary {
+          &:before {
+            height: 100%;
+          }
+          color: $color-white;
+        }
+      }
     }
   }
 

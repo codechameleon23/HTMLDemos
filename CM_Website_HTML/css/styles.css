@@ -36244,9 +36244,15 @@ body[data-aos-easing='ease-in-out'] [data-aos],
 
     -webkit-transition: opacity .35s 0s ease;
             transition: opacity .35s 0s ease;
-    pointer-events: none; 
 
     opacity: 0;
+}
+@media (max-width: 1200px)
+{
+    .navbar
+    {
+        pointer-events: none;
+    }
 }
 @media (min-width: 710px)
 {
@@ -36627,28 +36633,32 @@ main
 
     height: 0;
 }
-.button.outline.primary
+.button.outline:not(.custom)
 {
+    padding: 1.3rem 1.8rem; 
+
+    color: inherit;
+    border: .2rem solid;
+}
+.button.outline:not(.custom).primary
+{
+    color: #0b303e; 
     border-color: #0b303e;
 }
-.button.outline.secondary
+.button.outline:not(.custom).secondary
 {
+    color: #be9f56; 
     border-color: #be9f56;
 }
-.button.outline:hover.primary,
-.button.outline:hover.secondary
+.button.outline:not(.custom):hover.primary,
+.button.outline:not(.custom):hover.secondary
 {
     color: #fff;
 }
-.button.outline:hover.primary:before,
-.button.outline:hover.secondary:before
+.button.outline:not(.custom):hover.primary:before,
+.button.outline:not(.custom):hover.secondary:before
 {
     height: 100%;
-}
-.button.outline:not(.custom)
-{
-    color: inherit;
-    border: 1px solid;
 }
 .button.primary:before
 {
