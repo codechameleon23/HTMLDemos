@@ -38,23 +38,10 @@
             <a href="#" class="jsRequestValuationPopup_open button secondary auto-width w-full md:w-auto"><span>BOOK A VALUATION</span></a>
           </div>
           <div class="xl:p-5 col-6 md:col-auto">
-            <!-- <a href="#" class="jsRequestValuationPopup_open button primary auto-width w-full md:w-auto">
-                  <span class="flex-row align-center">
-                     Search Property
-                     <span class="icon icon-15 f-color-inherit ml-8">
-                        <span>
-                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search" viewBox="0 0 24 24">
-                              <circle cx="11" cy="11" r="8"></circle>
-                              <path d="m21 21-4.35-4.35"></path>
-                            </svg>
-                        </span>
-                     </span>
-                  </span>
-               </a> -->
-            <a href="#" class="jsRequestValuationPopup_open button custom w-full py-15 px-20 bg-primary f-color-white xl:bg-white xl:f-color-primary xl:hover:bg-primary hover:f-color-white">
+            <a href="#" class="jsSearchPropertyPopup_open button custom w-full py-15 xl:py-8 px-20 bg-primary f-color-white xl:bg-white xl:f-color-primary xl:hover:bg-primary hover:f-color-white">
               <span class="flex-row align-center">
                 Search Property
-                <span class="icon icon-15 f-color-inherit ml-8 d-hidden xl:d-inline-block">
+                <span class="icon icon-30 f-color-inherit ml-8 d-hidden xl:d-inline-block">
                   <span>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search" viewBox="0 0 24 24">
                       <circle cx="11" cy="11" r="8"></circle>
@@ -66,9 +53,9 @@
             </a>
           </div>
           <nav class="navbar pos-fixed pin-x z-30 bg-primary f-color-white xl:f-size-15 xl:bg-transparent xl:f-color-primary xl:pin-none xl:pos-static xl:col-12 xl:p-5">
-            <div class="container lg:container-lg xl:container-xl xxl:container-xxl mx-auto">
+            <div class="container lg:container-lg xl:container-fluid mx-auto">
               <div class="flex-col xl:align-end">
-                <ul class="list-reset flex-col xl:flex-row">
+                <ul class="list-reset flex-col xl:flex-row -mx-15">
                   <li class="">
                     <div class="submenu-trigger p-15 flex-row align-center">
                       <span>
@@ -785,7 +772,7 @@
   <!-- Footer -->
   <!-- Request a Valuation popup -->
   <section id="jsRequestValuationPopup" class="d-hidden popup bg-primary f-color-white flex-col w-full h-full">
-    <div class="popup-body pos-absolute pin flex-col overflow-x-hidden overflow-y-auto">
+    <div class="popup-body pos-absolute pin flex-col justify-center align-center overflow-x-hidden overflow-y-auto">
       <div class="container container-md my-20 mx-auto">
         <div class="text-wrap-md">
           <div class="icon-90 lg:icon-165 mx-auto"><img src="./images/CM_Logo_Submark.png" /></div>
@@ -833,6 +820,120 @@
           </form>
           <footer class="flex-row justify-center no-text-wrap">
             <button class="jsRequestValuationPopup_close">
+              <span class="icon icon-30 f-weight-regular rounded-full f-color-secondary hover:bg-secondary hover:f-color-white shadow-lg">
+                <span class="p-8">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 224.512 224.512" fill="currentColor">
+                    <path d="M224.507 6.997L217.521 0 112.256 105.258 6.998 0 .005 6.997l105.258 105.257L.005 217.512l6.993 7L112.256 119.24l105.265 105.272 6.986-7-105.258-105.258z"></path>
+                  </svg>
+                </span>
+              </span>
+            </button>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Request a Valuation popup -->
+  <section id="jsSearchPropertyPopup" class="d-hidden popup bg-primary f-color-white flex-col w-full h-full">
+    <div class="popup-body pos-absolute pin flex-col justify-center align-center overflow-x-hidden overflow-y-auto">
+      <div class="container container-md my-20 mx-auto">
+        <div class="text-wrap-md">
+          <div class="icon-90 lg:icon-165 mx-auto"><img src="./images/CM_Logo_Submark.png" /></div>
+          <div class="text-center text-wrap-md">
+            <h2 class="f-size-24 lg:f-size-39 f-family-secondary f-weight-bold">Property Search</h2>
+          </div>
+          <form class="flex-row flex-wrap align-center">
+            <div class="col-12 xl:col-flex">
+              <div class="flex-row flex-wrap align-center -m-8 xl:py-30 xl:pr-30">
+                <div class="col-12 flex-row justify-center p-8">
+                  <div class="p-8">
+                    <label class="w-auto custom-tick mx-auto my-10">
+                      <input name="interestedIn" type="radio" checked="checked">
+                      <span class="d-inline-block tick"><span class="border border-secondary border-2 f-color-secondary rounded-full"></span></span>
+                      <span class="related-text">
+                        <span class="f-color-inherit">To Buy</span>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="p-8">
+                    <label class="w-auto custom-tick mx-auto my-10">
+                      <input name="interestedIn" type="radio">
+                      <span class="d-inline-block tick"><span class="border border-secondary border-2 f-color-secondary rounded-full"></span></span>
+                      <span class="related-text">
+                        <span class="f-color-inherit">To Rent</span>
+                      </span>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12 flex-col p-8">
+                  <div class="select">
+                    <select name="enquiryType" class="w-full border border-white f-color-inherit p-10 flex-stretch focus:shadow-md transition-all not-selected">
+                      <option value="" selected="selected">Location</option>
+                      <option>Option 1</option>
+                      <option>Option 2</option>
+                      <option>Option 3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-12 md:col-6 flex-col p-8">
+                  <div class="select">
+                    <select name="enquiryType" class="w-full border border-white f-color-inherit p-10 flex-stretch focus:shadow-md transition-all not-selected">
+                      <option value="" selected="selected">Min Price</option>
+                      <option>Option 1</option>
+                      <option>Option 2</option>
+                      <option>Option 3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-12 md:col-6 flex-col p-8">
+                  <div class="select">
+                    <select name="enquiryType" class="w-full border border-white f-color-inherit p-10 flex-stretch focus:shadow-md transition-all not-selected">
+                      <option value="" selected="selected">Max Price</option>
+                      <option>Option 1</option>
+                      <option>Option 2</option>
+                      <option>Option 3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-12 md:col-6 flex-col p-8">
+                  <div class="select">
+                    <select name="enquiryType" class="w-full border border-white f-color-inherit p-10 flex-stretch focus:shadow-md transition-all not-selected">
+                      <option value="" selected="selected">Min Beds</option>
+                      <option>Option 1</option>
+                      <option>Option 2</option>
+                      <option>Option 3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-12 md:col-6 flex-col p-8">
+                  <div class="select">
+                    <select name="enquiryType" class="w-full border border-white f-color-inherit p-10 flex-stretch focus:shadow-md transition-all not-selected">
+                      <option value="" selected="selected">Property Type</option>
+                      <option>Option 1</option>
+                      <option>Option 2</option>
+                      <option>Option 3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-12 flex-col p-8">
+                  <label class="w-auto custom-tick mx-auto my-10">
+                    <input name="addr" type="checkbox" class="style-radio">
+                    <span class="d-inline-block tick"><span class="border border-secondary border-2 f-color-secondary rounded-full"></span></span>
+                    <span class="related-text">
+                      <span class="f-color-inherit">Exclude STC</span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 mt-8 xl:mt-0">
+              <div class="flex-row flex-wrap justify-center">
+                <button class="button secondary"><span>search</span></button>
+              </div>
+            </div>
+          </form>
+          <footer class="flex-row justify-center no-text-wrap">
+            <button class="jsSearchPropertyPopup_close">
               <span class="icon icon-30 f-weight-regular rounded-full f-color-secondary hover:bg-secondary hover:f-color-white shadow-lg">
                 <span class="p-8">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 224.512 224.512" fill="currentColor">

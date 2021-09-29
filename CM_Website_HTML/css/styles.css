@@ -36674,12 +36674,10 @@ main
 }
 .button.outline:not(.custom).primary
 {
-    color: #0b303e; 
     border-color: #0b303e;
 }
 .button.outline:not(.custom).secondary
 {
-    color: #be9f56; 
     border-color: #be9f56;
 }
 .button.outline:not(.custom):hover.primary,
@@ -36978,4 +36976,42 @@ main
         -ms-flex-order: 1;
                 order: 1;
     }
+}
+
+ul.list
+{
+    list-style: none;
+}
+ul.list li
+{
+    position: relative;
+
+    padding-left: 30px;
+}
+ul.list li:before
+{
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    display: inherit;
+
+    width: 13px;
+    height: 13px;
+
+    content: '';
+    -webkit-transform: translate(0px, -50%);
+        -ms-transform: translate(0px, -50%);
+            transform: translate(0px, -50%);
+
+    border-radius: 9999px;
+    box-shadow: inset 0 0 13px 2px;
+}
+ul.list.primary li:before
+{
+    color: #0b303e;
+}
+ul.list.secondary li:before
+{
+    color: #be9f56;
 }
