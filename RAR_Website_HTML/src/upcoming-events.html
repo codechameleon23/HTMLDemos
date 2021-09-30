@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   @@include('./_includes/_head.html', {
+   "pageName": "Upcoming Events",
+   "description": ""
+   })
+</head>
+
+<body class="jsNavbarToggle is-close flex-col">
+
+  <!-- Header -->
+  @@include('./_includes/_header.html', {
+   "newsActive": "bg-primary fcolor-white",
+   "regUnitActive": "",
+   "assoNBranchActive": "",
+   "regJournalActive": "",
+   "resettlementActive": "",
+   "contactActive": ""
+})
+
+  <!-- Main -->
+  <main class="flex-auto flex-col">
+      
+      <!-- Page Title -->
+      @@include(
+         './_includes/_ribbon.html',
+         {
+         "titleTag": "h1",
+         "ribbonWrapper": "bg-primary fcolor-white text-center py-2sm",
+         "ribbonText": "Upcoming Events"
+         }
+      )
+
+      <section class="pt-2lg flex-col flex-stretch">
+         <div class="container lg:container-xl md:container-md mx-auto flex-stretch flex-col">
+            <div class="flex-stretch flex-col lg:ratio-16x9 pos-relative ratio-1x1">
+               <div class="pos-absolute pin">
+                  <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=regimentalheadquarters12%40gmail.com&amp;color=%23182C57&amp;src=44ide6ebkgr3pe5lt061lr5tns%40group.calendar.google.com&amp;color=%230F4B38&amp;src=4jnbfh5rvh58b2fa1oppqbnhf4%40group.calendar.google.com&amp;color=%238D6F47&amp;src=ooh6qbfdn5dptakeig6krpmq3c%40group.calendar.google.com&amp;color=%236B3304&amp;src=qhq59jlal3r1efklc0amchfvss%40group.calendar.google.com&amp;color=%232F6309&amp;src=9s0hgp1irf2j64m8bfd1684n1o%40group.calendar.google.com&amp;color=%238D6F47&amp;src=kpjr8lipv98vtvenkhe6g4in5s%40group.calendar.google.com&amp;color=%2342104A&amp;src=nhojfsjfnv70h6l27urvb8a4a0%40group.calendar.google.com&amp;color=%23B1365F&amp;src=7cmmhjmcmvlb0egkr2m3d78nfg%40group.calendar.google.com&amp;color=%2323164E&amp;ctz=Europe%2FLondon" style="border-width:0" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+               </div>
+            </div>
+         </div>
+      </div>
+
+  </main>
+  <!-- Footer -->
+  @@include('./_includes/_footer.html')
+
+  <script src="js/allScript.js"></script>
+</body>
+
+</html>

@@ -1,3 +1,69 @@
+///////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////
+var sectionIndex = 0;
+
+var PTSettings = {
+  "loop": "1",
+  "f_effect": "16",
+  "b_effect": "15",
+  "autoslide": "yes",
+  "autoslideduration": "6000"
+};
+var contentCarousel;
+$(function () {
+  resetALL();
+});
+$(window).resize(function () {
+  resetALL();
+});
+
+function resetALL() {
+  if (getViewportWidth() > 701) {
+	$('.home-scrollify_section-js').removeClass('no-height');
+	$.scrollify({
+	  section: ".home-scrollify_section-js",
+	  scrollSpeed: 700,
+	  easing: "easeInOutQuad",
+	  updateHash: false,
+	  touchScroll: false
+	});
+  } else {
+	console.log('adasdasd');
+	$('.home-scrollify_section-js').addClass('no-height');
+  }
+
+  if ($(".content_carousel-js").length) {
+	contentCarousel = $(".content_carousel-js");
+	contentCarousel.owlCarousel({
+	  items: 1,
+	  loop: true,
+	  mouseDrag: false,
+	  nav: false,
+	  dots: false,
+	  animateIn: isIE11 ? "" : "",
+	  animateOut: isIE11 ? "" : "",
+	  smartSpeed: 500,
+	});
+	$(".content_carousel-js--prev").click(function () {
+	  // Go to pervious item
+	  contentCarousel.trigger("prev.owl.carousel");
+	});
+	$(".content_carousel-js--next").click(function () {
+	  // Go to next item
+	  contentCarousel.trigger("next.owl.carousel");
+	});
+  };
+}
+
+function gotoContentSlide(slide) {
+  contentCarousel.trigger('to.owl.carousel', [slide, 500]);
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////
+
 document.getScroll = function () {
    if (window.pageYOffset != undefined) {
       return [pageXOffset, pageYOffset];
@@ -69,6 +135,52 @@ var intervalID;
 })(jQuery);
 
 var PageTransitions = (function ($) {
+
+   var bindEvent = function(){
+      $(".p-item").one('click', function () {
+         clearInterval(intervalID);
+         var activeIndex = $(".p-item.current").index();
+         var indexclick = $(this).index();
+         var action = "";
+         var dChange = indexclick - activeIndex;
+         if (dChange < 0) {
+            action = "+="
+         } else if (dChange > 0) {
+            action = "-="
+         } else {
+            return
+         }
+         var _this = $(this);
+         var dChangemodule = Math.abs(dChange)
+         $(this).data("slide_id");
+         toPage(12, $(this).data("slide_id"));
+         jQuery(".p-container").animate({
+            "margin-top": action + "" + (pitemChange * dChangemodule),
+         }, 800, function () {
+            var $prev = _this;
+            $('.p-item').removeClass("current");
+            $prev.addClass("current");
+            if (dChange > 0) {
+               if (!$('.p-item').eq($prev.index() + 4).length) {
+                  $('.p-item[data-slide_id="' + ($prev.data("slide_id")) + '"].normal').addClass("current");
+                  var margin = -60 - (($prev.data("slide_id") - 1) * pitemChange);
+                  jQuery(".p-container").css("margin-top", margin + "px");
+                  $prev.removeClass("current")
+               }
+            } else if (dChange < 0) {
+               // console.log("not found");
+               // console.log($('.p-item:nth-child(' + ($prev.index() - 2) + ')'));
+               if (!$('.p-item:nth-child(' + ($prev.index() - 2) + ')').length) {
+                  $('.p-item[data-slide_id="' + ($prev.data("slide_id")) + '"].normal').addClass("current");
+                  var margin = -60 - (($prev.data("slide_id") - 1) * pitemChange);
+                  jQuery(".p-container").css("margin-top", margin + "px");
+                  $prev.removeClass("current")
+               }
+            }
+         })
+      })
+   }
+
    var $main = $('#pt-main'),
       $pages = $main.children('div.pt-page'),
       pagesCount = $pages.length,
@@ -85,8 +197,7 @@ var PageTransitions = (function ($) {
          'animation': 'animationend'
       },
       animEndEventName = animEndEventNames[Modernizr.prefixed('animation')],
-      support = Modernizr.cssanimations,
-      $stopClick = false;
+      support = Modernizr.cssanimations;
 
    function init() {
       // date:16-07-19: apply css according to the number of banner images
@@ -121,52 +232,7 @@ var PageTransitions = (function ($) {
       $(".prev").click(function () {
          prevPage(12)
       });
-      $(".p-item").click(function () {
-         console.log('$stopClick', $stopClick);
-         if($stopClick) return;
-         $stopClick = true;
-         // $('.pagination-wrapper').addClass('disabled');
-         clearInterval(intervalID);
-         var activeIndex = $(".p-item.current").index();
-         var indexclick = $(this).index();
-         var action = "";
-         var dChange = indexclick - activeIndex;
-         if (dChange < 0) {
-            action = "+="
-         } else if (dChange > 0) {
-            action = "-="
-         } else {
-            return
-         }
-         var _this = $(this);
-         var dChangemodule = Math.abs(dChange)
-         $(this).data("slide_id");
-         toPage(12, $(this).data("slide_id"));
-         jQuery(".p-container").animate({
-            "margin-top": action + "" + (pitemChange * dChangemodule),
-         }, 800, function () {
-            var $prev = _this;
-            // $('.pagination-wrapper').removeClass('disabled');
-            $('.p-item').removeClass("current");
-            $prev.addClass("current");
-            if (dChange > 0) {
-               if (!$('.p-item').eq($prev.index() + 4).length) {
-                  $('.p-item[data-slide_id="' + ($prev.data("slide_id")) + '"].normal').addClass("current");
-                  var margin = -60 - (($prev.data("slide_id") - 1) * pitemChange);
-                  jQuery(".p-container").css("margin-top", margin + "px");
-                  $prev.removeClass("current")
-               }
-            } else if (dChange < 0) {
-               // console.log($('.p-item:nth-child(' + ($prev.index() - 2) + ')'));
-               if (!$('.p-item:nth-child(' + ($prev.index() - 2) + ')').length) {
-                  $('.p-item[data-slide_id="' + ($prev.data("slide_id")) + '"].normal').addClass("current");
-                  var margin = -60 - (($prev.data("slide_id") - 1) * pitemChange);
-                  jQuery(".p-container").css("margin-top", margin + "px");
-                  $prev.removeClass("current")
-               }
-            }
-         })
-      })
+      bindEvent();
       if (PTSettings.autoslide == "yes") {
          initAutoSlide()
       }
@@ -182,7 +248,7 @@ var PageTransitions = (function ($) {
    function initScrollEvents() {
       // console.log("initScrollEvents");
       jQuery(window).on('mousewheel DOMMouseScroll keydown', function (event) {
-         if (jQuery(".pt-slider").length == 0) return;
+         if (jQuery(".pt-slider").length == 0 || window.scrollY > 100) return;
          event.stopPropagation();
          // console.log('scroll event fired');
          // console.log(event.keyCode);
@@ -201,23 +267,20 @@ var PageTransitions = (function ($) {
          }
          if ((delta / 120 < 0)) {
             // console.log('delta', 2);
-            // event.preventDefault();
+            event.preventDefault();
             // nextPage(PTSettings.f_effect)
          }
          if (event.keyCode == 38) {
-            // $stopClick = true;
-            // event.preventDefault();
+            event.preventDefault();
             prevPage(PTSettings.b_effect)
          }
          if ((delta / 120 > 0)) {
-            // $stopClick = true;
-            // event.preventDefault();
+            event.preventDefault();
             prevPage(PTSettings.b_effect)
          }
       });
       if (jQuery(window).width() <= 768) {
          jQuery("#pt-main").on("swipedown", function (event) {
-            // $stopClick = true;
             prevPage(PTSettings.b_effect)
          })
          jQuery("#pt-main").on("swipeup", function (event) {
@@ -331,6 +394,7 @@ var PageTransitions = (function ($) {
          jQuery(".p-container").animate({
             "margin-top": "+=" + pitemChange,
          }, 800, function () {
+            bindEvent();
             var $prev = jQuery(".p-item.current").prev();
             $('.p-item').removeClass("current");
             $prev.addClass("current");
@@ -410,15 +474,12 @@ var PageTransitions = (function ($) {
       var setTimeoutTime = 0;
       if (isMac) setTimeoutTime = 400;
       resetPage($outpage, $inpage);
-      setTimeout(function () {
-         isAnimating = !1
+      setTimeout(function () {   
+         isAnimating = !1;
       }, setTimeoutTime)
    }
 
    function resetPage($outpage, $inpage) {
-      setTimeout(function(){
-         $stopClick = false;
-      }, 200)
       $outpage.attr('class', $outpage.data('originalClassList'));
       $inpage.attr('class', $inpage.data('originalClassList') + ' pt-page-current')
    }

@@ -1,0 +1,30 @@
+<div class="pos-relative flex-col">
+   <nav class="side-navbar bg-white border-default border-r shadow-md xxl:shadow-none flex-stetch min-h-full">
+      <ul class="list-reset flex-col w-full">
+         <li class="border-l-thik hover:border-primary @@if(!context.dashboard){ border-light } @@if(context.dashboard){ border-primary bg-light }">
+            <a href="index.html" class="flex-row p-md	align-center f-size-3sm f-color-secondary no-underline">
+               <span class="icon mr-xs flex-none f-color-primary"><i data-feather="grid"></i></span>
+               <span>Dashboard</span>
+            </a>
+         </li>
+         <li class="border-l-thik hover:border-primary @@if(!context.analytics){ border-light } @@if(context.analytics){ border-primary bg-light }">
+            <a href="analytics.html" class="flex-row p-md	align-center f-size-3sm f-color-secondary no-underline">
+               <span class="icon mr-xs flex-none f-color-primary"><i data-feather="activity"></i></span>
+               <span>Analytics</span>
+            </a>
+         </li>
+         <li class="border-l-thik hover:border-primary @@if(!context.multiscreen){ border-light } @@if(context.multiscreen){ border-primary bg-light }">
+            <a href="multiscreen.html" class="flex-row p-md	align-center f-size-3sm f-color-secondary no-underline">
+               <span class="icon mr-xs flex-none f-color-primary"><i data-feather="monitor"></i></span>
+               <span>Multiscreen</span>
+            </a>
+         </li>
+         <li class="border-l-thik hover:border-primary @@if(!context.playback){ border-light } @@if(context.playback){ border-primary bg-light }">
+            <a href="playback.html" class="flex-row p-md	align-center f-size-3sm f-color-secondary no-underline">
+               <span class="icon mr-xs flex-none f-color-primary"><i data-feather="play"></i></span>
+               <span>Playback</span>
+            </a>
+         </li>
+      </ul>
+   </nav>
+</div>

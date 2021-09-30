@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  @@include('./_includes/_head.html', {
+    "pageName": "Home",
+    "description": ""
+  })
+</head>
+
+<body class="jsNavbarToggle is-close flex-col">
+
+  <!-- Header -->
+  @@include('./_includes/_header.html', {
+    "headerPosClasses": "lg:pos-absolute pin-x pin-t z-40",
+    "aboutActive": "",
+    "communityActive": "",
+    "curriculumActive": "",
+    "examsActive": "",
+    "studentServicesActive": "",
+    "newsNEventsActive": ""
+  })
+
+    <!-- Main -->
+    <main class="flex-auto flex-col">
+    <!-- Hero Banner -->
+    @@include('./_includes/_banner-carousel.html', {
+      "rowClasses": "flex-wrap -mr-2xs lg:-mr-md -mb-md",
+      "carousel": false,
+      "hideControl": true,
+      "data": [
+        {
+          "isBanner": true,
+          "bannerClasses": "xl:py-xxl bg-shipGray fcolor-white md:fcolor-inherit flex-col overflow-hidden",
+          "bannerImage": "iStock-944069638.jpg",
+          "bannerImageClasses": "bg-cover bg-center bg-inherit opacity-50 md:opacity-100 pos-absolute pin",
+          "bannerInnerClasses": "",
+          "bannerInnerContainerClasses": "container md:container-xl mx-auto pos-relative lg:pt-xxl",
+          "colClasses": "md:col-8 lg:col-5 flex-col md:pr-2lg py-2lg",
+          "cardImage": "",
+          "imageClasses": "",
+          "imageBgClasses": "",
+          "cardContentClasses": "",
+          "tag": false,
+          "tagClasses": "",
+          "tagText": "",
+          "footerClasses": "md:pt-md",
+          "cardTitle": "Your guide to our Academy services starts here.",
+          "cardTitleClasses": "fweight-bold fsize-lg lg:fsize-xl",
+          "cardText": ["<p data-aos='fade-up' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom' class='fsize-2sm fweight-normal'>Dandent odipid et dolupta duciis es raep ernatum coribus enimin et volorem.Ruptatem lique nullabore dolenturion ni aut remodiae.</p>"],
+          "footerClasses": "pt-sm",
+          "cardButton": "Read more",
+          "buttonLink": "#",
+          "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide",
+          "cardTitleAOSattr": "data-aos='fade-up' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "footerAOSattr": "data-aos='fade-up' data-aos-delay='500' data-aos-duration='700' data-aos-anchor-placement='top-bottom'"
+        }
+      ]
+    })
+
+    <!-- Item carousel -->
+    @@include('./_includes/_banner-carousel.html', {
+      "rowClasses": "flex-wrap",
+      "carousel": true,
+      "hideControl": false,
+      "jsCarouselClasses": "jsCategoryCarousel",
+      "jsCarouselControlClasses": "icon icon-2md -mt-sm bg-flamingo fcolor-white hover:bg-dark shadow border border-white",
+      "controlLeftClasses": "border-l-0",
+      "controlRightClasses": "border-r-0",
+      "data": [
+        { 
+          "colClasses": "flex-col col-12 px-lg py-xl border-b-20 theme-border pos-relative has-theme-java",
+          "aosAttr": "data-aos='fade-up' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "cardImage": "single-logo-java.png",
+          "imageClasses": "ratio-1x1 icon-logo-md mx-auto mb-md",
+          "imageBgClasses": "bg-bottom bg-cover", 
+          "cardContentClasses": "text-center",
+          "cardTitle": "Academy",
+          "cardText": ["<span class='lg:d-hidden theme-text fsize-xs fweight-medium uppercase'>view info</span>"],
+          "cardTitleClasses": "fcolor-java fweight-bold fsize-md",
+          "footerHtml": "<div class='text-wrap w-full'><h3 class='fweight-bold fsize-2sm'>Academy</h3><ul class='list-reset'><li class='flex-row mb-xxs'> <span class='flex-none icon icon-xs mr-xs mt-xxxs'><img src='./images/tick-icon.png'/></span><div class='flex-auto'>Functional Skills Maths</div></li><li class='flex-row mb-xxs'> <span class='flex-none icon icon-xs mr-xs mt-xxxs'><img src='./images/tick-icon.png'/></span><div class='flex-auto'>Functional Skills English</div></li><li class='flex-row mb-xxs'> <span class='flex-none icon icon-xs mr-xs mt-xxxs'><img src='./images/tick-icon.png'/></span><div class='flex-auto'>Business English</div></li><li class='flex-row mb-xxs'> <span class='flex-none icon icon-xs mr-xs mt-xxxs'><img src='./images/tick-icon.png'/></span><div class='flex-auto'>1-1 Support</div></li><li class='flex-row mb-xxs'> <span class='flex-none icon icon-xs mr-xs mt-xxxs'><img src='./images/tick-icon.png'/></span><div class='flex-auto'>How to apply</div></li><li class='flex-row mb-xxs'> <span class='flex-none icon icon-xs mr-xs mt-xxxs'><img src='./images/tick-icon.png'/></span><div class='flex-auto'>BTEC Level 3 Business</div></li></ul></div>",
+          "footerClasses": "pos-absolute pin theme-bg opacity-0 hover:opacity-100 transition-all flex-col align-center justify-center p-md fcolor-white text-left"
+        },
+        { 
+          "colClasses": "flex-col col-12 px-lg py-xl border-b-20 theme-border pos-relative has-theme-jaffa",
+          "aosAttr": "data-aos='fade-up' data-aos-delay='200' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "cardImage": "single-logo-jaffa.png",
+          "imageClasses": "ratio-1x1 icon-logo-md mx-auto mb-md",
+          "imageBgClasses": "bg-bottom bg-cover", 
+          "cardContentClasses": "text-center",
+          "cardTitle": "Apprenticeship",
+          "cardText": ["<span class='lg:d-hidden theme-text fsize-xs fweight-medium uppercase'>view info</span>"],
+          "cardTitleClasses": "fcolor-jaffa fweight-bold fsize-md",
+          "footerHtml": "<div class='text-wrap w-full'><h3 class='fweight-bold fsize-2sm'>Apprenticeship</h3><ul class='list-reset'><li class='flex-row mb-xxs'> <span class='flex-none icon icon-xs mr-xs mt-xxxs'><img src='./images/tick-icon.png'/></span><div class='flex-auto'>Functional Skills Maths</div></li><li class='flex-row mb-xxs'> <span class='flex-none icon icon-xs mr-xs mt-xxxs'><img src='./images/tick-icon.png'/></span><div class='flex-auto'>Functional Skills English</div></li><li class='flex-row mb-xxs'> <span class='flex-none icon icon-xs mr-xs mt-xxxs'><img src='./images/tick-icon.png'/></span><div class='flex-auto'>Business English</div></li><li class='flex-row mb-xxs'> <span class='flex-none icon icon-xs mr-xs mt-xxxs'><img src='./images/tick-icon.png'/></span><div class='flex-auto'>1-1 Support</div></li><li class='flex-row mb-xxs'> <span class='flex-none icon icon-xs mr-xs mt-xxxs'><img src='./images/tick-icon.png'/></span><div class='flex-auto'>How to apply</div></li><li class='flex-row mb-xxs'> <span class='flex-none icon icon-xs mr-xs mt-xxxs'><img src='./images/tick-icon.png'/></span><div class='flex-auto'>BTEC Level 3 Business</div></li></ul></div>",
+          "footerClasses": "pos-absolute pin theme-bg opacity-0 hover:opacity-100 transition-all flex-col align-center justify-center p-md fcolor-white text-left"
+        },
+        { 
+          "colClasses": "flex-col col-12 px-lg py-xl border-b-20 theme-border pos-relative has-theme-flamingo",
+          "aosAttr": "data-aos='fade-up' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "cardImage": "single-logo-flamingo.png",
+          "imageClasses": "ratio-1x1 icon-logo-md mx-auto mb-md",
+          "imageBgClasses": "bg-bottom bg-cover", 
+          "cardContentClasses": "text-center",
+          "cardTitle": "Adult & Comunity",
+          "cardText": ["<span class='lg:d-hidden theme-text fsize-xs fweight-medium uppercase'>view info</span>"],
+          "cardTitleClasses": "fcolor-flamingo fweight-bold fsize-md",
+          "footerHtml": "<div class='text-wrap w-full'><h3 class='fweight-bold fsize-2sm'>Adult & Community</h3><ul class='list-reset'><li class='flex-row mb-xxs'> <span class='flex-none icon icon-xs mr-xs mt-xxxs'><img src='./images/tick-icon.png'/></span><div class='flex-auto'>Functional Skills Maths</div></li><li class='flex-row mb-xxs'> <span class='flex-none icon icon-xs mr-xs mt-xxxs'><img src='./images/tick-icon.png'/></span><div class='flex-auto'>Functional Skills English</div></li><li class='flex-row mb-xxs'> <span class='flex-none icon icon-xs mr-xs mt-xxxs'><img src='./images/tick-icon.png'/></span><div class='flex-auto'>Business English</div></li><li class='flex-row mb-xxs'> <span class='flex-none icon icon-xs mr-xs mt-xxxs'><img src='./images/tick-icon.png'/></span><div class='flex-auto'>1-1 Support</div></li><li class='flex-row mb-xxs'> <span class='flex-none icon icon-xs mr-xs mt-xxxs'><img src='./images/tick-icon.png'/></span><div class='flex-auto'>How to apply</div></li><li class='flex-row mb-xxs'> <span class='flex-none icon icon-xs mr-xs mt-xxxs'><img src='./images/tick-icon.png'/></span><div class='flex-auto'>BTEC Level 3 Business</div></li></ul></div>",
+          "footerClasses": "pos-absolute pin theme-bg opacity-0 hover:opacity-100 transition-all flex-col align-center justify-center p-md fcolor-white text-left"
+        },
+        { 
+          "colClasses": "flex-col col-12 px-lg py-xl border-b-20 theme-border pos-relative has-theme-deluge",
+          "aosAttr": "data-aos='fade-up' data-aos-delay='400' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "cardImage": "single-logo-deluge.png",
+          "imageClasses": "ratio-1x1 icon-logo-md mx-auto mb-md",
+          "imageBgClasses": "bg-bottom bg-cover", 
+          "cardContentClasses": "text-center",
+          "cardTitle": "Exam Centre",
+          "cardText": ["<span class='lg:d-hidden theme-text fsize-xs fweight-medium uppercase'>view info</span>"],
+          "cardTitleClasses": "fcolor-deluge fweight-bold fsize-md",
+          "footerHtml": "<div class='text-wrap w-full'><h3 class='fweight-bold fsize-2sm'>Exam Centre</h3><ul class='list-reset'><li class='flex-row mb-xxs'> <span class='flex-none icon icon-xs mr-xs mt-xxxs'><img src='./images/tick-icon.png'/></span><div class='flex-auto'>Functional Skills Maths</div></li><li class='flex-row mb-xxs'> <span class='flex-none icon icon-xs mr-xs mt-xxxs'><img src='./images/tick-icon.png'/></span><div class='flex-auto'>Functional Skills English</div></li><li class='flex-row mb-xxs'> <span class='flex-none icon icon-xs mr-xs mt-xxxs'><img src='./images/tick-icon.png'/></span><div class='flex-auto'>Business English</div></li><li class='flex-row mb-xxs'> <span class='flex-none icon icon-xs mr-xs mt-xxxs'><img src='./images/tick-icon.png'/></span><div class='flex-auto'>1-1 Support</div></li><li class='flex-row mb-xxs'> <span class='flex-none icon icon-xs mr-xs mt-xxxs'><img src='./images/tick-icon.png'/></span><div class='flex-auto'>How to apply</div></li><li class='flex-row mb-xxs'> <span class='flex-none icon icon-xs mr-xs mt-xxxs'><img src='./images/tick-icon.png'/></span><div class='flex-auto'>BTEC Level 3 Business</div></li></ul></div>",
+          "footerClasses": "pos-absolute pin theme-bg opacity-0 hover:opacity-100 transition-all flex-col align-center justify-center p-md fcolor-white text-left"
+        }
+      ]
+    })
+
+    <!-- Let NLET help you  on the way to personal success. -->
+    @@include(
+      './_includes/_column-grid.html',
+      {
+        "sectionClasses": "pt-2md lg:pt-0",
+        "containerClasses": "container md:container-md lg:container-fluid mx-auto",
+        "rowClasses": "bg-java fcolor-white flex-row-reverse flex-wrap pos-relative",
+        "childOnly": false,
+        "data": [
+          {
+          "colClasses": "flex-col col-12 flex-col lg:flex-row-reverse container lg:container-xl mx-auto",
+          "aosAttr": "",
+          "vericalCard": true,
+          "cardImage": "iStock-947895256.jpg",
+          "imageClasses": "ratio-16x9 lg:ratio-none lg:col-6 lg:pos-absolute pin-y pin-l",
+          "imageBgClasses": "bg-center bg-cover",
+          "cardContentClasses": "lg:col-6 pt-sm p-md xl:pr-0 lg:pl-xxl lg:py-xxl ml-auto",
+          "cardTitle": "Let NLET help you  on the way to personal success.",
+          "cardTitleClasses": "fweight-bold fsize-2md lg:fsize-2lg",
+          "cardText": ["<p>Pimus facto culiam ius ad fuemurni sum, Catquam quit rent. Veriam henituidet? Um quamquam inium et nontem etorim die cons mandam auconve simunc tam huit parbi popori pere tam cla octus sula mena tia. Hendite nonem alia cus autat. Quiae doluptu rec uptatiae et et licat essequat.</p>"],
+          "footerClasses": "pt-sm",
+          "cardButton": "CONTACT US",
+          "buttonLink": "contact-us.html",
+          "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide",
+          "cardTextAOSattr": "data-aos='fade-up' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "footerAOSattr": "data-aos='fade-up' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom'"
+          }
+        ]
+      }
+    )
+
+    <section class="pt-2md lg:pt-0">
+      <div class="pos-relative flex-row-reverse flex-wrap py-lg py-xl fcolor-white bg-shipGray">
+        <div class="container container-md lg:container-xl mx-auto lg:flex-row-reverse">
+          <div class="flex-col lg:flex-row lg:-mr-lg -mb-md">
+            <div class="lg:col-3 lg:pr-lg mb-md flex-col justify-center">
+              <h2 class="fweight-bold fsize-4md">Growth<span class="fcolor-java">.</span><br>
+                  Community<span class="fcolor-jaffa">.</span><br> 
+                  Diversity<span class="fcolor-deluge">.</span><br>
+                  Innovation<span class="fcolor-flamingo">.</span></h2>
+            </div>
+            <div class="lg:col-9 flex-col md:flex-row flex-wrap -mr-xs md:-mr-lg">
+              <div class="md:col-6 pr-xs md:pr-lg flex-row mb-md">
+                <div class="w-full text-wrap">
+                  <h2 class="fweight-bold fsize-2md">About</h2>
+                  <p>Pimus facto culiam ius ad fuemurni sum, Catquam quit rent. Veriam henituidet? Um quamquam inium et; nontem etorim die cons mandam auconve simunc tam huit parbi popori pere tam. Tempori qui omnissumquae.</p>
+                </div>
+              </div>
+              <div class="md:col-6 pr-xs md:pr-lg flex-row mb-md">
+                <div class="w-full text-wrap">
+                  <h2 class="fweight-bold fsize-2md">Vision</h2>
+                  <p>NLET is a progressive charity where everyone has the opportunity to grow, achieve and improve their life chances through social & economic regeneration, education, training and community based activities.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Devider -->
+    @@include(
+      './_includes/_divider.html', 
+      {
+        "parts": [
+          {
+            "color": "bg-turmeric"
+          },
+          {
+            "color": "bg-mauvelous"
+          },
+          {
+            "color": "bg-lightningYellow"
+          },
+          {
+            "color": "bg-vistaBlue"
+          }
+        ]
+      }
+    )
+
+    <!-- Our Mission is to build on the talents of our learners. -->
+    @@include(
+    './_includes/_column-grid.html',
+      {
+        "sectionClasses": "pt-2md lg:pt-0",
+        "containerClasses": "container md:container-md lg:container-fluid mx-auto",
+        "rowClasses": "bg-white flex-row flex-wrap pos-relative",
+        "childOnly": false,
+        "data": [
+          {
+            "colClasses": "flex-col col-12 flex-col lg:flex-row-reverse container lg:container-xl mx-auto",
+            "aosAttr": "",
+            "vericalCard": true,
+            "cardImage": "iStock-877026356.jpg",
+            "imageClasses": "ratio-16x9 lg:ratio-none lg:col-6 lg:pos-absolute pin-y pin-r",
+            "imageBgClasses": "bg-center bg-cover",
+            "cardContentClasses": "lg:col-6 pt-sm p-md xl:pl-0 lg:pr-xxl lg:py-3xxl mr-auto",
+            "cardTitle": "Our Mission is to build on the talents of our learners." ,
+            "cardTitleClasses": "fweight-bold fsize-2md lg:fsize-2lg",
+            "cardText": ["<ul class='text-wrap ml-sm'><li class='fweight-bold'><span class='fweight-light'>NLET strives to be a key player in social & economic growth, regeneration and community development</span></li><li class='fweight-bold'><span class='fweight-light'>Raising skills and attainment</span></li><li class='fweight-bold'><span class='fweight-light'>Delivering excellence</span></li><li class='fweight-bold'><span class='fweight-light'>To inspire people from all ages, communities and backgrounds to achieve their potential</span></li><li class='fweight-bold'><span class='fweight-light'>Working in partnership with employers to upskill workforce to meet local and other regions key objectives.</span></li></ul>"],
+            "footerClasses": "pt-sm",
+            "cardButton": "FIND OUT MORE",
+            "buttonLink": "#",
+            "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide",
+            "cardTextAOSattr": "data-aos='fade-up' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+            "footerAOSattr": "data-aos='fade-up' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom'"
+          }
+        ]
+      }
+    )
+
+    <section class="pt-2md lg:pt-0">
+      <div class="container md:container-md lg:container-fluid mx-auto">
+        <div class="flex-row flex-wrap pos-relative">
+          <div class="col-12 lg:col-6 flex-col">
+            @@include(
+              './_includes/_simple-card.html', 
+              {
+                "colClasses": "flex-col xl:flex-row xl:flex-row-reverse xl:flex-col flex-stretch",
+                "aosAttr": "data-aos='fade-up' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+                "cardImage": "iStock-884707986.jpg",
+                "imageClasses": "xl:col-6 xl:col-unset flex-auto ratio-custom-1 md:ratio-5x2 xl:ratio-16x9 xl:ratio-custom-2",
+                "imageBgClasses": "bg-center bg-cover", 
+                "cardContentClasses": "xl:col-6 xl:col-unset bg-deluge fcolor-white pt-md px-md lg:pt-lg lg:px-lg flex-col",
+                "cardTitle": "A News headline here and here and here and here and here.",
+                "cardTitleClasses": "fweight-medium fsize-4md",
+                "cardText": "",
+                "footerClasses": "mt-auto pt-sm",
+                "cardButton": "READ MORE",
+                "buttonLink": "#",
+                "buttonClasses": "button hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md"
+              }
+            )
+          </div>
+          <div class="col-12 lg:col-6 flex-col">
+            @@include(
+              './_includes/_simple-card.html', 
+              {
+                "colClasses": "flex-col flex-stretch xl:flex-row",
+                "aosAttr": "data-aos='fade-up' data-aos-delay='200' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+                "cardImage": "iStock-891625526.jpg",
+                "imageClasses": "xl:col-6 ratio-custom-1 md:ratio-5x2 xl:ratio-custom-2",
+                "imageBgClasses": "bg-center bg-cover", 
+                "cardContentClasses": "xl:col-6 bg-lightningYellow fcolor-white pt-md px-md lg:pt-lg lg:px-lg flex-col",
+                "cardTitle": "A News headline here and here and here and here and here.",
+                "cardTitleClasses": "fweight-medium fsize-4md",
+                "cardText": "",
+                "footerClasses": "mt-auto pt-sm",
+                "cardButton": "READ MORE",
+                "buttonLink": "#",
+                "buttonClasses": "button hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md"
+              }
+            )
+            @@include(
+              './_includes/_simple-card.html', 
+              {
+                "colClasses": "flex-col flex-stretch xl:flex-row-reverse",
+                "aosAttr": "data-aos='fade-up' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+                "cardImage": "iStock-962642026.jpg",
+                "imageClasses": "xl:col-6 ratio-custom-1 md:ratio-5x2 xl:ratio-custom-2",
+                "imageBgClasses": "bg-center bg-cover", 
+                "cardContentClasses": "xl:col-6 bg-mauvelous fcolor-white pt-md px-md lg:pt-lg lg:px-lg flex-col",
+                "cardTitle": "A News headline here and here and here and here and here.",
+                "cardTitleClasses": "fweight-medium fsize-4md",
+                "cardText": "",
+                "footerClasses": "mt-auto pt-sm",
+                "cardButton": "READ MORE",
+                "buttonLink": "#",
+                "buttonClasses": "button hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md"
+              }
+            )
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Map -->
+    @@include(
+      './_includes/_column-grid.html', 
+      {
+        "sectionClasses": "pt-2md lg:pt-0",
+        "containerClasses": "container md:container-md lg:container-fluid mx-auto",
+        "rowClasses": "bg-white flex-row flex-wrap pos-relative",
+        "childOnly": false,
+        "data": [
+          { 
+            "colClasses": "flex-col col-12 flex-col lg:flex-row container lg:container-xl mx-auto",
+            "aosAttr": "",
+            "vericalCard": true,
+            "cardImage": "",
+            "imageClasses": "map-canvas ratio-1x1 lg:ratio-16x9 lg:col-6 lg:pos-absolute pin-y pin-l",
+            "imageBgClasses": "bg-center bg-cover",
+            "cardContentClasses": "lg:col-6 pt-sm p-md xr:pl-0 lg:pl-xxl lg:py-xxl ml-auto",
+            "cardTitle": "Come and meet us  at New London Educational Trust" ,
+            "cardTitleClasses": "fweight-bold fsize-2md lg:fsize-2lg",
+            "cardText": ["<p class='fsize-2sm fweight-bold'>Sceptre House, 75-81 Staines Road, Hounslow, TW3 3HW</p><p>Mon/Fri 9am - 6pm<br>Tues/Wed/Thurs 9am - 8.30pm<br>Saturday 9am - 5pm<br>Sunday 9am - 3pm</p>"],
+            "footerClasses": "pt-sm",
+            "cardButton": "CONTACT US",
+            "buttonLink": "contact-us.html",
+            "buttonClasses": "button hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md",
+            "cardTextAOSattr": "data-aos='fade-up' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+            "footerAOSattr": "data-aos='fade-up' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom'"
+          }
+        ]
+      }
+    )
+
+    <section class="pt-2md lg:pt-0">
+      <div class="pos-relative flex-row-reverse flex-wrap py-lg py-xl fcolor-white bg-shipGray">
+        <div class="container container-md lg:container-xl mx-auto lg:flex-row-reverse">
+          <div class="flex-col lg:flex-row lg:-mr-lg -mb-md">
+            <div class="lg:col-3 lg:pr-lg mb-md flex-col justify-center">
+                <h2 class="fweight-bold fsize-4md">Proudly Partnered with</h2>
+            </div>
+            <div class="lg:col-9 flex-row flex-wrap -mr-xs sm:-mr-lg">
+              <div class="col-6 sm:col-4 pr-md sm:pr-lg mb-md">
+                <img src="./images/partner-logo.png" />
+              </div>
+              <div class="col-6 sm:col-4 pr-md sm:pr-lg mb-md">
+                <img src="./images/partner-logo.png" />
+              </div>
+              <div class="col-6 sm:col-4 pr-md sm:pr-lg mb-md">
+                <img src="./images/partner-logo.png" />
+              </div>
+              <div class="col-6 sm:col-4 pr-md sm:pr-lg mb-md">
+                <img src="./images/partner-logo.png" />
+              </div>
+              <div class="col-6 sm:col-4 pr-md sm:pr-lg mb-md">
+                <img src="./images/partner-logo.png" />
+              </div>
+              <div class="col-6 sm:col-4 pr-md sm:pr-lg mb-md">
+                <img src="./images/partner-logo.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  @@include('./_includes/_footer.html', {
+    "instagram": true, 
+    "sectionClasses": "pt-0"
+  })
+<script src="js/allScript.js"></script>
+</body>
+</html>

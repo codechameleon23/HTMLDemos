@@ -1,0 +1,59 @@
+.border{
+  border-width: .1rem;
+}
+
+@mixin getBorderStyleClasses($bp) {
+  .#{$bp}border{
+    &-solid{border-style: solid;}
+    &-dashed{border-style: dashed;}
+    &-dotted{border-style: dotted;}
+    &-none{border-style: none;}
+    &-collapse{border-collapse: collapse;}
+    &-separate{border-collapse: separate;}
+  }
+}
+
+$borderDirecton: (null null, t top, r right, b bottom, l left, x left right, y top bottom);
+@mixin getBorderWidthClasses($bp) {
+  @each $state in $states {
+    .#{$bp}#{nth($state, 1)}border{
+      @each $bw in $borderWidth {
+        @each $bd in $borderDirecton{
+          @if(nth($bw, 1)){
+
+            @if(nth($bd, 1)){
+              @if( nth($bd, 1) == x or nth($bd, 1) == y ){
+                &-#{nth($bd, 1)}-#{nth($bw, 1)}{
+                  border-#{nth($bd, 2)}-width: (nth($bw, 2));
+                  border-#{nth($bd, 3)}-width: (nth($bw, 2));
+                }
+              } @else {
+                &-#{nth($bd, 1)}-#{nth($bw, 1)}{border-#{nth($bd, 2)}-width: (nth($bw, 2));}
+              }
+            } @else {
+              &-#{nth($bw, 1)}{border-width: (nth($bw, 2));}
+            }
+
+          } @else {
+            
+            @if(nth($bd, 1)){
+
+              @if( nth($bd, 1) == x or nth($bd, 1) == y ){
+                &-#{nth($bd, 1)}{
+                  border-#{nth($bd, 2)}-width: (nth($bw, 2));
+                  border-#{nth($bd, 3)}-width: (nth($bw, 2));
+                }
+              } @else {
+                &-#{nth($bd, 1)}{border-#{nth($bd, 2)}-width: (nth($bw, 2));}
+              }
+
+            } @else {
+              &{border-width: (nth($bw, 2));}
+            }
+
+          }
+        }
+      }    
+    }
+  }
+}

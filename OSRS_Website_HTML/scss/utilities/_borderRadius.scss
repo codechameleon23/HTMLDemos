@@ -1,0 +1,9 @@
+@mixin getBorderRadiusClasses($bp) {
+  @each $br in $borderRadius {
+    .#{$bp}radius {
+      &-#{nth($br, 1)} {
+        border-radius: nth($br, 2);
+      }
+    }
+  }
+}

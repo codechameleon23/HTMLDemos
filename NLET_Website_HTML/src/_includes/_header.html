@@ -1,0 +1,159 @@
+<div class="@@if(context.headerPosClasses){@@headerPosClasses}">
+   <header class="pos-relative">
+      <div class="mx-auto container lg:container-xl">
+         <div class="flex-row">
+            <div class="flex-none py-xs">
+               <a href="index.html" class="icon-xl md:icon-logo-header ratio-logo pos-relative d-inline-block">
+                  <span class="pos-absolute pin">
+                     <img src="./images/brand-logo.svg" alt="" />
+                  </span>
+               </a>
+            </div>
+            <div class="flex-auto md:pos-relative flex-col">
+               <!-- Navbar -->
+               <navbar class="flex-col pin flex-stretch bg-white md:fsize-xs xl:fsize-2xs navbar pos-fixed shadow-lg lg:bg-transparent lg:pos-static lg:shadow-none lg:z-10 z-50 lg:ml-auto lg:mr-2xs xl:mr-md">
+                  <ul class="mt-xl lg:mt-0">
+                     <li class="hover:fcolor-flamingo on-active-fcolor-flamingo uppercase on-active-fweight-bold @@if(context.aboutActive){@@aboutActive}">
+                        <a class="fcolor-inherit no-underline pl-xs lg:pl-2xs xl:px-2xs py-xs" href="about.html">About</a>
+                     </li>
+                     <li class="hover:fcolor-flamingo on-active-fcolor-flamingo uppercase on-active-fweight-bold @@if(context.communityActive){@@communityActive}">
+                        <a class="fcolor-inherit no-underline pl-xs lg:pl-2xs xl:px-2xs py-xs" href="community.html">Community</a>
+                     </li>
+                     <li class="hover:fcolor-flamingo on-active-fcolor-flamingo uppercase on-active-fweight-bold @@if(context.curriculumActive){@@curriculumActive}">
+                        <div class="navDrop flex-row align-center lg:justify-center flex-stretch">
+                           <a class="fcolor-inherit no-underline pl-xs lg:pl-2xs xl:px-2xs py-xs" href="curriculum.html">Curriculum</a>
+                           <span class="flex-none submenuOpen fcolor-white lg:fcolor-inherit ml-auto lg:ml-0 px-xs">
+                              <img src="./images/arrow.png" alt="" />
+                           </span>
+                        </div>
+                        <div class="dropdown lg:shadow-lg bg-white lg:pt-xl">
+                           <ul class="list-reset bg-white lg:pt-sm lg:pb-2xs flex-row flex-wrap">
+                              <li class="py-xs px-sm col-12 submenuBack flex-row">
+                                 Back <span class="ml-auto d-inline-block px-xs"><img src="./images/arrow.png" alt="Back" /></span>
+                              </li>
+                              <li class="lg:px-xxs px-sm py-xs col-12">
+                                 <a class="no-underline d-inline-block flex-row lg:flex-col fcolor-jaffa lg:text-center" href="apprenticeship.html">
+                                    <img class="icon lg:icon-lg lg:mb-sm mr-xs" src="./images/single-logo-jaffa.png" alt="Apprenticeship"/>
+                                    <strong>Apprenticeship</strong>
+                                 </a>
+                              </li>
+                              <li class="lg:px-xxs px-sm py-xs col-12">
+                                 <a class="no-underline d-inline-block flex-row lg:flex-col fcolor-flamingo lg:text-center" href="adult-and-community.html">
+                                    <img class="icon lg:icon-lg lg:mb-sm mr-xs" src="./images/single-logo-flamingo.png" alt="Adult & Community"/>
+                                    <strong>Adult & Comunity</strong>
+                                 </a>
+                              </li>
+                              <li class="lg:px-xxs px-sm py-xs col-12">
+                                 <a class="no-underline d-inline-block flex-row lg:flex-col fcolor-java lg:text-center" href="academy.html">
+                                    <img class="icon lg:icon-lg lg:mb-sm mr-xs" src="./images/single-logo-java.png" alt="Academy"/>
+                                    <strong>Academy</strong>
+                                 </a>
+                              </li>
+                           </ul>
+                        </div>
+                     </li>
+                     <li class="hover:fcolor-flamingo on-active-fcolor-flamingo uppercase on-active-fweight-bold @@if(context.examsActive){@@examsActive}">
+                        <a class="fcolor-inherit no-underline pl-xs lg:pl-2xs xl:px-2xs py-xs" href="exams.html">Exams</a>
+                     </li>
+                     <li class="hover:fcolor-flamingo on-active-fcolor-flamingo uppercase on-active-fweight-bold @@if(context.studentServicesActive){@@studentServicesActive}">
+                        <a class="fcolor-inherit no-underline pl-xs lg:pl-2xs xl:px-2xs py-xs" href="student-services.html">Student Services</a>
+                     </li>
+                     <li class="hover:fcolor-flamingo on-active-fcolor-flamingo uppercase on-active-fweight-bold @@if(context.newsNEventsActive){@@newsNEventsActive}">
+                        <a class="fcolor-inherit no-underline pl-xs lg:pl-2xs xl:px-2xs py-xs" href="news-and-events.html">News & Events</a>
+                     </li>
+                  </ul>
+                  <!-- Social Media Mobile -->
+                  <div class="lg:d-hidden py-2md px-sm">
+                     <a href="#" class="fcolor-inherit fcolor-java icon lg:icon-sm mr-xxs">
+                        <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.4 25.4">
+                           <path
+                              d="M16 13.2h-2.3v5.7h-2.3v-5.7h-2v-2.3h1.9V9.6c0-.8.3-1.6.8-2.2.6-.6 1.2-.9 2-.9H16v2.3h-1.9c-.1 0-.2.1-.3.2-.1.1-.1.3-.1.5v1.2H16v2.5zm9.4-.5c0-1.8-.3-3.4-1-4.9-.7-1.5-1.6-2.9-2.7-4-1.1-1.2-2.5-2.1-4-2.7-1.5-.7-3.2-1-4.9-1S9.3.3 7.7 1c-1.5.7-2.9 1.6-4 2.7-1.1 1.2-2 2.5-2.7 4-.7 1.6-1 3.3-1 5s.3 3.4 1 4.9c.7 1.5 1.6 2.9 2.7 4s2.5 2 4 2.7c1.5.7 3.2 1 4.9 1s3.4-.3 4.9-1c1.5-.7 2.9-1.6 4-2.7s2-2.5 2.7-4c.8-1.5 1.2-3.1 1.2-4.9">
+                           </path>
+                        </svg>
+                     </a>
+                     <a href="#" class="fcolor-inherit fcolor-jaffa icon lg:icon-sm mr-xxs">
+                        <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.4 25.4">
+                           <path
+                              d="M18.1 9.4c.3 0 .5-.1.8-.2.2-.1.5-.1.7-.2-.2.2-.4.5-.6.7-.2.2-.5.4-.7.6v.3c0 .9-.2 1.7-.5 2.6-.3.9-.8 1.6-1.4 2.3-.6.7-1.4 1.3-2.3 1.7-.9.4-2 .7-3.1.7-.7 0-1.4-.1-2.1-.3-.7-.2-1.3-.5-1.8-.8h.6c1.2 0 2.3-.4 3.2-1.1-.6 0-1.1-.2-1.5-.5-.4-.3-.7-.8-.9-1.3.2 0 .3.1.4.1h.4c.1 0 .2 0 .3-.1-.6-.1-1.1-.4-1.4-.9-.4-.5-.6-1-.6-1.6.3.2.7.3 1.2.3-.7-.5-1.1-1.2-1.1-2.1 0-.5.1-.9.3-1.3.7.8 1.4 1.4 2.3 1.9.9.5 1.9.7 3 .8 0-.2-.1-.4-.1-.6 0-.7.3-1.3.8-1.8s1.1-.8 1.8-.8c.4 0 .7.1 1 .2.3.1.6.3.8.6.3 0 .6-.1.9-.3.2 0 .5-.1.7-.3-.1.3-.3.6-.5.8-.1.3-.4.5-.6.6m7.3 3.3c0-1.8-.3-3.4-1-4.9-.7-1.5-1.6-2.9-2.7-4s-2.5-2-4-2.7c-1.5-.7-3.2-1-4.9-1S9.3.3 7.7 1c-1.5.7-2.9 1.6-4 2.7-1.2 1.2-2.1 2.5-2.7 4-.7 1.5-1 3.2-1 4.9s.3 3.4 1 4.9c.7 1.5 1.6 2.9 2.7 4 1.2 1.1 2.5 2 4 2.7 1.5.7 3.2 1 4.9 1s3.4-.3 4.9-1c1.5-.7 2.9-1.6 4-2.7s2-2.5 2.7-4c.8-1.4 1.2-3 1.2-4.8">
+                           </path>
+                        </svg>
+                     </a>
+                     <a href="#" class="fcolor-inherit fcolor-deluge icon lg:icon-sm mr-xxs">
+                        <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.4 25.4">
+                           <path
+                              d="M15.5 12.7c0-1.5-1.2-2.7-2.8-2.7s-2.8 1.2-2.8 2.7c0 1.5 1.2 2.7 2.8 2.7s2.8-1.2 2.8-2.7M18 9.5V7.9c0-.3-.3-.6-.6-.6h-1.6c-.3 0-.6.3-.6.6v1.5c0 .3.3.6.6.6h1.6c.4.1.6-.2.6-.5m0 8v-5.8h-1.2c.2.3.2.7.2 1.2 0 2.3-1.9 4.2-4.3 4.2s-4.3-1.8-4.3-4.2c0-.4 0-.8.2-1.2H7.3v5.8c0 .3.3.5.6.5h9.6c.3.1.5-.2.5-.5m1.6.4c0 1-.8 1.7-1.8 1.7H7.5c-1 0-1.8-.8-1.8-1.7V7.6c0-1 .8-1.8 1.8-1.8h10.3c1 0 1.8.8 1.8 1.8v10.3zm5.8-5.2C25.3 5.6 19.6-.1 12.7 0 5.7.1 0 5.7 0 12.7c0 7 5.7 12.7 12.7 12.7 7 0 12.7-5.7 12.7-12.7">
+                           </path>
+                        </svg>
+                     </a>
+                     <a href="#" class="fcolor-inherit fcolor-flamingo icon lg:icon-sm mr-xxs">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="-148 21 32 32">
+                           <path fill="currentColor"
+                              d="M-132 21c-8.8 0-16 7.2-16 16s7.2 16 16 16 16-7.2 16-16-7.2-16-16-16zm-4.5 22.9h-3.6V33.2h3.6v10.7zm-1.8-12.1c-1.2 0-2-.8-2-1.8s.8-1.8 2-1.8 2 .8 2 1.8-.8 1.8-2 1.8zm14.6 12.1h-3.6v-5.7c0-1.4-.5-2.4-1.8-2.4-1 0-1.6.7-1.8 1.3-.1.2-.1.5-.1.9v6h-3.6V33.3h3.6v1.5c.5-.7 1.3-1.8 3.2-1.8 2.3 0 4.1 1.5 4.1 4.8v6.1z">
+                           </path>
+                        </svg>
+                     </a>
+                  </div>
+               </navbar>
+            </div>
+            <div class="flex-col">
+               <div class="flex-row -mr-xxs my-auto">
+                  <div class="icon icon-sm flex-none lg:d-hidden z-50 lg:pos-static z-40 pin-r pin-y lg:mr-0">
+                     <div>
+                        <div class="icon fcolor-flamingo on-active-fcolor-flamingo hamburger pointer-events-auto">
+                           <div>
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="d-hidden opacity-0 lg:opacity-100 lg:d-inline-flex align-center">
+                     <a href="#" class="fcolor-inherit fcolor-java icon icon-md lg:icon-sm mr-xxs">
+                        <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.4 25.4">
+                           <path
+                              d="M16 13.2h-2.3v5.7h-2.3v-5.7h-2v-2.3h1.9V9.6c0-.8.3-1.6.8-2.2.6-.6 1.2-.9 2-.9H16v2.3h-1.9c-.1 0-.2.1-.3.2-.1.1-.1.3-.1.5v1.2H16v2.5zm9.4-.5c0-1.8-.3-3.4-1-4.9-.7-1.5-1.6-2.9-2.7-4-1.1-1.2-2.5-2.1-4-2.7-1.5-.7-3.2-1-4.9-1S9.3.3 7.7 1c-1.5.7-2.9 1.6-4 2.7-1.1 1.2-2 2.5-2.7 4-.7 1.6-1 3.3-1 5s.3 3.4 1 4.9c.7 1.5 1.6 2.9 2.7 4s2.5 2 4 2.7c1.5.7 3.2 1 4.9 1s3.4-.3 4.9-1c1.5-.7 2.9-1.6 4-2.7s2-2.5 2.7-4c.8-1.5 1.2-3.1 1.2-4.9">
+                           </path>
+                        </svg>
+                     </a>
+                     <a href="#" class="fcolor-inherit fcolor-jaffa icon icon-md lg:icon-sm mr-xxs">
+                        <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.4 25.4">
+                           <path
+                              d="M18.1 9.4c.3 0 .5-.1.8-.2.2-.1.5-.1.7-.2-.2.2-.4.5-.6.7-.2.2-.5.4-.7.6v.3c0 .9-.2 1.7-.5 2.6-.3.9-.8 1.6-1.4 2.3-.6.7-1.4 1.3-2.3 1.7-.9.4-2 .7-3.1.7-.7 0-1.4-.1-2.1-.3-.7-.2-1.3-.5-1.8-.8h.6c1.2 0 2.3-.4 3.2-1.1-.6 0-1.1-.2-1.5-.5-.4-.3-.7-.8-.9-1.3.2 0 .3.1.4.1h.4c.1 0 .2 0 .3-.1-.6-.1-1.1-.4-1.4-.9-.4-.5-.6-1-.6-1.6.3.2.7.3 1.2.3-.7-.5-1.1-1.2-1.1-2.1 0-.5.1-.9.3-1.3.7.8 1.4 1.4 2.3 1.9.9.5 1.9.7 3 .8 0-.2-.1-.4-.1-.6 0-.7.3-1.3.8-1.8s1.1-.8 1.8-.8c.4 0 .7.1 1 .2.3.1.6.3.8.6.3 0 .6-.1.9-.3.2 0 .5-.1.7-.3-.1.3-.3.6-.5.8-.1.3-.4.5-.6.6m7.3 3.3c0-1.8-.3-3.4-1-4.9-.7-1.5-1.6-2.9-2.7-4s-2.5-2-4-2.7c-1.5-.7-3.2-1-4.9-1S9.3.3 7.7 1c-1.5.7-2.9 1.6-4 2.7-1.2 1.2-2.1 2.5-2.7 4-.7 1.5-1 3.2-1 4.9s.3 3.4 1 4.9c.7 1.5 1.6 2.9 2.7 4 1.2 1.1 2.5 2 4 2.7 1.5.7 3.2 1 4.9 1s3.4-.3 4.9-1c1.5-.7 2.9-1.6 4-2.7s2-2.5 2.7-4c.8-1.4 1.2-3 1.2-4.8">
+                           </path>
+                        </svg>
+                     </a>
+                     <a href="#" class="fcolor-inherit fcolor-deluge icon icon-md lg:icon-sm mr-xxs">
+                        <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.4 25.4">
+                           <path
+                              d="M15.5 12.7c0-1.5-1.2-2.7-2.8-2.7s-2.8 1.2-2.8 2.7c0 1.5 1.2 2.7 2.8 2.7s2.8-1.2 2.8-2.7M18 9.5V7.9c0-.3-.3-.6-.6-.6h-1.6c-.3 0-.6.3-.6.6v1.5c0 .3.3.6.6.6h1.6c.4.1.6-.2.6-.5m0 8v-5.8h-1.2c.2.3.2.7.2 1.2 0 2.3-1.9 4.2-4.3 4.2s-4.3-1.8-4.3-4.2c0-.4 0-.8.2-1.2H7.3v5.8c0 .3.3.5.6.5h9.6c.3.1.5-.2.5-.5m1.6.4c0 1-.8 1.7-1.8 1.7H7.5c-1 0-1.8-.8-1.8-1.7V7.6c0-1 .8-1.8 1.8-1.8h10.3c1 0 1.8.8 1.8 1.8v10.3zm5.8-5.2C25.3 5.6 19.6-.1 12.7 0 5.7.1 0 5.7 0 12.7c0 7 5.7 12.7 12.7 12.7 7 0 12.7-5.7 12.7-12.7">
+                           </path>
+                        </svg>
+                     </a>
+                     <a href="#" class="fcolor-inherit fcolor-flamingo icon icon-md lg:icon-sm mr-xxs">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="-148 21 32 32">
+                           <path fill="currentColor"
+                              d="M-132 21c-8.8 0-16 7.2-16 16s7.2 16 16 16 16-7.2 16-16-7.2-16-16-16zm-4.5 22.9h-3.6V33.2h3.6v10.7zm-1.8-12.1c-1.2 0-2-.8-2-1.8s.8-1.8 2-1.8 2 .8 2 1.8-.8 1.8-2 1.8zm14.6 12.1h-3.6v-5.7c0-1.4-.5-2.4-1.8-2.4-1 0-1.6.7-1.8 1.3-.1.2-.1.5-.1.9v6h-3.6V33.3h3.6v1.5c.5-.7 1.3-1.8 3.2-1.8 2.3 0 4.1 1.5 4.1 4.8v6.1z">
+                           </path>
+                        </svg>
+                     </a>
+                  </div>
+                  <div class="navButtons flex-col sm:flex-row xl:flex-col md:pos-absolute z-40 pin-t xl:pin-t-50 xl:pin-t50 md:pin-r mr-xs xl:mr-0">
+                     <div class="shadow login_popup_open bg-flamingo fsize-2xs fcolor-white uppercase py-xxs xl:py-xs px-xs text-center">Sign up</div>
+                     <div class="shadow select fcolor-white bg-java">
+                        <div class="flex-col fcolor-white uppercase fsize-2xs">
+                           <select class="px-2xs pr-2md py-xxs xl:py-xs flex-stretch fcolor-inherit uppercase">
+                              <option class="fcolor-default" value="">Language</option>
+                              <option class="fcolor-default" value="">English</option>
+                              <option class="fcolor-default" value="">French</option>
+                           </select>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+</div>

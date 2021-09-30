@@ -1,0 +1,130 @@
+$shadeColor_1 : #ffffff;
+$shadeColor_2 : transparent;
+
+[class*="has-shade"] {
+
+  .image-holder,
+  .banner-bg {
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      // z-index: -1;
+    }
+  }
+}
+
+.has-shade {
+
+  .image-holder,
+  .banner-bg {
+    &:before {
+      background-image: linear-gradient(rgba($shadeColor_2, .4) 0%,
+        rgba($shadeColor_1, .4) 100%);
+    }
+  }
+
+  // &_btt {
+  //   .image-holder,
+  //   .banner-bg {
+  //     &:before {
+  //       background-image: linear-gradient(to bottom,
+  //         rgba($shadeColor_2, 0) 50%,
+  //         rgba($shadeColor_1, .2) 100%);
+  //     }
+  //   }
+  // }
+
+  // &_ttb {
+  //   .image-holder,
+  //   .banner-bg {
+  //     &:before {
+  //       background-image: linear-gradient(to top,
+  //         rgba($shadeColor_2, 0) 50%,
+  //         rgba($shadeColor_1, .2) 100%);
+  //     }
+  //   }
+  // }
+
+  // &_rtl {
+
+  //   .image-holder,
+  //   .banner-bg {
+  //     &:before {
+  //       background-image: linear-gradient(to right,
+  //         rgba($shadeColor_2, 0) 0%,
+  //         rgba($shadeColor_1, .2) 100%);
+  //     }
+  //   }
+  // }
+
+  &_ltr {
+
+    .image-holder,
+    .banner-bg {
+      &:before {
+        background-image: linear-gradient(to left,
+          rgba($shadeColor_2, 0) 0%,
+          rgba($shadeColor_1, .5) 100%);
+      }
+    }
+  }
+
+  // @media all and (max-width: 767px){
+  //   .image-holder,
+  //   .banner-bg {
+  //     &:before {
+  //       background-image: linear-gradient(
+  //         rgba($shadeColor_2, .25) 0%,
+  //         rgba($shadeColor_1, .2) 100%);
+  //     }
+  //   }
+
+  //   &_btt {
+  //     .image-holder,
+  //     .banner-bg {
+  //       &:before {
+  //         background-image: linear-gradient(to bottom,
+  //           rgba($shadeColor_2, .25) 0%,
+  //           rgba($shadeColor_1, .2) 100%);
+  //       }
+  //     }
+  //   }
+
+  //   &_ttb {
+  //     .image-holder,
+  //     .banner-bg {
+  //       &:before {
+  //         background-image: linear-gradient(to top,
+  //           rgba($shadeColor_2, .25) 0%,
+  //           rgba($shadeColor_1, .2) 100%);
+  //       }
+  //     }
+  //   }
+
+  //   &_rtl {
+  //     .image-holder,
+  //     .banner-bg {
+  //       &:before {
+  //         background-image: linear-gradient(to right,
+  //           rgba($shadeColor_2, .25) 0%,
+  //           rgba($shadeColor_1, .2) 100%);
+  //       }
+  //     }
+  //   }
+
+  //   &_ltr {
+  //     .image-holder,
+  //     .banner-bg {
+  //       &:before {
+  //         background-image: linear-gradient(to left,
+  //           rgba($shadeColor_2, .25) 0%,
+  //           rgba($shadeColor_1, .2) 100%);
+  //       }
+  //     }
+  //   }
+  // }
+}

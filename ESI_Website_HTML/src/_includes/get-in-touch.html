@@ -1,0 +1,54 @@
+
+<div class="bg-dark lg:bg-pink font-color-white pos-relative pt-xl pb-2xl">
+   <div class="pos-absolute pin bg-repeat-y bg-right special-bg opacity-50 lg:opacity-100" style="background-image:url(./images/ewe-store-it-20.png)"></div>
+   <div class="container md:container-md lg:container-xl mx-auto pos-relative">
+      @@include('./_includes/_commons/h3-lg.html', {
+      "title": "Get in Touch",
+      "className": "font-color-inherit font-size-2md mb-sm"
+      })
+      <div class="col-12 lg:col-8 xl:col-10">
+         <div class="-m-xs flex-col xl:flex-row align-start">
+            <div class="col-12 xl:col-6 flex-col flex-stretch">
+               <div class="p-xs flex-auto flex-col">
+                  <input type="text" required placeholder="Name" class="px-2xs py-xs flex-stretch focus:shadow-lg transition-all bg-white">
+               </div>
+               <div class="p-xs flex-auto flex-col">
+                  <input type="email" required placeholder="Email" class="px-2xs py-xs flex-stretch focus:shadow-lg transition-all bg-white">
+               </div>
+               <div class="p-xs flex-auto flex-col">
+                  <input type="phone" required placeholder="Phone" class="px-2xs py-xs flex-stretch focus:shadow-lg transition-all bg-white">
+               </div>
+            </div>
+            <div class="col-12 xl:col-6 flex-col flex-stretch">
+               <div class="p-xs flex-auto flex-col">
+                  <textarea rows="4" placeholder="Message" class="px-2xs py-xs flex-stretch focus:shadow-lg transition-all bg-white"></textarea>
+               </div>
+               <div class="p-xs flex-auto flex-col">
+                  <div class="-m-xs flex-col md:flex-row">
+                     <div class="p-xs flex-auto flex-col">
+                        <label class="custom-tick">
+                           <input name="addr" type="checkbox">
+                           <span class="tick d-inline-block"><span class="border radius-full bg-white font-color-pink"></span></span>
+                           <span class="related-text hover:font-color-aqua lg:hover:font-color-dark">
+                              <span class="font-color-white">I have read and agreed to <br/>your</span>
+                              <span class="font-color-inherit hover:font-color-pink lg:hover:font-color-yellow">
+                                 <span class="hover:font-color-aqua lg:hover:font-color-dark">
+                                    <a href="#" class="font-color-inherit hover:font-color-pink lg:hover:font-color-yellow no-underline">privacy</a>
+                                    <span class="font-color-white">/</span>
+                                    <a href="#" class="font-color-inherit hover:font-color-pink lg:hover:font-color-yellow no-underline">GDPR</a>
+                                 </span>
+                                 <span class="hover:font-color-inherit">&nbsp;Policy</span>
+                              </span>
+                           </span>
+                        </label>
+                     </div>
+                     <div class="p-xs flex-auto md:flex-col">
+                        @@include('./_includes/_commons/button-submit.html', {"className": "bg-aqua lg:bg-dark font-color-white","buttonText": "Submit"})
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('./_includes/_head.html', {
+	"pageName": "Contact",
+	"description": ""
+	})
+</head>
+
+<body class="jsNavbarToggle is-close flex-col">
+
+	<!-- Header -->
+	@@include('./_includes/_header.html', {
+      "contact": "true"
+	})
+
+
+	<!-- Main -->
+   <main class="flex-auto flex-col">
+
+      <!-- Section Divider -->
+      @@include('./_includes/_dba_section-divider.html', {
+      "sectionSx": "-mb-1 -z-1"
+      })
+
+      <section class="mt-60 overflow-hidden pos-relative">
+         <div class="container sm:container-sm md:container-md lg:container-lg xl:container-xl mx-auto">
+            <div class="flex-row flex-wrap">
+               <div class="col-12 lg:col-7 lg:pr-80">
+                  <div class="text-wrap">
+                     <h2 class="f-weight-bold f-size-48 uppercase">get in touch</h2>
+                     <p>Pick up the phone, send us an email or fill out the form and let’s have a chat.</p>
+                     <form name="contactUs" class="flex-row flex-wrap -m-10 flex-stretch">
+                        <div class="col-12 flex-col p-10">
+                           <input type="text" required="" placeholder="Name" name="name" class="border-b border-dark bg-white p-10 flex-stretch focus:shadow-md transition-all">
+                        </div>
+                        <div class="col-12 flex-col p-10">
+                           <input type="text" required="" placeholder="Email" name="email" class="border-b border-dark bg-white p-10 flex-stretch focus:shadow-md transition-all">
+                        </div>
+                        <div class="col-12 flex-col p-10">
+                           <div class="select">
+                              <select name="enquiryType" class="w-full border-b border-dark bg-white p-10 flex-stretch focus:shadow-md transition-all not-selected">
+                                 <option value="" selected>Enquiry Type</option>
+                                 <option >Option 1</option>
+                                 <option >Option 2</option>
+                                 <option >Option 3</option>
+                              </select>
+                           </div>
+                        </div>
+                        <div class="col-12 flex-col p-10">
+                           <textarea rows="10" placeholder="Message" name="message" class="w-full h-full border-b border-dark p-10 flex-stretch focus:shadow-md transition-all"></textarea>
+                        </div>
+                        <div class="col-12 flex-row flex-wrap justify-space-between align-center px-10">
+                           <label class="w-auto custom-tick my-auto my-10">
+                              <input name="addr" type="checkbox">
+                              <span class="d-inline-block tick"><span class="bg-white border-dark border-2 f-color-red"></span></span>
+                              <span class="related-text hover:f-color-primary f-weight-regular">
+                                 <span class="f-color-default">I agree to your</span>
+                                 <a href="#" class="f-color-red underline">privacy policy</a>
+                              </span>
+                            </label>
+                           <button class="button box-button f-size-30 px-20 my-10 lg:px-60 border-2 border-red f-color-default hover:f-color-white hover:bg-dark hover:border-dark hover:shadow-md transition-all"><span>send</span></button>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+               <div class="col-12 lg:col-5 flex-col mt-60 lg:mt-0">
+                  <div class="d-hidden lg:d-block bg-light pos-absolute pin-y pin-r-auto w-screen -z-1"></div>
+                  <div class="w-full bg-light py-40 px-40 lg:py-60 lg:px-60">
+                     <div class="text-wrap-md">
+                        <h2 class="f-weight-bold f-size-48 uppercase">contact details</h2>
+                        <div class="flex-row align-center">
+                           <span class="icon icon-44 flex-none mr-20">
+                              <svg stroke="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 44.7 33.6">
+                                 <path fill="currentColor" d="M0 0h44.7v33.6H0z" />
+                                 <path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3.9l19.3 15.6L41 3.9" clip-path="url(#b)"/>
+                              </svg>
+                           </span>
+                           <div>
+                              <a href="mailto:info@dbaafrica.com" title="email us" class="f-size-22 no-underline hover:f-color-red">info@dbaafrica.com</a>
+                           </div>
+                        </div>
+                        <div class="flex-row align-center">
+                           <span class="icon icon-44 flex-none mr-20">
+                              <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 44.7 44.7">
+                                <path d="M32.5 44.7c-3.1 0-6.3-1.2-8.7-3.6L3.6 20.9c-4.8-4.8-4.8-12.5 0-17.3L6.5.7c.4-.5 1-.7 1.6-.7.6 0 1.2.2 1.6.7L18 9c.4.4.7 1 .7 1.6 0 .6-.2 1.2-.7 1.6l-3.6 3.6c-.9.9-.9 2.4 0 3.3l11.1 11.1c.9.9 2.4.9 3.3 0l3.6-3.6c.9-.9 2.3-.9 3.2 0L44 35c.9.9.9 2.3 0 3.2l-2.9 2.9c-2.4 2.4-5.5 3.6-8.6 3.6" clip-path="url(#b)"/>
+                              </svg>
+                           </span>
+                           <div>
+                              <a href="tel:+44 2036 910238" title="Call us" class="f-size-22 no-underline hover:f-color-red">UK: +44 2036 910238</a>
+                              <br />
+                              <a href="tel:+25 4727 979083" title="Call us" class="f-size-22 no-underline hover:f-color-red">Kenya: +25 4727 979083</a>
+                           </div>
+                        </div>
+                        <div class="flex-row align-center">
+                           <span class="icon icon-44 flex-none mr-20">
+                              <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Layer_1" x="0" y="0" version="1.1" viewBox="0 0 28.7 40.8" xml:space="preserve">
+                                <g>
+                                  <path d="M2.9 19.8s-2 0-.9 1.7l11.5 18.6s1.1 1.7 2.1 0l11.3-18.6s1-1.7-1-1.7h-23z" />
+                                  <path d="M14.4 28.7c7.9 0 14.4-6.4 14.4-14.4C28.7 6.4 22.3 0 14.4 0S0 6.4 0 14.4c0 1.7.3 3.2.8 4.7 1.9 5.6 7.3 9.6 13.6 9.6"/>
+                                  <circle cx="14.4" cy="14.4" r="9.3" fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                                </g>
+                              </svg>
+                           </span>
+                           <div>
+                              <a href="https://goo.gl/maps/vMkQwRx4g51c6ALy8" title="See on Map" target="_blank" class="f-size-22 no-underline hover:f-color-red">Unit 13, Barnack Business Centre,
+                                 Blakey Rd, Salisbury, Wiltshire, SP1 2LP, UK</a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="text-wrap-sm mt-40">
+                        <h2 class="f-weight-bold f-size-48 uppercase">visit us on social</h2>
+                        <div class="flex-row -mx-5">
+                           <a title="Facebook" href="#" class="mx-5 f-color-red rounded-full hover:shadow-md icon icon-44 transition-all">
+                              <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.4 25.4">
+                                 <path d="M16 13.2h-2.3v5.7h-2.3v-5.7h-2v-2.3h1.9V9.6c0-.8.3-1.6.8-2.2.6-.6 1.2-.9 2-.9H16v2.3h-1.9c-.1 0-.2.1-.3.2-.1.1-.1.3-.1.5v1.2H16v2.5zm9.4-.5c0-1.8-.3-3.4-1-4.9-.7-1.5-1.6-2.9-2.7-4-1.1-1.2-2.5-2.1-4-2.7-1.5-.7-3.2-1-4.9-1S9.3.3 7.7 1c-1.5.7-2.9 1.6-4 2.7-1.1 1.2-2 2.5-2.7 4-.7 1.6-1 3.3-1 5s.3 3.4 1 4.9c.7 1.5 1.6 2.9 2.7 4s2.5 2 4 2.7c1.5.7 3.2 1 4.9 1s3.4-.3 4.9-1c1.5-.7 2.9-1.6 4-2.7s2-2.5 2.7-4c.8-1.5 1.2-3.1 1.2-4.9"></path>
+                              </svg>
+                           </a>
+                           <a title="Twitter" href="#" class="mx-5 rounded-full hover:shadow-md icon icon-44 transition-all">
+                              <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.4 25.4">
+                                 <path d="M18.1 9.4c.3 0 .5-.1.8-.2.2-.1.5-.1.7-.2-.2.2-.4.5-.6.7-.2.2-.5.4-.7.6v.3c0 .9-.2 1.7-.5 2.6-.3.9-.8 1.6-1.4 2.3-.6.7-1.4 1.3-2.3 1.7-.9.4-2 .7-3.1.7-.7 0-1.4-.1-2.1-.3-.7-.2-1.3-.5-1.8-.8h.6c1.2 0 2.3-.4 3.2-1.1-.6 0-1.1-.2-1.5-.5-.4-.3-.7-.8-.9-1.3.2 0 .3.1.4.1h.4c.1 0 .2 0 .3-.1-.6-.1-1.1-.4-1.4-.9-.4-.5-.6-1-.6-1.6.3.2.7.3 1.2.3-.7-.5-1.1-1.2-1.1-2.1 0-.5.1-.9.3-1.3.7.8 1.4 1.4 2.3 1.9.9.5 1.9.7 3 .8 0-.2-.1-.4-.1-.6 0-.7.3-1.3.8-1.8s1.1-.8 1.8-.8c.4 0 .7.1 1 .2.3.1.6.3.8.6.3 0 .6-.1.9-.3.2 0 .5-.1.7-.3-.1.3-.3.6-.5.8-.1.3-.4.5-.6.6m7.3 3.3c0-1.8-.3-3.4-1-4.9-.7-1.5-1.6-2.9-2.7-4s-2.5-2-4-2.7c-1.5-.7-3.2-1-4.9-1S9.3.3 7.7 1c-1.5.7-2.9 1.6-4 2.7-1.2 1.2-2.1 2.5-2.7 4-.7 1.5-1 3.2-1 4.9s.3 3.4 1 4.9c.7 1.5 1.6 2.9 2.7 4 1.2 1.1 2.5 2 4 2.7 1.5.7 3.2 1 4.9 1s3.4-.3 4.9-1c1.5-.7 2.9-1.6 4-2.7s2-2.5 2.7-4c.8-1.4 1.2-3 1.2-4.8"></path>
+                              </svg>
+                           </a>
+                           <a title="Instagram" href="#" class="mx-5 f-color-green rounded-full hover:shadow-md icon icon-44 transition-all">
+                              <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44.3 44.3">
+                                 <defs>
+                                    <path id="a" d="M0 0h44.3v44.3H0z"></path>
+                                 </defs>
+                                 <clipPath id="b">
+                                    <use xlink:href="#a" overflow="visible"></use>
+                                 </clipPath>
+                                 <path d="M26.3 22.1c0-2.3-1.9-4.2-4.2-4.2-2.3 0-4.2 1.9-4.2 4.2s1.9 4.2 4.2 4.2c2.3-.1 4.2-1.9 4.2-4.2m3.2-6c0 .6-.5 1.1-1.1 1.1-.6 0-1.1-.5-1.1-1.1 0-.6.5-1.1 1.1-1.1.6 0 1.1.5 1.1 1.1m-1.5 6c0 3.2-2.6 5.8-5.8 5.8-3.2 0-5.8-2.6-5.8-5.8s2.6-5.8 5.8-5.8c3.2-.1 5.8 2.5 5.8 5.8m3.7 4.6v-9.1s0-1.3-.7-2.6c-.8-1.6-2.3-2.4-4.3-2.4h-9.1s-1.3 0-2.6.7c-1.6.8-2.4 2.3-2.4 4.3v9.1s0 1.3.7 2.6c.8 1.6 2.3 2.4 4.3 2.4h9.1s1.3 0 2.6-.7c1.6-.8 2.4-2.2 2.4-4.3m1.7 0c0 3.4-1.8 5.1-3.4 5.9-1.6.8-3.2.8-3.3.8h-9.1c-3.4 0-5.1-1.8-5.9-3.4-.8-1.6-.8-3.2-.8-3.3v-9.1c0-3.4 1.8-5.1 3.4-5.9 1.6-.8 3.2-.8 3.3-.8h9.1c3.4 0 5.1 1.8 5.9 3.4.8 1.6.8 3.2.8 3.3v9.1zm10.9-4.6C44.3 9.9 34.4 0 22.1 0 9.9 0 0 9.9 0 22.1c0 12.2 9.9 22.1 22.1 22.1 12.3.1 22.2-9.8 22.2-22.1" clip-path="url(#b)"></path>
+                              </svg>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+	</main>
+
+	<!-- Footer -->
+	@@include('./_includes/_footer.html')
+
+	<script src="js/allScript.js"></script>
+</body>
+
+</html>

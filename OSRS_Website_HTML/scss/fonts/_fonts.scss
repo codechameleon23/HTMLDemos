@@ -1,0 +1,9 @@
+@mixin getFontFamilyClasses($bp) {
+  @each $ff in $fontFamily {
+    .#{$bp}font {
+      &-#{nth($ff, 1)} {
+        font-family: nth($ff, 2);
+      }
+    }
+  }
+}

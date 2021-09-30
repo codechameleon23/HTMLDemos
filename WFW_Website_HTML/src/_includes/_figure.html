@@ -1,0 +1,60 @@
+<figure class="
+   @@if(context.media || context.link){
+      @@if(context.hoverZoom != 'false'){
+         image-rollover
+      }
+      hover:shadow-md
+   }
+   transition-all
+   flex-stretch 
+   pos-relative @@if(context.ratio){@@ratio}
+   @@if(context.sx){@@sx}" @@if(context.aos){@@aos}>
+   <div class="
+      @@if(context.hoverZoom != 'false' && (context.media || context.link)){
+         card-image
+      }
+      pos-absolute pin 
+      bg-cover bg-center bg-no-repeat" style="background-image: url('./images/@@image');"></div>
+      @@if(context.overlay){
+         <div class="
+            @@overlay
+            pos-absolute pin">
+            <div class="image-holder"></div>
+         </div>
+      }
+   @@if(context.media || context.link){
+      <a href="@@if(context.media){@@media}@@if(context.link){@@link}@@if(!context.link && !context.media){#}" class="
+         no-underline
+         @@if(context.media){ has-media }
+         flex-row 
+         @@if(context.media){
+            justify-center align-center
+         }@@if(!context.media){
+            justify-start align-end
+         }
+         pos-absolute pin 
+         px-2sm py-2xs">
+         @@if(context.title){
+            <h2 class="
+            uppercase
+            f-size-4sm f-weight-regular f-color-white f-family-primary">@@title</h2>
+         }
+         @@if(context.media){
+            <div class="
+               play-button 
+               pointer-events-none 
+               transition-all
+               icon icon-lg
+               bg-primary f-color-white
+               shadow-child opacity-child">
+               <span class="p-sm">
+                  <svg stroke="currentColor" fill="none" stroke-width="2px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.64 41.64">
+                     <circle  cx="16.97" cy="16.97" r="14.54"/>
+                     <path d="M26.69 26.69l13.23 13.23"/>
+                  </svg>
+               </span>
+            </div>
+         }
+      </a>
+   }
+</figure>

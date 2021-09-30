@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   @@include('./_includes/_head.html', {
+   "pageName": "Dashboard",
+   "description": ""
+   })
+</head>
+
+<body class="jsNavbarToggle is-close flex-col bg-light">
+
+<!-- Header -->
+@@include('./_includes/_header.html', {})
+
+<!-- Main -->
+<main class="flex-auto flex-col">
+   <div class="flex-row flex-auto">
+      <!-- Navbar Side -->
+      @@include('./_includes/_navbarSide.html', {
+      "dashboard": "true"
+      })
+      <div class="flex-auto flex-col">
+         <section class="flex-auto flex-col">
+            <div class="container mx-auto xl:px-xs">
+               <!-- Page Heading -->
+               <header class="pt-sm">
+                  <div class="flex-row flex-wrap justify-space-between align-center -mr-sm">
+                     <div class="pr-sm pb-sm">
+                        <h2 class="f-size-md f-weight-semibold  md:f-weight-light md:f-size-xl f-weight-light">
+                           Dashboard</h2>
+                     </div>
+                     <div class="pr-sm pb-sm ml-auto">
+                        <button class="jsAddDevicePopup_open button bg-primary f-color-white f-size-2sm f-weight-semibold hover:shadow-md transition-all py-xs px-2xs">
+                           <span class="mr-xs md:d-hidden"><i data-feather="plus-circle"></i></span>
+                           <span class="d-hidden md:d-inline">Add&nbsp;</span><span>Device</span>
+                        </button>
+                     </div>
+                  </div>
+               </header>
+               <section>
+                  <div class="flex-row flex-wrap -mr-md -mb-sm">
+                     <div class="col-12 lg:col-5 pr-md pb-sm flex-col">
+                        <div class="flex-row flex-wrap -mr-sm">
+                           <div class="col-4 pr-sm pb-sm flex-col">
+                              <div class="flex-stretch p-sm bg-primary f-color-white f-size-xxs md:f-size-4sm flex-col justify-center text-center shadow-md-primary capitalize">
+                                 <h2 class="f-size-md md:f-size-xl">11</h2>
+                                 <p>Total Installed</p>
+                              </div>
+                           </div>
+                           <div class="col-4 pr-sm pb-sm flex-col">
+                              <div class="flex-stretch p-sm bg-success  f-color-white f-size-xxs md:f-size-4sm flex-col justify-center text-center shadow-md-success capitalize">
+                                 <h2 class="f-size-md md:f-size-xl">5</h2>
+                                 <p>Online</p>
+                              </div>
+                           </div>
+                           <div class="col-4 pr-sm pb-sm flex-col">
+                              <div class="flex-stretch p-sm bg-warning  f-color-white f-size-xxs md:f-size-4sm flex-col justify-center text-center shadow-md-warning capitalize">
+                                 <h2 class="f-size-md md:f-size-xl">6</h2>
+                                 <p>Offline</p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="bg-white shadow">
+                           <table class="table-zebra w-full text-center capitalize">
+                              <thead class="f-size-sm f-color-secondary border-default border-b">
+                              <tr>
+                                 <th class="py-sm px-sm" width="100px">Status</th>
+                                 <th class="py-sm px-sm text-left">Device name</th>
+                                 <th class="py-sm px-sm text-right">Action</th>
+                              </tr>
+                              </thead>
+                              <tbody>
+                              <tr>
+                                 <td class="py-xs px-sm">
+                                    <div class="icon rounded-full bg-success"></div>
+                                 </td>
+                                 <td class="py-xs px-sm text-left">Main Loby</td>
+                                 <td class="py-xs px-sm text-right">
+                                    <div class="-mr-xs flex-row justify-end">
+                                       <button class="button f-color-primary opacity-50 hover:opacity-100 hover:f-color-secondary mr-xs"
+                                               title="Watch" aria-label="Watch" data-microtip-position="top"
+                                               role="tooltip"><i data-feather="eye"></i></button>
+                                       <a href="javascript:void(0);"
+                                          class="jsSettingsPopup_open button f-color-primary opacity-50 hover:opacity-100 hover:f-color-secondary mr-xs"
+                                          title="Settings" aria-label="Settings" data-microtip-position="top"
+                                          role="tooltip"><i data-feather="settings"></i></a>
+                                    </div>
+                                 </td>
+                              </tr>
+                              <tr class="bg-light">
+                                 <td class="py-xs px-sm">
+                                    <div class="icon rounded-full bg-success"></div>
+                                 </td>
+                                 <td class="py-xs px-sm text-left">Cam 1</td>
+                                 <td class="py-xs px-sm text-right">
+                                    <div class="-mr-xs flex-row justify-end">
+                                       <button class="button f-color-primary opacity-50 hover:opacity-100 hover:f-color-secondary mr-xs"
+                                               title="Watch" aria-label="Watch" data-microtip-position="top"
+                                               role="tooltip"><i data-feather="eye"></i></button>
+                                       <a href="javascript:void(0);"
+                                          class="jsSettingsPopup_open button f-color-primary opacity-50 hover:opacity-100 hover:f-color-secondary mr-xs"
+                                          title="Settings" aria-label="Settings" data-microtip-position="top"
+                                          role="tooltip"><i data-feather="settings"></i></a>
+                                    </div>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="py-xs px-sm">
+                                    <div class="icon rounded-full bg-warning"></div>
+                                 </td>
+                                 <td class="py-xs px-sm text-left">Cam 3</td>
+                                 <td class="py-xs px-sm text-right">
+                                    <div class="-mr-xs flex-row justify-end">
+                                       <a href="javascript:void(0);"
+                                          class="jsSettingsPopup_open button f-color-primary opacity-50 hover:opacity-100 hover:f-color-secondary mr-xs"
+                                          title="Settings" aria-label="Settings" data-microtip-position="top"
+                                          role="tooltip"><i data-feather="settings"></i></a>
+                                    </div>
+                                 </td>
+                              </tr>
+                              <tr class="bg-primary-light">
+                                 <td class="py-xs px-sm">
+                                    <div class="icon rounded-full bg-success"></div>
+                                 </td>
+                                 <td class="py-xs px-sm text-left">parking cam</td>
+                                 <td class="py-xs px-sm text-right">
+                                    <div class="-mr-xs flex-row justify-end">
+                                       <button class="button f-color-secondary opacity-100 mr-xs" title="Watch"
+                                               aria-label="Watch" data-microtip-position="top" role="tooltip"><i
+                                               data-feather="eye"></i></button>
+                                       <a href="javascript:void(0);"
+                                          class="jsSettingsPopup_open button f-color-primary opacity-50 hover:opacity-100 hover:f-color-secondary mr-xs"
+                                          title="Settings" aria-label="Settings" data-microtip-position="top"
+                                          role="tooltip"><i data-feather="settings"></i></a>
+                                    </div>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="py-xs px-sm">
+                                    <div class="icon rounded-full bg-warning"></div>
+                                 </td>
+                                 <td class="py-xs px-sm text-left">Office Outside</td>
+                                 <td class="py-xs px-sm text-right">
+                                    <div class="-mr-xs flex-row justify-end">
+                                       <a href="javascript:void(0);"
+                                          class="jsSettingsPopup_open button f-color-primary opacity-50 hover:opacity-100 hover:f-color-secondary mr-xs"
+                                          title="Settings" aria-label="Settings" data-microtip-position="top"
+                                          role="tooltip"><i data-feather="settings"></i></a>
+                                    </div>
+                                 </td>
+                              </tr>
+                              <tr class="bg-light">
+                                 <td class="py-xs px-sm">
+                                    <div class="icon rounded-full bg-warning"></div>
+                                 </td>
+                                 <td class="py-xs px-sm text-left">Office 1</td>
+                                 <td class="py-xs px-sm text-right">
+                                    <div class="-mr-xs flex-row justify-end">
+                                       <a href="javascript:void(0);"
+                                          class="jsSettingsPopup_open button f-color-primary opacity-50 hover:opacity-100 hover:f-color-secondary mr-xs"
+                                          title="Settings" aria-label="Settings" data-microtip-position="top"
+                                          role="tooltip"><i data-feather="settings"></i></a>
+                                    </div>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="py-xs px-sm">
+                                    <div class="icon rounded-full bg-success"></div>
+                                 </td>
+                                 <td class="py-xs px-sm text-left">Office 2</td>
+                                 <td class="py-xs px-sm text-right">
+                                    <div class="-mr-xs flex-row justify-end">
+                                       <button class="button f-color-primary opacity-50 hover:opacity-100 hover:f-color-secondary mr-xs"
+                                               title="Watch" aria-label="Watch" data-microtip-position="top"
+                                               role="tooltip"><i data-feather="eye"></i></button>
+                                       <a href="javascript:void(0);"
+                                          class="jsSettingsPopup_open button f-color-primary opacity-50 hover:opacity-100 hover:f-color-secondary mr-xs"
+                                          title="Settings" aria-label="Settings" data-microtip-position="top"
+                                          role="tooltip"><i data-feather="settings"></i></a>
+                                    </div>
+                                 </td>
+                              </tr>
+                              <tr class="bg-light">
+                                 <td class="py-xs px-sm">
+                                    <div class="icon rounded-full bg-success"></div>
+                                 </td>
+                                 <td class="py-xs px-sm text-left">Office 3</td>
+                                 <td class="py-xs px-sm text-right">
+                                    <div class="-mr-xs flex-row justify-end">
+                                       <button class="button f-color-primary opacity-50 hover:opacity-100 hover:f-color-secondary mr-xs"
+                                               title="Watch" aria-label="Watch" data-microtip-position="top"
+                                               role="tooltip"><i data-feather="eye"></i></button>
+                                       <a href="javascript:void(0);"
+                                          class="jsSettingsPopup_open button f-color-primary opacity-50 hover:opacity-100 hover:f-color-secondary mr-xs"
+                                          title="Settings" aria-label="Settings" data-microtip-position="top"
+                                          role="tooltip"><i data-feather="settings"></i></a>
+                                    </div>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="py-xs px-sm">
+                                    <div class="icon rounded-full bg-warning"></div>
+                                 </td>
+                                 <td class="py-xs px-sm text-left">Office 4</td>
+                                 <td class="py-xs px-sm text-right">
+                                    <div class="-mr-xs flex-row justify-end">
+                                       <a href="javascript:void(0);"
+                                          class="jsSettingsPopup_open button f-color-primary opacity-50 hover:opacity-100 hover:f-color-secondary mr-xs"
+                                          title="Settings" aria-label="Settings" data-microtip-position="top"
+                                          role="tooltip"><i data-feather="settings"></i></a>
+                                    </div>
+                                 </td>
+                              </tr>
+                              <tr class="bg-light">
+                                 <td class="py-xs px-sm">
+                                    <div class="icon rounded-full bg-warning"></div>
+                                 </td>
+                                 <td class="py-xs px-sm text-left">Video Wall 4G PTZ</td>
+                                 <td class="py-xs px-sm text-right">
+                                    <div class="-mr-xs flex-row justify-end">
+                                       <a href="javascript:void(0);"
+                                          class="jsSettingsPopup_open button f-color-primary opacity-50 hover:opacity-100 hover:f-color-secondary mr-xs"
+                                          title="Settings" aria-label="Settings" data-microtip-position="top"
+                                          role="tooltip"><i data-feather="settings"></i></a>
+                                    </div>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="py-xs px-sm">
+                                    <div class="icon rounded-full bg-warning"></div>
+                                 </td>
+                                 <td class="py-xs px-sm text-left">Marketing</td>
+                                 <td class="py-xs px-sm text-right">
+                                    <div class="-mr-xs flex-row justify-end">
+                                       <a href="javascript:void(0);"
+                                          class="jsSettingsPopup_open button f-color-primary opacity-50 hover:opacity-100 hover:f-color-secondary mr-xs"
+                                          title="Settings" aria-label="Settings" data-microtip-position="top"
+                                          role="tooltip"><i data-feather="settings"></i></a>
+                                    </div>
+                                 </td>
+                              </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                     <div class="col-12 lg:col-7 pr-md pb-sm flex-col">
+                        <div class="bg-white shadow">
+                           <header class="f-color-secondary p-sm border-default border-b flex-row flex-wrap justify-space-between align-center">
+                              <h2 class="f-size-md">Live Preview</h2>
+                              <p>Live preview of your selected camera</p>
+                           </header>
+                           <section class="p-sm">
+                              <div class="flex-row flex-wrap -mr-sm -mb-sm f-color-primary f-size-sm">
+                                 <div class="col-12 lg:col-6 flex-row pr-sm pb-sm">
+                                    <h3 class="f-color-secondary mr-xs">Device Name:</h3>
+                                    <p>Parking Cam</p>
+                                 </div>
+                                 <div class="col-12 lg:col-6 flex-row pr-sm pb-sm">
+                                    <h3 class="f-color-secondary mr-xs">Device ID:</h3>
+                                    <p>AAA-12356-AAAA</p>
+                                 </div>
+                                 <div class="col-12 lg:col-6 flex-row pr-sm pb-sm">
+                                    <h3 class="f-color-secondary mr-xs">Device Zone:</h3>
+                                    <p>VMukti South</p>
+                                 </div>
+                                 <div class="col-12 lg:col-6 flex-row pr-sm pb-sm">
+                                    <h3 class="f-color-secondary mr-xs">Device Ward:</h3>
+                                    <p>Parking Area</p>
+                                 </div>
+                              </div>
+                           </section>
+                           <section id="jsFullScreenVideoEnable" class="ratio-16x9 bg-black">
+                              <iframe class="pos-absolute pin w-full h-full"></iframe>
+                              <div class="pos-absolute pin-t pin-r">
+                                 <button
+                                         class="JSFullScreenTrigger button bg-primary f-color-white f-weight-semibold hover:shadow-md transition-all p-xs"
+                                         data-fullscreen-target="jsFullScreenVideoEnable"
+                                         aria-label="Full Screen"
+                                         data-microtip-position="top"
+                                         role="tooltip">
+                                                        <span class="icon icon-maximize">
+                                                            <i data-feather="maximize"></i>
+                                                        </span>
+                                    <span class="icon icon-minimize">
+                                                            <i data-feather="minimize"></i>
+                                                        </span>
+                                 </button>
+                              </div>
+                           </section>
+                           <section class="flex-col timeSliderWrapper px-sm pt-sm bg-semi-light">
+                              <div class="-mr-sm flex-col xl:flex-row-reverse">
+                                 <div class="pr-sm pb-sm flex-none flex-row">
+                                    <div class="ml-auto switch-field mt-auto">
+                                       <input type="radio" id="radio-am" name="switch-am-pm" value="yes"
+                                              checked/>
+                                       <label class="p-thin" for="radio-am">AM</label>
+                                       <input type="radio" id="radio-pm" name="switch-am-pm" value="no"/>
+                                       <label class="p-thin" for="radio-pm">PM</label>
+                                    </div>
+                                 </div>
+                                 <div class="pr-sm pb-sm flex-auto">
+                                    <!-- Time slider -->
+                                    <input class="jsTimeRange" type="text" id="ion" name="time-range" value=""/>
+                                 </div>
+                              </div>
+                           </section>
+                           <footer class="p-md text-center">
+                              <span class="f-color-secondary">Not able to view? <a href="#" class="f-color-primary">Click here for system test</a></span>
+                           </footer>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+            </div>
+         </section>
+         @@include('./_includes/_footer.html', {})
+      </div>
+   </div>
+   <!-- Settings Popup -->
+   <div id="jsSettingsPopup" class="d-hidden container container-md popup shadow-lg bg-white mx-xs my-xs">
+      <div class="flex-col w-full flex-stretch popup-wrap">
+         <div class="flex-stretch overflow-auto popup-body">
+            <header class="p-sm border-default border-b flex-row justify-space-between align-center">
+               <h2 class="f-size-md f-color-secondary">Settings <small class="f-size-sm">(Parking Cam)</small></h2>
+               <button class="button bg-success f-color-white f-weight-semibold hover:shadow-md transition-all py-xs px-2xs ml-auto">
+                  <span>Reboot</span>
+               </button>
+            </header>
+            <form class="flex-col p-sm">
+               <div class="flex-row flex-wrap align-center -mr-sm">
+                  <div class="col-12 md:col-6 pr-sm">
+                     <div class="flex-row align-center pb-sm">
+                        <div class="col-6"><h3>Audio</h3></div>
+                        <div class="col-6">
+                           <div class="flex-col w-full">
+                              <label class="switch ratio-switch icon-2md ml-auto">
+                                 <input name="alarm-switch" type="checkbox">
+                                 <span class="slider"></span>
+                              </label>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-12 md:col-6 pr-sm">
+                     <div class="flex-row align-center pb-sm">
+                        <div class="col-6"><h3>Flip</h3></div>
+                        <div class="col-6">
+                           <div class="flex-col w-full">
+                              <label class="switch ratio-switch icon-2md ml-auto">
+                                 <input name="alarm-switch" type="checkbox">
+                                 <span class="slider"></span>
+                              </label>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-12 md:col-6 pr-sm">
+                     <div class="flex-row align-center pb-sm">
+                        <div class="col-6"><h3>Motion Detection</h3></div>
+                        <div class="col-6">
+                           <div class="flex-col w-full">
+                              <label class="switch ratio-switch icon-2md ml-auto">
+                                 <input name="alarm-switch" type="checkbox">
+                                 <span class="slider"></span>
+                              </label>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-12 md:col-6 pr-sm">
+                     <div class="flex-row align-center pb-sm">
+                        <div class="col-6"><h3>Mirro</h3></div>
+                        <div class="col-6">
+                           <div class="flex-col w-full">
+                              <label class="switch ratio-switch icon-2md ml-auto">
+                                 <input name="alarm-switch" type="checkbox">
+                                 <span class="slider"></span>
+                              </label>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-12 md:col-6 pr-sm">
+                     <div class="flex-row align-center pb-sm">
+                        <div class="col-6"><h3>Recording</h3></div>
+                        <div class="col-6">
+                           <div class="flex-col w-full">
+                              <label class="switch ratio-switch icon-2md ml-auto">
+                                 <input name="alarm-switch" type="checkbox">
+                                 <span class="slider"></span>
+                              </label>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-12 md:col-6 pr-sm">
+                     <div class="flex-row align-center pb-sm">
+                        <div class="col-6"><h3>Highlimit</h3></div>
+                        <div class="col-6">
+                           <div class="flex-col w-full">
+                              <input type="text"
+                                     class="py-2xs px-xs bg-light f-color-secondary flex-stretch focus:shadow transition-all w-full text-right">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-12 md:col-6 pr-sm">
+                     <div class="flex-row align-center pb-sm">
+                        <div class="col-6"><h3>Timezone</h3></div>
+                        <div class="col-6">
+                           <div class="flex-col w-full">
+                              <div class="select">
+                                 <select class="py-2xs px-xs bg-light f-color-secondary flex-stretch focus:shadow transition-all w-full text-right">
+                                    <option>(GMT-11:00)</option>
+                                    <option>(GMT-10:00)</option>
+                                    <option>(GMT-09:00)</option>
+                                    <option>(GMT-08:00)</option>
+                                 </select>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-12 md:col-6 pr-sm">
+                     <div class="flex-row align-center pb-sm">
+                        <div class="col-6"><h3>Duration</h3></div>
+                        <div class="col-6">
+                           <div class="flex-col w-full">
+                              <input type="text"
+                                     class="py-2xs px-xs bg-light f-color-secondary flex-stretch focus:shadow transition-all w-full text-right">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-12 md:col-6 pr-sm">
+                     <div class="flex-row align-center pb-sm">
+                        <div class="col-6"><h3>Display</h3></div>
+                        <div class="col-6">
+                           <div class="flex-col w-full">
+                              <div class="select">
+                                 <select class="py-2xs px-xs bg-light f-color-secondary flex-stretch focus:shadow transition-all w-full text-right">
+                                    <option>1280 x 720</option>
+                                    <option>1920 x 1080</option>
+                                    <option>2560 x 1440</option>
+                                 </select>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-12 md:col-6 pr-sm">
+                     <div class="flex-row align-center pb-sm">
+                        <div class="col-6"><h3>Correction</h3></div>
+                        <div class="col-6">
+                           <div class="flex-col w-full">
+                              <input type="text"
+                                     class="py-2xs px-xs bg-light f-color-secondary flex-stretch focus:shadow transition-all w-full text-right">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-12 md:col-6 pr-sm">
+                     <div class="flex-row align-center pb-sm">
+                        <div class="col-6"><h3>IR Cut</h3></div>
+                        <div class="col-6">
+                           <div class="flex-col w-full">
+                              <div class="select">
+                                 <select class="py-2xs px-xs bg-light f-color-secondary flex-stretch focus:shadow transition-all w-full text-right">
+                                    <option>Day & Night</option>
+                                    <option>Day</option>
+                                    <option>Night</option>
+                                 </select>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-12 md:col-6 pr-sm">
+                     <div class="flex-row align-center pb-sm">
+                        <div class="col-6"><h3>Capture Interval</h3></div>
+                        <div class="col-6">
+                           <div class="flex-col w-full">
+                              <input type="text"
+                                     class="py-2xs px-xs bg-light f-color-secondary flex-stretch focus:shadow transition-all w-full text-right">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </form>
+            <footer class="p-sm pt-0 flex-row justify-center">
+               <button class="button mx-xs bg-primary f-color-white f-weight-semibold hover:shadow-md transition-all py-xs px-2xs">
+                  <span>Update</span>
+               </button>
+               <button class="jsSettingsPopup_close button mx-xs bg-secondary f-color-white f-weight-semibold hover:shadow-md transition-all py-xs px-2xs">
+                  <span>Cancel</span>
+               </button>
+            </footer>
+         </div>
+      </div>
+   </div>
+
+   <!-- Add Device Popup-->
+   <div id="jsAddDevicePopup" class="d-hidden container container-sm popup shadow-lg bg-white mx-xs my-xs">
+      <div class="flex-col w-full flex-stretch popup-wrap">
+         <div class="flex-stretch overflow-auto popup-body">
+            <header class="p-sm border-default border-b">
+               <h2 class="f-size-md f-color-secondary">Add Camera</h2>
+            </header>
+            <form class="flex-col p-sm">
+               <div class="flex-row align-center pb-sm">
+                  <div class="col-6"><h3>Camera Name</h3></div>
+                  <div class="col-6">
+                     <div class="flex-col w-full">
+                        <input type="text"
+                               class="py-2xs px-xs bg-light f-color-secondary flex-stretch focus:shadow transition-all w-full text-right">
+                     </div>
+                  </div>
+               </div>
+               <div class="flex-row align-center pb-sm">
+                  <div class="col-6"><h3>Camera ID</h3></div>
+                  <div class="col-6">
+                     <div class="flex-col w-full">
+                        <input type="text"
+                               class="py-2xs px-xs bg-light f-color-secondary flex-stretch focus:shadow transition-all w-full text-right">
+                     </div>
+                  </div>
+               </div>
+               <div class="flex-row align-center pb-sm">
+                  <div class="col-6"><h3>Camera Zone</h3></div>
+                  <div class="col-6">
+                     <div class="flex-col w-full">
+                        <div class="select">
+                           <select class="py-2xs px-xs bg-light f-color-secondary flex-stretch focus:shadow transition-all w-full text-right">
+                              <option>Select Zone</option>
+                              <option>Zone 1</option>
+                              <option>Zone 2</option>
+                           </select>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="flex-row align-center pb-sm">
+                  <div class="col-6"><h3>Camera Ward</h3></div>
+                  <div class="col-6">
+                     <div class="flex-col w-full">
+                        <div class="select">
+                           <select class="py-2xs px-xs bg-light f-color-secondary flex-stretch focus:shadow transition-all w-full text-right">
+                              <option>Select Ward</option>
+                              <option>Ward 1</option>
+                              <option>Ward 2</option>
+                           </select>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </form>
+            <footer class="p-sm pt-0 flex-row justify-center">
+               <button class="button mx-xs bg-primary f-color-white f-weight-semibold hover:shadow-md transition-all py-xs px-2xs">
+                  <span>Submit</span>
+               </button>
+               <button class="jsSettingsPopup_close button mx-xs bg-secondary f-color-white f-weight-semibold hover:shadow-md transition-all py-xs px-2xs">
+                  <span>Cancel</span>
+               </button>
+            </footer>
+         </div>
+      </div>
+
+   </div>
+</main>
+<script src="js/allScript.js"></script>
+</body>
+
+</html>

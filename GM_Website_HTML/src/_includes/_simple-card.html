@@ -1,0 +1,52 @@
+@@if(context.isBanner){
+<section class="@@bannerClasses pos-relative">
+   <div class="@@bannerImageClasses pos-absolute pin" style="background-image: url('./images/@@bannerImage');"></div>
+   <div class="flex-row pos-relative flex-stretch">
+      @@if(context.bannerInnerClasses){
+         <div class="@@bannerInnerClasses pos-absolute pin-l pin-y"></div>
+      }
+      <div class="@@bannerContainerClasses">
+}
+         <article class="@@colClasses @@if(context.gap){pr-2xs pb-2xs lg:pb-@@gap lg:pr-@@gap}" @@if(context.aosAttr){@@aosAttr}>
+            @@if(context.cardImage){
+               <figure class="@@imageClasses pos-relative">
+                  <div class="@@imageBgClasses pos-absolute pin" style="background-image: url('./images/@@cardImage');"></div>
+                  @@if(context.imageTag){
+                     <div class="@@imageTagClasses">@@imageTagText</div>
+                  }
+               </figure>
+            }
+            <div class="flex-stretch flex-col align-start @@if(context.cardContentClasses){@@cardContentClasses}">
+               @@if(context.tag){
+                  <div class="@@tagClasses">@@tagText</div>
+               }
+               @@if(context.cardTitle || context.cardText){
+               <section class="text-wrap w-full">
+                  @@if(context.cardTitle){
+                     @@if(context.titleTag){
+                        <@@titleTag class="@@if(context.cardTitleClasses){@@cardTitleClasses} @@if(!context.cardTitleClasses){fweight-semibold fsize-md lg:fsize-2md}">@@cardTitle</@@titleTag>
+                     }
+                     @@if(!context.titleTag){
+                        <h2 class="@@if(context.cardTitleClasses){@@cardTitleClasses} @@if(!context.cardTitleClasses){fweight-semibold fsize-md lg:fsize-2md}">@@cardTitle</h2>
+                     }
+                  }
+                  @@if(context.cardText){
+                     @@for (var i = 0; i < cardText.length; i++) {
+                        <p>`+(cardText[i])+`</p>
+                     }
+                  }
+               </section>
+               }
+               @@if(context.cardButton){
+                  <footer class="mt-auto @@footerClasses">
+                     <a href="@@buttonLink" class="@@buttonClasses">@@cardButton</a>
+                  </footer>
+               }
+            </div>
+         </article>
+
+@@if(context.isBanner){
+      </div>
+   </div>
+</section>
+}

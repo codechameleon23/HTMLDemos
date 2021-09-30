@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include('./_includes/_head.html', {
+  "pageName": "Apprenticeship",
+  "description": ""
+  })
+</head>
+
+<body class="jsNavbarToggle is-close flex-col has-theme-jaffa">
+
+    <!-- Header -->
+    @@include('./_includes/_header.html', {
+      "headerPosClasses": "lg:pos-absolute pin-x pin-t z-40",
+      "aboutActive": "",
+      "communityActive": "",
+      "curriculumActive": "is-active",
+      "examsActive": "",
+      "studentServicesActive": "",
+      "newsNEventsActive": ""
+    })
+
+  <!-- Main -->
+  <main class="flex-auto flex-col">
+    <!-- Hero Banner -->
+    @@include('./_includes/_banner-carousel.html', {
+    "rowClasses": "flex-wrap -mr-2xs lg:-mr-md -mb-md",
+    "carousel": false,
+    "hideControl": true,
+    "data": 
+      [
+        {
+          "isBanner": true,
+          "bannerClasses": "lg:pb-xl lg:pt-2xxl flex-col bg-shipGray lg:bg-transparent overflow-hidden",
+          "bannerImage": "iStock-1037044238.jpg",
+          "bannerImageWrapperClasses": "pos-absolute pin-y w-full pin-l-50 pin-l50 container-xl mx-auto flex-row justify-end align-end overflow-hidden",
+          "bannerImageClasses": "lg:mr-sm xl:mr-0 lg:col-6 h-full lg:h-auto md:ratio-1x1 bg-cover bg-center bg-inherit opacity-50 lg:opacity-100 lg:radius-full lg:-mb-lg",
+          "bannerInnerClasses": "",
+          "bannerInnerContainerClasses": "container md:container-xl mx-auto pos-relative",
+          "colClasses": "md:col-7 lg:col-6 flex-col md:pr-2lg py-2lg",
+          "cardImage": "single-logo-jaffa.png",
+          "imageClasses": "ratio-1x1 icon-logo-md mr-auto mb-md",
+          "imageBgClasses": "bg-bottom bg-cover",
+          "cardContentClasses": "",
+          "tag": true,
+          "tagClasses": "d-hidden lg:d-inline-block breadcrumbs flex-row pos-absolute pin-b fsize-xs fweight-medium -mb-2md uppercase",
+          "tagText": "<a href='curriculum.html' class='no-underline fcolor-inherit hover:theme-text'>CURRICULUM</a><span class='mx-xs'>|</span><span>Apprenticeships</span>",
+          "footerClasses": "md:pt-md",
+          "cardTitle": "Apprenticeships" ,
+          "cardTitleClasses": "theme-text fweight-bold fsize-lg lg:fsize-xl",
+          "cardText": ["<p data-aos='fade-up' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom' class='fsize-3sm'>Me publici acrist pere des! Sciaci sendem untium oc idiisquo estem, cludes imaxi</p>"],
+          "cardTextClasses": "fcolor-white lg:fcolor-inherit",
+          "footerClasses": "pt-sm",
+          "cardButton": "",
+          "buttonLink": "",
+          "buttonClasses": "",
+          "footerClasses": "flex-row flex-wrap -mr-sm -mb-sm pt-sm",
+          "footerHtml": "<a href='#' class='button mr-sm mb-sm hover:shadow-md theme-bg fsize-3xs fweight-bold fcolor-white uppercase py-xs px-md fspacing-wide'>STUDENTS</a><a href='#' class='button mr-sm mb-sm hover:shadow-md theme-bg fsize-3xs fweight-bold fcolor-white uppercase py-xs px-md fspacing-wide'>EMPLOYERS</a>",
+          "imageAOSattr": "data-aos='zoom-in' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "cardTitleAOSattr": "data-aos='fade-up' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "footerAOSattr": "data-aos='fade-up' data-aos-delay='500' data-aos-duration='700' data-aos-anchor-placement='top-bottom'"
+        }
+      ]
+    })
+
+    <!-- Three Columns -->
+    @@include(
+    './_includes/_column-grid.html',
+    {
+      "sectionClasses": "pt-2md lg:pt-0",
+      "containerClasses": "container container-sm lg:container-fluid mx-auto",
+      "rowClasses": "flex-wrap flex-row",
+      "childOnly": false,
+      "data": 
+      [
+        {
+          "colClasses": "flex-col col-12 lg:col-4 bg-mauvelous fcolor-white",
+          "aosAttr": "data-aos='zoom-in' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "cardImage": "",
+          "imageClasses": "ratio-1x1 pos-relative",
+          "imageBgClasses": "",
+          "cardContentClasses": "flex-stretch flex-col pos-absolute pin justify-center align-center p-md lg:px-lg text-center",
+          "cardTitle": "Business Admin",
+          "cardTitleClasses": "fweight-medium fsize-4md",
+          "cardText": ["<a href='#' class='button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide'>Learn More</a>"],
+          "cardTextClasses": "flex-col align-center",
+          "footerClasses": "pt-sm",
+          "cardButton": "",
+          "buttonLink": "#",
+          "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide"
+        },
+        {
+          "colClasses": "flex-col col-12 lg:col-4 bg-vistaBlue fcolor-white",
+          "aosAttr": "data-aos='zoom-in' data-aos-delay='200' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "cardImage": "",
+          "imageClasses": "ratio-1x1 pos-relative",
+          "imageBgClasses": "",
+          "cardContentClasses": "flex-stretch flex-col pos-absolute pin justify-center align-center p-md lg:px-lg text-center",
+          "cardTitle": "Health & Social Care" ,
+          "cardTitleClasses": "fweight-medium fsize-4md",
+          "cardText": ["<a href='#' class='button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide'>Learn More</a>"],
+          "cardTextClasses": "flex-col align-center",
+          "footerClasses": "pt-sm",
+          "cardButton": "",
+          "buttonLink": "#",
+          "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide"
+        },
+        {
+          "colClasses": "flex-col col-12 lg:col-4 bg-java fcolor-white",
+          "aosAttr": "data-aos='zoom-in' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "cardImage": "",
+          "imageClasses": "ratio-1x1 pos-relative",
+          "imageBgClasses": "",
+          "cardContentClasses": "flex-stretch flex-col pos-absolute pin justify-center align-center p-md lg:px-lg text-center",
+          "cardTitle": "Management" ,
+          "cardTitleClasses": "fweight-medium fsize-4md",
+          "cardText": ["<a href='#' class='button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide'>Learn More</a>"],
+          "cardTextClasses": "flex-col align-center",
+          "footerClasses": "pt-sm",
+          "cardButton": "",
+          "buttonLink": "#",
+          "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide"
+        },
+        {
+          "colClasses": "flex-col col-12 lg:col-4 bg-lightningYellow fcolor-white",
+          "aosAttr": "data-aos='zoom-in' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "cardImage": "",
+          "imageClasses": "ratio-1x1 pos-relative",
+          "imageBgClasses": "",
+          "cardContentClasses": "flex-stretch flex-col pos-absolute pin justify-center align-center p-md lg:px-lg text-center",
+          "cardTitle": "Childcare" ,
+          "cardTitleClasses": "fweight-medium fsize-4md",
+          "cardText": ["<a href='#' class='button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide'>Learn More</a>"],
+          "cardTextClasses": "flex-col align-center",
+          "footerClasses": "pt-sm",
+          "cardButton": "",
+          "buttonLink": "#",
+          "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide"
+        },
+        {
+          "colClasses": "flex-col col-12 lg:col-4 bg-turmeric fcolor-white",
+          "aosAttr": "data-aos='zoom-in' data-aos-delay='200' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "cardImage": "",
+          "imageClasses": "ratio-1x1 pos-relative",
+          "imageBgClasses": "",
+          "cardContentClasses": "flex-stretch flex-col pos-absolute pin justify-center align-center p-md lg:px-lg text-center",
+          "cardTitle": "Customer Service" ,
+          "cardTitleClasses": "fweight-medium fsize-4md",
+          "cardText": ["<a href='#' class='button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide'>Learn More</a>"],
+          "cardTextClasses": "flex-col align-center",
+          "footerClasses": "pt-sm",
+          "cardButton": "",
+          "buttonLink": "#",
+          "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide"
+        },
+        {
+          "colClasses": "flex-col col-12 lg:col-4 bg-deluge fcolor-white",
+          "aosAttr": "data-aos='zoom-in' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "cardImage": "",
+          "imageClasses": "ratio-1x1 pos-relative",
+          "imageBgClasses": "",
+          "cardContentClasses": "flex-stretch flex-col pos-absolute pin justify-center align-center p-md lg:px-lg text-center",
+          "cardTitle": "ICT/Digital" ,
+          "cardTitleClasses": "fweight-medium fsize-4md",
+          "cardText": ["<a href='#' class='button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide'>Learn More</a>"],
+          "cardTextClasses": "flex-col align-center",
+          "footerClasses": "pt-sm",
+          "cardButton": "",
+          "buttonLink": "#",
+          "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide"
+        }
+      ]
+    }
+  )
+
+
+    <!-- Our Apprenticeships -->
+    @@include(
+      './_includes/_column-grid.html', 
+      {
+        "sectionClasses": "pt-2md lg:pt-0",
+        "containerClasses": "container md:container-md lg:container-fluid mx-auto",
+        "rowClasses": "theme-bg fcolor-white flex-row flex-wrap pos-relative",
+        "childOnly": false,
+        "data": [
+          { 
+            "colClasses": "flex-col col-12 flex-col lg:flex-row-reverse container lg:container-xl mx-auto",
+            "aosAttr": "",
+            "vericalCard": true,
+            "cardImage": "iStock-1010059710.jpg",
+            "imageClasses": "ratio-16x9 lg:ratio-none lg:col-6 lg:pos-absolute pin-y pin-r",
+            "imageBgClasses": "bg-center bg-cover",
+            "cardContentClasses": "lg:col-6 pt-sm p-md xl:pl-0 lg:pr-xxl lg:py-3xxl mr-auto",
+            "cardTitle": "Our Apprenticeships" ,
+            "cardTitleClasses": "fweight-bold fsize-2md lg:fsize-2lg",
+            "cardText": ["<p>An apprenticeship is a job with training and in a nutshell,  it’s an excellent way to gain qualifications and work place experience - all at the same time!</p>", "<p>Plus, you’ll also get paid whilst you learn and gain practical skills to help you in your career. Depending on the qualification or the employer, you will:</p>", "<ul class='text-wrap ml-sm'><li class='fweight-bold'><span class='fweight-light'>Work four days a week and go to college for one day</span></li><li class='fweight-bold'><span class='fweight-light'>Work full/part-time and take a week out, on a regular basis,  to go to college</span></li><li class='fweight-bold'><span class='fweight-light'>Work full/part-time with your apprenticeship programme delivered in your workplace</span></li></ul>"],
+            "footerClasses": "pt-sm",
+            "cardButton": "",
+            "buttonLink": "#",
+            "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide",
+            "cardTextAOSattr": "data-aos='fade-up' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+            "footerAOSattr": "data-aos='fade-up' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom'"
+          }
+        ]
+      }
+    )
+
+
+  <!-- Article Image Text -->
+  @@include(
+    './_includes/_column-grid.html', 
+    {
+      "sectionClasses": "pt-xl lg:pt-2xl",
+      "containerClasses": "container md:container-md lg:container-fluid mx-auto",
+      "rowClasses": "flex-row flex-wrap pos-relative",
+      "childOnly": false,
+      "data": [
+        { 
+          "colClasses": "flex-col col-12 flex-col lg:flex-row container lg:container-2xl mx-auto",
+          "aosAttr": "",
+          "vericalCard": true,
+          "cardImage": "iStock-884707986.jpg",
+          "imageClasses": "ratio-16x9 lg:ratio-none lg:col-6 lg:pos-absolute pin-y pin-l lg:-ml-2md",
+          "imageBgClasses": "bg-center bg-cover",
+          "cardContentClasses": "lg:col-6 pt-sm px-md pt-md  xl:pr-0 lg:pl-2md lg:py-xl ml-auto",
+          "cardTitle": "Why choose an<br> Apprenticeship?" ,
+          "cardTitleClasses": "fweight-bold fsize-2md lg:fsize-2lg",
+          "cardText": ["<p>Apprenticeships are ideal if you have a clear idea of the career you’d like to pursue, and you’re willing to commit to work and study. Unlike in school, at college or on a traditional degree course, the majority of your learning will be through on-the-job training in your place of work. To be considered for an apprenticeship programme in England, you need to be:</p>", "<ul class='text-wrap ml-sm'><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>Aged 16 or over</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>Living in England</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>Not in full-time education</span></li></ul>"],
+          "footerClasses": "pt-sm",
+          "cardButton": "APPLY NOW",
+          "buttonLink": "#",
+          "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide",
+          "cardTextAOSattr": "data-aos='fade-up' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "footerAOSattr": "data-aos='fade-up' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom'"
+        }
+      ]
+    }
+  )
+
+  <!-- Article Text Image -->
+  @@include(
+    './_includes/_column-grid.html', 
+    {
+      "sectionClasses": "pt-xl lg:pt-2xl",
+      "containerClasses": "container md:container-md lg:container-fluid mx-auto",
+      "rowClasses": "flex-row flex-wrap pos-relative",
+      "childOnly": false,
+      "data": [
+        { 
+          "colClasses": "flex-col col-12 flex-col lg:flex-row-reverse container lg:container-2xl mx-auto",
+          "aosAttr": "",
+          "vericalCard": true,
+          "cardImage": "iStock-1002018094.jpg",
+          "imageClasses": "ratio-16x9 lg:ratio-none lg:col-6 lg:pos-absolute pin-y pin-r lg:-mr-2md",
+          "imageBgClasses": "bg-center bg-cover",
+          "cardContentClasses": "lg:col-6 pt-sm px-md pt-md xl:pl-0 lg:pr-2md lg:py-xl mr-auto",
+          "cardTitle": "5 Facts about<br> Apprenticeships" ,
+          "cardTitleClasses": "fweight-bold fsize-2md lg:fsize-2lg",
+          "cardText": ["<ol class='text-wrap ml-sm'><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>Apprentices should work for at least 30 hours per week</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>An apprenticeship generally takes between 1 and 5 years to complete</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>Most of the training is delivered in the work place and the rest is given by a training organisation either at the workplace, off site (perhaps at college) or via e-learning </span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>Training is specifically tailored to ensure you develop skills that  an employer wants</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'> The skills and experience you gain will give you a real advantage  in the workplace and give you a real chance of getting a job</span></li></ol>"],
+          "footerClasses": "pt-sm",
+          "cardButton": "",
+          "buttonLink": "#",
+          "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide",
+          "cardTextAOSattr": "data-aos='fade-up' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "footerAOSattr": "data-aos='fade-up' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom'"
+        }
+      ]
+    }
+  )
+
+  <!-- Ribbon -->
+  <section class="pt-2lg lg:pt-2xl">
+    @@include(
+      './_includes/_ribbon.html',
+      {
+        "titleTag": "h1",
+        "ribbonWrapper": "theme-bg fcolor-white text-center py-md",
+        "ribbonText": "Hot Topics",
+        "ribbonTextClasses": "fweight-medium fsize-4md"
+      }
+    )
+  </section>
+
+  <!-- Accordions -->
+  @@include(
+    './_includes/_column-grid.html', 
+    { 
+      "sectionClasses": "pt-2md lg:pt-xl -mb-md",
+      "containerClasses": "container md:container-md lg:container-xl mx-auto",
+      "rowClasses": "flex-row flex-wrap",
+      "childOnly": false,
+      "accordionWrapperClasses": "col-12",
+      "toggleContentClasses": "col-12 -mb-md",
+      "togglable": "true",
+      "closeOthers": "true",
+      "accordionData": [
+        {
+          "accordionClasses": "is-open mb-md border-y-2 border-r-2 border-l-10 lg:border-l-20 theme-border",
+          "accordionLabelClasses": "p-sm transition-all",
+          "filterby": "benefits-of-participating",
+          "questionText": "Apprenticeships would suit someone who:",
+          "questionTextClasses": "fweight-medium fsize-2md",
+          "toggleSignClasses": "icon transition-all theme-text",
+          "toggleSignInnerClasses": "fcolor-inherit",
+          "toggleSignIcon": "",
+          "accordionContentClasses": "transition-all",
+          "answerClasses": "p-sm",
+          "answerContent": "<div class='text-wrap'><ul class='text-wrap ml-sm'><li class='fweight-bold'><span class='fweight-light'>Has a clear idea of the type of career they wish to pursue</span></li><li class='fweight-bold'><span class='fweight-light'>Is willing to commit to work and study, but would prefer a more practical and work-related approach to learnin</span></li><li class='fweight-bold'><span class='fweight-light'>Is ready to start work with an employer, and be based in the workplace most of the tim</span></li><li class='fweight-bold'><span class='fweight-light'>Is well organised and able to cope with the competing demands of work and academic study at the same time</span></li><li class='fweight-bold'><span class='fweight-light'>Is ready to be assessed through a mix of assignments and written work, including essays, reports, practical exercises, end tests, and exams</span></li></ul><p>No matter what kind of career you want to follow, you need to do your research and find out if you can reach your career goals through an apprenticeship, or if you need/would prefer to study full-time at university or college.</p><p>Apprenticeships aren’t the ‘easy’ option. Holding down a full-time job and studying takes commitment and hard work, and it won’t be right for everyone. You’ll need to prove yourself in the workplace, while getting to grips with studying for a higher level qualification. You’ll be expected to achieve academically and at work, managing your time and adjusting to longer hours, with fewer holidays than at school, college, or university. You might have to travel or relocate to find the right opportunity for you.</p><div class='flex-row flex-wrap -mr-sm -mb-sm'><div class='mr-sm mb-sm'><a href='#' class='button size-lg hover:shadow-md theme-bg fsize-3xs fweight-bold fcolor-white uppercase py-xs px-md'>APPLY NOW</a></div></div></div>"
+        },
+        {
+          "accordionClasses": "mb-md border-y-2 border-r-2 border-l-10 lg:border-l-20 theme-border",
+          "accordionLabelClasses": "p-sm transition-all",
+          "filterby": "aims",
+          "questionText": "What apprenticeships are available in England?",
+          "questionTextClasses": "fweight-medium fsize-2md",
+          "toggleSignClasses": "icon transition-all theme-text",
+          "toggleSignInnerClasses": "fcolor-inherit",
+          "toggleSignIcon": "",
+          "accordionContentClasses": "transition-all",
+          "answerClasses": "p-sm",
+          "answerContent": "<div class='text-wrap'><ul class='text-wrap ml-sm'><li class='fweight-bold'><span class='fweight-light'>Has a clear idea of the type of career they wish to pursue</span></li><li class='fweight-bold'><span class='fweight-light'>Is willing to commit to work and study, but would prefer a more practical and work-related approach to learnin</span></li><li class='fweight-bold'><span class='fweight-light'>Is ready to start work with an employer, and be based in the workplace most of the tim</span></li><li class='fweight-bold'><span class='fweight-light'>Is well organised and able to cope with the competing demands of work and academic study at the same time</span></li><li class='fweight-bold'><span class='fweight-light'>Is ready to be assessed through a mix of assignments and written work, including essays, reports, practical exercises, end tests, and exams</span></li></ul><p>No matter what kind of career you want to follow, you need to do your research and find out if you can reach your career goals through an apprenticeship, or if you need/would prefer to study full-time at university or college.</p><p>Apprenticeships aren’t the ‘easy’ option. Holding down a full-time job and studying takes commitment and hard work, and it won’t be right for everyone. You’ll need to prove yourself in the workplace, while getting to grips with studying for a higher level qualification. You’ll be expected to achieve academically and at work, managing your time and adjusting to longer hours, with fewer holidays than at school, college, or university. You might have to travel or relocate to find the right opportunity for you.</p><div class='flex-row flex-wrap -mr-sm -mb-sm'><div class='mr-sm mb-sm'><a href='#' class='button size-lg hover:shadow-md theme-bg fsize-3xs fweight-bold fcolor-white uppercase py-xs px-md'>APPLY NOW</a></div></div></div>"
+        },
+        {
+          "accordionClasses": "mb-md border-y-2 border-r-2 border-l-10 lg:border-l-20 theme-border",
+          "accordionLabelClasses": "p-sm transition-all",
+          "filterby": "interventions",
+          "questionText": "Apprenticeship Levy",
+          "questionTextClasses": "fweight-medium fsize-2md",
+          "toggleSignClasses": "icon transition-all theme-text",
+          "toggleSignInnerClasses": "fcolor-inherit",
+          "toggleSignIcon": "",
+          "accordionContentClasses": "transition-all",
+          "answerClasses": "p-sm",
+          "answerContent": "<div class='text-wrap'><ul class='text-wrap ml-sm'><li class='fweight-bold'><span class='fweight-light'>Has a clear idea of the type of career they wish to pursue</span></li><li class='fweight-bold'><span class='fweight-light'>Is willing to commit to work and study, but would prefer a more practical and work-related approach to learnin</span></li><li class='fweight-bold'><span class='fweight-light'>Is ready to start work with an employer, and be based in the workplace most of the tim</span></li><li class='fweight-bold'><span class='fweight-light'>Is well organised and able to cope with the competing demands of work and academic study at the same time</span></li><li class='fweight-bold'><span class='fweight-light'>Is ready to be assessed through a mix of assignments and written work, including essays, reports, practical exercises, end tests, and exams</span></li></ul><p>No matter what kind of career you want to follow, you need to do your research and find out if you can reach your career goals through an apprenticeship, or if you need/would prefer to study full-time at university or college.</p><p>Apprenticeships aren’t the ‘easy’ option. Holding down a full-time job and studying takes commitment and hard work, and it won’t be right for everyone. You’ll need to prove yourself in the workplace, while getting to grips with studying for a higher level qualification. You’ll be expected to achieve academically and at work, managing your time and adjusting to longer hours, with fewer holidays than at school, college, or university. You might have to travel or relocate to find the right opportunity for you.</p><div class='flex-row flex-wrap -mr-sm -mb-sm'><div class='mr-sm mb-sm'><a href='#' class='button size-lg hover:shadow-md theme-bg fsize-3xs fweight-bold fcolor-white uppercase py-xs px-md'>APPLY NOW</a></div></div></div>"
+        },
+        {
+          "accordionClasses": "mb-md border-y-2 border-r-2 border-l-10 lg:border-l-20 theme-border",
+          "accordionLabelClasses": "p-sm transition-all",
+          "filterby": "interventions",
+          "questionText": "Benefits of Apprenticeships",
+          "questionTextClasses": "fweight-medium fsize-2md",
+          "toggleSignClasses": "icon transition-all theme-text",
+          "toggleSignInnerClasses": "fcolor-inherit",
+          "toggleSignIcon": "",
+          "accordionContentClasses": "transition-all",
+          "answerClasses": "p-sm",
+          "answerContent": "<div class='text-wrap'><ul class='text-wrap ml-sm'><li class='fweight-bold'><span class='fweight-light'>Has a clear idea of the type of career they wish to pursue</span></li><li class='fweight-bold'><span class='fweight-light'>Is willing to commit to work and study, but would prefer a more practical and work-related approach to learnin</span></li><li class='fweight-bold'><span class='fweight-light'>Is ready to start work with an employer, and be based in the workplace most of the tim</span></li><li class='fweight-bold'><span class='fweight-light'>Is well organised and able to cope with the competing demands of work and academic study at the same time</span></li><li class='fweight-bold'><span class='fweight-light'>Is ready to be assessed through a mix of assignments and written work, including essays, reports, practical exercises, end tests, and exams</span></li></ul><p>No matter what kind of career you want to follow, you need to do your research and find out if you can reach your career goals through an apprenticeship, or if you need/would prefer to study full-time at university or college.</p><p>Apprenticeships aren’t the ‘easy’ option. Holding down a full-time job and studying takes commitment and hard work, and it won’t be right for everyone. You’ll need to prove yourself in the workplace, while getting to grips with studying for a higher level qualification. You’ll be expected to achieve academically and at work, managing your time and adjusting to longer hours, with fewer holidays than at school, college, or university. You might have to travel or relocate to find the right opportunity for you.</p><div class='flex-row flex-wrap -mr-sm -mb-sm'><div class='mr-sm mb-sm'><a href='#' class='button size-lg hover:shadow-md theme-bg fsize-3xs fweight-bold fcolor-white uppercase py-xs px-md'>APPLY NOW</a></div></div></div>"
+        },
+        {
+          "accordionClasses": "mb-md border-y-2 border-r-2 border-l-10 lg:border-l-20 theme-border",
+          "accordionLabelClasses": "p-sm transition-all",
+          "filterby": "Current Apprenticeships",
+          "questionText": "Benefits of Apprenticeships",
+          "questionTextClasses": "fweight-medium fsize-2md",
+          "toggleSignClasses": "icon transition-all theme-text",
+          "toggleSignInnerClasses": "fcolor-inherit",
+          "toggleSignIcon": "",
+          "accordionContentClasses": "transition-all",
+          "answerClasses": "p-sm",
+          "answerContent": "<div class='text-wrap'><ul class='text-wrap ml-sm'><li class='fweight-bold'><span class='fweight-light'>Has a clear idea of the type of career they wish to pursue</span></li><li class='fweight-bold'><span class='fweight-light'>Is willing to commit to work and study, but would prefer a more practical and work-related approach to learnin</span></li><li class='fweight-bold'><span class='fweight-light'>Is ready to start work with an employer, and be based in the workplace most of the tim</span></li><li class='fweight-bold'><span class='fweight-light'>Is well organised and able to cope with the competing demands of work and academic study at the same time</span></li><li class='fweight-bold'><span class='fweight-light'>Is ready to be assessed through a mix of assignments and written work, including essays, reports, practical exercises, end tests, and exams</span></li></ul><p>No matter what kind of career you want to follow, you need to do your research and find out if you can reach your career goals through an apprenticeship, or if you need/would prefer to study full-time at university or college.</p><p>Apprenticeships aren’t the ‘easy’ option. Holding down a full-time job and studying takes commitment and hard work, and it won’t be right for everyone. You’ll need to prove yourself in the workplace, while getting to grips with studying for a higher level qualification. You’ll be expected to achieve academically and at work, managing your time and adjusting to longer hours, with fewer holidays than at school, college, or university. You might have to travel or relocate to find the right opportunity for you.</p><div class='flex-row flex-wrap -mr-sm -mb-sm'><div class='mr-sm mb-sm'><a href='#' class='button size-lg hover:shadow-md theme-bg fsize-3xs fweight-bold fcolor-white uppercase py-xs px-md'>APPLY NOW</a></div></div></div>"
+        }
+      ]
+    }
+  )
+  </main>
+  @@include('./_includes/_footer.html', {
+    "instagram": false
+  })
+  <script src="js/allScript.js"></script>
+</body>
+
+</html>

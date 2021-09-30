@@ -1,0 +1,81 @@
+<div class="flex-col lg:flex-row pos-relative @@bgClasses">
+      @@if (context.bgImage) {
+         <section class="lg:pos-absolute lg:col-6 pin pin-r-auto ratio-16x9 " data-aos="fade" data-aos-delay="100" data-aos-duration="700">
+            <div class="pos-absolute pin flex-col flex-stretch @@bgImgClasses" style="background-image:url('@@bgImage')"></div>
+         </section>
+      }
+      <section class="container md:container-md lg:container-xl mx-auto flex-row flex-wrap" data-aos="fade-up" data-aos-delay="300" data-aos-duration="700">
+         @@if (context.inlineImage) {
+            <div class="col-12 lg:col-6 py-2md flex-col align-center justify-center">
+               <section class="ratio-16x9 lg:ratio-none flex-col flex-stretch">
+                     <div class="flex-col flex-stretch pos-absolute pin @@inlineImgClasses" data-aos="fade" data-aos-delay="100" data-aos-duration="700" style="background-image:url('@@inlineImage')"></div>
+               </section>
+            </div>
+         }
+         <div class="col-12 lg:col-6 mr-auto lg:pl-2lg py-2md lg:py-2xl">
+            <div class="w-full text-wrap">
+               @@if (context.title) {
+               @@include('./_includes/_commons/h2.html', {
+               "title": "<span>@@title</span>",
+               "className": "@@titleClass"
+               })
+               }
+               @@if (context.subtitle) {
+               @@include('./_includes/_commons/h3.html', {
+               "title": "<span>@@subtitle</span>",
+               "className": "@@subtitleClass"
+               })
+               }
+               @@if (context.text) {
+               @@text
+               }
+               @@if (context.button === true) {
+               @@include('./_includes/_commons/button.html', {
+               "link": "@@buttonLink",
+               "className": "@@buttonClass font-color-white",
+               "buttonText": "@@buttonText"
+               })
+               }
+               @@if(context.createAccount){
+               <div>
+                  <form class="flex-col">
+                     <h4 class="font-weight-bold font-color-pink mb-xs">Create a Ewe Store It account</h4>
+                     <div class="-m-xs">
+                        <div class="p-xs flex-auto flex-col">
+                           <input type="password" required placeholder="Enter Password " class="px-2xs py-xs flex-stretch focus:shadow-lg transition-all bg-white border border-pink">
+                        </div>
+                        <div class="p-xs flex-auto flex-col">
+                           <input type="password" required placeholder="Confirm Password" class="px-2xs py-xs flex-stretch focus:shadow-lg transition-all bg-white border border-pink">
+                        </div>
+                        <div class="p-xs flex-auto">
+                           @@include('./_includes/_commons/button-submit.html', {"className": "bg-aqua font-color-white","buttonText": "Create Account"})
+                        </div>
+                     </div>
+                  </form>
+               </div>
+               }
+               @@if(context.GetAquoteForm){
+               <div>
+                  <form class="flex-col">
+                     <div class="-m-xs">
+                        <div class="p-xs flex-auto flex-col">
+                           <input type="text" required placeholder="Start Date " class="datepicker px-2xs py-xs flex-stretch focus:shadow-lg transition-all bg-white border border-pink">
+                        </div>
+                        <div class="p-xs flex-auto">
+                           <div class="-m-xs flex-col md:flex-row">
+                              <div class="p-xs flex-auto flex-col md:col-6">
+                                 <input type="text" required placeholder="Postcode" class="px-2xs py-xs flex-stretch focus:shadow-lg transition-all bg-white border border-pink">
+                              </div>
+                              <div class="p-xs flex-auto md:flex-col md:col-6">
+                                 @@include('./_includes/_commons/button-submit.html', {"className": "bg-dark font-color-white","buttonText": "Get a quote"})
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+               }
+            </div>
+         </div>
+      </section>
+   </div>

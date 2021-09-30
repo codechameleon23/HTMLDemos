@@ -1,0 +1,285 @@
+// Default Fonts
+$font_sans: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; 
+$font_serif: Constantia, Lucida Bright, Lucidabright, Lucida Serif, Lucida, DejaVu Serif, Bitstream Vera Serif, Liberation Serif, Georgia, serif;
+$font-mono: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+
+// Default body settings
+$baseSize: 10px;
+$defaultTextColor: darkgrey !default;
+$defaultFontSize: 1.6rem; 
+$defaultFontWeights: 300; 
+$defaultFont: $font_sans  !default;
+
+// Font familty settings
+$fontFamily: () !default;
+$fontFamily: (
+  'default' $defaultFont,
+);
+
+// Break points settings
+// Break points vars
+$bp_sm: 576px;
+$bp_md: 710px;
+$bp_lg: 992px;
+$bp_xl: 1200px;
+
+// Break points classes and values
+$breakPoints: (
+  null 0, 
+  sm\: $bp_sm, 
+  md\: $bp_md, 
+  lg\: $bp_lg, 
+  xl\: $bp_xl,
+);
+
+$orientation: (
+  landscape\: 'landscape',
+  portrait\: 'portrait',
+);
+
+// Element states and values
+$states : () !default;
+$states : ( 
+  null null, 
+  hover\: ':hover',
+  focus\: ':focus',
+);
+
+// Background color and values
+$bgColors: () !default;
+$bgColors: (
+  "black" black, 
+  "white" white, 
+  "grey" grey
+);
+
+// Text color and values
+$textColors: () !default;
+$textColors: (
+  "dark" #222831,
+  "white" white,
+  "light" #eeeeee,
+  "primary" #00adb5
+);
+
+// Border color and values
+$borderColors: () !default;
+$borderColors: (
+  "transparent" transparent,
+  "dark" #222831,
+  "white" white,
+  "light" #eeeeee,
+  "primary" #00adb5
+);
+
+// Border width and values
+$borderWidth: () !default;
+$borderWidth: ( null .1rem, 0 0rem, 2 .2rem, 4 .4rem, 8 .8rem);
+
+// Font-sizes
+$textSizes: () !default;
+$textSizes: (
+  "xs" 1.2rem,
+  // 12px
+    "sm" 1.4rem,
+  // 14px
+    "base" 1.6rem,
+  // 16px
+    "lg" 1.8rem,
+  // 18px
+    "xl" 2rem,
+  // 20px
+    "2xl" 2.4rem,
+  // 24px
+    "3xl" 3rem,
+  // 30px
+    "4xl" 3.6rem,
+  // 36px
+    "5xl" 4.8rem,
+  // 48px
+);
+
+// Font-weight
+$fontWeights: () !default;
+$fontWeights: (
+  "hairline" 100,
+  "thin" 200,
+  "light" 300,
+  "regular" 400,
+  "medium" 500,
+  "semibold" 600,
+  "bold" 700,
+  "extrabold" 800,
+  "black" 900
+);
+
+// line-height
+$lineHeight: () !default;
+$lineHeight: ("none" 1, "tight" 1.25, "normal" 1.5, "loose" 2);
+
+// letter-spacing 
+$letterSpacing: () !default;
+$letterSpacing: (
+  "tight": -0.05em,
+  "normal": 0,
+  "wide": 0.05em
+);
+
+// Default paddings
+$paddings: () !default;
+$paddings: (
+  "1" 0.1rem,
+  "5" 0.5rem,
+  "10" 1rem,
+  "15" 1.5rem,
+  "20" 2rem,
+  "25" 2.5rem,
+  "30" 3rem,
+  "40" 4rem,
+  "60" 6rem,
+  "80" 8rem,
+  "100" 10rem,
+  "0" 0,
+);
+
+// Default margins
+$margins: () !default;
+$margins: (
+  "1" 0.1rem,
+  "5" 0.5rem,
+  "10" 1rem,
+  "15" 1.5rem,
+  "20" 2rem,
+  "25" 2.5rem,
+  "30" 3rem,
+  "40" 4rem,
+  "60" 6rem,
+  "80" 8rem,
+  "100" 10rem,
+  "0" 0,
+);
+
+// Default -ve margins
+$negativeMargin: () !default;
+$negativeMargin: (
+  "1" 0.1rem,
+  "0" 0,
+  "5" 0.5rem,
+  "10" 1rem,
+  "15" 1.5rem,
+  "20" 2rem,
+  "25" 2.5rem,
+  "30" 3rem,
+  "40" 4rem,
+  "60" 6rem,
+  "80" 8rem,
+  "100" 10rem
+);
+
+// Default Shadows
+$shadows: () !default;
+$shadowDefault: 0 2px 4px 0 rgba(0,0,0,0.10);
+$shadow_md: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
+$shadow_lg: 0 15px 30px 0 rgba(0,0,0,0.11), 0 5px 15px 0 rgba(0,0,0,0.08);
+$shadow_inner: inset 0 2px 4px 0 rgba(0,0,0,0.06);
+$shadow_outline: 0 0 0 3px rgba(52,144,220,0.5);
+$shadow_none: none;
+$shadows: (
+  default $shadowDefault,
+  "md" $shadow_md,
+  "lg" $shadow_lg,
+  "inner" $shadow_inner,
+  "outline" $shadow_outline,
+  "none" none
+);
+
+// z-index settings
+$zIndex: () !default;
+$zIndex: (
+  'auto' 'auto',
+  '-1' -1,
+  '0' 0,
+  '10' 10,
+  '20' 20,
+  '30' 30,
+  '40' 40,
+  '50' 50,
+);
+
+// Opacity settings
+$opacities: () !default;
+$opacities: (
+  '0' 0,
+  '15' .15,
+  '25' .25,
+  '50' .5,
+  '75' .75,
+  '85' .85,
+  '100' 1,
+);
+
+// Border-radius settings
+$borderRadius: () !default;
+$borderRadius: (
+  'none' 0,
+  'sm' .125rem,
+  'default' .25rem,
+  'lg' .5rem,
+  'full' 9999px,
+);
+
+// Container widths
+$container_sm: 57.6rem;
+$container_md: 76.8rem;
+$container_lg: 99.2rem;
+$container_xl: 120rem;
+$container: () !default;
+$container: (
+  'sm' $container_sm,
+  'md' $container_md,
+  'lg' $container_lg,
+  'xl' $container_xl,
+);
+
+// Section with top bottom padding
+$sections: () !default;
+$sections: (
+  null 1.5rem, 
+  'thin' 3.2rem, 
+  'thik' 4.8rem, 
+  'fat' 7.8rem,
+);
+
+// Aspect Ratios
+$aspectRatios: () !default;
+$aspectRatios: (
+	'1x1' 1 1,
+	'5x2' 5 2,
+	'16x9' 16 9,
+);
+
+// columnd-count Content devider
+$columnCount: () !default;
+$columnCount: ( 0, 1, 2, 3, 4 );
+$gridSizes: (12) !default;
+
+// Grid Gutters
+$gridGutters: () !default;
+$gridGutters: (
+  null 1.2rem,
+  // 'hairline' .2rem,
+  'thin' 2.4rem, 
+  // 'thik' 4rem, 
+  'zero' 0rem
+);
+
+
+// Components
+// Icons size
+$iconsSizes: () !default;
+$iconsSizes: (
+  null 2.4rem,
+  'md' 3.2rem,
+  'lg' 4.8rem,
+  'xl' 6.4rem,
+);

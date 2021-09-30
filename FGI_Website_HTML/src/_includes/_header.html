@@ -1,0 +1,38 @@
+<header class="header pos-fixed lg:pos-absolute pin-x pin-t z-20 flex-col justify-center header-home bg-primary py-10 xl:py-0">
+   <div class="container lg:container-xl mx-auto pos-relative">
+      <div class="flex-row align-center">
+         <a href="index.html" title="@@websiteName" class="ratio-logo icon-logo_md xl:icon-logo flex-none my-10">
+            <span class="pos-absolute pin">
+               <img src="./images/brand-logo-w.png" alt="@@websiteName">
+            </span>
+         </a>
+         <nav class="navbar col-12 flex-col flex-stretch justify-center pos-fixed pin pin-l-auto z-50 f-weight-light f-color-white lg:f-color-inherit bg-dark shadow-lg md:col-6 lg:ml-auto lg:col-auto lg:pos-static lg:bg-transparent lg:shadow-none">
+            <ul class="list-reset f-color-secondary md:flex-row justify-space-between capitalize lg:-mx-15">
+               <li class="p-15 f-size-24 lg:f-size-16 f-weight-semiBold">
+                  <a class="justify-center f-color-inherit uppercase d-flex no-underline py-2 lg:py-0 px-2 lg:px-0 @@if(context.home){is-active}" href="index.html">Home</a>
+               </li>
+               <li class="p-15 f-size-24 lg:f-size-16 f-weight-semiBold">
+                  <a class="justify-center f-color-inherit uppercase d-flex no-underline py-2 lg:py-0 px-2 lg:px-0 @@if(context.theAwards){is-active}" href="eligibility-and-criteria.html">Eligibility & Criteria</a>
+               </li>
+               <li class="p-15 f-size-24 lg:f-size-16 f-weight-semiBold">
+                  <a class="justify-center f-color-inherit uppercase d-flex no-underline py-2 lg:py-0 px-2 lg:px-0 @@if(context.applyNow){is-active}" href="apply-now.html">Apply Now</a>
+               </li>
+            </ul>
+         </nav>
+         <div class="d-flex ml-auto lg:d-hidden f-color-white">
+            <div class="flex-none icon pin-r pin-y xl:mr-0 xl:pos-static z-50 mr-1">
+               <div>
+                  <div class="icon icon-2xs hamburger pointer-events-auto">
+                     <div>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</header>

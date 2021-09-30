@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   @@include('./_includes/_head.html', {
+   "pageName": "Analytics",
+   "description": ""
+   })
+</head>
+
+<body class="jsNavbarToggle is-close flex-col bg-light">
+
+<!-- Header -->
+@@include('./_includes/_header.html', {})
+
+<!-- Main -->
+<main class="flex-auto flex-col">
+   <div class="flex-row flex-auto">
+      <!-- Navbar Side -->
+      @@include('./_includes/_navbarSide.html', {
+      "analytics": "true"
+      })
+      <div class="flex-auto flex-col">
+         <section class="flex-auto flex-col">
+            <div class="container mx-auto xl:px-xs">
+               <!-- Page Heading -->
+               <header class="pt-sm">
+                  <div class="flex-row flex-wrap justify-space-between align-center -mr-sm">
+                     <div class="pr-sm pb-sm">
+                        <h2 class="f-size-md f-weight-semibold  md:f-weight-light md:f-size-xl f-weight-light">
+                           Analytics</h2>
+                     </div>
+                     <div class="col-12 md:col-auto border-l border-default mb-sm flex-auto">
+                        <div class="flex-col md:flex-row flex-wrap md:align-center pl-sm -mb-sm">
+                           <div class="pr-sm pb-sm">
+                              <span>Data Overview<br/> of the Day</span>
+                           </div>
+                           <div class="pr-sm pb-sm">
+                              <div class="py-xs px-2xs bg-success shadow-md-success f-color-white f-size-2sm flex-row align-center justify-space-between capitalize">
+                                 <h2 class="f-size-md mr-sm">25</h2>
+                                 <p>Screening</p>
+                              </div>
+                           </div>
+                           <div class="pr-sm pb-sm">
+                              <div class="py-xs px-2xs bg-warning shadow-md-warning f-color-white f-size-2sm flex-row align-center justify-space-between capitalize">
+                                 <h2 class="f-size-md mr-sm">3</h2>
+                                 <p>Suspected</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="pr-sm pb-sm ml-auto">
+                        <button class="button bg-primary f-color-white f-size-2sm f-weight-semibold hover:shadow-md transition-all py-xs px-2xs">
+                           <span class="mr-xs"><i data-feather="download"></i></span>
+                           <span>Report</span>
+                        </button>
+                     </div>
+                  </div>
+               </header>
+               <section>
+                  <div class="flex-row flex-wrap -mr-md -mb-sm">
+                     <div class="col-12 lg:col-4 xl:col-3 pr-md pb-sm flex-col">
+                        <div class="flex-row align-center ml-auto mb-sm">
+                           <h3 class="mr-xs">Select&nbsp;Date</h3>
+                           <div class="flex-col w-full">
+                              <input type="text"
+                                     class="datepicker py-2xs px-xs bg-primary f-color-white flex-stretch focus:shadow transition-all w-full text-center">
+                           </div>
+                        </div>
+                        <div class="bg-white shadow">
+                           <header class="f-color-secondary p-md border-default border-b flex-row flex-wrap justify-space-between align-center">
+                              <h2 class="f-size-3sm">Select Analytic</h2>
+                           </header>
+                           <section class="py-sm">
+                              <div class="mCustomScrollbar listWrapper" data-mcs-theme="minimal-dark">
+                                 <ul class="list-reset">
+                                    <li>
+                                       <a href="javascript:void(0);"
+                                          class="f-color-inherit button px-sm py-xs flex-row w-full hover:bg-light">
+                                                        <span class="mr-xs icon">
+                                                            <span>
+                                                                <img src="./images/icon-headcount.png"/>
+                                                            </span>
+                                                        </span>
+                                          <span>Headcount</span>
+                                       </a>
+                                    </li>
+                                    <li>
+                                       <a href="javascript:void(0);"
+                                          class="f-color-inherit button px-sm py-xs flex-row w-full hover:bg-light">
+                                                        <span class="mr-xs icon">
+                                                            <span>
+                                                                <img src="./images/icon-object-recognization.png"/>
+                                                            </span>
+                                                        </span>
+                                          <span>Object Recognition</span>
+                                       </a>
+                                    </li>
+                                    <li>
+                                       <a href="javascript:void(0);"
+                                          class="f-color-inherit button px-sm py-xs flex-row w-full hover:bg-light">
+                                                        <span class="mr-xs icon">
+                                                            <span>
+                                                                <img src="./images/icon-face-recognization.png"/>
+                                                            </span>
+                                                        </span>
+                                          <span>Face Recognition</span>
+                                       </a>
+                                    </li>
+                                    <li>
+                                       <a href="javascript:void(0);"
+                                          class="f-color-inherit button px-sm py-xs flex-row w-full hover:bg-light">
+                                                        <span class="mr-xs icon">
+                                                            <span>
+                                                                <img src="./images/icon-proximity.png"/>
+                                                            </span>
+                                                        </span>
+                                          <span>Proximity</span>
+                                       </a>
+                                    </li>
+                                    <li>
+                                       <a href="javascript:void(0);"
+                                          class="f-color-inherit button px-sm py-xs flex-row w-full hover:bg-light">
+                                                        <span class="mr-xs icon">
+                                                            <span>
+                                                                <img src="./images/icon-tamper.png"/>
+                                                            </span>
+                                                        </span>
+                                          <span>Tamper</span>
+                                       </a>
+                                    </li>
+                                    <li>
+                                       <a href="javascript:void(0);"
+                                          class="f-color-inherit button px-sm py-xs flex-row w-full hover:bg-light">
+                                                        <span class="mr-xs icon">
+                                                            <span>
+                                                                <img src="./images/icon-drowsiness.png"/>
+                                                            </span>
+                                                        </span>
+                                          <span>Drowsiness</span>
+                                       </a>
+                                    </li>
+                                    <li>
+                                       <a href="javascript:void(0);"
+                                          class="f-color-inherit button px-sm py-xs flex-row w-full hover:bg-light">
+                                                        <span class="mr-xs icon">
+                                                            <span>
+                                                                <img src="./images/icon-help-alert.png"/>
+                                                            </span>
+                                                        </span>
+                                          <span>Help Alert</span>
+                                       </a>
+                                    </li>
+                                    <li>
+                                       <a href="javascript:void(0);"
+                                          class="f-color-inherit button px-sm py-xs flex-row w-full hover:bg-light">
+                                                        <span class="mr-xs icon">
+                                                            <span>
+                                                                <img src="./images/icon-fall-person.png"/>
+                                                            </span>
+                                                        </span>
+                                          <span>Fall Person</span>
+                                       </a>
+                                    </li>
+                                    <li>
+                                       <a href="javascript:void(0);"
+                                          class="f-color-inherit button px-sm py-xs flex-row w-full hover:bg-light">
+                                                        <span class="mr-xs icon">
+                                                            <span>
+                                                                <img src="./images/icon-blue-camera.png"/>
+                                                            </span>
+                                                        </span>
+                                          <span>Blue Camera</span>
+                                       </a>
+                                    </li>
+                                    <li>
+                                       <a href="javascript:void(0);"
+                                          class="f-color-inherit button px-sm py-xs flex-row w-full hover:bg-light">
+                                                        <span class="mr-xs icon">
+                                                            <span>
+                                                                <img src="./images/icon-crowd.png"/>
+                                                            </span>
+                                                        </span>
+                                          <span>Crowd</span>
+                                       </a>
+                                    </li>
+                                    <li>
+                                       <a href="javascript:void(0);"
+                                          class="f-color-inherit button px-sm py-xs flex-row w-full hover:bg-light">
+                                                        <span class="mr-xs icon">
+                                                            <span>
+                                                                <img src="./images/icon-loitering.png"/>
+                                                            </span>
+                                                        </span>
+                                          <span>Loitering</span>
+                                       </a>
+                                    </li>
+                                    <li>
+                                       <a href="javascript:void(0);"
+                                          class="f-color-inherit button px-sm py-xs flex-row w-full hover:bg-light">
+                                                        <span class="mr-xs icon">
+                                                            <span>
+                                                                <img src="./images/icon-restrict-area.png"/>
+                                                            </span>
+                                                        </span>
+                                          <span>Restrict Area</span>
+                                       </a>
+                                    </li>
+                                    <li>
+                                       <a href="javascript:void(0);"
+                                          class="f-color-inherit button px-sm py-xs flex-row w-full hover:bg-light">
+                                                        <span class="mr-xs icon">
+                                                            <span>
+                                                                <img src="./images/icon-first-entry.png"/>
+                                                            </span>
+                                                        </span>
+                                          <span>First Entry</span>
+                                       </a>
+                                    </li>
+                                    <li>
+                                       <a href="javascript:void(0);"
+                                          class="f-color-inherit button px-sm py-xs flex-row w-full hover:bg-light">
+                                                        <span class="mr-xs icon">
+                                                            <span>
+                                                                <img src="./images/icon-suicide-attempt.png"/>
+                                                            </span>
+                                                        </span>
+                                          <span>Suicide Attempt</span>
+                                       </a>
+                                    </li>
+                                    <li>
+                                       <a href="javascript:void(0);"
+                                          class="f-color-inherit button px-sm py-xs flex-row w-full hover:bg-light">
+                                                        <span class="mr-xs icon">
+                                                            <span>
+                                                                <img src="./images/icon-ANPR.png"/>
+                                                            </span>
+                                                        </span>
+                                          <span>ANPR</span>
+                                       </a>
+                                    </li>
+                                    <li>
+                                       <a href="javascript:void(0);"
+                                          class="f-color-inherit button px-sm py-xs flex-row w-full hover:bg-light">
+                                                        <span class="mr-xs icon">
+                                                            <span>
+                                                                <img src="./images/icon-updown-countdown.png"/>
+                                                            </span>
+                                                        </span>
+                                          <span>Updown Countdown</span>
+                                       </a>
+                                    </li>
+                                    <li>
+                                       <a href="javascript:void(0);"
+                                          class="f-color-inherit button px-sm py-xs flex-row w-full hover:bg-light">
+                                                        <span class="mr-xs icon">
+                                                            <span>
+                                                                <img src="./images/icon-temperature.png"/>
+                                                            </span>
+                                                        </span>
+                                          <span>Temperature</span>
+                                       </a>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </section>
+                        </div>
+                     </div>
+                     <div class="col-12 lg:col-8 xl:col-9 pr-md pb-sm flex-col">
+                        <div class="bg-white shadow">
+                           <table class="---stacked table-zebra w-full text-center capitalize">
+                              <thead class="f-size-sm f-color-secondary border-default border-b">
+                              <tr>
+                                 <th class="py-sm px-sm align-middle" width="100px">Camera name</th>
+                                 <th class="py-sm px-sm align-middle">Time</th>
+                                 <th class="py-sm px-sm align-middle">Info</th>
+                                 <th class="py-sm px-sm align-middle text-center">Image</th>
+                                 <th class="py-sm px-sm align-middle">Analytics</th>
+                              </tr>
+                              </thead>
+                              <tbody class="f-weight-light">
+                              <tr>
+                                 <td class="py-xs px-sm align-middle"><span>Office outside</span></td>
+                                 <td class="py-xs px-sm align-middle"><span>12:05:35 PM</span></td>
+                                 <td class="py-xs px-sm align-middle">
+                                    <span>Person Temparature With <strong>38.1 C°</strong></span></td>
+                                 <td class="py-xs px-sm align-middle">
+                                    <div>
+                                       <img src="./images/thermal-image.jpg"/>
+                                    </div>
+                                 </td>
+                                 <td class="py-xs px-sm align-middle"><span>Blue Camera</span></td>
+                              </tr>
+                              <tr class="bg-light">
+                                 <td class="py-xs px-sm align-middle"><span>Office outside</span></td>
+                                 <td class="py-xs px-sm align-middle"><span>12:05:35 PM</span></td>
+                                 <td class="py-xs px-sm align-middle">
+                                    <span>Person Temparature With <strong>38.1 C°</strong></span></td>
+                                 <td class="py-xs px-sm align-middle">
+                                    <div>
+                                       <img src="./images/thermal-image.jpg"/>
+                                    </div>
+                                 </td>
+                                 <td class="py-xs px-sm align-middle"><span>Blue Camera</span></td>
+                              </tr>
+                              <tr>
+                                 <td class="py-xs px-sm align-middle"><span>Office outside</span></td>
+                                 <td class="py-xs px-sm align-middle"><span>12:05:35 PM</span></td>
+                                 <td class="py-xs px-sm align-middle">
+                                    <span>Person Temparature With <strong>38.1 C°</strong></span></td>
+                                 <td class="py-xs px-sm align-middle">
+                                    <div>
+                                       <img src="./images/thermal-image.jpg"/>
+                                    </div>
+                                 </td>
+                                 <td class="py-xs px-sm align-middle"><span>Blue Camera</span></td>
+                              </tr>
+                              <tr class="bg-light">
+                                 <td class="py-xs px-sm align-middle"><span>Office outside</span></td>
+                                 <td class="py-xs px-sm align-middle"><span>12:05:35 PM</span></td>
+                                 <td class="py-xs px-sm align-middle">
+                                    <span>Person Temparature With <strong>38.1 C°</strong></span></td>
+                                 <td class="py-xs px-sm align-middle">
+                                    <div>
+                                       <img src="./images/thermal-image.jpg"/>
+                                    </div>
+                                 </td>
+                                 <td class="py-xs px-sm align-middle"><span>Blue Camera</span></td>
+                              </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+            </div>
+         </section>
+         @@include('./_includes/_footer.html', {})
+      </div>
+   </div>
+</main>
+<script src="js/allScript.js"></script>
+</body>
+
+</html>

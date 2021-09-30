@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  @@include('./_includes/_head.html', {
+    "pageName": "London Learning",
+    "description": ""
+  })
+</head>
+
+<body class="jsNavbarToggle is-close flex-col has-theme-deluge">
+
+    <!-- Header -->
+    @@include('./_includes/_header.html', {
+      "headerPosClasses": "",
+      "aboutActive": "",
+      "communityActive": "",
+      "curriculumActive": "is-active",
+      "examsActive": "",
+      "studentServicesActive": "",
+      "newsNEventsActive": ""
+    })
+
+   <!-- Main -->
+   <main class="flex-auto flex-col">
+    @@include(
+      './_includes/_ribbon.html',
+      {
+        "titleTag": "h2",
+        "ribbonWrapper": "theme-bg fcolor-white text-center py-md",
+        "ribbonInnerClasses": "flex-row flex-wrap align-center",
+        "ribbonText": "The London Learning Project",
+        "ribbonTextClasses": "fweight-medium fsize-4md",
+        "ribbonLeftClasses": "flex-none -mt-md md:mt-0",
+        "ribbonLeftHtml": "<a href='adult-and-community.html' class='button hover:shadow-md hover:bg-flamingo fsize-3xs fweight-bold fcolor-white uppercase py-xs px-sm fspacing-wide'>Back</a>",
+        "ribbonCenterClasses": "col-12 md:col-10",
+        "ribbonCenterHtml": "",
+        "ribbonRightClasses": "flex-none",
+        "ribbonRightHtml": ""
+      }
+    )
+
+    <!-- Intros -->
+    @@include(
+      './_includes/_intro.html', 
+      {
+        "sectionClasses": "pt-2md lg:pt-xl",
+        "containerClasses": "container md:container-md lg:container-2lg mx-auto",
+        "rowClasses": "flex-wrap -mr-2xs -mb-md lg:-mr-xl lg:-mb-xl",
+        "data": [
+          { 
+            "colClasses": "flex-col col-12 pr-2xs pb-md lg:pr-xl lg:pb-xl",
+            "aosAttr": "data-aos='fade' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+            "cardImage": "",
+            "imageClasses": "",
+            "imageBgClasses": "bg-center bg-cover", 
+            "cardTitle": "",
+            "cardTitleClasses": "fweight-bold fsize-2md lg:fsize-2lg",
+            "titleTag": "h2",
+            "cardContentClasses": "flex-stretch flex-col align-center text-center",
+            "cardText": ["<p class='fsize-3sm'>The London Learning  project is an integrated programme of in-work skills development activities and employer-led careers camps (retail, health & social care, hospitality & catering), combined with wraparound pastoral and personal development support.</p>", "<p>The project provides participants with a menu of <a href='#' class='theme-text'>‘interventions’</a> that bring together formal qualifications, in-work skills, personal development and pastoral support. Interventions are available singularly or in any combination and revolve around a series of employer-led careers camps designed to progressively develop the skills and in-work capabilities demanded by participant’s employers and the sectors in which they are employed. These sector-based camps bring participants together to jointly discuss and work on solutions to real-world business scenarios presented by participating employers.</p>", "<p>The project has five key aims which are designed to help low skilled employees with disadvantageous circumstances (particularly disabled employees, BAME employees, older employees, female employees and employees living in a single adult household with dependent children) progress within their employment. Those aims can be seen <a href='#' class='theme-text'>here.</a></p>"],
+            "footerClasses": "pt-sm",
+            "cardButton": "BACK TO TOP",
+            "buttonLink": "#",
+            "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide"
+          }
+        ]
+      }
+    )
+
+    <!-- Accordions -->
+    @@include(
+      './_includes/_column-grid.html', 
+      { 
+        "sectionClasses": "pt-2md lg:pt-xl -mb-md",
+        "containerClasses": "container md:container-md lg:container-xl mx-auto",
+        "rowClasses": "flex-row flex-wrap",
+        "childOnly": false,
+        "accordionWrapperClasses": "col-12",
+        "toggleContentClasses": "col-12 -mb-md",
+        "togglable": "true",
+        "closeOthers": "true",
+        "accordionData": [
+          {
+            "accordionClasses": "is-open mb-md border-y-2 border-r-2 border-l-10 lg:border-l-20 theme-border",
+            "accordionLabelClasses": "p-sm transition-all",
+            "filterby": "benefits-of-participating",
+            "questionText": "Benefits of Participating",
+            "questionTextClasses": "fweight-medium fsize-2md",
+            "toggleSignClasses": "icon transition-all theme-text",
+            "toggleSignInnerClasses": "fcolor-inherit",
+            "toggleSignIcon": "",
+            "accordionContentClasses": "transition-all",
+            "answerClasses": "p-sm",
+            "answerContent": "<div class='text-wrap'><ol class='text-wrap ml-sm'><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam vel corporis eligendi minus omnis esse sequi dolore est, cumque at.</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, harum corporis dolorem commodi placeat facilis ab esse voluptate ipsa doloremque, ea molestias incidunt maxime laboriosam perferendis nostrum, amet praesentium consectetur.</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, nesciunt.</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam vel corporis eligendi minus omnis esse sequi dolore est, cumque at.</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, harum corporis dolorem commodi placeat facilis ab esse voluptate ipsa doloremque, ea molestias incidunt maxime laboriosam perferendis nostrum, amet praesentium consectetur.</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, nesciunt.</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam vel corporis eligendi minus omnis esse sequi dolore est, cumque at.</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, harum corporis dolorem commodi placeat facilis ab esse voluptate ipsa doloremque, ea molestias incidunt maxime laboriosam perferendis nostrum, amet praesentium consectetur.</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, nesciunt.</span></li></ol><div class='flex-row flex-wrap -mr-sm -mb-sm'><div class='mr-sm mb-sm'><a href='#' class='button size-lg hover:shadow-md theme-bg fsize-3xs fweight-bold fcolor-white uppercase py-xs px-md'>Button</a></div></div></div>"
+          },
+          {
+            "accordionClasses": "mb-md border-y-2 border-r-2 border-l-10 lg:border-l-20 theme-border",
+            "accordionLabelClasses": "p-sm transition-all",
+            "filterby": "aims",
+            "questionText": "Aims",
+            "questionTextClasses": "fweight-medium fsize-2md",
+            "toggleSignClasses": "icon transition-all theme-text",
+            "toggleSignInnerClasses": "fcolor-inherit",
+            "toggleSignIcon": "",
+            "accordionContentClasses": "transition-all",
+            "answerClasses": "p-sm",
+            "answerContent": "<div class='text-wrap'><ol class='text-wrap ml-sm'><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>To safeguard the employed status of disadvantaged employed people through the acquisition of basic skills.</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>To underpin the capacity for growth among SMEs and micro-businesses through developmental support provided to their disadvantaged employees.</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>To raise the skills level of disadvantaged employees so they may exploit in-work progression opportunities.</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>To support the growth of participating SMEs and micro-businesses by improving the productivity of disadvantaged employees through raising skills levels up to level 3.</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>To provide disadvantaged employees with updated skills, knowledge and confidence to plan sustainable employment pathways.</span></li></ol><div class='flex-row flex-wrap -mr-sm -mb-sm'><div class='mr-sm mb-sm'><a href='#' class='button size-lg hover:shadow-md theme-bg fsize-3xs fweight-bold fcolor-white uppercase py-xs px-md'>Button</a></div></div></div>"
+          },
+          {
+            "accordionClasses": "mb-md border-y-2 border-r-2 border-l-10 lg:border-l-20 theme-border",
+            "accordionLabelClasses": "p-sm transition-all",
+            "filterby": "interventions",
+            "questionText": "Interventions",
+            "questionTextClasses": "fweight-medium fsize-2md",
+            "toggleSignClasses": "icon transition-all theme-text",
+            "toggleSignInnerClasses": "fcolor-inherit",
+            "toggleSignIcon": "",
+            "accordionContentClasses": "transition-all",
+            "answerClasses": "p-sm",
+            "answerContent": "<div class='text-wrap'><ol class='text-wrap ml-sm'><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam vel corporis eligendi minus omnis esse sequi dolore est, cumque at.</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, harum corporis dolorem commodi placeat facilis ab esse voluptate ipsa doloremque, ea molestias incidunt maxime laboriosam perferendis nostrum, amet praesentium consectetur.</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, nesciunt.</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam vel corporis eligendi minus omnis esse sequi dolore est, cumque at.</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, harum corporis dolorem commodi placeat facilis ab esse voluptate ipsa doloremque, ea molestias incidunt maxime laboriosam perferendis nostrum, amet praesentium consectetur.</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, nesciunt.</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam vel corporis eligendi minus omnis esse sequi dolore est, cumque at.</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, harum corporis dolorem commodi placeat facilis ab esse voluptate ipsa doloremque, ea molestias incidunt maxime laboriosam perferendis nostrum, amet praesentium consectetur.</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, nesciunt.</span></li></ol><div class='flex-row flex-wrap -mr-sm -mb-sm'><div class='mr-sm mb-sm'><a href='#' class='button size-lg hover:shadow-md theme-bg fsize-3xs fweight-bold fcolor-white uppercase py-xs px-md'>Button</a></div></div></div>"
+          }
+        ]
+      }
+    )
+
+    <section class="pt-2lg lg:pt-2xl">
+        <div class="container md:container-md lg:container-lg mx-auto">
+          <div class="flex-row justify-center">
+            <div class="col-12 md:col-6 lg:col-4 flex-col">
+                <img src="./images/ESF-use logo.jpg" alt="" />
+            </div>    
+          </div>
+        </div>
+    </section>
+
+  </main>
+  @@include('./_includes/_footer.html', {
+    "instagram": true
+  })
+<script src="js/allScript.js"></script>
+</body>
+</html>

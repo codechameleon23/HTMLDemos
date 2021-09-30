@@ -1,0 +1,46 @@
+.fill-current{fill: currentColor;}
+.stroke-current{stroke: currentColor;}
+
+@mixin getFloatClasses($bp) {
+  .#{$bp}float-right{float: right;}
+  .#{$bp}float-left{float: left;}
+  .#{$bp}float-none{float: none;}
+  .#{$bp}clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+@mixin getTextColors($bp) {
+  @each $clr in $textColors {
+    @each $state in $states {
+      .#{$bp}#{nth($state, 1)}text {
+        &-#{nth($clr, 1)}#{nth($state, 2)} {
+          color: nth($clr, 2);
+        }
+      }
+    }
+  }
+}
+@mixin getBgColors($bp) {
+  @each $clr in $bgColors {
+    @each $state in $states {
+      .#{$bp}#{nth($state, 1)}bg {
+        &-#{nth($clr, 1)}#{nth($state, 2)} {
+          background-color: #{nth($clr, 2)};
+        }
+      }
+    }
+  }
+}
+@mixin getBorderColors($bp) {
+  @each $clr in $borderColors {
+    @each $state in $states {
+      .#{$bp}#{nth($state, 1)}border {
+        &-#{nth($clr, 1)}#{nth($state, 2)} {
+          border-color: #{nth($clr, 2)};
+        }
+      }
+    }
+  }
+}

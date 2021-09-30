@@ -1,0 +1,47 @@
+<div class="pos-relative font-color-white @@bgClasses">
+   @@if (context.bgImage) {
+   <section class="pos-absolute pin flex-col">
+      <div class="flex-col flex-stretch @@bgImgClasses" style="background-image:url('@@bgImage')"></div>
+   </section>
+   }
+   <section class="container md:container-md lg:container-xl mx-auto pt-2md md:pt-xl pos-relative">
+      @@if(context.pageTitle){
+      <div class="p-sm px-lg bg-pink pos-absolute pin-t pin-l">@@pageTitle</div>
+      }
+      <div class="flex-col">
+         <div class="md:col-6 py-2md lg:py-xl">
+            <div class="text-wrap w-full pr-md">
+               @@if (context.title) {
+               <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">
+                  @@include('./_includes/_commons/h2.html', {
+                  "title": "<span>@@title</span>",
+                  "className": "@@titleClass"
+                  })
+               </div>
+               }
+               @@if (context.subtitle) {
+                  <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">
+                     @@include('./_includes/_commons/h3.html', {
+                     "title": "<span>@@subtitle</span>",
+                     "className": "@@subtitleClass"
+                     })
+                  </div>
+               }
+               <div class="text-wrap w-full" data-aos="fade" data-aos-delay="300" data-aos-duration="700">
+                  <p>We’re always happy to talk about your requirements. Looking for storage space whether for home or business<br> <a href="tel:020 1234 5678"
+                        class="no-underline font-color-inherit hover:font-color-pink">-we are only a phone call away</a>.</p>
+               </div>
+               @@if (context.button || context.buttonClass || context.buttonText) {
+                  <div data-aos="fade" data-aos-delay="500" data-aos-duration="700">
+                     @@include('./_includes/_commons/button.html', {
+                        "link": "@@buttonLink",
+                        "className": "@@buttonClass font-color-white",
+                        "buttonText": "@@buttonText"
+                     })
+                  </div>
+               }
+            </div>
+         </div>
+      </div>
+   </section>
+</div>

@@ -1,0 +1,1327 @@
+<form>
+   <div class="-m-sm flex-row flex-wrap">
+      <div class="flex-col col-12 p-sm lg:col-6">
+         <div class="-m-xs flex-col flex-stretch">
+            <div class="p-xs">
+               <h4 class="font-weight-bold font-color-pink mb-xs">Do you need a quick or a detailed quote?</h4>
+               <div class="-m-xs flex-row flex-wrap justify-start">
+                  <div class="p-xs">
+                     <label class="custom-tick">
+                        <input name="quote" type="radio" checked onclick="togleQuiteView('quick');">
+                        <span class="tick d-inline-block border"><span class="radius-full bg-white font-color-pink"></span></span>
+                        <span class="related-text"><span class="">Quick quote</span>
+                        </span>
+                     </label>
+                  </div>
+                  <div class="p-xs">
+                     <label class="custom-tick">
+                        <input name="quote" type="radio" onclick="togleQuiteView('detailed');">
+                        <span class="tick d-inline-block border"><span class="radius-full bg-white font-color-pink"></span></span>
+                        <span class="related-text"><span class="">Detailed quote</span>
+                        </span>
+                     </label>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="px-sm col-12">
+         <div class="pb-xxxs bg-center lg:col-6" style="background-image: url('images/border-pattern-pink.png')"></div>
+      </div>
+
+      <div id="quick-quoteViewWrapper" class="quote-view-wrapper p-sm col-12 flex-col">
+         <div class="-m-xs flex-col flex-stretch">
+            <div class="p-xs">
+               <h4 class="font-weight-bold font-color-pink mb-xs">Quick quote</h4>
+               <div class="-m-xs flex-row flex-wrap justify-start">
+                  <div class="p-xs">
+                     <div class="text-wrap w-full">
+                        <p>Choose your container size and quantity...</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="p-xs">
+               <div class="number-group flex-row p-xxs justify-space-between align-center border-b border-pink border-dashed">
+                  <div class="py-xxs">Small</div>
+                  <div class="flex-none -m-xxs flex-row align-center">
+                     <div class="p-xxs flex-none initial-hide">
+                        <a href="javascript:void(0);" data-control="decrement" class="range-control icon font-color-dark hover:font-color-pink">
+                           <span class="p-xxs">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                           </span>
+                        </a>
+                     </div>
+                     <div class="p-xxs flex-auto initial-hide">
+                        <div class="border focus-within:shadow-lg transition-all">
+                           <input type="number" name="folding_bed_quantity" data-min="0" data-max="10000" class="output bg-white px-xxs text-center font-size-xs">
+                        </div>
+                     </div>
+                     <div class="p-xxs flex-none">
+                        <a href="javascript:void(0);" data-control="increment" class="range-control icon font-color-dark hover:font-color-pink">
+                           <span class="p-xxs">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                           </span>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+               <div class="number-group flex-row p-xxs justify-space-between align-center border-b border-pink border-dashed">
+                  <div class="py-xxs">Medium</div>
+                  <div class="flex-none -m-xxs flex-row align-center">
+                     <div class="p-xxs flex-none initial-hide">
+                        <a href="javascript:void(0);" data-control="decrement" class="range-control icon font-color-dark hover:font-color-pink">
+                           <span class="p-xxs">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                           </span>
+                        </a>
+                     </div>
+                     <div class="p-xxs flex-auto initial-hide">
+                        <div class="border focus-within:shadow-lg transition-all">
+                           <input type="number" name="folding_bed_quantity" data-min="0" data-max="10000" class="output bg-white px-xxs text-center font-size-xs">
+                        </div>
+                     </div>
+                     <div class="p-xxs flex-none">
+                        <a href="javascript:void(0);" data-control="increment" class="range-control icon font-color-dark hover:font-color-pink">
+                           <span class="p-xxs">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                           </span>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+               <div class="number-group flex-row p-xxs justify-space-between align-center border-b border-pink border-dashed">
+                  <div class="py-xxs">Large</div>
+                  <div class="flex-none -m-xxs flex-row align-center">
+                     <div class="p-xxs flex-none initial-hide">
+                        <a href="javascript:void(0);" data-control="decrement" class="range-control icon font-color-dark hover:font-color-pink">
+                           <span class="p-xxs">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                           </span>
+                        </a>
+                     </div>
+                     <div class="p-xxs flex-auto initial-hide">
+                        <div class="border focus-within:shadow-lg transition-all">
+                           <input type="number" name="folding_bed_quantity" data-min="0" data-max="10000" class="output bg-white px-xxs text-center font-size-xs">
+                        </div>
+                     </div>
+                     <div class="p-xxs flex-none">
+                        <a href="javascript:void(0);" data-control="increment" class="range-control icon font-color-dark hover:font-color-pink">
+                           <span class="p-xxs">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                           </span>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+               <div class="number-group flex-row p-xxs justify-space-between align-center border-b border-pink border-dashed">
+                  <div class="py-xxs">Extra Large</div>
+                  <div class="flex-none -m-xxs flex-row align-center">
+                     <div class="p-xxs flex-none initial-hide">
+                        <a href="javascript:void(0);" data-control="decrement" class="range-control icon font-color-dark hover:font-color-pink">
+                           <span class="p-xxs">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                           </span>
+                        </a>
+                     </div>
+                     <div class="p-xxs flex-auto initial-hide">
+                        <div class="border focus-within:shadow-lg transition-all">
+                           <input type="number" name="folding_bed_quantity" data-min="0" data-max="10000" class="output bg-white px-xxs text-center font-size-xs">
+                        </div>
+                     </div>
+                     <div class="p-xxs flex-none">
+                        <a href="javascript:void(0);" data-control="increment" class="range-control icon font-color-dark hover:font-color-pink">
+                           <span class="p-xxs">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                           </span>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+               <div class="number-group flex-row p-xxs justify-space-between align-center border-b border-pink border-dashed">
+                  <div class="py-xxs">Extra Extra Large</div>
+                  <div class="flex-none -m-xxs flex-row align-center">
+                     <div class="p-xxs flex-none initial-hide">
+                        <a href="javascript:void(0);" data-control="decrement" class="range-control icon font-color-dark hover:font-color-pink">
+                           <span class="p-xxs">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                           </span>
+                        </a>
+                     </div>
+                     <div class="p-xxs flex-auto initial-hide">
+                        <div class="border focus-within:shadow-lg transition-all">
+                           <input type="number" name="folding_bed_quantity" data-min="0" data-max="10000" class="output bg-white px-xxs text-center font-size-xs">
+                        </div>
+                     </div>
+                     <div class="p-xxs flex-none">
+                        <a href="javascript:void(0);" data-control="increment" class="range-control icon font-color-dark hover:font-color-pink">
+                           <span class="p-xxs">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                           </span>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="p-xs mt-auto text-right">
+               @@include('./_includes/_commons/button.html', {
+                  "link": "javascript:void(0);",
+                  "className": "mt-auto bg-aqua font-color-white size-lg",
+                  "buttonText": "Next step",
+                  "dataAttr": "data-goto",
+                  "dataAttrValue": "step_4"
+               })
+            </div>
+         </div>
+      </div>
+
+      <div id="detailed-quoteViewWrapper" class="quote-view-wrapper p-sm col-12 flex-col">
+         <div class="-m-xs flex-col flex-stretch">
+            <div class="p-xs">
+               <h4 class="font-weight-bold font-color-pink mb-xs">Detailed quote</h4>
+               <div class="-m-xs flex-row flex-wrap justify-start">
+                  <div class="p-xs">
+                     <div class="text-wrap w-full">
+                        <p>Help us provide you with a detailed quotation, by adding the items that you are planning to store with Ewe Store It…</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="p-xs">
+               <!-- Inner tabs -->
+               <div data-togglable="false" data-close-others="true" data-seturl="false" class="inner-tabs accordion-tabs-wrapper accordion-wrapper via_js">
+                  <div class="toggle-tabs d-hidden lg:d-flex flex-row -my-xxs lg:-mx-2md">
+                     <div class="accordion p-xxs flex-stretch flex-col is-open">
+                        <div data-filterby="items_1" class="accordion-toggle flex-stretch py-sm px-xxs cursor-pointer bg-light text-center">
+                           <div class="text-wrap w-full">
+                              <div class="icon icon-lg default-icon"><img src="./images/furniture-icon.svg"/></div>
+                              <div class="icon icon-lg active-icon"><img src="./images/furniture-icon-w.svg"/></div>
+                              <div>Furniture</div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion p-xxs flex-stretch flex-col">
+                        <div data-filterby="items_2" class="accordion-toggle flex-stretch py-sm px-xxs cursor-pointer bg-light text-center">
+                           <div class="text-wrap w-full">
+                              <div class="icon icon-lg default-icon"><img src="./images/electronic-icon.svg"/></div>
+                              <div class="icon icon-lg active-icon"><img src="./images/electronic-icon-w.svg"/></div>
+                              <div>Electronic</div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion p-xxs flex-stretch flex-col">
+                        <div data-filterby="items_3" class="accordion-toggle flex-stretch py-sm px-xxs cursor-pointer bg-light text-center">
+                           <div class="text-wrap w-full">
+                              <div class="icon icon-lg default-icon"><img src="./images/mechanical-icon.svg"/></div>
+                              <div class="icon icon-lg active-icon"><img src="./images/mechanical-icon-w.svg"/></div>
+                              <div>Mechanical</div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion p-xxs flex-stretch flex-col">
+                        <div data-filterby="items_4" class="accordion-toggle flex-stretch py-sm px-xxs cursor-pointer bg-light text-center">
+                           <div class="text-wrap w-full">
+                              <div class="icon icon-lg default-icon"><img src="./images/personal-icon.svg"/></div>
+                              <div class="icon icon-lg active-icon"><img src="./images/personal-icon-w.svg"/></div>
+                              <div>Personal</div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion p-xxs flex-stretch flex-col">
+                        <div data-filterby="items_5" class="accordion-toggle flex-stretch py-sm px-xxs cursor-pointer bg-light text-center">
+                           <div class="text-wrap w-full">
+                              <div class="icon icon-lg default-icon"><img src="./images/clothing-icon.svg"/></div>
+                              <div class="icon icon-lg active-icon"><img src="./images/clothing-icon-w.svg"/></div>
+                              <div>Clothing</div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion p-xxs flex-stretch flex-col">
+                        <div data-filterby="items_6" class="accordion-toggle flex-stretch py-sm px-xxs cursor-pointer bg-light text-center">
+                           <div class="text-wrap w-full">
+                              <div class="icon icon-lg default-icon"><img src="./images/small-fragile-icon.svg"/></div>
+                              <div class="icon icon-lg active-icon"><img src="./images/small-fragile-icon-w.svg"/></div>
+                              <div>Small Fragile</div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion p-xxs flex-stretch flex-col">
+                        <div data-filterby="items_7" class="accordion-toggle flex-stretch py-sm px-xxs cursor-pointer bg-light text-center">
+                           <div class="text-wrap w-full">
+                              <div class="icon icon-lg default-icon"><img src="./images/other-icon.svg"/></div>
+                              <div class="icon icon-lg active-icon"><img src="./images/other-icon-w.svg"/></div>
+                              <div>Other</div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+         
+                  <div class="toggle-content lg:-mx-md">
+                     <div class="accordion border border-pink lg:border-0 mt-xxs is-open">
+                        <div data-filterby="items_1" class="accordion-toggle accordion-label px-xs pt-xs pb-xs transition-all lg:d-hidden">
+                           <h3 class="question font-weight-bold">Furniture</h3>
+                           <span class="toggle-sign icon font-color-pink transition-all">
+                              <span class="p-xxs"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357">
+                                    <path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg></span>
+                           </span>
+                        </div>
+                        <div class="accordion-content">
+                           <div class="answer pt-sm px-md">
+                              <div class="number-group flex-row p-xxs justify-space-between align-center border-b border-pink border-dashed">
+                                 <div class="py-xxs">Folding Bed</div>
+                                 <div class="flex-none -m-xxs flex-row align-center">
+                                    <div class="p-xxs flex-none initial-hide">
+                                       <a href="javascript:void(0);" data-control="decrement" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                    <div class="p-xxs flex-auto initial-hide">
+                                       <div class="border focus-within:shadow-lg transition-all">
+                                          <input type="number" name="folding_bed_quantity" data-min="0" data-max="10000" class="output bg-white px-xxs text-center font-size-xs">
+                                       </div>
+                                    </div>
+                                    <div class="p-xxs flex-none">
+                                       <a href="javascript:void(0);" data-control="increment" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="number-group flex-row p-xxs justify-space-between align-center border-b border-pink border-dashed">
+                                 <div class="py-xxs">Single Bed</div>
+                                 <div class="flex-none -m-xxs flex-row align-center">
+                                    <div class="p-xxs flex-none initial-hide">
+                                       <a href="javascript:void(0);" data-control="decrement" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                    <div class="p-xxs flex-auto initial-hide">
+                                       <div class="border focus-within:shadow-lg transition-all">
+                                          <input type="number" name="folding_bed_quantity" data-min="0" data-max="1000" class="output bg-white px-xxs text-center font-size-xs">
+                                       </div>
+                                    </div>
+                                    <div class="p-xxs flex-none">
+                                       <a href="javascript:void(0);" data-control="increment" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="number-group flex-row p-xxs justify-space-between align-center border-b border-pink border-dashed">
+                                 <div class="py-xxs">Double Bed</div>
+                                 <div class="flex-none -m-xxs flex-row align-center">
+                                    <div class="p-xxs flex-none initial-hide">
+                                       <a href="javascript:void(0);" data-control="decrement" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                    <div class="p-xxs flex-auto initial-hide">
+                                       <div class="border focus-within:shadow-lg transition-all">
+                                          <input type="number" name="folding_bed_quantity" data-min="0" data-max="1000" class="output bg-white px-xxs text-center font-size-xs">
+                                       </div>
+                                    </div>
+                                    <div class="p-xxs flex-none">
+                                       <a href="javascript:void(0);" data-control="increment" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="number-group flex-row p-xxs justify-space-between align-center border-b border-pink border-dashed">
+                                 <div class="py-xxs">Kingsize Bed</div>
+                                 <div class="flex-none -m-xxs flex-row align-center">
+                                    <div class="p-xxs flex-none initial-hide">
+                                       <a href="javascript:void(0);" data-control="decrement" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                    <div class="p-xxs flex-auto initial-hide">
+                                       <div class="border focus-within:shadow-lg transition-all">
+                                          <input type="number" name="folding_bed_quantity" data-min="0" data-max="1000" class="output bg-white px-xxs text-center font-size-xs">
+                                       </div>
+                                    </div>
+                                    <div class="p-xxs flex-none">
+                                       <a href="javascript:void(0);" data-control="increment" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="number-group flex-row p-xxs justify-space-between align-center border-b border-pink border-dashed">
+                                 <div class="py-xxs">Cot</div>
+                                 <div class="flex-none -m-xxs flex-row align-center">
+                                    <div class="p-xxs flex-none initial-hide">
+                                       <a href="javascript:void(0);" data-control="decrement" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                    <div class="p-xxs flex-auto initial-hide">
+                                       <div class="border focus-within:shadow-lg transition-all">
+                                          <input type="number" name="folding_bed_quantity" data-min="0" data-max="1000" class="output bg-white px-xxs text-center font-size-xs">
+                                       </div>
+                                    </div>
+                                    <div class="p-xxs flex-none">
+                                       <a href="javascript:void(0);" data-control="increment" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="number-group flex-row p-xxs justify-space-between align-center border-b border-pink border-dashed">
+                                 <div class="py-xxs">Armchair</div>
+                                 <div class="flex-none -m-xxs flex-row align-center">
+                                    <div class="p-xxs flex-none initial-hide">
+                                       <a href="javascript:void(0);" data-control="decrement" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                    <div class="p-xxs flex-auto initial-hide">
+                                       <div class="border focus-within:shadow-lg transition-all">
+                                          <input type="number" name="folding_bed_quantity" data-min="0" data-max="1000" class="output bg-white px-xxs text-center font-size-xs">
+                                       </div>
+                                    </div>
+                                    <div class="p-xxs flex-none">
+                                       <a href="javascript:void(0);" data-control="increment" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="number-group flex-row p-xxs justify-space-between align-center border-b border-pink border-dashed">
+                                 <div class="py-xxs">Cabinet bedside</div>
+                                 <div class="flex-none -m-xxs flex-row align-center">
+                                    <div class="p-xxs flex-none initial-hide">
+                                       <a href="javascript:void(0);" data-control="decrement" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                    <div class="p-xxs flex-auto initial-hide">
+                                       <div class="border focus-within:shadow-lg transition-all">
+                                          <input type="number" name="folding_bed_quantity" data-min="0" data-max="1000" class="output bg-white px-xxs text-center font-size-xs">
+                                       </div>
+                                    </div>
+                                    <div class="p-xxs flex-none">
+                                       <a href="javascript:void(0);" data-control="increment" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="number-group flex-row p-xxs justify-space-between align-center border-b border-pink border-dashed">
+                                 <div class="py-xxs">Chaise longue</div>
+                                 <div class="flex-none -m-xxs flex-row align-center">
+                                    <div class="p-xxs flex-none initial-hide">
+                                       <a href="javascript:void(0);" data-control="decrement" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                    <div class="p-xxs flex-auto initial-hide">
+                                       <div class="border focus-within:shadow-lg transition-all">
+                                          <input type="number" name="folding_bed_quantity" data-min="0" data-max="1000" class="output bg-white px-xxs text-center font-size-xs">
+                                       </div>
+                                    </div>
+                                    <div class="p-xxs flex-none">
+                                       <a href="javascript:void(0);" data-control="increment" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="number-group flex-row p-xxs justify-space-between align-center border-b border-pink border-dashed">
+                                 <div class="py-xxs">Chair</div>
+                                 <div class="flex-none -m-xxs flex-row align-center">
+                                    <div class="p-xxs flex-none initial-hide">
+                                       <a href="javascript:void(0);" data-control="decrement" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                    <div class="p-xxs flex-auto initial-hide">
+                                       <div class="border focus-within:shadow-lg transition-all">
+                                          <input type="number" name="folding_bed_quantity" data-min="0" data-max="1000" class="output bg-white px-xxs text-center font-size-xs">
+                                       </div>
+                                    </div>
+                                    <div class="p-xxs flex-none">
+                                       <a href="javascript:void(0);" data-control="increment" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="number-group flex-row p-xxs justify-space-between align-center border-b border-pink border-dashed">
+                                 <div class="py-xxs">Chest / 3 drawer</div>
+                                 <div class="flex-none -m-xxs flex-row align-center">
+                                    <div class="p-xxs flex-none initial-hide">
+                                       <a href="javascript:void(0);" data-control="decrement" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                    <div class="p-xxs flex-auto initial-hide">
+                                       <div class="border focus-within:shadow-lg transition-all">
+                                          <input type="number" name="folding_bed_quantity" data-min="0" data-max="1000" class="output bg-white px-xxs text-center font-size-xs">
+                                       </div>
+                                    </div>
+                                    <div class="p-xxs flex-none">
+                                       <a href="javascript:void(0);" data-control="increment" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="number-group flex-row p-xxs justify-space-between align-center border-b border-pink border-dashed">
+                                 <div class="py-xxs">Chest / 4 drawer</div>
+                                 <div class="flex-none -m-xxs flex-row align-center">
+                                    <div class="p-xxs flex-none initial-hide">
+                                       <a href="javascript:void(0);" data-control="decrement" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                    <div class="p-xxs flex-auto initial-hide">
+                                       <div class="border focus-within:shadow-lg transition-all">
+                                          <input type="number" name="folding_bed_quantity" data-min="0" data-max="1000" class="output bg-white px-xxs text-center font-size-xs">
+                                       </div>
+                                    </div>
+                                    <div class="p-xxs flex-none">
+                                       <a href="javascript:void(0);" data-control="increment" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="number-group flex-row p-xxs justify-space-between align-center border-b border-pink border-dashed">
+                                 <div class="py-xxs">Chest / 5 drawer</div>
+                                 <div class="flex-none -m-xxs flex-row align-center">
+                                    <div class="p-xxs flex-none initial-hide">
+                                       <a href="javascript:void(0);" data-control="decrement" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                    <div class="p-xxs flex-auto initial-hide">
+                                       <div class="border focus-within:shadow-lg transition-all">
+                                          <input type="number" name="folding_bed_quantity" data-min="0" data-max="1000" class="output bg-white px-xxs text-center font-size-xs">
+                                       </div>
+                                    </div>
+                                    <div class="p-xxs flex-none">
+                                       <a href="javascript:void(0);" data-control="increment" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="number-group flex-row p-xxs justify-space-between align-center border-b border-pink border-dashed">
+                                 <div class="py-xxs">Chest / 6 drawer</div>
+                                 <div class="flex-none -m-xxs flex-row align-center">
+                                    <div class="p-xxs flex-none initial-hide">
+                                       <a href="javascript:void(0);" data-control="decrement" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                    <div class="p-xxs flex-auto initial-hide">
+                                       <div class="border focus-within:shadow-lg transition-all">
+                                          <input type="number" name="folding_bed_quantity" data-min="0" data-max="1000" class="output bg-white px-xxs text-center font-size-xs">
+                                       </div>
+                                    </div>
+                                    <div class="p-xxs flex-none">
+                                       <a href="javascript:void(0);" data-control="increment" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="number-group flex-row p-xxs justify-space-between align-center border-b border-pink border-dashed">
+                                 <div class="py-xxs">Stool</div>
+                                 <div class="flex-none -m-xxs flex-row align-center">
+                                    <div class="p-xxs flex-none initial-hide">
+                                       <a href="javascript:void(0);" data-control="decrement" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                    <div class="p-xxs flex-auto initial-hide">
+                                       <div class="border focus-within:shadow-lg transition-all">
+                                          <input type="number" name="folding_bed_quantity" data-min="0" data-max="1000" class="output bg-white px-xxs text-center font-size-xs">
+                                       </div>
+                                    </div>
+                                    <div class="p-xxs flex-none">
+                                       <a href="javascript:void(0);" data-control="increment" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="number-group flex-row p-xxs justify-space-between align-center border-b border-pink border-dashed">
+                                 <div class="py-xxs">Sidetable</div>
+                                 <div class="flex-none -m-xxs flex-row align-center">
+                                    <div class="p-xxs flex-none initial-hide">
+                                       <a href="javascript:void(0);" data-control="decrement" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                    <div class="p-xxs flex-auto initial-hide">
+                                       <div class="border focus-within:shadow-lg transition-all">
+                                          <input type="number" name="folding_bed_quantity" data-min="0" data-max="1000" class="output bg-white px-xxs text-center font-size-xs">
+                                       </div>
+                                    </div>
+                                    <div class="p-xxs flex-none">
+                                       <a href="javascript:void(0);" data-control="increment" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="number-group flex-row p-xxs justify-space-between align-center border-b border-pink border-dashed">
+                                 <div class="py-xxs">Table dressing</div>
+                                 <div class="flex-none -m-xxs flex-row align-center">
+                                    <div class="p-xxs flex-none initial-hide">
+                                       <a href="javascript:void(0);" data-control="decrement" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                    <div class="p-xxs flex-auto initial-hide">
+                                       <div class="border focus-within:shadow-lg transition-all">
+                                          <input type="number" name="folding_bed_quantity" data-min="0" data-max="1000" class="output bg-white px-xxs text-center font-size-xs">
+                                       </div>
+                                    </div>
+                                    <div class="p-xxs flex-none">
+                                       <a href="javascript:void(0);" data-control="increment" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="number-group flex-row p-xxs justify-space-between align-center border-b border-pink border-dashed">
+                                 <div class="py-xxs">Single robe</div>
+                                 <div class="flex-none -m-xxs flex-row align-center">
+                                    <div class="p-xxs flex-none initial-hide">
+                                       <a href="javascript:void(0);" data-control="decrement" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                    <div class="p-xxs flex-auto initial-hide">
+                                       <div class="border focus-within:shadow-lg transition-all">
+                                          <input type="number" name="folding_bed_quantity" data-min="0" data-max="1000" class="output bg-white px-xxs text-center font-size-xs">
+                                       </div>
+                                    </div>
+                                    <div class="p-xxs flex-none">
+                                       <a href="javascript:void(0);" data-control="increment" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="number-group flex-row p-xxs justify-space-between align-center border-b border-pink border-dashed">
+                                 <div class="py-xxs">Double robe</div>
+                                 <div class="flex-none -m-xxs flex-row align-center">
+                                    <div class="p-xxs flex-none initial-hide">
+                                       <a href="javascript:void(0);" data-control="decrement" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                    <div class="p-xxs flex-auto initial-hide">
+                                       <div class="border focus-within:shadow-lg transition-all">
+                                          <input type="number" name="folding_bed_quantity" data-min="0" data-max="1000" class="output bg-white px-xxs text-center font-size-xs">
+                                       </div>
+                                    </div>
+                                    <div class="p-xxs flex-none">
+                                       <a href="javascript:void(0);" data-control="increment" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="number-group flex-row p-xxs justify-space-between align-center border-b border-pink border-dashed">
+                                 <div class="py-xxs">Ottoman</div>
+                                 <div class="flex-none -m-xxs flex-row align-center">
+                                    <div class="p-xxs flex-none initial-hide">
+                                       <a href="javascript:void(0);" data-control="decrement" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                    <div class="p-xxs flex-auto initial-hide">
+                                       <div class="border focus-within:shadow-lg transition-all">
+                                          <input type="number" name="folding_bed_quantity" data-min="0" data-max="1000" class="output bg-white px-xxs text-center font-size-xs">
+                                       </div>
+                                    </div>
+                                    <div class="p-xxs flex-none">
+                                       <a href="javascript:void(0);" data-control="increment" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="number-group flex-row p-xxs justify-space-between align-center border-b border-pink border-dashed">
+                                 <div class="py-xxs">Desk</div>
+                                 <div class="flex-none -m-xxs flex-row align-center">
+                                    <div class="p-xxs flex-none initial-hide">
+                                       <a href="javascript:void(0);" data-control="decrement" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                    <div class="p-xxs flex-auto initial-hide">
+                                       <div class="border focus-within:shadow-lg transition-all">
+                                          <input type="number" name="folding_bed_quantity" data-min="0" data-max="1000" class="output bg-white px-xxs text-center font-size-xs">
+                                       </div>
+                                    </div>
+                                    <div class="p-xxs flex-none">
+                                       <a href="javascript:void(0);" data-control="increment" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="number-group flex-row p-xxs justify-space-between align-center border-b border-pink border-dashed">
+                                 <div class="py-xxs">Tallboy</div>
+                                 <div class="flex-none -m-xxs flex-row align-center">
+                                    <div class="p-xxs flex-none initial-hide">
+                                       <a href="javascript:void(0);" data-control="decrement" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                    <div class="p-xxs flex-auto initial-hide">
+                                       <div class="border focus-within:shadow-lg transition-all">
+                                          <input type="number" name="folding_bed_quantity" data-min="0" data-max="1000" class="output bg-white px-xxs text-center font-size-xs">
+                                       </div>
+                                    </div>
+                                    <div class="p-xxs flex-none">
+                                       <a href="javascript:void(0);" data-control="increment" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="number-group flex-row p-xxs justify-space-between align-center border-b border-pink border-dashed">
+                                 <div class="py-xxs">Carpet</div>
+                                 <div class="flex-none -m-xxs flex-row align-center">
+                                    <div class="p-xxs flex-none initial-hide">
+                                       <a href="javascript:void(0);" data-control="decrement" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                    <div class="p-xxs flex-auto initial-hide">
+                                       <div class="border focus-within:shadow-lg transition-all">
+                                          <input type="number" name="folding_bed_quantity" data-min="0" data-max="1000" class="output bg-white px-xxs text-center font-size-xs">
+                                       </div>
+                                    </div>
+                                    <div class="p-xxs flex-none">
+                                       <a href="javascript:void(0);" data-control="increment" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion border border-pink lg:border-0 mt-xxs">
+                        <div data-filterby="items_2" class="accordion-toggle accordion-label px-xs pt-xs pb-xs transition-all lg:d-hidden">
+                           <h3 class="question font-weight-bold">Electronic</h3>
+                           <span class="toggle-sign icon font-color-pink transition-all">
+                              <span class="p-xxs"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357">
+                                    <path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg></span>
+                           </span>
+                        </div>
+                        <div class="accordion-content">
+                           <div class="answer pt-sm px-md">
+                              <div class="number-group flex-row p-xxs justify-space-between align-center border-b border-pink border-dashed">
+                                 <div class="py-xxs">Air conditioner</div>
+                                 <div class="flex-none -m-xxs flex-row align-center">
+                                    <div class="p-xxs flex-none initial-hide">
+                                       <a href="javascript:void(0);" data-control="decrement" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                    <div class="p-xxs flex-auto initial-hide">
+                                       <div class="border focus-within:shadow-lg transition-all">
+                                          <input type="number" name="folding_bed_quantity" data-min="0" data-max="1000" class="output bg-white px-xxs text-center font-size-xs">
+                                       </div>
+                                    </div>
+                                    <div class="p-xxs flex-none">
+                                       <a href="javascript:void(0);" data-control="increment" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="number-group flex-row p-xxs justify-space-between align-center border-b border-pink border-dashed">
+                                 <div class="py-xxs">Computer</div>
+                                 <div class="flex-none -m-xxs flex-row align-center">
+                                    <div class="p-xxs flex-none initial-hide">
+                                       <a href="javascript:void(0);" data-control="decrement" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                    <div class="p-xxs flex-auto initial-hide">
+                                       <div class="border focus-within:shadow-lg transition-all">
+                                          <input type="number" name="folding_bed_quantity" data-min="0" data-max="1000" class="output bg-white px-xxs text-center font-size-xs">
+                                       </div>
+                                    </div>
+                                    <div class="p-xxs flex-none">
+                                       <a href="javascript:void(0);" data-control="increment" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="number-group flex-row p-xxs justify-space-between align-center border-b border-pink border-dashed">
+                                 <div class="py-xxs">Television</div>
+                                 <div class="flex-none -m-xxs flex-row align-center">
+                                    <div class="p-xxs flex-none initial-hide">
+                                       <a href="javascript:void(0);" data-control="decrement" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                    <div class="p-xxs flex-auto initial-hide">
+                                       <div class="border focus-within:shadow-lg transition-all">
+                                          <input type="number" name="folding_bed_quantity" data-min="0" data-max="1000" class="output bg-white px-xxs text-center font-size-xs">
+                                       </div>
+                                    </div>
+                                    <div class="p-xxs flex-none">
+                                       <a href="javascript:void(0);" data-control="increment" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion border border-pink lg:border-0 mt-xxs">
+                        <div data-filterby="items_3" class="accordion-toggle accordion-label px-xs pt-xs pb-xs transition-all lg:d-hidden">
+                           <h3 class="question font-weight-bold">Mechanical</h3>
+                           <span class="toggle-sign icon font-color-pink transition-all">
+                              <span class="p-xxs"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357">
+                                    <path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg></span>
+                           </span>
+                        </div>
+                        <div class="accordion-content">
+                           <div class="answer pt-sm px-md">
+                              <div class="number-group flex-row p-xxs justify-space-between align-center border-b border-pink border-dashed">
+                                 <div class="py-xxs">Mechanical item 1</div>
+                                 <div class="flex-none -m-xxs flex-row align-center">
+                                    <div class="p-xxs flex-none initial-hide">
+                                       <a href="javascript:void(0);" data-control="decrement" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                    <div class="p-xxs flex-auto initial-hide">
+                                       <div class="border focus-within:shadow-lg transition-all">
+                                          <input type="number" name="folding_bed_quantity" data-min="0" data-max="1000" class="output bg-white px-xxs text-center font-size-xs">
+                                       </div>
+                                    </div>
+                                    <div class="p-xxs flex-none">
+                                       <a href="javascript:void(0);" data-control="increment" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="number-group flex-row p-xxs justify-space-between align-center border-b border-pink border-dashed">
+                                 <div class="py-xxs">Mechanical item 2</div>
+                                 <div class="flex-none -m-xxs flex-row align-center">
+                                    <div class="p-xxs flex-none initial-hide">
+                                       <a href="javascript:void(0);" data-control="decrement" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                    <div class="p-xxs flex-auto initial-hide">
+                                       <div class="border focus-within:shadow-lg transition-all">
+                                          <input type="number" name="folding_bed_quantity" data-min="0" data-max="1000" class="output bg-white px-xxs text-center font-size-xs">
+                                       </div>
+                                    </div>
+                                    <div class="p-xxs flex-none">
+                                       <a href="javascript:void(0);" data-control="increment" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="number-group flex-row p-xxs justify-space-between align-center border-b border-pink border-dashed">
+                                 <div class="py-xxs">Mechanical item 3</div>
+                                 <div class="flex-none -m-xxs flex-row align-center">
+                                    <div class="p-xxs flex-none initial-hide">
+                                       <a href="javascript:void(0);" data-control="decrement" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                    <div class="p-xxs flex-auto initial-hide">
+                                       <div class="border focus-within:shadow-lg transition-all">
+                                          <input type="number" name="folding_bed_quantity" data-min="0" data-max="1000" class="output bg-white px-xxs text-center font-size-xs">
+                                       </div>
+                                    </div>
+                                    <div class="p-xxs flex-none">
+                                       <a href="javascript:void(0);" data-control="increment" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion border border-pink lg:border-0 mt-xxs">
+                        <div data-filterby="items_4" class="accordion-toggle accordion-label px-xs pt-xs pb-xs transition-all lg:d-hidden">
+                           <h3 class="question font-weight-bold">Personal</h3>
+                           <span class="toggle-sign icon font-color-pink transition-all">
+                              <span class="p-xxs"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357">
+                                    <path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg></span>
+                           </span>
+                        </div>
+                        <div class="accordion-content">
+                           <div class="answer pt-sm px-md">
+                              <div class="number-group flex-row p-xxs justify-space-between align-center border-b border-pink border-dashed">
+                                 <div class="py-xxs">Personal item 1</div>
+                                 <div class="flex-none -m-xxs flex-row align-center">
+                                    <div class="p-xxs flex-none initial-hide">
+                                       <a href="javascript:void(0);" data-control="decrement" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                    <div class="p-xxs flex-auto initial-hide">
+                                       <div class="border focus-within:shadow-lg transition-all">
+                                          <input type="number" name="folding_bed_quantity" data-min="0" data-max="1000" class="output bg-white px-xxs text-center font-size-xs">
+                                       </div>
+                                    </div>
+                                    <div class="p-xxs flex-none">
+                                       <a href="javascript:void(0);" data-control="increment" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="number-group flex-row p-xxs justify-space-between align-center border-b border-pink border-dashed">
+                                 <div class="py-xxs">Personal item 2</div>
+                                 <div class="flex-none -m-xxs flex-row align-center">
+                                    <div class="p-xxs flex-none initial-hide">
+                                       <a href="javascript:void(0);" data-control="decrement" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                    <div class="p-xxs flex-auto initial-hide">
+                                       <div class="border focus-within:shadow-lg transition-all">
+                                          <input type="number" name="folding_bed_quantity" data-min="0" data-max="1000" class="output bg-white px-xxs text-center font-size-xs">
+                                       </div>
+                                    </div>
+                                    <div class="p-xxs flex-none">
+                                       <a href="javascript:void(0);" data-control="increment" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="number-group flex-row p-xxs justify-space-between align-center border-b border-pink border-dashed">
+                                 <div class="py-xxs">Personal item 3</div>
+                                 <div class="flex-none -m-xxs flex-row align-center">
+                                    <div class="p-xxs flex-none initial-hide">
+                                       <a href="javascript:void(0);" data-control="decrement" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                    <div class="p-xxs flex-auto initial-hide">
+                                       <div class="border focus-within:shadow-lg transition-all">
+                                          <input type="number" name="folding_bed_quantity" data-min="0" data-max="1000" class="output bg-white px-xxs text-center font-size-xs">
+                                       </div>
+                                    </div>
+                                    <div class="p-xxs flex-none">
+                                       <a href="javascript:void(0);" data-control="increment" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion border border-pink lg:border-0 mt-xxs">
+                        <div data-filterby="items_5" class="accordion-toggle accordion-label px-xs pt-xs pb-xs transition-all lg:d-hidden">
+                           <h3 class="question font-weight-bold">Clothing</h3>
+                           <span class="toggle-sign icon font-color-pink transition-all">
+                              <span class="p-xxs"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357">
+                                    <path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg></span>
+                           </span>
+                        </div>
+                        <div class="accordion-content">
+                           <div class="answer pt-sm px-md">
+                              <div class="number-group flex-row p-xxs justify-space-between align-center border-b border-pink border-dashed">
+                                 <div class="py-xxs">Clothing item 1</div>
+                                 <div class="flex-none -m-xxs flex-row align-center">
+                                    <div class="p-xxs flex-none initial-hide">
+                                       <a href="javascript:void(0);" data-control="decrement" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                    <div class="p-xxs flex-auto initial-hide">
+                                       <div class="border focus-within:shadow-lg transition-all">
+                                          <input type="number" name="folding_bed_quantity" data-min="0" data-max="1000" class="output bg-white px-xxs text-center font-size-xs">
+                                       </div>
+                                    </div>
+                                    <div class="p-xxs flex-none">
+                                       <a href="javascript:void(0);" data-control="increment" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="number-group flex-row p-xxs justify-space-between align-center border-b border-pink border-dashed">
+                                 <div class="py-xxs">Clothing item 2</div>
+                                 <div class="flex-none -m-xxs flex-row align-center">
+                                    <div class="p-xxs flex-none initial-hide">
+                                       <a href="javascript:void(0);" data-control="decrement" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                    <div class="p-xxs flex-auto initial-hide">
+                                       <div class="border focus-within:shadow-lg transition-all">
+                                          <input type="number" name="folding_bed_quantity" data-min="0" data-max="1000" class="output bg-white px-xxs text-center font-size-xs">
+                                       </div>
+                                    </div>
+                                    <div class="p-xxs flex-none">
+                                       <a href="javascript:void(0);" data-control="increment" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="number-group flex-row p-xxs justify-space-between align-center border-b border-pink border-dashed">
+                                 <div class="py-xxs">Clothing item 3</div>
+                                 <div class="flex-none -m-xxs flex-row align-center">
+                                    <div class="p-xxs flex-none initial-hide">
+                                       <a href="javascript:void(0);" data-control="decrement" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                    <div class="p-xxs flex-auto initial-hide">
+                                       <div class="border focus-within:shadow-lg transition-all">
+                                          <input type="number" name="folding_bed_quantity" data-min="0" data-max="1000" class="output bg-white px-xxs text-center font-size-xs">
+                                       </div>
+                                    </div>
+                                    <div class="p-xxs flex-none">
+                                       <a href="javascript:void(0);" data-control="increment" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion border border-pink lg:border-0 mt-xxs">
+                        <div data-filterby="items_6" class="accordion-toggle accordion-label px-xs pt-xs pb-xs transition-all lg:d-hidden">
+                           <h3 class="question font-weight-bold">Small Fragile</h3>
+                           <span class="toggle-sign icon font-color-pink transition-all">
+                              <span class="p-xxs"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357">
+                                    <path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg></span>
+                           </span>
+                        </div>
+                        <div class="accordion-content">
+                           <div class="answer pt-sm px-md">
+                              <div class="number-group flex-row p-xxs justify-space-between align-center border-b border-pink border-dashed">
+                                 <div class="py-xxs">Small Fragile item 1</div>
+                                 <div class="flex-none -m-xxs flex-row align-center">
+                                    <div class="p-xxs flex-none initial-hide">
+                                       <a href="javascript:void(0);" data-control="decrement" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                    <div class="p-xxs flex-auto initial-hide">
+                                       <div class="border focus-within:shadow-lg transition-all">
+                                          <input type="number" name="folding_bed_quantity" data-min="0" data-max="1000" class="output bg-white px-xxs text-center font-size-xs">
+                                       </div>
+                                    </div>
+                                    <div class="p-xxs flex-none">
+                                       <a href="javascript:void(0);" data-control="increment" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="number-group flex-row p-xxs justify-space-between align-center border-b border-pink border-dashed">
+                                 <div class="py-xxs">Small Fragile item 2</div>
+                                 <div class="flex-none -m-xxs flex-row align-center">
+                                    <div class="p-xxs flex-none initial-hide">
+                                       <a href="javascript:void(0);" data-control="decrement" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                    <div class="p-xxs flex-auto initial-hide">
+                                       <div class="border focus-within:shadow-lg transition-all">
+                                          <input type="number" name="folding_bed_quantity" data-min="0" data-max="1000" class="output bg-white px-xxs text-center font-size-xs">
+                                       </div>
+                                    </div>
+                                    <div class="p-xxs flex-none">
+                                       <a href="javascript:void(0);" data-control="increment" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="number-group flex-row p-xxs justify-space-between align-center border-b border-pink border-dashed">
+                                 <div class="py-xxs">Small Fragile item 3</div>
+                                 <div class="flex-none -m-xxs flex-row align-center">
+                                    <div class="p-xxs flex-none initial-hide">
+                                       <a href="javascript:void(0);" data-control="decrement" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                    <div class="p-xxs flex-auto initial-hide">
+                                       <div class="border focus-within:shadow-lg transition-all">
+                                          <input type="number" name="folding_bed_quantity" data-min="0" data-max="1000" class="output bg-white px-xxs text-center font-size-xs">
+                                       </div>
+                                    </div>
+                                    <div class="p-xxs flex-none">
+                                       <a href="javascript:void(0);" data-control="increment" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion border border-pink lg:border-0 mt-xxs">
+                        <div data-filterby="items_7" class="accordion-toggle accordion-label px-xs pt-xs pb-xs transition-all lg:d-hidden">
+                           <h3 class="question font-weight-bold">Other</h3>
+                           <span class="toggle-sign icon font-color-pink transition-all">
+                              <span class="p-xxs"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357">
+                                    <path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg></span>
+                           </span>
+                        </div>
+                        <div class="accordion-content">
+                           <div class="answer pt-sm px-md">
+                              <div class="number-group flex-row p-xxs justify-space-between align-center border-b border-pink border-dashed">
+                                 <div class="py-xxs">Other item 1</div>
+                                 <div class="flex-none -m-xxs flex-row align-center">
+                                    <div class="p-xxs flex-none initial-hide">
+                                       <a href="javascript:void(0);" data-control="decrement" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                    <div class="p-xxs flex-auto initial-hide">
+                                       <div class="border focus-within:shadow-lg transition-all">
+                                          <input type="number" name="folding_bed_quantity" data-min="0" data-max="1000" class="output bg-white px-xxs text-center font-size-xs">
+                                       </div>
+                                    </div>
+                                    <div class="p-xxs flex-none">
+                                       <a href="javascript:void(0);" data-control="increment" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="number-group flex-row p-xxs justify-space-between align-center border-b border-pink border-dashed">
+                                 <div class="py-xxs">Other item 2</div>
+                                 <div class="flex-none -m-xxs flex-row align-center">
+                                    <div class="p-xxs flex-none initial-hide">
+                                       <a href="javascript:void(0);" data-control="decrement" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                    <div class="p-xxs flex-auto initial-hide">
+                                       <div class="border focus-within:shadow-lg transition-all">
+                                          <input type="number" name="folding_bed_quantity" data-min="0" data-max="1000" class="output bg-white px-xxs text-center font-size-xs">
+                                       </div>
+                                    </div>
+                                    <div class="p-xxs flex-none">
+                                       <a href="javascript:void(0);" data-control="increment" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="number-group flex-row p-xxs justify-space-between align-center border-b border-pink border-dashed">
+                                 <div class="py-xxs">Other item 3</div>
+                                 <div class="flex-none -m-xxs flex-row align-center">
+                                    <div class="p-xxs flex-none initial-hide">
+                                       <a href="javascript:void(0);" data-control="decrement" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                    <div class="p-xxs flex-auto initial-hide">
+                                       <div class="border focus-within:shadow-lg transition-all">
+                                          <input type="number" name="folding_bed_quantity" data-min="0" data-max="1000" class="output bg-white px-xxs text-center font-size-xs">
+                                       </div>
+                                    </div>
+                                    <div class="p-xxs flex-none">
+                                       <a href="javascript:void(0);" data-control="increment" class="range-control icon font-color-dark hover:font-color-pink">
+                                          <span class="p-xxs">
+                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                          </span>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="p-xs mt-auto text-right">
+               @@include('./_includes/_commons/button.html', {
+                  "link": "javascript:void(0);",
+                  "className": "mt-auto bg-aqua font-color-white size-lg",
+                  "buttonText": "Next step",
+                  "dataAttr": "data-goto",
+                  "dataAttrValue": "step_4"
+               })
+            </div>
+         </div>
+      </div>
+   </div>
+</form>

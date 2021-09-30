@@ -1,0 +1,41 @@
+@mixin getTextSizeClasses($bp) {
+  @each $txtSize in $textSizes {
+    .#{$bp}font {
+      &-#{nth($txtSize, 1)} {
+        font-size: nth($txtSize, 2);
+      }
+    }
+  }
+}
+
+@mixin getFontWeightClasses($bp) {
+  @each $fntWeight in $fontWeights {
+    @each $state in $states {
+      .#{$bp}#{nth($state, 1)}font {
+        &-#{nth($fntWeight, 1)}#{nth($state, 2)} {
+          font-weight: nth($fntWeight, 2);
+        }
+      }
+    }
+  }
+}
+
+@mixin getLineHeightClasses($bp) {
+  @each $lh in $lineHeight {
+    .#{$bp}font {
+      &-#{nth($lh, 1)} {
+        line-height: nth($lh, 2);
+      }
+    }
+  }
+}
+
+@mixin getLetterSpacingClasses($bp) {
+  @each $ls in $letterSpacing {
+    .#{$bp}font {
+      &-#{nth($ls, 1)} {
+        letter-spacing: nth($ls, 2);
+      }
+    }
+  }
+}

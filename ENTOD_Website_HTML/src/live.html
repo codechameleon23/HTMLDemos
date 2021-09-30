@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('./_includes/_head.html', {
+	"pageName": "Live",
+	"description": ""
+	})
+</head>
+
+<body class="jsNavbarToggle is-close flex-col" style="background-image: url('./images/WGA Webinar 2 - Background.jpg')">
+
+	<!-- Header -->
+	@@include('./_includes/_header.html', {})
+
+	<!-- Main -->
+   <main class="flex-auto flex-col">
+
+      <!-- Marquee Message -->
+      <section class="flex-col py-2">
+         <div class="container mx-auto">
+            <div class="marquee w-full f-weight-regular"><div class="marquee-inner">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras turpis neque, facilisis suscipit pretium ac, luctus nec ante. Sed sagittis egestas varius. Aliquam sit amet erat non nisi scelerisque dapibus vel a nisl.</div></div>
+         </div>
+      </section>
+
+      <section class="flex-col">
+         <div class="container mx-auto flex-col">
+            <div class="flex-row flex-wrap">
+
+               <!-- Section Header -->
+               <section class="col-12">
+                  <div class="flex-row align-center justify-space-between mb-1">
+                     <h2 class="f-size-6 f-weight-semibold">
+                        <span class="f-color-dark f-weight-regular">Welcome!</span>
+                        <span>John Doe</span>
+                     </h2>
+                     <button class="button bg-yellow f-color-black f-weight-semibold px-4 py-1 rounded-md">
+                        <span>Logout</span>
+                     </button>
+                  </div>
+               </section>
+               <!-- Video Section-->
+               <section class="col-12 lg:col-8 flex-col">
+                  <section class="ratio-16x9">
+                     <div class="pos-absolute pin">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/uxN6WeDg124" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                     </div>
+                  </section>
+               </section>
+
+               <!-- Feedback and Ad section -->
+               <section class="col-12 lg:col-4 flex-col lg:flex-col-reverse lg:justify-end lg:pl-1">
+                  <form class="mt-2">
+                     <div class="col-12 flex-col pb-1">
+                        <label class="mb-1 f-weight-semibold">Post Your Questions or Feedback</label>
+                        <textarea rows="4" placeholder="Enter Your Questions..." class="py-1 px-2 bg-white flex-stretch rounded-md"></textarea>
+                     </div>
+                     <button class="button bg-yellow f-color-black f-weight-semibold px-4 py-1 rounded-md">Send</button>
+                  </form>
+                  <div class="carousel-wrapper carousel-outer mt-1 lg:mt-0">
+                     <div class="jsItemCarousel is-carousel banner-carousel owl-carousel owl-theme">
+                        <div class="item flex-row flex-stretch">
+                           <a href="#" class="d-inline-block image-placeholder flex-stretch ratio-1x1 hover:shadow-lg transition-all">
+                              <img src="./images/WGA Webinar 2 - Landing.jpg" alt="">
+                           </a>
+                        </div>
+                        <div class="item flex-row flex-stretch">
+                           <a href="#" class="d-inline-block image-placeholder flex-stretch ratio-1x1 hover:shadow-lg transition-all">
+                              <img src="./images/WGA Webinar 2 - Landing.jpg" alt="">
+                           </a>
+                        </div>
+                        <div class="item flex-row flex-stretch">
+                           <a href="#" class="d-inline-block image-placeholder flex-stretch ratio-1x1 hover:shadow-lg transition-all">
+                              <img src="./images/WGA Webinar 2 - Landing.jpg" alt="">
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+            </div>
+         </div>
+      </section>
+
+	</main>
+
+	<!-- Footer -->
+<!--	@@include('./_includes/_footer.html')-->
+
+	<script src="js/allScript.js"></script>
+</body>
+
+</html>

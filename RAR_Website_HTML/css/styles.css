@@ -583,30 +583,22 @@ em{font-style:italic}
 .-mx-none[class*=grid-]:first-of-type{margin-top:0}
 .-mx-none[class*=grid-]:last-of-type{margin-bottom:0}
 .-my-none{margin-top:0;margin-bottom:0}
-.shadow-sm{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.shadow-parent-sm .shadow-child{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.hover\:shadow-sm:hover{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.hover\:shadow-parent-sm:hover .shadow-child{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.focus\:shadow-sm:focus{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.focus\:shadow-parent-sm:focus .shadow-child{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.shadow-bottom{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.shadow-parent-bottom .shadow-child{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.hover\:shadow-bottom:hover{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.hover\:shadow-parent-bottom:hover .shadow-child{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.focus\:shadow-bottom:focus{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.focus\:shadow-parent-bottom:focus .shadow-child{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.shadow-lg{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.shadow-parent-lg .shadow-child{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.hover\:shadow-lg:hover{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.hover\:shadow-parent-lg:hover .shadow-child{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.focus\:shadow-lg:focus{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.focus\:shadow-parent-lg:focus .shadow-child{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.shadow-none{box-shadow:none}
-.shadow-parent-none .shadow-child{box-shadow:none}
-.hover\:shadow-none:hover{box-shadow:none}
-.hover\:shadow-parent-none:hover .shadow-child{box-shadow:none}
-.focus\:shadow-none:focus{box-shadow:none}
-.focus\:shadow-parent-none:focus .shadow-child{box-shadow:none}
+.hover\:shadowsm:hover{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
+.hover\:shadow-parentsm:hover .shadow-child{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
+.focus\:shadowsm:focus{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
+.focus\:shadow-parentsm:focus .shadow-child{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
+.hover\:shadowbottom:hover{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
+.hover\:shadow-parentbottom:hover .shadow-child{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
+.focus\:shadowbottom:focus{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
+.focus\:shadow-parentbottom:focus .shadow-child{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
+.hover\:shadowlg:hover{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
+.hover\:shadow-parentlg:hover .shadow-child{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
+.focus\:shadowlg:focus{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
+.focus\:shadow-parentlg:focus .shadow-child{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
+.hover\:shadownone:hover{box-shadow:none}
+.hover\:shadow-parentnone:hover .shadow-child{box-shadow:none}
+.focus\:shadownone:focus{box-shadow:none}
+.focus\:shadow-parentnone:focus .shadow-child{box-shadow:none}
 .opacity-0{opacity:0}
 .opacity-parent-0 .opacity-child{opacity:0}
 .hover\:opacity-0:hover{opacity:0}
@@ -699,7 +691,7 @@ em{font-style:italic}
 .col-10{width:83.33333%;-webkit-box-flex:0;-webkit-flex:none;-ms-flex:none;flex:none}
 .col-11{width:91.66667%;-webkit-box-flex:0;-webkit-flex:none;-ms-flex:none;flex:none}
 .col-12{width:100%;-webkit-box-flex:0;-webkit-flex:none;-ms-flex:none;flex:none}
-.col-auto{width:auto;-webkit-box-flex:0;-webkit-flex:none;-ms-flex:none;flex:none}
+.col-auto{width:auto;-webkit-box-flex:inherit;-webkit-flex:inherit;-ms-flex:inherit;flex:inherit}
 .col-flex{-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-flex:1 1 auto;-ms-flex:1 1 auto;flex:1 1 auto}
 .col-count-0{-webkit-column-count:0;-moz-column-count:0;column-count:0}
 .col-count-1{-webkit-column-count:1;-moz-column-count:1;column-count:1}
@@ -1260,38 +1252,38 @@ em{font-style:italic}
 .xs\:-mx-none[class*=grid-]:first-of-type{margin-top:0}
 .xs\:-mx-none[class*=grid-]:last-of-type{margin-bottom:0}
 .xs\:-my-none{margin-top:0;margin-bottom:0}
-.xs\:shadow-sm{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.xs\:shadow-parent-sm .shadow-child{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.xs\:hover\:shadow-sm:hover{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.xs\:hover\:shadow-parent-sm:hover .shadow-child{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.xs\:focus\:shadow-sm:focus{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.xs\:focus\:shadow-parent-sm:focus .shadow-child{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.xs\:focus-within\:shadow-sm:focus-within{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.xs\:focus-within\:shadow-parent-sm:focus-within .shadow-child{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.xs\:shadow-bottom{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.xs\:shadow-parent-bottom .shadow-child{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.xs\:hover\:shadow-bottom:hover{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.xs\:hover\:shadow-parent-bottom:hover .shadow-child{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.xs\:focus\:shadow-bottom:focus{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.xs\:focus\:shadow-parent-bottom:focus .shadow-child{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.xs\:focus-within\:shadow-bottom:focus-within{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.xs\:focus-within\:shadow-parent-bottom:focus-within .shadow-child{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.xs\:shadow-lg{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.xs\:shadow-parent-lg .shadow-child{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.xs\:hover\:shadow-lg:hover{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.xs\:hover\:shadow-parent-lg:hover .shadow-child{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.xs\:focus\:shadow-lg:focus{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.xs\:focus\:shadow-parent-lg:focus .shadow-child{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.xs\:focus-within\:shadow-lg:focus-within{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.xs\:focus-within\:shadow-parent-lg:focus-within .shadow-child{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.xs\:shadow-none{box-shadow:none}
-.xs\:shadow-parent-none .shadow-child{box-shadow:none}
-.xs\:hover\:shadow-none:hover{box-shadow:none}
-.xs\:hover\:shadow-parent-none:hover .shadow-child{box-shadow:none}
-.xs\:focus\:shadow-none:focus{box-shadow:none}
-.xs\:focus\:shadow-parent-none:focus .shadow-child{box-shadow:none}
-.xs\:focus-within\:shadow-none:focus-within{box-shadow:none}
-.xs\:focus-within\:shadow-parent-none:focus-within .shadow-child{box-shadow:none}
+.xs\:shadowsm{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
+.xs\:shadow-parentsm .shadow-child{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
+.xs\:hover\:shadowsm:hover{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
+.xs\:hover\:shadow-parentsm:hover .shadow-child{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
+.xs\:focus\:shadowsm:focus{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
+.xs\:focus\:shadow-parentsm:focus .shadow-child{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
+.xs\:focus-within\:shadowsm:focus-within{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
+.xs\:focus-within\:shadow-parentsm:focus-within .shadow-child{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
+.xs\:shadowbottom{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
+.xs\:shadow-parentbottom .shadow-child{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
+.xs\:hover\:shadowbottom:hover{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
+.xs\:hover\:shadow-parentbottom:hover .shadow-child{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
+.xs\:focus\:shadowbottom:focus{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
+.xs\:focus\:shadow-parentbottom:focus .shadow-child{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
+.xs\:focus-within\:shadowbottom:focus-within{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
+.xs\:focus-within\:shadow-parentbottom:focus-within .shadow-child{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
+.xs\:shadowlg{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
+.xs\:shadow-parentlg .shadow-child{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
+.xs\:hover\:shadowlg:hover{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
+.xs\:hover\:shadow-parentlg:hover .shadow-child{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
+.xs\:focus\:shadowlg:focus{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
+.xs\:focus\:shadow-parentlg:focus .shadow-child{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
+.xs\:focus-within\:shadowlg:focus-within{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
+.xs\:focus-within\:shadow-parentlg:focus-within .shadow-child{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
+.xs\:shadownone{box-shadow:none}
+.xs\:shadow-parentnone .shadow-child{box-shadow:none}
+.xs\:hover\:shadownone:hover{box-shadow:none}
+.xs\:hover\:shadow-parentnone:hover .shadow-child{box-shadow:none}
+.xs\:focus\:shadownone:focus{box-shadow:none}
+.xs\:focus\:shadow-parentnone:focus .shadow-child{box-shadow:none}
+.xs\:focus-within\:shadownone:focus-within{box-shadow:none}
+.xs\:focus-within\:shadow-parentnone:focus-within .shadow-child{box-shadow:none}
 .xs\:opacity-0{opacity:0}
 .xs\:opacity-parent-0 .opacity-child{opacity:0}
 .xs\:hover\:opacity-0:hover{opacity:0}
@@ -1409,9 +1401,9 @@ em{font-style:italic}
 .xs\:col-10{width:83.33333%;-webkit-box-flex:0;-webkit-flex:none;-ms-flex:none;flex:none}
 .xs\:col-11{width:91.66667%;-webkit-box-flex:0;-webkit-flex:none;-ms-flex:none;flex:none}
 .xs\:col-12{width:100%;-webkit-box-flex:0;-webkit-flex:none;-ms-flex:none;flex:none}
-.xs\:col-auto{width:auto;-webkit-box-flex:0;-webkit-flex:none;-ms-flex:none;flex:none}
+.xs\:col-auto{width:auto;-webkit-box-flex:inherit;-webkit-flex:inherit;-ms-flex:inherit;flex:inherit}
 .xs\:col-flex{-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-flex:1 1 auto;-ms-flex:1 1 auto;flex:1 1 auto}
-.xs\:col-unset{width:auto;-webkit-box-flex:unset;-webkit-flex:unset;-ms-flex:unset;flex:unset}
+.xs\:col-unset{width:auto;-webkit-box-flex:inherit;-webkit-flex:inherit;-ms-flex:inherit;flex:inherit}
 .xs\:col-count-0{-webkit-column-count:0;-moz-column-count:0;column-count:0}
 .xs\:col-count-1{-webkit-column-count:1;-moz-column-count:1;column-count:1}
 .xs\:col-count-2{-webkit-column-count:2;-moz-column-count:2;column-count:2}
@@ -1979,38 +1971,38 @@ em{font-style:italic}
 .sm\:-mx-none[class*=grid-]:first-of-type{margin-top:0}
 .sm\:-mx-none[class*=grid-]:last-of-type{margin-bottom:0}
 .sm\:-my-none{margin-top:0;margin-bottom:0}
-.sm\:shadow-sm{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.sm\:shadow-parent-sm .shadow-child{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.sm\:hover\:shadow-sm:hover{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.sm\:hover\:shadow-parent-sm:hover .shadow-child{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.sm\:focus\:shadow-sm:focus{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.sm\:focus\:shadow-parent-sm:focus .shadow-child{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.sm\:focus-within\:shadow-sm:focus-within{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.sm\:focus-within\:shadow-parent-sm:focus-within .shadow-child{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.sm\:shadow-bottom{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.sm\:shadow-parent-bottom .shadow-child{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.sm\:hover\:shadow-bottom:hover{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.sm\:hover\:shadow-parent-bottom:hover .shadow-child{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.sm\:focus\:shadow-bottom:focus{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.sm\:focus\:shadow-parent-bottom:focus .shadow-child{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.sm\:focus-within\:shadow-bottom:focus-within{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.sm\:focus-within\:shadow-parent-bottom:focus-within .shadow-child{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.sm\:shadow-lg{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.sm\:shadow-parent-lg .shadow-child{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.sm\:hover\:shadow-lg:hover{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.sm\:hover\:shadow-parent-lg:hover .shadow-child{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.sm\:focus\:shadow-lg:focus{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.sm\:focus\:shadow-parent-lg:focus .shadow-child{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.sm\:focus-within\:shadow-lg:focus-within{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.sm\:focus-within\:shadow-parent-lg:focus-within .shadow-child{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.sm\:shadow-none{box-shadow:none}
-.sm\:shadow-parent-none .shadow-child{box-shadow:none}
-.sm\:hover\:shadow-none:hover{box-shadow:none}
-.sm\:hover\:shadow-parent-none:hover .shadow-child{box-shadow:none}
-.sm\:focus\:shadow-none:focus{box-shadow:none}
-.sm\:focus\:shadow-parent-none:focus .shadow-child{box-shadow:none}
-.sm\:focus-within\:shadow-none:focus-within{box-shadow:none}
-.sm\:focus-within\:shadow-parent-none:focus-within .shadow-child{box-shadow:none}
+.sm\:shadowsm{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
+.sm\:shadow-parentsm .shadow-child{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
+.sm\:hover\:shadowsm:hover{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
+.sm\:hover\:shadow-parentsm:hover .shadow-child{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
+.sm\:focus\:shadowsm:focus{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
+.sm\:focus\:shadow-parentsm:focus .shadow-child{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
+.sm\:focus-within\:shadowsm:focus-within{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
+.sm\:focus-within\:shadow-parentsm:focus-within .shadow-child{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
+.sm\:shadowbottom{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
+.sm\:shadow-parentbottom .shadow-child{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
+.sm\:hover\:shadowbottom:hover{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
+.sm\:hover\:shadow-parentbottom:hover .shadow-child{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
+.sm\:focus\:shadowbottom:focus{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
+.sm\:focus\:shadow-parentbottom:focus .shadow-child{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
+.sm\:focus-within\:shadowbottom:focus-within{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
+.sm\:focus-within\:shadow-parentbottom:focus-within .shadow-child{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
+.sm\:shadowlg{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
+.sm\:shadow-parentlg .shadow-child{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
+.sm\:hover\:shadowlg:hover{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
+.sm\:hover\:shadow-parentlg:hover .shadow-child{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
+.sm\:focus\:shadowlg:focus{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
+.sm\:focus\:shadow-parentlg:focus .shadow-child{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
+.sm\:focus-within\:shadowlg:focus-within{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
+.sm\:focus-within\:shadow-parentlg:focus-within .shadow-child{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
+.sm\:shadownone{box-shadow:none}
+.sm\:shadow-parentnone .shadow-child{box-shadow:none}
+.sm\:hover\:shadownone:hover{box-shadow:none}
+.sm\:hover\:shadow-parentnone:hover .shadow-child{box-shadow:none}
+.sm\:focus\:shadownone:focus{box-shadow:none}
+.sm\:focus\:shadow-parentnone:focus .shadow-child{box-shadow:none}
+.sm\:focus-within\:shadownone:focus-within{box-shadow:none}
+.sm\:focus-within\:shadow-parentnone:focus-within .shadow-child{box-shadow:none}
 .sm\:opacity-0{opacity:0}
 .sm\:opacity-parent-0 .opacity-child{opacity:0}
 .sm\:hover\:opacity-0:hover{opacity:0}
@@ -2128,9 +2120,9 @@ em{font-style:italic}
 .sm\:col-10{width:83.33333%;-webkit-box-flex:0;-webkit-flex:none;-ms-flex:none;flex:none}
 .sm\:col-11{width:91.66667%;-webkit-box-flex:0;-webkit-flex:none;-ms-flex:none;flex:none}
 .sm\:col-12{width:100%;-webkit-box-flex:0;-webkit-flex:none;-ms-flex:none;flex:none}
-.sm\:col-auto{width:auto;-webkit-box-flex:0;-webkit-flex:none;-ms-flex:none;flex:none}
+.sm\:col-auto{width:auto;-webkit-box-flex:inherit;-webkit-flex:inherit;-ms-flex:inherit;flex:inherit}
 .sm\:col-flex{-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-flex:1 1 auto;-ms-flex:1 1 auto;flex:1 1 auto}
-.sm\:col-unset{width:auto;-webkit-box-flex:unset;-webkit-flex:unset;-ms-flex:unset;flex:unset}
+.sm\:col-unset{width:auto;-webkit-box-flex:inherit;-webkit-flex:inherit;-ms-flex:inherit;flex:inherit}
 .sm\:col-count-0{-webkit-column-count:0;-moz-column-count:0;column-count:0}
 .sm\:col-count-1{-webkit-column-count:1;-moz-column-count:1;column-count:1}
 .sm\:col-count-2{-webkit-column-count:2;-moz-column-count:2;column-count:2}
@@ -2698,38 +2690,38 @@ em{font-style:italic}
 .md\:-mx-none[class*=grid-]:first-of-type{margin-top:0}
 .md\:-mx-none[class*=grid-]:last-of-type{margin-bottom:0}
 .md\:-my-none{margin-top:0;margin-bottom:0}
-.md\:shadow-sm{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.md\:shadow-parent-sm .shadow-child{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.md\:hover\:shadow-sm:hover{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.md\:hover\:shadow-parent-sm:hover .shadow-child{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.md\:focus\:shadow-sm:focus{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.md\:focus\:shadow-parent-sm:focus .shadow-child{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.md\:focus-within\:shadow-sm:focus-within{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.md\:focus-within\:shadow-parent-sm:focus-within .shadow-child{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.md\:shadow-bottom{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.md\:shadow-parent-bottom .shadow-child{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.md\:hover\:shadow-bottom:hover{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.md\:hover\:shadow-parent-bottom:hover .shadow-child{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.md\:focus\:shadow-bottom:focus{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.md\:focus\:shadow-parent-bottom:focus .shadow-child{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.md\:focus-within\:shadow-bottom:focus-within{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.md\:focus-within\:shadow-parent-bottom:focus-within .shadow-child{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.md\:shadow-lg{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.md\:shadow-parent-lg .shadow-child{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.md\:hover\:shadow-lg:hover{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.md\:hover\:shadow-parent-lg:hover .shadow-child{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.md\:focus\:shadow-lg:focus{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.md\:focus\:shadow-parent-lg:focus .shadow-child{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.md\:focus-within\:shadow-lg:focus-within{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.md\:focus-within\:shadow-parent-lg:focus-within .shadow-child{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.md\:shadow-none{box-shadow:none}
-.md\:shadow-parent-none .shadow-child{box-shadow:none}
-.md\:hover\:shadow-none:hover{box-shadow:none}
-.md\:hover\:shadow-parent-none:hover .shadow-child{box-shadow:none}
-.md\:focus\:shadow-none:focus{box-shadow:none}
-.md\:focus\:shadow-parent-none:focus .shadow-child{box-shadow:none}
-.md\:focus-within\:shadow-none:focus-within{box-shadow:none}
-.md\:focus-within\:shadow-parent-none:focus-within .shadow-child{box-shadow:none}
+.md\:shadowsm{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
+.md\:shadow-parentsm .shadow-child{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
+.md\:hover\:shadowsm:hover{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
+.md\:hover\:shadow-parentsm:hover .shadow-child{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
+.md\:focus\:shadowsm:focus{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
+.md\:focus\:shadow-parentsm:focus .shadow-child{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
+.md\:focus-within\:shadowsm:focus-within{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
+.md\:focus-within\:shadow-parentsm:focus-within .shadow-child{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
+.md\:shadowbottom{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
+.md\:shadow-parentbottom .shadow-child{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
+.md\:hover\:shadowbottom:hover{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
+.md\:hover\:shadow-parentbottom:hover .shadow-child{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
+.md\:focus\:shadowbottom:focus{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
+.md\:focus\:shadow-parentbottom:focus .shadow-child{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
+.md\:focus-within\:shadowbottom:focus-within{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
+.md\:focus-within\:shadow-parentbottom:focus-within .shadow-child{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
+.md\:shadowlg{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
+.md\:shadow-parentlg .shadow-child{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
+.md\:hover\:shadowlg:hover{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
+.md\:hover\:shadow-parentlg:hover .shadow-child{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
+.md\:focus\:shadowlg:focus{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
+.md\:focus\:shadow-parentlg:focus .shadow-child{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
+.md\:focus-within\:shadowlg:focus-within{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
+.md\:focus-within\:shadow-parentlg:focus-within .shadow-child{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
+.md\:shadownone{box-shadow:none}
+.md\:shadow-parentnone .shadow-child{box-shadow:none}
+.md\:hover\:shadownone:hover{box-shadow:none}
+.md\:hover\:shadow-parentnone:hover .shadow-child{box-shadow:none}
+.md\:focus\:shadownone:focus{box-shadow:none}
+.md\:focus\:shadow-parentnone:focus .shadow-child{box-shadow:none}
+.md\:focus-within\:shadownone:focus-within{box-shadow:none}
+.md\:focus-within\:shadow-parentnone:focus-within .shadow-child{box-shadow:none}
 .md\:opacity-0{opacity:0}
 .md\:opacity-parent-0 .opacity-child{opacity:0}
 .md\:hover\:opacity-0:hover{opacity:0}
@@ -2847,9 +2839,9 @@ em{font-style:italic}
 .md\:col-10{width:83.33333%;-webkit-box-flex:0;-webkit-flex:none;-ms-flex:none;flex:none}
 .md\:col-11{width:91.66667%;-webkit-box-flex:0;-webkit-flex:none;-ms-flex:none;flex:none}
 .md\:col-12{width:100%;-webkit-box-flex:0;-webkit-flex:none;-ms-flex:none;flex:none}
-.md\:col-auto{width:auto;-webkit-box-flex:0;-webkit-flex:none;-ms-flex:none;flex:none}
+.md\:col-auto{width:auto;-webkit-box-flex:inherit;-webkit-flex:inherit;-ms-flex:inherit;flex:inherit}
 .md\:col-flex{-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-flex:1 1 auto;-ms-flex:1 1 auto;flex:1 1 auto}
-.md\:col-unset{width:auto;-webkit-box-flex:unset;-webkit-flex:unset;-ms-flex:unset;flex:unset}
+.md\:col-unset{width:auto;-webkit-box-flex:inherit;-webkit-flex:inherit;-ms-flex:inherit;flex:inherit}
 .md\:col-count-0{-webkit-column-count:0;-moz-column-count:0;column-count:0}
 .md\:col-count-1{-webkit-column-count:1;-moz-column-count:1;column-count:1}
 .md\:col-count-2{-webkit-column-count:2;-moz-column-count:2;column-count:2}
@@ -3417,38 +3409,38 @@ em{font-style:italic}
 .lg\:-mx-none[class*=grid-]:first-of-type{margin-top:0}
 .lg\:-mx-none[class*=grid-]:last-of-type{margin-bottom:0}
 .lg\:-my-none{margin-top:0;margin-bottom:0}
-.lg\:shadow-sm{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.lg\:shadow-parent-sm .shadow-child{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.lg\:hover\:shadow-sm:hover{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.lg\:hover\:shadow-parent-sm:hover .shadow-child{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.lg\:focus\:shadow-sm:focus{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.lg\:focus\:shadow-parent-sm:focus .shadow-child{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.lg\:focus-within\:shadow-sm:focus-within{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.lg\:focus-within\:shadow-parent-sm:focus-within .shadow-child{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.lg\:shadow-bottom{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.lg\:shadow-parent-bottom .shadow-child{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.lg\:hover\:shadow-bottom:hover{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.lg\:hover\:shadow-parent-bottom:hover .shadow-child{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.lg\:focus\:shadow-bottom:focus{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.lg\:focus\:shadow-parent-bottom:focus .shadow-child{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.lg\:focus-within\:shadow-bottom:focus-within{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.lg\:focus-within\:shadow-parent-bottom:focus-within .shadow-child{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.lg\:shadow-lg{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.lg\:shadow-parent-lg .shadow-child{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.lg\:hover\:shadow-lg:hover{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.lg\:hover\:shadow-parent-lg:hover .shadow-child{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.lg\:focus\:shadow-lg:focus{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.lg\:focus\:shadow-parent-lg:focus .shadow-child{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.lg\:focus-within\:shadow-lg:focus-within{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.lg\:focus-within\:shadow-parent-lg:focus-within .shadow-child{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.lg\:shadow-none{box-shadow:none}
-.lg\:shadow-parent-none .shadow-child{box-shadow:none}
-.lg\:hover\:shadow-none:hover{box-shadow:none}
-.lg\:hover\:shadow-parent-none:hover .shadow-child{box-shadow:none}
-.lg\:focus\:shadow-none:focus{box-shadow:none}
-.lg\:focus\:shadow-parent-none:focus .shadow-child{box-shadow:none}
-.lg\:focus-within\:shadow-none:focus-within{box-shadow:none}
-.lg\:focus-within\:shadow-parent-none:focus-within .shadow-child{box-shadow:none}
+.lg\:shadowsm{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
+.lg\:shadow-parentsm .shadow-child{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
+.lg\:hover\:shadowsm:hover{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
+.lg\:hover\:shadow-parentsm:hover .shadow-child{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
+.lg\:focus\:shadowsm:focus{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
+.lg\:focus\:shadow-parentsm:focus .shadow-child{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
+.lg\:focus-within\:shadowsm:focus-within{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
+.lg\:focus-within\:shadow-parentsm:focus-within .shadow-child{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
+.lg\:shadowbottom{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
+.lg\:shadow-parentbottom .shadow-child{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
+.lg\:hover\:shadowbottom:hover{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
+.lg\:hover\:shadow-parentbottom:hover .shadow-child{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
+.lg\:focus\:shadowbottom:focus{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
+.lg\:focus\:shadow-parentbottom:focus .shadow-child{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
+.lg\:focus-within\:shadowbottom:focus-within{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
+.lg\:focus-within\:shadow-parentbottom:focus-within .shadow-child{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
+.lg\:shadowlg{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
+.lg\:shadow-parentlg .shadow-child{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
+.lg\:hover\:shadowlg:hover{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
+.lg\:hover\:shadow-parentlg:hover .shadow-child{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
+.lg\:focus\:shadowlg:focus{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
+.lg\:focus\:shadow-parentlg:focus .shadow-child{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
+.lg\:focus-within\:shadowlg:focus-within{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
+.lg\:focus-within\:shadow-parentlg:focus-within .shadow-child{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
+.lg\:shadownone{box-shadow:none}
+.lg\:shadow-parentnone .shadow-child{box-shadow:none}
+.lg\:hover\:shadownone:hover{box-shadow:none}
+.lg\:hover\:shadow-parentnone:hover .shadow-child{box-shadow:none}
+.lg\:focus\:shadownone:focus{box-shadow:none}
+.lg\:focus\:shadow-parentnone:focus .shadow-child{box-shadow:none}
+.lg\:focus-within\:shadownone:focus-within{box-shadow:none}
+.lg\:focus-within\:shadow-parentnone:focus-within .shadow-child{box-shadow:none}
 .lg\:opacity-0{opacity:0}
 .lg\:opacity-parent-0 .opacity-child{opacity:0}
 .lg\:hover\:opacity-0:hover{opacity:0}
@@ -3566,9 +3558,9 @@ em{font-style:italic}
 .lg\:col-10{width:83.33333%;-webkit-box-flex:0;-webkit-flex:none;-ms-flex:none;flex:none}
 .lg\:col-11{width:91.66667%;-webkit-box-flex:0;-webkit-flex:none;-ms-flex:none;flex:none}
 .lg\:col-12{width:100%;-webkit-box-flex:0;-webkit-flex:none;-ms-flex:none;flex:none}
-.lg\:col-auto{width:auto;-webkit-box-flex:0;-webkit-flex:none;-ms-flex:none;flex:none}
+.lg\:col-auto{width:auto;-webkit-box-flex:inherit;-webkit-flex:inherit;-ms-flex:inherit;flex:inherit}
 .lg\:col-flex{-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-flex:1 1 auto;-ms-flex:1 1 auto;flex:1 1 auto}
-.lg\:col-unset{width:auto;-webkit-box-flex:unset;-webkit-flex:unset;-ms-flex:unset;flex:unset}
+.lg\:col-unset{width:auto;-webkit-box-flex:inherit;-webkit-flex:inherit;-ms-flex:inherit;flex:inherit}
 .lg\:col-count-0{-webkit-column-count:0;-moz-column-count:0;column-count:0}
 .lg\:col-count-1{-webkit-column-count:1;-moz-column-count:1;column-count:1}
 .lg\:col-count-2{-webkit-column-count:2;-moz-column-count:2;column-count:2}
@@ -4136,38 +4128,38 @@ em{font-style:italic}
 .xl\:-mx-none[class*=grid-]:first-of-type{margin-top:0}
 .xl\:-mx-none[class*=grid-]:last-of-type{margin-bottom:0}
 .xl\:-my-none{margin-top:0;margin-bottom:0}
-.xl\:shadow-sm{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.xl\:shadow-parent-sm .shadow-child{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.xl\:hover\:shadow-sm:hover{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.xl\:hover\:shadow-parent-sm:hover .shadow-child{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.xl\:focus\:shadow-sm:focus{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.xl\:focus\:shadow-parent-sm:focus .shadow-child{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.xl\:focus-within\:shadow-sm:focus-within{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.xl\:focus-within\:shadow-parent-sm:focus-within .shadow-child{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
-.xl\:shadow-bottom{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.xl\:shadow-parent-bottom .shadow-child{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.xl\:hover\:shadow-bottom:hover{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.xl\:hover\:shadow-parent-bottom:hover .shadow-child{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.xl\:focus\:shadow-bottom:focus{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.xl\:focus\:shadow-parent-bottom:focus .shadow-child{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.xl\:focus-within\:shadow-bottom:focus-within{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.xl\:focus-within\:shadow-parent-bottom:focus-within .shadow-child{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
-.xl\:shadow-lg{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.xl\:shadow-parent-lg .shadow-child{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.xl\:hover\:shadow-lg:hover{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.xl\:hover\:shadow-parent-lg:hover .shadow-child{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.xl\:focus\:shadow-lg:focus{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.xl\:focus\:shadow-parent-lg:focus .shadow-child{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.xl\:focus-within\:shadow-lg:focus-within{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.xl\:focus-within\:shadow-parent-lg:focus-within .shadow-child{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
-.xl\:shadow-none{box-shadow:none}
-.xl\:shadow-parent-none .shadow-child{box-shadow:none}
-.xl\:hover\:shadow-none:hover{box-shadow:none}
-.xl\:hover\:shadow-parent-none:hover .shadow-child{box-shadow:none}
-.xl\:focus\:shadow-none:focus{box-shadow:none}
-.xl\:focus\:shadow-parent-none:focus .shadow-child{box-shadow:none}
-.xl\:focus-within\:shadow-none:focus-within{box-shadow:none}
-.xl\:focus-within\:shadow-parent-none:focus-within .shadow-child{box-shadow:none}
+.xl\:shadowsm{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
+.xl\:shadow-parentsm .shadow-child{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
+.xl\:hover\:shadowsm:hover{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
+.xl\:hover\:shadow-parentsm:hover .shadow-child{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
+.xl\:focus\:shadowsm:focus{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
+.xl\:focus\:shadow-parentsm:focus .shadow-child{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
+.xl\:focus-within\:shadowsm:focus-within{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
+.xl\:focus-within\:shadow-parentsm:focus-within .shadow-child{box-shadow:0 1px 4px -1px rgba(0,0,0,.5)}
+.xl\:shadowbottom{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
+.xl\:shadow-parentbottom .shadow-child{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
+.xl\:hover\:shadowbottom:hover{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
+.xl\:hover\:shadow-parentbottom:hover .shadow-child{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
+.xl\:focus\:shadowbottom:focus{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
+.xl\:focus\:shadow-parentbottom:focus .shadow-child{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
+.xl\:focus-within\:shadowbottom:focus-within{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
+.xl\:focus-within\:shadow-parentbottom:focus-within .shadow-child{box-shadow:0 2px 6px -2px rgba(0,0,0,.8)}
+.xl\:shadowlg{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
+.xl\:shadow-parentlg .shadow-child{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
+.xl\:hover\:shadowlg:hover{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
+.xl\:hover\:shadow-parentlg:hover .shadow-child{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
+.xl\:focus\:shadowlg:focus{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
+.xl\:focus\:shadow-parentlg:focus .shadow-child{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
+.xl\:focus-within\:shadowlg:focus-within{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
+.xl\:focus-within\:shadow-parentlg:focus-within .shadow-child{box-shadow:0 5px 5px 0 rgba(0,0,0,.35),0 5px 15px 0 rgba(0,0,0,.16)}
+.xl\:shadownone{box-shadow:none}
+.xl\:shadow-parentnone .shadow-child{box-shadow:none}
+.xl\:hover\:shadownone:hover{box-shadow:none}
+.xl\:hover\:shadow-parentnone:hover .shadow-child{box-shadow:none}
+.xl\:focus\:shadownone:focus{box-shadow:none}
+.xl\:focus\:shadow-parentnone:focus .shadow-child{box-shadow:none}
+.xl\:focus-within\:shadownone:focus-within{box-shadow:none}
+.xl\:focus-within\:shadow-parentnone:focus-within .shadow-child{box-shadow:none}
 .xl\:opacity-0{opacity:0}
 .xl\:opacity-parent-0 .opacity-child{opacity:0}
 .xl\:hover\:opacity-0:hover{opacity:0}
@@ -4285,9 +4277,9 @@ em{font-style:italic}
 .xl\:col-10{width:83.33333%;-webkit-box-flex:0;-webkit-flex:none;-ms-flex:none;flex:none}
 .xl\:col-11{width:91.66667%;-webkit-box-flex:0;-webkit-flex:none;-ms-flex:none;flex:none}
 .xl\:col-12{width:100%;-webkit-box-flex:0;-webkit-flex:none;-ms-flex:none;flex:none}
-.xl\:col-auto{width:auto;-webkit-box-flex:0;-webkit-flex:none;-ms-flex:none;flex:none}
+.xl\:col-auto{width:auto;-webkit-box-flex:inherit;-webkit-flex:inherit;-ms-flex:inherit;flex:inherit}
 .xl\:col-flex{-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-flex:1 1 auto;-ms-flex:1 1 auto;flex:1 1 auto}
-.xl\:col-unset{width:auto;-webkit-box-flex:unset;-webkit-flex:unset;-ms-flex:unset;flex:unset}
+.xl\:col-unset{width:auto;-webkit-box-flex:inherit;-webkit-flex:inherit;-ms-flex:inherit;flex:inherit}
 .xl\:col-count-0{-webkit-column-count:0;-moz-column-count:0;column-count:0}
 .xl\:col-count-1{-webkit-column-count:1;-moz-column-count:1;column-count:1}
 .xl\:col-count-2{-webkit-column-count:2;-moz-column-count:2;column-count:2}

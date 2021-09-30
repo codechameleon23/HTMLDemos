@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   @@include('./_includes/_head.html', {
+      "pageName": "Contact",
+      "description": ""
+   })
+</head>
+
+<body class="jsNavbarToggle is-close flex-col">
+
+   <!-- Header -->
+   @@include('./_includes/_header.html', {
+      "newsActive": "",
+      "regUnitActive": "",
+      "assoNBranchActive": "",
+      "regJournalActive": "",
+      "resettlementActive": "",
+      "contactActive": "bg-primary fcolor-white"
+   })
+
+   <!-- Main -->
+   <main class="flex-auto flex-col">
+
+      <!-- Page Title -->
+      @@include(
+      './_includes/_ribbon.html',
+         {
+         "titleTag": "h1",
+         "ribbonWrapper": "bg-primary fcolor-white text-center py-2sm",
+         "ribbonText": "Regimental Contact Details"
+         }
+      )
+
+      <!-- Banner -->
+      @@include('./_includes/_contact-banner.html')
+
+   </main>
+   <!-- Footer -->
+   @@include('./_includes/_footer.html', {
+      "map": false
+   })
+
+   <script src="js/allScript.js"></script>
+   <script>
+      $('#map-canvas').mapify({
+         key: 'AIzaSyB1kmlnoOlwpHQQBvhhIL3joMAKpKq9Yoo',
+         points: [
+            {
+               lat: 51.068530,
+               lng: -1.792478,
+               marker: 'images/map-marker.png',
+               markerSize: [160, 160],
+               title: 'Blenheim Camp, Newmarket Rd, Bury Saint Edmunds IP33 3SW',
+            },
+         ],
+         zoom: 15,
+      });
+   </script>
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+$bp: $navbarBp;
+$iconSize: 2.6rem; 
+$iconthickness: .25rem; 
+.navbar{
+   > ul > li {
+      position: relative;
+      &.has-dropdown{
+         > .toggle {
+            width: $iconSize;
+            height: $iconSize;
+            position: absolute;
+            top: $iconSize;
+            left: calc(100% - #{$iconSize + 1.2rem});
+            transform: translate(-50%, -50%);
+
+            &:before, &:after {
+               position: absolute;
+               content: "";
+               background-color: $color-primary;
+               transition: all .45s 0s ease-in-out;
+               transform-origin: center;
+            }
+            &:before{
+               width: $iconthickness;
+               height: 100%;
+               left: 50%;
+               margin-left: calc(-#{$iconthickness}/ 2);
+            }
+            &:after{
+               width: 100%;
+               height: $iconthickness;
+               top: 50%;
+               margin-top: calc(-#{$iconthickness}/ 2);
+            }
+         }
+      }
+      .dropdown {
+         overflow: hidden;
+         max-height: 0;
+         opacity: 0;
+         transition: all .45s 0s ease-in-out;
+      }
+
+      @media (max-width: $bp) {
+         &.is-open{
+            &.has-dropdown{
+               > .toggle {
+                  &:before{
+                     opacity: 0;
+                     // top: calc(#{$iconSize} / 2);
+                     transform: rotate(90deg);
+                  }
+               }
+            }
+            >.dropdown {
+               opacity: 1;
+               max-height: 100rem;
+               overflow: visible;
+            }
+         }
+      }
+      @media (min-width: $bp) {
+         &:not(.no-hover){
+            > a {
+               position: relative;
+               &:after {
+                  content: "";
+                  position: absolute;
+                  width: 100%;
+                  max-width: 0px;
+                  height: .2rem;
+                  background-color: $color-secondary;
+                  left: 50%;
+                  transform: translateX(-50%);
+                  top: 100%;
+                  border-radius: 0.5rem;
+                  transition: max-width 0.35s ease-in-out 0s;
+               }
+            }
+            &.is-active,
+            &:hover{
+               > a {
+                  &:after {
+                     max-width: 100%;
+                  }
+               }
+            }
+         }
+         &:hover{
+            &.has-dropdown{
+               > .toggle {
+                  &:before{
+                     opacity: 0;
+                     // top: calc(#{$iconSize} / 2);
+                     transform: rotate(90deg);
+                  }
+               }
+            }
+            >.dropdown {
+               opacity: 1;
+               max-height: 100rem;
+               overflow: visible;
+            }
+         }
+      }
+
+      @media (max-width: $bp) {
+         &:nth-child(even) {
+            background-color: $colorWhite;
+         }
+      }
+      
+      @media (min-width: $bp) {
+         &.has-dropdown{
+            .toggle{
+               display: none;
+            }
+         }
+         .dropdown {
+            position: absolute;
+            width: 65rem;
+            z-index: 40;
+            overflow: hidden;
+            position: absolute;
+            top: 100%;
+            transition: all .7s 0s ease-in-out;
+            transform: translateX(-50%);
+            left: 50%;
+            @media (min-width: $bp-xl){
+               width: 75rem;
+            }
+
+            &:after {
+               content: "";
+               position: absolute;
+               width: 0;
+               height: 0;
+               border-style: solid;
+               border-width: 1rem;
+               border-color: transparent transparent $color-primary transparent;
+               bottom: 100%;
+               left: 50%;
+               transform: translateX(-50%);
+            }
+
+            ul {
+               column-count: 3;
+               column-gap: 1rem;
+            }
+         }
+      }
+   }
+   @media (max-width: $bp) {
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      transition: all .45s 0s ease-in-out;
+
+      .jsNavbarToggle.is-open &{
+         opacity: 1;
+         max-height: 100rem;
+         overflow: visible;
+      }
+   }
+}

@@ -1,0 +1,52 @@
+@@if(context.banner) {
+   @@if(context.banner.wrapper) {
+      <section class="@@banner.wrapper.wrapperSx">
+   }
+      <section class="banner-wrapper @@banner.bannerSx">
+         @@if(context.banner.image) {
+            <figure class="banner-bg-image @@banner.image.imageSx" style="background-image: url('./images/@@banner.image.src');"></figure>
+         }
+         @@if(!context.banner.innerHtml && context.banner.body) {
+            <div class="banner-inner-wrapper @@banner.body.bodySx">
+               <div class="banner-container-inner @@if(context.banner.body.innerSx){@@banner.body.innerSx}">
+                  @@if(context.banner.body.children) {
+                     @@banner.body.children
+                  }
+                  @@if(!context.banner.body.innerHtml && context.banner.cards && context.banner.cards.length) {
+                     @@for (var i = 0; i < context.banner.cards.length; i++) {
+                        @@include("./_includes/_card.html", `+(JSON.stringify(context.banner.cards[i]))+`)
+                     }
+                  }
+                  @@if(context.banner.body.innerHtml) {
+                     @@banner.body.innerHtml
+                  }
+               </div>
+            </div>
+         }
+         @@if(context.innerHtml) {
+            @@banner.innerHtml
+         }
+      </section>
+   @@if(context.banner.wrapper) {
+   </section>
+}
+}
+
+<!-- @@include('./_includes/_banner.html', {
+   "banner": {
+     "bannerSx": "",
+     "wrapper": {
+         "wrapperSx": ""
+      },
+     "image": {
+       "src": "anglians_1440x673.jpg",
+       "imageSx": "bg-center bg-cover"
+     },
+     "body": {
+       "innerHtml": "",
+       "bodySx": "",
+       "children": ""
+     },
+     "cards": [...]
+   }
+ }) -->

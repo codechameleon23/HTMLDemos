@@ -1,0 +1,46 @@
+::-webkit-input-placeholder {
+  color: tint($placeHolderColor, 70%);
+}
+
+::-moz-placeholder {
+  color: tint($placeHolderColor, 70%);
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: tint($placeHolderColor, 70%);
+}
+
+:-moz-placeholder {
+  color: tint($placeHolderColor, 70%);
+}
+
+.select {
+  position: relative;
+  color: inherit;
+
+  &:after {
+    content: "";
+    position: absolute;
+    height: 1rem;
+    width: 1rem;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-style: solid;
+    color: inherit;
+    pointer-events: none;
+    top: calc(50% - 0.6rem);
+    right: 1rem;
+    transform: rotate(-45deg);
+    border-width: 0 0 .15rem .15rem;
+    border-color: $colorSecondary;
+  }
+
+  select {
+    appearance: none;
+  }
+
+  select::-ms-expand {
+    display: none;
+  }
+}

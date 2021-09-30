@@ -1,0 +1,61 @@
+// The base font-size is set at 62.5% for having the convenience
+// of sizing rems in a way that is similar to using px: 1.6rem = 16px
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  // @media (max-width: $bp_md){
+  //   overflow-x: hidden;
+  // }
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0 solid transparent;
+  border-style: solid;
+  border-color: inherit;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  color: $defaultTextColor;
+  font-family: $defaultFont;
+  font-size: $defaultFontSize;
+  font-weight: $defaultFontWeights;
+  line-height: $defaultFontHeight;
+  letter-spacing: $defaultLetterSpacing; //0.01em
+  font-kerning: none;
+  font-style: normal;
+  position: relative;
+  min-height: 100vh;
+  max-width: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+main{
+  overflow: visible;
+}
+
+img {
+  max-width: 100%;
+  display: inline-block;
+  vertical-align: bottom;
+  flex-shrink: 0;
+}
+
+a img {
+  border: none;
+  outline: none;
+}
+
+em{
+  font-style: italic;
+}

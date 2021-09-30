@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('./_includes/_core_components/head.html', {
+	"pageName": "All Pages",
+	"pojectName": "ESI_Website_HTML",
+	"siteName": "Ewe Store It",
+	"description": "Simple storage solutions designed to save ewe money"
+	})
+	<style>
+		html,
+		body {
+			height: 100%;
+			/* background-color: rgba(0, 0, 0, 0.7); */
+		}
+
+		.pages {
+			list-style: none;
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.pages li {
+			padding: 0;
+			display: inline-block;
+			margin: 0.2rem;
+			font-weight: 400;
+			text-transform: capitalize;
+			flex: auto;
+		}
+
+		.pages a {
+			transition: all 0.3s 0s ease-in;
+			padding: 1.5rem 3.5rem;
+			display: block;
+			/* box-shadow: 0 0 0.05rem 0 #000; */
+			border-radius: .25rem;
+			text-decoration: none !important;
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+		.pages li:hover a {
+			box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.3);
+		}
+	</style>
+</head>
+
+<body class="align-center flex-col justify-center text-center bg-white">
+	<div class="bg-center bg-cover pos-absolute pin opacity-75" style="background-image: url('images/iStock-836494202.jpg')">
+	</div>
+	<div class="container container-md my-120 mx-auto pos-relative">
+		<div class="align-center flex-col px-20 w-full">
+			<div class="flex-col justify-center align-center">
+				<a href="index.html" class="icon-logo-header ratio-logo overflow-hidden mb-md">
+					<span class="">
+						<img src="./images/brand-logo.svg" alt="" />
+					</span>
+				</a>
+			</div>
+			<ul class="font-color-white font-size-sm pages w-full">
+				<li><a class="font-color-inherit bg-aqua" href="index.html">Home</a></li>
+				<li><a class="font-color-inherit bg-aqua" href="get-a-quote.html">Get a quote</a></li>
+				<li><a class="font-color-inherit bg-aqua" href="thank-ewe.html">Get a quote – Thank Ewe</a></li>
+				<li><a class="font-color-inherit bg-aqua" href="education.html">Education</a></li>
+				<li><a class="font-color-inherit bg-aqua" href="how-it-works.html">How it Works</a></li>
+				<li><a class="font-color-inherit bg-aqua" href="about-ewe.html">About Ewe</a></li>
+				<li><a class="font-color-inherit bg-aqua" href="contact.html">contact</a></li>
+				<li><a class="font-color-inherit bg-aqua" href="flexibuilder.html">flexibuilder</a></li>
+				<li class="col-12 border border-dashed border-pink font-color-default"> New Pages </li>
+				<li><a class="font-color-inherit bg-aqua" href="homepage.html">Home <small>New</small></a></li>
+				<li><a class="font-color-inherit bg-aqua" href="your-quick-quote.html">Your Quick Quote</a></li>
+				<li><a class="font-color-inherit bg-aqua" href="detailed-quote.html">Detailed Quote</a></li>
+				<li><a class="font-color-inherit bg-aqua" href="gallery.html">Gallery</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+
+</html>

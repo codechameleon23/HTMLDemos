@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  @@include('./_includes/_head.html', {
+    "pageName": "Flexibuilder",
+    "description": ""
+  })
+</head>
+
+<body class="jsNavbarToggle is-close flex-col">
+
+  <!-- Header -->
+  @@include('./_includes/_header.html', {
+    "headerPosClasses": "lg:pos-absolute pin-x pin-t z-40",
+    "aboutActive": "",
+    "communityActive": "",
+    "curriculumActive": "",
+    "examsActive": "",
+    "studentServicesActive": "",
+    "newsNEventsActive": ""
+  })
+
+  <!-- Main -->
+  <main class="flex-auto flex-col">
+
+    <!-- Hero Banner -->
+    @@include('./_includes/_banner-carousel.html', {
+      "rowClasses": "flex-wrap -mr-2xs lg:-mr-md -mb-md",
+      "carousel": false,
+      "hideControl": true,
+      "data": [
+        {
+          "isBanner": true,
+          "bannerClasses": "lg:py-xxl bg-lightningYellow fcolor-white md:fcolor-inherit flex-col",
+          "bannerImage": "iStock-950216224_extended_blue.jpg",
+          "bannerImageClasses": "bg-cover bg-right-top bg-inherit opacity-50 md:opacity-100 pos-absolute pin",
+          "bannerInnerClasses": "",
+          "bannerInnerContainerClasses": "container md:container-xl mx-auto pos-relative pt-2lg xl:pt-xxl",
+          "colClasses": "md:col-8 lg:col-6 flex-col md:pr-2lg py-2lg",
+          "cardImage": "",
+          "imageClasses": "",
+          "imageBgClasses": "",
+          "cardContentClasses": "",
+          "tag": false,
+          "tagClasses": "",
+          "tagText": "",
+          "footerClasses": "md:pt-md",
+          "cardTitle": "Growth. Community. Diversity. Innovation." ,
+          "cardTitleClasses": "fweight-bold fsize-2md lg:fsize-2lg",
+          "cardText": ["<p data-aos='fade-up' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom' class='fsize-2sm'>Dandent odipid et dolupta duciis es raep ernatum coribus enimin et volorem.Ruptatem lique nullabore dolenturion ni aut remodiae.</p>"],
+          "footerClasses": "pt-sm",
+          "cardButton": "APPLY NOW",
+          "buttonLink": "#",
+          "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide",
+          "cardTitleAOSattr": "data-aos='fade-up' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "footerAOSattr": "data-aos='fade-up' data-aos-delay='500' data-aos-duration='700' data-aos-anchor-placement='top-bottom'"
+        }
+      ]
+    })
+
+
+    <br>
+    <!-- Devider -->
+    @@include(
+      './_includes/_divider.html', 
+      {
+        "parts": [
+          {
+            "color": "bg-turmeric"
+          },
+          {
+            "color": "bg-mauvelous"
+          },
+          {
+            "color": "bg-lightningYellow"
+          },
+          {
+            "color": "bg-vistaBlue"
+          }
+        ]
+      }
+    )
+    <br>
+    <!-- Devider -->
+    @@include(
+      './_includes/_divider.html', 
+      {
+        "parts": [
+          {
+            "color": "bg-vistaBlue"
+          },
+          {
+            "color": "bg-jaffa"
+          },
+          {
+            "color": "bg-flamingo"
+          },
+          {
+            "color": "bg-deluge"
+          }
+        ]
+      }
+    ) 
+    <!-- Three Columns -->
+    @@include(
+      './_includes/_column-grid.html', 
+      {
+        "sectionClasses": "pt-xl lg:pt-2xl",
+        "containerClasses": "container container-sm lg:container-fluid mx-auto",
+        "rowClasses": "flex-wrap flex-row",
+        "childOnly": false,
+        "data": [
+          { 
+            "colClasses": "flex-col col-12 lg:col-4 bg-deluge fcolor-white",
+            "aosAttr": "data-aos='zoom-in' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+            "cardImage": "",
+            "imageClasses": "ratio-1x1 pos-relative",
+            "imageBgClasses": "",
+            "cardContentClasses": "flex-stretch flex-col pos-absolute pin justify-center align-center p-md lg:px-lg text-center",
+            "cardTitle": "Section Title",
+            "cardTitleClasses": "fweight-medium fsize-4md",
+            "cardText": ["<a href='#' class='button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide'>Learn More</a>"],
+            "cardTextClasses": "flex-col align-center",
+            "footerClasses": "pt-sm",
+            "cardButton": "",
+            "buttonLink": "#",
+            "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide"
+          },
+          { 
+            "colClasses": "flex-col col-12 lg:col-4 bg-lightningYellow fcolor-white",
+            "aosAttr": "data-aos='zoom-in' data-aos-delay='200' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+            "cardImage": "",
+            "imageClasses": "ratio-1x1 pos-relative",
+            "imageBgClasses": "",
+            "cardContentClasses": "flex-stretch flex-col pos-absolute pin justify-center align-center p-md lg:px-lg text-center",
+            "cardTitle": "Section Title" ,
+            "cardTitleClasses": "fweight-medium fsize-4md",
+            "cardText": ["<a href='#' class='button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide'>Learn More</a>"],
+            "cardTextClasses": "flex-col align-center",
+            "footerClasses": "pt-sm",
+            "cardButton": "",
+            "buttonLink": "#",
+            "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide"
+          },
+          { 
+            "colClasses": "flex-col col-12 lg:col-4 bg-java fcolor-white",
+            "aosAttr": "data-aos='zoom-in' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+            "cardImage": "",
+            "imageClasses": "ratio-1x1 pos-relative",
+            "imageBgClasses": "",
+            "cardContentClasses": "flex-stretch flex-col pos-absolute pin justify-center align-center p-md lg:px-lg text-center",
+            "cardTitle": "Section Title" ,
+            "cardTitleClasses": "fweight-medium fsize-4md",
+            "cardText": ["<a href='#' class='button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide'>Learn More</a>"],
+            "cardTextClasses": "flex-col align-center",
+            "footerClasses": "pt-sm",
+            "cardButton": "",
+            "buttonLink": "#",
+            "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide"
+          }
+        ]
+      }
+    )
+    <!-- Four Columns -->
+    @@include(
+      './_includes/_column-grid.html', 
+      {
+        "sectionClasses": "pt-xl lg:pt-2xl",
+        "containerClasses": "container container-sm md:container-fluid mx-auto",
+        "rowClasses": "flex-wrap flex-row",
+        "childOnly": false,
+        "data": [
+          { 
+            "colClasses": "flex-col col-12 md:col-6 lg:col-3 bg-java fcolor-white",
+            "aosAttr": "data-aos='zoom-in' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+            "cardImage": "",
+            "imageClasses": "ratio-1x1 pos-relative",
+            "imageBgClasses": "",
+            "cardContentClasses": "flex-stretch flex-col pos-absolute pin justify-center align-center p-md lg:px-lg text-center",
+            "cardTitle": "Section Title Here and Here",
+            "cardTitleClasses": "fweight-medium fsize-4md",
+            "cardText": ["<a href='#' class='button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide'>Learn More</a>"],
+            "cardTextClasses": "flex-col align-center",
+            "footerClasses": "pt-sm",
+            "cardButton": "",
+            "buttonLink": "#",
+            "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide"
+          },
+          { 
+            "colClasses": "flex-col col-12 md:col-6 lg:col-3 bg-turmeric fcolor-white",
+            "aosAttr": "data-aos='zoom-in' data-aos-delay='200' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+            "cardImage": "",
+            "imageClasses": "ratio-1x1 pos-relative",
+            "imageBgClasses": "",
+            "cardContentClasses": "flex-stretch flex-col pos-absolute pin justify-center align-center p-md lg:px-lg text-center",
+            "cardTitle": "Section Title Here and Here" ,
+            "cardTitleClasses": "fweight-medium fsize-4md",
+            "cardText": ["<a href='#' class='button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide'>Learn More</a>"],
+            "cardTextClasses": "flex-col align-center",
+            "footerClasses": "pt-sm",
+            "cardButton": "",
+            "buttonLink": "#",
+            "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide"
+          },
+          { 
+            "colClasses": "flex-col col-12 md:col-6 lg:col-3 bg-mauvelous fcolor-white",
+            "aosAttr": "data-aos='zoom-in' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+            "cardImage": "",
+            "imageClasses": "ratio-1x1 pos-relative",
+            "imageBgClasses": "",
+            "cardContentClasses": "flex-stretch flex-col pos-absolute pin justify-center align-center p-md lg:px-lg text-center",
+            "cardTitle": "Section Title Here and Here" ,
+            "cardTitleClasses": "fweight-medium fsize-4md",
+            "cardText": ["<a href='#' class='button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide'>Learn More</a>"],
+            "cardTextClasses": "flex-col align-center",
+            "footerClasses": "pt-sm",
+            "cardButton": "",
+            "buttonLink": "#",
+            "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide"
+          },
+          { 
+            "colClasses": "flex-col col-12 md:col-6 lg:col-3 bg-jaffa fcolor-white",
+            "aosAttr": "data-aos='zoom-in' data-aos-delay='400' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+            "cardImage": "",
+            "imageClasses": "ratio-1x1 pos-relative",
+            "imageBgClasses": "",
+            "cardContentClasses": "flex-stretch flex-col pos-absolute pin justify-center align-center p-md lg:px-lg text-center",
+            "cardTitle": "Section Title" ,
+            "cardTitleClasses": "fweight-medium fsize-4md",
+            "cardText": ["<a href='#' class='button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide'>Learn More</a>"],
+            "cardTextClasses": "flex-col align-center",
+            "footerClasses": "pt-sm",
+            "cardButton": "",
+            "buttonLink": "#",
+            "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide"
+          }
+        ]
+      }
+    )
+
+    <!-- Two Columns -->
+    @@include(
+      './_includes/_column-grid.html', 
+      {
+        "sectionClasses": "pt-xl lg:pt-2xl",
+        "containerClasses": "container container-sm md:container-fluid mx-auto",
+        "rowClasses": "flex-wrap flex-row",
+        "childOnly": false,
+        "data": [
+          { 
+            "colClasses": "flex-col col-12 md:col-6 bg-jaffa fcolor-white",
+            "aosAttr": "data-aos='zoom-in' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+            "cardImage": "",
+            "imageClasses": "ratio-1x1 lg:ratio-16x9 pos-relative",
+            "imageBgClasses": "",
+            "cardContentClasses": "flex-stretch flex-col pos-absolute pin justify-center align-center p-md lg:px-lg text-center",
+            "cardTitle": "Section Title Here and Here" ,
+            "cardTitleClasses": "fweight-medium fsize-4md",
+            "cardText": ["<a href='#' class='button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide'>Learn More</a>"],
+            "cardTextClasses": "flex-col align-center",
+            "footerClasses": "pt-sm",
+            "cardButton": "",
+            "buttonLink": "#",
+            "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide"
+          },
+          { 
+            "colClasses": "flex-col col-12 md:col-6 bg-deluge fcolor-white",
+            "aosAttr": "data-aos='zoom-in' data-aos-delay='200' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+            "cardImage": "",
+            "imageClasses": "ratio-1x1 lg:ratio-16x9 pos-relative",
+            "imageBgClasses": "",
+            "cardContentClasses": "flex-stretch flex-col pos-absolute pin justify-center align-center p-md lg:px-lg text-center",
+            "cardTitle": "Section Title" ,
+            "cardTitleClasses": "fweight-medium fsize-4md",
+            "cardText": ["<a href='#' class='button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide'>Learn More</a>"],
+            "cardTextClasses": "flex-col align-center",
+            "footerClasses": "pt-sm",
+            "cardButton": "",
+            "buttonLink": "#",
+            "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide"
+          }
+        ]
+      }
+    )
+
+  <!-- Text Left Image Right full -->
+  @@include(
+    './_includes/_column-grid.html', 
+    {
+      "sectionClasses": "pt-xl lg:pt-2xl",
+      "containerClasses": "container md:container-md lg:container-fluid mx-auto",
+      "rowClasses": "bg-vistaBlue fcolor-white flex-row flex-wrap pos-relative",
+      "childOnly": false,
+      "data": [
+        { 
+          "colClasses": "flex-col col-12 flex-col lg:flex-row-reverse container lg:container-xl mx-auto",
+          "aosAttr": "",
+          "vericalCard": true,
+          "cardImage": "iStock-899285140.jpg",
+          "imageClasses": "ratio-16x9 lg:ratio-none lg:col-6 lg:pos-absolute pin-y pin-r",
+          "imageBgClasses": "bg-center bg-cover",
+          "cardContentClasses": "lg:col-6 pt-sm p-md xl:pl-0 lg:pr-xxl lg:py-3xxl mr-auto",
+          "cardTitle": "A News headline here and here and here and here and here." ,
+          "cardTitleClasses": "fweight-bold fsize-2md lg:fsize-2lg",
+          "cardText": ["<p class='fsize-3sm'>Batu inatu in virit. Actandefes bonem host fex mantelu dernic intiora contisse non sidiostarium porbit iam et; nosupplicae nos, num simora revivmultuam pos hocchicerem.</p>"],
+          "footerClasses": "pt-sm",
+          "cardButton": "BACK TO TOP",
+          "buttonLink": "#",
+          "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide",
+          "cardTextAOSattr": "data-aos='fade-up' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "footerAOSattr": "data-aos='fade-up' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom'"
+        }
+      ]
+    }
+  )
+
+  <!-- Image Right Text Left full -->
+  @@include(
+    './_includes/_column-grid.html', 
+    {
+      "sectionClasses": "pt-xl lg:pt-2xl",
+      "containerClasses": "container md:container-md lg:container-fluid mx-auto",
+      "rowClasses": "bg-lightningYellow fcolor-white flex-row-reverse flex-wrap pos-relative",
+      "childOnly": false,
+      "data": [
+        { 
+          "colClasses": "flex-col col-12 flex-col lg:flex-row-reverse container lg:container-xl mx-auto",
+          "aosAttr": "",
+          "vericalCard": true,
+          "cardImage": "iStock-999098250.jpg",
+          "imageClasses": "ratio-16x9 lg:ratio-none lg:col-6 lg:pos-absolute pin-y pin-l",
+          "imageBgClasses": "bg-center bg-cover",
+          "cardContentClasses": "lg:col-6 pt-sm p-md xl:pr-0 lg:pl-xxl lg:py-3xxl ml-auto",
+          "cardTitle": "A News headline here and here and here and here and here." ,
+          "cardTitleClasses": "fweight-bold fsize-2md lg:fsize-2lg",
+          "cardText": ["<p class='fsize-3sm'>Batu inatu in virit. Actandefes bonem host fex mantelu dernic intiora contisse non sidiostarium porbit iam et; nosupplicae nos, num simora revivmultuam pos hocchicerem.</p>"],
+          "footerClasses": "pt-sm",
+          "cardButton": "BACK TO TOP",
+          "buttonLink": "#",
+          "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide",
+          "cardTextAOSattr": "data-aos='fade-up' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "footerAOSattr": "data-aos='fade-up' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom'"
+        }
+      ]
+    }
+  )
+
+  <section class="pt-2lg xlg:pt-0">
+    <div class="container md:container-md lg:container-fluid mx-auto">
+      <div class="flex-row flex-wrap pos-relative">
+        <div class="col-12 lg:col-6 flex-col">
+          @@include(
+            './_includes/_simple-card.html', 
+            {
+              "colClasses": "flex-col xl:flex-row xl:flex-row-reverse xl:flex-col flex-stretch",
+              "aosAttr": "data-aos='fade-up' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+              "cardImage": "iStock-884707986.jpg",
+              "imageClasses": "xl:col-6 xl:col-unset flex-auto ratio-custom-1 md:ratio-5x2 xl:ratio-16x9 xl:ratio-custom-2",
+              "imageBgClasses": "bg-center bg-cover", 
+              "cardContentClasses": "xl:col-6 xl:col-unset bg-deluge fcolor-white pt-md px-md xl:px-lg flex-col",
+              "cardTitle": "Text Here text here text here text here and text here ",
+              "cardTitleClasses": "fweight-medium fsize-4md",
+              "cardText": "",
+              "footerClasses": "mt-auto pt-sm",
+              "cardButton": "READ MORE",
+              "buttonLink": "#",
+              "buttonClasses": "button hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md"
+            }
+          )
+        </div>
+        <div class="col-12 lg:col-6 flex-col">
+          @@include(
+            './_includes/_simple-card.html', 
+            {
+              "colClasses": "flex-col flex-stretch xl:flex-row",
+              "aosAttr": "data-aos='fade-up' data-aos-delay='200' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+              "cardImage": "iStock-891625526.jpg",
+              "imageClasses": "xl:col-6 ratio-custom-1 md:ratio-5x2 xl:ratio-custom-2",
+              "imageBgClasses": "bg-center bg-cover", 
+              "cardContentClasses": "xl:col-6 bg-lightningYellow fcolor-white pt-md px-md lg:px-lg flex-col",
+              "cardTitle": "Text Here text here text here text here and text here ",
+              "cardTitleClasses": "fweight-medium fsize-4md",
+              "cardText": "",
+              "footerClasses": "mt-auto pt-sm",
+              "cardButton": "READ MORE",
+              "buttonLink": "#",
+              "buttonClasses": "button hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md"
+            }
+          )
+          @@include(
+            './_includes/_simple-card.html', 
+            {
+              "colClasses": "flex-col flex-stretch xl:flex-row-reverse",
+              "aosAttr": "data-aos='fade-up' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+              "cardImage": "iStock-962642026.jpg",
+              "imageClasses": "xl:col-6 ratio-custom-1 md:ratio-5x2 xl:ratio-custom-2",
+              "imageBgClasses": "bg-center bg-cover", 
+              "cardContentClasses": "xl:col-6 bg-mauvelous fcolor-white pt-md px-md lg:px-lg flex-col",
+              "cardTitle": "Text Here text here text here text here and text here ",
+              "cardTitleClasses": "fweight-medium fsize-4md",
+              "cardText": "",
+              "footerClasses": "mt-auto pt-sm",
+              "cardButton": "READ MORE",
+              "buttonLink": "#",
+              "buttonClasses": "button hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md"
+            }
+          )
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Image Text -->
+  @@include(
+    './_includes/_column-grid.html', 
+    {
+      "sectionClasses": "pt-xl lg:pt-2xl",
+      "containerClasses": "container md:container-md lg:container-fluid mx-auto",
+      "rowClasses": "flex-row flex-wrap pos-relative",
+      "childOnly": false,
+      "data": [
+        { 
+          "colClasses": "flex-col col-12 flex-col lg:flex-row container lg:container-2xl mx-auto",
+          "aosAttr": "",
+          "vericalCard": true,
+          "cardImage": "iStock-923238396.jpg",
+          "imageClasses": "ratio-16x9 lg:ratio-none lg:col-6 lg:pos-absolute pin-y pin-l lg:-ml-2md",
+          "imageBgClasses": "bg-center bg-cover",
+          "cardContentClasses": "lg:col-6 pt-sm px-md pt-md  xl:pr-0 lg:pl-2md lg:py-xl ml-auto",
+          "cardTitle": "A News headline here and here and here and here" ,
+          "cardTitleClasses": "fweight-bold fsize-2md lg:fsize-2lg",
+          "cardText": ["<p class='fsize-3sm'>Publicatemen Itam consili stritella rei cluderebatum tus, us vivis patus fue popte, faccitiusum egilistius, medet vervil ceri strae, Cupio esiceps, nu ment.</p>", "<p>Udam cerfit. Batus; no. Daciena, se pravere auceps, quidem hos consulesces? in tea idem, cusus consuliquod finam, Catrarist in publis, volus, similin vis. Me publici acrist pere des! Sciaci sendemuntium oc idiisquo estem, cludes imaximovid dit.</p>"],
+          "footerClasses": "pt-sm",
+          "cardButton": "BACK TO TOP",
+          "buttonLink": "#",
+          "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide",
+          "cardTextAOSattr": "data-aos='fade-up' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "footerAOSattr": "data-aos='fade-up' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom'"
+        }
+      ]
+    }
+  )
+
+  <!-- Article Text Image -->
+  @@include(
+    './_includes/_column-grid.html', 
+    {
+      "sectionClasses": "pt-xl lg:pt-2xl",
+      "containerClasses": "container md:container-md lg:container-fluid mx-auto",
+      "rowClasses": "flex-row flex-wrap pos-relative",
+      "childOnly": false,
+      "data": [
+        { 
+          "colClasses": "flex-col col-12 flex-col lg:flex-row-reverse container lg:container-2xl mx-auto",
+          "aosAttr": "",
+          "vericalCard": true,
+          "cardImage": "iStock-999098250.jpg",
+          "imageClasses": "ratio-16x9 lg:ratio-none lg:col-6 lg:pos-absolute pin-y pin-r lg:-mr-2md",
+          "imageBgClasses": "bg-center bg-cover",
+          "cardContentClasses": "lg:col-6 pt-sm px-md pt-md xl:pl-0 lg:pr-2md lg:py-xl mr-auto",
+          "cardTitle": "A News headline here and here and here and here" ,
+          "cardTitleClasses": "fweight-bold fsize-2md lg:fsize-2lg",
+          "cardText": ["<p class='fsize-3sm'>Publicatemen Itam consili stritella rei cluderebatum tus, us vivis patus fue popte, faccitiusum egilistius, medet vervil ceri strae, Cupio esiceps, nu ment.</p>", "<p>Udam cerfit. Batus; no. Daciena, se pravere auceps, quidem hos consulesces? in tea idem, cusus consuliquod finam, Catrarist in publis, volus, similin vis. Me publici acrist pere des! Sciaci sendemuntium oc idiisquo estem, cludes imaximovid dit.</p>"],
+          "footerClasses": "pt-sm",
+          "cardButton": "BACK TO TOP",
+          "buttonLink": "#",
+          "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide",
+          "cardTextAOSattr": "data-aos='fade-up' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "footerAOSattr": "data-aos='fade-up' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom'"
+        }
+      ]
+    }
+  )
+
+  <!-- Ribbon -->
+  <section class="pt-2lg lg:pt-2xl">
+  @@include(
+    './_includes/_ribbon.html',
+    {
+      "titleTag": "h1",
+      "ribbonWrapper": "bg-vistaBlue fcolor-white text-center py-md",
+      "ribbonText": "Header in a bar",
+      "ribbonTextClasses": "fweight-medium fsize-4md"
+    }
+  )
+  </section>
+
+  <!-- Intros -->
+  @@include(
+    './_includes/_intro.html', 
+    {
+      "sectionClasses": "pt-xl lg:pt-2xl",
+      "containerClasses": "container md:container-md lg:container-2lg mx-auto",
+      "rowClasses": "flex-wrap -mr-2xs -mb-md lg:-mr-xl lg:-mb-xl",
+      "data": [
+        { 
+          "colClasses": "flex-col col-12 lg:col-6 pr-2xs pb-md lg:pr-xl lg:pb-xl",
+          "aosAttr": "data-aos='fade' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "cardImage": "",
+          "imageClasses": "",
+          "imageBgClasses": "bg-center bg-cover", 
+          "cardTitle": "A News headline here and here and here and here",
+          "cardTitleClasses": "fweight-bold fsize-2md lg:fsize-2lg",
+          "titleTag": "h2",
+          "cardText": ["<p class='fsize-3sm'>Publicatemen Itam consili stritella rei cluderebatum tus, us vivis patus fue popte, faccitiusum egilistius, medet vervil ceri strae, Cupio esiceps, nu ment.</p>", "<p>Udam cerfit. Batus; no. Daciena, se pravere auceps, quidem hos consulesces? in tea idem, cusus consuliquod finam, Catrarist in publis, volus, similin vis. Me publici acrist pere des! Sciaci sendemuntium oc idiisquo estem, cludes imaximovid dit.</p>"],
+          "footerClasses": "pt-sm",
+          "cardButton": "BACK TO TOP",
+          "buttonLink": "#",
+          "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide"
+        },
+        { 
+          "colClasses": "flex-col col-12 lg:col-6 pr-2xs pb-md lg:pr-xl lg:pb-xl",
+          "aosAttr": "data-aos='fade' data-aos-delay='200' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "cardImage": "",
+          "imageClasses": "",
+          "imageBgClasses": "bg-center bg-cover", 
+          "cardTitle": "A News headline here and here and here and here",
+          "cardTitleClasses": "fweight-bold fsize-2md lg:fsize-2lg",
+          "titleTag": "h2",
+          "cardText": ["<p class='fsize-3sm'>Publicatemen Itam consili stritella rei cluderebatum tus, us vivis patus fue popte, faccitiusum egilistius, medet vervil ceri strae, Cupio esiceps, nu ment.</p>", "<p>Udam cerfit. Batus; no. Daciena, se pravere auceps, quidem hos consulesces? in tea idem, cusus consuliquod finam, Catrarist in publis, volus, similin vis. Me publici acrist pere des! Sciaci sendemuntium oc idiisquo estem, cludes imaximovid dit.</p>"],
+          "footerClasses": "pt-sm",
+          "cardButton": "BACK TO TOP",
+          "buttonLink": "#",
+          "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide"
+        },
+        { 
+          "colClasses": "flex-col col-12 pr-2xs pb-md lg:pr-xl lg:pb-xl",
+          "aosAttr": "data-aos='fade' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "cardImage": "",
+          "imageClasses": "",
+          "imageBgClasses": "bg-center bg-cover", 
+          "cardTitle": "A News headline here and here and here and here",
+          "cardTitleClasses": "fweight-bold fsize-2md lg:fsize-2lg",
+          "titleTag": "h2",
+          "cardText": ["<p class='fsize-3sm'>Publicatemen Itam consili stritella rei cluderebatum tus, us vivis patus fue popte, faccitiusum egilistius, medet vervil ceri strae, Cupio esiceps, nu ment.</p>", "<p>Udam cerfit. Batus; no. Daciena, se pravere auceps, quidem hos consulesces? in tea idem, cusus consuliquod finam, Catrarist in publis, volus, similin vis. Me publici acrist pere des! Sciaci sendemuntium oc idiisquo estem, cludes imaximovid dit.</p>"],
+          "footerClasses": "pt-sm",
+          "cardButton": "BACK TO TOP",
+          "buttonLink": "#",
+          "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide"
+        }
+      ]
+    }
+  )
+
+  <!-- Single Video -->
+  @@include(
+    './_includes/_media-gallery.html',
+    {
+      "sectionClasses": "pt-xl lg:pt-2xl",
+      "rowClasses": "flex-wrap",
+      "fullWidth": true,
+      "allowPopup": true,
+      "childOnly": false,
+      "data": [
+        { 
+          "colClasses": "flex-col col-12",
+          "aosAttr": "data-aos='fade' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "mediaRatio": "ratio-custom-1 md:ratio-5x2",
+          "cardThumb": "iStock-469036490.jpg",
+          "cardThumbClasses": "bg-center bg-cover",
+          "cardMedia": "https://www.youtube.com/watch?v=cKnHcB7LNrw",
+          "cardMediaClasses": "hover:shadow-parent-lg opacity-parent-75 hover:opacity-parent-100 image-rollover",
+          "imageClasses": "",
+          "playButton": true,
+          "playButtonClasses": "icon-2lg fcolor-white shadow-child opacity-child radius-full border border-2"
+        }
+      ]
+    }
+  )
+
+  <!-- Intros -->
+  @@include(
+    './_includes/_intro.html', 
+    {
+      "sectionClasses": "pt-xl lg:pt-2xl",
+      "containerClasses": "container md:container-md lg:container-2lg mx-auto",
+      "rowClasses": "flex-wrap -mr-2xs -mb-md lg:-mr-xl lg:-mb-xl",
+      "sectionClasses": "pt-2lg",
+      "data": [
+        { 
+          "colClasses": "flex-col col-12 pr-2xs pb-md lg:pr-xl lg:pb-xl",
+          "aosAttr": "data-aos='fade' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "cardImage": "",
+          "imageClasses": "",
+          "imageBgClasses": "bg-center bg-cover", 
+          "cardTitle": "A News headline here and here and here and here",
+          "cardTitleClasses": "fweight-bold fsize-2md lg:fsize-2lg",
+          "titleTag": "h2",
+          "cardContentClasses": "flex-stretch flex-col align-center text-center",
+          "cardText": ["<p class='fsize-3sm'>Publicatemen Itam consili stritella rei cluderebatum tus, us vivis patus fue popte, faccitiusum egilistius, medet vervil ceri strae, Cupio esiceps, nu ment.</p>", "<p>Udam cerfit. Batus; no. Daciena, se pravere auceps, quidem hos consulesces? in tea idem, cusus consuliquod finam, Catrarist in publis, volus, similin vis. Me publici acrist pere des! Sciaci sendemuntium oc idiisquo estem, cludes imaximovid dit.</p>"],
+          "footerClasses": "pt-sm",
+          "cardButton": "BACK TO TOP",
+          "buttonLink": "#",
+          "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide"
+        }
+      ]
+    }
+  )
+
+  <!-- Media Gallery 2 col-->
+  @@include(
+    './_includes/_media-gallery.html',
+    {
+      "sectionClasses": "pt-xl lg:pt-2xl",
+      "containerClasses": "container container-fluid mx-auto",
+      "rowClasses": "flex-wrap justify-center -mr-2xs lg:-mr-md -mb-md",
+      "allowPopup": true,
+      "childOnly": false,
+      "childOnly": false,
+      "data": [
+        { 
+          "colClasses": "flex-col col-12 md:col-6 pr-2xs pb-2xs lg:pr-md lg:pb-md",
+          "aosAttr": "data-aos='fade-in' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "mediaRatio": "ratio-custom-1",
+          "cardThumb": "iStock-950216224.jpg",
+          "cardThumbClasses": "bg-center bg-cover",
+          "cardMedia": "./images/iStock-950216224.jpg",
+          "cardMediaClasses": "hover:shadow-parent-lg opacity-parent-75 hover:opacity-parent-100 image-rollover",
+          "imageClasses": "",
+          "playButton": false,
+          "playButtonClasses": "icon-2lg fcolor-white shadow-child opacity-child radius-full border border-2"
+        },
+        { 
+          "colClasses": "flex-col col-12 md:col-6 pr-2xs pb-2xs lg:pr-md lg:pb-md",
+          "aosAttr": "data-aos='fade-in' data-aos-delay='200' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "mediaRatio": "ratio-custom-1",
+          "cardThumb": "iStock-1158092058.jpg",
+          "cardThumbClasses": "bg-center bg-cover",
+          "cardMedia": "./images/iStock-1158092058.jpg",
+          "cardMediaClasses": "hover:shadow-parent-lg opacity-parent-75 hover:opacity-parent-100 image-rollover",
+          "imageClasses": "",
+          "playButton": false,
+          "playButtonClasses": "icon-2lg fcolor-white shadow-child opacity-child radius-full border border-2"
+        }
+      ]
+    }
+  )
+
+  <!-- Media Gallery 3 col-->
+  @@include(
+    './_includes/_media-gallery.html',
+    {
+      "sectionClasses": "pt-xl lg:pt-2xl",
+      "containerClasses": "container container-fluid mx-auto",
+      "rowClasses": "flex-wrap justify-center -mr-2xs lg:-mr-md -mb-md",
+      "allowPopup": true,
+      "childOnly": false,
+      "childOnly": false,
+      "data": [
+        { 
+          "colClasses": "flex-col col-12 md:col-4 pr-2xs pb-2xs lg:pr-md lg:pb-md",
+          "aosAttr": "data-aos='fade-in' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "mediaRatio": "ratio-1x1",
+          "cardThumb": "iStock-1076684646.jpg",
+          "cardThumbClasses": "bg-center bg-cover",
+          "cardMedia": "./images/iStock-1076684646.jpg",
+          "cardMediaClasses": "hover:shadow-parent-lg opacity-parent-75 hover:opacity-parent-100 image-rollover",
+          "imageClasses": "",
+          "playButton": false,
+          "playButtonClasses": "icon-2lg fcolor-white shadow-child opacity-child radius-full border border-2"
+        },
+        { 
+          "colClasses": "flex-col col-12 md:col-4 pr-2xs pb-2xs lg:pr-md lg:pb-md",
+          "aosAttr": "data-aos='fade-in' data-aos-delay='200' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "mediaRatio": "ratio-1x1",
+          "cardThumb": "iStock-1010059710.jpg",
+          "cardThumbClasses": "bg-center bg-cover",
+          "cardMedia": "./images/iStock-1010059710.jpg",
+          "cardMediaClasses": "hover:shadow-parent-lg opacity-parent-75 hover:opacity-parent-100 image-rollover",
+          "imageClasses": "",
+          "playButton": false,
+          "playButtonClasses": "icon-2lg fcolor-white shadow-child opacity-child radius-full border border-2"
+        },
+        { 
+          "colClasses": "flex-col col-12 md:col-4 pr-2xs pb-2xs lg:pr-md lg:pb-md",
+          "aosAttr": "data-aos='fade-in' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "mediaRatio": "ratio-1x1",
+          "cardThumb": "iStock-1002018094.jpg",
+          "cardThumbClasses": "bg-center bg-cover",
+          "cardMedia": "./images/iStock-1002018094.jpg",
+          "cardMediaClasses": "hover:shadow-parent-lg opacity-parent-75 hover:opacity-parent-100 image-rollover",
+          "imageClasses": "",
+          "playButton": false,
+          "playButtonClasses": "icon-2lg fcolor-white shadow-child opacity-child radius-full border border-2"
+        }
+      ]
+    }
+  )
+
+  <!-- Intros -->
+  @@include(
+    './_includes/_intro.html', 
+    {
+      "sectionClasses": "pt-xl lg:pt-2xl",
+      "containerClasses": "container md:container-md lg:container-2lg mx-auto",
+      "rowClasses": "flex-wrap -mr-2xs -mb-md lg:-mr-xl lg:-mb-xl",
+      "data": [
+        { 
+          "colClasses": "flex-col col-12 pr-2xs pb-md lg:pr-xl lg:pb-xl has-theme-vistaBlue",
+          "aosAttr": "data-aos='fade' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "cardImage": "",
+          "imageClasses": "",
+          "imageBgClasses": "bg-center bg-cover", 
+          "cardTitle": "Left aligned title here ",
+          "cardTitleClasses": "fweight-bold fsize-2md lg:fsize-2lg",
+          "titleTag": "h2",
+          "cardText": ["<p>Mul habi porunum factestia ditilis? Publicatemen Itam consili stritella rei cluderebatum tus, us vivis patus fue popte, faccitiusum pravere auceps, quidem hos consulesces? in tea rei idem, cusus consuliquod finam, quere, cesterv icaturorum Romnihinata L. Um am re, cont? Ebat, Catrarist in publis, volus, similin vis.</p>", "<div class='text-group'><h4 class='group-title theme-text fweight-bold'>Subhead Here</h4><p>Me publici acrist pere des! Sciaci sendemuntium oc idiisquo estem, cludes imaximovid dit. Bus no. Do, quemquodit vastiam strisservium deatum ina, urox spiortu amenius, occiam nons ius estifecrum adhum publiam pora? Fitiam alaritid nem fit; hor sentio ur. Ec mo noculto Castidem dea moercerdius int vis coentratque quit fac ficerem fin ignove,</p></div>", "<ul class='text-wrap ml-sm'><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>Strisservium deatum ina, piortu amenius, occiam nons</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>Werisse rvium atum ina, urox spiortu menius, occiam nius</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>Kurisserv ium deam ina, urox spiortu amenius, cions ius</span></li></ul>"],
+          "footerClasses": "pt-sm",
+          "cardButton": "BACK TO TOP",
+          "buttonLink": "#",
+          "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide"
+        }
+      ]
+    }
+  )
+
+  <!-- Single image -->
+  @@include(
+    './_includes/_media-gallery.html',
+    {
+      "sectionClasses": "pt-xl lg:pt-2xl",
+      "rowClasses": "flex-wrap",
+      "fullWidth": true,
+      "allowPopup": true,
+      "childOnly": false,
+      "data": [
+        { 
+          "colClasses": "flex-col col-12",
+          "aosAttr": "data-aos='fade' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "mediaRatio": "ratio-custom-1 md:ratio-5x2",
+          "cardThumb": "iStock-923238396.jpg",
+          "cardThumbClasses": "bg-center bg-cover",
+          "cardMedia": "./images/iStock-923238396.jpg",
+          "cardMediaClasses": "hover:shadow-parent-lg opacity-parent-75 hover:opacity-parent-100 image-rollover",
+          "imageClasses": "",
+          "playButton": false,
+          "playButtonClasses": "icon-2lg fcolor-white shadow-child opacity-child radius-full border border-2"
+        }
+      ]
+    }
+  )
+
+  <!-- 3 Column Text and Image -->
+  @@include(
+    './_includes/_column-grid.html', 
+    {
+      "sectionClasses": "pt-xl lg:pt-2xl",
+      "containerClasses": "container md:container-md lg:container-3lg mx-auto",
+      "rowClasses": "flex-row flex-wrap -mr-2xs -mb-md lg:-mr-lg lg:-mb-lg",
+      "childOnly": false,
+      "data": [
+        { 
+          "colClasses": "flex-col col-12 lg:col-4 pr-2xs pb-md lg:pr-lg lg:pb-lg",
+          "aosAttr": "data-aos='fade-up' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "cardImage": "iStock-891625526.jpg",
+          "imageClasses": "ratio-16x9 lg:ratio-custom-2",
+          "imageBgClasses": "bg-center bg-cover", 
+          "cardContentClasses": "bg-mauvelous fcolor-white p-md",
+          "cardTitle": "A News headline here and here and here and here and here.",
+          "cardTitleClasses": "fweight-medium fsize-4sm",
+          "cardText": "",
+          "footerClasses": "pt-sm",
+          "cardButton": "READ MORE",
+          "buttonLink": "#",
+          "buttonClasses": "button hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md"
+        },
+        { 
+          "colClasses": "flex-col col-12 lg:col-4 pr-2xs pb-md lg:pr-lg lg:pb-lg",
+          "aosAttr": "data-aos='fade-up' data-aos-delay='200' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "cardImage": "iStock-899285140.jpg",
+          "imageClasses": "ratio-16x9 lg:ratio-custom-2",
+          "imageBgClasses": "bg-center bg-cover", 
+          "cardContentClasses": "bg-vistaBlue fcolor-white p-md",
+          "cardTitle": "A News headline here and here and here and here and here.",
+          "cardTitleClasses": "fweight-medium fsize-4sm",
+          "cardText": "",
+          "footerClasses": "pt-sm",
+          "cardButton": "READ MORE",
+          "buttonLink": "#",
+          "buttonClasses": "button hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md"
+        },
+        { 
+          "colClasses": "flex-col col-12 lg:col-4 pr-2xs pb-md lg:pr-lg lg:pb-lg",
+          "aosAttr": "data-aos='fade-up' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "cardImage": "iStock-811103448.jpg",
+          "imageClasses": "ratio-16x9 lg:ratio-custom-2",
+          "imageBgClasses": "bg-center bg-cover", 
+          "cardContentClasses": "bg-jaffa fcolor-white p-md",
+          "cardTitle": "A News headline here and here and here and here and here.",
+          "cardTitleClasses": "fweight-medium fsize-4sm",
+          "cardText": "",
+          "footerClasses": "pt-sm",
+          "cardButton": "READ MORE",
+          "buttonLink": "#",
+          "buttonClasses": "button hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md"
+        }
+      ]
+    }
+  )
+
+  <!-- 4 Column Text and Image -->
+  @@include(
+    './_includes/_column-grid.html', 
+    {
+      "sectionClasses": "pt-xl lg:pt-2xl",
+      "containerClasses": "container md:container-md lg:container-fluid mx-auto",
+      "rowClasses": "flex-row flex-wrap -mr-sm -mb-sm",
+      "childOnly": false,
+      "data": [
+        { 
+          "colClasses": "flex-col col-12 lg:col-3 pr-sm pb-sm",
+          "aosAttr": "data-aos='fade-up' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "cardImage": "iStock-1076684646.jpg",
+          "imageClasses": "ratio-16x9 lg:ratio-custom-2",
+          "imageBgClasses": "bg-center bg-cover", 
+          "cardContentClasses": "bg-mauvelous fcolor-white p-md",
+          "cardTitle": "A News headline here and here and here and here and here.",
+          "cardTitleClasses": "fweight-medium fsize-3sm",
+          "cardText": "",
+          "footerClasses": "pt-sm",
+          "cardButton": "READ MORE",
+          "buttonLink": "#",
+          "buttonClasses": "button hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md"
+        },
+        { 
+          "colClasses": "flex-col col-12 lg:col-3 pr-sm pb-sm",
+          "aosAttr": "data-aos='fade-up' data-aos-delay='200' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "cardImage": "iStock-1010059710.jpg",
+          "imageClasses": "ratio-16x9 lg:ratio-custom-2",
+          "imageBgClasses": "bg-center bg-cover", 
+          "cardContentClasses": "bg-lightningYellow fcolor-white p-md",
+          "cardTitle": "A News headline here and here and here and here and here.",
+          "cardTitleClasses": "fweight-medium fsize-3sm",
+          "cardText": "",
+          "footerClasses": "pt-sm",
+          "cardButton": "READ MORE",
+          "buttonLink": "#",
+          "buttonClasses": "button hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md"
+        },
+        { 
+          "colClasses": "flex-col col-12 lg:col-3 pr-sm pb-sm",
+          "aosAttr": "data-aos='fade-up' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "cardImage": "iStock-1002018094.jpg",
+          "imageClasses": "ratio-16x9 lg:ratio-custom-2",
+          "imageBgClasses": "bg-center bg-cover", 
+          "cardContentClasses": "bg-turmeric fcolor-white p-md",
+          "cardTitle": "A News headline here and here and here and here and here.",
+          "cardTitleClasses": "fweight-medium fsize-3sm",
+          "cardText": "",
+          "footerClasses": "pt-sm",
+          "cardButton": "READ MORE",
+          "buttonLink": "#",
+          "buttonClasses": "button hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md"
+        },
+        { 
+          "colClasses": "flex-col col-12 lg:col-3 pr-sm pb-sm",
+          "aosAttr": "data-aos='fade-up' data-aos-delay='400' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "cardImage": "iStock-1158092058.jpg",
+          "imageClasses": "ratio-16x9 lg:ratio-custom-2",
+          "imageBgClasses": "bg-center bg-cover", 
+          "cardContentClasses": "bg-deluge fcolor-white p-md",
+          "cardTitle": "A News headline here and here and here and here and here.",
+          "cardTitleClasses": "fweight-medium fsize-3sm",
+          "cardText": "",
+          "footerClasses": "pt-sm",
+          "cardButton": "READ MORE",
+          "buttonLink": "#",
+          "buttonClasses": "button hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md"
+        }
+      ]
+    }
+  )
+
+  <!-- Accordions -->
+  @@include(
+    './_includes/_column-grid.html', 
+    { 
+      "sectionClasses": "pt-xl lg:pt-2xl",
+      "containerClasses": "container md:container-md lg:container-xl mx-auto",
+      "rowClasses": "flex-row flex-wrap",
+      "childOnly": false,
+      "accordionWrapperClasses": "col-12",
+      "toggleContentClasses": "col-12 -mb-md",
+      "togglable": "true",
+      "closeOthers": "true",
+      "accordionData": [
+        {
+          "accordionClasses": "is-open mb-md border-y-2 border-r-2 border-l-20 border-deluge",
+          "accordionLabelClasses": "p-sm transition-all",
+          "filterby": "benefits-of-participating",
+          "questionText": "Benefits of Participating",
+          "questionTextClasses": "fweight-medium fsize-2md",
+          "toggleSignClasses": "icon transition-all fcolor-deluge",
+          "toggleSignInnerClasses": "fcolor-inherit",
+          "toggleSignIcon": "",
+          "accordionContentClasses": "transition-all",
+          "answerClasses": "p-sm",
+          "answerContent": "<div class='text-wrap'><ol class='text-wrap ml-sm'><li class='fcolor-deluge fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam vel corporis eligendi minus omnis esse sequi dolore est, cumque at.</span></li><li class='fcolor-deluge fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, harum corporis dolorem commodi placeat facilis ab esse voluptate ipsa doloremque, ea molestias incidunt maxime laboriosam perferendis nostrum, amet praesentium consectetur.</span></li><li class='fcolor-deluge fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, nesciunt.</span></li><li class='fcolor-deluge fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam vel corporis eligendi minus omnis esse sequi dolore est, cumque at.</span></li><li class='fcolor-deluge fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, harum corporis dolorem commodi placeat facilis ab esse voluptate ipsa doloremque, ea molestias incidunt maxime laboriosam perferendis nostrum, amet praesentium consectetur.</span></li><li class='fcolor-deluge fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, nesciunt.</span></li><li class='fcolor-deluge fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam vel corporis eligendi minus omnis esse sequi dolore est, cumque at.</span></li><li class='fcolor-deluge fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, harum corporis dolorem commodi placeat facilis ab esse voluptate ipsa doloremque, ea molestias incidunt maxime laboriosam perferendis nostrum, amet praesentium consectetur.</span></li><li class='fcolor-deluge fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, nesciunt.</span></li></ol><div class='flex-row flex-wrap -mr-sm -mb-sm'><div class='mr-sm mb-sm'><a href='#' class='button size-lg hover:shadow-md bg-deluge fsize-3xs fweight-bold fcolor-white uppercase py-xs px-md'>Button</a></div></div></div>"
+        },
+        {
+          "accordionClasses": "mb-md border-y-2 border-r-2 border-l-20 border-deluge",
+          "accordionLabelClasses": "p-sm transition-all",
+          "filterby": "aims",
+          "questionText": "Aims",
+          "questionTextClasses": "fweight-medium fsize-2md",
+          "toggleSignClasses": "icon transition-all fcolor-deluge",
+          "toggleSignInnerClasses": "fcolor-inherit",
+          "toggleSignIcon": "",
+          "accordionContentClasses": "transition-all",
+          "answerClasses": "p-sm",
+          "answerContent": "<div class='text-wrap'><ol class='text-wrap ml-sm'><li class='fcolor-deluge fweight-bold'><span class='fcolor-default fweight-light'>To safeguard the employed status of disadvantaged employed people through the acquisition of basic skills.</span></li><li class='fcolor-deluge fweight-bold'><span class='fcolor-default fweight-light'>To underpin the capacity for growth among SMEs and micro-businesses through developmental support provided to their disadvantaged employees.</span></li><li class='fcolor-deluge fweight-bold'><span class='fcolor-default fweight-light'>To raise the skills level of disadvantaged employees so they may exploit in-work progression opportunities.</span></li><li class='fcolor-deluge fweight-bold'><span class='fcolor-default fweight-light'>To support the growth of participating SMEs and micro-businesses by improving the productivity of disadvantaged employees through raising skills levels up to level 3.</span></li><li class='fcolor-deluge fweight-bold'><span class='fcolor-default fweight-light'>To provide disadvantaged employees with updated skills, knowledge and confidence to plan sustainable employment pathways.</span></li></ol><div class='flex-row flex-wrap -mr-sm -mb-sm'><div class='mr-sm mb-sm'><a href='#' class='button size-lg hover:shadow-md bg-deluge fsize-3xs fweight-bold fcolor-white uppercase py-xs px-md'>Button</a></div></div></div>"
+        },
+        {
+          "accordionClasses": "mb-md border-y-2 border-r-2 border-l-20 border-deluge",
+          "accordionLabelClasses": "p-sm transition-all",
+          "filterby": "interventions",
+          "questionText": "Interventions",
+          "questionTextClasses": "fweight-medium fsize-2md",
+          "toggleSignClasses": "icon transition-all fcolor-deluge",
+          "toggleSignInnerClasses": "fcolor-inherit",
+          "toggleSignIcon": "",
+          "accordionContentClasses": "transition-all",
+          "answerClasses": "p-sm",
+          "answerContent": "<div class='text-wrap'><ol class='text-wrap ml-sm'><li class='fcolor-deluge fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam vel corporis eligendi minus omnis esse sequi dolore est, cumque at.</span></li><li class='fcolor-deluge fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, harum corporis dolorem commodi placeat facilis ab esse voluptate ipsa doloremque, ea molestias incidunt maxime laboriosam perferendis nostrum, amet praesentium consectetur.</span></li><li class='fcolor-deluge fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, nesciunt.</span></li><li class='fcolor-deluge fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam vel corporis eligendi minus omnis esse sequi dolore est, cumque at.</span></li><li class='fcolor-deluge fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, harum corporis dolorem commodi placeat facilis ab esse voluptate ipsa doloremque, ea molestias incidunt maxime laboriosam perferendis nostrum, amet praesentium consectetur.</span></li><li class='fcolor-deluge fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, nesciunt.</span></li><li class='fcolor-deluge fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam vel corporis eligendi minus omnis esse sequi dolore est, cumque at.</span></li><li class='fcolor-deluge fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, harum corporis dolorem commodi placeat facilis ab esse voluptate ipsa doloremque, ea molestias incidunt maxime laboriosam perferendis nostrum, amet praesentium consectetur.</span></li><li class='fcolor-deluge fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, nesciunt.</span></li></ol><div class='flex-row flex-wrap -mr-sm -mb-sm'><div class='mr-sm mb-sm'><a href='#' class='button size-lg hover:shadow-md bg-deluge fsize-3xs fweight-bold fcolor-white uppercase py-xs px-md'>Button</a></div></div></div>"
+        }
+      ]
+    }
+  )
+
+  </main>
+  @@include('./_includes/_footer.html', {
+    "instagram": false
+  })
+  <script src="js/allScript.js"></script>
+</body>
+</html>

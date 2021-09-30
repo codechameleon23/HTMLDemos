@@ -1,0 +1,127 @@
+@mixin getGapsClasses($bp) {
+  /*paddings*/
+  @each $pad in $paddings {
+    .#{$bp}p {
+      &-#{nth($pad, 1)} {
+        padding-top: nth($pad, 2);
+        padding-right: nth($pad, 2);
+        padding-bottom: nth($pad, 2);
+        padding-left: nth($pad, 2);
+      }
+      &x-#{nth($pad, 1)} {
+        padding-left: nth($pad, 2);
+        padding-right: nth($pad, 2);
+      }
+      &y-#{nth($pad, 1)} {
+        padding-top: nth($pad, 2);
+        padding-bottom: nth($pad, 2);
+      }
+      &t-#{nth($pad, 1)} {
+        padding-top: nth($pad, 2);
+      }
+      &r-#{nth($pad, 1)} {
+        padding-right: nth($pad, 2);
+      }
+      &b-#{nth($pad, 1)} {
+        padding-bottom: nth($pad, 2);
+      }
+      &l-#{nth($pad, 1)} {
+        padding-left: nth($pad, 2);
+      }
+    }
+  }
+
+  /*margins*/
+  @each $mar in $margins {
+    .#{$bp}m {
+      &-#{nth($mar, 1)} {
+        margin-top: nth($mar, 2);
+        margin-right: nth($mar, 2);
+        margin-bottom: nth($mar, 2);
+        margin-left: nth($mar, 2);
+      }
+      &x-#{nth($mar, 1)} {
+        margin-left: nth($mar, 2);
+        margin-right: nth($mar, 2);
+      }
+      &y-#{nth($mar, 1)} {
+        margin-top: nth($mar, 2);
+        margin-bottom: nth($mar, 2);
+      }
+      &t-#{nth($mar, 1)} {
+        margin-top: nth($mar, 2);
+      }
+      &r-#{nth($mar, 1)} {
+        margin-right: nth($mar, 2);
+      }
+      &b-#{nth($mar, 1)} {
+        margin-bottom: nth($mar, 2);
+      }
+      &l-#{nth($mar, 1)} {
+        margin-left: nth($mar, 2);
+      }
+    }
+  }
+
+  /*-ve margins*/
+  @each $mar in $negativeMargin {
+    .#{$bp}-m {
+      &-#{nth($mar, 1)} {
+        margin-top: nth($mar, 2) * -1;
+        margin-right: nth($mar, 2) * -1;
+        margin-bottom: nth($mar, 2) * -1;
+        margin-left: nth($mar, 2) * -1;
+      }
+      &x-#{nth($mar, 1)} {
+        margin-left: nth($mar, 2) * -1;
+        margin-right: nth($mar, 2) * -1;
+      }
+      &y-#{nth($mar, 1)} {
+        margin-top: nth($mar, 2) * -1;
+        margin-bottom: nth($mar, 2) * -1;
+      }
+      &t-#{nth($mar, 1)} {
+        margin-top: nth($mar, 2) * -1;
+      }
+      &r-#{nth($mar, 1)} {
+        margin-right: nth($mar, 2) * -1;
+      }
+      &b-#{nth($mar, 1)} {
+        margin-bottom: nth($mar, 2) * -1;
+      }
+      &l-#{nth($mar, 1)} {
+        margin-left: nth($mar, 2) * -1;
+      }
+    }
+  }
+
+  /*margins auto*/
+  .#{$bp}m {
+    &-auto {
+      margin: auto;
+    }
+    &x-auto {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &y-auto {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+    &t-auto {
+      margin-top: auto;
+    }
+    &r-auto {
+      margin-right: auto;
+    }
+    &b-auto {
+      margin-bottom: auto;
+    }
+    &l-auto {
+      margin-left: auto;
+    }
+
+  }
+
+
+}

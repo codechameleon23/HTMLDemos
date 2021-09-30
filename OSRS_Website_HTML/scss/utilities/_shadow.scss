@@ -1,0 +1,11 @@
+@mixin getShadowsClasses($bp) {
+  @each $shd in $shadows {
+    @each $state in $states {
+    .#{$bp}#{nth($state, 1)}shadow {
+        &-#{nth($shd, 1)}#{nth($state, 2)} {
+          box-shadow: nth($shd, 2);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,160 @@
+<form>
+   <div class="-m-sm flex-row flex-wrap">
+      <div class="p-sm col-12 lg:col-6 flex-col">
+         <div class="-m-xs flex-col flex-stretch">
+            <div class="p-xs">
+               <h4 class="font-weight-bold font-color-pink mb-xs">Start date</h4>
+               <div class="-m-xs flex-col">
+                  <div class="p-xs">
+                     <input type="text" required placeholder="Select a date" class="datepicker px-2xs py-xs flex-stretch focus:shadow-lg transition-all bg-white border border-pink w-full">
+                  </div>
+               </div>
+            </div>
+            <div class="mx-xs my-sm border-b border-pink border-dashed"></div>
+            <div class="p-xs">
+               <h4 class="font-weight-bold font-color-pink mb-xs">Deposit</h4>
+               <div class="-m-xs flex-col">
+                  <div class="p-xs">
+                     <div class="range-group -m-xs flex-row align-end">
+                        <div class="p-xs flex-stretch">
+                           <div class="-m-xs lg:-m-sm flex-row align-end">
+                              <div class="p-xs lg:p-sm flex-none">
+                                 <a href="javascript:void(0);" data-control="decrement" class="range-control icon icon-xs font-color-pink">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                                 </a>
+                              </div>
+                              <div class="p-xs lg:p-sm flex-auto">
+                                 <input type="text" class="js-range-slider" name="my_range" value="250"
+                                    data-hide-min-max="true"
+                                    data-hide-from-to="true"
+                                    data-min="0"
+                                    data-max="1000"
+                                    data-prefix="£"
+                                    data-step="10"
+                                 />
+                              </div>
+                              <div class="p-xs lg:p-sm flex-none">
+                                 <a href="javascript:void(0);" data-control="increment" class="range-control icon icon-xs font-color-pink">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="py-xs px-xs lg:pl-sm lg:pr-xs flex-none">
+                           <div class="small-input font-size-xs lg:font-size-sm flex-row align-center border focus-within:shadow-lg transition-all ">
+                              <b class="px-xxs">£</b> <input type="text" value="250" class="output flex-stretch bg-white py-xs w-full">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="p-xs">
+               <h4 class="font-weight-bold font-color-pink mb-xs">Duration</h4>
+               <div class="-m-xs flex-col">
+                  <div class="p-xs">
+                     <div class="range-group -m-xs flex-row align-end">
+                        <div class="p-xs flex-stretch">
+                           <div class="-m-xs lg:-m-sm flex-row align-end">
+                              <div class="p-xs lg:p-sm flex-none">
+                                 <a href="javascript:void(0);" data-control="decrement" class="range-control icon icon-xs font-color-pink">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="115 -114 357 357"><path fill="currentColor" d="M323 39H115v51h357V39z"/></svg>
+                                 </a>
+                              </div>
+                              <div class="p-xs lg:p-sm flex-auto">
+                                 <input type="text" class="js-range-slider" name="my_range" value=""
+                                    data-hide-min-max="true"
+                                    data-hide-from-to="true"
+                                    data-min="0"
+                                    data-max="1000"
+                                    data-step="1"
+                                 />
+                              </div>
+                              <div class="p-xs lg:p-sm flex-none">
+                                 <a href="javascript:void(0);" data-control="increment" class="range-control icon icon-xs font-color-pink">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="py-xs px-xs lg:pl-sm lg:pr-xs flex-none">
+                           <div class="small-input font-size-xs lg:font-size-sm flex-row align-center border focus-within:shadow-lg transition-all ">
+                              <input type="text" class="output flex-stretch bg-white pl-2xs py-xs w-full">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="p-xs">
+               <h4 class="font-weight-bold font-color-cyan">Total weekly cost</h4>
+               @@include('./_includes/_commons/h2.html', {
+                  "title": "<span>£XX</span> <span class='font-size-sm'>per week*</span>",
+                  "className": "font-color-cyan mb-sm"
+               })
+               <h4 class="font-weight-bold font-color-pink">Storage Weekly Cost</h4>
+               @@include('./_includes/_commons/h2.html', {
+                  "title": "<span class='font-size-2md'>£XX</span> <span class='font-size-sm'>per week*</span>",
+                  "className": "font-height-none mb-sm"
+               })
+               <h4 class="font-weight-bold font-color-pink">Additional Weekly Costs</h4>
+               @@include('./_includes/_commons/h2.html', {
+                  "title": "<span class='font-size-2md'>£XX</span> <span class='font-size-sm'>per week*</span>",
+                  "className": "font-height-none mb-sm"
+               })
+               <p class="font-size-xs">
+                  *This quote is accurate based on the details provided, but we reserve the right amend
+                  this figure if the details change or are inaccurate. For more information, please see our
+                  @@include('./_includes/_commons/button-as-link.html', {
+                     "link": "#",
+                     "className": "font-color-pink opacity-50 hover:opacity-100",
+                     "buttonText": "Terms and Conditions."
+                  })
+               </p>
+            </div>
+         </div>
+      </div>
+      <div class="p-sm col-12 lg:col-6 flex-col">
+         <div class="-m-xs flex-col flex-stretch">
+            <div class="p-xs">
+               <h4 class="font-weight-bold font-color-pink mb-xs">Contact Details</h4>
+               <div class="-m-xs flex-col">
+                  <div class="p-xs">
+                     <input type="text" required placeholder="Name" class="px-2xs py-xs flex-stretch focus:shadow-lg transition-all bg-white border border-pink w-full">
+                  </div>
+                  <div class="p-xs">
+                     <input type="email" required placeholder="Email" class="px-2xs py-xs flex-stretch focus:shadow-lg transition-all bg-white border border-pink w-full">
+                  </div>
+                  <div class="p-xs">
+                     <input type="text" required placeholder="Telephone" class="px-2xs py-xs flex-stretch focus:shadow-lg transition-all bg-white border border-pink w-full">
+                  </div>
+                  <div class="p-xs">
+                     <label class="custom-tick">
+                        <input name="addr" type="checkbox">
+                        <span class="tick d-inline-block border"><span class="bg-white font-color-pink"></span></span>
+                        <span class="related-text"><span class="">By agreeing to the ‘Opt-in’ clause, you understand that your information will initially be used to contact you. The information will
+                              be kept and used in line with our GDPR policy, which can be found
+                              @@include('./_includes/_commons/button-as-link.html', {
+                              "link": "#",
+                              "className": "font-color-pink opacity-50 hover:opacity-100",
+                              "buttonText": "here."
+                              })
+                           </span>
+                        </span>
+                     </label>
+                  </div>
+               </div>
+            </div>
+            <div class="p-xs mt-auto text-right">
+               @@include('./_includes/_commons/button.html', {
+               "link": "javascript:void(0);",
+               "className": "goto-button bg-aqua font-color-white mt-auto size-lg",
+               "buttonText": "Finish",
+               "dataAttr": "data-goto",
+               "dataAttrValue": "step_3"
+               })
+            </div>
+         </div>
+      </div>
+   </div>
+</form>

@@ -197,7 +197,7 @@ var build = gulp.series(
   JS_OPERATION,
   HTML_OPERATION,
   CSS_PURIFY,
-  IMG_OPERATION,
+  // IMG_OPERATION,
   watch
 );
 

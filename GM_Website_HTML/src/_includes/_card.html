@@ -1,0 +1,146 @@
+@@if(context.card) {
+   @@if(!card.innerHtml) {
+      <article class="@@card.cardSx" @@if(context.card.aosAttr){@@card.aosAttr}>
+         @@if(context.card.children) {
+            @@card.children
+         }
+         @@if(context.card.image){
+            @@if(!context.card.image.media){
+               <section class="img-placeholder @@card.image.wrapperSx" @@if(context.card.image.aosAttr){@@card.image.aosAttr}>
+                  @@if(!context.card.image.innerHtml) {
+                     <figure class="pos-absolute pin @@card.image.imageSx" @@if(context.card.image.src) {style="background-image: url('./images/@@card.image.src');"}>
+                     </figure>
+                     @@if(context.card.image.children) {
+                        @@card.image.children
+                     }
+                  }
+                  @@if(context.card.image.innerHtml) {
+                     @@card.image.innerHtml
+                  }
+               </section>
+            }
+            @@if(context.card.image.media){
+               <section class="img-placeholder @@card.image.wrapperSx" @@if(context.card.image.aosAttr){@@card.image.aosAttr}>
+                  <a href="@@if(!context.card.image.media.link){#}@@if(context.card.image.media.link){@@card.image.media.link}" class="image-media image-rollover flex-col pos-absolute pin hover:opacity-parent-100 hover:shadow-parent-lg image-media opacity-parent-75 @@if(context.card.image.media.playMedia){has-video}">
+                     @@if(!context.card.image.innerHtml) {
+                        <figure class="card-image pos-absolute pin flex-stretch flex-col justify-center align-center @@card.image.imageSx" @@if(context.card.image.src) {style="background-image: url('./images/@@card.image.src');"}>
+                           @@if(context.card.image.media.playMedia) {
+                              <div class="play-button icon radius-full pos-absolute pointer-events-none shadow-child opacity-child transition-all @@card.image.media.playMediaSx">
+                                 <span class="p-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M38.25 0v357l280.5-178.5z" /></svg>
+                                 </span>
+                              </div>
+                           }
+                        </figure>
+                        @@if(context.card.image.children) {
+                           @@card.image.children
+                        }
+                     }
+                     @@if(context.card.image.innerHtml) {
+                        @@card.image.innerHtml
+                     }
+                  </a>
+               </section>
+            }
+         }
+         @@if(context.card.content){
+            <section class="@@card.content.wrapperSx" @@if(context.card.content.aosAttr){@@card.content.aosAttr}>
+               <div class="flex-col flex-auto w-full">
+                  <div class="text-wrap w-full @@if(context.card.content.textWrapSx){@@card.content.textWrapSx}">
+                     @@if(context.card.content.tag) {
+                        @@card.content.tag
+                     }
+                     @@if(card.content.title) {
+                        <h2 class="@@card.content.title.titleSx">@@card.content.title.text</h2>
+                     }
+                     @@if(context.card.content.title.subTitle) {
+                        @@card.content.title.subTitle
+                     }
+                     @@if(context.card.content.title.tagTitle) {
+                        @@card.content.title.tagTitle
+                     }
+                     @@if(context.card.content.title.decoration) {
+                        @@card.content.title.decoration
+                     }
+                     @@for (var i = 0; i < card.content.text.length; i++) {
+                        <p>`+(card.content.text[i])+`</p>
+                     }
+                     @@if(context.card.content.children) {
+                        @@card.content.children
+                     }
+                  </div>
+               </div>
+               @@if(context.card.footer){
+                  <footer class="@@card.footer.footerSx">
+                     @@if(!context.card.footer.innerHtml) {
+                        @@if(context.card.footer.buttons.length > 0){
+                           @@for (var i = 0; i < context.card.footer.buttons.length; i++) {
+                              @@include("./_includes/_button.html", `+(JSON.stringify(context.card.footer.buttons[i]))+`)
+                           }
+                        }
+                        @@card.footer.children
+                     }
+                     @@if(!context.card.footer.innerHtml) {
+                        @@card.footer.innerHtml
+                     }
+                  </footer>
+               }
+            </section>
+         }
+      </article>
+   }
+   @@if(card.innerHtml){
+      @@card.innerHtml
+   }
+}
+
+<!-- @@include('./_includes/_card.html', {
+   "card": {
+      "innerHtml": "",
+      "children": "",
+      "cardSx": "",
+      "aosAttr": "",
+      "image": {
+         "aosAttr": "",
+        "wrapperSx": "ratio-custom-1 mb-xs",
+        "imageSx": "bg-center bg-cover",
+        "src": "QGS 1.JPG",
+        "children": "",
+        "innerHtml": "",
+        "media": {
+            "link": "#",
+            "playMedia": "false",
+            "playMediaSx": ""
+        }
+      },
+      "content": {
+         "aosAttr": "",
+        "wrapperSx": "",
+        "title": {
+          "titleSx": "",
+          "subTitle": "",
+          "tagTitle": "",
+          "text": "Some title text"
+          "decoration": "",
+        },
+        "text": ["Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, qui.", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, qui."]
+      },
+      "footer": {
+        "innerHtml": "",
+        "footerSx": "",
+        "children": "",
+        "buttons": [
+          {
+            "button": {
+              "innerHtml": "",
+              "type": "",
+              "buttonSx": "bg-primary hover:bg-secondary",
+              "label": "button label",
+              "link": "#",
+              "attributes": ""
+            }
+          }
+        ]
+      }
+    } 
+  } -->

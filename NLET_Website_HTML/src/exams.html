@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include('./_includes/_head.html', {
+  "pageName": "Exams",
+  "description": ""
+  })
+</head>
+
+<body class="jsNavbarToggle is-close flex-col has-theme-deluge">
+
+    <!-- Header -->
+    @@include('./_includes/_header.html', {
+      "headerPosClasses": "lg:pos-absolute pin-x pin-t z-40",
+      "aboutActive": "",
+      "communityActive": "",
+      "curriculumActive": "",
+      "examsActive": "is-active",
+      "studentServicesActive": "",
+      "newsNEventsActive": ""
+    })
+
+  <!-- Main -->
+  <main class="flex-auto flex-col">
+    <!-- Hero Banner -->
+    @@include('./_includes/_banner-carousel.html', {
+    "rowClasses": "flex-wrap -mr-2xs lg:-mr-md -mb-md",
+    "carousel": false,
+    "hideControl": true,
+    "data": 
+      [
+        {
+          "isBanner": true,
+          "bannerClasses": "lg:pb-xl lg:pt-2xxl flex-col bg-shipGray lg:bg-transparent overflow-hidden",
+          "bannerImage": "iStock-1088239892.jpg",
+          "bannerImageWrapperClasses": "pos-absolute pin-y w-full pin-l-50 pin-l50 container-xl mx-auto flex-row justify-end align-end overflow-hidden",
+          "bannerImageClasses": "lg:mr-sm xl:mr-0 lg:col-6 h-full lg:h-auto md:ratio-1x1 bg-cover bg-center bg-inherit opacity-50 lg:opacity-100 lg:radius-full lg:-mb-lg",
+          "bannerInnerClasses": "",
+          "bannerInnerContainerClasses": "container md:container-xl mx-auto pos-relative",
+          "colClasses": "md:col-7 lg:col-6 flex-col md:pr-2lg py-2lg",
+          "cardImage": "single-logo-deluge.png",
+          "imageClasses": "ratio-1x1 icon-logo-md mr-auto mb-md",
+          "imageBgClasses": "bg-bottom bg-cover",
+          "cardContentClasses": "",
+          "tag": true,
+          "tagClasses": "d-hidden lg:d-inline-block breadcrumbs flex-row pos-absolute pin-b fsize-xs fweight-medium -mb-2md uppercase",
+          "tagText": "<a href='curriculum.html' class='no-underline fcolor-inherit hover:theme-text'>CURRICULUM</a><span class='mx-xs'>|</span><span>Apprenticeships</span>",
+          "footerClasses": "md:pt-md",
+          "cardTitle": "Exam Centre" ,
+          "cardTitleClasses": "theme-text fweight-bold fsize-lg lg:fsize-xl",
+          "cardText": ["<p data-aos='fade-up' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom' class='fsize-3sm'>Me publici acrist pere des! Sciaci sendem untium oc idiisquo estem, cludes imaxi</p>"],
+          "cardTextClasses": "fcolor-white lg:fcolor-inherit",
+          "footerClasses": "pt-sm",
+          "cardButton": "",
+          "buttonLink": "",
+          "buttonClasses": "",
+          "footerClasses": "flex-row flex-wrap -mr-sm -mb-sm pt-sm",
+          "footerHtml": "<a href='#' class='button mr-sm mb-sm hover:shadow-md theme-bg fsize-3xs fweight-bold fcolor-white uppercase py-xs px-md fspacing-wide'>GET STARTED</a>",
+          "imageAOSattr": "data-aos='zoom-in' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "cardTitleAOSattr": "data-aos='fade-up' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "footerAOSattr": "data-aos='fade-up' data-aos-delay='500' data-aos-duration='700' data-aos-anchor-placement='top-bottom'"
+        }
+      ]
+    })
+
+    <!-- 4 Columns -->
+    @@include(
+    './_includes/_column-grid.html',
+    {
+      "sectionClasses": "pt-2md lg:pt-0",
+      "containerClasses": "container container-sm lg:container-fluid mx-auto",
+      "rowClasses": "flex-wrap flex-row",
+      "childOnly": false,
+      "data": 
+        [
+          {
+            "colClasses": "flex-col col-12 md:col-6 lg:col-3 bg-lightningYellow fcolor-white",
+            "aosAttr": "data-aos='zoom-in' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+            "cardImage": "",
+            "imageClasses": "ratio-1x1 pos-relative",
+            "imageBgClasses": "",
+            "cardContentClasses": "flex-stretch flex-col pos-absolute pin justify-center align-center p-md lg:px-lg text-center",
+            "cardTitle": "GCSE &<br>A Level",
+            "cardTitleClasses": "fweight-medium fsize-4md",
+            "cardText": ["<a href='#' class='button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide'>Learn More</a>"],
+            "cardTextClasses": "flex-col align-center",
+            "footerClasses": "pt-sm",
+            "cardButton": "",
+            "buttonLink": "#",
+            "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide"
+          },
+          {
+            "colClasses": "flex-col col-12 md:col-6 lg:col-3 bg-turmeric fcolor-white",
+            "aosAttr": "data-aos='zoom-in' data-aos-delay='200' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+            "cardImage": "",
+            "imageClasses": "ratio-1x1 pos-relative",
+            "imageBgClasses": "",
+            "cardContentClasses": "flex-stretch flex-col pos-absolute pin justify-center align-center p-md lg:px-lg text-center",
+            "cardTitle": "Pearson<br>Vue" ,
+            "cardTitleClasses": "fweight-medium fsize-4md",
+            "cardText": ["<a href='#' class='button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide'>Learn More</a>"],
+            "cardTextClasses": "flex-col align-center",
+            "footerClasses": "pt-sm",
+            "cardButton": "",
+            "buttonLink": "#",
+            "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide"
+          },
+          {
+            "colClasses": "flex-col col-12 md:col-6 lg:col-3 bg-deluge fcolor-white",
+            "aosAttr": "data-aos='zoom-in' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+            "cardImage": "",
+            "imageClasses": "ratio-1x1 pos-relative",
+            "imageBgClasses": "",
+            "cardContentClasses": "flex-stretch flex-col pos-absolute pin justify-center align-center p-md lg:px-lg text-center",
+            "cardTitle": "ACCA CBE" ,
+            "cardTitleClasses": "fweight-medium fsize-4md",
+            "cardText": ["<a href='#' class='button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide'>Learn More</a>"],
+            "cardTextClasses": "flex-col align-center",
+            "footerClasses": "pt-sm",
+            "cardButton": "",
+            "buttonLink": "#",
+            "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide"
+          },
+          {
+            "colClasses": "flex-col col-12 md:col-6 lg:col-3 bg-mauvelous fcolor-white",
+            "aosAttr": "data-aos='zoom-in' data-aos-delay='400' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+            "cardImage": "",
+            "imageClasses": "ratio-1x1 pos-relative",
+            "imageBgClasses": "",
+            "cardContentClasses": "flex-stretch flex-col pos-absolute pin justify-center align-center p-md lg:px-lg text-center",
+            "cardTitle": "AQA" ,
+            "cardTitleClasses": "fweight-medium fsize-4md",
+            "cardText": ["<a href='#' class='button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide'>Learn More</a>"],
+            "cardTextClasses": "flex-col align-center",
+            "footerClasses": "pt-sm",
+            "cardButton": "",
+            "buttonLink": "#",
+            "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide"
+          },
+          {
+            "colClasses": "flex-col col-12 md:col-6 lg:col-3 bg-jaffa fcolor-white",
+            "aosAttr": "data-aos='zoom-in' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+            "cardImage": "",
+            "imageClasses": "ratio-1x1 pos-relative",
+            "imageBgClasses": "",
+            "cardContentClasses": "flex-stretch flex-col pos-absolute pin justify-center align-center p-md lg:px-lg text-center",
+            "cardTitle": "Edexcel" ,
+            "cardTitleClasses": "fweight-medium fsize-4md",
+            "cardText": ["<a href='#' class='button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide'>Learn More</a>"],
+            "cardTextClasses": "flex-col align-center",
+            "footerClasses": "pt-sm",
+            "cardButton": "",
+            "buttonLink": "#",
+            "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide"
+          },
+          {
+            "colClasses": "flex-col col-12 md:col-6 lg:col-3 bg-vistaBlue fcolor-white",
+            "aosAttr": "data-aos='zoom-in' data-aos-delay='200' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+            "cardImage": "",
+            "imageClasses": "ratio-1x1 pos-relative",
+            "imageBgClasses": "",
+            "cardContentClasses": "flex-stretch flex-col pos-absolute pin justify-center align-center p-md lg:px-lg text-center",
+            "cardTitle": "ICAEW" ,
+            "cardTitleClasses": "fweight-medium fsize-4md",
+            "cardText": ["<a href='#' class='button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide'>Learn More</a>"],
+            "cardTextClasses": "flex-col align-center",
+            "footerClasses": "pt-sm",
+            "cardButton": "",
+            "buttonLink": "#",
+            "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide"
+          },
+          {
+            "colClasses": "flex-col col-12 md:col-6 lg:col-3 bg-froly fcolor-white",
+            "aosAttr": "data-aos='zoom-in' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+            "cardImage": "",
+            "imageClasses": "ratio-1x1 pos-relative",
+            "imageBgClasses": "",
+            "cardContentClasses": "flex-stretch flex-col pos-absolute pin justify-center align-center p-md lg:px-lg text-center",
+            "cardTitle": "NCFE" ,
+            "cardTitleClasses": "fweight-medium fsize-4md",
+            "cardText": ["<a href='#' class='button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide'>Learn More</a>"],
+            "cardTextClasses": "flex-col align-center",
+            "footerClasses": "pt-sm",
+            "cardButton": "",
+            "buttonLink": "#",
+            "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide"
+          },
+          {
+            "colClasses": "flex-col col-12 md:col-6 lg:col-3 bg-shipGray fcolor-white",
+            "aosAttr": "data-aos='zoom-in' data-aos-delay='400' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+            "cardImage": "",
+            "imageClasses": "ratio-1x1 pos-relative",
+            "imageBgClasses": "",
+            "cardContentClasses": "flex-stretch flex-col pos-absolute pin justify-center align-center p-md lg:px-lg text-center",
+            "cardTitle": "Functional<br>Skills Exam" ,
+            "cardTitleClasses": "fweight-medium fsize-4md",
+            "cardText": ["<a href='#' class='button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide'>Learn More</a>"],
+            "cardTextClasses": "flex-col align-center",
+            "footerClasses": "pt-sm",
+            "cardButton": "",
+            "buttonLink": "#",
+            "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide"
+          }
+        ]
+      }
+    )
+
+
+    <!-- Our Exam Centre -->
+    @@include(
+      './_includes/_column-grid.html', 
+      {
+        "sectionClasses": "pt-2md lg:pt-0",
+        "containerClasses": "container md:container-md lg:container-fluid mx-auto",
+        "rowClasses": "theme-bg fcolor-white flex-row flex-wrap pos-relative",
+        "childOnly": false,
+        "data": [
+          { 
+            "colClasses": "flex-col col-12 flex-col lg:flex-row-reverse container lg:container-xl mx-auto",
+            "aosAttr": "",
+            "vericalCard": true,
+            "cardImage": "iStock-492198113.jpg",
+            "imageClasses": "ratio-16x9 lg:ratio-none lg:col-6 lg:pos-absolute pin-y pin-r",
+            "imageBgClasses": "bg-center bg-cover",
+            "cardContentClasses": "lg:col-6 pt-sm p-md xl:pl-0 lg:pr-xxl lg:py-3xxl mr-auto",
+            "cardTitle": "Our Exam Centre" ,
+            "cardTitleClasses": "fweight-bold fsize-2md lg:fsize-2lg",
+            "cardText": ["<p>NLET EXAM CENTRE is an Authorised Test Centre for a range of paper-based & computer-based examinations, provided by some of the most reputable organisations</p>", "<p>We take great pride in providing candidates with an excellent testing environment and infrastructure that gives them the best possible chance of succeeding in their testing experience.</p>", "<p>Our infrastructure is set to meet the delivery partner’s specific requirements, so as to ensure high standards and a totally controlled testing environment.</p>"],
+            "footerClasses": "pt-sm",
+            "cardButton": "",
+            "buttonLink": "#",
+            "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide",
+            "cardTextAOSattr": "data-aos='fade-up' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+            "footerAOSattr": "data-aos='fade-up' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom'"
+          }
+        ]
+      }
+    )
+
+  <!-- Article Image Text -->
+  @@include(
+    './_includes/_column-grid.html', 
+    {
+      "sectionClasses": "pt-xl lg:pt-2xl",
+      "containerClasses": "container md:container-md lg:container-fluid mx-auto",
+      "rowClasses": "flex-row flex-wrap pos-relative",
+      "childOnly": false,
+      "data": [
+        { 
+          "colClasses": "flex-col col-12 flex-col lg:flex-row container lg:container-2xl mx-auto",
+          "aosAttr": "",
+          "vericalCard": true,
+          "cardImage": "iStock-1050085920.jpg",
+          "imageClasses": "ratio-16x9 lg:ratio-none lg:col-6 lg:pos-absolute pin-y pin-l lg:-ml-2md",
+          "imageBgClasses": "bg-center bg-cover",
+          "cardContentClasses": "lg:col-6 pt-sm px-md pt-md  xl:pr-0 lg:pl-2md lg:py-xl ml-auto",
+          "cardTitle": "Paper-Based Exams" ,
+          "cardTitleClasses": "fweight-bold fsize-2md lg:fsize-2lg",
+          "cardText": ["<p>NLET EXAM CENTRE is approved by The Joint Council for Qualifications (JCQ) as a Test Centre to conduct GCSE & A Level examinations. We conduct exams for our internal students as well as external/private candidates.</p>", "<p>NLET is approved as an exam centre by AQA, Edexcel for their ESOL Skills for Life & HNC/HND programmes, University of Cambridge ESOL Examinations,</p>"],
+          "footerClasses": "pt-sm",
+          "cardButton": "BUTTON HERE",
+          "buttonLink": "#",
+          "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide",
+          "cardTextAOSattr": "data-aos='fade-up' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "footerAOSattr": "data-aos='fade-up' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom'"
+        }
+      ]
+    }
+  )
+
+  <!-- Article Text Image -->
+  @@include(
+    './_includes/_column-grid.html', 
+    {
+      "sectionClasses": "pt-xl lg:pt-2xl",
+      "containerClasses": "container md:container-md lg:container-fluid mx-auto",
+      "rowClasses": "flex-row flex-wrap pos-relative",
+      "childOnly": false,
+      "data": [
+        { 
+          "colClasses": "flex-col col-12 flex-col lg:flex-row-reverse container lg:container-2xl mx-auto",
+          "aosAttr": "",
+          "vericalCard": true,
+          "cardImage": "iStock-884707986.jpg",
+          "imageClasses": "ratio-16x9 lg:ratio-none lg:col-6 lg:pos-absolute pin-y pin-r lg:-mr-2md",
+          "imageBgClasses": "bg-center bg-cover",
+          "cardContentClasses": "lg:col-6 pt-sm px-md pt-md xl:pl-0 lg:pr-2md lg:py-xl mr-auto",
+          "cardTitle": "Computer-Based Exams",
+          "cardTitleClasses": "fweight-bold fsize-2md lg:fsize-2lg",
+          "cardText": ["<p>With 120 latest specification testing stations across 2 IT Suites, NLET is one of the major Computer-Based Test Centres in London.</p>", "<p>We provide test delivery services for partners such as Pearson Vue, PSi, AWS, Microsoft, Infosys, ACCA, CIMA, Pearson-Edexcel, Novell, Sun, Hewlett Packard, IBM, Apple, CompTIA, Oracle and Citrix amongst others.</p>"],
+          "footerClasses": "pt-sm",
+          "cardButton": "BUTTON HERE",
+          "buttonLink": "#",
+          "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide",
+          "cardTextAOSattr": "data-aos='fade-up' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "footerAOSattr": "data-aos='fade-up' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom'"
+        }
+      ]
+    }
+  )
+  </main>
+  @@include('./_includes/_footer.html', {
+    "instagram": false
+  })
+  <script src="js/allScript.js"></script>
+</body>
+
+</html>

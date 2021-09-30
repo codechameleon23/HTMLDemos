@@ -1,0 +1,191 @@
+@mixin getFlexBoxClasses($bp) {
+  .#{$bp}flex {
+    &-inline{
+      @include flexbox(inline-flex);
+    }
+    
+    &-row,
+    &-col {
+      @include flexbox(flex);
+    }
+  
+    &-row {
+      @include flex-direction(row);
+  
+      &-reverse {
+        @include flex-direction(row-reverse);
+      }
+    }
+  
+    &-col {
+      @include flex-direction(column);
+  
+      &-reverse {
+        @include flex-direction(column-reverse);
+      }
+    }
+
+    &-unset {
+      @include flex-direction(unset);
+      @include flexbox(unset);
+    }
+  
+    &-nowrap {
+      @include flex-wrap(nowrap)
+    }
+  
+    &-wrap {
+      @include flex-wrap(wrap)
+    }
+  
+    &-grow {
+      &-on {
+        @include flex-grow(1)
+      }
+  
+      &-off {
+        @include flex-grow(0)
+      }
+    }
+  
+    &-shrink {
+      &-on {
+        @include flex-shrink(1)
+      }
+  
+      &-off {
+        @include flex-shrink(0)
+      }
+    }
+  
+    &-basis {
+      &-auto {
+        @include flex-basis(auto);
+      }
+  
+      &-content {
+        @include flex-basis(content);
+      }
+    }
+  
+    &-none {
+      @include flex(none);
+      @include flex-direction(unset);
+    }
+  
+    &-auto {
+      @include flex(auto);
+    }
+  
+    &-stretch {
+      @include flex(1);
+      flex: 1 1 auto;
+    }
+  
+  }
+  
+  .#{$bp}justify {
+    &-start {
+      @include justify-content(flex-start);
+    }
+  
+    &-end {
+      @include justify-content(flex-end);
+    }
+  
+    &-center {
+      @include justify-content(center);
+    }
+  
+    &-space {
+      &-between {
+        @include justify-content(space-between);
+      }
+  
+      &-around {
+        @include justify-content(space-around);
+      }
+  
+      &-evenly {
+        @include justify-content(space-evenly);
+      }
+    }
+  }
+  
+  .#{$bp}align {
+    &-stretch {
+      @include align-items(stretch);
+    }
+  
+    &-start {
+      @include align-items(flex-start);
+    }
+  
+    &-end {
+      @include align-items(flex-end);
+    }
+  
+    &-center {
+      @include align-items(center);
+    }
+  
+    &-baseline {
+      @include align-items(baseline);
+    }
+  
+    &-self {
+      &-stretch {
+        @include align-self(stretch);
+      }
+  
+      &-start {
+        @include align-self(flex-start);
+      }
+  
+      &-end {
+        @include align-self(flex-end);
+      }
+  
+      &-center {
+        @include align-self(center);
+      }
+  
+      &-baseline {
+        @include align-self(baseline);
+      }
+    }
+  
+  }
+  
+  .#{$bp}content {
+    &-stretch {
+      @include align-content(stretch);
+    }
+  
+    &-start {
+      @include align-content(flex-start);
+    }
+  
+    &-end {
+      @include align-content(flex-end);
+    }
+  
+    &-center {
+      @include align-content(center);
+    }
+  
+    &-space {
+      &-between {
+        @include align-content(space-between);
+      }
+  
+      &-around {
+        @include align-content(space-around);
+      }
+  
+      &-evenly {
+        @include align-content(space-evenly);
+      }
+    }
+  }
+}

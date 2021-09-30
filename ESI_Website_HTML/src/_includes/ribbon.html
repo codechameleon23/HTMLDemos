@@ -1,0 +1,70 @@
+<section class="@@sectionClasses">
+   <div class="@@bgClasses font-color-white md:py-md py-sm">
+      <div class="container sm:container-sm lg:container-xl mx-auto">
+         <div class="-m-xs flex-col align-center lg:flex-row text-center lg:text-left">
+            @@if(context.iconLeftClasses){
+               <div class="p-xs flex-none">
+                  @@include('./_includes/_commons/sheep-icon.html', {"className": "@@iconLeftClasses"})
+               </div>
+            }
+            <div class="p-xs flex-auto">
+               <div class="w-full text-wrap @@textWrapClasses">
+                  @@if (context.title) {
+                     @@include('./_includes/_commons/h2.html', {
+                     "title": "<span>@@title</span>",
+                     "className": "@@titleClass"
+                     })
+                  }
+                  @@if (context.midtitle) {
+                     @@include('./_includes/_commons/h3-lg.html', {
+                     "title": "<span>@@midtitle</span>",
+                     "className": "@@midtitleClass"
+                     })
+                  }
+                  @@if (context.subtitle) {
+                     @@include('./_includes/_commons/h3.html', {
+                     "title": "<span>@@subtitle</span>",
+                     "className": "@@subtitleClass"
+                     })
+                  }
+                  @@if (context.text) {
+                  @@text
+                  }
+                  @@if (context.button === true) {
+                  @@include('./_includes/_commons/button.html', {
+                  "link": "@@buttonLink",
+                  "className": "@@buttonClass font-color-white",
+                  "buttonText": "@@buttonText"
+                  })
+                  }
+               </div>
+            </div>
+            @@if(context.iconRightClasses || context.contactButton){
+               <div class="p-xs flex-none">
+                  @@if(context.iconRightClasses){
+                     @@include('./_includes/_commons/sheep-icon.html', {"className": "@@iconRightClasses"})
+                  }
+                  @@if(context.contactButton){
+                     <div class="-m-xs flex-row flex-wrap">
+                        <div class="p-xs">
+                           @@include('./_includes/_commons/button.html', {
+                              "link": "tel:020 1234 5678",
+                              "className": "bg-dark font-color-white size-md",
+                              "buttonText": "Call"
+                           })
+                        </div>
+                        <div class="p-xs">
+                           @@include('./_includes/_commons/button.html', {
+                              "link": "mailto:enquiries@ewestoreit.com",
+                              "className": "bg-dark font-color-white size-md",
+                              "buttonText": "Email"
+                           })
+                        </div>
+                     </div>
+                  }
+               </div>
+            }
+         </div>
+      </div>
+   </div>
+</section>

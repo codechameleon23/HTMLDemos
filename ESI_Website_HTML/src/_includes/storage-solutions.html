@@ -1,0 +1,98 @@
+<section class="@@sectionClasses">
+   <div class="py-xl @@bgClasses">
+      <div class="container md:container-sm lg:container-xl mx-auto">
+         <hgroup class="text-wrap w-full mb-md">
+               @@if (context.title) {
+                  @@include('./_includes/_commons/h2.html', {
+                  "title": "<span>@@title</span>",
+                  "className": "@@titleClass"
+                  })
+               }
+               @@if (context.midtitle) {
+                  @@include('./_includes/_commons/h3-lg.html', {
+                  "title": "<span>@@midtitle</span>",
+                  "className": "@@midtitleClass"
+                  })
+               }
+               @@if (context.subtitle) {
+                  @@include('./_includes/_commons/h3.html', {
+                  "title": "<span>@@subtitle</span>",
+                  "className": "@@subtitleClass"
+                  })
+               }
+         </hgroup>
+         <div class="xl:-m-lg flex-row flex-wrap text-center">
+            <div class="py-md xl:p-lg col-12 lg:col-4 flex-col">
+               <div class="w-full text-wrap">
+                  @@include('./_includes/_commons/h3.html', {
+                  "title": "<span>Small</span>",
+                  "className": "text-center"
+                  })
+                  <section class="col-4 mx-auto lg:col-10 ratio-1x1" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="700">
+                     <div class="pos-absolute pin flex-col flex-stretch bg-center bg-cover d-hidden lg:d-flex" style="background-image:url('./images/ewe-store-it-1.svg')"></div>
+                     <div class="pos-absolute pin flex-col flex-stretch bg-center bg-cover lg:d-hidden" style="background-image:url('./images/ewe-store-it-1-mobile.svg')"></div>
+                  </section>
+                  <div class="text-wrap w-full lg:mt-lg" data-aos="fade" data-aos-delay="200" data-aos-duration="700">
+                     <p>Bedding, PC, small TV,<br> suitcase & a few boxes</p>
+                     @@include('./_includes/_commons/h3.html', {
+                        "title": "From £100",
+                        "className": ""
+                     })
+                     @@include('./_includes/_commons/button.html', {
+                        "link": "#",
+                        "className": "bg-aqua font-color-white",
+                        "buttonText": "Learn More"
+                     })
+                  </div>
+               </div>
+            </div>
+            <div class="py-md xl:p-lg col-12 lg:col-4 flex-col">
+               <div class="w-full text-wrap">
+                  @@include('./_includes/_commons/h3.html', {
+                  "title": "<span>Medium</span>",
+                  "className": "text-center"
+                  })
+                  <section class="col-6 mx-auto lg:col-10 ratio-1x1" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="700">
+                     <div class="pos-absolute pin flex-col flex-stretch bg-center bg-cover" style="background-image:url('./images/ewe-store-it-4.svg')"></div>
+                  </section>
+                  <div class="text-wrap w-full lg:mt-lg" data-aos="fade" data-aos-delay="400" data-aos-duration="700">
+                     <p>Pianos, sofas, tables, large TVs<br> & ample space for boxes</p>
+                     @@include('./_includes/_commons/h3.html', {
+                        "title": "From £200",
+                        "className": ""
+                     })
+                     @@include('./_includes/_commons/button.html', {
+                        "link": "#",
+                        "className": "bg-aqua font-color-white",
+                        "buttonText": "Learn More"
+                     })
+                  </div>
+               </div>
+            </div>
+            <div class="py-md xl:p-lg col-12 lg:col-4 flex-col">
+               <div class="w-full text-wrap">
+                  @@include('./_includes/_commons/h3.html', {
+                  "title": "<span>Large</span>",
+                  "className": "text-center"
+                  })
+                  <section class="col-6 mx-auto lg:col-10 ratio-1x1" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="700">
+                     <div class="pos-absolute pin flex-col flex-stretch bg-center bg-cover" style="background-image:url('./images/ewe-store-it-9.svg')"></div>
+                  </section>
+                  <div class="text-wrap w-full lg:mt-lg" data-aos="fade" data-aos-delay="600" data-aos-duration="700">
+                     <p>Kitchen appliances, plus large<br> pieces of furniture for the home</p>
+                     @@include('./_includes/_commons/h3.html', {
+                        "title": "From £300",
+                        "className": ""
+                     })
+                     @@include('./_includes/_commons/button.html', {
+                        "link": "#",
+                        "className": "bg-aqua font-color-white",
+                        "buttonText": "Learn More"
+                     })
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>

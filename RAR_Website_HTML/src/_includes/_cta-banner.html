@@ -1,0 +1,35 @@
+<section class="@@sectionClasses">
+   <div class="@@rowClasses pos-relative">
+      @@if(context.cardImage){
+         <figure class="d-hidden md:d-inline-block col-12 md:col-3 @@imageClasses md:pos-absolute pin-l pin-y">
+            <div class="@@imageBgClasses pos-absolute pin" style="background-image: url('./images/@@cardImage');"></div>
+         </figure>
+      }
+      <div class="
+                  bg-inherit 
+                  pos-relative 
+                  @@if(context.cardImage){
+                     ml-auto
+                     col-12 
+                     md:col-9 
+                  }
+                  @@if(!context.cardImage){
+                     mx-auto
+                     lg:container-xl 
+                  }
+               ">
+         <div class="flex-col lg:flex-row pt-md pl-md lg:pl-lg align-center text-center md:text-left">
+            @@if(context.cardTitle){
+               <div class="pb-md pr-md flex-stretch" data-aos='fade' data-aos-delay='100' data-aos-duration='700'>
+                  <h2 class="fweight-semibold fsize-md md:fsize-2md">@@cardTitle</h2>
+               </div>
+            }
+            @@if(context.cardButton){
+               <div class="pb-md pr-md flex-none" data-aos='fade-up' data-aos-delay='200' data-aos-duration='700'>
+                  <a href="@@buttonLink" class="@@buttonClasses">@@cardButton</a>
+               </div>
+            }
+         </div>
+      </div>
+   </div>
+</section>

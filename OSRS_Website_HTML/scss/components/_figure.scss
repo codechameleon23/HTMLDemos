@@ -1,0 +1,76 @@
+img {
+  max-width: 100%;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+a img {
+  border: none;
+  outline: none;
+}
+
+.figure {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  background-color: tint(black, 85%);
+  vertical-align: bottom;
+
+  &.img-fit {
+    img {
+      min-height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .image-holder {
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .image-holder {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    @include transition($time: 0.2s);
+    flex: 1;
+    flex: 1 1 auto;
+
+    &_inner {
+      height: 100%;
+
+      >img {
+        height: inherit;
+        display: flex;
+      }
+    }
+
+    @at-root .banner & {
+      background-color: rgba(0, 0, 0, 0);
+    }
+  }
+
+  // &.full-grow .image-holder,
+  // &-rollover,
+  // &-caption {
+  //   position: absolute;
+  //   width: 100%;
+  //   height: 100%;
+  //   top: 0;
+  //   left: 0;
+  //   text-decoration: none !important;
+  // }
+  // &-rollover{
+  //   opacity: 0;
+  //   transition: all .3s ease-in-out;
+  // }
+
+  @at-root a#{&}:hover .image-holder,
+  &:hover a.image-holder {
+    transform: scale(1.075);
+  }
+}

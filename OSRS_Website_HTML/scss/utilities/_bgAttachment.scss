@@ -1,0 +1,38 @@
+@mixin getBgAttachmentClasses($bp) {
+  .#{$bp}bg{
+    &-fixed{background-attachment: fixed;}
+    &-local{background-attachment: local;}
+    &-scroll{background-attachment: scroll;}
+  }
+}
+
+@mixin getBgPositionClasses($bp) {
+  .#{$bp}bg{
+    &-bottom{background-position: bottom;}
+    &-center{background-position: center;}
+    &-left{background-position: left;}
+    &-left-bottom{background-position: left bottom;}
+    &-left-top{background-position: left top;}
+    &-right{background-position: right;}
+    &-right-bottom{background-position: right bottom;}
+    &-right-top{background-position: right top;}
+    &-top{background-position: top;}
+  }
+}
+
+@mixin getBgRepeatClasses($bp) {
+  .#{$bp}bg{
+    &-repeat{background-repeat: repeat;}
+    &-no-repeat{background-repeat: no-repeat;}
+    &-repeat-x{background-repeat: repeat-x;}
+    &-repeat-y{background-repeat: repeat-y;}
+  }
+}
+
+@mixin getBgSizeClasses($bp) {
+  .#{$bp}bg{
+    &-auto{background-size: auto;}
+    &-cover{background-size: cover;}
+    &-contain{background-size: contain;}
+  }
+}

@@ -1,0 +1,69 @@
+<form>
+   <div class="-m-sm flex-row flex-wrap">
+      <div class="p-sm col-12 lg:col-6 flex-col">
+         <div class="-m-xs flex-col flex-stretch">
+            <div class="p-xs">
+               <h4 class="font-weight-bold font-color-pink mb-xs">Your location</h4>
+               <div class="-m-xs flex-col">
+                  <div class="p-xs">
+                     <input type="text" required placeholder="Your location" value="SP1 9PL " class="px-2xs py-xs flex-stretch focus:shadow-lg transition-all bg-white border border-pink w-full">
+                  </div>
+                  <div class="select p-xs flex-auto flex-col font-color-pink">
+                     <select class="px-2xs py-xs flex-stretch focus:shadow-lg transition-all bg-white border border-pink font-color-default">
+                        <option>Please select your address</option>
+                        <option>Choose a shredding option</option>
+                        <option>Lorem, ipsum dolor.</option>
+                        <option>sit amet consectetur.</option>
+                        <option>consectetur adipisicing elit</option>
+                     </select>
+                  </div>
+                  <div class="p-xs">
+                     <div class="text-wrap f-full">
+                        <p>
+                           52 St Francis Place,<br>
+                           Salisbury, <br>
+                           Wiltshire<br>
+                           SP1 9PL
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="mx-xs my-sm border-b border-pink border-dashed"></div>
+            <div class="p-xs">
+               <h4 class="font-weight-bold font-color-pink mb-xs">Information about the address</h4>
+               <div class="-m-xs flex-col">
+                  <div class="p-xs">
+                     <textarea rows="4" placeholder="Please describe parking access at the address… "
+                        class="py-xs bg-white flex-stretch focus:shadow-lg px-2xs transition-all border border-pink w-full"></textarea>
+                  </div>
+                  <div class="p-xs">
+                     <input type="text" required placeholder="How many floors is the property over?"
+                        class="px-2xs py-xs flex-stretch focus:shadow-lg transition-all bg-white border border-pink w-full">
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="p-sm col-12 lg:col-6 flex-col">
+         <div class="-m-xs flex-col flex-stretch">
+            <div class="p-xs">
+               @@include('./_includes/_commons/g-map.html', {
+               "mapId": "map-canvas-your-location",
+               "mapWrapperClasses": "ratio-1x1",
+               "mapClasses": "bg-dark hover:shadow-lg transition-all"
+               })
+            </div>
+            <div class="p-xs mt-auto text-right">
+               @@include('./_includes/_commons/button.html', {
+                  "link": "javascript:void(0);",
+                  "className": "mt-auto bg-aqua font-color-white size-lg",
+                  "buttonText": "Next step",
+                  "dataAttr": "data-goto",
+                  "dataAttrValue": "step_3"
+               })
+            </div>
+         </div>
+      </div>
+   </div>
+</form>

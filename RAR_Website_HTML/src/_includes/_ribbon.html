@@ -1,0 +1,10 @@
+<section class="@@ribbonWrapper">
+   <div class="container md:container-md lg:container-xl mx-auto">
+      @@if(context.titleTag){
+         <@@titleTag class="fweight-semibold fsize-md lg:fsize-2md">@@ribbonText</@@titleTag>
+      }
+      @@if(!context.titleTag){
+         <h2 class="fweight-semibold fsize-md lg:fsize-2md">@@ribbonText</h2>
+      }
+   </div>
+</section>

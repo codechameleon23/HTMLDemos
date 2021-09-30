@@ -1,0 +1,415 @@
+<!-- Popup -->
+<div id="jsAnnoncementPopup" class="d-hidden container container-popup-md popup shadow-lg bg-white mx-xs my-xs">
+   <div class="flex-col w-full flex-stretch popup-wrap">
+      <button class='jsAnnoncementPopup_close pos-absolute pin-t pin-r z-10 mt-sm mr-sm d-inline-block fweight-regular capitalize fcolor-white hover:bg-secondary ml-auto'> 
+         <span class='fcolor-inherit icon icon-xxs'> 
+            <span class='p-xxs'> 
+               <svg class='search-close' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 224.512 224.512' fill='currentColor'> 
+                  <path d='M224.507 6.997L217.521 0 112.256 105.258 6.998 0 .005 6.997l105.258 105.257L.005 217.512l6.993 7L112.256 119.24l105.265 105.272 6.986-7-105.258-105.258z'></path> 
+               </svg> 
+            </span> 
+         </span> 
+      </button>
+      <div class="flex-stretch overflow-auto popup-body">
+         @@include('./_includes/_card.html', {
+            "card": {
+               "innerHtml": "",
+               "children": "",
+               "cardSx": "flex-col bg-white pos-relative",
+               "aosAttr": "data-aos='fade-up' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+               "image": {
+                 "wrapperSx": "ratio-16x9",
+                 "imageSx": "bg-center bg-cover",
+                 "src": "RGR 2027.jpg",
+                 "children": "",
+                 "innerHtml": "",
+                 "media": ""
+               },
+               "content":{
+                 "wrapperSx":"flex-col flex-stretch p-sm lg:p-2md",
+                 "title":{
+                   "titleSx":"fsize-md fweight-bold",
+                   "text":"Announcement of temporary closure",
+                   "tagTitle": "",
+                   "decoration": ""
+                 },
+                 "text":[
+                   "Following the latest Government guidance regarding COVID-19 and careful consideration of the current situation, The Gurkha Museum has decided to close its doors to the public in the interest of visitor and staff safety, effective immediately.",
+                   "The Museum will remain closed until further notice but will continue to operate behind the scenes with reduced staff on call to answer queries during this time. We will continue to monitor the situation closely and will issue updates through our website and social media channels as soon as we become aware of further changes to our operations.",
+                   "May we thank our Visitors, Friends and Supporters for their understanding and support through this difficult period.",
+                 ]
+               },
+               "footer": {
+                 "innerHtml": "",
+                 "footerSx": "mt-auto pt-md",
+                 "children": "",
+                 "buttons": [
+                   {
+                     "button": {
+                       "innerHtml": "",
+                       "type": "",
+                       "buttonSx": "bg-primary hover:bg-secondary",
+                       "label": "Contact Us",
+                       "link": "#",
+                       "attributes": ""
+                     }
+                   }
+                 ]
+               }
+             }
+         })
+      </div>
+   </div>
+</div>
+
+<!-- Donation Popup -->
+<div id="jsDonationPopup" class="d-hidden container-popup-md popup shadow-lg bg-white mx-xs my-xs">
+   <div class="flex-col w-full flex-stretch popup-wrap">
+      <button class='jsDonationPopup_close pos-absolute pin-t pin-r z-10 mt-sm mr-sm d-inline-block fweight-regular capitalize fcolor-white hover:bg-secondary ml-auto'> 
+         <span class='fcolor-inherit icon icon-xxs'> 
+            <span class='p-xxs'> 
+               <svg class='search-close' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 224.512 224.512' fill='currentColor'> 
+                  <path d='M224.507 6.997L217.521 0 112.256 105.258 6.998 0 .005 6.997l105.258 105.257L.005 217.512l6.993 7L112.256 119.24l105.265 105.272 6.986-7-105.258-105.258z'></path> 
+               </svg> 
+            </span> 
+         </span> 
+      </button>
+      <div class="bg-primary fcolor-white p-sm">
+         <h2 class="fsize-md fweight-bold">The Gurkha Museum</h2>
+      </div>
+      <div class="flex-stretch overflow-auto popup-body">
+         <img src="./images/donation-step-image.jpg" />
+      </div>
+   </div>
+</div>
+
+
+@@if(!context.hideInsta){
+   <!-- Insta Gallery -->
+      @@include('./_includes/_container.html', {
+         "container": {
+            "innerHtml": "",
+            "containerSx": "container-fluid mx-auto",
+            "wrapper": {
+               "wrapperSx": "pt-2md lg:pt-2lg xl:pt-2xl overflow-hidden"
+            },
+            "row": {
+               "rowSx": "flex-row flex-wrap -mr-xs -mb-xs"
+            },
+            "cards": [
+               {
+                  "card": {
+                     "innerHtml": "",
+                     "children": "",
+                     "cardSx": "pr-xs pb-xs col-4 lg:w-auto lg:col-flex",
+                     "aosAttr": "",
+                     "image": {
+                        "wrapperSx": "ratio-1x1",
+                        "imageSx": "bg-center bg-cover",
+                        "src": "insta-1.jpg",
+                        "children": "",
+                        "media": {
+                           "link": "#",
+                           "playMedia": "",
+                           "playMediaSx": ""
+                        }
+                     },
+                     "content": "",
+                     "footer": ""
+                  } 
+               },
+               {
+                  "card": {
+                     "innerHtml": "",
+                     "children": "",
+                     "cardSx": "pr-xs pb-xs col-4 lg:w-auto lg:col-flex",
+                     "aosAttr": "",
+                     "image": {
+                        "wrapperSx": "ratio-1x1",
+                        "imageSx": "bg-center bg-cover",
+                        "src": "insta-2.jpg",
+                        "children": "",
+                        "media": {
+                           "link": "#",
+                           "playMedia": "",
+                           "playMediaSx": ""
+                        }
+                     },
+                     "content": "",
+                     "footer": ""
+                  } 
+               },
+               {
+                  "card": {
+                     "innerHtml": "",
+                     "children": "",
+                     "cardSx": "pr-xs pb-xs col-4 lg:w-auto lg:col-flex",
+                     "aosAttr": "",
+                     "image": {
+                        "wrapperSx": "ratio-1x1",
+                        "imageSx": "bg-center bg-cover",
+                        "src": "insta-3.jpg",
+                        "children": "",
+                        "media": {
+                           "link": "#",
+                           "playMedia": "",
+                           "playMediaSx": ""
+                        }
+                     },
+                     "content": "",
+                     "footer": ""
+                  } 
+               },
+               {
+                  "card": {
+                     "innerHtml": "",
+                     "children": "",
+                     "cardSx": "pr-xs pb-xs col-4 lg:w-auto lg:col-flex",
+                     "aosAttr": "",
+                     "image": {
+                        "wrapperSx": "ratio-1x1",
+                        "imageSx": "bg-center bg-cover",
+                        "src": "insta-4.jpg",
+                        "children": "",
+                        "media": {
+                           "link": "#",
+                           "playMedia": "",
+                           "playMediaSx": ""
+                        }
+                     },
+                     "content": "",
+                     "footer": ""
+                  } 
+               },
+               {
+                  "card": {
+                     "innerHtml": "",
+                     "children": "",
+                     "cardSx": "pr-xs pb-xs col-4 lg:w-auto lg:col-flex",
+                     "aosAttr": "",
+                     "image": {
+                        "wrapperSx": "w-full h-full ratio-none md:ratio-1x1",
+                        "imageSx": "",
+                        "src": "",
+                        "innerHtml": "<div class='bg-primary pos-absolute pin p-xxs lg:p-sm flex-col fcolor-white'><h3 class='fsize-xxs fweight-bold sm:fsize-3sm lg:fsize-2xs xl:fsize-3sm'>Keep Up to Date with the Gurkha Museum</h3><div class='mt-auto'><p>Follow us<br /> on Instagram</p><div class='line-divier mt-xxs mb-xs'><span class='border border-1 border-secondary radius-full'></span></div>",
+                        "media": {
+                           "link": "#",
+                           "playMedia": "",
+                           "playMediaSx": ""
+                        }
+                     },
+                     "content": "",
+                     "footer": ""
+                  } 
+               },
+               {
+                  "card": {
+                     "innerHtml": "",
+                     "children": "",
+                     "cardSx": "pr-xs pb-xs col-4 lg:w-auto lg:col-flex",
+                     "aosAttr": "",
+                     "image": {
+                        "wrapperSx": "ratio-1x1",
+                        "imageSx": "bg-center bg-cover",
+                        "src": "insta-5.jpg",
+                        "children": "",
+                        "media": {
+                           "link": "#",
+                           "playMedia": "",
+                           "playMediaSx": ""
+                        }
+                     },
+                     "content": "",
+                     "footer": ""
+                  } 
+               }
+            ]
+         } 
+      })
+}
+<!-- footer -->  
+<footer class="@@if(context.footerTopGap){@@footerTopGap} py-2sm lg:py-2lg bg-primary">
+   <div class="container mx-auto md:container-sm lg:container-lg lg:flex-row lg:flex-wrap xl:container-xl">
+      <div class="md:-mb-md w-full col-count-3 md:col-count-3 lg:col-count-4">
+         <div class="flex-col fsize-xxs fcolor-white pb-md">
+            <h3 class="mb-xs fweight-black">Visit Us</h3>
+            <ul class="list-reset">
+               <li class="mb-xxs"><a href="#" class="fcolor-inherit no-underline hover:fcolor-secondary">Opening Times</a></li>
+               <li class="mb-xxs"><a href="#" class="fcolor-inherit no-underline hover:fcolor-secondary">Entry Costs</a></li>
+               <li class="mb-xxs"><a href="#" class="fcolor-inherit no-underline hover:fcolor-secondary">Group Visits</a></li>
+               <li class="mb-xxs"><a href="#" class="fcolor-inherit no-underline hover:fcolor-secondary">Schools & Education</a></li>
+               <li class="mb-xxs"><a href="#" class="fcolor-inherit no-underline hover:fcolor-secondary">Venue Hire</a></li>
+            </ul>
+         </div>
+         <div class="flex-col fsize-xxs fcolor-white pb-md">
+            <h3 class="mb-xs fweight-black">What’s On</h3>
+            <ul class="list-reset">
+               <li class="mb-xxs"><a href="#" class="fcolor-inherit no-underline hover:fcolor-secondary">Lectures</a></li>
+               <li class="mb-xxs"><a href="#" class="fcolor-inherit no-underline hover:fcolor-secondary">Exhibitions</a></li>
+               <li class="mb-xxs"><a href="#" class="fcolor-inherit no-underline hover:fcolor-secondary">Special Events</a></li>
+               <li class="mb-xxs"><a href="#" class="fcolor-inherit no-underline hover:fcolor-secondary">School Holidays</a></li>
+            </ul>
+         </div>
+         <div class="flex-col fsize-xxs fcolor-white pb-md">
+            <h3 class="mb-xs fweight-black">Explore & Research</h3>
+            <ul class="list-reset">
+               <li class="mb-xxs"><a href="#" class="fcolor-inherit no-underline hover:fcolor-secondary">Research Facilities</a></li>
+               <li class="mb-xxs"><a href="archive-enquiry.html" class="fcolor-inherit no-underline hover:fcolor-secondary">Archive enquires</a></li>
+               <li class="mb-xxs"><a href="history-and-collections.html" class="fcolor-inherit no-underline hover:fcolor-secondary">History & Collections</a></li>
+            </ul>
+         </div>
+         <div class="flex-col fsize-xxs fcolor-white pb-md">
+            <h3 class="mb-xs fweight-black">About Us</h3>
+            <ul class="list-reset">
+               <li class="mb-xxs"><a href="#" class="fcolor-inherit no-underline hover:fcolor-secondary">Trustees & Patrons</a></li>
+               <li class="mb-xxs"><a href="#" class="fcolor-inherit no-underline hover:fcolor-secondary">Staff</a></li>
+               <li class="mb-xxs"><a href="#" class="fcolor-inherit no-underline hover:fcolor-secondary">Job Vacancies</a></li>
+               <li class="mb-xxs"><a href="#" class="fcolor-inherit no-underline hover:fcolor-secondary">Annual Report</a></li>
+               <li class="mb-xxs"><a href="#" class="fcolor-inherit no-underline hover:fcolor-secondary">Nepali</a></li>
+            </ul>
+         </div>
+         <div class="flex-col fsize-xxs fcolor-white pb-md">
+            <h3 class="mb-xs fweight-black">Join & Support</h3>
+            <ul class="list-reset">
+               <li class="mb-xxs"><a href="become-a-friend.html" class="fcolor-inherit no-underline hover:fcolor-secondary">Become a Friend</a></li>
+               <li class="mb-xxs"><a href="#" class="fcolor-inherit no-underline hover:fcolor-secondary">Corporate Packages</a></li>
+               <li class="mb-xxs"><a href="#" class="fcolor-inherit no-underline hover:fcolor-secondary">Bequest a Gift</a></li>
+               <li class="mb-xxs"><a href="#" class="fcolor-inherit no-underline hover:fcolor-secondary">Volunteer</a></li>
+               <li class="mb-xxs"><a href="#" class="fcolor-inherit no-underline hover:fcolor-secondary">Donate an Item</a></li>
+               <li class="mb-xxs"><a href="shop.html" class="fcolor-inherit no-underline hover:fcolor-secondary">Shop</a></li>
+            </ul>
+         </div>
+         <div class="flex-col fsize-xxs fcolor-white pb-md">
+            <h3 class="mb-xs fweight-black">Legal</h3>
+            <ul class="list-reset">
+               <li class="mb-xxs"><a href="#" class="fcolor-inherit no-underline hover:fcolor-secondary">Terms & Conditions</a></li>
+               <li class="mb-xxs"><a href="#" class="fcolor-inherit no-underline hover:fcolor-secondary">Privacy Policy</a></li>
+               <li class="mb-xxs"><a href="#" class="fcolor-inherit no-underline hover:fcolor-secondary">Sitemap</a></li>
+            </ul>
+         </div>
+         <div class="d-hidden md:d-inline-flex flex-col fsize-xxs fcolor-white pb-md">
+            <h3 class="mb-xs fweight-black">Contact</h3>
+            <ul class="list-reset">
+               <li class="mb-xxs"><a href="tel:01962 842832" class="fcolor-inherit no-underline hover:fcolor-secondary">01962 842832</a></li>
+               <li class="mb-xxs"><a href="mailto:admin@thegurkhamuseum.co.uk" class="fcolor-inherit no-underline hover:fcolor-secondary">admin@thegurkhamuseum.co.uk</a></li>
+               <li class="mb-xxs pt-sm">
+                  The Gurkha Museum<br/>
+                  Peninsula Barracks<br/>
+                  Romsey Road<br/>
+                  Winchester<br/>
+                  SO23 8TS
+               </li>
+               <li class="mb-xxs pt-sm">
+                  @@include('./_includes/_socialmedia.html', {
+                     "smGroup": {
+                        "wrapperSx": "flex-row -mr-xxs mb-xs",
+                        "icons": [
+                           {
+                              "icon" : {
+                                 "link": "#",
+                                 "icon": "<svg fill='currentColor' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 25.4 25.4'><path d='M16 13.2h-2.3v5.7h-2.3v-5.7h-2v-2.3h1.9V9.6c0-.8.3-1.6.8-2.2.6-.6 1.2-.9 2-.9H16v2.3h-1.9c-.1 0-.2.1-.3.2-.1.1-.1.3-.1.5v1.2H16v2.5zm9.4-.5c0-1.8-.3-3.4-1-4.9-.7-1.5-1.6-2.9-2.7-4-1.1-1.2-2.5-2.1-4-2.7-1.5-.7-3.2-1-4.9-1S9.3.3 7.7 1c-1.5.7-2.9 1.6-4 2.7-1.1 1.2-2 2.5-2.7 4-.7 1.6-1 3.3-1 5s.3 3.4 1 4.9c.7 1.5 1.6 2.9 2.7 4s2.5 2 4 2.7c1.5.7 3.2 1 4.9 1s3.4-.3 4.9-1c1.5-.7 2.9-1.6 4-2.7s2-2.5 2.7-4c.8-1.5 1.2-3.1 1.2-4.9'></path></svg>",
+                                 "iconSx": "fcolor-inherit hover:fcolor-secondary icon icon-sm mr-xxs"
+                              }
+                           },
+                           {
+                              "icon" : {
+                                 "link": "#",
+                                 "icon": "<svg fill='currentColor' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 25.4 25.4'><path d='M18.1 9.4c.3 0 .5-.1.8-.2.2-.1.5-.1.7-.2-.2.2-.4.5-.6.7-.2.2-.5.4-.7.6v.3c0 .9-.2 1.7-.5 2.6-.3.9-.8 1.6-1.4 2.3-.6.7-1.4 1.3-2.3 1.7-.9.4-2 .7-3.1.7-.7 0-1.4-.1-2.1-.3-.7-.2-1.3-.5-1.8-.8h.6c1.2 0 2.3-.4 3.2-1.1-.6 0-1.1-.2-1.5-.5-.4-.3-.7-.8-.9-1.3.2 0 .3.1.4.1h.4c.1 0 .2 0 .3-.1-.6-.1-1.1-.4-1.4-.9-.4-.5-.6-1-.6-1.6.3.2.7.3 1.2.3-.7-.5-1.1-1.2-1.1-2.1 0-.5.1-.9.3-1.3.7.8 1.4 1.4 2.3 1.9.9.5 1.9.7 3 .8 0-.2-.1-.4-.1-.6 0-.7.3-1.3.8-1.8s1.1-.8 1.8-.8c.4 0 .7.1 1 .2.3.1.6.3.8.6.3 0 .6-.1.9-.3.2 0 .5-.1.7-.3-.1.3-.3.6-.5.8-.1.3-.4.5-.6.6m7.3 3.3c0-1.8-.3-3.4-1-4.9-.7-1.5-1.6-2.9-2.7-4s-2.5-2-4-2.7c-1.5-.7-3.2-1-4.9-1S9.3.3 7.7 1c-1.5.7-2.9 1.6-4 2.7-1.2 1.2-2.1 2.5-2.7 4-.7 1.5-1 3.2-1 4.9s.3 3.4 1 4.9c.7 1.5 1.6 2.9 2.7 4 1.2 1.1 2.5 2 4 2.7 1.5.7 3.2 1 4.9 1s3.4-.3 4.9-1c1.5-.7 2.9-1.6 4-2.7s2-2.5 2.7-4c.8-1.4 1.2-3 1.2-4.8'></path></svg>",
+                                 "iconSx": "fcolor-inherit hover:fcolor-secondary icon icon-sm mr-xxs"
+                              }
+                           },
+                           {
+                              "icon" : {
+                                 "link": "#",
+                                 "icon": "<svg fill='currentColor' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 25.4 25.4'><path d='M15.5 12.7c0-1.5-1.2-2.7-2.8-2.7s-2.8 1.2-2.8 2.7c0 1.5 1.2 2.7 2.8 2.7s2.8-1.2 2.8-2.7M18 9.5V7.9c0-.3-.3-.6-.6-.6h-1.6c-.3 0-.6.3-.6.6v1.5c0 .3.3.6.6.6h1.6c.4.1.6-.2.6-.5m0 8v-5.8h-1.2c.2.3.2.7.2 1.2 0 2.3-1.9 4.2-4.3 4.2s-4.3-1.8-4.3-4.2c0-.4 0-.8.2-1.2H7.3v5.8c0 .3.3.5.6.5h9.6c.3.1.5-.2.5-.5m1.6.4c0 1-.8 1.7-1.8 1.7H7.5c-1 0-1.8-.8-1.8-1.7V7.6c0-1 .8-1.8 1.8-1.8h10.3c1 0 1.8.8 1.8 1.8v10.3zm5.8-5.2C25.3 5.6 19.6-.1 12.7 0 5.7.1 0 5.7 0 12.7c0 7 5.7 12.7 12.7 12.7 7 0 12.7-5.7 12.7-12.7'></path></svg>",
+                                 "iconSx": "fcolor-inherit hover:fcolor-secondary icon icon-sm mr-xxs"
+                              }
+                           },
+                           {
+                              "icon" : {
+                                 "link": "#",
+                                 "icon": "<svg fill='currentColor' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50.01 50.08'><defs><clipPath id='a' transform='translate(-.03 .01)'><path fill='none' d='M.03-.01h50.01v50.08H.03z'/></clipPath></defs><g clip-path='url(#a)'><path d='M19.62 26.71a3 3 0 1 1-3-3 3 3 0 0 1 3 3m-3-5.56a5.59 5.59 0 1 0 5.55 5.58 5.55 5.55 0 0 0-5.55-5.58m14.42-2.87a16.55 16.55 0 0 0-12.2 0c3.25 1.49 5.43 3.72 6.1 7.26.65-3.55 2.87-5.77 6.1-7.27m5.24 8.46a3 3 0 1 1-3-3 3 3 0 0 1 3 3m2.57 0a5.54 5.54 0 0 0-5.52-5.61 5.59 5.59 0 1 0 5.52 5.61m2.87-9.22l-2.73 3a8.39 8.39 0 0 1 2.62 7.12 8.15 8.15 0 0 1-2.34 4.91 8.47 8.47 0 0 1-11.7.37l-2.6 2.92-2.66-2.88a8.47 8.47 0 0 1-7.32 2 8.24 8.24 0 0 1-4.92-3 8.47 8.47 0 0 1 .9-11.4l-2.73-2.94c.31 0 .48-.07.64-.07h1.51c2.33.16 4.59.06 6.53-1.47a18.85 18.85 0 0 1 18.14 1.09 2.72 2.72 0 0 0 1.26.36h5.43m8.22 7.56a24.46 24.46 0 0 0-2-9.76 25.59 25.59 0 0 0-5.34-8 24.87 24.87 0 0 0-7.87-5.31 24.45 24.45 0 0 0-9.79-2 24.45 24.45 0 0 0-9.76 2A24.85 24.85 0 0 0 7.3 7.34a25.59 25.59 0 0 0-5.34 8 24.43 24.43 0 0 0-2 9.76 24.43 24.43 0 0 0 2 9.76 24.93 24.93 0 0 0 13.28 13.26 24.45 24.45 0 0 0 9.76 2 24.45 24.45 0 0 0 9.76-2 24.93 24.93 0 0 0 13.28-13.28 24.46 24.46 0 0 0 2-9.76'/></g></svg>",
+                                 "iconSx": "fcolor-inherit hover:fcolor-secondary icon icon-sm mr-xxs"
+                              }
+                           }
+                        ] 
+                     }
+                  })
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="md:-mb-md w-full">
+         <div class="md:d-hidden flex-col fsize-xxs fcolor-white pb-md">
+            <h3 class="mb-xs fweight-black">Contact</h3>
+            <div class="flex-row flex-wrap -mr-sm">
+               <ul class="list-reset pr-sm">
+                  <li class="mb-xxs">
+                     The Gurkha Museum<br/>
+                     Peninsula Barracks<br/>
+                     Romsey Road<br/>
+                     Winchester<br/>
+                     SO23 8TS
+                  </li>
+               </ul>
+               <ul class="list-reset pr-sm">
+                  <li class="mb-xxs"><a href="tel:01962 842832" class="fcolor-inherit no-underline hover:fcolor-secondary">01962 842832</a></li>
+                  <li class="mb-xxs"><a href="mailto:admin@thegurkhamuseum.co.uk" class="fcolor-inherit no-underline hover:fcolor-secondary">admin@thegurkhamuseum.co.uk</a></li>
+                  <li class="mb-xxs md:pt-sm">
+                     @@include('./_includes/_socialmedia.html', {
+                        "smGroup": {
+                           "wrapperSx": "flex-row -mr-xxs mb-xs",
+                           "icons": [
+                              {
+                                 "icon" : {
+                                    "link": "#",
+                                    "icon": "<svg fill='currentColor' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 25.4 25.4'><path d='M16 13.2h-2.3v5.7h-2.3v-5.7h-2v-2.3h1.9V9.6c0-.8.3-1.6.8-2.2.6-.6 1.2-.9 2-.9H16v2.3h-1.9c-.1 0-.2.1-.3.2-.1.1-.1.3-.1.5v1.2H16v2.5zm9.4-.5c0-1.8-.3-3.4-1-4.9-.7-1.5-1.6-2.9-2.7-4-1.1-1.2-2.5-2.1-4-2.7-1.5-.7-3.2-1-4.9-1S9.3.3 7.7 1c-1.5.7-2.9 1.6-4 2.7-1.1 1.2-2 2.5-2.7 4-.7 1.6-1 3.3-1 5s.3 3.4 1 4.9c.7 1.5 1.6 2.9 2.7 4s2.5 2 4 2.7c1.5.7 3.2 1 4.9 1s3.4-.3 4.9-1c1.5-.7 2.9-1.6 4-2.7s2-2.5 2.7-4c.8-1.5 1.2-3.1 1.2-4.9'></path></svg>",
+                                    "iconSx": "fcolor-inherit hover:fcolor-secondary icon icon-sm mr-xxs"
+                                 }
+                              },
+                              {
+                                 "icon" : {
+                                    "link": "#",
+                                    "icon": "<svg fill='currentColor' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 25.4 25.4'><path d='M18.1 9.4c.3 0 .5-.1.8-.2.2-.1.5-.1.7-.2-.2.2-.4.5-.6.7-.2.2-.5.4-.7.6v.3c0 .9-.2 1.7-.5 2.6-.3.9-.8 1.6-1.4 2.3-.6.7-1.4 1.3-2.3 1.7-.9.4-2 .7-3.1.7-.7 0-1.4-.1-2.1-.3-.7-.2-1.3-.5-1.8-.8h.6c1.2 0 2.3-.4 3.2-1.1-.6 0-1.1-.2-1.5-.5-.4-.3-.7-.8-.9-1.3.2 0 .3.1.4.1h.4c.1 0 .2 0 .3-.1-.6-.1-1.1-.4-1.4-.9-.4-.5-.6-1-.6-1.6.3.2.7.3 1.2.3-.7-.5-1.1-1.2-1.1-2.1 0-.5.1-.9.3-1.3.7.8 1.4 1.4 2.3 1.9.9.5 1.9.7 3 .8 0-.2-.1-.4-.1-.6 0-.7.3-1.3.8-1.8s1.1-.8 1.8-.8c.4 0 .7.1 1 .2.3.1.6.3.8.6.3 0 .6-.1.9-.3.2 0 .5-.1.7-.3-.1.3-.3.6-.5.8-.1.3-.4.5-.6.6m7.3 3.3c0-1.8-.3-3.4-1-4.9-.7-1.5-1.6-2.9-2.7-4s-2.5-2-4-2.7c-1.5-.7-3.2-1-4.9-1S9.3.3 7.7 1c-1.5.7-2.9 1.6-4 2.7-1.2 1.2-2.1 2.5-2.7 4-.7 1.5-1 3.2-1 4.9s.3 3.4 1 4.9c.7 1.5 1.6 2.9 2.7 4 1.2 1.1 2.5 2 4 2.7 1.5.7 3.2 1 4.9 1s3.4-.3 4.9-1c1.5-.7 2.9-1.6 4-2.7s2-2.5 2.7-4c.8-1.4 1.2-3 1.2-4.8'></path></svg>",
+                                    "iconSx": "fcolor-inherit hover:fcolor-secondary icon icon-sm mr-xxs"
+                                 }
+                              },
+                              {
+                                 "icon" : {
+                                    "link": "#",
+                                    "icon": "<svg fill='currentColor' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 25.4 25.4'><path d='M15.5 12.7c0-1.5-1.2-2.7-2.8-2.7s-2.8 1.2-2.8 2.7c0 1.5 1.2 2.7 2.8 2.7s2.8-1.2 2.8-2.7M18 9.5V7.9c0-.3-.3-.6-.6-.6h-1.6c-.3 0-.6.3-.6.6v1.5c0 .3.3.6.6.6h1.6c.4.1.6-.2.6-.5m0 8v-5.8h-1.2c.2.3.2.7.2 1.2 0 2.3-1.9 4.2-4.3 4.2s-4.3-1.8-4.3-4.2c0-.4 0-.8.2-1.2H7.3v5.8c0 .3.3.5.6.5h9.6c.3.1.5-.2.5-.5m1.6.4c0 1-.8 1.7-1.8 1.7H7.5c-1 0-1.8-.8-1.8-1.7V7.6c0-1 .8-1.8 1.8-1.8h10.3c1 0 1.8.8 1.8 1.8v10.3zm5.8-5.2C25.3 5.6 19.6-.1 12.7 0 5.7.1 0 5.7 0 12.7c0 7 5.7 12.7 12.7 12.7 7 0 12.7-5.7 12.7-12.7'></path></svg>",
+                                    "iconSx": "fcolor-inherit hover:fcolor-secondary icon icon-sm mr-xxs"
+                                 }
+                              },
+                              {
+                                 "icon" : {
+                                    "link": "#",
+                                    "icon": "<svg fill='currentColor' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50.01 50.08'><defs><clipPath id='a' transform='translate(-.03 .01)'><path fill='none' d='M.03-.01h50.01v50.08H.03z'/></clipPath></defs><g clip-path='url(#a)'><path d='M19.62 26.71a3 3 0 1 1-3-3 3 3 0 0 1 3 3m-3-5.56a5.59 5.59 0 1 0 5.55 5.58 5.55 5.55 0 0 0-5.55-5.58m14.42-2.87a16.55 16.55 0 0 0-12.2 0c3.25 1.49 5.43 3.72 6.1 7.26.65-3.55 2.87-5.77 6.1-7.27m5.24 8.46a3 3 0 1 1-3-3 3 3 0 0 1 3 3m2.57 0a5.54 5.54 0 0 0-5.52-5.61 5.59 5.59 0 1 0 5.52 5.61m2.87-9.22l-2.73 3a8.39 8.39 0 0 1 2.62 7.12 8.15 8.15 0 0 1-2.34 4.91 8.47 8.47 0 0 1-11.7.37l-2.6 2.92-2.66-2.88a8.47 8.47 0 0 1-7.32 2 8.24 8.24 0 0 1-4.92-3 8.47 8.47 0 0 1 .9-11.4l-2.73-2.94c.31 0 .48-.07.64-.07h1.51c2.33.16 4.59.06 6.53-1.47a18.85 18.85 0 0 1 18.14 1.09 2.72 2.72 0 0 0 1.26.36h5.43m8.22 7.56a24.46 24.46 0 0 0-2-9.76 25.59 25.59 0 0 0-5.34-8 24.87 24.87 0 0 0-7.87-5.31 24.45 24.45 0 0 0-9.79-2 24.45 24.45 0 0 0-9.76 2A24.85 24.85 0 0 0 7.3 7.34a25.59 25.59 0 0 0-5.34 8 24.43 24.43 0 0 0-2 9.76 24.43 24.43 0 0 0 2 9.76 24.93 24.93 0 0 0 13.28 13.26 24.45 24.45 0 0 0 9.76 2 24.45 24.45 0 0 0 9.76-2 24.93 24.93 0 0 0 13.28-13.28 24.46 24.46 0 0 0 2-9.76'/></g></svg>",
+                                    "iconSx": "fcolor-inherit hover:fcolor-secondary icon icon-sm mr-xxs"
+                                 }
+                              }
+                           ] 
+                        }
+                     })
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </div>
+</footer>
+<section class="py-xs bg-white">
+   <div class="container mx-auto md:container-sm lg:container-lg lg:flex-row lg:flex-wrap xl:container-xl">
+      <div class="fsize-xxs flex-col text-center align-center mx-auto lg:flex-row lg:w-full lg:justify-space-between">
+         <div class="my-xs">© <script> document.write(new Date().getFullYear())</script> The Gurkha Museum Trust Winchester - Registered Charity Number 1169920 (formerly 272426)</div>
+         <a class="d-inline-block fcolor-inherit no-underline hover:fcolor-secondary icon-unstuck-design ratio-unstuck-design unstuck-link" href="http://unstuckdesign.com/" target="_blank">
+            <div class="pos-absolute pin">
+               <svg class="unstuck-design" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 191 14.1">
+                  <path class="st0" d="M99.6 10.8c-.1-.1-.2-.2-.2-.4 0-.3.2-.5.5-.5.1 0 .2 0 .3.1.8.6 1.7.9 2.6.9 1 0 1.7-.5 1.7-1.3s-1-1.1-2-1.4c-1.3-.4-2.7-.8-2.7-2.3 0-1.4 1.2-2.3 2.8-2.3.9 0 1.8.3 2.6.7.2.1.3.3.3.5 0 .3-.2.5-.5.5-.1 0-.2 0-.3-.1-.7-.4-1.4-.6-2.1-.6-1 0-1.6.5-1.6 1.2 0 .8 1 1.1 2.1 1.4 1.3.4 2.6.9 2.6 2.3 0 1.6-1.3 2.5-2.9 2.5-1.2-.1-2.3-.5-3.2-1.2m8.6-1.3V4.6h-.7c-.3 0-.5-.3-.5-.5 0-.3.3-.5.5-.5h.7V1.7c0-.3.3-.6.6-.6s.6.3.6.6v1.9h2.1c.3 0 .6.3.6.5 0 .3-.3.5-.6.5h-2.1v4.8c0 1 .6 1.4 1.4 1.4.4 0 .6-.1.7-.1.3 0 .5.2.5.5 0 .2-.1.4-.3.5-.3.1-.7.2-1.2.2-1.3-.1-2.3-.7-2.3-2.4m13 1.6c0 .3-.3.6-.6.6s-.6-.3-.6-.6v-.9c-.6.9-1.4 1.6-2.8 1.6-2 0-3.1-1.3-3.1-3.3V3.9c0-.3.3-.6.6-.6s.6.3.6.6v4.2c0 1.5.8 2.5 2.3 2.5 1.4 0 2.5-1 2.5-2.6V3.8c0-.3.3-.6.6-.6s.6.3.6.6l-.1 7.3zm2.2-3.5c0-2.3 1.8-4.3 4.2-4.3 1.4 0 2.3.5 3 1.2.1.1.2.2.2.4 0 .3-.3.6-.6.6-.2 0-.3-.1-.4-.1-.6-.5-1.3-1-2.2-1-1.7 0-2.9 1.4-2.9 3.2 0 1.8 1.3 3.2 3 3.2.9 0 1.7-.4 2.3-1 .1-.1.2-.2.3-.2.3 0 .6.3.6.6 0 .1-.1.3-.2.4-.8.8-1.7 1.3-3.1 1.3-2.4 0-4.2-2-4.2-4.3m9.5-7c0-.3.3-.6.6-.6s.6.3.6.6v7.5l4.4-4.5c.1-.2.3-.2.5-.2.3 0 .6.3.6.6 0 .2-.1.3-.2.5l-2.7 2.6 2.9 3.7c.1.1.2.3.2.4 0 .3-.3.6-.6.6-.2 0-.4-.1-.5-.3l-2.8-3.6-1.7 1.7v1.6c0 .3-.3.6-.6.6s-.6-.3-.6-.6L132.9.6zm9.5 7c0 2.2 1.5 3.5 3.2 3.5 1.7 0 3.3-1.4 3.3-3.5s-1.6-3.5-3.3-3.5c-1.8 0-3.2 1.3-3.2 3.5m7.2 3.7c0 .2-.2.4-.4.4s-.4-.2-.4-.4V9.8c-.7 1.1-1.7 2-3.3 2-1.9 0-3.9-1.6-3.9-4.2s2-4.2 3.9-4.2c1.6 0 2.7.9 3.3 1.9V.4c0-.2.2-.4.4-.4s.4.2.4.4v10.9zm9.1-4.1c-.1-1.6-1-3.1-2.9-3.1-1.6 0-2.8 1.4-3 3.1h5.9zm-2.8 4.6c-2.1 0-4-1.7-4-4.2 0-2.3 1.6-4.2 3.8-4.2 2.3 0 3.7 1.9 3.7 4.2 0 .2-.2.4-.4.4h-6.3c.1 2 1.6 3.2 3.2 3.2 1.2 0 2-.5 2.6-1.1.1-.1.1-.1.3-.1.2 0 .4.2.4.4 0 .1 0 .2-.1.3-.8.6-1.7 1.1-3.2 1.1m5.3-1.1c-.1 0-.1-.2-.1-.3 0-.2.2-.4.4-.4.1 0 .2 0 .3.1.8.6 1.7.9 2.7.9 1.1 0 1.9-.6 1.9-1.5 0-1-1-1.3-2.1-1.6-1.3-.4-2.8-.8-2.8-2.2 0-1.3 1.1-2.2 2.7-2.2.9 0 1.8.3 2.6.7.1.1.2.2.2.4s-.2.4-.4.4c-.1 0-.2 0-.2-.1-.7-.4-1.5-.7-2.3-.7-1.1 0-1.8.6-1.8 1.4 0 .9 1.1 1.2 2.3 1.6 1.3.4 2.7.8 2.7 2.3 0 1.4-1.2 2.4-2.8 2.4-1.2-.1-2.4-.6-3.3-1.2m8.5-6.9c0-.2.2-.4.4-.4s.4.2.4.4v7.4c0 .2-.2.4-.4.4s-.4-.2-.4-.4V3.8zm-.1-3.1c0-.3.2-.5.5-.5s.5.2.5.5V1c0 .3-.2.5-.5.5s-.5-.2-.5-.5V.7zm10.8 6.5c0-1.9-1.7-3.1-3.3-3.1-1.7 0-3.1 1.2-3.1 3.1 0 1.8 1.5 3.1 3.1 3.1 1.6-.1 3.3-1.3 3.3-3.1m-6.8 5.8c-.1-.1-.2-.2-.2-.3 0-.2.2-.4.4-.4.1 0 .2 0 .2.1.9.7 2 1 3.1 1 1.9 0 3.2-1.1 3.2-3.1V9.1c-.7 1-1.8 1.9-3.4 1.9-1.9 0-3.9-1.5-3.9-3.8s1.9-3.8 3.9-3.8c1.6 0 2.7.9 3.4 1.8V3.9c0-.2.2-.4.4-.4s.4.2.4.4v6.5c0 1.2-.4 2.1-1 2.7-.7.7-1.7 1.1-2.9 1.1-1.3 0-2.5-.4-3.6-1.2M184 3.8c0-.2.2-.4.4-.4s.4.2.4.4V5c.5-.9 1.4-1.7 2.9-1.7 2 0 3.2 1.4 3.2 3.3v4.6c0 .2-.2.4-.4.4s-.4-.2-.4-.4V6.7c0-1.7-.9-2.8-2.6-2.8-1.6 0-2.8 1.2-2.8 2.9v4.3c0 .2-.2.4-.4.4s-.4-.2-.4-.4l.1-7.3zm-86.9 8.1c-.3 0-.6-.3-.6-.6V6.2c0-.2-.1-1.8-2.3-1.8-.8 0-1.5.2-1.9.6-.5.5-.5 1.1-.5 1.1v2.2c0 1.2-1.1 1-1.1 1V6.1c0-.1 0-1.1.8-1.9.6-.6 1.5-1 2.7-1 1.1 0 2 .3 2.6.9.8.8.8 1.9.8 2v5.1c.1.5-.2.7-.5.7"></path>
+                  <path class="st0" d="M87.7 3.4c.3 0 .6.3.6.6v5.1c0 .2.1 1.8 2.3 1.8.8 0 1.5-.2 1.9-.6.5-.6.5-1.2.5-1.2V6.9c0-1.2 1.1-1 1.1-1v3.2c0 .1 0 1.1-.8 1.9-.6.6-1.5 1-2.7 1-1.1 0-2-.3-2.6-.9-.8-.8-.8-1.9-.8-2V4c0-.4.2-.6.5-.6M74.5 14c1.1 0 1.9-.6 2.5-2.1l3-7.1c0-.1.1-.2.1-.3 0-.3-.2-.6-.6-.6-.3 0-.5.2-.5.4l-2.3 6L74 4.4c-.1-.2-.3-.4-.6-.4s-.6.2-.6.6c0 .1 0 .2.1.3l3.2 6.7-.1.1c-.4.9-.8 1.3-1.5 1.3-.4 0-.6-.1-.8-.1-.1 0-.2-.1-.3-.1-.2 0-.5.2-.5.5s.2.4.4.5c.4.1.7.2 1.2.2m-6.7-3.2c-1.4 0-2.7-1.2-2.7-2.9S66.4 5 67.8 5c1.4 0 2.7 1.1 2.7 2.9 0 1.8-1.2 2.9-2.7 2.9m-3.8.3c0 .3.2.6.6.6.3 0 .6-.3.6-.6v-1c.6.9 1.5 1.6 2.9 1.6 1.8 0 3.6-1.5 3.6-3.9 0-2.5-1.8-3.9-3.6-3.9-1.4 0-2.3.8-2.9 1.7V1.4c0-.3-.2-.6-.6-.6-.3 0-.6.2-.6.6v9.7zm-6.9-.4c.1-.1.2-.2.2-.4 0-.3-.2-.5-.5-.5-.1 0-.2.1-.3.1-.6.5-1.2.9-2.2.9-1.3 0-2.5-.9-2.7-2.6h5.5c.3 0 .5-.2.5-.5 0-2-1.3-3.8-3.5-3.8-2.1 0-3.6 1.8-3.6 3.9 0 2.3 1.7 3.9 3.8 3.9 1.3.1 2.1-.3 2.8-1m-5.5-3.3c.1-1.5 1.1-2.6 2.5-2.6 1.5 0 2.3 1.2 2.4 2.6h-4.9zm-3.8 4.4c.4 0 .8-.1 1.1-.2.2-.1.3-.2.3-.4 0-.3-.2-.5-.5-.5-.1 0-.3.1-.7.1-.8 0-1.3-.3-1.3-1.3V5.1h2c.3 0 .5-.2.5-.5s-.2-.5-.5-.5h-2V2.3c0-.3-.3-.6-.6-.6s-.6.3-.6.6v1.8H45c-.3 0-.5.2-.5.5s.2.5.5.5h.6v4.6c.1 1.5 1 2.1 2.2 2.1m-6.3-.7c0 .3.2.6.6.6.3 0 .6-.2.6-.6V4.6c0-.3-.2-.6-.6-.6-.3 0-.6.3-.6.6v6.5zm-.1-9.2c0 .4.3.6.7.6.4 0 .7-.2.7-.6v-.2c0-.4-.3-.6-.7-.6-.4 0-.7.2-.7.6v.2zm-4.8 9.9c1.5 0 2.7-.8 2.7-2.3 0-1.4-1.3-1.8-2.4-2.2C35.9 7 35 6.7 35 6c0-.6.6-1.1 1.5-1.1.6 0 1.3.2 2 .6.1 0 .1.1.2.1.3 0 .5-.2.5-.5 0-.2-.1-.4-.3-.5-.7-.4-1.6-.6-2.4-.6-1.5 0-2.6.9-2.6 2.2 0 1.4 1.3 1.8 2.5 2.1 1 .3 1.9.6 1.9 1.3 0 .7-.7 1.2-1.6 1.2-.8 0-1.6-.3-2.4-.8-.1 0-.2-.1-.3-.1-.3 0-.5.2-.5.5 0 .2.1.3.2.4.8.6 1.9 1 2.9 1m-8.4-1c-1.4 0-2.7-1.2-2.7-2.9S26.8 5 28.2 5c1.4 0 2.7 1.1 2.7 2.9 0 1.8-1.2 2.9-2.7 2.9m-3.8.3c0 .3.2.6.6.6.3 0 .6-.3.6-.6v-1c.6.9 1.5 1.6 2.9 1.6 1.8 0 3.6-1.5 3.6-3.9 0-2.5-1.8-3.9-3.6-3.9-1.4 0-2.3.8-2.9 1.7V1.4c0-.3-.2-.6-.6-.6-.3 0-.6.2-.6.6v9.7zm-2.5-.4c.1-.1.2-.2.2-.4 0-.3-.2-.5-.5-.5-.1 0-.2.1-.3.1-.6.5-1.2.9-2.2.9-1.3 0-2.5-.9-2.7-2.6h5.5c.3 0 .5-.2.5-.5 0-2-1.3-3.8-3.5-3.8-2.1 0-3.6 1.8-3.6 3.9 0 2.3 1.7 3.9 3.8 3.9 1.2.1 2.1-.3 2.8-1m-5.5-3.3c.1-1.5 1.1-2.6 2.5-2.6 1.5 0 2.3 1.2 2.4 2.6h-4.9zM3.3 11.3c.1.3.3.5.6.5H4c.3 0 .5-.2.6-.5l2.7-7.9 2.7 7.9c.1.3.3.5.6.5h.1c.3 0 .5-.2.6-.5l3.3-9.1c0-.1.1-.2.1-.3 0-.3-.3-.6-.6-.6s-.5.2-.6.5L10.7 10 7.9 1.8c-.1-.3-.3-.5-.6-.5s-.5.2-.6.5L4 9.9 1.2 1.8c-.1-.3-.3-.5-.6-.5s-.6.3-.6.6c0 .1 0 .2.1.3l3.2 9.1z"></path>
+               </svg>
+            </div>
+         </a>
+      </div>
+   </div>
+</section>

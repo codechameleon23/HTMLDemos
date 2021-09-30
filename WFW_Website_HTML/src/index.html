@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('./_includes/_head.html', {
+	"pageName": "Home",
+	"description": ""
+	})
+</head>
+
+<body class="jsNavbarToggle is-close flex-col">
+
+	<!-- Header -->
+	@@include('./_includes/_header.html', {
+
+	})
+
+	<!-- Main -->
+	<main class="flex-auto flex-col">
+
+		<!-- Hero banner -->
+		<section class="
+			hero-banner
+			py-xl pos-relative
+			flex-col justify-center">
+			<div class="
+				pos-absolute pin
+				bg-center bg-cover" style="background-image: url(./images/20200508_153843-cropped.jpg);"></div>
+			<div class="
+				overlay-cover-image
+				bg-cover bg-center
+            pos-absolute pin">
+			</div>
+			<div class="
+					container pos-relative
+					md:container-sm lg:container-lg xl:container-xl 
+					flex-row align-center justify-center
+					mx-auto">
+				<section class="ratio-logo icon-logo-large" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
+					<figure class="pos-absolute pin bg-cover bg-center" style="background-image: url('./images/Walden-Estate-Logo-WHITE-WEB.svg');"></figure>
+				</section>
+			</div>
+		</section>
+
+		<!-- Inro -->
+		<section class="
+			pt-2md lg:pt-xl">
+			<div class="
+					container 
+					md:container-sm lg:container-intro
+					mx-auto">
+				<div class="flex-row flex-wrap justify-center">
+					<article class="
+						text-wrap text-center w-full">
+						<h2 class="
+							uppercase
+							f-color-primary f-family-primary f-weight-regular f-size-3md">Exclusive carp fishing in the UK</h2>
+						<p>
+							Welcome to Walden Estate Fishery, we are family run fishery in South Wiltshire. Walden offers exclusive fishing in picturesque and peaceful surroundings.
+						</p>
+						<p>
+							The fishery has been created to provide a challenging mixture of specimen carp fishing. The lakes have a great mix of beautiful mirror and common carp from a variety of different
+							strains.
+							Facilities include, lodge with toilet ,shower, bait freezer and electric points, secure parking. The fishery is located in West Grimstead 1 mile off the A36 and 5 miles from
+							Salisbury.
+						</p>
+					</article>
+				</div>
+			</div>
+			<div class="
+					container 
+					md:container-sm lg:container-lg xl:container-xl 
+					flex-row align-center justify-center
+					mx-auto mt-2lg">
+				<div class="
+					flex-stretch flex-row flex-wrap
+					-mr-xs -mb-xs">
+					<section class="
+						flex-col flex-stretch
+						mb-xs pr-xs" data-aos="fade-up" data-aos-delay="200" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
+						@@include('./_includes/_figure.html', {
+						"overlay": "overlay",
+						"link": "lake.html",
+						"ratio": "ratio-custom-1",
+						"title": "specimen lake",
+						"image": "waldewn-estate-fishery-2-(23-of-29)-cropped.jpg"
+						})
+					</section>
+					<section class="
+						flex-col flex-stretch
+						mb-xs pr-xs" data-aos="fade-up" data-aos-delay="400" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
+						@@include('./_includes/_figure.html', {
+						"overlay": "overlay",
+						"link": "lake.html",
+						"ratio": "ratio-custom-1",
+						"title": "day lake",
+						"image": "waldewn-estate-fishery-(3-of-5)-cropped.jpg"
+						})
+					</section>
+					<section class="
+					flex-col
+					mb-xs pr-xs
+					col-12 lg:col-3">
+						<div class="
+					flex-stretch flex-row lg:flex-col
+							-mb-xs -mr-xs">
+							<section class="
+								flex-col
+								mb-xs pr-xs
+								col-6 lg:col-12" data-aos="fade-up" data-aos-delay="600" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
+								@@include('./_includes/_figure.html', {
+								"overlay": "overlay",
+								"link": "booking-and-contact.html",
+								"ratio": "ratio-1x1",
+								"title": "book tickets",
+								"image": "waldewn-estate-fishery-2-(6-of-29)-cropped.jpeg"
+								})
+							</section>
+							<section class="
+								flex-col
+								mb-xs pr-xs
+								col-6 lg:col-12" data-aos="fade-up" data-aos-delay="600" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
+								@@include('./_includes/_figure.html', {
+								"overlay": "overlay",
+								"link": "rules.html",
+								"ratio": "ratio-1x1",
+								"title": "lake rules",
+								"image": "47132092_537157466760544_4610603308711673856_o-cropped.jpg"
+								})
+							</section>
+						</div>
+					</section>
+				</div>
+			</div>
+		</section>
+
+		<!-- Call to action -->
+		@@include('./_includes/_call-to-action.html')
+
+	</main>
+
+	<!-- Footer -->
+	@@include('./_includes/_footer.html')
+
+	<script src="js/allScript.js"></script>
+</body>
+
+</html>

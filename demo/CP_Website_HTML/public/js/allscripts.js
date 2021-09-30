@@ -156,7 +156,12 @@ $(document).ready(function() {
   $(".accordian-toggle").on('click tap',  function(){
     var elm = $(this);
     var filter_parent = $(this).closest('.accordion-toggle_wrapper');
-    current_open = $(this).attr('class').split(" ").map(i => i.includes('by_') && i).filter(i => i && i).toString();
+    // current_open = $(this).attr('class').split(" ").map(i => i.includes('by_') && i).filter(i => i && i).toString();
+    current_open = $(void 0).attr('class').split(" ").map(function (i) {
+      return i.includes('by_') && i;
+    }).filter(function (i) {
+      return i && i;
+    }).toString();
     var filter_tab = filter_parent.find('.accordion_toggle_tab[data-filterby="'+current_open+'"]');
 
     if($(this).hasClass("is-open")){

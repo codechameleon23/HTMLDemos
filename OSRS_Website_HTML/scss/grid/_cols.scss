@@ -1,0 +1,62 @@
+.col{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+*[class*="col-count-"]{
+  > *{
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+        break-inside: avoid;
+    }
+}
+
+@mixin getColumnClasses($bp) {
+
+  @each $gridSize in $gridSizes {
+
+    @if(length($gridSizes) > 1){
+      .#{$bp}col-#{$gridSize} {
+        @for $i from 1 through $gridSize {
+          &-#{$i}{
+            flex: none;
+            width: percentage($i / $gridSize);
+          }
+        }
+      }
+    }@else{
+      .#{$bp}col {
+        @for $i from 1 through $gridSize {
+          &-#{$i}{
+            flex: none;
+            width: percentage($i / $gridSize);
+          }
+        }
+      }
+    }
+  }
+
+  .#{$bp}col {
+    
+    &-auto {
+      flex: none;
+      width: auto;
+    }
+  
+    &-flex {
+      flex: 1;
+      flex: 1 1 auto;
+    }
+
+    &-unset {
+      flex: unset;
+      width: auto;
+    }
+
+    @each $colCount in $columnCount {
+      &-count-#{nth($colCount, 1)}{
+        column-count: nth($colCount, 1); 
+      }
+    }
+  }
+}

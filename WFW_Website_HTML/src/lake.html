@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   @@include('./_includes/_head.html', {
+   "pageName": "Lake",
+   "description": ""
+   })
+</head>
+
+<body class="jsNavbarToggle is-close flex-col">
+
+   <!-- Header -->
+   @@include('./_includes/_header.html', {
+   "dayLake": "true"
+   })
+
+   <!-- Main -->
+   <main class="flex-auto flex-col">
+
+      <!-- Hero banner -->
+      <section class="
+         page-banner
+			py-xl pos-relative
+			flex-col justify-center">
+         <div class="
+				pos-absolute pin
+				bg-center bg-cover" style="background-image: url(./images/day-lake-page-banner.jpg);"></div>
+         <div class="
+            overlay-cover
+            pos-absolute pin">
+            <div class="image-holder"></div>
+         </div>
+         <div class="
+               container pos-relative
+					md:container-sm lg:container-lg xl:container-xl 
+					flex-row align-center justify-center
+					mx-auto">
+            <h2 class="
+                  uppercase
+                  f-color-white f-family-primary f-weight-regular f-size-3md">day lake</h2>
+         </div>
+      </section>
+
+      <!-- Inro -->
+      <section class="
+			pt-2md lg:pt-xl">
+         <div class="
+					container 
+					md:container-sm lg:container-lg xl:container-xl
+               mx-auto">
+            <div class="flex-row flex-wrap">
+               <article class="
+                  col-12 lg:col-8 lg:pr-lg xl:pr-xl
+                  text-wrap"
+                  data-aos="fade-in" data-aos-delay="100" data-aos-duration="700" data-aos-anchor-placement="top-bottom"
+                  >
+                  <h2 class="
+                     uppercase
+                     f-color-primary f-family-primary f-weight-regular f-size-3md">A great place to spend a day fishing</h2>
+                  <p>
+                     Porerferum hariassi sint eatus duscium veliam quam arum quas ipsam ni audaeptior modistr umendendi odia vendem facia demod estia as ipsum quod quae ipsam facest faccatiam
+                     doluptatum ex escias estio idiores dendes qui res dias alitati cum qui inctio qui coritatio comnitis endes ab incia vid et am quat faccumquia sequati andelique velicius dolorrum
+                     laccae volutetur mo temos rem. Et es con peligna tusandu citaturio. Itatur aut verum fuga. Et eatius, sedita volore excesequi beaquibus, quaepero ius dolorrorero conem re corem.
+                     Igent volorere, nus unt volorro bero venis modisit, vid ut ducitaturia quodigname doloribus volute nus magnistiati net hiciis doluptatum incto tem enest, quiature susdantur rem
+                     enem laces sequiatus.
+                  </p>
+                  <p>
+                     Optaesed icipitest, sequunt, quamentiat eos moluptur, aut aut et que pre ad quatiae niti sequodi genduci aessequis aut eos excerup taturiatus autemol lessumque vitatet atem fuga.
+                     Ut as et abo. Lore reiciisserum quaeperior ad et ium conserunto blamet occus ea nulparc hiliquo cone nost magni di con raectur emoluptatur as quae mi, non re am ent minctur? Pudis
+                     ipitas dolecto quae pa venienimolor arci dit elluptam fugiaec.
+                  </p>
+               </article>
+               <div class="col-12 lg:col-4 mb-xs lg:mb-0">
+                  <div class="bg-light p-2md text-center mt-md lg:mt-0"
+                  data-aos="zoom-in" data-aos-delay="300" data-aos-duration="700" data-aos-anchor-placement="top-bottom"
+                  >
+                     <div class="text-wrap f-size-2xs">
+                        <h2 class="
+                        uppercase
+                        f-color-primary f-family-primary f-weight-regular f-size-3sm">DAy lake statistics</h2>
+                        <div class="line-divier mb-md"><span class="border border-1 border-medium radius-full"></span></div>
+                        <div class="text-wrap-sm">
+                           <p>5 acres</p>
+                           <p>150 hand picked English carp</p>
+                           <p>50 fish between 30-40lbs</p>
+                           <p>12 well-drained, comfortable swims</p>
+                           <p>Set on secure private farm land</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <!-- Carousel -->
+         <div class="container-xxl mx-auto pos-relative pt-2md lg:pt-xl">
+            <div class="
+               carousel-wrapper carousel-outer 
+               container md:container-sm lg:container-lg xl:container-xl
+               mx-auto flex-stretch">
+               <button class="
+                  jsCarouselPrv 
+                  pin-l 
+                  pos-absolute z-40 pin-t-50 mt-xs
+                  icon icon-md lg:icon-2md 
+                  bg-primary f-color-white
+                  hover:bg-medium hover:shadow-lg">
+                  <span class="p-xs flex-col">
+                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 477.175 477.175">
+                        <path fill="currentColor"
+                           d="M145.188 238.575l215.5-215.5c5.3-5.3 5.3-13.8 0-19.1s-13.8-5.3-19.1 0l-225.1 225.1c-5.3 5.3-5.3 13.8 0 19.1l225.1 225c2.6 2.6 6.1 4 9.5 4s6.9-1.3 9.5-4c5.3-5.3 5.3-13.8 0-19.1l-215.4-215.5z" />
+                        </svg>
+                  </span>
+               </button>
+               <div class="jsItemCarousel js_media_Gallery_Popup is-carousel banner-carousel owl-carousel owl-theme">
+                  <div class="item flex-row flex-stretch">
+                     @@include('./_includes/_figure.html', {
+                        "aos": "data-aos='fade' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+                        "ratio": "ratio-custom",
+                        "media": "./images/74890928_747894715686817_3610995089846829056_n.jpg",
+                        "hoverZoom": "false",
+                        "sx": "hover:overlay-cover opacity-parent-0 hover:opacity-parent-100 hover:shadow-parent-lg",
+                        "image": "slider-img-1.jpg"	
+                     })
+                  </div>
+                  <div class="item flex-row flex-stretch">
+                     @@include('./_includes/_figure.html', {
+                        "aos": "data-aos='fade' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+                        "ratio": "ratio-custom",
+                        "media": "./images/waldewn estate fishery (3 of 5).jpeg",
+                        "hoverZoom": "false",
+                        "sx": "hover:overlay-cover opacity-parent-0 hover:opacity-parent-100 hover:shadow-parent-lg",
+                        "image": "slider-img-2.jpg"	
+                     })
+                  </div>
+                  <div class="item flex-row flex-stretch">
+                     @@include('./_includes/_figure.html', {
+                        "aos": "data-aos='fade' data-aos-delay='500' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+                        "ratio": "ratio-custom",
+                        "media": "./images/waldewn estate fishery 2 (6 of 29).jpeg",
+                        "hoverZoom": "false",
+                        "sx": "hover:overlay-cover opacity-parent-0 hover:opacity-parent-100 hover:shadow-parent-lg",
+                        "image": "slider-img-3.jpg"	
+                     })
+                  </div>
+               </div>
+               <button class="
+               jsCarouselNxt 
+               pin-r 
+               pos-absolute z-40 pin-t-50 mt-xs
+               icon icon-md lg:icon-2md 
+               bg-primary f-color-white
+               hover:bg-medium hover:shadow-lg">
+                  <span class="p-xs flex-col">
+                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 477.175 477.175">
+                        <path fill="currentColor"
+                           d="M360.731 229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1 0s-5.3 13.8 0 19.1l215.5 215.5-215.5 215.5c-5.3 5.3-5.3 13.8 0 19.1 2.6 2.6 6.1 4 9.5 4 3.4 0 6.9-1.3 9.5-4l225.1-225.1c5.3-5.2 5.3-13.8.1-19z" />
+                        </svg>
+                  </span>
+               </button>
+            </div>
+         </div>
+
+         <div class="
+					container 
+					md:container-sm lg:container-lg xl:container-xl
+               mx-auto
+               pb-2md lg:py-xl">
+               <div class="flex-col lg:flex-row">
+                  <article class="text-center flex-stretch pt-2md lg:pt-0 lg:px-lg"
+                  data-aos="fade-up" data-aos-delay="100" data-aos-duration="700" data-aos-anchor-placement="top-bottom"
+                  >
+                     <div class="text-wrap-sm f-size-2xs">
+                        <h2 class="
+                           uppercase
+                           f-family-primary f-weight-regular f-size-3md">Want to book a swim<br /> or group weekend?</h2>
+                        <p>Interested in booking a session at Walden Estate Fishery? Bookings can be made by email or telephone. Check our availability and contact us to make a booking.</p>
+                        <div class="">
+                           <a href="booking-and-contact.html" class="
+                              button-lg 
+                              bg-primary hover:shadow-lg
+                              px-md py-xxs rounded
+                              f-family-primary f-size-sm f-color-white f-spacing-wide f-weight-semibold  
+                              uppercase text-center cursor-pointer no-underline d-inline-block transition-all">contact us</a>
+                        </div>
+                     </div>
+                  </article>
+                  <div class="border-primary border-b mt-2md lg:border-l lg:mt-0 lg:mt-0"></div>
+                  <article class="text-center flex-stretch pt-2md lg:pt-0 lg:px-lg"
+                  data-aos="fade-up" data-aos-delay="300" data-aos-duration="700" data-aos-anchor-placement="top-bottom"
+                  >
+                     <div class="text-wrap-sm f-size-2xs">
+                        <h2 class="
+                           uppercase
+                           f-family-primary f-weight-regular f-size-3md">Familiarise yourself<br /> with the lake rules</h2>
+                        <p>Prior to attending the site please take the time to read our lake rules. Anyone seen to be breaking any of the rules will be asked to leave the lake without a refund.</p>
+                        <div class="">
+                           <a href="rules.html" class="
+                              button-lg 
+                              bg-primary hover:shadow-lg
+                              px-md py-xxs rounded
+                              f-family-primary f-size-sm f-color-white f-spacing-wide f-weight-semibold  
+                              uppercase text-center cursor-pointer no-underline d-inline-block transition-all">view lake rules</a>
+                        </div>
+                     </div>
+                  </article>
+               </div>
+         </div>
+
+      </section>
+
+      <!-- Latest lake updates -->
+      <section class="
+         bg-light
+			py-2md lg:py-xl">
+         <div class="
+					container 
+					md:container-sm lg:container-intro
+					mx-auto">
+            <div class="flex-row flex-wrap justify-center">
+               <article class="
+                  text-wrap text-center">
+                  <h2 class="
+                     uppercase
+                     f-color-primary f-family-primary f-weight-regular f-size-3md">Latest lake updates</h2>
+                  <p>
+                     Find out more about what is happening at Walden Estate Fishery<br/> with by viewing our latest lake updates.
+                  </p>
+               </article>
+            </div>
+         </div>
+
+         <!-- Carousel -->
+         <div class="container-xxl mx-auto pos-relative pt-2md">
+            <div class="
+               carousel-wrapper carousel-outer 
+               container md:container-sm lg:container-lg xl:container-xl
+               mx-auto flex-stretch">
+               <button class="
+                  jsCarouselPrv 
+                  pin-l 
+                  pos-absolute z-40 pin-t-50 mt-xs
+                  icon icon-md lg:icon-2md 
+                  bg-primary f-color-white
+                  hover:bg-medium hover:shadow-lg">
+                  <span class="p-xs flex-col">
+                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 477.175 477.175">
+                        <path fill="currentColor"
+                           d="M145.188 238.575l215.5-215.5c5.3-5.3 5.3-13.8 0-19.1s-13.8-5.3-19.1 0l-225.1 225.1c-5.3 5.3-5.3 13.8 0 19.1l225.1 225c2.6 2.6 6.1 4 9.5 4s6.9-1.3 9.5-4c5.3-5.3 5.3-13.8 0-19.1l-215.4-215.5z" />
+                        </svg>
+                  </span>
+               </button>
+               <div class="jsItemCarousel is-carousel banner-carousel owl-carousel owl-theme">
+                  <div class="item flex-col">
+                     @@include('./_includes/_card.html', {
+                        "aos": 'data-aos="fade" data-aos-delay="100" data-aos-duration="700" data-aos-anchor-placement="top-bottom"',
+                        "ratio": "ratio-custom",
+                        "link": "latest-update-article.html",
+                        "image": "card-image-1.jpg",
+                        "date": "8th January 2020",
+                        "cardtitle": "Walden Estate Fishery update title #1",
+                        "para": "Is apit et volore elignatiunt laut restem que ne nonsequ atibus. Assit optatem none volo dusa nditas molorei umque. Em laborrum que doluptatur anima plibus ab iur magni oditatio tenimiliti andi venisqui quatio versper cilita niatem consequo to qui ..."
+                     })
+                  </div>
+                  <div class="item flex-col">
+                     @@include('./_includes/_card.html', {
+                        "aos": 'data-aos="fade" data-aos-delay="300" data-aos-duration="700" data-aos-anchor-placement="top-bottom"',
+                        "ratio": "ratio-custom",
+                        "link": "latest-update-article.html",
+                        "image": "card-image-2.jpg",
+                        "date": "8th January 2020",
+                        "cardtitle": "Walden Estate Fishery update title #2",
+                        "para": "Is apit et volore elignatiunt laut restem que ne nonsequ atibus. Assit optatem none volo dusa nditas molorei umque. Em laborrum que doluptatur anima plibus ab iur magni oditatio tenimiliti andi venisqui quatio versper cilita niatem consequo to qui ..."
+                     })
+                  </div>
+                  <div class="item flex-col">
+                     @@include('./_includes/_card.html', {
+                        "aos": 'data-aos="fade" data-aos-delay="500" data-aos-duration="700" data-aos-anchor-placement="top-bottom"',
+                        "ratio": "ratio-custom",
+                        "link": "latest-update-article.html",
+                        "image": "card-image-3.jpg",
+                        "date": "8th January 2020",
+                        "cardtitle": "Walden Estate Fishery update title #3",
+                        "para": "Is apit et volore elignatiunt laut restem que ne nonsequ atibus. Assit optatem none volo dusa nditas molorei umque. Em laborrum que doluptatur anima plibus ab iur magni oditatio tenimiliti andi venisqui quatio versper cilita niatem consequo to qui ..."
+                     })
+                  </div>
+                  <div class="item flex-col">
+                     @@include('./_includes/_card.html', {
+                        "aos": 'data-aos="fade" data-aos-delay="100" data-aos-duration="700" data-aos-anchor-placement="top-bottom"',
+                        "ratio": "ratio-custom",
+                        "link": "latest-update-article.html",
+                        "image": "card-image-4.jpg",
+                        "date": "8th January 2020",
+                        "cardtitle": "Walden Estate Fishery update title #4",
+                        "para": "Is apit et volore elignatiunt laut restem que ne nonsequ atibus. Assit optatem none volo dusa nditas molorei umque. Em laborrum que doluptatur anima plibus ab iur magni oditatio tenimiliti andi venisqui quatio versper cilita niatem consequo to qui ..."
+                     })
+                  </div>
+                  <div class="item flex-col">
+                     @@include('./_includes/_card.html', {
+                        "aos": 'data-aos="fade" data-aos-delay="300" data-aos-duration="700" data-aos-anchor-placement="top-bottom"',
+                        "ratio": "ratio-custom",
+                        "link": "latest-update-article.html",
+                        "image": "card-image-5.jpg",
+                        "date": "8th January 2020",
+                        "cardtitle": "Walden Estate Fishery update title #5",
+                        "para": "Is apit et volore elignatiunt laut restem que ne nonsequ atibus. Assit optatem none volo dusa nditas molorei umque. Em laborrum que doluptatur anima plibus ab iur magni oditatio tenimiliti andi venisqui quatio versper cilita niatem consequo to qui ..."
+                     })
+                  </div>
+                  <div class="item flex-col">
+                     @@include('./_includes/_card.html', {
+                        "aos": 'data-aos="fade" data-aos-delay="500" data-aos-duration="700" data-aos-anchor-placement="top-bottom"',
+                        "ratio": "ratio-custom",
+                        "link": "latest-update-article.html",
+                        "image": "card-image-6.jpg",
+                        "date": "8th January 2020",
+                        "cardtitle": "Walden Estate Fishery update title #6",
+                        "para": "Is apit et volore elignatiunt laut restem que ne nonsequ atibus. Assit optatem none volo dusa nditas molorei umque. Em laborrum que doluptatur anima plibus ab iur magni oditatio tenimiliti andi venisqui quatio versper cilita niatem consequo to qui ..."
+                     })
+                  </div>
+               </div>
+               <button class="
+               jsCarouselNxt 
+               pin-r 
+               pos-absolute z-40 pin-t-50 mt-xs
+               icon icon-md lg:icon-2md 
+               bg-primary f-color-white
+               hover:bg-medium hover:shadow-lg">
+                  <span class="p-xs flex-col">
+                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 477.175 477.175">
+                        <path fill="currentColor"
+                           d="M360.731 229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1 0s-5.3 13.8 0 19.1l215.5 215.5-215.5 215.5c-5.3 5.3-5.3 13.8 0 19.1 2.6 2.6 6.1 4 9.5 4 3.4 0 6.9-1.3 9.5-4l225.1-225.1c5.3-5.2 5.3-13.8.1-19z" />
+                        </svg>
+                  </span>
+               </button>
+            </div>
+         </div>
+      </section>
+
+      <!-- Call to action -->
+      @@include('./_includes/_fullcard.html')
+
+   </main>
+
+   <!-- Footer -->
+   @@include('./_includes/_footer.html')
+
+   <script src="js/allScript.js"></script>
+</body>
+
+</html>

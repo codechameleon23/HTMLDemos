@@ -1,0 +1,49 @@
+.icon {
+  @include aspect-ratio;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+
+  > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      // margin-top: auto;
+
+      @media all and (-ms-high-contrast: none) {
+
+        // IE11
+        *::-ms-backdrop,
+        & {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@mixin getIconSizeClasses($bp) {
+  @each $is in $iconsSizes {
+    @if(nth($is, 1)) {
+      .#{$bp}icon-#{nth($is, 1)} {
+        width: #{nth($is, 2)};
+
+        img {
+          max-height: #{nth($is, 2)};
+        }
+      }
+    }
+
+    @else {
+      .#{$bp}icon {
+        width: #{nth($is, 2)};
+
+        img {
+          max-height: #{nth($is, 2)};
+        }
+      }
+    }
+  }
+}

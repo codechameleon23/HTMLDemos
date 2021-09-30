@@ -1,0 +1,150 @@
+<form>
+   <div class="-m-sm flex-row flex-wrap">
+      <div class="p-sm col-12 lg:col-6 flex-col">
+         <div class="-m-xs flex-col flex-stretch">
+            <div class="p-xs">
+               <h4 class="font-weight-bold font-color-pink mb-xs">Your Moving Location…</h4>
+               <div class="-m-xs flex-col">
+                  <div class="p-xs">
+                     <input type="text" required placeholder="Your Moving Location…" value="SP1 9PL "
+                        class="px-2xs py-xs flex-stretch focus:shadow-lg transition-all bg-white border border-pink w-full">
+                  </div>
+               </div>
+            </div>
+            <div class="p-xs">
+               @@include('./_includes/_commons/g-map.html', {
+               "mapId": "map-canvas-ewe-location",
+               "mapWrapperClasses": "ratio-1x1",
+               "mapClasses": "bg-dark hover:shadow-lg transition-all"
+               })
+            </div>
+         </div>
+      </div>
+      <div class="p-sm col-12 lg:col-6 flex-col">
+         <div class="-m-xs flex-col flex-stretch">
+            <div class="p-xs lg:mt-2xl">
+               <div class="-my-sm flex-col">
+                  <div class="-mx-xxs py-sm flex-row flex-wrap md:flex-nowrap">
+                     <div class="p-xxs">
+                        <div class="icon icon-md flex-none">
+                           <img src="./images/map-marker-dark.svg" />
+                        </div>
+                     </div>
+                     <div class="p-xxs flex-auto">
+                        <div class="text-wrap w-full">
+                           <p>
+                              Wincanton Business Park,<br>
+                              Wincanton,<br>
+                              Somerset<br>
+                              BA9 9RU
+                           </p>
+                        </div>
+                     </div>
+                     <div class="p-xxs flex-col text-right col-12 md:col-auto">
+                        <div class="text-wrap w-full mb-xs">
+                           <p>8.5 miles</p>
+                        </div>
+                        @@include('./_includes/_commons/button.html', {
+                        "link": "#",
+                        "className": "mt-auto bg-dark font-color-white size-lg",
+                        "buttonText": "Select Location"
+                        })
+                     </div>
+                  </div>
+                  <div class="pb-xxxs bg-center" style="background-image: url('images/border-pattern-pink.png')"></div>
+
+                  <div class="-mx-xxs py-sm flex-row flex-wrap md:flex-nowrap font-color-pink font-weight-bold">
+                     <div class="p-xxs">
+                        <div class="icon icon-md flex-none">
+                           <img src="./images/map-marker-pink.svg" />
+                        </div>
+                     </div>
+                     <div class="p-xxs flex-auto">
+                        <div class="text-wrap w-full">
+                           <p>
+                              Wincanton Business Park,<br>
+                              XXXXXX,<br>
+                              XXXXX<br>
+                              XXXXXX
+                           </p>
+                        </div>
+                     </div>
+                     <div class="p-xxs flex-col text-right col-12 md:col-auto">
+                        <div class="text-wrap w-full mb-xs">
+                           <p>23.2 miles</p>
+                        </div>
+                        @@include('./_includes/_commons/button.html', {
+                        "link": "javascript:void(0);",
+                        "className": "mt-auto bg-aqua font-color-white size-lg",
+                        "buttonText": "Next step",
+                        "dataAttr": "data-goto",
+                        "dataAttrValue": "step_2"
+                        })
+                     </div>
+                  </div>
+                  <div class="pb-xxxs bg-center" style="background-image: url('images/border-pattern-pink.png')"></div>
+
+                  <div class="-mx-xxs py-sm flex-row flex-wrap md:flex-nowrap">
+                     <div class="p-xxs">
+                        <div class="icon icon-md flex-none">
+                           <img src="./images/map-marker-dark.svg" />
+                        </div>
+                     </div>
+                     <div class="p-xxs flex-auto">
+                        <div class="text-wrap w-full">
+                           <p>
+                              Business Enterprise Park,<br>
+                              Wincanton,<br>
+                              Somerset<br>
+                              BA9 9RU
+                           </p>
+                        </div>
+                     </div>
+                     <div class="p-xxs flex-col text-right col-12 md:col-auto">
+                        <div class="text-wrap w-full mb-xs">
+                           <p>37.6 miles</p>
+                        </div>
+                        @@include('./_includes/_commons/button.html', {
+                        "link": "#",
+                        "className": "mt-auto bg-dark font-color-white size-lg",
+                        "buttonText": "Select Location"
+                        })
+                     </div>
+                  </div>
+                  <div class="pb-xxxs bg-center" style="background-image: url('images/border-pattern-pink.png')"></div>
+
+                  <div class="-mx-xxs py-sm flex-row flex-wrap md:flex-nowrap">
+                     <div class="p-xxs">
+                        <div class="icon icon-md flex-none">
+                           <img src="./images/map-marker-dark.svg" />
+                        </div>
+                     </div>
+                     <div class="p-xxs flex-auto">
+                        <div class="text-wrap w-full">
+                           <p>
+                              Dynamic Industrial Estate,<br>
+                              Wincanton,<br>
+                              Somerset<br>
+                              BA9 9RU
+                           </p>
+                        </div>
+                     </div>
+                     <div class="p-xxs flex-col text-right col-12 md:col-auto">
+                        <div class="text-wrap w-full mb-xs">
+                           <p>44.6 miles</p>
+                        </div>
+                        @@include('./_includes/_commons/button.html', {
+                        "link": "javascript:void(0);",
+                        "className": "mt-auto bg-dark font-color-white size-lg",
+                        "buttonText": "Select Location"
+                        })
+                     </div>
+                  </div>
+                  <div class="pb-xxxs bg-center" style="background-image: url('images/border-pattern-pink.png')"></div>
+
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</form>

@@ -1,0 +1,23 @@
+@@if(context.button) {
+   @@if(context.button.type) {
+      <button class="d-inline-block @@button.buttonSxCommon @@if(context.button.buttonSx){@@button.buttonSx}" 
+         @@if(context.button.attributes){@@button.attributes} @@if(context.button.aosAttr){@@button.aosAttr}>@@if(!context.button.innerHtml){@@button.label}@@if(context.button.innerHtml){button.innerHtml}</button>
+   }
+   @@if(!context.button.type) {
+      <a href="@@if(context.button.link){@@button.link}@@if(!context.button.link){#}" 
+         class="d-inline-block @@button.buttonSxCommon @@if(context.button.buttonSx){@@button.buttonSx}"
+         @@if(context.button.attributes){@@button.attributes} @@if(context.button.aosAttr){@@button.aosAttr}>@@if(!context.button.innerHtml){@@button.label}@@if(context.button.innerHtml){button.innerHtml}</a>
+   }
+}
+
+<!-- @@include('./_includes/_button.html', {
+   "button": {
+      "innerHtml": "",
+     "type": "",
+     "buttonSx": "bg-primary hover:bg-secondary",
+     "label": "button label",
+     "link": "#",
+     "attributes": "",
+     "aosAttr": ""
+   } 
+ }) -->

@@ -1,0 +1,128 @@
+h1, h2, h3, h4 {
+  //letter-spacing: .025em;
+}
+
+b,
+strong {
+  font-weight: 600;
+}
+
+body {
+  background-image: linear-gradient( 109.6deg,  rgba(121,203,202,1) 11.2%, rgba(119,161,211,1) 91.1% );
+}
+
+.select:after {
+  right: 2.5rem;
+  border-width: .1rem;
+  border-top-width: 0;
+  border-right-width: 0;
+}
+
+.transition-all {
+  &,
+  *[class*="hover\:"],
+  *[class*="focus\:"] {
+    transition: all .45s 0s ease-in-out;
+  }
+}
+
+a.button{
+  color: inherit;
+}
+.button {
+  align-items: center;
+  //color: inherit;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  //font-weight: 400;
+  //font-size: 2.2rem;
+  &,
+  &-lg{
+    //letter-spacing: .08em;
+  }
+  @media (min-width: $bp_md) {
+    &-lg {
+      min-width: 24.2rem;
+    }
+  }
+  &:hover {
+    background: linear-gradient(145deg, $color-medium, $color-dark);
+  }
+}
+
+.hero-banner {
+  @media (min-width: $bp_lg) {
+    min-height: 65rem;
+  }
+}
+
+.page-banner {
+  min-height: 23rem;
+  @media (min-width: $bp_lg) {
+    min-height: 46rem;
+  }
+}
+
+.text-wrap {
+  >* {
+    &:not(:last-child):not(.line-divider):not(.free-child) {
+      margin-bottom: 2rem;
+    }
+  }
+  &-lg{
+    >* {
+      &:not(:last-child):not(.line-divider):not(.free-child) {
+        margin-bottom: 4rem;
+      }
+    }
+  }
+  &-md{
+    >* {
+      &:not(:last-child):not(.line-divider):not(.free-child) {
+        margin-bottom: 2.5rem;
+      }
+    }
+  }
+  &-sm{
+    >* {
+      &:not(:last-child):not(.line-divider):not(.free-child) {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+  &-xs{
+    >* {
+      &:not(:last-child):not(.line-divider):not(.free-child) {
+        margin-bottom: .5rem;
+      }
+    }
+  }
+}
+
+.marquee {
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.marquee span {
+  display: inline-block;
+  padding-left: 100%;
+  text-indent: 0;
+  animation: marquee 25s linear infinite;
+}
+.marquee span:hover {
+  animation-play-state: paused
+}
+
+/* Make it move */
+@keyframes marquee {
+  0%   { transform: translate(0, 0); }
+  100% { transform: translate(-100%, 0); }
+}
+
+.header-logos img{
+  max-height: 60px;
+}

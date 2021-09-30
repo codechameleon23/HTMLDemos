@@ -1,0 +1,57 @@
+$bp: $navbarBp;
+.navbar {
+  ul > li {
+     > a {
+        position: relative;
+        &:after {
+           content: "";
+           position: absolute;
+           width: 100%;
+           max-width: 0px;
+            height: .2rem;
+            color: inherit;
+            border: .1rem solid;
+            left: 1.25rem;
+            transform: translateX(-50%);
+            top: calc(100% - .2rem);
+            border-radius: 0.5rem;
+            transition: all 0.35s ease-in-out 0s;
+            opacity: 0;
+            @media (min-width: $bp) {
+               left: 50%;
+            }
+         }
+      }
+      &.is-active {
+        @media (min-width: $bp) {
+          color: $color-primary;
+          font-weight: 600;
+        }
+      }
+      &.is-active,
+      &:hover{
+         > a {
+           @media (min-width: $bp) {
+             color: $color-primary;
+           }
+           @media (max-width: $bp) {
+               color: $colorWhite;
+                &:after {
+                  left: 0;
+                  transform: translateX(0);
+                }
+            }
+           &:after {
+               opacity: 1;
+               max-width: calc(100% - .5rem);
+            }
+         }
+      }
+  }
+}
+
+.jsNavbarToggle.is-open .hamburger {
+    color: white;
+   top: 1.5rem;
+   right: 1.5rem;
+}

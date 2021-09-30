@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   @@include('./_includes/_head.html', {
+   "pageName": "News",
+   "description": ""
+   })
+</head>
+
+<body class="jsNavbarToggle is-close flex-col">
+
+   <!-- Header -->
+   @@include('./_includes/_header.html', {
+   "newsActive": "bg-primary fcolor-white",
+   "regUnitActive": "",
+   "assoNBranchActive": "",
+   "regJournalActive": "",
+   "resettlementActive": "",
+   "contactActive": ""
+   })
+
+   <!-- Main -->
+   <main class="flex-auto flex-col">
+
+      <!-- Banner -->
+      @@include('./_includes/_banner-carousel.html', {
+      "rowClasses": "flex-wrap -mr-2xs lg:-mr-md -mb-md",
+      "carousel": false,
+      "data": [
+      {
+      "isBanner": true,
+      "bannerClasses": "py-2xl bg-primary flex-col flex-stretch",
+      "bannerImage": "anglians_1440x673.jpg",
+      "bannerImageClasses": "bg-cover bg-center-top bg-inherit",
+      "bannerInnerClasses": "bg-white col-9 md:col-8 lg:col-6 opacity-85 md:opacity-100 shadow-sm",
+      "colClasses": "md:bg-white col-9 md:col-8 lg:col-6 flex-col pr-2xs md:pr-2lg pb-md md:pb-lg",
+      "gap": "",
+      "cardImage": "",
+      "imageClasses": "ratio-custom-1 mb-xs",
+      "imageBgClasses": "bg-center bg-cover",
+      "cardContentClasses": "banner-snippet",
+      "tag": true,
+      "tagClasses": "bg-secondary fcolor-white fsize-xs flex-col px-sm py-2xs mr-auto text-center mb-xs md:mb-md",
+      "tagText": "24th September 2019",
+      "footerClasses": "md:pt-md",
+      "cardTitle": "Main or Featured News Story Headline to go Here" ,
+      "cardTitleClasses": "fweight-semibold fsize-3sm md:fsize-2lg" ,
+      "cardText": ["News article copy or description to introduce the article will go here Itateces rem susa ndande num. Ihillupt ationes am eariasi tatemque volorest rejk."],
+      "cardButton": "Full Story",
+      "buttonLink": "#",
+      "buttonClasses": "size-lg hover:shadow-bottom button bg-primary fcolor-white hover:bg-secondary capitalize py-xs px-md"
+      }
+      ]
+      })
+
+
+      <!-- Three Column Text and Image -->
+      @@include(
+      './_includes/_column-grid.html',
+      {
+      "gap": "",
+      "rowClasses": "flex-wrap -mr-2xs -mb-md lg:-mr-lg lg:-mb-lg",
+      "childOnly": false,
+      "data": [
+      {
+      "colClasses": "flex-col col-12 lg:col-4 pr-2xs pb-md lg:pr-lg lg:pb-lg",
+      "aosAttr": "data-aos='fade-up' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+      "cardImage": "61602702_207010906939673_6325980320942837043_n.jpg",
+      "imageClasses": "ratio-1x1 mb-xs",
+      "imageBgClasses": "bg-center bg-cover",
+      "imageTag": true,
+      "imageTagClasses": "bg-secondary fcolor-white fsize-xs flex-col px-sm py-xs mr-auto text-center pos-absolute pin-l pin-t ml-sm",
+      "imageTagText": "24th September 2019",
+      "footerClasses": "pt-sm",
+      "cardTitle": "News story headline to go here" ,
+      "cardText": ["News article copy or description to introduce the article will go here Itateces rem susa ndande num. Ihillupt ationes am eariasi tatemque volorest rejk"],
+      "cardButton": "Full Story",
+      "buttonLink": "news-details.html",
+      "buttonClasses": "size-lg hover:shadow-bottom button bg-primary fsize-2sm fcolor-white hover:bg-secondary capitalize py-xs px-md"
+      },
+      {
+      "colClasses": "flex-col col-12 lg:col-4 pr-2xs pb-md lg:pr-lg lg:pb-lg",
+      "aosAttr": "data-aos='fade-up' data-aos-delay='200' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+      "cardImage": "65923392_624225961401025_4303314252679573942_n.jpg",
+      "imageClasses": "ratio-1x1 mb-xs",
+      "imageBgClasses": "bg-center bg-cover",
+      "imageTag": true,
+      "imageTagClasses": "bg-secondary fcolor-white fsize-xs flex-col px-sm py-xs mr-auto text-center pos-absolute pin-l pin-t ml-sm",
+      "imageTagText": "24th September 2019",
+      "footerClasses": "pt-sm",
+      "cardTitle": "News story headline to go here" ,
+      "cardText": ["News article copy or description to introduce the article will go here Itateces rem susa ndande num. Ihillupt ationes am eariasi tatemque volorest rejk"],
+      "cardButton": "Full Story",
+      "buttonLink": "news-details.html",
+      "buttonClasses": "size-lg hover:shadow-bottom button bg-primary fsize-2sm fcolor-white hover:bg-secondary capitalize py-xs px-md"
+      },
+      {
+      "colClasses": "flex-col col-12 lg:col-4 pr-2xs pb-md lg:pr-lg lg:pb-lg",
+      "aosAttr": "data-aos='fade-up' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+      "cardImage": "apolond-2019-070-0077-minden-day-royal-anglian-pr.jpg",
+      "imageClasses": "ratio-1x1 mb-xs",
+      "imageBgClasses": "bg-center bg-cover",
+      "imageTag": true,
+      "imageTagClasses": "bg-secondary fcolor-white fsize-xs flex-col px-sm py-xs mr-auto text-center pos-absolute pin-l pin-t ml-sm",
+      "imageTagText": "24th September 2019",
+      "footerClasses": "pt-sm",
+      "cardTitle": "News story headline to go here" ,
+      "cardText": ["News article copy or description to introduce the article will go here Itateces rem susa ndande num. Ihillupt ationes am eariasi tatemque volorest rejk"],
+      "cardButton": "Full Story",
+      "buttonLink": "news-details.html",
+      "buttonClasses": "size-lg hover:shadow-bottom button bg-primary fsize-2sm fcolor-white hover:bg-secondary capitalize py-xs px-md"
+      },
+      {
+      "colClasses": "flex-col col-12 lg:col-4 pr-2xs pb-md lg:pr-lg lg:pb-lg",
+      "aosAttr": "data-aos='fade-up' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+      "cardImage": "65726028_2254235021342047_678724471023779781_n.jpg",
+      "imageClasses": "ratio-1x1 mb-xs",
+      "imageBgClasses": "bg-center bg-cover",
+      "imageTag": true,
+      "imageTagClasses": "bg-secondary fcolor-white fsize-xs flex-col px-sm py-xs mr-auto text-center pos-absolute pin-l pin-t ml-sm",
+      "imageTagText": "24th September 2019",
+      "footerClasses": "pt-sm",
+      "cardTitle": "News story headline to go here" ,
+      "cardText": ["News article copy or description to introduce the article will go here Itateces rem susa ndande num. Ihillupt ationes am eariasi tatemque volorest rejk"],
+      "cardButton": "Full Story",
+      "buttonLink": "news-details.html",
+      "buttonClasses": "size-lg hover:shadow-bottom button bg-primary fsize-2sm fcolor-white hover:bg-secondary capitalize py-xs px-md"
+      },
+      {
+      "colClasses": "flex-col col-12 lg:col-4 pr-2xs pb-md lg:pr-lg lg:pb-lg",
+      "aosAttr": "data-aos='fade-up' data-aos-delay='200' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+      "cardImage": "65914566_2566885153323315_7564951708187075876_n.jpg",
+      "imageClasses": "ratio-1x1 mb-xs",
+      "imageBgClasses": "bg-center bg-cover",
+      "imageTag": true,
+      "imageTagClasses": "bg-secondary fcolor-white fsize-xs flex-col px-sm py-xs mr-auto text-center pos-absolute pin-l pin-t ml-sm",
+      "imageTagText": "24th September 2019",
+      "footerClasses": "pt-sm",
+      "cardTitle": "News story headline to go here" ,
+      "cardText": ["News article copy or description to introduce the article will go here Itateces rem susa ndande num. Ihillupt ationes am eariasi tatemque volorest rejk"],
+      "cardButton": "Full Story",
+      "buttonLink": "news-details.html",
+      "buttonClasses": "size-lg hover:shadow-bottom button bg-primary fsize-2sm fcolor-white hover:bg-secondary capitalize py-xs px-md"
+      },
+      {
+      "colClasses": "flex-col col-12 lg:col-4 pr-2xs pb-md lg:pr-lg lg:pb-lg",
+      "aosAttr": "data-aos='fade-up' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+      "cardImage": "ex-steelback-typhoon-stack-up.jpg",
+      "imageClasses": "ratio-1x1 mb-xs",
+      "imageBgClasses": "bg-center bg-cover",
+      "imageTag": true,
+      "imageTagClasses": "bg-secondary fcolor-white fsize-xs flex-col px-sm py-xs mr-auto text-center pos-absolute pin-l pin-t ml-sm",
+      "imageTagText": "24th September 2019",
+      "footerClasses": "pt-sm",
+      "cardTitle": "News story headline to go here" ,
+      "cardText": ["News article copy or description to introduce the article will go here Itateces rem susa ndande num. Ihillupt ationes am eariasi tatemque volorest rejk"],
+      "cardButton": "Full Story",
+      "buttonLink": "news-details.html",
+      "buttonClasses": "size-lg hover:shadow-bottom button bg-primary fsize-2sm fcolor-white hover:bg-secondary capitalize py-xs px-md"
+      },
+      {
+      "colClasses": "flex-col col-12 lg:col-4 pr-2xs pb-md lg:pr-lg lg:pb-lg",
+      "aosAttr": "data-aos='fade-up' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+      "cardImage": "apolond-2019-070-0005-minden-day-royal-anglian-pr.jpg",
+      "imageClasses": "ratio-1x1 mb-xs",
+      "imageBgClasses": "bg-center bg-cover",
+      "imageTag": true,
+      "imageTagClasses": "bg-secondary fcolor-white fsize-xs flex-col px-sm py-xs mr-auto text-center pos-absolute pin-l pin-t ml-sm",
+      "imageTagText": "24th September 2019",
+      "footerClasses": "pt-sm",
+      "cardTitle": "News story headline to go here" ,
+      "cardText": ["News article copy or description to introduce the article will go here Itateces rem susa ndande num. Ihillupt ationes am eariasi tatemque volorest rejk"],
+      "cardButton": "Full Story",
+      "buttonLink": "news-details.html",
+      "buttonClasses": "size-lg hover:shadow-bottom button bg-primary fsize-2sm fcolor-white hover:bg-secondary capitalize py-xs px-md"
+      },
+      {
+      "colClasses": "flex-col col-12 lg:col-4 pr-2xs pb-md lg:pr-lg lg:pb-lg",
+      "aosAttr": "data-aos='fade-up' data-aos-delay='200' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+      "cardImage": "ex-steelback-typhoon-golden-fields-on-patrol.jpg",
+      "imageClasses": "ratio-1x1 mb-xs",
+      "imageBgClasses": "bg-center bg-cover",
+      "imageTag": true,
+      "imageTagClasses": "bg-secondary fcolor-white fsize-xs flex-col px-sm py-xs mr-auto text-center pos-absolute pin-l pin-t ml-sm",
+      "imageTagText": "24th September 2019",
+      "footerClasses": "pt-sm",
+      "cardTitle": "News story headline to go here" ,
+      "cardText": ["News article copy or description to introduce the article will go here Itateces rem susa ndande num. Ihillupt ationes am eariasi tatemque volorest rejk"],
+      "cardButton": "Full Story",
+      "buttonLink": "news-details.html",
+      "buttonClasses": "size-lg hover:shadow-bottom button bg-primary fsize-2sm fcolor-white hover:bg-secondary capitalize py-xs px-md"
+      },
+      {
+      "colClasses": "flex-col col-12 lg:col-4 pr-2xs pb-md lg:pr-lg lg:pb-lg",
+      "aosAttr": "data-aos='fade-up' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+      "cardImage": "ex-steelback-typhoon-dcfa-addresses-the-steelbacks.jpg",
+      "imageClasses": "ratio-1x1 mb-xs",
+      "imageBgClasses": "bg-center bg-cover",
+      "imageTag": true,
+      "imageTagClasses": "bg-secondary fcolor-white fsize-xs flex-col px-sm py-xs mr-auto text-center pos-absolute pin-l pin-t ml-sm",
+      "imageTagText": "24th September 2019",
+      "footerClasses": "pt-sm",
+      "cardTitle": "News story headline to go here" ,
+      "cardText": ["News article copy or description to introduce the article will go here Itateces rem susa ndande num. Ihillupt ationes am eariasi tatemque volorest rejk"],
+      "cardButton": "Full Story",
+      "buttonLink": "news-details.html",
+      "buttonClasses": "size-lg hover:shadow-bottom button bg-primary fsize-2sm fcolor-white hover:bg-secondary capitalize py-xs px-md"
+      }
+      ]
+      }
+      )
+
+      <!-- Pagination -->
+      @@include('./_includes/_pagination.html')
+
+   </main>
+
+   <!-- Footer -->
+   @@include('./_includes/_footer.html')
+
+   <script src="js/allScript.js"></script>
+</body>
+
+</html>

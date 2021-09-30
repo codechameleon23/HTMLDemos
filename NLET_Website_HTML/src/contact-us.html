@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  @@include('./_includes/_head.html', {
+    "pageName": "Contact us",
+    "description": ""
+  })
+</head>
+
+<body class="jsNavbarToggle is-close flex-col has-theme-jaffa">
+
+  <!-- Header -->
+  @@include('./_includes/_header.html', {
+    "headerPosClasses": "",
+    "aboutActive": "is-active",
+    "communityActive": "",
+    "curriculumActive": "",
+    "examsActive": "",
+    "studentServicesActive": "",
+    "newsNEventsActive": ""
+  })
+
+   <!-- Main -->
+   <main class="flex-auto flex-col">
+    <!-- Map -->
+    @@include(
+      './_includes/_column-grid.html', 
+      {
+        "sectionClasses": "pt-0",
+        "containerClasses": "container md:container-md lg:container-fluid mx-auto",
+        "rowClasses": "theme-bg fcolor-white flex-row flex-wrap pos-relative",
+        "childOnly": false,
+        "data": [
+          { 
+            "colClasses": "flex-col col-12 flex-col lg:flex-row-reverse container lg:container-xl mx-auto",
+            "aosAttr": "",
+            "vericalCard": true,
+            "cardImage": "",
+            "imageClasses": "map-canvas ratio-1x1 lg:ratio-16x9 lg:col-6 lg:pos-absolute pin-y pin-r",
+            "imageBgClasses": "bg-center bg-cover",
+            "tag": true,
+            "tagClasses": "breadcrumbs fcolor-default flex-row pos-absolute pin-b fsize-xs fweight-medium -mb-2lg pb-sm uppercase",
+            "tagText": "<a href='about.html' class='no-underline fcolor-inherit hover:theme-text'>About</a><span class='mx-xs'>|</span><span>Contact us</span>",
+            "cardContentClasses": "lg:col-6 pt-sm p-md xl:pl-0 lg:pr-xxl lg:py-3xxl mr-auto",
+            "cardTitle": "Come and meet us  at New London Educational Trust" ,
+            "cardTitleClasses": "fweight-bold fsize-2md lg:fsize-2lg",
+            "cardText": ["<p class='fsize-2sm fweight-bold'>Sceptre House, 75-81 Staines Road, Hounslow, TW3 3HW</p><p>Mon/Fri 9am - 6pm<br>Tues/Wed/Thurs 9am - 8.30pm<br>Saturday 9am - 5pm<br>Sunday 9am - 3pm</p>"],
+            "footerClasses": "pt-sm",
+            "cardButton": "",
+            "buttonLink": "#",
+            "buttonClasses": "",
+            "cardTextAOSattr": "data-aos='fade-up' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+            "footerAOSattr": "data-aos='fade-up' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom'"
+          }
+        ]
+      }
+    )
+   
+    <!-- Three Columns -->
+   @@include(
+    './_includes/_column-grid.html',
+    {
+    "sectionClasses": "pt-2lg",
+    "containerClasses": "container container-sm lg:container-fluid mx-auto",
+    "rowClasses": "flex-wrap flex-row",
+    "childOnly": false,
+    "data": [
+    {
+      "colClasses": "flex-col col-12 lg:col-4 pos-relative bg-deluge fcolor-white",
+      "aosAttr": "data-aos='zoom-in' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+      "cardImage": "",
+      "imageClasses": "ratio-1x1 pos-relative",
+      "imageBgClasses": "",
+      "cardContentClasses": "flex-stretch flex-col",
+      "cardTitle": "",
+      "cardTitleClasses": "",
+      "cardText": "",
+      "cardTextClasses": "flex-col align-center",
+      "footerClasses": "",
+      "cardButton": "<span>Call Us</span>",
+      "buttonLink": "tel:+44 (0)20 8570 7766",
+      "buttonClasses": "pos-absolute pin flex-col justify-center align-center fcolor-white fweight-bold fsize-4md no-underline"
+    },
+    {
+      "colClasses": "flex-col col-12 lg:col-4 bg-java fcolor-white",
+      "aosAttr": "data-aos='zoom-in' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+      "cardImage": "iStock-1052926746.jpg",
+      "imageClasses": "ratio-1x1 pos-relative",
+      "imageBgClasses": "bg-cover bg-center",
+      "cardContentClasses": "",
+      "cardTitle": "" ,
+      "cardTitleClasses": "",
+      "cardText": "",
+      "cardTextClasses": "flex-col align-center",
+      "footerClasses": "",
+      "cardButton": "",
+      "buttonLink": "",
+      "buttonClasses": ""
+    },
+    {
+      "colClasses": "flex-col col-12 lg:col-4 pos-relative bg-mauvelous fcolor-white",
+      "aosAttr": "data-aos='zoom-in' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+      "cardImage": "",
+      "imageClasses": "ratio-1x1 pos-relative",
+      "imageBgClasses": "",
+      "cardContentClasses": "flex-stretch flex-col pos-absolute pin justify-center align-center p-md lg:px-lg text-center",
+      "cardTitle": "" ,
+      "cardTitleClasses": "",
+      "cardText": "",
+      "cardTextClasses": "flex-col align-center",
+      "footerClasses": "",
+      "cardButton": "<span>Email Us</span>",
+      "buttonLink": "#",
+      "buttonClasses": "enquire_popup_open pos-absolute pin flex-col justify-center align-center fcolor-white fweight-bold fsize-4md no-underline"
+    }
+    ]})
+
+
+        <!-- Accordions -->
+        @@include(
+          './_includes/_column-grid.html', 
+          { 
+            "sectionTitle": "How to get here",
+            "sectionTitleClasses": "fweight-bold fsize-2md lg:fsize-2lg text-center mb-2lg",
+            "sectionClasses": "pt-2md lg:pt-xl -mb-md",
+            "containerClasses": "container md:container-md lg:container-xl mx-auto",
+            "rowClasses": "flex-row flex-wrap",
+            "childOnly": false,
+            "accordionWrapperClasses": "col-12",
+            "toggleContentClasses": "col-12 -mb-md",
+            "togglable": "true",
+            "closeOthers": "true",
+            "accordionData": [
+              {
+                "accordionClasses": "mb-md border-y-2 border-r-2 border-l-10 lg:border-l-20 theme-border",
+                "accordionLabelClasses": "p-sm transition-all",
+                "filterby": "via-Train",
+                "questionText": "Via Train",
+                "questionTextClasses": "fweight-medium fsize-2md",
+                "toggleSignClasses": "icon transition-all theme-text",
+                "toggleSignInnerClasses": "fcolor-inherit",
+                "toggleSignIcon": "",
+                "accordionContentClasses": "transition-all",
+                "answerClasses": "p-sm",
+                "answerContent": "<div class='text-wrap'><ol class='text-wrap ml-sm'><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam vel corporis eligendi minus omnis esse sequi dolore est, cumque at.</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, harum corporis dolorem commodi placeat facilis ab esse voluptate ipsa doloremque, ea molestias incidunt maxime laboriosam perferendis nostrum, amet praesentium consectetur.</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, nesciunt.</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam vel corporis eligendi minus omnis esse sequi dolore est, cumque at.</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, harum corporis dolorem commodi placeat facilis ab esse voluptate ipsa doloremque, ea molestias incidunt maxime laboriosam perferendis nostrum, amet praesentium consectetur.</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, nesciunt.</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam vel corporis eligendi minus omnis esse sequi dolore est, cumque at.</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, harum corporis dolorem commodi placeat facilis ab esse voluptate ipsa doloremque, ea molestias incidunt maxime laboriosam perferendis nostrum, amet praesentium consectetur.</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, nesciunt.</span></li></ol><div class='flex-row flex-wrap -mr-sm -mb-sm'><div class='mr-sm mb-sm'><a href='#' class='button size-lg hover:shadow-md theme-bg fsize-3xs fweight-bold fcolor-white uppercase py-xs px-md'>Button</a></div></div></div>"
+              },
+              {
+                "accordionClasses": "mb-md border-y-2 border-r-2 border-l-10 lg:border-l-20 theme-border",
+                "accordionLabelClasses": "p-sm transition-all",
+                "filterby": "via-Bus",
+                "questionText": "Via Bus",
+                "questionTextClasses": "fweight-medium fsize-2md",
+                "toggleSignClasses": "icon transition-all theme-text",
+                "toggleSignInnerClasses": "fcolor-inherit",
+                "toggleSignIcon": "",
+                "accordionContentClasses": "transition-all",
+                "answerClasses": "p-sm",
+                "answerContent": "<div class='text-wrap'><ol class='text-wrap ml-sm'><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>To safeguard the employed status of disadvantaged employed people through the acquisition of basic skills.</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>To underpin the capacity for growth among SMEs and micro-businesses through developmental support provided to their disadvantaged employees.</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>To raise the skills level of disadvantaged employees so they may exploit in-work progression opportunities.</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>To support the growth of participating SMEs and micro-businesses by improving the productivity of disadvantaged employees through raising skills levels up to level 3.</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>To provide disadvantaged employees with updated skills, knowledge and confidence to plan sustainable employment pathways.</span></li></ol><div class='flex-row flex-wrap -mr-sm -mb-sm'><div class='mr-sm mb-sm'><a href='#' class='button size-lg hover:shadow-md theme-bg fsize-3xs fweight-bold fcolor-white uppercase py-xs px-md'>Button</a></div></div></div>"
+              },
+              {
+                "accordionClasses": "mb-md border-y-2 border-r-2 border-l-10 lg:border-l-20 theme-border",
+                "accordionLabelClasses": "p-sm transition-all",
+                "filterby": "via-Car",
+                "questionText": "Via Car",
+                "questionTextClasses": "fweight-medium fsize-2md",
+                "toggleSignClasses": "icon transition-all theme-text",
+                "toggleSignInnerClasses": "fcolor-inherit",
+                "toggleSignIcon": "",
+                "accordionContentClasses": "transition-all",
+                "answerClasses": "p-sm",
+                "answerContent": "<div class='text-wrap'><ol class='text-wrap ml-sm'><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam vel corporis eligendi minus omnis esse sequi dolore est, cumque at.</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, harum corporis dolorem commodi placeat facilis ab esse voluptate ipsa doloremque, ea molestias incidunt maxime laboriosam perferendis nostrum, amet praesentium consectetur.</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, nesciunt.</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam vel corporis eligendi minus omnis esse sequi dolore est, cumque at.</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, harum corporis dolorem commodi placeat facilis ab esse voluptate ipsa doloremque, ea molestias incidunt maxime laboriosam perferendis nostrum, amet praesentium consectetur.</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, nesciunt.</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam vel corporis eligendi minus omnis esse sequi dolore est, cumque at.</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, harum corporis dolorem commodi placeat facilis ab esse voluptate ipsa doloremque, ea molestias incidunt maxime laboriosam perferendis nostrum, amet praesentium consectetur.</span></li><li class='theme-text fweight-bold'><span class='fcolor-default fweight-light'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, nesciunt.</span></li></ol><div class='flex-row flex-wrap -mr-sm -mb-sm'><div class='mr-sm mb-sm'><a href='#' class='button size-lg hover:shadow-md theme-bg fsize-3xs fweight-bold fcolor-white uppercase py-xs px-md'>Button</a></div></div></div>"
+              }
+            ]
+          }
+        )
+
+   </main>
+   @@include('./_includes/_footer.html', {
+     "instagram": true
+   })
+<script src="js/allScript.js"></script>
+ </script>
+</body>
+</html>

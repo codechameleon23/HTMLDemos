@@ -1,0 +1,9 @@
+<section class="@@sectionClasses">
+   <div class="@@if(!context.containerClasses){container md:container-md lg:container-lg mx-auto} @@if(context.containerClasses){@@containerClasses}">
+      <div class="flex-row @@if(context.gap){-mr-2xs -mb-2xs lg:-mb-@@gap lg:-mr-@@gap} @@rowClasses">
+         @@for (var i = 0; i < data.length; i++) {
+            @@include("./_includes/_simple-card.html", `+(JSON.stringify(data[i]))+`)
+         }
+      </div>
+   </div>
+</section>

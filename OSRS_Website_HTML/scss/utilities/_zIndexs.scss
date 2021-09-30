@@ -1,0 +1,9 @@
+@mixin getZindexClasses($bp) {
+  @each $zInd in $zIndex {
+    .#{$bp}z {
+      &-#{nth($zInd, 1)} {
+        z-index: nth($zInd, 2);
+      }
+    }
+  }
+}

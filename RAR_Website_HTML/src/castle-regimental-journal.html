@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   @@include('./_includes/_head.html', {
+   "pageName": "Castle Regimental Journal",
+   "description": ""
+   })
+</head>
+
+<body class="jsNavbarToggle is-close flex-col">
+
+   <!-- Header -->
+   @@include('./_includes/_header.html', {
+      "newsActive": "bg-primary fcolor-white",
+      "regUnitActive": "",
+      "assoNBranchActive": "",
+      "regJournalActive": "",
+      "resettlementActive": "",
+      "contactActive": ""
+   })
+
+   <!-- Main -->
+   <main class="flex-auto flex-col">
+      
+      <!-- Page Title -->
+      @@include(
+         './_includes/_ribbon.html',
+         {
+         "titleTag": "h1",
+         "ribbonWrapper": "bg-primary fcolor-white text-center py-2sm",
+         "ribbonText": "Castle Regimental Journal"
+         }
+      )
+
+      <!-- Intro -->
+      @@include(
+         './_includes/_intro.html', 
+         {
+         "gap": "",
+         "rowClasses": "",
+         "sectionClasses": "pt-2lg",
+         "data": [
+            { 
+               "colClasses": "text-center w-full",
+               "gap": "",
+               "cardImage": "",
+               "imageClasses": "",
+               "imageBgClasses": "bg-center bg-cover", 
+               "cardTitle": "",
+               "titleTag": "h1",
+               "cardText": ["Suntem nos mi, toribusanis ut pos earum que volupta tistiorempe volorpo rroribus volorem evenis iunt aut aliq uid qui solupta tiumet et iunte veribus. Archit et es velenis nobis eseque laceaquos sita sum a nobis dolorep ratiisque volorem. Ma sam, ea sa do lore que omni hiciis pa de nostrunt. Ur? It accabo. Cimolorum fugiam etur accum sectum aut idend uci comnimo luptate dolupta tiusa quam que nihil earum etur asinvel magnis consequi sinisti dolorerum adis et quiaepta doluptati verfercid quia. Turit perum net quisque odit esciissint accum aut illabo. Igenis re conem rae. Lignat que sin es ent que preptamet plit acidel mo iundi blaut aligento mod que sitatus most."],
+               "cardButton": "",
+               "buttonLink": "#",
+               "buttonClasses": "size-lg hover:shadow-bottom"
+            }
+         ]
+         }
+      )
+
+      <!-- Accordions -->
+      @@include('./_includes/_accordion-1.html')
+
+   </main>
+   <!-- Footer -->
+   @@include('./_includes/_footer.html')
+
+   <script src="js/allScript.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include('./_includes/_head.html', {
+    "pageName": "Flexibuilder",
+    "description": ""
+  })
+</head>
+
+<body class="jsNavbarToggle is-close flex-col">
+
+  <!-- Header -->
+  @@include('./_includes/_header.html')
+
+  <!-- Main -->
+  <main class="flex-auto flex-col">
+    
+    <!-- Ribbon -->
+    @@include(
+      './_includes/_ribbon.html',
+      {
+        "titleTag": "h1",
+        "ribbonWrapper": "bg-primary fcolor-white text-center py-2sm",
+        "ribbonText": "Page Header H1 Coloured Banner"
+      }
+    )
+
+    <!-- Ribbon White -->
+    @@include(
+      './_includes/_ribbon.html',
+      {
+        "titleTag": "h1",
+        "ribbonWrapper": "text-center py-2sm",
+        "ribbonText": "Page Header H1 Coloured Banner"
+      }
+    )
+
+    <!-- Carousel Banner -->
+    @@include('./_includes/_banner-carousel.html', {
+      "rowClasses": "flex-wrap -mr-2xs lg:-mr-md -mb-md",
+      "carousel": true,
+      "hideControl": true,
+      "data": [
+      {
+      "isBanner": true,
+      "bannerClasses": "py-2xl bg-primary flex-col flex-stretch",
+      "bannerImage": "anglians_1440x673.jpg",
+      "bannerImageClasses": "bg-cover bg-center-top bg-inherit",
+      "bannerInnerClasses": "bg-white col-9 md:col-8 lg:col-6 opacity-85 md:opacity-100 shadow-sm",
+      "colClasses": "md:bg-white col-9 md:col-8 lg:col-6 flex-col pr-2xs md:pr-2lg pb-2lg md:pb-2xl",
+      "gap": "",
+      "cardImage": "",
+      "imageClasses": "ratio-custom-1 mb-xs",
+      "imageBgClasses": "bg-center bg-cover",
+      "cardContentClasses": "banner-snippet",
+      "tag": true,
+      "tagClasses": "bg-secondary fcolor-white fsize-xs flex-col px-sm py-2xs mr-auto text-center mb-xs md:mb-md",
+      "tagText": "24th September 2019",
+      "footerClasses": "md:pt-md",
+      "cardTitle": "Main or Featured News Story Headline to go Here" ,
+      "cardTitleClasses": "fweight-semibold fsize-3sm md:fsize-2lg" ,
+      "cardText": ["News article copy or description to introduce the article will go here Itateces rem susa ndande num. Ihillupt ationes am eariasi tatemque volorest rejk."],
+      "cardButton": "Full Story",
+      "buttonLink": "#",
+      "buttonClasses": "size-lg hover:shadow-bottom button bg-primary fcolor-white hover:bg-secondary capitalize py-xs px-md"
+      },
+      {
+      "isBanner": true,
+      "bannerClasses": "py-2xl bg-primary flex-col flex-stretch",
+      "bannerImage": "apolond-2019-070-0194-minden-day-royal-anglian-pr.jpg",
+      "bannerImageClasses": "bg-cover bg-center bg-inherit",
+      "bannerInnerClasses": "bg-white col-9 md:col-8 lg:col-6 opacity-85 md:opacity-100 shadow-sm",
+      "colClasses": "md:bg-white col-9 md:col-8 lg:col-6 flex-col pr-2xs md:pr-2lg pb-2lg md:pb-2xl",
+      "gap": "",
+      "cardImage": "",
+      "imageClasses": "ratio-custom-1 mb-xs",
+      "imageBgClasses": "bg-center bg-cover",
+      "cardContentClasses": "banner-snippet",
+      "tag": true,
+      "tagClasses": "bg-secondary fcolor-white fsize-xs flex-col px-sm py-2xs mr-auto text-center mb-xs md:mb-md",
+      "tagText": "24th September 2019",
+      "footerClasses": "md:pt-md",
+      "cardTitle": "2nd Main or Featured News Story Headline to go Here " ,
+      "cardTitleClasses": "fweight-semibold fsize-3sm md:fsize-2lg" ,
+      "cardText": ["News article copy or description to introduce the article will go here Ihillupt ationes am eariasi tatemque volorest rejk."],
+      "cardButton": "Full Story",
+      "buttonLink": "#",
+      "buttonClasses": "size-lg hover:shadow-bottom button bg-primary fcolor-white hover:bg-secondary capitalize py-xs px-md"
+      },
+      {
+      "isBanner": true,
+      "bannerClasses": "py-2xl bg-primary flex-col flex-stretch",
+      "bannerImage": "45162614.jpg",
+      "bannerImageClasses": "bg-cover bg-center bg-inherit",
+      "bannerInnerClasses": "bg-white col-9 md:col-8 lg:col-6 opacity-85 md:opacity-100 shadow-sm",
+      "colClasses": "md:bg-white col-9 md:col-8 lg:col-6 flex-col pr-2xs md:pr-2lg pb-2lg md:pb-2xl",
+      "gap": "",
+      "cardImage": "",
+      "imageClasses": "ratio-custom-1 mb-xs",
+      "imageBgClasses": "bg-center bg-cover",
+      "cardContentClasses": "banner-snippet",
+      "tag": true,
+      "tagClasses": "bg-secondary fcolor-white fsize-xs flex-col px-sm py-2xs mr-auto text-center mb-xs md:mb-md",
+      "tagText": "24th September 2019",
+      "footerClasses": "md:pt-md",
+      "cardTitle": "3rd Main or Featured News Story Headline to go Here" ,
+      "cardTitleClasses": "fweight-semibold fsize-3sm md:fsize-2lg" ,
+      "cardText": ["News article copy or description to introduce the article will go here Itateces rem susa ndande num. Ihillupt ationes am eariasi tatemque volorest rejk."],
+      "cardButton": "Full Story",
+      "buttonLink": "#",
+      "buttonClasses": "size-lg hover:shadow-bottom button bg-primary fcolor-white hover:bg-secondary capitalize py-xs px-md"
+      },
+      {
+      "isBanner": true,
+      "bannerClasses": "py-2xl bg-primary flex-col flex-stretch",
+      "bannerImage": "apolond-2019-070-0212-minden-day-royal-anglian-pr.jpg",
+      "bannerImageClasses": "bg-cover bg-center bg-inherit",
+      "bannerInnerClasses": "bg-white col-9 md:col-8 lg:col-6 opacity-85 md:opacity-100 shadow-sm",
+      "colClasses": "md:bg-white col-9 md:col-8 lg:col-6 flex-col pr-2xs md:pr-2lg pb-2lg md:pb-2xl",
+      "gap": "",
+      "cardImage": "",
+      "imageClasses": "ratio-custom-1 mb-xs",
+      "imageBgClasses": "bg-center bg-cover",
+      "cardContentClasses": "banner-snippet",
+      "tag": true,
+      "tagClasses": "bg-secondary fcolor-white fsize-xs flex-col px-sm py-2xs mr-auto text-center mb-xs md:mb-md",
+      "tagText": "24th September 2019",
+      "footerClasses": "md:pt-md",
+      "cardTitle": "4th Main or Featured News Story Headline to go Here" ,
+      "cardTitleClasses": "fweight-semibold fsize-3sm md:fsize-2lg" ,
+      "cardText": ["News article copy or description to introduce the article will go here Itateces rem susa ndande num. Ihillupt ationes am eariasi tatemque volorest rejk."],
+      "cardButton": "Full Story",
+      "buttonLink": "#",
+      "buttonClasses": "size-lg hover:shadow-bottom button bg-primary fcolor-white hover:bg-secondary capitalize py-xs px-md"
+      }
+      ]
+    })
+
+    
+    <!-- Two Column Text and Image -->
+    @@include(
+      './_includes/_column-grid.html', 
+      {
+        "gap": "",
+        "rowClasses": "flex-wrap -mr-2xs lg:-mr-md -mb-md",
+        "childOnly": false,
+        "data": [
+          { 
+            "colClasses": "flex-col col-12 lg:col-6 pr-2xs lg:pr-md pb-md",
+            "aosAttr": "data-aos='fade-up' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+            "cardImage": "62101446_203328783968828_5765642980835280528_n.jpg",
+            "imageClasses": "ratio-custom-4 lg:ratio-custom-1",
+            "imageBgClasses": "bg-center bg-cover mb-md", 
+            "cardTitle": "Two Column Text and Image H2" ,
+            "cardText": ["Ante reperibea alit quia conetum explatur? Quis serferum neceptur sim faccae. Ut volorem facepe es et aut event. Ique voles accusda dolest, samenditis raeperi scius, sandand itatis aut omni te repeligene omniam ent pliquiatem qui aut qui veratectas minctias es endit moluptatum faceratem ex experum cuptas nat voluptati adi utempos eatentet, sunt latissi dus sitaspis qui officia temporeped quidis ium ad quibus."],
+            "footerClasses": "pt-sm",
+            "cardButton": "Button",
+            "buttonLink": "#",
+            "buttonClasses": "size-lg hover:shadow-bottom button bg-primary fsize-2sm fcolor-white hover:bg-secondary capitalize py-xs px-md"
+          },
+          { 
+            "colClasses": "flex-col col-12 lg:col-6 pr-2xs lg:pr-md pb-md",
+            "aosAttr": "data-aos='fade-up' data-aos-delay='200' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+            "cardImage": "64533791_2406395816350769_2849886957546107595_n.jpg",
+            "imageClasses": "ratio-custom-4 lg:ratio-custom-1",
+            "imageBgClasses": "bg-center bg-cover mb-md", 
+            "cardTitle": "Two Column Text and Image H2" ,
+            "cardText": ["Ante reperibea alit quia conetum explatur? Quis serferum neceptur sim faccae. Ut volorem facepe es et aut event. Ique voles accusda dolest, samenditis raeperi scius, sandand itatis aut omni te repeligene omniam ent pliquiatem qui aut qui veratectas minctias"],
+            "footerClasses": "pt-sm",
+            "cardButton": "Button",
+            "buttonLink": "#",
+            "buttonClasses": "size-lg hover:shadow-bottom button bg-primary fsize-2sm fcolor-white hover:bg-secondary capitalize py-xs px-md"
+          }
+        ]
+      }
+    )
+
+    <!-- Three Column Text and Image -->
+    @@include(
+      './_includes/_column-grid.html', 
+      {
+        "gap": "",
+        "rowClasses": "flex-wrap -mr-2xs -mb-md lg:-mr-lg lg:-mb-lg",
+        "childOnly": false,
+        "data": [
+          { 
+            "colClasses": "flex-col col-12 lg:col-4 pr-2xs pb-md lg:pr-lg lg:pb-lg",
+            "aosAttr": "data-aos='fade-up' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+            "cardImage": "61602702_207010906939673_6325980320942837043_n.jpg",
+            "imageClasses": "ratio-custom-4 lg:ratio-custom-1 mb-xs",
+            "imageBgClasses": "bg-center bg-cover", 
+            "cardTitle": "Three Column Text and Image H2" ,
+            "cardText": ["Imenis exereceatqui apient, a voluptiunt. Rature a nonsequo occuscimi, nus, sum voles dolenim namus. Occus re que nitatiat. Im nusa vel id molorum"],
+            "footerClasses": "pt-sm",
+            "cardButton": "Button",
+            "buttonLink": "#",
+            "buttonClasses": "size-lg hover:shadow-bottom button bg-primary fsize-2sm fcolor-white hover:bg-secondary capitalize py-xs px-md"
+          },
+          { 
+            "colClasses": "flex-col col-12 lg:col-4 pr-2xs pb-md lg:pr-lg lg:pb-lg",
+            "aosAttr": "data-aos='fade-up' data-aos-delay='200' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+            "cardImage": "65923392_624225961401025_4303314252679573942_n.jpg",
+            "imageClasses": "ratio-custom-4 lg:ratio-custom-1 mb-xs",
+            "imageBgClasses": "bg-center bg-cover", 
+            "cardTitle": "Three Column Text and Image H2" ,
+            "cardText": ["Imenis exereceatqui apient, a voluptiunt. Rature a nonsequo occuscimi, nus, sum voles dolenim namus. Occus re que nitatiat. Im nusa vel id molorum"],
+            "footerClasses": "pt-sm",
+            "cardButton": "Button",
+            "buttonLink": "#",
+            "buttonClasses": "size-lg hover:shadow-bottom button bg-primary fsize-2sm fcolor-white hover:bg-secondary capitalize py-xs px-md"
+          },
+          { 
+            "colClasses": "flex-col col-12 lg:col-4 pr-2xs pb-md lg:pr-lg lg:pb-lg",
+            "aosAttr": "data-aos='fade-up' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+            "cardImage": "apolond-2019-070-0077-minden-day-royal-anglian-pr.jpg",
+            "imageClasses": "ratio-custom-4 lg:ratio-custom-1 mb-xs",
+            "imageBgClasses": "bg-center bg-cover", 
+            "cardTitle": "Three Column Text and Image H2" ,
+            "cardText": ["Imenis exereceatqui apient, a voluptiunt. Rature a nonsequo occuscimi, nus, sum voles dolenim namus. Occus re que nitatiat. Im nusa vel id molorum"],
+            "footerClasses": "pt-sm",
+            "cardButton": "Button",
+            "buttonLink": "#",
+            "buttonClasses": "size-lg hover:shadow-bottom button bg-primary fsize-2sm fcolor-white hover:bg-secondary capitalize py-xs px-md"
+          }
+        ]
+      }
+    )
+
+    <!-- Call to action banner -->
+    @@include(
+      './_includes/_cta-banner.html',
+      {
+        "gap": "md",
+        "sectionClasses": "pt-2lg",
+        "rowClasses": "bg-primary fcolor-white",
+        "cardImage": "",
+        "imageClasses": "ratio-5x2 lg:ratio-none",
+        "imageBgClasses": "bg-center bg-cover", 
+        "cardTitle": "Call to action banner and text to go here for more information get in touch with the Royal Anglian Regiment" ,
+        "cardText": "",
+        "cardButton": "Button",
+        "buttonLink": "#",
+        "buttonClasses": "bg-secondary size-lg button fsize-2sm fcolor-white hover:bg-secondary py-xs px-md capitalize mt-auto xl:my-auto"
+      }
+    )
+
+    <!-- Intro -->
+    @@include(
+    './_includes/_intro.html', 
+      {
+        "gap": "",
+        "rowClasses": "",
+        "sectionClasses": "pt-2lg",
+        "data": [
+          { 
+            "colClasses": "text-center w-full",
+            "aosAttr": "data-aos='fade-up' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+            "cardImage": "",
+            "imageClasses": "",
+            "imageBgClasses": "bg-center bg-cover", 
+            "cardTitle": "Centred Header Text H1",
+            "titleTag": "h1",
+            "cardText": ["Suntem nos mi, toribusanis ut pos earum que volupta tistiorempe volorpo rroribus volorem evenis iunt aut aliq uid qui solupta tiumet et iunte veribus. Archit et es velenis nobis eseque laceaquos sita sum a nobis dolorep ratiisque volorem. Ma sam, ea sa do lore que omni hiciis pa de nostrunt. Ur? It accabo. Cimolorum fugiam etur accum sectum aut idend uci comnimo luptate dolupta tiusa quam que nihil earum etur asinvel magnis consequi sinisti dolorerum adis et quiaepta doluptati verfercid quia. Turit perum net quisque odit esciissint accum aut illabo. Igenis re conem rae. Lignat que sin es ent que preptamet plit acidel mo iundi blaut aligento mod que sitatus most."],
+            "footerClasses": "pt-sm",
+            "cardButton": "Button",
+            "buttonLink": "#",
+            "buttonClasses": "size-lg hover:shadow-bottom button bg-primary fsize-2sm fcolor-white hover:bg-secondary capitalize py-xs px-md"
+          }
+        ]
+      }
+    )
+
+
+    <!-- Single Image -->
+    @@include(
+      './_includes/_media-gallery.html',
+      {
+        "gap": "",
+        "sectionClasses": "pt-2lg",
+        "rowClasses": "flex-wrap",
+        "fullWidth": true,
+        "allowPopup": false,
+        "childOnly": false,
+        "data": [
+          { 
+            "colClasses": "flex-col col-12",
+            "aosAttr": "data-aos='fade' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+            "mediaRatio": "ratio-custom-1 md:ratio-5x2",
+            "cardThumb": "apolond-2019-070-0194-minden-day-royal-anglian-pr.jpg",
+            "cardThumbClasses": "bg-center bg-cover cursor-default",
+            "cardMedia": "javascript:void(0);",
+            "cardMediaClasses": "hover:shadow-parent-lg opacity-parent-75 hover:opacity-parent-100",
+            "imageClasses": "",
+            "playButton": false,
+            "playButtonClasses": "icon-3lg bg-secondary fcolor-white shadow-child opacity-child"
+          }
+        ]
+      }
+    )
+
+
+    <!-- Single Video -->
+    @@include(
+      './_includes/_media-gallery.html',
+      {
+        "gap": "",
+        "sectionClasses": "pt-2lg",
+        "rowClasses": "flex-wrap",
+        "fullWidth": true,
+        "allowPopup": true,
+        "childOnly": false,
+        "data": [
+          { 
+            "colClasses": "flex-col col-12",
+            "aosAttr": "data-aos='fade' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+            "mediaRatio": "ratio-custom-1 md:ratio-5x2",
+            "cardThumb": "apolond-2019-070-0194-minden-day-royal-anglian-pr.jpg",
+            "cardThumbClasses": "bg-center bg-cover",
+            "cardMedia": "https://www.youtube.com/watch?v=cKnHcB7LNrw",
+            "cardMediaClasses": "hover:shadow-parent-lg opacity-parent-75 hover:opacity-parent-100 image-rollover",
+            "imageClasses": "",
+            "playButton": true,
+            "playButtonClasses": "icon-3lg bg-secondary fcolor-white shadow-child opacity-child"
+          }
+        ]
+      }
+    )
+
+    <!-- Media Gallery -->
+    @@include(
+      './_includes/_media-gallery.html',
+      {
+        "gap": "",
+        "sectionClasses": "pt-2lg",
+        "rowClasses": "flex-wrap justify-center -mr-2xs lg:-mr-md -mb-md",
+        "allowPopup": true,
+        "childOnly": false,
+        "childOnly": false,
+        "data": [
+          { 
+            "colClasses": "flex-col col-12 md:col-6 pr-2xs lg:pr-md pb-md",
+            "aosAttr": "data-aos='zoom-in' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+            "mediaRatio": "ratio-custom-1",
+            "cardThumb": "apolond-2019-070-0212-minden-day-royal-anglian-pr.jpg",
+            "cardThumbClasses": "bg-center bg-cover",
+            "cardMedia": "./images/apolond-2019-070-0212-minden-day-royal-anglian-pr.jpg",
+            "cardMediaClasses": "hover:shadow-parent-lg opacity-parent-75 hover:opacity-parent-100 image-rollover",
+            "imageClasses": "",
+            "playButton": false,
+            "playButtonClasses": "icon-3lg bg-secondary fcolor-white shadow-child opacity-child"
+          },
+          { 
+            "colClasses": "flex-col col-12 md:col-6 pr-2xs lg:pr-md pb-md",
+            "aosAttr": "data-aos='zoom-in' data-aos-delay='200' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+            "mediaRatio": "ratio-custom-1",
+            "cardThumb": "apolond-2019-070-0077-minden-day-royal-anglian-pr.jpg",
+            "cardThumbClasses": "bg-center bg-cover",
+            "cardMedia": "https://www.youtube.com/watch?v=cKnHcB7LNrw",
+            "cardMediaClasses": "hover:shadow-parent-lg opacity-parent-75 hover:opacity-parent-100 image-rollover",
+            "imageClasses": "",
+            "playButton": true,
+            "playButtonClasses": "icon-3lg bg-secondary fcolor-white shadow-child opacity-child"
+          },
+          { 
+            "colClasses": "flex-col col-12 md:col-6 lg:col-4 pr-2xs lg:pr-md pb-md",
+            "aosAttr": "data-aos='zoom-in' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+            "mediaRatio": "ratio-custom-1 lg:ratio-custom-2",
+            "cardThumb": "apolond-2019-070-0005-minden-day-royal-anglian-pr.jpg",
+            "cardThumbClasses": "bg-center bg-cover",
+            "cardMedia": "./images/apolond-2019-070-0005-minden-day-royal-anglian-pr.jpg",
+            "cardMediaClasses": "hover:shadow-parent-lg opacity-parent-75 hover:opacity-parent-100 image-rollover",
+            "imageClasses": "",
+            "playButton": false,
+            "playButtonClasses": "icon-3lg bg-secondary fcolor-white shadow-child opacity-child"
+          },
+          { 
+            "colClasses": "flex-col col-12 md:col-6 lg:col-4 pr-2xs lg:pr-md pb-md",
+            "aosAttr": "data-aos='zoom-in' data-aos-delay='200' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+            "mediaRatio": "ratio-custom-1 lg:ratio-custom-2",
+            "cardThumb": "20190831-Royal+Anglian+News-August-19-final.jpg",
+            "cardThumbClasses": "bg-center bg-cover",
+            "cardMedia": "./images/20190831-Royal+Anglian+News-August-19-final.jpg",
+            "cardMediaClasses": "hover:shadow-parent-lg opacity-parent-75 hover:opacity-parent-100 image-rollover",
+            "imageClasses": "",
+            "playButton": false,
+            "playButtonClasses": "icon-3lg bg-secondary fcolor-white shadow-child opacity-child"
+          },
+          { 
+            "colClasses": "flex-col col-12 md:col-6 lg:col-4 pr-2xs lg:pr-md pb-md",
+            "aosAttr": "data-aos='zoom-in' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+            "mediaRatio": "ratio-custom-1 lg:ratio-custom-2",
+            "cardThumb": "apolond-2019-070-0194-minden-day-royal-anglian-pr.jpg",
+            "cardThumbClasses": "bg-center bg-cover",
+            "cardMedia": "https://www.youtube.com/watch?v=cKnHcB7LNrw",
+            "cardMediaClasses": "hover:shadow-parent-lg opacity-parent-75 hover:opacity-parent-100 image-rollover",
+            "imageClasses": "",
+            "playButton": true,
+            "playButtonClasses": "icon-3lg bg-secondary fcolor-white shadow-child opacity-child"
+          }
+        ]
+      }
+    )
+
+    <!-- Intros -->
+    @@include(
+      './_includes/_intro.html', 
+      {
+        "containerClasses": "container md:container-md lg:container-xl mx-auto",
+        "rowClasses": "flex-wrap -mr-2xs -mb-md lg:-mr-xl lg:-mb-xl",
+        "sectionClasses": "pt-2lg",
+        "data": [
+          { 
+            "colClasses": "flex-col col-12 lg:col-6 pr-2xs pb-md lg:pr-xl lg:pb-xl",
+            "aosAttr": "data-aos='fade' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+            "cardImage": "",
+            "imageClasses": "",
+            "imageBgClasses": "bg-center bg-cover", 
+            "cardTitle": "Two Column Text H2",
+            "titleTag": "h2",
+            "cardText": ["Omniciam inceri factatum pos perum nihillatam patifeciptem nos inceri factatum pos perum Mniciam inceri factatum pos perum nihillatam patifeciptem nos inceri factatum pos perum.", "Omniciam inceri factatum pos perum nihillatam Mniciam inceri factatum pos perum nihillatam patifeciptem nos inceri factatum pos perum. Nullaborese estecab ime non nonseque se doluptatas dignam ius sam sitatqu idendio del et laut reroreperit lisimusae sint voluptatiis etur rem etur? Quid ea sus doluptum et apis ut reptatem facil iminvenis."],
+            "footerClasses": "pt-sm",
+            "cardButton": "Button",
+            "buttonLink": "#",
+            "buttonClasses": "size-lg hover:shadow-bottom button bg-primary fsize-2sm fcolor-white hover:bg-secondary capitalize py-xs px-md"
+          },
+          { 
+            "colClasses": "flex-col col-12 lg:col-6 pr-2xs pb-md lg:pr-xl lg:pb-xl",
+            "aosAttr": "data-aos='fade' data-aos-delay='200' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+            "cardImage": "",
+            "imageClasses": "",
+            "imageBgClasses": "bg-center bg-cover", 
+            "cardTitle": "Two Column Text H2",
+            "titleTag": "h2",
+            "cardText": ["Omniciam inceri factatum pos perum nihillatam patifeciptem nos inceri factatum pos perum Mniciam inceri factatum pos perum nihillatam patifeciptem nos inceri factatum pos perum.", "Omniciam inceri factatum pos perum nihillatam Mniciam inceri factatum pos perum nihillatam patifeciptem nos inceri factatum pos perum. Nullaborese estecab ime non nonseque se doluptatas dignam ius sam sitatqu idendio del et laut reroreperit lisimusae sint voluptatiis etur rem etur? Quid ea sus doluptum et apis ut reptatem facil iminvenis."],
+            "footerClasses": "pt-sm",
+            "cardButton": "Button",
+            "buttonLink": "#",
+            "buttonClasses": "size-lg hover:shadow-bottom button bg-primary fsize-2sm fcolor-white hover:bg-secondary capitalize py-xs px-md"
+          },
+          { 
+            "colClasses": "flex-col col-12 pr-2xs pb-md lg:pr-xl lg:pb-xl",
+            "aosAttr": "data-aos='fade' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+            "cardImage": "",
+            "imageClasses": "",
+            "imageBgClasses": "bg-center bg-cover", 
+            "cardTitle": "Left Header Text H2",
+            "titleTag": "h2",
+            "cardText": ["Cius. Ga. Rovit volum et mos a doluptatiore poreperiorem aruptatem dollestin et aut aut aciissum harum restis comnihicae es aut plitat. Officiet am, ommolor poresti blaborum comnimus santus mos dusam dolorent. Bor mi, si ratur reriae. Ibustru ptatem fugiand iassimus corere, exerum quis apid quos acepuda nonse opta nis ad erovite mporest is voles et laborestotae volendendis dipsapercid quaspicab inctassitist dia inimpel itatur ratium latione non conecepra voluptatusae pa sandit.", "<ul class='ml-sm'><li>Bullet ugia volorum fugiti quaspelis aciamenis eumquam nesto qui blam seque ipiendae voluptas sim bor mi, si ratur.</li><li>Bullet ugia volorum fugiti quaspelis aciamenis eumquam nesto qui blam seque ipiendae voluptas sim dusam dolorent mie.</li><li>Bullet ugia volorum fugiti quaspelis aciamenis eumquam nesto qui blam seque ipiendae voluptas sim poresti blaborum comnimus santus.</li></ul>"],
+            "footerClasses": "pt-sm",
+            "cardButton": "Button",
+            "buttonLink": "#",
+            "buttonClasses": "size-lg hover:shadow-bottom button bg-primary fsize-2sm fcolor-white hover:bg-secondary capitalize py-xs px-md"
+          }
+        ]
+      }
+    )
+
+  <!-- Text Left Image Right -->
+  @@include(
+    './_includes/_column-grid.html', 
+    {
+      "gap": "",
+      "rowClasses": "flex-wrap -mr-2xs -mb-md lg:-mr-lg lg:-mb-lg",
+      "childOnly": false,
+      "data": [
+        { 
+          "colClasses": "flex-col col-12 flex-col lg:flex-row-reverse pr-2xs pb-md lg:pr-lg lg:pb-lg",
+          "aosAttr": "data-aos='fade' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "vericalCard": true,
+          "cardImage": "anglians_1440x673.jpg",
+          "imageClasses": "ratio-custom-4 lg:ratio-custom-1 lg:ratio-none lg:col-6",
+          "imageBgClasses": "bg-center bg-cover lg:-ml-sm",
+          "cardContentClasses": "lg:col-6 pt-sm lg:pr-xl lg:py-lg",
+          "cardTitle": "Text Left Image Right H2" ,
+          "cardText": ["Ante reperibea alit quia conetum explatur? Quis serferum neceptur sim faccae. Ut volorem facepe es et aut event. Ique voles accusda dolest, samenditis raeperi scius, sandand itatis aut omni te repeligene omniam ent pliquiatem qui aut qui veratectas minctias es endit moluptatum faceratem ex experum cuptas nat voluptati adi utempos eatentet, sunt latissi dus sitaspis qui officia temporeped quidis ium ad quibus."],
+          "footerClasses": "pt-sm",
+          "cardButton": "Button",
+          "buttonLink": "#",
+          "buttonClasses": "size-lg hover:shadow-bottom button bg-primary fsize-2sm fcolor-white hover:bg-secondary capitalize py-xs px-md"
+        },
+        { 
+          "colClasses": "flex-col col-12 flex-col lg:flex-row pr-2xs pb-md lg:pr-lg lg:pb-lg",
+          "aosAttr": "data-aos='fade' data-aos-delay='200' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "vericalCard": true,
+          "cardImage": "apolond-2019-070-0077-minden-day-royal-anglian-pr.jpg",
+          "imageClasses": "ratio-custom-4 lg:ratio-custom-1 lg:ratio-none lg:col-6",
+          "imageBgClasses": "bg-center bg-cover lg:-mr-sm",
+          "cardContentClasses": "lg:col-6 pt-sm lg:pl-xl lg:py-lg",
+          "cardTitle": "Text Right Image Left H2" ,
+          "cardText": ["Ante reperibea alit quia conetum explatur? Quis serferum neceptur sim faccae. Ut volorem facepe es et aut event. Ique voles accusda dolest, samenditis raeperi scius, sandand itatis aut omni te repeligene omniam ent pliquiatem qui aut qui veratectas minctias es endit moluptatum faceratem ex experum cuptas nat voluptati adi utempos eatentet, sunt latissi dus sitaspis qui officia temporeped quidis ium ad quibus."],
+          "footerClasses": "pt-sm",
+          "cardButton": "Button",
+          "buttonLink": "#",
+          "buttonClasses": "size-lg hover:shadow-bottom button bg-primary fsize-2sm fcolor-white hover:bg-secondary capitalize py-xs px-md"
+        }
+      ]
+    }
+  )
+
+  </main>
+  <!-- Footer -->
+  @@include('./_includes/_footer.html')
+
+  <script src="js/allScript.js"></script>
+</body>
+
+</html>

@@ -13,7 +13,7 @@ const gulp = require("gulp"),
   purify = require('gulp-purifycss'),
   svgo = require('gulp-svgo');
 
-const PROJECT_NAME = 'GM_Website_HTML';
+const PROJECT_NAME = 'HTML_Components';
 const PROJECT_PATH = ".";
 
 const DEST_CSS_PATH = PROJECT_PATH+"/css";

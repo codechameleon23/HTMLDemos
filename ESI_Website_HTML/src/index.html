@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include('./_includes/_core_components/head.html', {
+  "pageName": "Home",
+  "pojectName": "ESI_Website_HTML",
+  "siteName": "Ewe Store It",
+  "description": "Simple storage solutions designed to save ewe money"
+  })
+</head>
+
+<body class="jsNavbarToggle is-close flex-col">
+
+    @@include('./_includes/header.html', {
+      "homeActive" : "font-weight-bold",
+      "getAQuoteActive" : "",
+      "educationActive" : "",
+      "howItWorkActive" : "",
+      "contactActive" : "",
+      "aboutEweActive" : ""
+    })
+
+  <main class="flex-auto flex-col">
+    
+    <!-- inline Image right text left -->
+    @@include('./_includes/inlineImageRightTextLeft.html', {
+    "bgImage": "",
+    "bgClasses": "bg-pink font-color-white",
+    "bgImgClasses": "bg-center bg-repeat lg:bg-no-repeat",
+    "inlineImage": "./images/banner-1.png",
+    "inlineImageMobile": "./images/banner-1-mobile.png",
+    "inlineImgClasses": "bg-center bg-no-repeat bg-contain lg:bg-right",
+    "title": "The cheaper easier way to store your stuff",
+    "titleClass": "",
+    "subtitle": "Find out how much ewe can save today!",
+    "subtitleClass": "",
+    "text": "",
+    "otherContent": "",
+    "button": false,
+    "buttonClass": "bg-dark",
+    "createAccount": false,
+    "GetAquoteForm": true
+    })
+
+    <!-- Image right text left -->
+    @@include('./_includes/imageRightTextLeft.html', {
+      "bgImage": "./images/ewe-store-it-cargo-truck.jpg",
+      "bgClasses": "py-2md lg:py-2xl",
+      "bgImgClasses": "bg-left bg-contain lg:my-lg",
+      "title": "How it works",
+      "titleClass": "font-color-cyan",
+      "text": "<p>We believe in a world of simplicity (not always the case) with that in mind we have tried to make a simplistic process, of course there are a lot of variables and so we have to ask questions because as much as we like simplicity we also don’t like problems. <a href='how-it-works.html' class='no-underline font-color-pink font-weight-bold'>Read more</a></p>",
+      "otherContent": "",
+      "button": true,
+      "buttonClass": "bg-aqua",
+      "buttonLink": "#",
+      "buttonText": "How we save ewe money",
+      "createAccount": false,
+      "col1Classes": "md:col-5",
+      "col2Classes": "col-10 mx-auto md:col-7"
+    })
+
+    <!-- Storage Solution -->
+    @@include('./_includes/storage-solutions.html', {
+      "bgClasses": "bg-dark font-color-white",
+      "midtitle": "Choose your Storage Solution",
+      "midtitleClass": "text-center"
+    })
+
+    <!-- ribbon -->
+    @@include('./_includes/ribbon.html', {
+      "sectionClasses": "",
+      "bgImage": "",
+      "bgImgClasses": "",
+      "bgClasses": "bg-pink",
+      "title": "",
+      "titleClass": "",
+      "subtitle": "Not sure which plan? Ask our friendly team of experts...",
+      "subtitleClass": "",
+      "text": "",
+      "textWrapClasses": "",
+      "otherContent": "",
+      "button": false,
+      "buttonClass": "bg-aqua",
+      "buttonText": "Learn More",
+      "buttonLink": "#",
+      "iconLeftClasses": "",
+      "iconRightClasses": "",
+      "contactButton": true
+  })
+
+    <!-- Image right text left -->
+    @@include('./_includes/twoColumns.html', {
+      "sectionClasses": "py-2md lg:py-lg",
+      "bgImage": "./images/savings-graph.svg",
+      "bgClasses": "",
+      "bgImgClasses": "bg-center bg-contain",
+      "title": "Save up to 55% on your storage cost.",
+      "titleClass": "font-color-cyan",
+      "text": "<p>Are you a Self-Storage customer? Depending on how much access you will need to your storage we can offer you great savings on your current storage.</p>",
+      "textWrapClasses": "",
+      "otherContent": "",
+      "button": true,
+      "buttonClass": "bg-aqua",
+      "buttonLink": "#",
+      "buttonText": "More than storage",
+      "createAccount": false,
+      "col1Classes": "col-12 lg:col-9",
+      "col2Classes": "col-12 lg:col-3"
+    })
+
+  <!-- call to Action -->
+  @@include('./_includes/ribbon.html', {
+    "sectionClasses": "",
+    "bgImage": "",
+    "bgImgClasses": "",
+    "bgClasses": "bg-dark",
+    "title": "",
+    "titleClass": "",
+    "midtitle": "Our passion is storage our promise is simple...<br>We offer ewe cheaper easier way to store your stuff!",
+    "midtitleClass": "",
+    "subtitle": "",
+    "subtitleClass": "",
+    "text": "",
+    "textWrapClasses": "text-center",
+    "otherContent": "",
+    "button": false,
+    "buttonClass": "bg-pink",
+    "buttonText": "Get a Quote",
+    "buttonLink": "#",
+    "iconLeftClasses": "font-color-yellow",
+    "iconRightClasses": "font-color-purple",
+    "contactButton": false
+  })
+
+  <!-- Our Storage Gallery -->
+  @@include('./_includes/threeColumn-images.html', {
+    "sectionClasses": "pt-2md lg:pt-2xl",
+    "bgClasses": "",
+    "title": "Our Storage Gallery",
+    "titleClass": "font-color-cyan text-center",
+    "subtitleClass": "text-center"
+ })
+
+  <!-- testiminials -->
+  @@include('./_includes/intro.html', {
+  "sectionClasses": "py-2md lg:py-2xl",
+  "bgImage": "./images/ewe-store-it-cargo-truck.jpg",
+  "bgClasses": "",
+  "bgImgClasses": "bg-center bg-contain",
+  "title": "",
+  "titleClass": "",
+  "midtitle": "Testimonials",
+  "midtitleClass": "font-color-cyan",
+  "subtitle": "",
+  "subtitleClass": "",
+  "text": "<p>“Cat libusaeribus dolorem quas ut plicias perunti onsequiatur, sam, volupta volora il is porepudam, que dolorem. Dus, con ea dolectatus quatur aut magnietur, sed qui voloreicias corehendunte aped que cumqui delenectorit inus, hillicae ne lacid eseri cupta sin prorit que labore velectem sandipsus sam voluptas vendam sit alitatem lique pos”</p>",
+  "textWrapClasses": "text-center",
+  "otherContent": "",
+  "button": true,
+  "buttonClass": "bg-aqua",
+  "buttonText": "More Reviews",
+  "buttonLink": "#"
+})
+
+  </main>
+
+  <!-- Instagram -->
+  @@include('./_includes/instagram.html', {
+    "sectionClasses": ""
+  })
+
+  <!-- footer -->
+  @@include('./_includes/footer.html')
+
+  <script src="js/allScript.js"></script>
+</body>
+
+</html>

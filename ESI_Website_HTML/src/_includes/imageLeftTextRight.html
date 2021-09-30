@@ -1,0 +1,35 @@
+<div class="flex-col md:flex-row pos-relative @@bgClasses">
+   <section class="md:pos-absolute @@col2Classes pin pin-r-auto ratio-16x9 " data-aos="fade" data-aos-delay="100" data-aos-duration="700">
+      <div class="pos-absolute pin flex-col flex-stretch bg-no-repeat @@bgImgClasses" style="background-image:url('@@bgImage')"></div>
+   </section>
+   <section class="container md:container-md md:container-xl mx-auto" data-aos="fade-up" data-aos-delay="300" data-aos-duration="700">
+      <div class="@@col1Classes ml-auto md:pl-2lg py-2md md:py-2xl">
+         <div class="w-full text-wrap">
+            <div class="w-full text-wrap">
+               @@if (context.title) {
+               @@include('./_includes/_commons/h2.html', {
+               "title": "<span>@@title</span>",
+               "className": "@@titleClass"
+               })
+               }
+               @@if (context.subtitle) {
+               @@include('./_includes/_commons/h3.html', {
+               "title": "<span>@@subtitle</span>",
+               "className": "@@subtitleClass"
+               })
+               }
+               @@if (context.text) {
+               @@text
+               }
+               @@if (context.button === true) {
+               @@include('./_includes/_commons/button.html', {
+               "link": "@@buttonLink",
+               "className": "@@buttonClass font-color-white",
+               "buttonText": "@@buttonText"
+               })
+               }
+            </div>
+         </div>
+      </div>
+   </section>
+</div>

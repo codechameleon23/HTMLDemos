@@ -1,0 +1,371 @@
+@mixin getStyleAndDecorationClasses($bp) {
+  @each $state in $states {
+    .#{$bp}#{nth($state, 1)}italic#{nth($state, 2)} {
+      font-style: italic
+    };
+
+    .#{$bp}#{nth($state, 1)}roman#{nth($state, 2)} {
+      font-style: normal
+    };
+
+    .#{$bp}#{nth($state, 1)}uppercase#{nth($state, 2)} {
+      text-transform: uppercase
+    };
+
+    .#{$bp}#{nth($state, 1)}lowercase#{nth($state, 2)} {
+      text-transform: lowercase
+    };
+
+    .#{$bp}#{nth($state, 1)}capitalize#{nth($state, 2)} {
+      text-transform: capitalize
+    };
+
+    .#{$bp}#{nth($state, 1)}normal-case#{nth($state, 2)} {
+      text-transform: none
+    };
+
+    .#{$bp}#{nth($state, 1)}underline#{nth($state, 2)} {
+      text-decoration: underline
+    };
+
+    .#{$bp}#{nth($state, 1)}line-through#{nth($state, 2)} {
+      text-decoration: line-through
+    };
+
+    .#{$bp}#{nth($state, 1)}no-underline#{nth($state, 2)} {
+      text-decoration: none
+    };
+  }
+}
+
+@mixin getWhitespaceAndWrappingClasses($bp) {
+  .#{$bp}whitespace {
+    &-normal {
+      white-space: normal;
+    }
+
+    &-no-wrap {
+      white-space: nowrap;
+    }
+
+    &-pre {
+      white-space: pre;
+    }
+
+    &-pre-line {
+      white-space: pre-line;
+    }
+
+    &-pre-wrap {
+      white-space: pre-wrap;
+    }
+  }
+
+  .#{$bp}break {
+    &-words {
+      word-wrap: break-word;
+    }
+
+    &-normal {
+      word-wrap: normal;
+    }
+  }
+
+  .#{$bp}truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+  }
+}
+
+@mixin getDisplayClasses($bp) {
+  .#{$bp}d {
+    &-block {
+      display: block;
+    }
+
+    &-inline-block {
+      display: inline-block;
+    }
+
+    &-inline {
+      display: inline;
+    }
+
+    &-table {
+      display: table;
+    }
+
+    &-table-row {
+      display: table-row;
+    }
+
+    &-table-cell {
+      display: table-cell;
+    }
+
+    &-hidden {
+      display: none;
+    }
+
+    &-flex {
+      display: flex;
+    }
+
+    &-inline-flex {
+      display: inline-flex;
+    }
+  }
+}
+
+@mixin getPositionClasses($bp) {
+  .#{$bp}pos {
+    &-static {
+      position: static;
+    }
+
+    &-fixed {
+      position: fixed;
+    }
+
+    &-absolute {
+      position: absolute;
+    }
+
+    &-relative {
+      position: relative;
+    }
+
+    &-sticky {
+      position: sticky;
+    }
+  }
+
+  .#{$bp}pin {
+    &-t {
+      top: 0;
+    }
+
+    &-r {
+      right: 0;
+    }
+
+    &-b {
+      bottom: 0;
+    }
+
+    &-l {
+      left: 0;
+    }
+
+    &-t-50 {
+      top: 50%;
+    }
+
+    &-r-50 {
+      right: 50%;
+    }
+
+    &-b-50 {
+      bottom: 50%;
+    }
+
+    &-l-50 {
+      left: 50%;
+    }
+
+    &-y {
+      top: 0;
+      bottom: 0;
+    }
+
+
+    &-x {
+      right: 0;
+      left: 0;
+    }
+
+    & {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    &-none {
+      top: auto;
+      right: auto;
+      bottom: auto;
+      left: auto;
+    }
+
+    &-t-auto {
+      top: auto;
+    }
+
+    &-r-auto {
+      right: auto;
+    }
+
+    &-b-auto {
+      bottom: auto;
+    }
+
+    &-l-auto {
+      left: auto;
+    }
+
+    &-y-auto {
+      top: auto;
+      bottom: auto;
+    }
+
+    &-x-auto {
+      right: auto;
+      left: auto;
+    }
+  }
+}
+
+@mixin getObjectFitClasses($bp) {
+  .#{$bp}object {
+    &-contain {
+      object-fit: contain;
+    }
+
+    &-cover {
+      object-fit: cover;
+    }
+
+    &-fill {
+      object-fit: fill;
+    }
+
+    &-none {
+      object-fit: none;
+    }
+
+    &-scale-down {
+      object-fit: scale-down;
+    }
+  }
+}
+
+@mixin getObjectPositionsClasses($bp) {
+  .#{$bp}object {
+    &-bottom {
+      object-position: bottom;
+    }
+
+    &-center {
+      object-position: center;
+    }
+
+    &-left {
+      object-position: left;
+    }
+
+    &-left-bottom {
+      object-position: left bottom;
+    }
+
+    &-left-top {
+      object-position: left top;
+    }
+
+    &-right {
+      object-position: right;
+    }
+
+    &-right-bottom {
+      object-position: right bottom;
+    }
+
+    &-right-top {
+      object-position: right top;
+    }
+
+    &-top {
+      object-position: top;
+    }
+  }
+}
+
+@mixin getOverflowClasses($bp) {
+  .#{$bp}overflow {
+    &-auto {
+      overflow: auto;
+    }
+
+    &-hidden {
+      overflow: hidden;
+    }
+
+    &-visible {
+      overflow: visible;
+    }
+
+    &-scroll {
+      overflow: scroll;
+    }
+
+    &-x-auto {
+      overflow-x: auto;
+    }
+
+    &-y-auto {
+      overflow-y: auto;
+    }
+
+    &-x-hidden {
+      overflow-x: hidden;
+    }
+
+    &-y-hidden {
+      overflow-y: hidden;
+    }
+
+    &-x-visible {
+      overflow-x: visible;
+    }
+
+    &-y-visible {
+      overflow-y: visible;
+    }
+
+    &-x-scroll {
+      overflow-x: scroll;
+    }
+
+    &-y-scroll {
+      overflow-y: scroll;
+    }
+  }
+
+  .#{$bp}scrolling {
+    &-touch {
+      -webkit-overflow-scrolling: touch;
+    }
+
+    &-auto {
+      -webkit-overflow-scrolling: auto;
+    }
+  }
+}
+
+@mixin getVisibilityClasses($bp) {
+  .#{$bp}visible {
+    visibility: visible;
+  }
+
+  .#{$bp}invisible {
+    visibility: hidden;
+  }
+}
+
+@mixin getListResetClasses($bp) {
+  .#{$bp}list-reset {
+    list-style: none;
+    padding: 0;
+  }
+}

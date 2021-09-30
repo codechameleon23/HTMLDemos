@@ -1,0 +1,7 @@
+@@if(context.smGroup) {
+   <div class="@@smGroup.wrapperSx">
+      @@for (var i = 0; i < context.smGroup.icons.length; i++) {
+         @@include("./_includes/_icon.html", `+(JSON.stringify(context.smGroup.icons[i]))+`)
+      }
+   </div>
+}

@@ -1,0 +1,32 @@
+// The base font-size is set at 62.5% for having the convenience
+// of sizing rems in a way that is similar to using px: 1.6rem = 16px
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0 solid transparent;
+}
+
+body {
+  color: $defaultTextColor;
+  font-family: $defaultFont;
+  font-size: $defaultFontSize;
+  font-weight: $defaultFontWeights;
+  letter-spacing: 0.01em;
+  line-height: normal;
+  font-style: normal;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+  max-width: 100%;
+  width: 100%;
+}

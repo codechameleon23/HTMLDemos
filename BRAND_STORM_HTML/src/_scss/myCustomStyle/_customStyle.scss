@@ -1,0 +1,118 @@
+.transition-all {
+  &,
+  *[class*="hover\:"],
+  *[class*="focus\:"] {
+    transition: all .25s 0s ease-in-out;
+  }
+}
+
+a.button{
+  color: inherit;
+}
+.button {
+  //align-items: center;
+  //color: inherit;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  //font-weight: 400;
+  //font-size: 2.2rem;
+  &,
+  &-lg{
+    //letter-spacing: .08em;
+  }
+  @media (min-width: $bp_md) {
+    &-lg {
+      min-width: 24.2rem;
+    }
+  }
+  //&:hover {
+  //  background: linear-gradient(118deg, $color-primary, $color-medium);
+  //}
+}
+
+.text-wrap {
+  >* {
+    &:not(:last-child):not(.line-divider):not(.free-child) {
+      margin-bottom: 2rem;
+    }
+  }
+  &-lg{
+    >* {
+      &:not(:last-child):not(.line-divider):not(.free-child) {
+        margin-bottom: 4rem;
+      }
+    }
+  }
+  &-md{
+    >* {
+      &:not(:last-child):not(.line-divider):not(.free-child) {
+        margin-bottom: 2.5rem;
+      }
+    }
+  }
+  &-sm{
+    >* {
+      &:not(:last-child):not(.line-divider):not(.free-child) {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+  &-xs{
+    >* {
+      &:not(:last-child):not(.line-divider):not(.free-child) {
+        margin-bottom: .5rem;
+      }
+    }
+  }
+}
+
+.popup_visible .popup {
+  overflow: visible;
+  animation: fade-in-fwd 0.35s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.popup {
+  &_wrapper {
+    perspective: 500px;
+    perspective-origin: 50% 50%;
+  }
+  &_background {
+    opacity: .85 !important;
+  }
+  max-height: calc(100% - 2rem);
+}
+
+@keyframes fade-in-fwd {
+  0% {
+    transform: translateZ(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+a[href^="http"] {
+  @media (max-width: $bp_sm){
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
+}
+
+.logo-shadow {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    box-shadow: -200px 0px 200px 100px rgba(0, 0, 0, 0.5);
+    width: 70%;
+    height: 0;
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+  }
+}

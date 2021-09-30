@@ -1,0 +1,92 @@
+/*Arrow button*/
+$arrowSize: 4.2rem;
+$arrowSize_sm: 3.2rem;
+$thikness : .2rem;
+$arrowThickness: $thikness*1.2;
+
+.arrow {
+  height: $arrowSize;
+  width: $arrowSize;
+  min-width: 0;
+  padding: 0;
+
+  position: relative;
+  background-color: transparent;
+  color: inherit;
+  border: 0;
+
+  &.has-border {
+    border-radius: 100%;
+    border: $arrowThickness solid;
+  }
+
+  &.angle {
+    &:before {
+      transform: translate(-25%, -50%) rotate(45deg);
+    }
+
+    &:after {
+      display: none;
+    }
+
+    &._nxt {
+      &:before {
+        transform: translate(-75%, -50%) rotate(45deg);
+      }
+    }
+
+  }
+
+  // &:hover{
+  //   &:before,
+  //   &:after {
+  //     color: $colorPrimary;
+  //   }
+  // }
+
+  &:before,
+  &:after {
+    position: absolute;
+    content: "";
+    width: $arrowSize/2;
+    height: $arrowSize/2;
+    border: $arrowThickness solid;
+    color: inherit;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:before {
+    border-width: 0 0 $arrowThickness $arrowThickness;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &:after {
+    width: calc(#{$arrowSize/2} + #{$arrowThickness * 4});
+    height: 0;
+    border-width: 0 0 $arrowThickness;
+  }
+
+  &._nxt {
+    &:before {
+      border-width: $arrowThickness $arrowThickness 0 0;
+    }
+  }
+
+  &._sm {
+    height: $arrowSize_sm;
+    width: $arrowSize_sm;
+
+    &:before,
+    &:after {
+      width: $arrowSize_sm/2;
+      height: $arrowSize_sm/2;
+    }
+
+    &:after {
+      width: calc(#{$arrowSize_sm/2} + #{$arrowThickness * 4});
+    }
+  }
+
+}

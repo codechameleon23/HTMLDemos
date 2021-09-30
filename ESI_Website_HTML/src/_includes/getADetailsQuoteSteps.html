@@ -1,0 +1,67 @@
+<section class="@@sectionClasses">
+   <div class="container lg:container-xl mx-auto">
+      <div data-togglable="false" data-close-others="true" data-seturl="true" class="steps-tabs accordion-tabs-wrapper accordion-wrapper via_js mt-lg">
+
+         <div class="toggle-tabs d-hidden lg:d-flex flex-row -m-xxxs">
+            <div class="accordion p-xxxs flex-stretch flex-col is-open">
+               <!-- add "bg-pink font-color-white opacity-50" class to achieve disabled look for below -->
+               <div data-filterby="step_1" class="accordion-toggle flex-stretch p-xs font-weight-bold font-color-white cursor-pointer bg-dark hover:bg-aqua">Additional Services</div>
+            </div>
+            <div class="accordion p-xxxs flex-stretch flex-col">
+               <div data-filterby="step_2" class="accordion-toggle flex-stretch p-xs font-weight-bold font-color-white cursor-pointer bg-dark hover:bg-aqua">Storage Period/Contact Details</div>
+            </div>
+            <div class="accordion p-xxxs flex-stretch flex-col">
+               <div data-filterby="step_3" class="accordion-toggle flex-stretch p-xs font-weight-bold font-color-white cursor-pointer bg-dark hover:bg-aqua">Summary</div>
+            </div>
+         </div>
+
+         <div class="toggle-content">
+            <div class="accordion border border-pink mt-xxs is-open">
+               <!-- add "bg-pink font-color-white opacity-50" class to achieve disabled look for below -->
+               <div data-filterby="step_1" class="accordion-toggle accordion-label px-xs pt-xs pb-xs transition-all lg:d-hidden">
+                  <h3 class="question font-weight-bold">Additional Services</h3>
+                  <span class="toggle-sign icon font-color-pink transition-all">
+                     <span class="p-xxs"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357">
+                           <path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg></span>
+                  </span>
+               </div>
+               <div class="accordion-content">
+                  <div class="answer p-md">
+                     @@include('./_includes/_tabs_inner/_additional-services.html')
+                  </div>
+               </div>
+            </div>
+            <div class="accordion border border-pink mt-xxs">
+               <div data-filterby="step_2" class="accordion-toggle accordion-label px-xs pt-xs pb-xs transition-all lg:d-hidden">
+                  <h3 class="question font-weight-bold">Storage Period/Contact Details</h3>
+                  <span class="toggle-sign icon font-color-pink transition-all">
+                     <span class="p-xxs"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357">
+                           <path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg></span>
+                  </span>
+               </div>
+               <div class="accordion-content">
+                  <div class="answer p-md">
+                     @@include('./_includes/_tabs_inner/_storage-period-contact-details.html')
+                  </div>
+               </div>
+            </div>
+            <div class="accordion border border-pink mt-xxs">
+               <div data-filterby="step_3" class="accordion-toggle accordion-label px-xs pt-xs pb-xs transition-all lg:d-hidden">
+                  <h3 class="question font-weight-bold">Summary</h3>
+                  <span class="toggle-sign icon font-color-pink transition-all">
+                     <span class="p-xxs"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357">
+                           <path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" /></svg></span>
+                  </span>
+               </div>
+               <div class="accordion-content">
+                  <div class="answer p-md">
+                     @@include('./_includes/_tabs_inner/_summary.html')
+                  </div>
+               </div>
+            </div>
+         </div>
+
+
+      </div>
+   </div>
+</section>

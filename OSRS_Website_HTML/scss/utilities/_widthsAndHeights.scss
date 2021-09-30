@@ -1,0 +1,31 @@
+@mixin getWidthsAndHeightsClasses($bp) {
+  .#{$bp}min{
+    &-w-0{min-width: 0;}
+    &-w-full{min-width: 100%;}
+  }
+  .#{$bp}max{
+    &-w-0{max-width: 0;}
+    &-w-full{max-width: 100%;}
+  }
+
+  .#{$bp}w{
+    &-auto{width: auto;}
+    &-full{width: 100%;}
+    &-screen{width: 100vh;}
+  }
+  .#{$bp}h{
+    &-auto{height: auto;}
+    &-full{height: 100%;}
+    &-screen{height: 100vh;}
+  }
+  .#{$bp}min-h{
+    &-0{min-height: 0;}
+    &-full{min-height: 100%;}
+    &-screen{min-height: 100vh;}
+  }
+  .#{$bp}max-h{
+    &-0{max-height: 0;}
+    &-full{max-height: 100%;}
+    &-screen{max-height: 100vh;}
+  }
+}

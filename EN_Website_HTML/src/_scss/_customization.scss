@@ -1,0 +1,355 @@
+$fontRelatedClassNamePrifix: 'f-';
+$fontFamilyClassNamePrefix: "#{$fontRelatedClassNamePrifix}family";
+$textColorsClassPrefix: "#{$fontRelatedClassNamePrifix}color";
+$fontSizesClassPrefix: "#{$fontRelatedClassNamePrifix}size";
+$fontWeightsClassPrefix: "#{$fontRelatedClassNamePrifix}weight";
+$lineHeightsClassPrefix: "#{$fontRelatedClassNamePrifix}height";
+$letterSpacingsClassPrefix: "#{$fontRelatedClassNamePrifix}spacing";
+
+/*ImportFontsonts*/
+ @import "./ImportFonts";
+
+$color-white: #ffffff;
+$color-black: #000000;
+
+// brand colors
+$blue: #6878de;
+$red: #d44f5c;
+$yellow: #EDCA97;
+$steel: #95ABBD;
+$gray: #333333;
+$gray1: #999999;
+
+$color-text: $gray;
+$color-primary: $blue;
+$color-secondary: $red;
+$color-tertiary: $yellow;
+$color-quaternary: $steel;
+$color-light: $gray1;
+
+$color-primary-light: mix(white, $blue, 80%);
+$color-secondary-light: mix(white, $red, 80%);
+$color-tertiary-light: mix(white, $yellow, 80%);
+$color-quaternary-light: mix(white, $steel, 80%);
+
+//-------------------------
+
+// $gridSizes: ();
+$orientations: (
+  // landscape\: "landscape",
+  // portrait\: "portrait"
+);
+
+$baseFont: 'Campton', $font_sans;
+//$primaryFont: 'Roboto Condensed', $font_sans;
+
+$defaultFont: $baseFont;
+$defaultTextColor: $color-text;
+$defaultFontWeights: 400;
+$defaultFontSize: 2.0rem;
+$defaultFontHeight: 1.5;
+$defaultLetterSpacing: "normal";
+
+$fontFamily: (
+  $fontFamilyClassNamePrefix "default" $defaultFont,
+  //$fontFamilyClassNamePrefix "primary" $primaryFont,
+);
+
+$bp_sm: 576px;
+$bp_md: 710px;
+$bp_lg: 992px;
+$bp_xl: 1200px;
+$bp_xxl: 1400px;
+$breakPoints: (
+  null 0, 
+  sm\: $bp_sm, 
+  md\: $bp_md, 
+  lg\: $bp_lg, 
+  xl\: $bp_xl,
+  xxl\: $bp_xxl,
+);
+
+$states: (
+  null null,
+  hover\: ":hover",
+  focus\: ":focus",
+  //focus-within\: ":focus-within",
+  // active\: null,
+);
+
+$bgColors: (
+  $bgColorsClassPrefix "inherit" inherit 'states' 'no-parent',
+  $bgColorsClassPrefix "transparent" transparent 'states' 'no-parent',
+  //$bgColorsClassPrefix "black" $color-black 'states' 'no-parent',
+  //$bgColorsClassPrefix "white" $color-white 'states' 'no-parent',
+  $bgColorsClassPrefix "primary" $color-primary 'states' 'no-parent',
+  $bgColorsClassPrefix "primary-light" $color-primary-light 'states' 'no-parent',
+  $bgColorsClassPrefix "secondary" $color-secondary 'states' 'no-parent',
+  $bgColorsClassPrefix "secondary-light" $color-secondary-light 'states' 'no-parent',
+  $bgColorsClassPrefix "tertiary" $color-tertiary 'states' 'no-parent',
+  $bgColorsClassPrefix "tertiary-light" $color-tertiary-light 'states' 'no-parent',
+  $bgColorsClassPrefix "quaternary" $color-quaternary 'states' 'no-parent',
+  $bgColorsClassPrefix "quaternary-light" $color-quaternary-light 'states' 'no-parent',
+  $bgColorsClassPrefix "light" $color-light 'states' 'no-parent',
+);
+
+$themeColor: ();
+
+$borderColors: (
+  //$borderColorsClassPrefix "inherit" inherit 'states' 'no-parent',
+  //$borderColorsClassPrefix "transparent" transparent 'states' 'no-parent',
+  //$borderColorsClassPrefix "black" $color-black 'states' 'no-parent',
+  //$borderColorsClassPrefix "white" $color-white 'states' 'no-parent',
+  //$borderColorsClassPrefix "primary" $color-primary 'states' 'no-parent',
+  //$borderColorsClassPrefix "secondary" $color-secondary 'states' 'no-parent',
+  //$borderColorsClassPrefix "primary-light" $color-primary-light 'states' 'no-parent',
+  //$borderColorsClassPrefix "light" $color-light 'states' 'no-parent',
+);
+
+$borderWidth: (
+  null 0.1rem 'states' 'no-parent',
+  //2 0.2rem 'states' 'no-parent',
+  //0 0rem 'no-states' 'no-parent',
+);
+
+
+$selectionTextColor: $color-white;
+$selectionTextBgColor: rgba(invert($color-primary), 1);
+
+$textColors: (
+  $textColorsClassPrefix "inherit" inherit 'states' 'no-parent',
+  $textColorsClassPrefix "default" $color-text 'states' 'no-parent',
+  $textColorsClassPrefix "black" $color-black 'states' 'no-parent',
+  $textColorsClassPrefix "white" $color-white 'states' 'no-parent',
+  $textColorsClassPrefix "primary" $color-primary 'states' 'no-parent',
+  $textColorsClassPrefix "secondary" $color-secondary 'states' 'no-parent',
+);
+
+$fontSizes: (
+  $fontSizesClassPrefix "inherit" inherit null,
+  $fontSizesClassPrefix "xs" 1.6rem null,
+  $fontSizesClassPrefix "sm" 2.0rem null,
+  $fontSizesClassPrefix "md" 4.8rem "states",
+  $fontSizesClassPrefix "2md" 5.6rem "states",
+  $fontSizesClassPrefix "lg" 7.2rem "states",
+  $fontSizesClassPrefix "xl" 11.6rem "states",
+);
+
+$fontWeights: (
+  $fontWeightsClassPrefix "inherit" inherit null,
+  // $fontWeightsClassPrefix "hairline" 100 null,
+  // $fontWeightsClassPrefix "thin" 200 null,
+  //$fontWeightsClassPrefix "light" 300 'no-states',
+  $fontWeightsClassPrefix "regular" 400 'states',
+  $fontWeightsClassPrefix "medium" 500 null,
+  // $fontWeightsClassPrefix "semibold" 600 'states',
+  //$fontWeightsClassPrefix "bold" 700 null,
+  // $fontWeightsClassPrefix "extrabold" 800 null,
+  // $fontWeightsClassPrefix "black" 900 null,
+);
+
+$lineHeights: (
+  //$lineHeightsClassPrefix "none" 1,
+  //$lineHeightsClassPrefix "tight" 1.25,
+  //$lineHeightsClassPrefix "normal" "normal",
+  //$lineHeightsClassPrefix "ease" 1.5,
+  //$lineHeightsClassPrefix "loose" 1.75
+);
+
+$letterSpacings: (
+  // $letterSpacingsClassPrefix "tight" -0.05em,
+  //$letterSpacingsClassPrefix "base" $defaultLetterSpacing,
+  //$letterSpacingsClassPrefix "wide" .15em,
+);
+
+$paddings: (
+  //$paddingsClassPrefix "hair" .1rem,
+  //$paddingsClassPrefix "thred" .2rem,
+  //$paddingsClassPrefix "thin" .4rem,
+  //$paddingsClassPrefix "flat" .8rem,
+  $paddingsClassPrefix "1" 1.0rem,
+  $paddingsClassPrefix "2" 2.0rem,
+  $paddingsClassPrefix "3" 3.0rem,
+  $paddingsClassPrefix "4" 4.0rem,
+  //$paddingsClassPrefix "5" 5.0rem,
+  $paddingsClassPrefix "6" 6.0rem,
+  //$paddingsClassPrefix "7" 7.0rem,
+  $paddingsClassPrefix "8" 8.0rem,
+  //$paddingsClassPrefix "9" 9.0rem,
+  $paddingsClassPrefix "10" 10.0rem,
+  //$paddingsClassPrefix "12" 12.0rem,
+  $paddingsClassPrefix "0" 0,
+);
+
+$margins: (
+  $marginsClassPrefix "auto" auto,
+  //$marginsClassPrefix "hair" .1rem,
+  //$marginsClassPrefix "thred" .2rem,
+  //$marginsClassPrefix "thin" .4rem,
+  //$marginsClassPrefix "flat" .8rem,
+  $marginsClassPrefix "1" 1.0rem,
+  $marginsClassPrefix "2" 2.0rem,
+  $marginsClassPrefix "3" 3.0rem,
+  $marginsClassPrefix "4" 4.0rem,
+  //$marginsClassPrefix "5" 5.0rem,
+  $marginsClassPrefix "6" 6.0rem,
+  //$marginsClassPrefix "7" 7.0rem,
+  $marginsClassPrefix "8" 8.0rem,
+  //$marginsClassPrefix "9" 9.0rem,
+  //$marginsClassPrefix "10" 10.0rem,
+  //$marginsClassPrefix "12" 12.0rem,
+  $marginsClassPrefix "0" 0 'state',
+);
+
+$negativeMargin: (
+  //$negativeMarginClassPrefix "hair" .1rem,
+  //$negativeMarginClassPrefix "thred" .2rem,
+  //$negativeMarginClassPrefix "thin" .4rem,
+  //$negativeMarginClassPrefix "flat" .8rem,
+  $negativeMarginClassPrefix "1" 1.0rem,
+  $negativeMarginClassPrefix "2" 2.0rem,
+  $negativeMarginClassPrefix "3" 3.0rem,
+  $negativeMarginClassPrefix "4" 4.0rem,
+  //$negativeMarginClassPrefix "5" 5.0rem,
+  $negativeMarginClassPrefix "6" 6.0rem,
+  //$negativeMarginClassPrefix "7" 7.0rem,
+  $negativeMarginClassPrefix "8" 8.0rem,
+  //$negativeMarginClassPrefix "9" 9.0rem,
+  //$negativeMarginClassPrefix "10" 10.0rem,
+  //$negativeMarginClassPrefix "13" 13.0rem,
+  $negativeMarginClassPrefix "0" 0,
+);
+
+$shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.45), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+$shadow_md: 0 4px 6px -1px rgba(0, 0, 0, 0.45), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$shadow_lg: 0 6px 12px 6px rgba(0, 0, 0, 0.25);
+$shadow_xl: 0 20px 25px -5px rgba(0, 0, 0, 0.45), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+$shadow_2xl: 0 12px 50px 0px rgba(0, 0, 0, 0.20);
+$shadow_inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+$shadow_outline: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+
+$shadows: (
+  //$shadowsClassPrefix null $shadow 'states',
+  $shadowsClassPrefix "md" $shadow_md 'states',
+  $shadowsClassPrefix "lg" $shadow_lg 'states',
+  //$shadowsClassPrefix "xl" $shadow_xl 'states',
+  //$shadowsClassPrefix "2xl" $shadow_2xl 'states',
+  //$shadowsClassPrefix "inner" $shadow_inner 'states',
+  //$shadowsClassPrefix "outline" $shadow_outline 'states',
+  $shadowsClassPrefix "none" none 'states',
+);
+
+$aspectRatiosClassNamePrefix: "ratio";
+$aspectRatios: (
+  $aspectRatiosClassNamePrefix "logo" 165 58,
+  $aspectRatiosClassNamePrefix "custom" 360 270,
+  $aspectRatiosClassNamePrefix "custom-2" 1140 640,
+  $aspectRatiosClassNamePrefix "1x1" 1 1,
+  //$aspectRatiosClassNamePrefix "3x2" 3 1,
+  //$aspectRatiosClassNamePrefix "4x3" 4 3,
+  //$aspectRatiosClassNamePrefix "5x2" 5 2,
+  //$aspectRatiosClassNamePrefix "16x9" 16 9,
+  //$aspectRatiosClassNamePrefix "unstuck-design" 200 20,
+  $aspectRatiosClassNamePrefix "none" 1 0,
+);
+
+$columnCount: ();
+$hasColsSizes: ();
+
+$iconsSizes: (
+  $iconsSizesClassNamePrefix null 2.4rem,
+  //$iconsSizesClassNamePrefix "1" 2.6rem,
+  //$iconsSizesClassNamePrefix "2" 3.2rem,
+  //$iconsSizesClassNamePrefix "3" 3.4rem,
+  //$iconsSizesClassNamePrefix "4" 4.5rem,
+  $iconsSizesClassNamePrefix "5" 5.0rem,
+  $iconsSizesClassNamePrefix "logo" 16.5rem,
+  //$iconsSizesClassNamePrefix "unstuck-design" 20rem,
+  $iconsSizesClassNamePrefix "auto" 'auto',
+);
+
+// $opacities: (
+//   $opacitiesClassPrefix "0" 0 null,
+//   $opacitiesClassPrefix "15" 0.15 null,
+//   $opacitiesClassPrefix "25" 0.25 null,
+//   $opacitiesClassPrefix "50" 0.5 null,
+//   $opacitiesClassPrefix "65" 0.65 null,
+//   $opacitiesClassPrefix "75" 0.75 null,
+//   $opacitiesClassPrefix "85" 0.85 null,
+//   $opacitiesClassPrefix "100" 1 null
+// );
+
+$borderRadiusClassPrefix: "rounded";
+$borderRadiuses: (
+  // $borderRadiusClassPrefix null 2px,
+  $borderRadiusClassPrefix "full" 9999px,
+  // $borderRadiusClassPrefix "xs" 4px,
+);
+
+// Container widths
+// $container_lg: 100rem;
+$container_lg: 96rem;
+$container_intro: 90rem;
+$container_xl: 114rem;
+$container_xxl: 140rem;
+$container_null: calc(100% - 4rem);
+$container: (
+  $containerClassPrefix null $container_null,
+  //$containerClassPrefix "fluid" $container_fluid,
+  $containerClassPrefix "sm" $container_sm,
+  //$containerClassPrefix "md" $container_md,
+  $containerClassPrefix "lg" $container_lg,
+  $containerClassPrefix "xl" $container_xl,
+  //$containerClassPrefix "xxl" $container_xxl,
+  //$containerClassPrefix "intro" $container_intro,
+);
+
+$shadowOverClassPrefix: "overlay";
+$gredList0: linear-gradient(to bottom, rgba($color-primary,1) 0%, rgba($color-primary, 0) 33.33%);
+//$gredList1: linear-gradient(to bottom, rgba($color-dark, 1) 0%, rgba($color-dark, .65) 100%);
+$gredList2: linear-gradient(to bottom, rgba($color-primary, .3) 0%, rgba($color-primary, .3) 100%);
+$gredList3: linear-gradient(to top, rgba($color-primary, 0) 0%, rgba($color-primary, .5) 100%);
+$gredList4: linear-gradient(70deg, $blue 55%, transparent 0%);
+$gredList5: linear-gradient(70deg, transparent 55%, $blue 0%);
+$shadowOver: (
+  //$shadowOverClassPrefix 'cover' $gredList0 'no-states',
+  //$shadowOverClassPrefix 'cover-mobile' $gredList1 'no-states',
+  //$shadowOverClassPrefix 'cover-ttb' $gredList3 'states',
+  // $shadowOverClassPrefix 'primary-light' $gredList2 'no-states',
+  // $shadowOverClassPrefix 'dark' $gredList2 'no-states',
+  // $shadowOverClassPrefix 'primary-tilt-45' $gredList2 'no-states',
+  // $shadowOverClassPrefix 'primary-tilt-55' $gredList4 'no-states',
+  // $shadowOverClassPrefix 'primary-tilt-55-rev' $gredList5 'no-states',
+  // $shadowOverClassPrefix 'primary' $gredList1 'states',
+  //$shadowOverClassPrefix "none" none 'no-states',
+);
+
+// $zIndexs: (
+  // $zIndexsClassPrefix "auto" "auto",
+  // $zIndexsClassPrefix "0" 0,
+  // $zIndexsClassPrefix "10" 10,
+  // $zIndexsClassPrefix "20" 20,
+  // $zIndexsClassPrefix "30" 30,
+  // $zIndexsClassPrefix "40" 40,
+  // $zIndexsClassPrefix "50" 50,
+// );
+
+$iconThickNess: .06rem;
+$navbarBp: $bp_lg;
+$lineThickNess: 2px;
+
+// Range slider style
+// $trackHeight: 2px;
+// $trackWidth: 100%;
+// $trackColor: $color1;
+// $trackColorFocus: $color-black;
+// $trackBorderColor: transparent;
+// $trackBorderWidth: 0px;
+// $trackBorderRadius: 4px;
+
+// $thumbHeight: 24px;
+// $thumbWidth: $thumbHeight;
+// $thumbColor: $color-white;
+// $thumbBorderColor: $colorPink;
+// $thumbBorderWidth: 2px;
+// $thumbBorderRadius: 15px;

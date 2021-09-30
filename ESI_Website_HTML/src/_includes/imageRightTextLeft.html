@@ -1,0 +1,68 @@
+<div class="flex-col md:flex-row pos-relative @@bgClasses">
+   <section class="md:pos-absolute @@col2Classes pin pin-l-auto ratio-16x9 " data-aos="fade" data-aos-delay="100" data-aos-duration="700">
+      <div class="pos-absolute pin flex-col flex-stretch bg-no-repeat @@bgImgClasses" style="background-image:url('@@bgImage')"></div>
+   </section>
+   <section class="container md:container-md md:container-xl mx-auto" data-aos="fade-up" data-aos-delay="300" data-aos-duration="700">
+      <div class="mr-auto md:pr-sm lg:pr-2lg @@col1Classes">
+         <div class="w-full text-wrap">
+            @@if (context.title) {
+            @@include('./_includes/_commons/h2.html', {
+            "title": "<span>@@title</span>",
+            "className": "@@titleClass"
+            })
+            }
+            @@if (context.subtitle) {
+            @@include('./_includes/_commons/h3.html', {
+            "title": "<span>@@subtitle</span>",
+            "className": "@@subtitleClass"
+            })
+            }
+            @@if (context.text) {
+            @@text
+            }
+            @@if (context.button === true) {
+            @@include('./_includes/_commons/button.html', {
+            "link": "@@buttonLink",
+            "className": "@@buttonClass font-color-white",
+            "buttonText": "@@buttonText"
+            })
+            }
+            @@if(context.createAccount){
+            <div>
+               <form class="flex-col">
+                  <h4 class="font-weight-bold font-color-pink mb-xs">Create a Ewe Store It account</h4>
+                  <div class="-m-xs">
+                     <div class="p-xs flex-auto flex-col">
+                        <input type="password" required placeholder="Enter Password " class="px-2xs py-xs flex-stretch focus:shadow-lg transition-all bg-white border border-pink">
+                     </div>
+                     <div class="p-xs flex-auto flex-col">
+                        <input type="password" required placeholder="Confirm Password" class="px-2xs py-xs flex-stretch focus:shadow-lg transition-all bg-white border border-pink">
+                     </div>
+                     <div class="p-xs flex-auto">
+                        @@include('./_includes/_commons/button-submit.html', {"className": "bg-aqua font-color-white","buttonText": "Create Account"})
+                     </div>
+                  </div>
+               </form>
+            </div>
+            }
+            @@if(context.GetAquoteForm){
+               <div>
+                  <form class="flex-col">
+                     <div class="-m-xs flex-row flex-wrap">
+                        <div class="p-xs flex-auto flex-col col-12">
+                           <input type="text" placeholder="Start Date" class="datepicker w-full px-2xs py-xs flex-stretch focus:shadow-lg transition-all bg-white border border-pink">
+                        </div>
+                        <div class="p-xs flex-auto flex-col md:col-6">
+                           <input type="text" placeholder="Postcode" class="w-full px-2xs py-xs flex-stretch focus:shadow-lg transition-all bg-white border border-pink">
+                        </div>
+                        <div class="p-xs flex-auto md:flex-col md:col-6">
+                           @@include('./_includes/_commons/button-submit.html', {"className": "bg-dark font-color-white w-full","buttonText": "Get a quote"})
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            }
+         </div>
+      </div>
+   </section>
+</div>

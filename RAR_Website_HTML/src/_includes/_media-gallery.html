@@ -1,0 +1,18 @@
+@@if(!context.childOnly){
+<section class="@@sectionClasses" @@if(context.aosAttr){@@aosAttr}>
+      @@if(!context.fullWidth){
+         <div class="container md:container-md lg:container-xl mx-auto">
+      }
+}
+      <div class="flex-row @@if(context.gap){-mr-2xs -mb-2xs lg:-mb-@@gap lg:-mr-@@gap} @@rowClasses @@if(context.allowPopup){js_media_Gallery_Popup}">
+         @@for (var i = 0; i < data.length; i++) {
+            @@include("./_includes/_media-card.html", `+(JSON.stringify(data[i]))+`)
+         }
+      </div>
+
+@@if(!context.childOnly){
+   @@if(!context.fullWidth){
+      </div>
+   }
+</section>
+}

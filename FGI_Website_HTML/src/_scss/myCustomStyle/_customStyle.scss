@@ -1,0 +1,269 @@
+h1, h2, h3, h4 {
+  line-height: 1.2;
+}
+
+b,
+strong {
+  font-weight: 600;
+}
+
+textarea {
+  resize: vertical;
+}
+
+body {
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.045;
+    background-image: url("../images/FGI TROPHY_2.png");
+    background-repeat: no-repeat;
+    background-size: 150%;
+    background-position: 50% 100vh;
+    pointer-events: none;
+    z-index: -1;
+  }
+}
+
+.navbar a {
+  &.is-active {
+    color: $color-white;
+  }
+}
+
+.select {
+  &:after {
+    border-width: 0 0 .2rem .2rem;
+  }
+}
+
+
+.transition-all {
+  &,
+  *[class*="hover\:"],
+  *[class*="focus\:"] {
+    transition: all .45s 0s ease-in-out;
+  }
+}
+
+a{
+  color: inherit;
+}
+.button {
+  align-items: center;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+
+  .icon {
+    flex: none;
+  }
+}
+
+.hero-banner {
+  @media (min-width: $bp_lg) {
+    min-height: calc(100vh - 10rem);
+  }
+}
+
+.page-banner {
+  min-height: 48rem;
+}
+
+.text-wrap {
+  >* {
+    &:not(:last-child):not(.line-divider):not(.free-child) {
+      margin-bottom: 2rem;
+    }
+  }
+  &-lg{
+    >* {
+      &:not(:last-child):not(.line-divider):not(.free-child) {
+        margin-bottom: 4rem;
+      }
+    }
+  }
+  &-md{
+    >* {
+      &:not(:last-child):not(.line-divider):not(.free-child) {
+        margin-bottom: 2.5rem;
+      }
+    }
+  }
+  &-sm{
+    >* {
+      &:not(:last-child):not(.line-divider):not(.free-child) {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+  &-xs{
+    >* {
+      &:not(:last-child):not(.line-divider):not(.free-child) {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+//.img-rollover {
+//  overflow: hidden;
+//  .card-image, .play-button {
+//    transition: all .35s 0s;
+//  }
+//  .image-rollover-parent:hover &,
+//  &:hover {
+//    // background-size: 28rem;
+//    .card-image {
+//      transform: scale(1.045);
+//    }
+//    //.play-button{
+//    //  transform: scale(0.955);
+//    //}
+//  }
+//}
+
+
+.brand-logo,
+.unstuck-link {
+  display: inline-block;
+}
+
+.image-placeholder {
+  background-image: url("../images/image-placeholder.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  //background-color: $color-placeholder;
+}
+
+a[href^="http"] {
+  @media (max-width: $bp_sm){
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
+}
+
+//a[href]:not(:hover) {
+//  text-decoration: none;
+//}
+
+.horizontal-card {
+  @media (min-width: $bp_lg){
+    min-height: 50rem;
+  }
+}
+
+.list-style {
+  column-rule-style: solid;
+  column-rule-width: .1rem;
+}
+
+nav ul li a.current {
+  color: $color-white;
+}
+
+.container {
+  width: calc(100% - 4rem);
+}
+
+
+table {
+  th {
+    vertical-align: bottom;
+  }
+  .table_info{
+    width: 33.33%;
+  }
+  .table_file{
+    width: 15%;
+  }
+  &.stacked {
+    tr.sr-desk:nth-child(4n+3) {
+      background-color: $color-medium;
+    }
+    @media (max-width: $bp_lg){
+      .sr-table-div {
+        padding: 1.5rem;
+      }
+      .sr-table-div label {
+        color: $color-primary;
+        font-weight: bold;
+      }
+      .sr-table-tr.even .sr-table-div {
+        background-color: $color-medium;
+      }
+    }
+  }
+}
+
+.accordion-tabs-wrapper {
+  & > .toggle-tabs {
+    & > .accordion {
+      &:not(:first-child) {
+        margin-left: -1px;
+      }
+      &.is-open {
+        border-bottom-color: $color-white;
+      }
+      &:not(.is-open){
+        background-color: $color-medium;
+      }
+    }
+  }
+  & > .toggle-content {
+    & > .accordion {
+      &:not(.is-open), & > .accordion-toggle {
+        display: none;
+      }
+    }
+  }
+}
+
+.accordion-tabs-wrapper, .accordion-wrapper {
+  &:not(.transition-all) {
+    .accordion.is-open>.accordion-label+.accordion-content {
+      max-height: unset;
+    }
+  }
+}
+
+.accordion-tabs-wrapper, .accordion-wrapper {
+  &.transition-all {
+    .accordion {
+      & >.accordion-label+.accordion-content {
+        display: flex;
+        flex-direction: column;
+        transition: all .45s 0s ease-in-out;
+        .answer {
+          overflow: auto;
+        }
+      }
+    }
+  }
+}
+
+.text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 7ch;
+}
+
+.fileGroup {
+  &:not(.attached){
+    & > .removeFile {
+      display: none;
+    }
+  }
+  &.attached{
+    & > .addFile {
+      display: none;
+    }
+  }
+}

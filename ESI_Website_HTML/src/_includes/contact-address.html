@@ -1,0 +1,34 @@
+<div class="pos-relative">
+   <section class="container md:container-md lg:container-xl mx-auto pt-2md pos-relative">
+      <div class="flex-row flex-wrap justify-space-between pos-relative">
+         <div class="col-12 lg:col-5">
+            <div class="text-wrap w-full">
+               <div>
+                  <h4 class="font-color-pink font-weight-bold mb-xxs">Head Office</h4>
+                  <p>Ewe Store It Ltd<br>
+                     Wincanton Business Park,<br>
+                     Wincanton,<br>
+                     Somerset<br>
+                     BA9 9RU
+                  </p>
+               </div>
+               <div>
+                  <h4 class="font-color-pink font-weight-bold mb-xxs">Telephone</h4>
+                  <a href="tel:+44 (0) 1963 34065" class="no-underline font-color-inherit hover:font-color-cyan">+44 (0) 1963 34065</a>
+               </div>
+               <div>
+                  <h4 class="font-color-pink font-weight-bold mb-xxs">Email</h4>
+                  <a href="mailto:enquiries@ewestoreit.com" class="no-underline font-color-inherit hover:font-color-cyan">enquiries@ewestoreit.com</a>
+               </div>
+            </div>
+         </div>
+         <div class="col-12 md:col-6 md:pos-absolute z-10 pt-md md:pt-0 flex-col pin-r pin-b special-map">
+            @@include('./_includes/_commons/g-map.html', {
+               "mapId": "map-canvas",
+               "mapWrapperClasses": "ratio-1x1 flex-stretch",
+               "mapClasses": "bg-dark hover:shadow-lg transition-all"
+            })
+         </div>
+      </div>
+   </section>
+</div>

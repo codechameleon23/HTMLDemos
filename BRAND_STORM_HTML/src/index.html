@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('./_includes/_head.html', {
+	"pageName": "Home",
+	"description": ""
+	})
+</head>
+
+<body class="jsNavbarToggle is-close flex-col bg-cover bg-center-bottom bg-no-repeat" style="background-image: url('./images/login-bg.jpg')">
+
+   <!-- Header -->
+   <header class="">
+      <div class="container md:container-sm lg:container-lg xl:container-xl mx-auto text-center py-4">
+         <div class="flex-col sm:flex-row justify-center pos-relative">
+            <div class="w-full" style="max-width: 540px;">
+               <img class="w-full" src="./images/brand-storm-logo-1.png" alt="" />
+            </div>
+            <div class="w-full pos-absolute pin-t-100 -mt-2" style="max-width: 670px;">
+               <img class="w-full" src="./images/the-regional-finals.png" alt="" />
+            </div>
+         </div>
+      </div>
+   </header>
+
+	<!-- Main -->
+   <main class="flex-auto flex-col">
+
+      <!--Main Section-->
+      <section class="pos-relative pt-2 lg:pt-0 my-auto flex-auto flex-col">
+         <div class="
+					container
+					md:container-sm lg:container-lg xl:container-xl
+					mx-auto
+					flex-auto
+					flex-col
+         ">
+            <div class="m-auto">
+               <button class="jsLoginPopup_open button bg-highlight f-color-white f-weight-bold uppercase px-4 py-2 w-full f-size-3 shadow-md rounded overflow-hidden transition-all">Get Started</button>
+            </div>
+         </div>
+      </section>
+
+      <!-- Login popup -->
+      <div id="jsLoginPopup" class="d-hidden container container-sm popup shadow-2xl">
+         <div class="flex-col w-full flex-stretch popup-wrap">
+            <button class="jsLoginPopup_close button
+               pos-absolute pin-t pin-r z-10 ml-auto
+               bg-highlight
+               shadow-lg
+               rounded
+               icon icon-3
+               -mt-flat -mr-flat
+            ">
+              <span class="p-flat f-color-white">
+                  <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.001 512.001"><path d="M284.286 256.002L506.143 34.144c7.811-7.811 7.811-20.475 0-28.285-7.811-7.81-20.475-7.811-28.285 0L256 227.717 34.143 5.859c-7.811-7.811-20.475-7.811-28.285 0-7.81 7.811-7.811 20.475 0 28.285l221.857 221.857L5.858 477.859c-7.811 7.811-7.811 20.475 0 28.285 3.905 3.905 9.024 5.857 14.143 5.857 5.119 0 10.237-1.952 14.143-5.857L256 284.287l221.857 221.857c3.905 3.905 9.024 5.857 14.143 5.857s10.237-1.952 14.143-5.857c7.811-7.811 7.811-20.475 0-28.285L284.286 256.002z"/></svg>
+              </span>
+            </button>
+            <div class="flex-stretch overflow-auto popup-body bg-white-15 rounded px-3 px-4 py-4">
+               <div class="text-wrap">
+                  <h3 class="f-weight-bold f-size-4 f-color-white">If already registered, please login here:</h3>
+                  <form class="flex-row flex-wrap -mx-1">
+                     <div class="col-12 flex-col w-full px-1 pb-1">
+                        <input type="email" placeholder="Email" required class="f-color-highlight f-weight-bold py-2 px-2 bg-white-15 flex-stretch focus:shadow-md transition-all">
+                     </div>
+                     <div class="col-12 px-1 pb-1">
+                        <button class="button bg-highlight f-color-white f-weight-bold uppercase px-3 py-2 f-size-2 justify-center shadow-md rounded overflow-hidden transition-all">Login</button>
+                     </div>
+                  </form>
+
+                  <h3 class="f-weight-bold f-size-4 f-color-white">New Registration:</h3>
+                  <form class="flex-row flex-wrap -mx-1">
+                     <div class="col-12 flex-col w-full px-1 pb-1">
+                        <input type="text" placeholder="Full Name" class="f-color-highlight f-weight-bold py-2 px-2 bg-white-15 flex-stretch focus:shadow-md transition-all">
+                     </div>
+                     <div class="col-12 flex-col w-full px-1 pb-1">
+                        <input type="email" placeholder="Email*" required class="f-color-highlight f-weight-bold py-2 px-2 bg-white-15 flex-stretch focus:shadow-md transition-all">
+                     </div>
+                     <div class="col-12 flex-col w-full px-1 pb-1">
+                        <input type="text" placeholder="Location" class="f-color-highlight f-weight-bold py-2 px-2 bg-white-15 flex-stretch focus:shadow-md transition-all">
+                     </div>
+                     <div class="col-12 flex-col w-full px-1 pb-1">
+                        <input type="text" placeholder="University/Organisation" class="f-color-highlight f-weight-bold py-2 px-2 bg-white-15 flex-stretch focus:shadow-md transition-all">
+                     </div>
+                     <div class="col-12 px-1 pb-1">
+                        <button class="button bg-highlight f-color-white f-weight-bold uppercase px-3 py-2 f-size-2 justify-center shadow-md rounded overflow-hidden transition-all">Register</button>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+
+	</main>
+   <script src="js/allScript.js"></script>
+   <script>
+   </script>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+<section class="@@ribbonWrapper">
+   @@if(context.innerHtml){
+      @@innerHtml
+   }
+   @@if(!context.innerHtml){
+      <div class="container mx-auto md:container-sm lg:container-lg lg:flex-row lg:flex-wrap xl:container-xl">
+         @@if(context.titleTag){
+            <@@titleTag class="fweight-bold fsize-2lg">@@ribbonText</@@titleTag>
+         }
+         @@if(!context.titleTag){
+            <h2 class="fweight-bold fsize-2lg">@@ribbonText</h2>
+         }
+      </div>
+   }
+</section>

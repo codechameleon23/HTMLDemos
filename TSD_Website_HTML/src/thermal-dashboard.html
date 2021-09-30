@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   @@include('./_includes/_head.html', {
+   "pageName": "Thermal Dashboard",
+   "description": ""
+   })
+</head>
+
+<body class="jsNavbarToggle is-close flex-col bg-light">
+
+<!-- Header -->
+@@include('./_includes/_header-single.html', {})
+
+<!-- Main -->
+<main class="flex-auto flex-col">
+   <div class="container sm:container-xl mx-auto">
+      <div class="pt-lg">
+         <div class="flex-row flex-wrap -mr-md -mb-sm">
+            <div class="col-12 lg:col-8 pr-md pb-sm flex-col">
+               <div class="bg-white shadow">
+                  <header class="p-sm border-default border-b flex-row flex-wrap justify-space-between align-center">
+                     <div class="flex-row flex-auto">
+                        <div class="flex-col w-full">
+                           <input type="text"
+                                  class="py-2xs px-xs bg-light f-color-secondary flex-stretch focus:shadow transition-all w-full">
+                        </div>
+                        <button class="button bg-primary f-color-white f-size-2sm f-weight-semibold hover:shadow-md transition-all py-xs px-2xs">
+                           <span>Connect</span>
+                        </button>
+                     </div>
+                  </header>
+                  <section id="jsFullScreenVideoEnable" class="ratio-16x9 bg-black">
+                     <iframe class="pos-absolute pin w-full h-full"></iframe>
+                     <div class="pos-absolute pin-t pin-r">
+                        <button
+                                class="JSFullScreenTrigger button bg-primary f-color-white f-weight-semibold hover:shadow-md transition-all p-xs"
+                                data-fullscreen-target="jsFullScreenVideoEnable"
+                                aria-label="Full Screen"
+                                data-microtip-position="top"
+                                role="tooltip">
+                                     <span class="icon icon-maximize">
+                                        <i data-feather="maximize"></i>
+                                     </span>
+                           <span class="icon icon-minimize">
+                                        <i data-feather="minimize"></i>
+                                    </span>
+                        </button>
+                     </div>
+                  </section>
+                  <footer class="p-sm flex-row justify-center">
+                     <button class="jsSettingsPopup_open button mx-xs bg-primary f-color-white f-weight-semibold hover:shadow-md transition-all py-xs px-2xs">
+                        <span class="mr-xs"><i data-feather="settings"></i></span><span>Setting</span>
+                     </button>
+                     <button class="jsSettingsPopup_close button mx-xs bg-secondary f-color-white f-weight-semibold hover:shadow-md transition-all py-xs px-2xs">
+                        <span class="mr-xs"><i data-feather="alert-triangle"></i></span><span>Clear Alarm</span>
+                     </button>
+                  </footer>
+               </div>
+            </div>
+            <div class="col-12 lg:col-4 pr-md pb-sm flex-col">
+               <div class="flex-row flex-wrap -mr-sm">
+                  <div class="col-12 pr-sm pb-sm flex-col">
+                     <div class="py-xs px-2xs bg-success shadow-md-success f-color-white f-size-2sm flex-row justify-space-between align-center  capitalize">
+                        <h2 class="f-size-md mr-sm">25</h2>
+                        <p>Screening</p>
+                     </div>
+                  </div>
+                  <div class="col-12 pr-sm pb-sm flex-col">
+                     <div class="py-xs px-2xs bg-warning shadow-md-warning f-color-white f-size-2sm flex-row justify-space-between align-center capitalize">
+                        <h2 class="f-size-md mr-sm">3</h2>
+                        <p>Suspected</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="bg-white shadow">
+                  <table class="table-zebra w-full capitalize">
+                     <thead class="f-size-sm f-color-secondary border-default border-b">
+                     <tr>
+                        <th class="py-sm px-sm">Detected/Suspected</th>
+                     </tr>
+                     </thead>
+                     <tbody>
+                     <tr>
+                        <td class="py-xs px-sm text-left">Main Loby</td>
+                     </tr>
+                     <tr class="bg-light">
+                        <td class="py-xs px-sm text-left">Cam 1</td>
+                     </tr>
+                     <tr>
+                        <td class="py-xs px-sm text-left">Cam 3</td>
+                     </tr>
+                     <tr class="bg-light">
+                        <td class="py-xs px-sm text-left">parking cam</td>
+                     </tr>
+                     <tr>
+                        <td class="py-xs px-sm text-left">Office Outside</td>
+                     </tr>
+                     <tr class="bg-light">
+                        <td class="py-xs px-sm text-left">Office 1</td>
+                     </tr>
+                     <tr>
+                        <td class="py-xs px-sm text-left">Office 2</td>
+                     </tr>
+                     <tr class="bg-light">
+                        <td class="py-xs px-sm text-left">Office 3</td>
+                     </tr>
+                     <tr>
+                        <td class="py-xs px-sm text-left">Office 4</td>
+                     </tr>
+                     <tr class="bg-light">
+                        <td class="py-xs px-sm text-left">Video Wall 4G PTZ</td>
+                     </tr>
+                     <tr>
+                        <td class="py-xs px-sm text-left">Marketing</td>
+                     </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</main>
+<!-- Settings Popup -->
+<div id="jsSettingsPopup" class="d-hidden container-popup-md popup shadow-lg bg-white mx-xs my-xs">
+   <div class="flex-col w-full flex-stretch popup-wrap">
+      <!-- <button class="jsSettingsPopup_close pos-absolute pin-t pin-r z-10 mt-sm mr-sm d-inline-block ml-auto">
+          <span class="f-color-inherit icon icon-xxs">
+              <span class="p-xxs">
+                  <i data-feather="x"></i>
+              </span>
+          </span>
+      </button> -->
+      <div class="flex-stretch overflow-auto popup-body">
+         <header class="p-sm border-default border-b">
+            <h2 class="f-size-md f-color-secondary">Settings</h2>
+         </header>
+         <form class="flex-col p-sm">
+            <div class="flex-row align-center pb-sm">
+               <div class="col-6"><h3>Alarm Switch</h3></div>
+               <div class="col-6">
+                  <div class="flex-col w-full">
+                     <label class="switch ratio-switch icon-lg ml-auto">
+                        <input name="alarm-switch" type="checkbox">
+                        <span class="slider round"></span>
+                     </label>
+                     <!-- <div class="select">
+                         <select class="py-2xs px-xs bg-light f-color-secondary flex-stretch focus:shadow transition-all w-full text-right">
+                             <option>ON</option>
+                             <option>OFF</option>
+                         </select>
+                     </div> -->
+                  </div>
+               </div>
+            </div>
+            <div class="flex-row align-center pb-sm">
+               <div class="col-6"><h3>Highlimit</h3></div>
+               <div class="col-6">
+                  <div class="flex-col w-full">
+                     <input type="text"
+                            class="py-2xs px-xs bg-light f-color-secondary flex-stretch focus:shadow transition-all w-full text-right">
+                  </div>
+               </div>
+            </div>
+            <div class="flex-row align-center pb-sm">
+               <div class="col-6"><h3>Duration</h3></div>
+               <div class="col-6">
+                  <div class="flex-col w-full">
+                     <input type="text"
+                            class="py-2xs px-xs bg-light f-color-secondary flex-stretch focus:shadow transition-all w-full text-right">
+                  </div>
+               </div>
+            </div>
+            <div class="flex-row align-center pb-sm">
+               <div class="col-6"><h3>Image Path</h3></div>
+               <div class="col-6">
+                  <div class="flex-col w-full">
+                     <input type="text"
+                            class="py-2xs px-xs bg-light f-color-secondary flex-stretch focus:shadow transition-all w-full text-right">
+                  </div>
+               </div>
+            </div>
+            <div class="flex-row align-center pb-sm">
+               <div class="col-6"><h3>Face Deduplication</h3></div>
+               <div class="col-6">
+                  <div class="flex-col w-full">
+                     <input type="text"
+                            class="py-2xs px-xs bg-light f-color-secondary flex-stretch focus:shadow transition-all w-full text-right">
+                  </div>
+               </div>
+            </div>
+            <div class="flex-row align-center pb-sm">
+               <div class="col-6"><h3>Capture Interval</h3></div>
+               <div class="col-6">
+                  <div class="flex-col w-full">
+                     <input type="text"
+                            class="py-2xs px-xs bg-light f-color-secondary flex-stretch focus:shadow transition-all w-full text-right">
+                  </div>
+               </div>
+            </div>
+         </form>
+         <header class="p-sm pt-0 border-default border-b flex-row justify-center">
+            <button class="button mx-xs bg-primary f-color-white f-weight-semibold hover:shadow-md transition-all py-xs px-2xs">
+               <span>Update</span>
+            </button>
+            <button class="jsSettingsPopup_close button mx-xs bg-secondary f-color-white f-weight-semibold hover:shadow-md transition-all py-xs px-2xs">
+               <span>Cancel</span>
+            </button>
+         </header>
+      </div>
+   </div>
+</div>
+@@include('./_includes/_footer.html', {})
+<script src="js/allScript.js"></script>
+</body>
+
+</html>

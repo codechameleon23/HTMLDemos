@@ -1,0 +1,45 @@
+@@if(context.container) {
+   @@if(context.container.wrapper) {
+      <section class="@@container.wrapper.wrapperSx">
+   }
+   <div class="@@container.containerSx">
+      @@if(context.container.header) {
+         @@container.header
+      }
+      @@if(context.container.row) {
+         <div class="@@container.row.rowSx">
+      }
+      @@if(!context.container.innerHtml && context.container.cards.length) {
+         @@for (var i = 0; i < context.container.cards.length; i++) {
+            @@include("./_includes/_card.html", `+(JSON.stringify(context.container.cards[i]))+`)
+         }
+      }
+      @@if(!context.container.innerHtml) {
+         @@container.innerHtml
+      }
+      @@if(context.container.row) {
+         </div>
+      }
+      @@if(context.container.footer) {
+         @@container.footer
+      }
+   </div>
+   @@if(context.container.wrapper) {
+      </section>
+   }
+}
+<!-- @@include('./_includes/_container.html', {
+   "container": {
+      "header": "",
+      "footer": "",
+      "innerHtml": "",
+      "containerSx": "container-lg mx-auto",
+      "wrapper": {
+         "wrapperSx": ""
+      },
+     "row": {
+       "rowSx": "flex-row -mr-md -mb-md"
+     },
+     "cards": [...]
+   } 
+ }) -->

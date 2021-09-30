@@ -1,0 +1,43 @@
+@@if(!context.childOnly){
+   <section class="@@if(!context.sectionClasses){pt-2lg} @@if(context.sectionClasses){@@sectionClasses}">
+      <div class="@@if(!context.containerClasses){container md:container-md lg:container-xl mx-auto} @@if(context.containerClasses){@@containerClasses}">
+}
+      @@if(context.sectionTitle){
+         <h2 class="@@sectionTitleClasses">@@sectionTitle</h2>
+      }
+      @@if(context.filterTabsData){
+         <div class="filter_tabs @@if(context.filterTabsClasses){@@filterTabsClasses}">
+            @@for (var i = 0; i < filterTabsData.length; i++) {
+               @@include("./_includes/_filter_tabs.html", `+(JSON.stringify(filterTabsData[i]))+`)
+            }
+         </div>
+         <div class="filter_dropdown_wrapper select @@if(context.filterDropdownClasses){@@filterDropdownClasses}">
+            <div class="p-xxs flex-auto flex-col col-12">
+               <select class="filter_dropdown px-2xs py-xs flex-stretch focus:shadow-bottom transition-all bg-white">
+                  @@for (var i = 1; i < filterTabsData.length; i++) {
+                     @@include("./_includes/_filter_dropdown.html", `+(JSON.stringify(filterTabsData[i]))+`)
+                  }
+               </select>
+            </div>
+         </div>
+      }
+      <@@if(!context.childOnly){div}@@if(context.childOnly){section} class="@@if(!context.rowClasses){flex-row} @@if(context.rowClasses){@@rowClasses}">
+         @@if(context.data){
+            @@for (var i = 0; i < data.length; i++) {
+               @@include("./_includes/_simple-card.html", `+(JSON.stringify(data[i]))+`)
+            }
+         }
+         @@if(context.accordionData){
+            <div @@if(context.togglable){data-togglable="@@togglable"} @@if(context.closeOthers){data-close-others="@@closeOthers"} class="accordion-wrapper @@if(!context.accordionWrapperClasses){flex-row flex-wrap text-left} @@if(context.accordionWrapperClasses){@@accordionWrapperClasses}">
+               <div class="toggle-content @@if(!context.toggleContentClasses){col-12} @@if(context.toggleContentClasses){@@toggleContentClasses}">
+                  @@for (var i = 0; i < accordionData.length; i++) {
+                     @@include("./_includes/_accordion.html", `+(JSON.stringify(accordionData[i]))+`)
+                  }
+               </div>
+            </div>
+         }
+      </@@if(!context.childOnly){div}@@if(context.childOnly){section}>
+@@if(!context.childOnly){
+      </div>
+   </section>
+}

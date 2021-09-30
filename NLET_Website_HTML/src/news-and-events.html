@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  @@include('./_includes/_head.html', {
+    "pageName": "News & Events",
+    "description": ""
+  })
+</head>
+
+<body class="jsNavbarToggle is-close flex-col">
+
+  <!-- Header -->
+  @@include('./_includes/_header.html', {
+    "headerPosClasses": "",
+    "aboutActive": "",
+    "communityActive": "",
+    "curriculumActive": "",
+    "examsActive": "",
+    "studentServicesActive": "",
+    "newsNEventsActive": "is-active"
+  })
+
+  <!-- Main -->
+  <main class="flex-auto flex-col">
+
+  <!-- Ribbon -->
+  <section class="pt-0">
+    @@include(
+      './_includes/_ribbon.html',
+      {
+        "titleTag": "h1",
+        "ribbonWrapper": "bg-shipGray fcolor-white text-center py-md",
+        "ribbonText": "News & Events",
+        "ribbonTextClasses": "fweight-medium fsize-4md"
+      }
+    )
+  </section>
+
+  <!-- Filter -->
+  @@include(
+    './_includes/_column-grid.html', 
+      { 
+        "sectionClasses": "pt-2md lg:pt-xl filter_parent",
+        "containerClasses": "container sm:container-sm lg:container-3lg mx-auto",
+        "rowClasses": "flex-row flex-wrap -mr-2xs -mb-md lg:-mr-lg lg:-mb-lg filter_wrapper",
+        "childOnly": false,
+        "accordionWrapperClasses": "col-12",
+        "toggleContentClasses": "col-12 -mb-md",
+        "togglable": "true",
+        "closeOthers": "true",
+        "filterTabsClasses": "d-hidden lg:d-flex flex-row justify-center -mr-xs pb-2md lg:pb-xl uppercase",
+        "filterDropdownClasses": "col-12 shadow shadow-md lg:d-hidden mb-md",
+        "filterTabsData": [
+          {
+            "tabTitle": "Sort by:",
+            "tabFilterby": "",
+            "filterTabClasses": "p-xs mr-xs"
+          },
+          {
+            "tabTitle": "All",
+            "tabFilterby": "by_All",
+            "filterTabClasses": "is-active px-md py-xs mr-xs border-2 fweight-bold hover:fcolor-white on-active-fcolor-white border-shipGray hover:bg-shipGray on-active-bg-shipGray"
+          },
+          {
+            "tabTitle": "News",
+            "tabFilterby": "by_News",
+            "filterTabClasses": "px-md py-xs mr-xs border-2 fweight-bold hover:fcolor-white on-active-fcolor-white border-turmeric hover:bg-turmeric on-active-bg-turmeric"
+          },
+          {
+            "tabTitle": "Events",
+            "tabFilterby": "by_Events",
+            "filterTabClasses": "px-md py-xs mr-xs border-2 fweight-bold hover:fcolor-white on-active-fcolor-white border-jaffa hover:bg-jaffa on-active-bg-jaffa"
+          },
+          {
+            "tabTitle": "Community",
+            "tabFilterby": "by_Community",
+            "filterTabClasses": "px-md py-xs mr-xs border-2 fweight-bold hover:fcolor-white on-active-fcolor-white border-deluge hover:bg-deluge on-active-bg-deluge"
+          }
+        ],
+        "data": [
+          { 
+            "colClasses": "filtered filter_obj by_All by_News flex-col col-12 lg:col-4 pr-2xs pb-md lg:pr-lg lg:pb-lg",
+            "cardImage": "iStock-899285140.jpg",
+            "imageTag": true,
+            "imageTagClasses": "bg-shipGray fcolor-white fweight-medium fsize-3xs p-xs pos-absolute pin-t pin-r uppercase",
+            "imageTagText": "News",
+            "imageClasses": "ratio-16x9 lg:ratio-custom-2",
+            "imageBgClasses": "bg-center bg-cover", 
+            "cardContentClasses": "bg-turmeric fcolor-white p-md",
+            "tag": true,
+            "tagText": "17 August 2019",
+            "tagClasses": "fsize-2xs mb-xs",
+            "cardTitle": "A News headline here and here and here and here and here.",
+            "cardTitleClasses": "fweight-medium fsize-4sm",
+            "cardText": "",
+            "footerClasses": "pt-sm",
+            "cardButton": "READ MORE",
+            "buttonLink": "news-details.html",
+            "buttonClasses": "button hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md"
+          },
+          { 
+            "colClasses": "filtered filter_obj by_All by_Events flex-col col-12 lg:col-4 pr-2xs pb-md lg:pr-lg lg:pb-lg",
+            "cardImage": "iStock-811103448.jpg",
+            "imageTag": true,
+            "imageTagClasses": "bg-shipGray fcolor-white fweight-medium fsize-3xs p-xs pos-absolute pin-t pin-r uppercase",
+            "imageTagText": "EVENT",
+            "imageClasses": "ratio-16x9 lg:ratio-custom-2",
+            "imageBgClasses": "bg-center bg-cover", 
+            "cardContentClasses": "bg-jaffa fcolor-white p-md",
+            "tag": true,
+            "tagText": "01 September 2019",
+            "tagClasses": "fsize-2xs mb-xs",
+            "cardTitle": "A News headline here and here and here and here and here.",
+            "cardTitleClasses": "fweight-medium fsize-4sm",
+            "cardText": "",
+            "footerClasses": "pt-sm",
+            "cardButton": "READ MORE",
+            "buttonLink": "news-details.html",
+            "buttonClasses": "button hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md"
+          },
+          { 
+            "colClasses": "filtered filter_obj by_All by_Community flex-col col-12 lg:col-4 pr-2xs pb-md lg:pr-lg lg:pb-lg",
+            "cardImage": "iStock-891625526.jpg",
+            "imageTag": true,
+            "imageTagClasses": "bg-shipGray fcolor-white fweight-medium fsize-3xs p-xs pos-absolute pin-t pin-r uppercase",
+            "imageTagText": "Community",
+            "imageClasses": "ratio-16x9 lg:ratio-custom-2",
+            "imageBgClasses": "bg-center bg-cover", 
+            "cardContentClasses": "bg-deluge fcolor-white p-md",
+            "tag": true,
+            "tagText": "10 September 2019",
+            "tagClasses": "fsize-2xs mb-xs",
+            "cardTitle": "A News headline here and here and here and here and here.",
+            "cardTitleClasses": "fweight-medium fsize-4sm",
+            "cardText": "",
+            "footerClasses": "pt-sm",
+            "cardButton": "READ MORE",
+            "buttonLink": "news-details.html",
+            "buttonClasses": "button hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md"
+          },
+          { 
+            "colClasses": "filtered filter_obj by_All by_Community flex-col col-12 lg:col-4 pr-2xs pb-md lg:pr-lg lg:pb-lg",
+            "cardImage": "iStock-891625526.jpg",
+            "imageTag": true,
+            "imageTagClasses": "bg-shipGray fcolor-white fweight-medium fsize-3xs p-xs pos-absolute pin-t pin-r uppercase",
+            "imageTagText": "Community",
+            "imageClasses": "ratio-16x9 lg:ratio-custom-2",
+            "imageBgClasses": "bg-center bg-cover", 
+            "cardContentClasses": "bg-deluge fcolor-white p-md",
+            "tag": true,
+            "tagText": "14 September 2019",
+            "tagClasses": "fsize-2xs mb-xs",
+            "cardTitle": "A News headline here and here and here and here and here.",
+            "cardTitleClasses": "fweight-medium fsize-4sm",
+            "cardText": "",
+            "footerClasses": "pt-sm",
+            "cardButton": "READ MORE",
+            "buttonLink": "news-details.html",
+            "buttonClasses": "button hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md"
+          },
+          { 
+            "colClasses": "filtered filter_obj by_All by_News flex-col col-12 lg:col-4 pr-2xs pb-md lg:pr-lg lg:pb-lg",
+            "cardImage": "iStock-899285140.jpg",
+            "imageTag": true,
+            "imageTagClasses": "bg-shipGray fcolor-white fweight-medium fsize-3xs p-xs pos-absolute pin-t pin-r uppercase",
+            "imageTagText": "News",
+            "imageClasses": "ratio-16x9 lg:ratio-custom-2",
+            "imageBgClasses": "bg-center bg-cover", 
+            "cardContentClasses": "bg-turmeric fcolor-white p-md",
+            "tag": true,
+            "tagText": "02 October 2019",
+            "tagClasses": "fsize-2xs mb-xs",
+            "cardTitle": "A News headline here and here and here and here and here.",
+            "cardTitleClasses": "fweight-medium fsize-4sm",
+            "cardText": "",
+            "footerClasses": "pt-sm",
+            "cardButton": "READ MORE",
+            "buttonLink": "news-details.html",
+            "buttonClasses": "button hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md"
+          },
+          { 
+            "colClasses": "filtered filter_obj by_All by_Events flex-col col-12 lg:col-4 pr-2xs pb-md lg:pr-lg lg:pb-lg",
+            "cardImage": "iStock-811103448.jpg",
+            "imageTag": true,
+            "imageTagClasses": "bg-shipGray fcolor-white fweight-medium fsize-3xs p-xs pos-absolute pin-t pin-r uppercase",
+            "imageTagText": "EVENT",
+            "imageClasses": "ratio-16x9 lg:ratio-custom-2",
+            "imageBgClasses": "bg-center bg-cover", 
+            "cardContentClasses": "bg-jaffa fcolor-white p-md",
+            "tag": true,
+            "tagText": "03 October 2019",
+            "tagClasses": "fsize-2xs mb-xs",
+            "cardTitle": "A News headline here and here and here and here and here.",
+            "cardTitleClasses": "fweight-medium fsize-4sm",
+            "cardText": "",
+            "footerClasses": "pt-sm",
+            "cardButton": "READ MORE",
+            "buttonLink": "news-details.html",
+            "buttonClasses": "button hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md"
+          }
+        ]
+      }
+    )
+ 
+    @@include('./_includes/_pagination.html')
+
+  </main>
+  @@include('./_includes/_footer.html', {
+    "instagram": false
+  })
+  <script src="js/allScript.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<header class="header pos-fixed pin-x pin-t z-10 bg-white flex-col justify-center @@if(context.home){ header-home }">
+   <div class="container lg:container-xl mx-auto pos-relative">
+      <div class="flex-row align-center">
+         <a href="index.html" title="@@websiteName" class="mr-2 icon icon-logo md:icon-logo ratio-logo pos-relative d-inline-block">
+            <span class="pos-absolute pin">
+               <img src="./images/brand-logo.svg" alt="@@websiteName" />
+            </span>
+         </a>
+         <nav class="navbar
+               col-12
+               flex-col
+               flex-stretch
+               justify-center
+               pos-fixed
+               pin
+               pin-l-auto
+               z-50
+               f-weight-light
+               f-color-white
+               f-size-4
+               lg:f-size-2
+               lg:f-color-inherit
+               bg-dark
+               shadow-lg
+               md:col-6
+               lg:ml-auto
+               lg:col-auto
+               lg:pos-static
+               lg:bg-transparent
+               lg:shadow-none
+            ">
+            <ul class="list-reset md:flex-row justify-space-between capitalize lg:-mx-3">
+               <li class="lg:px-3 lg:py-3 @@if(context.home){is-active}">
+                  <a class="f-color-inherit uppercase d-flex no-underline py-2 lg:py-0 px-2 lg:px-0" href="index.html">Home</a>
+               </li>
+               <li class="lg:px-3 lg:py-3 @@if(context.about){is-active} has-dropdown">
+                  <a class="f-color-inherit uppercase no-underline py-1_5 lg:py-0 px-2 lg:px-0" href="about.html">
+                     <span>About</span>
+                  </a>
+                  <span class="toggle" >
+                     <i data-feather="chevron-down"></i>
+                  </span>
+                  <div class="dropdown lg:mt-thin w-full lg:shadow-lg bg-light f-weight-inherit flex-col lg:-ml-3 bg-grad-primary">
+                     <ul class="list-reset flex-col flex-auto list-reset py-2 lg:py-3 uppercase bg-light f-color-default lg:f-color-inherit f-size-2 mb-flat">
+                        <li class="lg:hover:f-color-primary">
+                           <a class="py-1 lg:py-1_5 px-3 f-color-inherit no-underline d-inline-block" href="about.html"><span>About Us</span></a>
+                        </li>
+                        <li class="lg:hover:f-color-primary">
+                           <a class="py-1 lg:py-1_5 px-3 f-color-inherit no-underline d-inline-block" href="about.html#auv_technology"><span>Auv Technology</span></a>
+                        </li>
+                        <li class="lg:hover:f-color-primary">
+                           <a class="py-1 lg:py-1_5 px-3 f-color-inherit no-underline d-inline-block" href="about.html#thalassa"><span>Thalassa</span></a>
+                        </li>
+                     </ul>
+                  </div>
+               </li>
+               <li class="lg:px-3 lg:py-3 @@if(context.marine){is-active} has-dropdown">
+                  <a class="f-color-inherit uppercase no-underline py-1_5 lg:py-0 px-2 lg:px-0" href="marine.html" >
+                     <span>Marine</span>
+                  </a>
+                  <span class="toggle" >
+                     <i data-feather="chevron-down"></i>
+                  </span>
+                  <div class="dropdown lg:mt-thin w-full lg:shadow-lg bg-light f-weight-inherit flex-col lg:-ml-3 bg-grad-primary">
+                     <ul class="list-reset flex-col flex-auto list-reset py-2 lg:py-3 uppercase bg-light f-color-default lg:f-color-inherit f-size-2 mb-flat">
+                        <li class="lg:hover:f-color-primary">
+                           <a class="py-1 lg:py-1_5 px-3 f-color-inherit no-underline d-inline-block" href="marine-details.html"><span>ENVIRONMENTAL</span></a>
+                        </li>
+                        <li class="lg:hover:f-color-primary">
+                           <a class="py-1 lg:py-1_5 px-3 f-color-inherit no-underline d-inline-block" href="marine-details.html"><span>OFF SHORE</span></a>
+                        </li>
+                        <li class="lg:hover:f-color-primary">
+                           <a class="py-1 lg:py-1_5 px-3 f-color-inherit no-underline d-inline-block" href="marine-details.html"><span>DEFENCE</span></a>
+                        </li>
+                     </ul>
+                  </div>
+               </li>
+               <li class="lg:px-3 lg:py-3 @@if(context.careers){is-active}">
+                  <a class="f-color-inherit uppercase d-inline-block no-underline py-1_5 lg:py-0 px-2 lg:px-0" href="careers.html">Careers</a>
+               </li>
+               <li class="lg:px-3 lg:py-3 @@if(context.contact){is-active}">
+                  <a class="f-color-inherit uppercase d-inline-block no-underline py-1_5 lg:py-0 px-2 lg:px-0" href="contact.html">Contact</a>
+               </li>
+            </ul>
+         </nav>
+         <div class="d-flex ml-auto lg:d-hidden ">
+            <div class="flex-none icon pin-r pin-y xl:mr-0 xl:pos-static z-50 mr-1">
+               <div>
+                  <div class="icon icon-2xs hamburger pointer-events-auto">
+                     <div>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</header>

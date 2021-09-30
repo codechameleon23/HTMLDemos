@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  @@include('./_includes/_head.html', {
+    "pageName": "Community",
+    "description": ""
+  })
+</head>
+
+<body class="jsNavbarToggle is-close flex-col">
+
+  <!-- Header -->
+  @@include('./_includes/_header.html', {
+    "headerPosClasses": "",
+    "aboutActive": "",
+    "communityActive": "is-active",
+    "curriculumActive": "",
+    "examsActive": "",
+    "studentServicesActive": "",
+    "newsNEventsActive": ""
+  })
+
+   <!-- Main -->
+   <main class="flex-auto flex-col">
+    <!-- Hero Banner -->
+    @@include('./_includes/_banner-carousel.html', {
+      "rowClasses": "flex-wrap -mr-2xs lg:-mr-md -mb-md",
+      "carousel": false,
+      "hideControl": true,
+      "data": [
+        {
+          "isBanner": true,
+          "bannerClasses": "py-2lg xl:py-xxl bg-black fcolor-white md:fcolor-inherit flex-col",
+          "bannerImage": "iStock-950216224_extended_blue.jpg",
+          "bannerImageClasses": "bg-cover bg-right-top bg-inherit opacity-50 md:opacity-100 pos-absolute pin",
+          "bannerInnerClasses": "",
+          "bannerInnerContainerClasses": "container md:container-xl mx-auto pos-relative",
+          "colClasses": "md:col-8 lg:col-7 flex-col md:pr-2lg py-2lg",
+          "cardImage": "",
+          "imageClasses": "",
+          "imageBgClasses": "",
+          "cardContentClasses": "",
+          "tag": false,
+          "tagClasses": "",
+          "tagText": "",
+          "footerClasses": "md:pt-md",
+          "cardTitle": "Growth. Community. Diversity. Innovation." ,
+          "cardTitleClasses": "fweight-bold fsize-2lg xl:fsize-2xl",
+          "cardText": ["<p data-aos='fade-up' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom' class='fsize-2sm'>Dandent odipid et dolupta duciis es raep ernatum coribus enimin et volorem.Ruptatem lique nullabore dolenturion ni aut remodiae.</p>"],
+          "footerClasses": "pt-sm",
+          "cardButton": "Read more",
+          "buttonLink": "#",
+          "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide",
+          "cardTitleAOSattr": "data-aos='fade-up' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "footerAOSattr": "data-aos='fade-up' data-aos-delay='500' data-aos-duration='700' data-aos-anchor-placement='top-bottom'"
+        }
+      ]
+    })
+
+    <!-- About our learning Community -->
+    @@include(
+      './_includes/_column-grid.html', 
+      {
+        "sectionClasses": "pt-2md lg:pt-0",
+        "containerClasses": "container md:container-md lg:container-fluid mx-auto",
+        "rowClasses": "bg-flamingo fcolor-white flex-row flex-wrap pos-relative",
+        "childOnly": false,
+        "data": [
+          { 
+            "colClasses": "flex-col col-12 flex-col lg:flex-row-reverse container lg:container-xl mx-auto",
+            "aosAttr": "",
+            "vericalCard": true,
+            "cardImage": "iStock-999098250.jpg",
+            "imageClasses": "ratio-16x9 lg:ratio-none lg:col-6 lg:pos-absolute pin-y pin-r",
+            "imageBgClasses": "bg-center bg-cover",
+            "cardContentClasses": "lg:col-6 pt-sm p-md xl:pl-0 lg:pr-xxl lg:py-3xxl mr-auto",
+            "cardTitle": "About our learning  Community" ,
+            "cardTitleClasses": "fweight-bold fsize-2md lg:fsize-2lg",
+            "cardText": ["<p>NLET Adult and Community Learning is a centre for the teaching and learning of adults. We offer a range of courses for learners from both the United Kingdom and other countries.</p>", "<p>Our courses support learners from basic to advanced levels, supporting them in living in the UK, finding a job or going to university or other studies. Our qualified and experienced staff are used to supporting learners at all levels, ages and cultural backgrounds. The individual student needs are at the centre  of our practice</p>"],
+            "footerClasses": "pt-sm",
+            "cardButton": "",
+            "buttonLink": "#",
+            "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide",
+            "cardTextAOSattr": "data-aos='fade-up' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+            "footerAOSattr": "data-aos='fade-up' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom'"
+          }
+        ]
+      }
+    )
+
+      <!-- Ribbon -->
+    <section class="pt-2md lg:pt-xl">
+      @@include(
+        './_includes/_ribbon.html',
+        {
+          "titleTag": "h1",
+          "ribbonWrapper": "bg-vistaBlue fcolor-white text-center py-md",
+          "ribbonText": "A diverse place to learn & grow",
+          "ribbonTextClasses": "fweight-medium fsize-4md"
+        }
+      )
+    </section>
+
+    <!-- A headline here and here and here and here -->
+    @@include(
+      './_includes/_column-grid.html', 
+      {
+        "sectionClasses": "pt-2md lg:pt-xl",
+        "containerClasses": "container md:container-md lg:container-fluid mx-auto",
+        "rowClasses": "flex-row flex-wrap pos-relative",
+        "childOnly": false,
+        "data": [
+          { 
+            "colClasses": "flex-col col-12 flex-col lg:flex-row container lg:container-2xl mx-auto",
+            "aosAttr": "",
+            "vericalCard": true,
+            "cardImage": "iStock-870035748.jpg",
+            "imageClasses": "ratio-16x9 lg:ratio-none lg:col-6 lg:pos-absolute pin-y pin-l lg:-ml-2md",
+            "imageBgClasses": "bg-center bg-cover",
+            "cardContentClasses": "lg:col-6 pt-sm px-md pt-md  xl:pr-0 lg:pl-2md lg:py-xl ml-auto",
+            "cardTitle": "A headline here and here and here and here" ,
+            "cardTitleClasses": "fweight-bold fsize-2md lg:fsize-2lg",
+            "cardText": ["<p class='fsize-3sm'>Publicatemen Itam consili stritella rei cluderebatum tus, us vivis patus fue popte, faccitiusum egilistius, medet vervil ceri strae, Cupio esiceps, nu ment.</p>", "<p>Udam cerfit. Batus; no. Daciena, se pravere auceps, quidem hos consulesces? in tea idem, cusus consuliquod finam, Catrarist in publis, volus, similin vis. Me publici acrist pere des! Sciaci sendemuntium oc idiisquo estem, cludes imaximovid dit.</p>"],
+            "footerClasses": "pt-sm",
+            "cardButton": "APPLY NOW",
+            "buttonLink": "#",
+            "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide",
+            "cardTextAOSattr": "data-aos='fade-up' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+            "footerAOSattr": "data-aos='fade-up' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom'"
+          }
+        ]
+      }
+    )
+
+    <!-- A headline here and here and here and here -->
+    @@include(
+      './_includes/_column-grid.html', 
+      {
+        "sectionClasses": "pt-2md",
+        "containerClasses": "container md:container-md lg:container-fluid mx-auto",
+        "rowClasses": "flex-row flex-wrap pos-relative",
+        "childOnly": false,
+        "data": [
+          { 
+            "colClasses": "flex-col col-12 flex-col lg:flex-row-reverse container lg:container-2xl mx-auto",
+            "aosAttr": "",
+            "vericalCard": true,
+            "cardImage": "iStock-1002018094.jpg",
+            "imageClasses": "ratio-16x9 lg:ratio-none lg:col-6 lg:pos-absolute pin-y pin-r lg:-mr-2md",
+            "imageBgClasses": "bg-center bg-cover",
+            "cardContentClasses": "lg:col-6 pt-sm px-md pt-md xl:pl-0 lg:pr-2md lg:py-xl mr-auto",
+            "cardTitle": "A headline here and here and here and here" ,
+            "cardTitleClasses": "fweight-bold fsize-2md lg:fsize-2lg",
+            "cardText": ["<p class='fsize-3sm'>Publicatemen Itam consili stritella rei cluderebatum tus, us vivis patus fue popte, faccitiusum egilistius, medet vervil ceri strae, Cupio esiceps, nu ment.</p>", "<p>Udam cerfit. Batus; no. Daciena, se pravere auceps, quidem hos consulesces? in tea idem, cusus consuliquod finam, Catrarist in publis, volus, similin vis. Me publici acrist pere des! Sciaci sendemuntium oc idiisquo estem, cludes imaximovid dit.</p>"],
+            "footerClasses": "pt-sm",
+            "cardButton": "GET IN TOUCH",
+            "buttonLink": "#",
+            "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide",
+            "cardTextAOSattr": "data-aos='fade-up' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+            "footerAOSattr": "data-aos='fade-up' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom'"
+          }
+        ]
+      }
+    )
+  </main>
+  @@include('./_includes/_footer.html', {
+    "instagram": true
+  })
+<script src="js/allScript.js"></script>
+</body>
+</html>

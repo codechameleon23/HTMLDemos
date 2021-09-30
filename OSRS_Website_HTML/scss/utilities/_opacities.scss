@@ -1,0 +1,11 @@
+@mixin getOpacityClasses($bp) {
+  @each $opacity in $opacities {
+    @each $state in $states {
+      .#{$bp}#{nth($state, 1)}opacity {
+        &-#{nth($opacity, 1)}#{nth($state, 2)} {
+          opacity: nth($opacity, 2);
+        }
+      }
+    }
+  }
+}

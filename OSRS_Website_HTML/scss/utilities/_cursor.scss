@@ -1,0 +1,14 @@
+@mixin getCursorPointerClasses($bp) {
+  .#{$bp}cursor{
+    &-auto{cursor: auto;}
+    &-default{cursor: default;}
+    &-pointer{cursor: pointer;}
+    &-wait{cursor: wait;}
+    &-move{cursor: move;}
+    &-not-allowed{cursor: not-allowed;}
+  }
+  .#{$bp}pointer{
+    &-events-none{pointer-events: none;}
+    &-events-auto{pointer-events: auto;}
+  }
+}

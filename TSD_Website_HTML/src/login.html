@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   @@include('./_includes/_head.html', {
+   "pageName": "Login",
+   "description": ""
+   })
+</head>
+
+<body class="jsNavbarToggle is-close flex-col bg-light">
+
+<!-- Header -->
+@@include('./_includes/_header-single.html', {})
+
+<!-- Main -->
+<main class="flex-auto flex-col justify-center">
+   <div class="container container-sm mx-auto">
+      <div class="bg-white shadow-md flex-col">
+         <form class="flex-col">
+            <header class="p-sm border-default border-b">
+               <h2 class="f-size-md f-color-secondary capitalize">Sign In</h2>
+            </header>
+            <section class="col-10 mx-auto px-sm pt-lg pb-md">
+               <div class="-mb-sm">
+                  <div class="flex-col pb-sm">
+                     <div class="flex-col w-full">
+                        <input type="username" placeholder="User Name"
+                               class="py-2xs px-xs bg-light f-color-secondary flex-stretch focus:shadow transition-all w-full">
+                     </div>
+                  </div>
+                  <div class="flex-col pb-sm">
+                     <div class="flex-col w-full">
+                        <input type="password" placeholder="Password"
+                               class="py-2xs px-xs bg-light f-color-secondary flex-stretch focus:shadow transition-all w-full">
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <footer class="p-sm pt-0 flex-row justify-center">
+               <button class="button mx-xs bg-primary f-color-white f-weight-semibold hover:shadow-md transition-all py-xs px-2xs">
+                  <span>Sign In</span>
+               </button>
+            </footer>
+            <div class="pb-sm text-center">
+               <a href="#" class="f-color-primary no-underline">Forgot password?</a>
+            </div>
+         </form>
+      </div>
+   </div>
+</main>
+@@include('./_includes/_footer.html', {})
+<script src="js/allScript.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+@@if(context.isBanner){
+<section class="@@bannerClasses pos-relative">
+   @@if(context.bannerImageClasses){
+      @@if(context.bannerImageWrapperClasses){
+         <div class="@@bannerImageWrapperClasses">
+      }
+            <div class="@@bannerImageClasses" @@if(context.bannerImage){style="background-image: url('./images/@@bannerImage');"}></div>
+      @@if(context.bannerImageWrapperClasses){
+         </div>
+      }
+   }
+   <div class="flex-row pos-relative flex-stretch">
+      @@if(context.bannerInnerClasses){<div class="@@bannerInnerClasses pos-absolute pin-l pin-y"></div>}
+      <div class="@@if(context.bannerInnerContainerClasses){@@bannerInnerContainerClasses}">
+}
+         <article class="@@colClasses" @@if(context.aosAttr){@@aosAttr}>
+            @@if(context.imageClasses){
+               <div @@if(context.imageAOSattr){@@imageAOSattr} class="@@if(!context.imageClasses){pos-relative} @@if(context.imageClasses){@@imageClasses}">
+                  <div class="@@imageBgClasses pos-absolute pin" @@if(context.cardImage){style="background-image: url('./images/@@cardImage');"}></div>
+                  @@if(context.imageTag){
+                     <div class="@@imageTagClasses">@@imageTagText</div>
+                  }
+               </div>
+            }
+            <div class="@@if(!context.cardContentClasses){flex-stretch flex-col align-start} @@if(context.cardContentClasses){@@cardContentClasses}">
+               @@if(context.tag){
+                  <div class="@@tagClasses">@@tagText</div>
+               }
+               @@if(context.cardTitle || context.cardText){
+               <section @@if(context.cardTextAOSattr){@@cardTextAOSattr} class="text-wrap w-full @@if(context.cardTextClasses){@@cardTextClasses}">
+                  @@if(context.cardTitle){
+                     @@if(context.titleTag){
+                        <@@titleTag @@if(context.cardTitleAOSattr){@@cardTitleAOSattr} class="@@if(context.cardTitleClasses){@@cardTitleClasses} @@if(!context.cardTitleClasses){fweight-semibold fsize-md lg:fsize-2md}">@@cardTitle</@@titleTag>
+                     }
+                     @@if(!context.titleTag){
+                        <h2 @@if(context.cardTitleAOSattr){@@cardTitleAOSattr} class="@@if(context.cardTitleClasses){@@cardTitleClasses} @@if(!context.cardTitleClasses){fweight-semibold fsize-md lg:fsize-2md}">@@cardTitle</h2>
+                     }
+                  }
+                  @@if(context.cardText){
+                     @@for (var i = 0; i < cardText.length; i++) {
+                        `+(cardText[i])+`
+                     }
+                  }
+               </section>
+               }
+               @@if(context.cardButton || context.footerHtml){
+                  <footer @@if(context.footerAOSattr){@@footerAOSattr} class="@@footerClasses">
+                     @@if(context.cardButton){
+                        <a href="@@buttonLink" class="@@buttonClasses">@@cardButton</a>
+                     }
+                     @@if(context.footerHtml){
+                        @@footerHtml
+                     }
+                  </footer>
+               }
+            </div>
+         </article>
+
+@@if(context.isBanner){
+      </div>
+   </div>
+</section>
+}

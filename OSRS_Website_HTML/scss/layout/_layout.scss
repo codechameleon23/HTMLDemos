@@ -1,0 +1,44 @@
+.container {
+  width: calc(100% - 5rem);
+  // overflow: hidden;
+}
+
+@mixin getContainerClasses($bp) {
+  @each $con in $container {
+    .#{$bp}container {
+      &-#{nth($con, 1)} {
+        max-width: nth($con, 2);
+      }
+    }
+  }
+}
+
+@mixin getSectionClasses($bp) {
+  @each $sec in $sections {
+    .#{$bp}section {
+      &-upper {
+        @if(nth($sec, 1)) {
+          &-#{nth($sec, 1)} {
+            padding-top: nth($sec, 2);
+          }
+        }
+
+        @else {
+          padding-top: nth($sec, 2);
+        }
+      }
+
+      &-lower {
+        @if(nth($sec, 1)) {
+          &-#{nth($sec, 1)} {
+            padding-bottom: nth($sec, 2);
+          }
+        }
+
+        @else {
+          padding-bottom: nth($sec, 2);
+        }
+      }
+    }
+  }
+}

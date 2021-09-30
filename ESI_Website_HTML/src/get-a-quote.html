@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   @@include('./_includes/_core_components/head.html', {
+   "pageName": "Get a quote – Ewe Locations",
+   "pojectName": "ESI_Website_HTML",
+   "siteName": "Ewe Store It",
+   "description": "Simple storage solutions designed to save ewe money"
+   })
+</head>
+
+<body class="jsNavbarToggle is-close flex-col">
+
+   <!-- Header -->
+   @@include('./_includes/header.html', {
+   "getAQuoteActive" : "font-weight-bold",
+   "educationActive" : "",
+   "howItWorkActive" : "",
+   "contactActive" : "",
+   "aboutEweActive" : ""
+   })
+
+   <main class="flex-auto flex-col">
+
+      <!-- Page title -->
+      @@include('./_includes/page-title.html', {
+      "pageTitle": "GET A Quote",
+      "classes": "bg-pink pos-absolute pin-t pin-l"
+      })
+
+      <!-- Page banner -->
+      @@include('./_includes/banner.html', {
+      "bgImage": "./images/iStock-118238313.jpg",
+      "bgClasses": "",
+      "bgImgClasses": "bg-cover bg-center",
+      "pageTitle": "",
+      "title": "Ewe need a quote today? Get yours NOW…",
+      "titleClass": "lg:font-size-xl",
+      "text": "",
+      "button": false,
+      "buttonClass": "",
+      "buttonText": "",
+      "colClasses": "md:col-7"
+      })
+
+      <!-- Intro -->
+      @@include('./_includes/intro.html', {
+      "sectionClasses": "pt-2md lg:pt-2xl",
+      "bgImage": "",
+      "bgClasses": "",
+      "bgImgClasses": "",
+      "title": "Header Text Here",
+      "titleClass": "font-color-cyan",
+      "text": "<p>At voloreh enduci cor ma et magnis essum sequatus siment et veliquisquid eiunt, tem dolore nuscipiet acit vidia quae pliqui seque sam dolut pore maiones audiae volupta tumqui optatet voluptatiur sus adias cus accus eum dolupis Nam.</p>",
+      "textWrapClasses": "text-center md:container-lg mx-auto",
+      "otherContent": "",
+      "button": false,
+      "buttonClass": "bg-aqua",
+      "buttonText": "Learn More",
+      "buttonLink": "#"
+      })
+
+      <!-- Get a Quote Steps -->
+      @@include('./_includes/getAQuoteSteps.html', {
+      "sectionClasses": "pb-2md lg:pb-2xl"
+      })
+
+
+   </main>
+
+   <!-- Get in touch -->
+   @@include('./_includes/get-in-touch.html')
+
+   <!-- footer -->
+   @@include('./_includes/footer.html')
+
+   <script src="js/allScript.js"></script>
+   <script>
+      $(function(){
+         
+      })
+   </script>
+   <script>
+      var gMapKey = 'AIzaSyB1kmlnoOlwpHQQBvhhIL3joMAKpKq9Yoo';
+      var marker = {
+         size: getViewportWidth() > 710 ? [80, 80] : [64, 64],
+         image: 'images/map-marker.svg',
+         defaultImage: 'images/pin.svg',
+         title: 'Ewe Store It Ltd'
+      }
+      var dummylatlong = [
+         [51.95862184, -0.20562435],
+         [51.69998021, 0.4292124],
+         [52.34970495, 0.24267962],
+         [51.7531435, 0.45062321],
+         [51.86857966, -0.77122752],
+      ]
+      $('#map-canvas-ewe-location').mapify({
+         key: gMapKey,
+         zoom: 8,
+         points: [
+            {
+               lat: dummylatlong[0][0],
+               lng: dummylatlong[0][1],
+               marker: marker.image,
+               markerSize: marker.size,
+               title: marker.title,
+            },
+            {
+               lat: dummylatlong[1][0],
+               lng: dummylatlong[1][1],
+               marker: marker.image,
+               markerSize: marker.size,
+               title: marker.title,
+            },
+            {
+               lat: dummylatlong[2][0],
+               lng: dummylatlong[2][1],
+               marker: marker.image,
+               markerSize: marker.size,
+               title: marker.title,
+            },
+            {
+               lat: dummylatlong[3][0],
+               lng: dummylatlong[3][1],
+               marker: marker.image,
+               markerSize: marker.size,
+               title: marker.title,
+            },
+            {
+               lat: dummylatlong[4][0],
+               lng: dummylatlong[4][1],
+               marker: marker.image,
+               markerSize: marker.size,
+               title: marker.title,
+            },
+
+         ],
+      });
+      
+      $('#map-canvas-your-location').mapify({
+         key: gMapKey,
+         zoom: 8,
+         points: [
+            {
+               lat: dummylatlong[0][0],
+               lng: dummylatlong[0][1],
+               marker: marker.defaultImage,
+               markerSize: [64, 64],
+            },
+         ],
+      });
+   </script>
+</body>
+
+</html>
+
+</html>

@@ -1,0 +1,44 @@
+<section class="@@sectionClasses">
+   <div class="container lg:container-xl mx-auto">
+      <article>
+         <div class="w-full text-wrap @@textWrapClasses">
+            @@if (context.title) {
+            <div data-aos="fade" data-aos-delay="100" data-aos-duration="700">
+               @@include('./_includes/_commons/h2.html', {
+               "title": "<span>@@title</span>",
+               "className": "@@titleClass"
+               })
+            </div>
+            }
+            @@if (context.midtitle) {
+               @@include('./_includes/_commons/h3-lg.html', {
+               "title": "<span>@@midtitle</span>",
+               "className": "@@midtitleClass"
+               })
+            }
+            @@if (context.subtitle) {
+               <div data-aos="fade" data-aos-delay="200" data-aos-duration="700">
+                  @@include('./_includes/_commons/h3.html', {
+                  "title": "<span>@@subtitle</span>",
+                  "className": "@@subtitleClass"
+                  })
+               </div>
+            }
+            @@if (context.text) {
+            <div data-aos="fade-up" data-aos-delay="300" data-aos-duration="700">
+               @@text
+            </div>
+            }
+            @@if (context.button === true) {
+               <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="700">
+                  @@include('./_includes/_commons/button.html', {
+                  "link": "@@buttonLink",
+                  "className": "@@buttonClass font-color-white",
+                  "buttonText": "@@buttonText"
+                  })
+               </div>
+            }
+         </div>
+      </article>
+   </div>
+</section>

@@ -1,0 +1,47 @@
+<div class="pos-relative font-color-white @@bgClasses">
+   @@if (context.bgImage) {
+   <section class="pos-absolute pin flex-col @@if(context.shadeClasses){@@shadeClasses}">
+      <div class="flex-col flex-stretch @@bgImgClasses" style="background-image:url('@@bgImage')"></div>
+   </section>
+   }
+   <section class="container md:container-md lg:container-xl mx-auto py-xl pos-relative">
+      @@if(context.pageTitle){
+      <div class="p-sm px-lg bg-pink pos-absolute pin-t pin-l">@@pageTitle</div>
+      }
+      <div class="@@colClasses py-2md lg:py-xl">
+         <div class="text-wrap w-full">
+
+            @@if (context.title) {
+            <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">
+               @@include('./_includes/_commons/h2.html', {
+               "title": "<span>@@title</span>",
+               "className": "@@titleClass"
+               })
+            </div>
+            }
+            @@if (context.subtitle) {
+            <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">
+               @@include('./_includes/_commons/h3.html', {
+                  "title": "<span>@@subtitle</span>",
+                  "className": "@@subtitleClass"
+               })
+            </div>
+            }
+            @@if (context.text) {
+               <div class="text-wrap w-full" data-aos="fade-up" data-aos-delay="300" data-aos-duration="700">
+                  @@text
+               </div>
+            }
+            @@if (context.button || context.buttonClass || context.buttonText) {
+               <div data-aos="fade" data-aos-delay="500" data-aos-duration="700">
+                  @@include('./_includes/_commons/button.html', {
+                  "link": "@@buttonLink",
+                  "className": "@@buttonClass font-color-white",
+                  "buttonText": "@@buttonText"
+                  })
+               </div>
+            }
+         </div>
+      </div>
+   </section>
+</div>

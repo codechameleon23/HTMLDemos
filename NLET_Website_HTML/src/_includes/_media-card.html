@@ -1,0 +1,27 @@
+<section class="@@colClasses @@if(context.gap){pr-2xs pb-2xs lg:pb-@@gap lg:pr-@@gap}" @@if(context.aosAttr){@@aosAttr}>
+   <div class="@@mediaRatio pos-relative">
+      @@if(context.cardThumb){
+         @@if(context.cardMedia || context.cardMediaClasses){
+            <a href="@@cardMedia" class="@@cardMediaClasses @@if(context.playButton){has-video} image-media flex-col pos-absolute pin">
+         }
+            <div class="@@cardThumbClasses card-image pos-absolute pin flex-stretch flex-col justify-center align-center" style="background-image: url('./images/@@cardThumb')">
+               @@if (context.playButton){
+                  <div class="play-button pointer-events-non icon radius-full pos-absolute shadow-child transition-all @@playButtonClasses">
+                     <span class="p-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357"><path fill="currentColor" d="M38.25 0v357l280.5-178.5z" /></svg>
+                     </span>
+                  </div>
+               }
+            </div>
+         @@if(context.cardMedia || context.cardMediaClasses){
+            </a>
+         }
+      }
+      @@if(context.cardButton){
+         <a href="@@buttonLink" class="fsize-2xs fcolor-white p-xs @@buttonClasses">@@cardButton</a>
+      }
+      @@if(context.imageTag){
+         <div class="@@imageTagClasses">@@imageTagText</div>
+      }
+   </div>
+</section>

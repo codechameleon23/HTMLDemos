@@ -1,0 +1,54 @@
+/*Custom list component*/
+
+dl,
+ol,
+ul {
+  &.list-custom,
+  .list-custom &{
+    list-style: none;
+  }
+}
+
+ol,
+ul {
+  &.list-custom,
+  .list-custom &{
+    li {
+      position: relative;
+  
+      &:before {
+        content: "• ";
+        font-size: 3em;
+        line-height: 3em;
+        transform: translateY(-1.5em);
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+}
+
+ol,
+ul {
+  &.list-custom,
+  .list-custom &{
+
+    &.ordered{
+      li {
+        counter-increment: step-counter;
+    
+        &:before {
+          content: '.'counter(step-counter);
+          // display: inline-block;
+          // width: 1em;
+          // margin-left: -0.5em;
+          // margin-right: 0.5em;
+          // text-align: right;
+          // direction: rtl;
+        }
+      }
+    }
+  }
+}
+

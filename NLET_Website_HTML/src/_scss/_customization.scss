@@ -1,0 +1,416 @@
+$fontRelatedClassNamePrifix: 'f';
+$fontFamilyClassNamePrefix: "#{$fontRelatedClassNamePrifix}family";
+$textColorsClassPrefix: "#{$fontRelatedClassNamePrifix}color";
+$fontSizesClassPrefix: "#{$fontRelatedClassNamePrifix}size";
+$fontWeightsClassPrefix: "#{$fontRelatedClassNamePrifix}weight";
+$lineHeightsClassPrefix: "#{$fontRelatedClassNamePrifix}height";
+$letterSpacingsClassPrefix: "#{$fontRelatedClassNamePrifix}spacing";
+
+/*ImportFontsonts*/
+@import "./ImportFonts";
+
+$colorWhite: #ffffff;
+$colorBlack: #000000;
+
+// brand colors
+$color1: #3b3b3c;
+$color2: #F04E43;
+$color3: #1cbbb4;
+$color4: #f58c3d;
+$color5: #7759a6;
+$color6: #bfc84a;
+$color7: #f283a8;
+$color8: #ffc621;
+$color9: #87cdb3;
+$color10: #157a3d;
+$color11: #f5908a;
+$color12: #1eb3c0;
+
+$colorText: $color1;
+$colorShipGray: $color1;
+$colorFlamingo: $color2;
+$colorJava: $color3;
+$colorJava2: $color12;
+$colorJaffa: $color4;
+$colorDeluge: $color5;
+$colorTurmeric: $color6;
+$colorMauvelous: $color7;
+$colorLightningYellow: $color8;
+$colorVistaBlue: $color9;
+$colorJewel: $color10;
+$colorFroly: $color11;
+
+//-------------------------
+
+// $gridSizes: ();
+$orientations: (
+  // landscape\: "landscape",
+  // portrait\: "portrait"
+);
+
+$baseFont: 'museo-sans', $font_sans;
+
+$defaultFont: $baseFont;
+$secondaryFont: 'roboto', $baseFont;
+$defaultTextColor: $color1;
+$defaultFontWeights: 300;
+$defaultFontSize: 1.8rem;
+
+$fontFamily: (
+  $fontFamilyClassNamePrefix "default" $defaultFont,
+  $fontFamilyClassNamePrefix "secondary" secondaryFont,
+);
+
+$bp_xs: 460px;
+$bp_sm: 576px;
+$bp_md: 710px;
+$bp_lg: 992px;
+$bp_xl: 1500px;
+// $bp_xxl: 1450px;
+$breakPoints: (
+  null 0, 
+  xs\: $bp_xs, 
+  sm\: $bp_sm, 
+  md\: $bp_md, 
+  lg\: $bp_lg, 
+  xl\: $bp_xl,
+  // xxl\: $bp_xxl,
+);
+
+$states: (
+  null null,
+  hover\: ":hover",
+  focus\: ":focus",
+  focus-within\: ":focus-within",
+  "on-active" "is-active",
+);
+
+$bgColors: (
+  $bgColorsClassPrefix "inherit" inherit 'states',
+  $bgColorsClassPrefix "transparent" transparent 'states',
+  $bgColorsClassPrefix "black" $colorBlack 'states',
+  $bgColorsClassPrefix "white" $colorWhite 'states',
+  $bgColorsClassPrefix "default" $color1 'states',
+  $bgColorsClassPrefix "shipGray" $color1 'states',
+  $bgColorsClassPrefix "flamingo" $color2 'states',
+  $bgColorsClassPrefix "java" $color3 'states',
+  $bgColorsClassPrefix "java2" $color12 'states',
+  $bgColorsClassPrefix "jaffa" $color4 'states',
+  $bgColorsClassPrefix "deluge" $color5 'states',
+  $bgColorsClassPrefix "turmeric" $color6 'states',
+  $bgColorsClassPrefix "mauvelous" $color7 'states',
+  $bgColorsClassPrefix "lightningYellow" $color8 'states',
+  $bgColorsClassPrefix "vistaBlue" $color9 'states',
+  $bgColorsClassPrefix "jewel" $color10 'states',
+  $bgColorsClassPrefix "froly" $color11 'states',
+);
+
+$themeColor: (
+  $themeColorClassPrefix "black" black null,
+  $themeColorClassPrefix "black" $colorBlack 'states',
+  $themeColorClassPrefix "white" $colorWhite 'states',
+  $themeColorClassPrefix "default" $color1 'states',
+  $themeColorClassPrefix "shipGray" $color1 'states',
+  $themeColorClassPrefix "flamingo" $color2 'states',
+  $themeColorClassPrefix "java" $color3 'states',
+  $themeColorClassPrefix "java2" $color12 'states',
+  $themeColorClassPrefix "jaffa" $color4 'states',
+  $themeColorClassPrefix "deluge" $color5 'states',
+  $themeColorClassPrefix "turmeric" $color6 'states',
+  $themeColorClassPrefix "mauvelous" $color7 'states',
+  $themeColorClassPrefix "lightningYellow" $color8 'states',
+  $themeColorClassPrefix "vistaBlue" $color9 'states',
+  $themeColorClassPrefix "jewel" $color10 'states',
+  $themeColorClassPrefix "froly" $color11 'states',
+);
+
+$borderColors: (
+  $borderColorsClassPrefix "inherit" inherit 'states',
+  $borderColorsClassPrefix "transparent" transparent 'states',
+  $borderColorsClassPrefix "black" $colorBlack 'states',
+  $borderColorsClassPrefix "white" $colorWhite 'states',
+  $borderColorsClassPrefix "default" $color1 'states',
+  $borderColorsClassPrefix "shipGray" $color1 'states',
+  $borderColorsClassPrefix "flamingo" $color2 'states',
+  $borderColorsClassPrefix "java" $color3 'states',
+  $borderColorsClassPrefix "java2" $color12 'states',
+  $borderColorsClassPrefix "jaffa" $color4 'states',
+  $borderColorsClassPrefix "deluge" $color5 'states',
+  $borderColorsClassPrefix "turmeric" $color6 'states',
+  $borderColorsClassPrefix "mauvelous" $color7 'states',
+  $borderColorsClassPrefix "lightningYellow" $color8 'states',
+  $borderColorsClassPrefix "vistaBlue" $color9 'states',
+  $borderColorsClassPrefix "jewel" $color10 'states',
+  $borderColorsClassPrefix "froly" $color11 'states',
+);
+
+$borderWidth: (
+  null 0.1rem null,
+  2 0.2rem null,
+  10 1rem null,
+  20 2rem null,
+  0 0rem null,
+);
+
+
+$selectionTextColor: $colorWhite;
+$selectionTextBgColor: rgba(invert($colorFlamingo), 1);
+
+$textColors: (
+  $textColorsClassPrefix "inherit" inherit 'states',
+  $textColorsClassPrefix "default" $color1 'states',
+  $textColorsClassPrefix "black" $colorBlack 'states',
+  $textColorsClassPrefix "white" $colorWhite 'states',
+  $textColorsClassPrefix "default" $color1 'states',
+  $textColorsClassPrefix "shipGray" $color1 'states',
+  $textColorsClassPrefix "flamingo" $color2 'states',
+  $textColorsClassPrefix "java" $color3 'states',
+  $textColorsClassPrefix "jaffa" $color4 'states',
+  $textColorsClassPrefix "deluge" $color5 'states',
+  $textColorsClassPrefix "turmeric" $color6 'states',
+  $textColorsClassPrefix "mauvelous" $color7 'states',
+  $textColorsClassPrefix "lightningYellow" $color8 'states',
+  $textColorsClassPrefix "vistaBlue" $color9 'states',
+  $textColorsClassPrefix "jewel" $color10 'states',
+  $textColorsClassPrefix "froly" $color11 'states',
+);
+
+// 14, 15, 16, 18, 20, 24, 26, 30, 32, 34, 36, 40, 42, 44, 50, 54
+
+$fontSizes: (
+  $fontSizesClassPrefix "inherit" inherit null,
+  $fontSizesClassPrefix "xs" 1.4rem null,
+  $fontSizesClassPrefix "2xs" 1.5rem null,
+  $fontSizesClassPrefix "3xs" 1.6rem null,
+  $fontSizesClassPrefix "sm" 1.8rem null,
+  $fontSizesClassPrefix "2sm" 2.0rem null,
+  $fontSizesClassPrefix "3sm" 2.4rem null,
+  $fontSizesClassPrefix "4sm" 2.6rem null,
+  $fontSizesClassPrefix "md" 3.0rem null,
+  $fontSizesClassPrefix "2md" 3.2rem null,
+  $fontSizesClassPrefix "3md" 3.4rem null,
+  $fontSizesClassPrefix "4md" 3.6rem null,
+  $fontSizesClassPrefix "lg" 4.0rem null,
+  $fontSizesClassPrefix "2lg" 4.2rem null,
+  $fontSizesClassPrefix "3lg" 4.4rem null,
+  $fontSizesClassPrefix "xl" 5.0rem null,
+  $fontSizesClassPrefix "2xl" 5.4rem null,
+);
+
+$fontWeights: (
+  $fontWeightsClassPrefix "inherit" inherit null,
+  $fontWeightsClassPrefix "hairline" 100 null,
+  // $fontWeightsClassPrefix "thin" 200 null,
+  $fontWeightsClassPrefix "light" 300 null,
+  $fontWeightsClassPrefix "normal" 400 null,
+  $fontWeightsClassPrefix "medium" 500 null,
+  // $fontWeightsClassPrefix "semibold" 600 null,
+  $fontWeightsClassPrefix "bold" 700 'states',
+  $fontWeightsClassPrefix "extrabold" 800 null,
+  // $fontWeightsClassPrefix "black" 900 null,
+);
+
+$lineHeights: ();
+
+$paddings: (
+  $paddingsClassPrefix "xxxs" .2rem,
+  $paddingsClassPrefix "xxs" .5rem,
+  $paddingsClassPrefix "xs" 1rem,
+  $paddingsClassPrefix "2xs" 1.5rem,
+  $paddingsClassPrefix "sm" 2rem,
+  $paddingsClassPrefix "2sm" 2.5rem,
+  $paddingsClassPrefix "md" 3rem,
+  $paddingsClassPrefix "2md" 4rem,
+  $paddingsClassPrefix "lg" 5rem,
+  $paddingsClassPrefix "2lg" 6rem,
+  $paddingsClassPrefix "xl" 7rem,
+  $paddingsClassPrefix "2xl" 9.5rem,
+  $paddingsClassPrefix "xxl" 10rem,
+  $paddingsClassPrefix "2xxl" 12rem,
+  $paddingsClassPrefix "3xxl" 15rem,
+  $paddingsClassPrefix "0" 0,
+);
+
+$margins: (
+  $marginsClassPrefix "auto" auto,
+  $marginsClassPrefix "xxxs" .2rem,
+  $marginsClassPrefix "xxs" .5rem,
+  $marginsClassPrefix "xs" 1rem,
+  $marginsClassPrefix "2xs" 1.5rem,
+  $marginsClassPrefix "sm" 2rem,
+  $marginsClassPrefix "2sm" 2.5rem,
+  $marginsClassPrefix "md" 3rem,
+  $marginsClassPrefix "2md" 4rem,
+  $marginsClassPrefix "lg" 5rem,
+  $marginsClassPrefix "2lg" 6rem,
+  $marginsClassPrefix "xl" 7rem,
+  $marginsClassPrefix "2xl" 9.5rem,
+  $marginsClassPrefix "xxl" 10rem,
+  $marginsClassPrefix "2xxl" 12rem,
+  $marginsClassPrefix "3xxl" 15rem,
+  $marginsClassPrefix "0" 0,
+);
+
+$negativeMargin: (
+  $negativeMarginClassPrefix "xxxs" .2rem,
+  $negativeMarginClassPrefix "xxs" .5rem,
+  $negativeMarginClassPrefix "xs" 1rem,
+  $negativeMarginClassPrefix "2xs" 1.5rem,
+  $negativeMarginClassPrefix "sm" 2rem,
+  $negativeMarginClassPrefix "2sm" 2.5rem,
+  $negativeMarginClassPrefix "md" 3rem,
+  $negativeMarginClassPrefix "2md" 4rem,
+  $negativeMarginClassPrefix "lg" 5rem,
+  $negativeMarginClassPrefix "2lg" 6rem,
+  $negativeMarginClassPrefix "xl" 7rem,
+  $negativeMarginClassPrefix "2xl" 9.5rem,
+  $negativeMarginClassPrefix "xxl" 10rem,
+  $negativeMarginClassPrefix "2xxl" 12rem,
+  $negativeMarginClassPrefix "3xxl" 15rem,
+  $negativeMarginClassPrefix "none" 0,
+);
+
+$shadow: 0 1px 3px 0 rgba($colorBlack, 0.1), 0 1px 2px 0 rgba($colorBlack, 0.06);
+$shadow-md:  0 4px 6px -1px rgba($colorBlack, 0.1), 0 2px 4px -1px rgba($colorBlack, 0.06);
+$shadow-lg:  0 10px 15px -3px rgba($colorBlack, 0.1), 0 4px 6px -2px rgba($colorBlack, 0.05);
+$shadow-xl:  0 20px 25px -5px rgba($colorBlack, 0.1), 0 10px 10px -5px rgba($colorBlack, 0.04);
+$shadow-2xl:  0 25px 50px -12px rgba($colorBlack, 0.25);
+$shadow-inner:  inset 0 2px 4px 0 rgba($colorBlack, 0.06);
+$shadow-outline:  0 0 0 3px rgba(66, 153, 225, 0.5);
+$shadow-none:  none;
+
+$shadows: (
+  $shadowsClassPrefix null $shadow 'states',
+  $shadowsClassPrefix '-md' $shadow-md 'states',
+  $shadowsClassPrefix '-lg' $shadow-lg 'states',
+  $shadowsClassPrefix '-xl' $shadow-xl 'states',
+  $shadowsClassPrefix '-2xl' $shadow-2xl 'states',
+  $shadowsClassPrefix '-inner' $shadow-inner 'states',
+  $shadowsClassPrefix '-outline' $shadow-outline 'states',
+  $shadowsClassPrefix "-none" $shadow-none 'states',
+);
+
+// $letterSpacings: (
+  // $letterSpacingsClassPrefix "tight" -0.05em,
+  // $letterSpacingsClassPrefix "normal" 0,
+  // $letterSpacingsClassPrefix "wide" .15em,
+// );
+
+
+$aspectRatiosClassNamePrefix: "ratio";
+$aspectRatios: (
+  $aspectRatiosClassNamePrefix "1x1" 1 1,
+  $aspectRatiosClassNamePrefix "5x2" 5 2,
+  $aspectRatiosClassNamePrefix "16x9" 16 9,
+  $aspectRatiosClassNamePrefix "logo" 285 130,
+  $aspectRatiosClassNamePrefix "unstuck-design" 200 18,
+  $aspectRatiosClassNamePrefix "custom-1" 687 441,
+  $aspectRatiosClassNamePrefix "custom-2" 350 270,
+  $aspectRatiosClassNamePrefix "none" 1 0,
+);
+
+// $columnCount: ();
+$hasColsSizes: ();
+
+// 14, 26, 36, 64, 100, 110, 140, 165, 172, 
+$iconsSizes: (
+  $iconsSizesClassNamePrefix null 2.6rem,
+  $iconsSizesClassNamePrefix "logo-header" 19.2rem,
+  $iconsSizesClassNamePrefix "logo" 11.5rem,
+  $iconsSizesClassNamePrefix "logo-sm" 7.8rem,
+  $iconsSizesClassNamePrefix "logo-2sm" 13.7rem,
+  $iconsSizesClassNamePrefix "logo-md" 15.6rem,
+  // $iconsSizesClassNamePrefix "logo-footer" 30rem,
+  $iconsSizesClassNamePrefix "unstuck-design" 20rem,
+  $iconsSizesClassNamePrefix "xxs" 1.6rem,
+  $iconsSizesClassNamePrefix "xs" 2rem,
+  $iconsSizesClassNamePrefix "2xs" 2.4rem,
+  $iconsSizesClassNamePrefix "sm" 3.0rem,
+  // $iconsSizesClassNamePrefix "2sm" 3.6rem,
+  // $iconsSizesClassNamePrefix "md" 4.0rem,
+  $iconsSizesClassNamePrefix "2md" 4.6rem,
+  $iconsSizesClassNamePrefix "lg" 7.2rem,
+  $iconsSizesClassNamePrefix "2lg" 10rem,
+  $iconsSizesClassNamePrefix "3lg" 11rem,
+  $iconsSizesClassNamePrefix "xl" 14rem,
+  // $iconsSizesClassNamePrefix "2xl" 16.5rem,
+  // $iconsSizesClassNamePrefix "3xl" 18rem,
+  $iconsSizesClassNamePrefix "auto" 'auto',
+);
+
+// $opacities: (
+//   $opacitiesClassPrefix "0" 0 null,
+//   $opacitiesClassPrefix "15" 0.15 null,
+//   $opacitiesClassPrefix "25" 0.25 null,
+//   $opacitiesClassPrefix "50" 0.5 null,
+//   $opacitiesClassPrefix "65" 0.65 null,
+//   $opacitiesClassPrefix "75" 0.75 null,
+//   $opacitiesClassPrefix "85" 0.85 null,
+//   $opacitiesClassPrefix "100" 1 null
+// );
+
+$borderRadiusClassPrefix: "radius";
+$borderRadiuses: (
+  $borderRadiusesClassPrefix "full" 9999px,
+);
+
+// Container widths
+// $container_lg: 100rem;
+$container_2lg: 105rem;
+$container_3lg: 114rem;
+$container_2xl: 140rem;
+$container_null: calc(100% - 3rem);
+$container: (
+  $containerClassPrefix null $container_null,
+  $containerClassPrefix "fluid" $container_fluid,
+  $containerClassPrefix "sm" $container_sm,
+  $containerClassPrefix "md" $container_md,
+  $containerClassPrefix "lg" $container_lg,
+  $containerClassPrefix "2lg" $container_2lg,
+  $containerClassPrefix "3lg" $container_3lg,
+  $containerClassPrefix "xl" $container_xl,
+  $containerClassPrefix "2xl" $container_2xl,
+);
+
+$gredList1: linear-gradient(to right, rgba($colorBlack, .4) 0%, rgba($colorBlack, .85) 100%);
+$gredList2: linear-gradient(to bottom, rgba($colorBlack, 0) 30%, rgba($colorBlack, .70) 100%);
+$gredList3: linear-gradient(to right, rgba($colorBlack, .4) 0%, rgba($colorBlack, .4) 100%);
+$gredList4: linear-gradient(70deg, $color2 55%, transparent 0%);
+$gredList5: linear-gradient(70deg, transparent 55%, $color2 0%);
+$shadowOver: (
+  // $shadowOverClassPrefix 'default' $gredList3 'no-states',
+  // $shadowOverClassPrefix 'dark' $gredList2 'no-states',
+  // $shadowOverClassPrefix 'primary-tilt-45' $gredList2 'no-states',
+  // $shadowOverClassPrefix 'primary-tilt-55' $gredList4 'no-states',
+  // $shadowOverClassPrefix 'primary-tilt-55-rev' $gredList5 'no-states',
+  // $shadowOverClassPrefix 'primary' $gredList1 'states',
+  // $shadowOverClassPrefix "none" none 'no-states',
+);
+
+// $zIndexs: (
+  // $zIndexsClassPrefix "auto" "auto",
+  // $zIndexsClassPrefix "0" 0,
+  // $zIndexsClassPrefix "10" 10,
+  // $zIndexsClassPrefix "20" 20,
+  // $zIndexsClassPrefix "30" 30,
+  // $zIndexsClassPrefix "40" 40,
+  // $zIndexsClassPrefix "50" 50,
+// );
+
+$iconThickNess: .06rem;
+
+// Range slider style
+// $trackHeight: 2px;
+// $trackWidth: 100%;
+// $trackColor: $color1;
+// $trackColorFocus: $colorBlack;
+// $trackBorderColor: transparent;
+// $trackBorderWidth: 0px;
+// $trackBorderRadius: 4px;
+
+// $thumbHeight: 24px;
+// $thumbWidth: $thumbHeight;
+// $thumbColor: $colorWhite;
+// $thumbBorderColor: $colorPink;
+// $thumbBorderWidth: 2px;
+// $thumbBorderRadius: 15px;

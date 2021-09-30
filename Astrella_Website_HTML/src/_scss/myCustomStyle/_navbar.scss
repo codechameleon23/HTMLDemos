@@ -1,0 +1,69 @@
+$bp: $navbarBp;
+.navbar {
+  ul > li {
+    &:after {
+      display: none
+    }
+    > a {
+      position: relative;
+      transition: all 0.35s ease-in-out 0s;
+
+      &:after {
+        content: "";
+        position: absolute;
+        width: 3rem;
+        max-width: 0px;
+        height: .2rem;
+        color: $color-primary;
+        border: .1rem solid;
+        left: 1.25rem;
+        transform: translateX(-50%);
+        top: calc(100% + .2rem);
+        border-radius: 0.5rem;
+        transition: all 0.35s ease-in-out 0s;
+        opacity: 0;
+        @media (min-width: $bp) {
+          left: 50%;
+        }
+      }
+    }
+    &.is-active {
+      @media (min-width: $bp) {
+        //color: $color-dark;
+        font-weight: 600;
+        > a:after {
+          display: none;
+        }
+      }
+    }
+    &.is-active,
+    &:hover {
+      > a {
+        @media (min-width: $bp) {
+        //color: $color-dark;
+        }
+        @media (max-width: $bp) {
+          color: $colorWhite;
+          padding-left: 0;
+          &:after {
+            left: 0;
+            transform: translateX(0);
+          }
+        }
+        &:after {
+          opacity: 1;
+          max-width: calc(100% - .5rem);
+        }
+      }
+    }
+  }
+  @media all and (max-width: $bp) {
+    max-width: calc(100% - 5rem);
+  }
+}
+
+.jsNavbarToggle.is-open .hamburger {
+  position: relative;
+  top: 0;
+  right: 0;
+}

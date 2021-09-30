@@ -1,0 +1,22 @@
+<div class="accordion @@if(context.accordionClasses){@@accordionClasses}">
+   <div @@if(context.filterby){data-filterby="@@filterby"} class="accordion-label accordion-toggle @@if(context.accordionLabelClasses){@@accordionLabelClasses}">
+      <h3 class="question @@if(context.questionTextClasses){@@questionTextClasses}">@@questionText</h3>
+      <span class="toggle-sign @@if(context.toggleSignClasses){@@toggleSignClasses}">
+         @@if(!context.toggleSignIcon){
+            <span class="@@if(context.toggleSignInnerClasses){@@toggleSignInnerClasses}">
+               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357">
+                  <path fill="currentColor" d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" />
+               </svg>
+            </span>
+         }
+         @@if(context.toggleSignIcon){
+            @@toggleSignIcon
+         }
+      </span>
+    </div> 
+    <div class="accordion-content @@if(context.accordionContentClasses){@@accordionContentClasses}">
+         <div class="answer @@if(context.answerClasses){@@answerClasses}">
+            @@answerContent
+         </div>
+    </div>
+</div>

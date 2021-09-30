@@ -1,0 +1,64 @@
+<article class="flex-row flex-wrap hover:shadow-md transition-all image-rollover-parent" @@if(context.aos){@@aos}>
+   <figure class="
+      image-rollover
+      transition-all
+      pos-relative @@ratio @@sx">
+      <div class="
+         card-image
+         pos-absolute pin 
+         bg-cover bg-center bg-no-repeat" style="background-image: url('./images/@@image');"></div>
+         @@if(context.overlay){
+            <div class="
+               @@overlay
+               pos-absolute pin">
+               <div class="image-holder"></div>
+            </div>
+         }
+      <a href="@@if(context.media){@@media}@@if(context.link){@@link}@@if(!context.link && !context.media){#}" class="
+         no-underline
+         flex-col justify-center
+         pos-absolute pin 
+         mt-auto
+         px-2sm py-2xs">
+         @@if(context.title){
+            <h2 class="
+            uppercase
+            mt-auto
+            f-size-4sm f-weight-regular f-color-white f-family-primary">@@title</h2>
+         }
+         @@if(context.media){
+            <div class="
+               play-button 
+               pos-absolute 
+               pointer-events-none 
+               transition-all
+               align-self-center
+               icon icon-lg
+               bg-primary f-color-white
+               shadow-child opacity-child">
+               <span class="p-sm">
+                  <svg stroke="currentColor" fill="none" stroke-width="2px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.64 41.64">
+                     <circle  cx="16.97" cy="16.97" r="14.54"/>
+                     <path d="M26.69 26.69l13.23 13.23"/>
+                  </svg>
+               </span>
+            </div>
+         }
+      </a>
+   </figure>
+   <section class="
+      w-full
+      bg-white
+      py-2sm px-md">
+         <time class="
+         d-inline-block f-weight-medium f-size-xxs uppercase mb-xxs">@@date</time>
+         <h2 class="
+         uppercase mb-xs
+         f-family-primary f-color-primary f-size-3sm  f-weight-regular
+         ">
+            <a href="@@if(context.media){@@media}@@if(context.link){@@link}@@if(!context.link && !context.media){#}"
+               class="no-underline f-color-inherit hover:border-b">@@cardtitle</a>
+            </h2>
+         <p>@@para</p>
+   </section>
+</article>

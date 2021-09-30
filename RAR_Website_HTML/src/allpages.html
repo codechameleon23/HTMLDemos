@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('./_includes/_head.html', {
+	"pageName": "All Pages",
+	"description": ""
+	})
+	<style>
+		html,
+		body {
+			height: 100%;
+			/* background-color: rgba(0, 0, 0, 0.7); */
+		}
+
+		.pages {
+			list-style: none;
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.pages li {
+			padding: 0;
+			display: inline-block;
+			margin: 0.25rem;
+			font-weight: 400;
+			text-transform: capitalize;
+			flex: auto;
+		}
+
+		.pages a {
+			transition: all 0.3s 0s ease-in;
+			padding: 1.5rem 1.5rem;
+			display: block;
+			/* box-shadow: 0 0 0.05rem 0 #000; */
+			border-radius: .75rem;
+			text-decoration: none !important;
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+		.pages li:hover a {
+			box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.3);
+		}
+
+		sub{
+			font-size: .8em;
+		}
+	</style>
+</head>
+
+<body class="flex-col justify-center text-center bg-white">
+	<div class="bg-center bg-cover pos-absolute pin opacity-75" style="background-image: url('images/45162614.jpg')">
+	</div>
+	<div class="container container-lg mx-auto my-120 pos-relative">
+		<div class="align-center px-20 w-full lg:col-7">
+			<div class="flex-col flex-stretch justify-center align-center col-8 lg:col-6">
+				<a href="index.html" class="ratio-logo overflow-hidden mb-md pos-relative">
+					<span class="pos-absolute pin">
+						<img src="./images/brand-logo.png" alt="" />
+					</span>
+				</a>
+			</div>
+			<ul class="fcolor-white fsize-xs pages w-full">
+				<li><a class="fweight-semibold fcolor-inherit bg-primary hover:bg-secondary" href="index.html">Home</a></li>
+				<li><a class="fweight-semibold fcolor-inherit bg-primary hover:bg-secondary" href="news.html">News</a></li>
+				<li><a class="fweight-semibold fcolor-inherit bg-primary hover:bg-secondary" href="news-details.html">News Details</a></li>
+				<li><a class="fweight-semibold fcolor-inherit bg-primary hover:bg-secondary" href="regimental-units.html">Regimental Units</a></li>
+				<li><a class="fweight-semibold fcolor-inherit bg-primary hover:bg-secondary" href="regimental-journal.html">Regimental Journal</a></li>
+				<li><a class="fweight-semibold fcolor-inherit bg-primary hover:bg-secondary" href="monthly-newsletters.html">Monthly Newsletters</a></li>
+				<li><a class="fweight-semibold fcolor-inherit bg-primary hover:bg-secondary" href="castle-regimental-journal.html">Castle Regimental Journal</a></li>
+				<li><a class="fweight-semibold fcolor-inherit bg-primary hover:bg-secondary" href="resettlement.html">Resettlement</a></li>
+				<li><a class="fweight-semibold fcolor-inherit bg-primary hover:bg-secondary" href="contact.html">Contact <sub>[Map]</sub></a></li>
+				<li><a class="fweight-semibold fcolor-inherit bg-primary hover:bg-secondary" href="contact-1.html">contact <sub>[image]</sub></a></li>
+				<li><a class="fweight-semibold fcolor-inherit bg-primary hover:bg-secondary" href="search-results.html">Search Results</a></li>
+				<li><a class="fweight-semibold fcolor-inherit bg-primary hover:bg-secondary" href="upcoming-events.html">Upcoming Events</a></li>
+				<li><a class="fweight-semibold fcolor-inherit bg-primary hover:bg-secondary" href="flexibuilder.html">Flexibuilder</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+
+</html>

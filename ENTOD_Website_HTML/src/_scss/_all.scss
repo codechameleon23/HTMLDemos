@@ -1,0 +1,108 @@
+$breakPoint: null;
+/* Font Family classes */
+@include getFontFamilyClasses();
+/* Cursor Poniter classes */
+@include getCursorPointerClasses();
+/* Style and Decoration classes */
+@include getStyleAndDecorationClasses();
+/* White space classes */
+@include getWhitespaceAndWrappingClasses();
+/* Vertical Alignment classes */
+@include getVerticalAlignmentClasses();
+/* Overflow classes */
+// @include getOverflowClasses();
+/* List Reset classes */
+@include getListResetClasses();
+/* Border Colors classes */
+@include getBorderColors();
+/* Font Weight classes */
+@include getFontWeightClasses();
+/* Border Radius classes */
+@include getBorderRadiusClasses();
+/* Letter Spacing classes */ 
+@include getLetterSpacingClasses();
+/* Line Height classes */ 
+@include getLineHeightClasses();
+/*Color Theme*/
+@include getColorTheme();
+// /* Object Fit classes */ @include getObjectFitClasses();
+// /* Object Position classes */ @include getObjectPositionsClasses();
+// /* Float classes */ @include getFloatClasses();
+
+
+@each $bp in $breakPoints {
+  @media (min-width: #{nth($bp, 2)}) {
+    /* Border Style classes */
+    @include getBorderStyleClasses(nth($bp, 1));
+    /* Border Width classes */
+    @include getBorderWidthClasses(nth($bp, 1));
+    /* Backgroud classes */
+    @include getBgAttachmentClasses(nth($bp, 1));
+    /* Backgroud Position classes */
+    @include getBgPositionClasses(nth($bp, 1));
+    /* Backgroud Repeat classes */
+    @include getBgRepeatClasses(nth($bp, 1));
+    /* Backgroud Size classes */
+    @include getBgSizeClasses(nth($bp, 1));
+    /* Text Size classes */
+    @include getFontSizeClasses(nth($bp, 1));
+    /* Width and Heights classes */
+    @include getWidthsAndHeightsClasses(nth($bp, 1));
+    /* Text Alignment classes */
+    @include getTextAlignmentClasses(nth($bp, 1));
+    /* Positions classes */
+    @include getPositionClasses(nth($bp, 1));
+    // /* Visibility classes */ @include getVisibilityClasses(nth($bp, 1));
+    /* Bg Colors classes */
+    @include getBgColors(nth($bp, 1));
+    /* Margin Padding classes */
+    @include getGapsClasses(nth($bp, 1));
+    /* Shadows classes */
+    @include getShadowsClasses(nth($bp, 1));
+    /* opacity classes */
+    @include getOpacityClasses(nth($bp, 1));
+    /* Flex box classes */
+    @include getFlexBoxClasses(nth($bp, 1));
+    /* Aspect Ratio classes */
+    @include getAspectRatioClasses(nth($bp, 1));
+    /* Container classes */
+    @include getContainerClasses(nth($bp, 1));
+    // /* Grid Gutters classes */ @include getGridGutterClasses(nth($bp, 1));
+    /* Columns Classes */
+    @include getColumnClasses(nth($bp, 1));
+    /* Icons sizes classes */
+    @include getIconSizeClasses(nth($bp, 1));
+    /* Display classes */
+    @include getDisplayClasses(nth($bp, 1));
+    /* Font Weight classes */
+    @include getFontWeightClasses(nth($bp, 1));
+    /* Text Colors classes */
+    @include getTextColors(nth($bp, 1));
+    /* Shade overlay*/
+    @include getShadowsOverClasses(nth($bp, 1));
+    /* Overflow classes */
+    @include getOverflowClasses(nth($bp, 1));
+    /* Z-index classes */
+    @include getZindexClasses(nth($bp, 1));
+  }
+}
+
+// @each $bp in $breakPoints {
+//   @if (nth($bp, 1)) {
+// @media all and (min-width: #{nth($bp, 2)}) {
+// }
+//   } @else {
+//   }
+// }
+
+//orientation wise classes
+@each $Op in $orientations {
+  @media (orientation: #{nth($Op, 2)}) {
+    /* Style and Decoration classes */
+    @include getDisplayClasses(nth($Op, 1));
+    /* Width and Heights classes */
+    @include getWidthsAndHeightsClasses(nth($Op, 1));
+    /* Aspect Ratio classes */
+    @include getAspectRatioClasses(nth($Op, 1));
+  }
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  @@include('./_includes/_head.html', {
+    "pageName": "Curriculum",
+    "description": ""
+  })
+</head>
+
+<body class="jsNavbarToggle is-close flex-col">
+
+    <!-- Header -->
+    @@include('./_includes/_header.html', {
+      "headerPosClasses": "",
+      "aboutActive": "",
+      "communityActive": "",
+      "curriculumActive": "is-active",
+      "examsActive": "",
+      "studentServicesActive": "",
+      "newsNEventsActive": ""
+    })
+
+   <!-- Main -->
+   <main class="flex-auto flex-col">
+    <!-- Hero Banner -->
+    @@include('./_includes/_banner-carousel.html', {
+      "rowClasses": "flex-wrap -mr-2xs lg:-mr-md -mb-md",
+      "carousel": false,
+      "hideControl": true,
+      "data": [
+        {
+          "isBanner": true,
+          "bannerClasses": "py-2lg xl:py-xxl bg-black fcolor-white md:fcolor-inherit flex-col",
+          "bannerImage": "iStock-960610662_extended.jpg",
+          "bannerImageClasses": "bg-cover bg-right-top bg-inherit opacity-50 md:opacity-100 pos-absolute pin",
+          "bannerInnerClasses": "",
+          "bannerInnerContainerClasses": "container md:container-xl mx-auto pos-relative",
+          "colClasses": "md:col-8 lg:col-7 flex-col md:pr-2lg py-2lg",
+          "cardImage": "",
+          "imageClasses": "",
+          "imageBgClasses": "",
+          "cardContentClasses": "",
+          "tag": false,
+          "tagClasses": "",
+          "tagText": "",
+          "footerClasses": "md:pt-md",
+          "cardTitle": "Our Curriculum" ,
+          "cardTitleClasses": "fweight-bold fsize-2lg xl:fsize-2xl",
+          "cardText": ["<p data-aos='fade-up' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom' class='fsize-2sm'>Dandent odipid et dolupta duciis es raep ernatum coribus enimin et volorem.Ruptatem lique nullabore dolenturion ni aut remodiae.</p>"],
+          "footerClasses": "pt-sm",
+          "cardButton": "APPLY NOW",
+          "buttonLink": "#",
+          "buttonClasses": "button size-lg hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide",
+          "cardTitleAOSattr": "data-aos='fade-up' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "footerAOSattr": "data-aos='fade-up' data-aos-delay='500' data-aos-duration='700' data-aos-anchor-placement='top-bottom'"
+        }
+      ]
+    })
+
+    <!-- 3 Column Text and Image -->
+  @@include(
+    './_includes/_column-grid.html', 
+    {
+      "sectionClasses": "pt-xl lg:pt-2xl",
+      "containerClasses": "container md:container-md lg:container-xl mx-auto",
+      "rowClasses": "flex-row flex-wrap -mr-2xs -mb-md lg:-mr-lg lg:-mb-lg",
+      "childOnly": false,
+      "data": [
+        { 
+          "colClasses": "flex-col col-12 lg:col-4 pr-2xs pb-md lg:pr-lg lg:pb-lg",
+          "aosAttr": "data-aos='fade-up' data-aos-delay='100' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "cardImage": "single-logo-jaffa.png",
+          "imageClasses": "ratio-1x1 icon-logo-md mx-auto",
+          "imageBgClasses": "bg-bottom bg-cover", 
+          "cardContentClasses": "py-md text-center",
+          "cardTitle": "Apprenticeship",
+          "cardTitleClasses": "fcolor-jaffa fweight-bold fsize-lg",
+          "cardText": ["<p>Me publici acrist pere des! Sciaci sendem untium oc idiisquo estem, cludes imaxi movid dit. Bus no. quemquodit vastiam strisservium deatum ina, urox spiortu</p>"],
+          "footerClasses": "pt-sm",
+          "cardButton": "LEARN MORE",
+          "buttonLink": "apprenticeship.html",
+          "buttonClasses": "button hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide"
+        },
+        { 
+          "colClasses": "flex-col col-12 lg:col-4 pr-2xs pb-md lg:pr-lg lg:pb-lg",
+          "aosAttr": "data-aos='fade-up' data-aos-delay='200' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "cardImage": "single-logo-flamingo.png",
+          "imageClasses": "ratio-1x1 icon-logo-md mx-auto",
+          "imageBgClasses": "bg-bottom bg-cover", 
+          "cardContentClasses": "py-md text-center",
+          "cardTitle": "Adult & Comunity",
+          "cardTitleClasses": "fcolor-flamingo fweight-bold fsize-lg",
+          "cardText": ["<p>Me publici acrist pere des! Sciaci sendem untium oc idiisquo estem, cludes imaxi movid dit. Bus no. quemquodit vastiam strisservium deatum ina, urox spiortu</p>"],
+          "footerClasses": "pt-sm",
+          "cardButton": "LEARN MORE",
+          "buttonLink": "adult-and-community.html",
+          "buttonClasses": "button hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide"
+        },
+        { 
+          "colClasses": "flex-col col-12 lg:col-4 pr-2xs pb-md lg:pr-lg lg:pb-lg",
+          "aosAttr": "data-aos='fade-up' data-aos-delay='300' data-aos-duration='700' data-aos-anchor-placement='top-bottom'",
+          "cardImage": "single-logo-java.png",
+          "imageClasses": "ratio-1x1 icon-logo-md mx-auto",
+          "imageBgClasses": "bg-bottom bg-cover", 
+          "cardContentClasses": "py-md text-center",
+          "cardTitle": "Academy",
+          "cardTitleClasses": "fcolor-java fweight-bold fsize-lg",
+          "cardText": ["<p>Me publici acrist pere des! Sciaci sendem untium oc idiisquo estem, cludes imaxi movid dit. Bus no. quemquodit vastiam strisservium deatum ina, urox spiortu</p>"],
+          "footerClasses": "pt-sm",
+          "cardButton": "LEARN MORE",
+          "buttonLink": "academy.html",
+          "buttonClasses": "button hover:shadow-md bg-flamingo fsize-3xs fweight-medium fcolor-white uppercase py-xs px-md fspacing-wide"
+        }
+      ]
+    }
+  )
+
+  </main>
+  @@include('./_includes/_footer.html', {
+    "instagram": true
+  })
+
+<script src="js/allScript.js"></script>
+</body>
+</html>

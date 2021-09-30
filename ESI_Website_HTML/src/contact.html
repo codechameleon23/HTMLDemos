@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   @@include('./_includes/_core_components/head.html', {
+   "pageName": "Contact",
+   "pojectName": "ESI_Website_HTML",
+   "siteName": "Ewe Store It",
+   "description": "Simple storage solutions designed to save ewe money"
+   })
+</head>
+
+<body class="jsNavbarToggle is-close flex-col">
+
+   <!-- Header -->
+   @@include('./_includes/header.html', {
+   "getAQuoteActive" : "",
+   "educationActive" : "",
+   "howItWorkActive" : "",
+   "contactActive" : "font-weight-bold",
+   "aboutEweActive" : ""
+   })
+
+   <main class="flex-auto flex-col">
+
+      <!-- Page title -->
+      @@include('./_includes/page-title.html', {
+      "pageTitle": "GET IN TOUCH",
+      "classes": "bg-pink pos-absolute pin-t pin-l"
+      })
+
+      <!-- Page banner -->
+      @@include('./_includes/contact-banner.html', {
+      "bgImage": "",
+      "bgClasses": "bg-aqua",
+      "bgImgClasses": "",
+      "pageTitle": "",
+      "title": "Don’t be sheepish...<br>Get in touch today!",
+      "titleClass": "",
+      "text": "",
+      "button": false,
+      "buttonClass": "",
+      "buttonText": ""
+      })
+
+   </main>
+
+   <!-- contact address and Map -->
+   @@include('./_includes/contact-address.html')
+
+   <!-- contact address and Map -->
+   @@include('./_includes/storage-sites.html', {
+   "sectionClasses": "py-2md lg:py-2xl"
+   })
+
+   <!-- Get in touch -->
+   @@include('./_includes/get-in-touch.html')
+
+   <!-- our partners -->
+   @@include('./_includes/our-partners.html',{
+   "sectionClasses": "pt-2md lg:pt-2xl"
+   })
+
+   <!-- footer -->
+   @@include('./_includes/footer.html')
+
+   <script src="js/allScript.js"></script>
+   <script>
+      var marker = {
+         size: getViewportWidth() > 710 ? [80, 80] : [64, 64],
+         image: 'images/map-marker.svg',
+         title: 'Ewe Store It Ltd'
+      }
+      var dummylatlong = [
+         [50.71514577, 0.12530243],
+         [50.95107098, -1.22244426],
+         [51.82531431, -1.45597284],
+         [52.00055842, 0.80656592],
+         [51.95862184, -0.20562435],
+         [51.69998021, 0.4292124],
+         [52.34970495, 0.24267962],
+         [51.7531435, 0.45062321],
+         [51.86857966, -0.77122752],
+      ]
+      $('#map-canvas').mapify({
+         key: 'AIzaSyB1kmlnoOlwpHQQBvhhIL3joMAKpKq9Yoo',
+         zoom: 6,
+         points: [
+            {
+               lat: dummylatlong[0][0],
+               lng: dummylatlong[0][1],
+               marker: marker.image,
+               markerSize: marker.size,
+               title: marker.title,
+            },
+            {
+               lat: dummylatlong[1][0],
+               lng: dummylatlong[1][1],
+               marker: marker.image,
+               markerSize: marker.size,
+               title: marker.title,
+            },
+            {
+               lat: dummylatlong[2][0],
+               lng: dummylatlong[2][1],
+               marker: marker.image,
+               markerSize: marker.size,
+               title: marker.title,
+            },
+            {
+               lat: dummylatlong[3][0],
+               lng: dummylatlong[3][1],
+               marker: marker.image,
+               markerSize: marker.size,
+               title: marker.title,
+            },
+            {
+               lat: dummylatlong[4][0],
+               lng: dummylatlong[4][1],
+               marker: marker.image,
+               markerSize: marker.size,
+               title: marker.title,
+            },
+            {
+               lat: dummylatlong[5][0],
+               lng: dummylatlong[5][1],
+               marker: marker.image,
+               markerSize: marker.size,
+               title: marker.title,
+            },
+            {
+               lat: dummylatlong[6][0],
+               lng: dummylatlong[6][1],
+               marker: marker.image,
+               markerSize: marker.size,
+               title: marker.title,
+            },
+            {
+               lat: dummylatlong[7][0],
+               lng: dummylatlong[7][1],
+               marker: marker.image,
+               markerSize: marker.size,
+               title: marker.title,
+            },
+            {
+               lat: dummylatlong[8][0],
+               lng: dummylatlong[8][1],
+               marker: marker.image,
+               markerSize: marker.size,
+               title: marker.title,
+            }
+         ],
+      });
+   </script>
+</body>
+
+</html>

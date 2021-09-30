@@ -1,0 +1,29 @@
+<section class="@@ribbonWrapper">
+   <div class="@@if(!context.containerClasses){container md:container-md lg:container-xl mx-auto} @@if(context.containerClasses){@@containerClasses}">
+      @@if(context.ribbonInnerClasses){<div class="@@ribbonInnerClasses">}
+         @@if(context.ribbonLeftClasses){
+            <div class='@@ribbonLeftClasses'>
+               @@ribbonLeftHtml
+            </div>
+         }
+            @@if(context.ribbonCenterClasses){<div class='@@ribbonCenterClasses'>}
+               @@if(context.ribbonCenterHtml){
+                  @@ribbonCenterHtml   
+               }
+               @@if(!context.ribbonCenterHtml){
+                  @@if(context.titleTag){
+                     <@@titleTag class="@@ribbonTextClasses">@@ribbonText</@@titleTag>
+                  }
+                  @@if(!context.titleTag){
+                     <h2 class="@@ribbonTextClasses">@@ribbonText</h2>
+                  }
+               }
+            @@if(context.ribbonCenterClasses){</div>}
+         @@if(context.ribbonRightClasses){
+            <div class='@@ribbonLeftClasses'>
+               @@ribbonRightHtml
+            </div>
+         }
+         @@if(context.ribbonInnerClasses){</div>}
+   </div>
+</section>

@@ -1,0 +1,89 @@
+/*Custom checkbox and Radio
+----------------------------------------*/
+$tickThickness: .2rem;
+$tickBoxSize: 3rem;
+$tickSize: ( .6rem, 1.2rem);
+$dotSize: 1.2rem;
+
+.custom-tick {
+  display: inline-flex;
+  margin-bottom: 0;
+
+  >input[type="radio"],
+  >input[type="checkbox"] {
+    cursor: pointer;
+    position: absolute;
+    opacity: 0;
+  }
+
+  >input[type="radio"]+.tick,
+  >input[type="checkbox"]+.tick {
+    position: relative;
+    height: $tickBoxSize;
+    width: $tickBoxSize;
+    border-style: solid;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex: none;
+
+    &:after {
+      content: "";
+    }
+
+    +.related-text {
+      margin-left: 1rem;
+      padding-right: 1rem;
+      font-size: inherit;
+    }
+  }
+
+  >input[type="checkbox"]+.tick {
+    &:after {
+      margin-top: -.15rem;
+      width: nth($tickSize, 1);
+      height: nth($tickSize, 2);
+      border-style: solid;
+      border-width: 0 $tickThickness $tickThickness 0;
+      transform: rotate(45deg) scale(0);
+      opacity: 0;
+      transition: all 0.2s 0s ease-in-out;
+    }
+  }
+
+  >input[type="checkbox"]:checked+.tick {
+    &:after {
+      opacity: 1;
+      transform: rotate(45deg) scale(1);
+    }
+  }
+
+  >.related-text {
+    ~.tick {
+      margin-left: 0.5rem;
+    }
+  }
+
+  >input[type="radio"]+.tick {
+    border-radius: 100%;
+
+    &:after {
+      margin-top: 0;
+      width: $dotSize;
+      height: $dotSize;
+      border: 0.1rem solid;
+      border-width: 0 $tickThickness $tickThickness 0;
+      border-radius: 50%;
+      transform: rotate(0deg) scale(0);
+      opacity: 0;
+    }
+  }
+
+  >input:checked+.tick {
+    &:after {
+      opacity: 1;
+      transform: rotate(0deg) scale(1);
+    }
+  }
+
+}

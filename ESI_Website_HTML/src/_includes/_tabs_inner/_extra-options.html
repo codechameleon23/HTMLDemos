@@ -1,0 +1,117 @@
+<form>
+   <div class="-m-sm flex-row flex-wrap">
+      <div class="p-sm col-12 lg:col-6 flex-col">
+         <div class="-m-xs flex-col flex-stretch">
+            <div class="p-xs">
+               <h4 class="font-weight-bold font-color-pink mb-xs">Do you require your items to be packed?</h4>
+               <div class="-m-xs flex-row flex-wrap justify-start">
+                  <div class="p-xs">
+                     <label class="custom-tick">
+                        <input name="packed" type="radio">
+                        <span class="tick d-inline-block border"><span class="radius-full bg-white font-color-pink"></span></span>
+                        <span class="related-text"><span class="">Yes</span>
+                        </span>
+                     </label>
+                  </div>
+                  <div class="p-xs">
+                     <label class="custom-tick">
+                        <input name="packed" type="radio">
+                        <span class="tick d-inline-block border"><span class="radius-full bg-white font-color-pink"></span></span>
+                        <span class="related-text"><span class="">No</span>
+                        </span>
+                     </label>
+                  </div>
+                  <div class="p-xs flex-auto text-right">
+                     @@include('./_includes/_commons/button-as-link.html', {
+                     "link": "#",
+                     "className": "font-color-pink opacity-50 hover:opacity-100",
+                     "buttonText": "Learn More"
+                     })
+                  </div>
+               </div>
+            </div>
+            <div class="mx-xs my-sm border-b border-pink border-dashed"></div>
+            <div class="p-xs">
+               <h4 class="font-weight-bold font-color-pink mb-xs">Do you require any shredding?</h4>
+               <div class="-m-xs flex-row flex-wrap justify-start">
+                  <div class="p-xs">
+                     <label class="custom-tick">
+                        <input name="shredding" type="radio">
+                        <span class="tick d-inline-block border"><span class="radius-full bg-white font-color-pink"></span></span>
+                        <span class="related-text"><span class="">Yes</span>
+                        </span>
+                     </label>
+                  </div>
+                  <div class="p-xs">
+                     <label class="custom-tick">
+                        <input name="shredding" type="radio">
+                        <span class="tick d-inline-block border"><span class="radius-full bg-white font-color-pink"></span></span>
+                        <span class="related-text"><span class="">No</span>
+                        </span>
+                     </label>
+                  </div>
+                  <div class="p-xs flex-auto text-right">
+                     @@include('./_includes/_commons/button-as-link.html', {
+                     "link": "#",
+                     "className": "font-color-pink opacity-50 hover:opacity-100",
+                     "buttonText": "Learn More"
+                     })
+                  </div>
+               </div>
+            </div>
+            <div class="p-xs">
+               <h4 class="font-weight-bold font-color-pink mb-xs">Shredding Options</h4>
+               <div class="select flex-auto flex-col font-color-pink">
+                  <select class="px-2xs py-xs flex-stretch focus:shadow-lg transition-all bg-white border border-pink font-color-default">
+                     <option>Choose a shredding option</option>
+                     <option>Lorem, ipsum dolor.</option>
+                     <option>sit amet consectetur.</option>
+                     <option>consectetur adipisicing elit</option>
+                  </select>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="p-sm col-12 lg:col-6 flex-col">
+         <div class="-m-xs flex-col flex-stretch">
+            <div class="p-xs">
+               <h4 class="font-weight-bold font-color-pink mb-xs">Do you require any storage insurance?</h4>
+               <div class="-m-xs flex-row flex-wrap justify-start">
+                  <div class="p-xs">
+                     <label class="custom-tick">
+                        <input name="insurance" type="radio">
+                        <span class="tick d-inline-block border"><span class="radius-full bg-white font-color-pink"></span></span>
+                        <span class="related-text"><span class="">Yes</span>
+                        </span>
+                     </label>
+                  </div>
+                  <div class="p-xs">
+                     <label class="custom-tick">
+                        <input name="insurance" type="radio">
+                        <span class="tick d-inline-block border"><span class="radius-full bg-white font-color-pink"></span></span>
+                        <span class="related-text"><span class="">No</span>
+                        </span>
+                     </label>
+                  </div>
+                  <div class="p-xs flex-auto text-right">
+                     @@include('./_includes/_commons/button-as-link.html', {
+                     "link": "#",
+                     "className": "font-color-pink opacity-50 hover:opacity-100",
+                     "buttonText": "Learn More"
+                     })
+                  </div>
+               </div>
+            </div>
+            <div class="p-xs mt-auto text-right">
+               @@include('./_includes/_commons/button.html', {
+                  "link": "javascript:void(0);",
+                  "className": "mt-auto bg-aqua font-color-white size-lg",
+                  "buttonText": "Next step",
+                  "dataAttr": "data-goto",
+                  "dataAttrValue": "step_5"
+               })
+            </div>
+         </div>
+      </div>
+   </div>
+</form>

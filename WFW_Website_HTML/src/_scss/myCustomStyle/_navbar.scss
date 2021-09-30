@@ -1,0 +1,43 @@
+$bp: $navbarBp;
+.navbar {
+  ul > li {
+     > a {
+        position: relative;
+        &:after {
+           content: "";
+           position: absolute;
+           width: 100%;
+           max-width: 0px;
+            height: .2rem;
+            color: inherit;
+            border: .1rem solid;
+            left: 1.25rem;
+            transform: translateX(-50%);
+            top: calc(100% - .2rem);
+            border-radius: 0.5rem;
+            transition: all 0.35s ease-in-out 0s;
+            opacity: 0;
+            @media (min-width: $bp) {
+               left: 50%;
+            }
+         }
+      }
+      &.is-active,
+      &:hover{
+         > a {
+            @media (max-width: $bp) {
+               color: $colorWhite;
+            }
+            &:after {
+               opacity: 1;
+               max-width: 2.3rem;
+            }
+         }
+      }
+  }
+}
+
+.jsNavbarToggle.is-open .hamburger {
+   top: 3.8rem;
+   right: 1.5rem;
+}

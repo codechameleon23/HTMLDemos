@@ -1,0 +1,58 @@
+//*Slightly lighten a color*//
+@function tint($color, $percentage) {
+	@return mix(white, $color, $percentage);
+}
+
+//*Slightly darken a color*//
+@function shade($color, $percentage) {
+	@return mix(black, $color, $percentage);
+}
+
+// Unit conversion
+// px to rem
+@function pxToRem($pxValue){
+	@return (($pxValue / $baseSize) + rem);
+}
+
+// rem to px
+@function remToPx($remValue){
+	$value: parseInt($remValue) * $baseSize;
+	@return round($value);
+}
+
+//*Transition mixin*//
+$easing: ease-in-out;
+$t: .5s;
+$d: 0s;
+$what: all;
+@mixin transition($what: $what, $time: $t, $delay: $d, $how: $easing) {
+	transition: $what $time $delay $how;
+}
+
+//*Aspect ratio*//
+$w: 1;
+$h: 1;
+@mixin aspect-ratio($width: $w, $height: $h) {
+	position: relative;
+	width: 100%;
+
+	&:before {
+		content: "";
+		pointer-events: none;
+		display: block;
+		width: 100%;
+		padding-top: ($height / $width) * 100%;
+	}
+
+	>*:first-child {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+}
+
+@mixin box-shadow($inset, $top, $left, $blur, $size, $color) {
+  box-shadow: $inset $top $left $blur $size $color;
+}
