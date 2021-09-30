@@ -5,5 +5,5 @@
     duration: 700,
     once: true,
     easing: 'ease-in-out',
-    anchorPlacement: 'top-bottom',
+    anchorPlacement: 'bottom-bottom',
   });

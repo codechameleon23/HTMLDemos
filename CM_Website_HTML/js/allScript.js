@@ -478,7 +478,7 @@ if ($('.js_media_Gallery_Popup').length > 0) { //if element exists
     duration: 700,
     once: true,
     easing: 'ease-in-out',
-    anchorPlacement: 'top-bottom',
+    anchorPlacement: 'bottom-bottom',
   });
 //  -------------------------------------------
 //  Accordion
