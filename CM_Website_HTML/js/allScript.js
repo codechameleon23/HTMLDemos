@@ -475,10 +475,10 @@ if ($('.js_media_Gallery_Popup').length > 0) { //if element exists
 //  Animate on scroll
 //  -------------------------------------------
   AOS.init({
-    duration: 700,
+    duration: 1000,
     once: true,
-    easing: 'ease-in-out',
-    anchorPlacement: 'bottom-bottom',
+    // easing: 'ease-in-out',
+    anchorPlacement: 'center-bottom',
   });
 //  -------------------------------------------
 //  Accordion
