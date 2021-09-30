@@ -16,6 +16,7 @@
   text-transform: uppercase;
   font-size: 1.5rem;
   letter-spacing: 0.07em;
+  font-weight: 600; 
 
 
   &:before {
@@ -325,16 +326,34 @@ ul.list{
 
 .button {
   &.custom-primary {
-    @media (min-width: $bp_xl) {
-      padding-top: .9rem !important;
-      padding-bottom: .9rem !important;
+    &.with-icon {
+      @media (min-width: $bp_xl) {
+        padding-top: .9rem !important;
+        padding-bottom: .9rem !important;
+      }
+    }
+  }
+  @media (min-width: $bp_xl) {
+    &.custom-primary {
+      color: $color-primary;
+      &:before {
+        height: 0;
+        top: 0;
+        bottom: auto;
+      }
+      &:hover {
+        color: $color-white;
+        &:before {
+          height: 100%;
+        }
+      }
     }
   }
   &.custom-primary,
-  &.custom-primary {
-    padding-left: 5px !important;
-    padding-right: 5px !important;
+  &.custom-secondary {
     @media (max-width: $bp_xs) {
+      padding-left: 5px !important;
+      padding-right: 5px !important;
       font-size: 11px !important;
       padding-top: 18px !important;
       padding-bottom: 18px !important;

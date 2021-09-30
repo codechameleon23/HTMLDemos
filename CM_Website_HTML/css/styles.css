@@ -37689,13 +37689,9 @@ body[data-aos-easing='ease-in-out'] [data-aos],
 {
     cursor: pointer;
 }
-@media (min-width: 1200px)
+.navbar .nav-link
 {
-    .navbar ul > li > a,
-    .navbar ul > li > .submenu-trigger
-    {
-        padding-bottom: 30px;
-    }
+    font-weight: 600;
 }
 .navbar .is-open .submenu
 {
@@ -37948,6 +37944,7 @@ main
 {
     font-family: 'Lato', Constantia, Lucida Bright, Lucidabright, Lucida Serif, Lucida, DejaVu Serif, Bitstream Vera Serif, Liberation Serif, Georgia, serif;
     font-size: 1.5rem;
+    font-weight: 600; 
     line-height: 1.2;
 
     position: relative;
@@ -37962,7 +37959,7 @@ main
             transition: all .125s 0s ease-out;
     text-align: center;
     text-decoration: none;
-    letter-spacing: .07em; 
+    letter-spacing: .07em;
     text-transform: uppercase;
 
     -webkit-box-align: center;
@@ -38371,27 +38368,46 @@ ul.list.secondary li:before
 
 @media (min-width: 1200px)
 {
-    .button.custom-primary
+    .button.custom-primary.with-icon
     {
         padding-top: .9rem !important;
         padding-bottom: .9rem !important;
     }
 }
 
-.button.custom-primary,
-.button.custom-primary
+@media (min-width: 1200px)
 {
-    padding-right: 5px !important; 
-    padding-left: 5px !important;
+    .button.custom-primary
+    {
+        color: #0b303e;
+    }
+    .button.custom-primary:before
+    {
+        top: 0;
+        bottom: auto; 
+
+        height: 0;
+    }
+    .button.custom-primary:hover
+    {
+        color: #fff;
+    }
+    .button.custom-primary:hover:before
+    {
+        height: 100%;
+    }
 }
-@media (max-width: 420px)
+
+@media (max-width: 460px)
 {
     .button.custom-primary,
-    .button.custom-primary
+    .button.custom-secondary
     {
         font-size: 11px !important;
 
         padding-top: 18px !important;
-        padding-bottom: 18px !important;
+        padding-right: 5px !important;
+        padding-bottom: 18px !important; 
+        padding-left: 5px !important;
     }
 }
