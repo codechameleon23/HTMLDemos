@@ -17,9 +17,9 @@
       },225)
    }
 
-// $(window).on('scroll', function () {
-//    navBarClose();
-// });
+   // $(window).on('scroll', function () {
+   //    navBarClose();
+   // });
 
    $(window).on('resize', function () {
       navBarClose();

@@ -240,7 +240,7 @@
         <article class="text-wrap-lg text-center f-size-26">
           <hgroup class="text-wrap">
             <h3 class="f-color-secondary uppercase">CONTACT US</h3>
-            <h3 class="f-color-primary f-size-38">We’d love to hear from you,<br /> and discuss your next move…</h3>
+            <h3 class="f-color-primary f-size-26 lg:f-size-38">We’d love to hear from you,<br /> and discuss your next move…</h3>
           </hgroup>
           <div class="flex-row flex-wrap justify-center -mx-15 -my-8">
             <div class="px-15 py-8">
@@ -268,8 +268,8 @@
           </div>
           <div class="col-12 xl:col-6 my-40 xl:my-0 pl-40 xl:pl-65 pr-40 border-l-4 border-secondary">
             <div class="flex-wrap flex-row -m-20">
-              <div class="col-12 lg:col-6 xl:col-12 p-20">
-                <div class="text-wrap-lg f-size-26">
+              <div class="col-12 md:col-6 xl:col-12 p-20">
+                <div class="text-wrap-lg lg:f-size-26">
                   <div class="text-wrap-md">
                     <h2 class="f-color-primary">Head Office</h2>
                     <p><a class="no-underline hover:f-color-secondary" href="https://goo.gl/maps/V6EVTGLEJ35s6YaE6" target="_blank">87 Castle Street, Salisbury, SP1 3SP.</a></p>
@@ -288,30 +288,32 @@
                       </li>
                     </ul>
                   </div>
+                </div>
+              </div>
+              <div class="col-12 md:col-6 xl:col-12 p-20">
+                <div class="text-wrap-lg lg:f-size-26">
                   <div class="text-wrap-md">
                     <h2 class="f-color-primary">Email</h2>
                     <p><a class="no-underline hover:f-color-secondary" href="mailto:info@cartermay.co.uk">info@cartermay.co.uk</a></p>
                   </div>
-                </div>
-              </div>
-              <div class="col-12 lg:col-6 xl:col-12 p-20">
-                <div class="text-wrap-md f-size-26">
-                  <h2 class="f-color-primary">Opening Hours</h2>
-                  <ul class="list-reset">
-                    <li>
-                      Monday to Friday<br />8:30am - 6:00pm
-                    </li>
-                    <li>
-                      Saturday<br />9:00am - 4:00pm
-                    </li>
-                    <li>
-                      Sunday<br />Closed
-                    </li>
-                  </ul>
+                  <div class="text-wrap-md">
+                    <h2 class="f-color-primary">Opening Hours</h2>
+                    <ul class="list-reset">
+                      <li>
+                        Monday to Friday<br />8:30am - 6:00pm
+                      </li>
+                      <li>
+                        Saturday<br />9:00am - 4:00pm
+                      </li>
+                      <li>
+                        Sunday<br />Closed
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
               <div class="col-12 p-20">
-                <div class="text-wrap-md f-size-26">
+                <div class="text-wrap-md lg:f-size-26">
                   <p>For all our landlords, your dedicated member of staff is available on the telephone for out of hours emergencies and this will be given to you upon instruction of our fully managed service.</p>
                 </div>
               </div>
@@ -390,10 +392,10 @@
   <section id="jsSearchPropertyPopup" class="d-hidden popup bg-primary f-color-white flex-col w-full h-full">
     <div class="popup-body pos-absolute pin flex-col justify-center align-center overflow-x-hidden overflow-y-auto">
       <div class="container container-md my-20 mx-auto">
-        <div class="text-wrap-md">
-          <div class="icon-90 lg:icon-165 mx-auto"><img src="./images/CM_Logo_Submark.png" /></div>
+        <div class="text-wrap-sm">
+          <div class="icon-90 lg:icon-108 mx-auto"><img src="./images/CM_Logo_Submark.png" /></div>
           <div class="text-center text-wrap-md">
-            <h2 class="f-size-24 lg:f-size-39 f-family-secondary f-weight-bold">Property Search</h2>
+            <h2 class="f-size-26 f-family-secondary f-weight-bold">Property Search</h2>
           </div>
           <form class="flex-row flex-wrap align-center">
             <div class="col-12 xl:col-flex">
@@ -419,6 +421,7 @@
                   </div>
                 </div>
                 <div class="col-12 flex-col p-8">
+                  <!-- <input type="text" required="" placeholder="Location" name="location" class="w-full border border-white f-color-inherit p-10 flex-stretch focus:shadow-md transition-all"> -->
                   <div class="select">
                     <select name="enquiryType" class="w-full border border-white f-color-inherit p-10 flex-stretch focus:shadow-md transition-all not-selected">
                       <option value="" selected="selected">Location</option>
@@ -468,8 +471,8 @@
                     </select>
                   </div>
                 </div>
-                <div class="col-12 flex-col p-8">
-                  <label class="w-auto custom-tick mx-auto my-10">
+                <div class="col-12 md:col-6 flex-col p-8">
+                  <label class="w-auto custom-tick ml-auto my-10">
                     <input name="addr" type="checkbox" class="style-radio">
                     <span class="d-inline-block tick"><span class="border border-secondary border-2 f-color-secondary rounded-full"></span></span>
                     <span class="related-text">
@@ -477,11 +480,21 @@
                     </span>
                   </label>
                 </div>
+                <div class="col-12 md:col-6 flex-col p-8">
+                  <div class="flex-row flex-wrap justify-start">
+                    <button class="button secondary"><span>search</span></button>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="col-12 mt-8 xl:mt-0">
-              <div class="flex-row flex-wrap justify-center">
-                <button class="button secondary"><span>search</span></button>
+            <div class="col-12 mt-40">
+              <div class="border-y-1 border-secondary py-20">
+                <div class="text-wrap-sm text-center">
+                  <h2 class="f-size-26 font-weight-bold f-family-secondary">Do you know what your property is worth?</h2>
+                  <a href="#" class="jsRequestValuationPopup_open button secondary outline" data-popup-ordinal="2" id="open_58031680">
+                    <span>BOOK A VALUATION</span>
+                  </a>
+                </div>
               </div>
             </div>
           </form>
