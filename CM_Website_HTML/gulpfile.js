@@ -118,7 +118,7 @@ function IMG_OPERATION() {
   return gulp
     .src(SRC_SELECT_IMG)
     // .pipe(svgo())
-    .pipe(imagemin())
+    // .pipe(imagemin())
     .pipe(gulp.dest(DEST_IMG_PATH))
     .pipe(browserSync.stream());
 }
