@@ -1,0 +1,215 @@
+//  -------------------------------------------
+//  All Components
+//  -------------------------------------------
+
+const Box = styled.div(({ sx }) => ({ ...sx }));
+
+/////
+const SectionDivider = ({ classes }) => {
+  return <div className={`mb-40 ${classes}`}></div>;
+};
+
+const AspectRatioBox = ({ ratio, children, sx, classes }) => {
+  const asRatio = ratio || [1, 1];
+  return (
+    <Box
+      sx={{
+        "&:before": {
+          paddingTop: `calc((${asRatio[1] / asRatio[0]})*100%)`,
+        },
+        ...sx,
+      }}
+      className={`ratio pos-relative ${classes}`}
+    >
+      {children}
+    </Box>
+  );
+};
+
+const HeadingBanner = ({ theme, children, classes }) => {
+  return (
+    <section className={`heading-banner py-65 xl:py-100 ${theme} ${classes}`}>
+      <div class="container sm:container-sm md:container-md lg:container-lg xl:container-xl xxl:container-xxl mx-auto">
+        {children}
+      </div>
+    </section>
+  );
+};
+
+const HeadingBar = ({ theme, children, classes }) => {
+  return (
+    <section className={`heading-bar py-20 ${theme} ${classes}`}>
+      <div class="container sm:container-sm md:container-md lg:container-lg xl:container-xl xxl:container-xxl mx-auto">
+        {children}
+      </div>
+    </section>
+  );
+};
+
+const ArticleCard = ({ theme, image, children, classes, isReversed }) => {
+  return (
+    <section className={`article-card ${theme} mt-65 xl:mt-100 ${classes}`}>
+      <div class="container sm:container-sm md:container-md lg:container-lg xl:container-xl mx-auto">
+        <article
+          className={`flex-row ${
+            isReversed ? "flex-row-reverse" : ""
+          } flex-wrap align-center pos-relative`}
+        >
+          <div
+            className={`col-12 lg:col-6 lg:pos-absolute pin-y ${
+              isReversed
+                ? "pin-r pin-l-auto lg:pl-10"
+                : "pin-l pin-r-auto lg:pr-10"
+            }`}
+          >
+            <div class="ratio ratio-1x1 md:ratio-16x9 lg:ratio-none pos-relative w-full h-full">
+              <img
+                className="pos-absolute pin object-cover h-full w-full"
+                src={image}
+              />
+            </div>
+          </div>
+          <div
+            className={`col-12 lg:col-6 ${
+              isReversed ? "lg:pr-54 lg:mr-auto" : "lg:pl-54 lg:ml-auto"
+            } pt-20 lg:pb-20`}
+          >
+            {children}
+          </div>
+        </article>
+      </div>
+    </section>
+  );
+};
+
+const ArticleFullCard = ({ theme, image, children, classes, isReversed }) => {
+  return (
+    <section className={`article-full-card ${theme} pos-relative ${classes}`}>
+      <div
+        className={`col-12 lg:col-6 lg:pos-absolute pin-y ${
+          isReversed ? "pin-r pin-l-auto" : "pin-l pin-r-auto"
+        }`}
+      >
+        <div class="ratio ratio-1x1 md:ratio-16x9 lg:ratio-none pos-relative w-full h-full">
+          <img
+            className="pos-absolute pin object-cover h-full w-full"
+            src={image}
+          />
+        </div>
+      </div>
+      <div class="container sm:container-sm md:container-md lg:container-lg xl:container-xl mx-auto">
+        <article
+          className={`col-12 lg:col-6 ${
+            isReversed ? "lg:pr-54 lg:mr-auto" : "lg:pl-54 lg:ml-auto"
+          } py-40 lg:py-80`}
+        >
+          {children}
+        </article>
+      </div>
+    </section>
+  );
+};
+
+const TestimonialsCard = ({ theme, image, children, classes, isReversed }) => {
+  return (
+    <article
+      className={`testimonials-card ${theme} flex-row flex-wrap align-center pos-relative ${classes}`}
+    >
+      {image ? (
+        <div
+          className={`col-12 lg:col-6 lg:pos-absolute pin-y ${
+            isReversed ? "pin-l pin-r-auto" : "pin-r pin-l-auto"
+          }`}
+        >
+          <div class="ratio ratio-16x9 pos-relative w-full h-full">
+            <img
+              className="pos-absolute pin object-cover h-full w-full"
+              src={image}
+            />
+          </div>
+        </div>
+      ) : null}
+      <div class="container sm:container-sm md:container-md lg:container-lg xl:container-xl mx-auto">
+        <div
+          className={`col-12 ${image ? "lg:col-6" : ""} ${
+            image ? (isReversed ? "lg:pl-80 lg:ml-auto" : "lg:pr-80") : ""
+          } py-40 lg:py-80`}
+        >
+          {children}
+        </div>
+      </div>
+    </article>
+  );
+};
+
+const MediaCard = ({
+  theme,
+  image,
+  link,
+  imageClass,
+  children,
+  rollOver,
+  classes,
+}) => {
+  return (
+    <a
+      href={link || "#"}
+      className={`media-card ${theme} flex-col ${classes} rollover-wrap opacity-parent-0 hover:opacity-parent-100 hover:bg-white flex-stretch flex-col transition-all no-underline hover:shadow-lg`}
+    >
+      <figure
+        className={`ratio ratio-1x1 rollover-wrap image-placeholder pos-relative bg-light flex-none ${imageClass}`}
+      >
+        <img
+          className="rollover-effect pos-absolute pin object-cover h-full w-full"
+          src={image}
+        />
+        {rollOver ? (
+          <div class="roll-over opacity-child pos-absolute pin flex-col justify-center align-center">
+            <div class="pos-relative p-40">
+              <div class="pos-absolute pin w-full h-full flex-row align-center">
+                <div class="ratio-1x1 w-full">
+                  <svg
+                    class="pos-absolute pin"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 184 184"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M-.063 91.993 91.93 0l91.994 91.993-91.994 91.994z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <p class="title pos-relative text-center">{rollOver}</p>
+            </div>
+          </div>
+        ) : null}
+      </figure>
+      <section className={`card-body pt-20 flex-auto flex-col`}>
+        {children}
+      </section>
+    </a>
+  );
+};
+
+const Pagination = ({theme}) => {
+  return (
+    <div class={`pagination ${theme} flex-row flex-wrap justify-center mx-auto f-family-secondary`}>
+      <a href="#" class="active f-color-red hover:f-color-red px-15">
+        <span>1</span>
+      </a>
+      <a href="#" class="hover:f-color-red px-15">
+        <span>2</span>
+      </a>
+      <a href="#" class="hover:f-color-red px-15">
+        <span>3</span>
+      </a>
+      <a href="#" class="hover:f-color-red px-15">
+        <span>4</span>
+      </a>
+      <a href="#" class="hover:f-color-red px-15">
+        <span>5</span>
+      </a>
+    </div>
+  );
+};

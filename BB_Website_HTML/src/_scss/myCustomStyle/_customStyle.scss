@@ -1,0 +1,430 @@
+.navbar a.is-active {
+  color: $color-secondary;
+}
+
+[class*="ratio"]:before {
+  display: block;
+  width: 100%;
+  content: "";
+  pointer-events: none;
+}
+
+.button {
+  align-items: center;
+  justify-content: center;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  line-height: 1.2;
+  font-family: $primaryFont;
+  transition: $transition;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  font-weight: 500;
+  padding: 1rem 2rem;
+  border: 1px solid;
+
+  &.sm {
+    font-size: 1.4rem;
+    padding: 0.6rem 2rem;
+  }
+
+  &:hover {
+    background-color: $color-white;
+    box-shadow: $shadow_lg;
+  }
+
+  &.primary {
+    color: $color-primary;
+    &:hover {
+      background-color: $color-primary;
+      color: $color-white;
+    }
+  }
+  &.secondary {
+    color: $color-secondary;
+    &:hover {
+      background-color: $color-secondary;
+      color: $color-white;
+    }
+  }
+  &.tertiary {
+    color: $color-tertiary;
+    &:hover {
+      background-color: $color-tertiary;
+      color: $color-white;
+    }
+  }
+}
+
+.select {
+  &:after {
+    color: $color-white;
+    top: calc(50% - 0.2rem);
+    right: 1.2rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+    width: 2rem;
+    height: 2rem;
+    background-color: $color-secondary;
+    border-radius: 9999px;
+    pointer-events: none;
+  }
+}
+
+.banner-carousel {
+  .item {
+    width: calc(100% + 3px);
+  }
+  .owl-dots {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+  }
+  .owl-dots .owl-dot {
+    span {
+      background-color: $color-primary;
+      border: 1px solid white;
+      width: 1.3rem;
+      height: 1.3rem;
+    }
+    &.active {
+      span {
+        background-color: $color-secondary;
+        border-color: $color-secondary;
+      }
+    }
+  }
+}
+
+.list {
+  &.primary {
+    ::marker {
+      color: $color-primary;
+    }
+  }
+  &.secondary {
+    ::marker {
+      color: $color-secondary;
+    }
+  }
+  &.tertiary {
+    ::marker {
+      color: $color-primary;
+    }
+  }
+}
+
+.page-banner {
+  min-height: 48rem;
+  @media (min-width: $bp_lg) {
+    min-height: 73rem;
+  }
+}
+
+// Component styling
+.heading-banner,
+.article-full-card {
+  h2,
+  h3 {
+    text-transform: uppercase;
+  }
+  h3 {
+    font-size: 2.1rem;
+  }
+  h2 {
+    font-size: 6.1rem;
+    @media (min-width: $bp_lg) {
+      font-size: 10rem;
+    }
+  }
+  &.primary {
+    background-color: $color-primary;
+    color: $color-white;
+    .button {
+      &:hover {
+        background-color: $color-white;
+        color: $color-primary;
+      }
+    }
+  }
+  &.secondary {
+    background-color: $color-secondary;
+    color: $color-white;
+    .button {
+      &:hover {
+        background-color: $color-white;
+        color: $color-secondary;
+      }
+    }
+  }
+  &.tertiary {
+    background-color: $color-tertiary;
+    color: $color-white;
+    .button {
+      &:hover {
+        background-color: $color-white;
+        color: $color-tertiary;
+      }
+    }
+  }
+  &.light {
+    background-color: $color-light;
+    .button {
+      &:hover {
+        background-color: $color-primary;
+        color: $color-light;
+      }
+    }
+  }
+}
+
+.heading-bar {
+  h3 {
+    text-transform: uppercase;
+    font-size: 2.3rem;
+  }
+
+  &.primary {
+    background-color: $color-primary;
+    color: $color-white;
+  }
+  &.secondary {
+    background-color: $color-secondary;
+    color: $color-white;
+  }
+  &.tertiary {
+    background-color: $color-tertiary;
+    color: $color-white;
+  }
+  &.light {
+    background-color: $color-light;
+  }
+}
+
+.heading,
+.title {
+  &.primary {
+    color: $color-primary;
+  }
+  &.secondary {
+    color: $color-secondary;
+  }
+  &.tertiary {
+    color: $color-tertiary;
+  }
+}
+
+.article-card {
+  h2 {
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  &.primary {
+    h2,
+    .button {
+      color: $color-primary;
+    }
+    .button {
+      &:hover {
+        background-color: $color-primary;
+        color: $color-white;
+      }
+    }
+  }
+  &.secondary {
+    h2,
+    .button {
+      color: $color-secondary;
+    }
+    .button {
+      &:hover {
+        background-color: $color-secondary;
+        color: $color-white;
+      }
+    }
+  }
+  &.tertiary {
+    h2,
+    .button {
+      color: $color-tertiary;
+    }
+    .button {
+      &:hover {
+        background-color: $color-tertiary;
+        color: $color-white;
+      }
+    }
+  }
+}
+
+.article-full-card {
+  h2 {
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    @media (min-width: $bp_lg) {
+      font-size: 6.1rem;
+    }
+  }
+}
+
+.testimonials-card {
+  font-size: 2.1rem;
+  h3 {
+    font-weight: 700;
+    letter-spacing: normal;
+  }
+  &.primary {
+    background-color: $color-primary;
+    color: $color-white;
+  }
+  &.secondary {
+    background-color: $color-secondary;
+    color: $color-white;
+  }
+  &.tertiary {
+    background-color: $color-tertiary;
+    color: $color-white;
+  }
+  &.light {
+    background-color: $color-light;
+  }
+}
+
+.media-card {
+  .card-body {
+    font-size: 1.7rem;
+    h2,
+    .heading {
+      font-size: 2.55rem;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+    h3,
+    .sub-heading {
+      font-size: 2rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    h4 {
+      font-weight: 700;
+    }
+  }
+  .roll-over {
+    transition: all 0.35s 0s ease-out;
+    .title {
+      color: $color-white;
+      font-size: 2.1rem;
+      text-transform: uppercase;
+    }
+    svg {
+      color: $color-primary;
+    }
+  }
+  &.primary {
+    .card-body {
+      h3,
+      h4,
+      .sub-heading {
+        color: $color-primary;
+      }
+    }
+    .roll-over {
+      svg {
+        color: $color-primary;
+      }
+    }
+  }
+  &.secondary {
+    .card-body {
+      h3,
+      h4,
+      .sub-heading {
+        color: $color-secondary;
+      }
+    }
+    .roll-over {
+      svg {
+        color: $color-secondary;
+      }
+    }
+  }
+  &.tertiary {
+    .card-body {
+      h3,
+      h4,
+      .sub-heading {
+        color: $color-tertiary;
+      }
+    }
+    .roll-over {
+      svg {
+        color: $color-tertiary;
+      }
+    }
+  }
+}
+
+.pagination {
+  font-size: 1.6rem;
+  font-weight: 500;
+  > a {
+    text-decoration: none;
+    &:not(:last-child) {
+      border-right-width: 1px;
+      border-right-style: solid;
+    }
+    &.active,
+    &:hover {
+      font-weight: 700;
+    }
+  }
+  &.primary {
+    a {
+      &.active,
+      &:hover {
+        color: $color-primary;
+      }
+      &:not(:last-child) {
+        border-right-color: $color-primary;
+      }
+    }
+  }
+  &.secondary {
+    a {
+      &.active,
+      &:hover {
+        color: $color-secondary;
+      }
+      &:not(:last-child) {
+        border-right-color: $color-secondary;
+      }
+    }
+  }
+  &.tertiary {
+    a {
+      &.active,
+      &:hover {
+        color: $color-tertiary;
+      }
+      &:not(:last-child) {
+        border-right-color: $color-tertiary;
+      }
+    }
+  }
+}
