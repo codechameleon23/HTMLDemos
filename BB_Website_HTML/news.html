@@ -27,7 +27,87 @@
 <script src="js/allScript.js"></script>
 <script type="text/babel" src="js/allComponents.js"></script>
 <script type="text/babel">
-  ReactDOM.render(
+  const newsData = [
+      {
+         content: <div class="flex-col flex-auto">
+            <div class="text-wrap">
+               <h3 class="">NEWS</h3>
+               <h2>NEW AUTUMN HOMEWARE</h2>
+               <p>Que quam pectuam huit; nost que quam pectuam huit; nost que quam pectuam huit; nost.<strong>Read More</strong></p>
+            </div>
+            <footer class="mt-auto pt-20"><h4 class="f-weight-bold ">2 September 2021</h4></footer>
+         </div>,
+         image: "./images/banner-image.png",
+         link: "news-article.html",
+         rollOver: <span>Roll<br />Over</span>,
+      },
+      {
+         content: <div class="flex-col flex-auto">
+            <div class="text-wrap">
+               <h3 class="">events</h3>
+               <h2>christmas gift guide</h2>
+               <p>Que quam pectuam huit; nost que quam pectuam huit; nost que quam pectuam huit; nost. <strong>Read More</strong></p>
+            </div>
+            <footer class="mt-auto pt-20"><h4 class="f-weight-bold ">3 October 2021</h4></footer>
+         </div>,
+         image: "./images/banner-image.png",
+         link: "news-article.html",
+         rollOver: <span>Roll<br />Over</span>,
+      },
+      {
+         content: <div class="flex-col flex-auto">
+            <div class="text-wrap">
+               <h3 class="">press</h3>
+               <h2>new website launching 2022</h2>
+               <p>Que quam pectuam huit; nost que quam pectuam huit; nost que quam pectuam huit; nost. <strong>Read More</strong></p>
+            </div>
+            <footer class="mt-auto pt-20"><h4 class="f-weight-bold ">4 November 2021</h4></footer>
+         </div>,
+         image: "./images/banner-image.png",
+         link: "news-article.html",
+         rollOver: <span>Roll<br />Over</span>,
+      },
+      {
+         content: <div class="flex-col flex-auto">
+            <div class="text-wrap">
+               <h3 class="">NEWS</h3>
+               <h2>ETHICAL POLICY</h2>
+               <p>Que quam pectuam huit; nost que quam pectuam huit; nost que quam pectuam huit; nost. <strong>Read More</strong></p>
+            </div>
+            <footer class="mt-auto pt-20"><h4 class="f-weight-bold ">2 September 2021</h4></footer>
+         </div>,
+         image: "./images/banner-image.png",
+         link: "news-article.html",
+         rollOver: <span>Roll<br />Over</span>,
+      },
+      {
+         content: <div class="flex-col flex-auto">
+            <div class="text-wrap">
+               <h3 class="">events</h3>
+               <h2>NEW WOVEN TRAYS</h2>
+               <p>Que quam pectuam huit; nost que quam pectuam huit; nost que quam pectuam huit; nost. <strong>Read More</strong></p>
+            </div>
+            <footer class="mt-auto pt-20"><h4 class="f-weight-bold ">3 October 2021</h4></footer>
+         </div>,
+         image: "./images/banner-image.png",
+         link: "news-article.html",
+         rollOver: <span>Roll<br />Over</span>,
+      },
+      {
+         content: <div class="flex-col flex-auto">
+            <div class="text-wrap">
+               <h3 class="">press</h3>
+               <h2>GHANA: MEET THE MAKERS</h2>
+               <p>Que quam pectuam huit; nost que quam pectuam huit; nost que quam pectuam huit; nost. <strong>Read More</strong></p>
+            </div>
+            <footer class="mt-auto pt-20"><h4 class="f-weight-bold ">4 November 2021</h4></footer>
+         </div>,
+         image: "./images/banner-image.png",
+         link: "news-article.html",
+         rollOver: <span>Roll<br />Over</span>,
+      },
+   ]
+   ReactDOM.render(
       <>
          <ArticleFullCard theme="secondary" image="./images/banner-image.png" isReversed>
             <div class="text-wrap">
@@ -38,91 +118,36 @@
          </ArticleFullCard>
 
          {/* Three column media card with header and intro */}
+         <section class="pt-65 lg:pt-80">
+            <div class="container sm:container-sm md:container-md lg:container-lg xl:container-xl mx-auto">
+               <ul class="filter-tabs secondary text-center">
+                  <li class="active">All</li>
+                  <li>NEWS</li>
+                  <li>EVENTS</li>
+                  <li>PRESS</li>
+               </ul>
+            </div>
+         </section>
+
          <section class="pt-65 lg:pt-80 pos-relative">
             <div class="container sm:container-sm md:container-md lg:container-lg xl:container-xl mx-auto">
-               <hgroup class="text-wrap mb-40 text-center">
-                  <h2 class="title primary text-upper f-size-32 f-weight-semiBold">HEADER HERE</h2>
-               </hgroup>
                <div class="flex-row flex-wrap -m-30">
-                  <div class="col-12 lg:col-4 flex-col">
-                     <MediaCard theme="secondary" classes="p-20 m-10" image="./images/banner-image.png" rollOver={<span>Roll<br />Over</span>}>
-                        <div class="flex-col flex-auto">
-                           <div class="text-wrap">
-                              <h3 class="">NEWS</h3>
-                              <h2>NEW AUTUMN HOMEWARE</h2>
-                              <p>Que quam pectuam huit; nost que quam pectuam huit; nost que quam pectuam huit; nost.<strong>Read More</strong></p>
-                           </div>
-                           <footer class="mt-auto pt-20"><h4 class="f-weight-bold ">2 September 2021</h4></footer>
+                  {newsData.map((news, index) => {
+                     return (
+                        <div class="col-12 md:col-6 lg:col-4 flex-col">
+                           <MediaCard theme="secondary" link={news.link} classes="p-20 m-10" image={news.image} rollOver={news.rollOver}>
+                              {news.content}
+                           </MediaCard>
                         </div>
-                     </MediaCard>
-                  </div>
-                  <div class="col-12 lg:col-4 flex-col">
-                     <MediaCard theme="secondary" classes="p-20 m-10" image="./images/banner-image.png" rollOver={<span>Roll<br />Over</span>}>
-                        <div class="flex-col flex-auto">
-                           <div class="text-wrap">
-                              <h3 class="">events</h3>
-                              <h2>christmas gift guide</h2>
-                              <p>Que quam pectuam huit; nost que quam pectuam huit; nost que quam pectuam huit; nost. <strong>Read More</strong></p>
-                           </div>
-                           <footer class="mt-auto pt-20"><h4 class="f-weight-bold ">3 October 2021</h4></footer>
-                        </div>
-                     </MediaCard>
-                  </div>
-                  <div class="col-12 lg:col-4 flex-col">
-                     <MediaCard theme="secondary" classes="p-20 m-10" image="./images/banner-image.png" rollOver={<span>Roll<br />Over</span>}>
-                        <div class="flex-col flex-auto">
-                           <div class="text-wrap">
-                              <h3 class="">press</h3>
-                              <h2>new website launching 2022</h2>
-                              <p>Que quam pectuam huit; nost que quam pectuam huit; nost que quam pectuam huit; nost. <strong>Read More</strong></p>
-                           </div>
-                           <footer class="mt-auto pt-20"><h4 class="f-weight-bold ">4 November 2021</h4></footer>
-                        </div>
-                     </MediaCard>
-                  </div>
-                  <div class="col-12 lg:col-4 flex-col">
-                     <MediaCard theme="secondary" classes="p-20 m-10" image="./images/banner-image.png" rollOver={<span>Roll<br />Over</span>}>
-                        <div class="flex-col flex-auto">
-                           <div class="text-wrap">
-                              <h3 class="">NEWS</h3>
-                              <h2>ETHICAL POLICY</h2>
-                              <p>Que quam pectuam huit; nost que quam pectuam huit; nost que quam pectuam huit; nost. <strong>Read More</strong></p>
-                           </div>
-                           <footer class="mt-auto pt-20"><h4 class="f-weight-bold ">2 September 2021</h4></footer>
-                        </div>
-                     </MediaCard>
-                  </div>
-                  <div class="col-12 lg:col-4 flex-col">
-                     <MediaCard theme="secondary" classes="p-20 m-10" image="./images/banner-image.png" rollOver={<span>Roll<br />Over</span>}>
-                        <div class="flex-col flex-auto">
-                           <div class="text-wrap">
-                              <h3 class="">events</h3>
-                              <h2>NEW WOVEN TRAYS</h2>
-                              <p>Que quam pectuam huit; nost que quam pectuam huit; nost que quam pectuam huit; nost. <strong>Read More</strong></p>
-                           </div>
-                           <footer class="mt-auto pt-20"><h4 class="f-weight-bold ">3 October 2021</h4></footer>
-                        </div>
-                     </MediaCard>
-                  </div>
-                  <div class="col-12 lg:col-4 flex-col">
-                     <MediaCard theme="secondary" classes="p-20 m-10" image="./images/banner-image.png" rollOver={<span>Roll<br />Over</span>}>
-                        <div class="flex-col flex-auto">
-                           <div class="text-wrap">
-                              <h3 class="">press</h3>
-                              <h2>GHANA: MEET THE MAKERS</h2>
-                              <p>Que quam pectuam huit; nost que quam pectuam huit; nost que quam pectuam huit; nost. <strong>Read More</strong></p>
-                           </div>
-                           <footer class="mt-auto pt-20"><h4 class="f-weight-bold ">4 November 2021</h4></footer>
-                        </div>
-                     </MediaCard>
-                  </div>
+                     )
+                  })}
                </div>
             </div>
          </section>
 
          <section class="py-65 lg:py-80">
             <div class="container sm:container-sm md:container-md lg:container-lg xl:container-xl mx-auto">
-               <Pagination theme="" />
+               <Pagination theme="secondary" />
             </div>
          </section>
       </>,

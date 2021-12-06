@@ -428,3 +428,49 @@
     }
   }
 }
+
+.filter-tabs {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  li {
+    font-size: 2.1rem;
+    font-weight: 500;
+    padding: 1.5rem;
+    position: relative;
+    cursor: pointer;
+    text-transform: uppercase;
+    display: inline-block;
+
+    &.active,
+    &:hover {
+      font-weight: 700;
+      cursor: default;
+    }
+    &.active {
+      border-bottom-width: 2px;
+      border-bottom-style: solid;
+    }
+  }
+  &.primary {
+    li {
+      &.active {
+        border-bottom-color: $color-primary;
+      }
+    }
+  }
+  &.secondary {
+    li {
+      &.active {
+        border-bottom-color: $color-secondary;
+      }
+    }
+  }
+  &.tertiary {
+    li {
+      &.active {
+        border-bottom-color: $color-tertiary;
+      }
+    }
+  }
+}
