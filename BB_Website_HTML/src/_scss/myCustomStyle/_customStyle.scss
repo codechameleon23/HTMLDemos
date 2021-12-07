@@ -9,6 +9,29 @@
   pointer-events: none;
 }
 
+.diamond-shape {
+  max-height: 47rem;
+}
+
+.link {
+  text-decoration: none;
+  display: inline-block;
+
+  &:hover {
+    font-weight: 600;
+  }
+
+  &.primary {
+    color: $color-primary;
+  }
+  &.secondary {
+    color: $color-secondary;
+  }
+  &.tertiary {
+    color: $color-tertiary;
+  }
+}
+
 .button {
   align-items: center;
   justify-content: center;
@@ -56,6 +79,13 @@
     color: $color-tertiary;
     &:hover {
       background-color: $color-tertiary;
+      color: $color-white;
+    }
+  }
+  &.quaternary {
+    color: $color-quaternary;
+    &:hover {
+      background-color: $color-quaternary;
       color: $color-white;
     }
   }
@@ -138,6 +168,7 @@
 // Component styling
 .heading-banner,
 .article-full-card {
+  h1,
   h2,
   h3 {
     text-transform: uppercase;
@@ -145,10 +176,17 @@
   h3 {
     font-size: 2.1rem;
   }
+  h1,
   h2 {
     font-size: 6.1rem;
-    @media (min-width: $bp_lg) {
-      font-size: 10rem;
+    letter-spacing: 0.65rem;
+  }
+  @media (min-width: $bp_lg) {
+    h2 {
+      font-size: 10.1rem;
+    }
+    h1 {
+      font-size: 11.8rem;
     }
   }
   &.primary {
@@ -181,6 +219,16 @@
       }
     }
   }
+  &.quaternary {
+    background-color: $color-quaternary;
+    color: $color-white;
+    .button {
+      &:hover {
+        background-color: $color-white;
+        color: $color-quaternary;
+      }
+    }
+  }
   &.light {
     background-color: $color-light;
     .button {
@@ -210,6 +258,10 @@
     background-color: $color-tertiary;
     color: $color-white;
   }
+  &.quaternary {
+    background-color: $color-quaternary;
+    color: $color-white;
+  }
   &.light {
     background-color: $color-light;
   }
@@ -225,6 +277,9 @@
   }
   &.tertiary {
     color: $color-tertiary;
+  }
+  &.quaternary {
+    color: $color-quaternary;
   }
 }
 
@@ -270,6 +325,18 @@
       }
     }
   }
+  &.quaternary {
+    h2,
+    .button {
+      color: $color-quaternary;
+    }
+    .button {
+      &:hover {
+        background-color: $color-quaternary;
+        color: $color-white;
+      }
+    }
+  }
 }
 
 .article-full-card {
@@ -301,6 +368,10 @@
     background-color: $color-tertiary;
     color: $color-white;
   }
+  &.quaternary {
+    background-color: $color-quaternary;
+    color: $color-white;
+  }
   &.light {
     background-color: $color-light;
   }
@@ -309,6 +380,11 @@
 .media-card {
   .card-body {
     font-size: 1.7rem;
+    h1 {
+      font-size: 2.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
     h2,
     .heading {
       font-size: 2.55rem;
@@ -338,6 +414,7 @@
   }
   &.primary {
     .card-body {
+      h1,
       h3,
       h4,
       .sub-heading {
@@ -352,6 +429,7 @@
   }
   &.secondary {
     .card-body {
+      h1,
       h3,
       h4,
       .sub-heading {
@@ -366,6 +444,7 @@
   }
   &.tertiary {
     .card-body {
+      h1,
       h3,
       h4,
       .sub-heading {
@@ -375,6 +454,21 @@
     .roll-over {
       svg {
         color: $color-tertiary;
+      }
+    }
+  }
+  &.quaternary {
+    .card-body {
+      h1,
+      h3,
+      h4,
+      .sub-heading {
+        color: $color-quaternary;
+      }
+    }
+    .roll-over {
+      svg {
+        color: $color-quaternary;
       }
     }
   }
@@ -427,6 +521,17 @@
       }
     }
   }
+  &.quaternary {
+    a {
+      &.active,
+      &:hover {
+        color: $color-quaternary;
+      }
+      &:not(:last-child) {
+        border-right-color: $color-quaternary;
+      }
+    }
+  }
 }
 
 .filter-tabs {
@@ -471,6 +576,66 @@
       &.active {
         border-bottom-color: $color-tertiary;
       }
+    }
+  }
+  &.quaternary {
+    li {
+      &.active {
+        border-bottom-color: $color-quaternary;
+      }
+    }
+  }
+}
+
+.article {
+  &-banner {
+    h2 {
+      font-size: 5.3rem;
+      font-weight: 600;
+    }
+    h3 {
+      font-size: 2rem;
+    }
+    h4 {
+      font-size: 1.7rem;
+    }
+    h3,
+    h4 {
+      font-weight: 700;
+    }
+    p {
+      font-size: 2.2rem;
+      font-weight: 500;
+    }
+    &.primary {
+      h3,
+      h4 {
+        color: $color-primary;
+      }
+    }
+    &.secondary {
+      h3,
+      h4 {
+        color: $color-secondary;
+      }
+    }
+    &.tertiary {
+      h3,
+      h4 {
+        color: $color-tertiary;
+      }
+    }
+    &.quaternary {
+      h3,
+      h4 {
+        color: $color-quaternary;
+      }
+    }
+  }
+  &-content {
+    font-size: 1.7rem;
+    img {
+      vertical-align: top;
     }
   }
 }

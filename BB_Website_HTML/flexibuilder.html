@@ -17,24 +17,19 @@
   <meta name="format-detection" content="address=no">
   <meta name="format-detection" content="email=no">
   <link rel="icon" href="./images/favicon.png" />
-  <title>Home | Basket Basket</title>
+  <title>Flexibuilder | Basket Basket</title>
   <link rel="stylesheet" href="./css/styles.css" />
 </head>
 
 <body id="root" class="jsNavbarToggle is-close flex-col">
   <!-- HTML created inside ReactDOM.render -->
 </body>
-<!-- <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
-<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
-<script crossorigin src="https://unpkg.com/react-is@17/umd/react-is.production.min.js"></script>
-<script crossorigin src="https://unpkg.com/styled-components@5.0.0/dist/styled-components.min.js"></script>
-<script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script> -->
 <script src="js/allScript.js"></script>
 <script type="text/babel" src="js/allComponents.js"></script>
 <script type="text/babel">
   const articleData = [
     {
-      image: "./images/banner-image.png",
+      image: "./images/banner-image.jpg",
       content: <div class="text-wrap">
         <h2>three deck header here and here as well as here</h2>
         <p>Alibea solorum as dolestrum quatendusam et ut qui re et molupis magnia nonsend iaspedi taecus re mod ut qui ium quibus dustibus voluptaquas di unducim usaperum, aut rem quisit liquos et, inctus et quibus none pro tet offictectius alit ditem fugitae. Nem sendelenture pratur reicaborae pra apit id quam, to ium excese natiber untiam illa si il ium nat es ut excestrum endictota con parcia vendendiam ex estionesto velluptate nonse doluptiscil imaio blacepr atquid ut latibus</p>
@@ -42,7 +37,7 @@
       </div>
     },
     {
-      image: "./images/banner-image.png",
+      image: "./images/banner-image.jpg",
       content: <div class="text-wrap">
         <h2>three deck header here and here as well as here</h2>
         <p>Alibea solorum as dolestrum quatendusam et ut qui re et molupis magnia nonsend iaspedi taecus re mod ut qui ium quibus dustibus voluptaquas di unducim usaperum, aut rem quisit liquos et, inctus et quibus none pro tet offictectius alit ditem fugitae. Nem sendelenture pratur reicaborae pra apit id quam, to ium excese natiber untiam illa si il ium nat es ut excestrum endictota con parcia vendendiam ex estionesto velluptate nonse doluptiscil imaio blacepr atquid ut latibus</p>
@@ -53,29 +48,93 @@
 
   ReactDOM.render(
     <>
-      {/*Heading Banner*/}
-      <HeadingBanner theme="secondary" classes="mb-65">
+      {/*Heading Banner with bg image*/}
+      <HeadingBanner
+        theme="secondary"
+        classes="py-65 pos-relative mb-65"
+        containerClasses="pos-relative py-65"
+        bgComponent={
+          <figure class="pos-absolute pin flex-col" style={{ backgroundImage: `url(./images/banner-image.jpg)` }}>
+            <div class="h-full w-full bg-center bg-cover bg-primary opacity-25"></div>
+          </figure>
+        }>
+        <>
+          <div class="pos-absolute pin w-full h-full flex-row align-center f-color-tertiary">
+            <DiamondShape classes="pos-absolute pin w-full m-auto" />
+          </div>
+          <div class="text-wrap-xs text-center pos-relative">
+            <h3>FRENCH</h3>
+            <h2>MARKET <br /> baskets</h2>
+            <a href="#" class="button">SHOP NOW</a>
+          </div>
+        </>
+      </HeadingBanner>
+
+      <HeadingBanner
+        theme="secondary"
+        classes="py-65 pos-relative mb-65"
+        containerClasses="pos-relative py-65"
+        bgComponent={
+          <figure class="pos-absolute pin flex-col" style={{ backgroundImage: `url(./images/banner-image.jpg)` }}>
+            <div class="h-full w-full bg-center bg-cover bg-primary opacity-25"></div>
+          </figure>
+        }>
+        <>
+          <div class="pos-absolute pin w-full h-full flex-row align-center f-color-secondary">
+            <DiamondShape classes="pos-absolute pin w-full m-auto" />
+          </div>
+          <div class="text-wrap-xs text-center pos-relative">
+            <h3>Shop</h3>
+            <h2>baskets</h2>
+            <a href="#" class="button">Explore</a>
+          </div>
+        </>
+      </HeadingBanner>
+
+      <HeadingBanner
+        theme="secondary"
+        classes="py-65 pos-relative mb-65"
+        containerClasses="pos-relative py-65"
+        bgComponent={
+          <figure class="pos-absolute pin flex-col" style={{ backgroundImage: `url(./images/banner-image.jpg)` }}>
+            <div class="h-full w-full bg-center bg-cover bg-primary opacity-25"></div>
+          </figure>
+        }>
+        <>
+          <div class="pos-absolute pin w-full h-full flex-row align-center f-color-primary">
+            <DiamondShape classes="pos-absolute pin w-full m-auto" />
+          </div>
+          <div class="text-wrap-xs text-center pos-relative">
+            <h3>Become a</h3>
+            <h1>Stockist</h1>
+            <a href="#" class="button">Get Started</a>
+          </div>
+        </>
+      </HeadingBanner>
+
+      {/*Heading Banner Solid*/}
+      <HeadingBanner theme="secondary" classes="py-65 xl:py-100 mb-65">
         <div class="text-wrap-xs text-center">
           <h3>SHOP</h3>
           <h2>baskets</h2>
           <a href="#" class="button sm">EXPLORE</a>
         </div>
       </HeadingBanner>
-      <HeadingBanner theme="primary" classes="mb-65">
+      <HeadingBanner theme="primary" classes="py-65 xl:py-100 mb-65">
         <div class="text-wrap-xs text-center">
           <h3>SHOP</h3>
           <h2>baskets</h2>
           <a href="#" class="button sm">EXPLORE</a>
         </div>
       </HeadingBanner>
-      <HeadingBanner theme="tertiary" classes="mb-65">
+      <HeadingBanner theme="tertiary" classes="py-65 xl:py-100 mb-65">
         <div class="text-wrap-xs text-center">
           <h3>SHOP</h3>
           <h2>baskets</h2>
           <a href="#" class="button sm">EXPLORE</a>
         </div>
       </HeadingBanner>
-      <HeadingBanner theme="light" classes="mb-65">
+      <HeadingBanner theme="light" classes="py-65 xl:py-100 mb-65">
         <div class="text-wrap-xs text-center">
           <h3>SHOP</h3>
           <h2>baskets</h2>
@@ -117,14 +176,20 @@
       </section>
 
       {/*Article Card*/}
-      {articleData.map((article, index) => {
-        const isEven = index % 2 !== 0;
-        return (
-          <ArticleCard theme="secondary" image={article.image} isReversed={isEven}>
-            {article.content}
-          </ArticleCard>
-        )
-      })}
+      <ArticleCard theme="secondary" image="./images/banner-image.jpg">
+        <div class="text-wrap">
+          <h2>three deck header here and here as well as here</h2>
+          <p>Alibea solorum as dolestrum quatendusam et ut qui re et molupis magnia nonsend iaspedi taecus re mod ut qui ium quibus dustibus voluptaquas di unducim usaperum, aut rem quisit liquos et, inctus et quibus none pro tet offictectius alit ditem fugitae. Nem sendelenture pratur reicaborae pra apit id quam, to ium excese natiber untiam illa si il ium nat es ut excestrum endictota con parcia vendendiam ex estionesto velluptate nonse doluptiscil imaio blacepr atquid ut latibus</p>
+          <a href="#" class="button">read more</a>
+        </div>
+      </ArticleCard>
+      <ArticleCard theme="secondary" image="./images/banner-image.jpg" isReversed>
+        <div class="text-wrap">
+          <h2>three deck header here and here as well as here</h2>
+          <p>Alibea solorum as dolestrum quatendusam et ut qui re et molupis magnia nonsend iaspedi taecus re mod ut qui ium quibus dustibus voluptaquas di unducim usaperum, aut rem quisit liquos et, inctus et quibus none pro tet offictectius alit ditem fugitae. Nem sendelenture pratur reicaborae pra apit id quam, to ium excese natiber untiam illa si il ium nat es ut excestrum endictota con parcia vendendiam ex estionesto velluptate nonse doluptiscil imaio blacepr atquid ut latibus</p>
+          <a href="#" class="button">read more</a>
+        </div>
+      </ArticleCard>
 
       <section class="testimonials-card mt-65 xl:mt-100">
         <TestimonialsCard theme="primary">
@@ -133,13 +198,13 @@
             <h3>JL, Perthshire</h3>
           </div>
         </TestimonialsCard>
-        <TestimonialsCard theme="light" image="./images/banner-image.png">
+        <TestimonialsCard theme="light" image="./images/banner-image.jpg">
           <div class="text-wrap text-center">
             <p>“Just wanted to let you know I am really pleased with the basket. Looks even better than in the picture. Think my granddaughter will enjoy playing shops with it and will use it for collecting vegetables, from the allotment, next summer.”</p>
             <h3>PG, London</h3>
           </div>
         </TestimonialsCard>
-        <TestimonialsCard theme="secondary" image="./images/banner-image.png" isReversed>
+        <TestimonialsCard theme="secondary" image="./images/banner-image.jpg" isReversed>
           <div class="text-wrap text-center">
             <p>“Summer has arrived! My basket was delivered this morning - it’s lovely. It arrived in good condition so the packaging you are using works a treat. Many thanks for the excellent service which I received from you.”</p>
             <h3>PG, London</h3>
@@ -148,7 +213,7 @@
       </section>
 
       {/* header here and here CENTERED */}
-      <section class="testimonials-card mt-65 xl:mt-100">
+      <section class="testimonials-card mt-65 xl:mt-100" >
         <div class="container sm:container-sm md:container-md lg:container-lg xl:container-xl mx-auto">
           <article class="text-wrap text-center">
             <h2 class="title secondary text-upper f-size-32 f-weight-semiBold">CENTERED TITLE BROWN</h2>
@@ -162,7 +227,7 @@
       </section>
 
       {/* header here and here LEFT ALIGNED */}
-      <section class="testimonials-card mt-65 xl:mt-100">
+      <section class="testimonials-card mt-65 xl:mt-100" >
         <div class="container sm:container-sm md:container-md lg:container-lg xl:container-xl mx-auto">
           <article class="text-wrap">
             <h2 class="title secondary text-upper f-size-32 f-weight-semiBold">CENTERED TITLE BROWN</h2>
@@ -176,7 +241,7 @@
       </section>
 
       {/* Two column testimonials */}
-      <section class="testimonials-card light py-65 lg:py-80 mt-65 xl:mt-100">
+      <section class="testimonials-card light py-65 lg:py-80 mt-65 xl:mt-100" >
         <div class="container sm:container-sm md:container-md lg:container-lg xl:container-xl mx-auto">
           <div class="flex-row flex-wrap -m-40">
             <div class="col-12 lg:col-6 p-40">
@@ -196,7 +261,7 @@
       </section>
 
       {/* Two column testimonials */}
-      <section class="testimonials-card primary py-65 lg:py-80 mt-65 xl:mt-100">
+      <section class="testimonials-card primary py-65 lg:py-80 mt-65 xl:mt-100" >
         <div class="container sm:container-sm md:container-md lg:container-lg xl:container-xl mx-auto">
           <div class="flex-row flex-wrap -m-40">
             <div class="col-12 lg:col-6 p-40">
@@ -215,7 +280,7 @@
         </div>
       </section>
 
-      <ArticleFullCard theme="secondary" classes="mt-65 xl:mt-100" image="./images/banner-image.png" isReversed>
+      <ArticleFullCard theme="secondary" classes="mt-65 xl:mt-100" image="./images/banner-image.jpg" isReversed>
         <div class="text-wrap">
           <h2>three deck header here and here as well as here</h2>
           <p>Newly arrived from Morocco. Senihicaedet fica omninatum senihina, vit viri pris maioc, morum es eterunum ponscreisse, nosse, nices obsentem loc, norteri acciam patoris satertil</p>
@@ -224,28 +289,49 @@
       </ArticleFullCard>
 
       {/* Three column media card with header and intro */}
-      <section class="pb-65 lg:pb-80 mt-165 xl:mt-265 pos-relative bg-light">
+      <section class="pb-65 lg:pb-80 mt-165 xl:mt-265 pos-relative bg-light" >
         <div class="container sm:container-sm md:container-md lg:container-lg mx-auto -mt-130">
           <hgroup class="text-wrap mb-40 text-center">
-            <h2 class="title primary text-upper f-size-32 f-weight-semiBold">HEADER HERE</h2>
+            <h2 class="title primary uppercase f-size-32 f-weight-semiBold">HEADER HERE</h2>
           </hgroup>
           <div class="flex-row flex-wrap -mx-20">
             <div class="col-12 lg:col-4">
-              <MediaCard classes="p-20" theme="secondary" image="./images/banner-image.png" rollOver={<span>Roll<br />Over</span>}>
+              <MediaCard classes="p-20" theme="secondary" image="./images/banner-image.jpg" rollOver={<div class="roll-over opacity-child pos-absolute pin h-full w-full">
+                <div class="pos-relative h-full w-full py-65 flex-col">
+                  <DiamondShape />
+                  <div class="pos-absolute pin flex-col justify-center align-center p-40 text-center">
+                    <p class="title pos-relative text-center"><span>Roll<br />Over</span></p>
+                  </div>
+                </div>
+              </div>}>
                 <div class="text-wrap text-center">
                   <h2>Title</h2>
                 </div>
               </MediaCard>
             </div>
             <div class="col-12 lg:col-4">
-              <MediaCard classes="p-20" theme="secondary" image="./images/banner-image.png" rollOver={<span>Roll<br />Over</span>}>
+              <MediaCard classes="p-20" theme="secondary" image="./images/banner-image.jpg" rollOver={<div class="roll-over opacity-child pos-absolute pin h-full w-full">
+                <div class="pos-relative h-full w-full py-65 flex-col">
+                  <DiamondShape />
+                  <div class="pos-absolute pin flex-col justify-center align-center p-40 text-center">
+                    <p class="title pos-relative text-center"><span>Roll<br />Over</span></p>
+                  </div>
+                </div>
+              </div>}>
                 <div class="text-wrap text-center">
                   <h2>Title</h2>
                 </div>
               </MediaCard>
             </div>
             <div class="col-12 lg:col-4">
-              <MediaCard classes="p-20" theme="secondary" image="./images/banner-image.png" rollOver={<span>Roll<br />Over</span>}>
+              <MediaCard classes="p-20" theme="secondary" image="./images/banner-image.jpg" rollOver={<div class="roll-over opacity-child pos-absolute pin h-full w-full">
+                <div class="pos-relative h-full w-full py-65 flex-col">
+                  <DiamondShape />
+                  <div class="pos-absolute pin flex-col justify-center align-center p-40 text-center">
+                    <p class="title pos-relative text-center"><span>Roll<br />Over</span></p>
+                  </div>
+                </div>
+              </div>}>
                 <div class="text-wrap text-center">
                   <h2>Title</h2>
                 </div>

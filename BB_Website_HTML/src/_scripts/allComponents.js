@@ -4,9 +4,23 @@
 
 const Box = styled.div(({ sx }) => ({ ...sx }));
 
-/////
 const SectionDivider = ({ classes }) => {
   return <div className={`mb-40 ${classes}`}></div>;
+};
+
+const DiamondShape = ({ classes }) => {
+  return (
+    <svg
+      class={`diamond-shape h-full ${classes}`}
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 184 184"
+    >
+      <path
+        fill="currentColor"
+        d="M-.063 91.993 91.93 0l91.994 91.993-91.994 91.994z"
+      />
+    </svg>
+  );
 };
 
 const AspectRatioBox = ({ ratio, children, sx, classes }) => {
@@ -26,10 +40,19 @@ const AspectRatioBox = ({ ratio, children, sx, classes }) => {
   );
 };
 
-const HeadingBanner = ({ theme, children, classes }) => {
+const HeadingBanner = ({
+  theme,
+  children,
+  classes,
+  containerClasses,
+  bgComponent,
+}) => {
   return (
-    <section className={`heading-banner py-65 xl:py-100 ${theme} ${classes}`}>
-      <div class="container sm:container-sm md:container-md lg:container-lg xl:container-xl xxl:container-xxl mx-auto">
+    <section className={`heading-banner ${theme} ${classes}`}>
+      {bgComponent}
+      <div
+        className={`container sm:container-sm md:container-md lg:container-lg xl:container-xl xxl:container-xxl mx-auto ${containerClasses}`}
+      >
         {children}
       </div>
     </section>
@@ -53,16 +76,16 @@ const ArticleCard = ({ theme, image, children, classes, isReversed }) => {
         <article
           className={`flex-row ${
             isReversed ? "flex-row-reverse" : ""
-          } flex-wrap align-center pos-relative`}
+          } flex-wrap align-center`}
         >
           <div
-            className={`col-12 lg:col-6 lg:pos-absolute pin-y ${
+            className={`col-12 lg:col-6 ${
               isReversed
                 ? "pin-r pin-l-auto lg:pl-10"
                 : "pin-l pin-r-auto lg:pr-10"
             }`}
           >
-            <div class="ratio ratio-1x1 md:ratio-16x9 lg:ratio-none pos-relative w-full h-full">
+            <div class="ratio ratio-9x7 lg:ratio-1x1 pos-relative w-full h-full">
               <img
                 className="pos-absolute pin object-cover h-full w-full"
                 src={image}
@@ -145,6 +168,7 @@ const TestimonialsCard = ({ theme, image, children, classes, isReversed }) => {
 const MediaCard = ({
   theme,
   image,
+  imageRatio,
   link,
   imageClass,
   children,
@@ -157,33 +181,15 @@ const MediaCard = ({
       className={`media-card ${theme} flex-col ${classes} rollover-wrap opacity-parent-0 hover:opacity-parent-100 hover:bg-white flex-stretch flex-col transition-all no-underline hover:shadow-lg`}
     >
       <figure
-        className={`ratio ratio-1x1 rollover-wrap image-placeholder pos-relative bg-light flex-none ${imageClass}`}
+        className={`ratio ${
+          imageRatio || "ratio-1x1"
+        } image-placeholder pos-relative bg-light flex-none oveflow-hidden ${imageClass}`}
       >
-        <img
-          className="rollover-effect pos-absolute pin object-cover h-full w-full"
-          src={image}
-        />
-        {rollOver ? (
-          <div class="roll-over opacity-child pos-absolute pin flex-col justify-center align-center">
-            <div class="pos-relative p-40">
-              <div class="pos-absolute pin w-full h-full flex-row align-center">
-                <div class="ratio-1x1 w-full">
-                  <svg
-                    class="pos-absolute pin"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 184 184"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M-.063 91.993 91.93 0l91.994 91.993-91.994 91.994z"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <p class="title pos-relative text-center">{rollOver}</p>
-            </div>
-          </div>
-        ) : null}
+        <div
+          class="rollover-effect pos-absolute pin bg-center bg-cover"
+          style={{ backgroundImage: `url(${image})` }}
+        ></div>
+        {rollOver}
       </figure>
       <section className={`card-body pt-20 flex-auto flex-col`}>
         {children}
@@ -192,9 +198,11 @@ const MediaCard = ({
   );
 };
 
-const Pagination = ({theme}) => {
+const Pagination = ({ theme }) => {
   return (
-    <div class={`pagination ${theme} flex-row flex-wrap justify-center mx-auto f-family-secondary`}>
+    <div
+      class={`pagination ${theme} flex-row flex-wrap justify-center mx-auto f-family-secondary`}
+    >
       <a href="#" class="active f-color-red hover:f-color-red px-15">
         <span>1</span>
       </a>

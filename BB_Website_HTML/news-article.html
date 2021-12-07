@@ -17,15 +17,99 @@
   <meta name="format-detection" content="address=no">
   <meta name="format-detection" content="email=no">
   <link rel="icon" href="./images/favicon.png" />
-  <title>404 | Basket Basket</title>
+  <title>News Article | Basket Basket</title>
   <link rel="stylesheet" href="./css/styles.css" />
 </head>
 
-<body class="jsNavbarToggle is-close flex-col">
-  <main class="flex-auto flex-col">
-    <h1>404</h1> <!-- Hero Carousel -->
-  </main>
-  <script src="js/allScript.js"></script>
+<body id="root" class="jsNavbarToggle is-close flex-col">
+  <!-- HTML created inside ReactDOM.render -->
 </body>
+<script src="js/allScript.js"></script>
+<script type="text/babel" src="js/allComponents.js"></script>
+<script type="text/babel">
+  ReactDOM.render(
+      <>
+         <section class="article-banner secondary py-65 lg:py-80 bg-light">
+            <div class="container sm:container-sm md:container-article xl:container-xl mx-auto -mt-20 pb-20">
+               <a class="link" href="news.html">BACK</a>
+            </div>
+            <div class="container sm:container-sm md:container-article mx-auto">
+               <div class="text-wrap">
+                  <h3 class="">NEWS</h3>
+                  <h2>NEW AUTUMN<br /> STOCK</h2>
+                  <h4>September 2021</h4>
+                  <p>Newly arrived from Morocco. Senihicaedet fica omninatum senihina, vit viri pris
+                     maioc, morum es eterunum ponscreisse, nosse, nices obsentem loc, norteri a
+                     cciam patoris Senihicaedet fica omninatum satertil</p>
+               </div>
+            </div>
+         </section>
+         <section class="article-content py-65 lg:py-80">
+            <div class="container sm:container-sm md:container-article mx-auto">
+               <article class="text-wrap">
+                  <p>Ra? Vali teris; enam tuamquit; nequid sentricid inte auconveris atius, quem vatquer icatqua re co pritiae poreheb estesil iendaci ostraequod conteri catilica etissol icurox nul virit.</p>
+                  <p>Pateme itri silicae temus et vestem inessim ustabem vatilis sendam. con tellerore, Cas se octo il hostuit ercepop ortatiam, notio cauci sed dest acio vocusquius fectum aute tes fur ur quam perecericaet ortere quo vignostia? Nihilic ientert iocchil verbissa quodintela con pero ades esimperis etia iam inin dius diesulabus tia? Cuperor supimpoeris. Qua concere quemus constor icaves nero, utere, uri condius testribus co capes maionsu ltusque teremquius cas atqua restil vehebatris centrarter inat orunum recipsed iam iam nos ficaet; nerunum videatilint? Orum inc furnum dictum ad C.</p>
+                  <div class="col-count-1 col-gap-30 ">
+                     <figure class="py-15">
+                        <img src="./images/image_1.jpg" />
+                     </figure>
+                  </div>
+                  <p>Verei conductus cisus hintis ventis pore idem non aut pratam, omnit optese tum quem quidente cae pre publinam que acchili ciamendam poptelicae nonsula ni fuitemnem, quius horteli caedius bone tantes potionfiris, conloculiu sa re teraequa rei cote consunt ebuspio rtemus et atifecur ac ter adhuc re audaciv hosulicaves facepserfex senit. Opimmoruntu conentrei patisquem dees fors aucipiorio clustiusque missil hocaec re nula L. Nihilis sentiam consistod condervidii comniam horum iam co et graecri sediores host re nos erari iam, patum ad si ponfece rcerit, quam intem in sena, consultod noterce mnemus pervidieris. Vationes autelium dium.</p>
+                  <div class="col-count-1 md:col-count-2 col-gap-30 ">
+                     <figure class="py-15">
+                        <img src="./images/image_1.jpg" />
+                     </figure>
+                     <figure class="py-15">
+                        <img src="./images/image_1.jpg" />
+                     </figure>
+                  </div>
+                  <p><b>Palercesil horum octum oponula novis</b><br />Evivide factum clata publicaelia perionsunum publi, paturiceps, vem patuaste fex nesigilicae, C. Tum de revid immores! Utereo actus dit, nonsul vehem contrio cusatur, con terissu lleris egilica no. Mo cone nonsus, dit; nimorum locavere faccia consita nuniusa oc mum menatum se am nonvo, quodiere inatis verta cerum publiqu erumus, C. Ximihil ibunum revir hos et, mortemqua consum nos, quod nonium que egilne conlocc huideesul tumunt? Palercesil horum octum oponula novis. consul viris caediumusul ut dit, mo essatum nem se pribuntio publis orehemunum num teatide poteati ussus, nesum tui public vivenat ordicas traequit? Nam nost fur que mandit.</p>
+                  <div class="col-count-1 md:col-count-3 col-gap-30 ">
+                     <figure class="py-15">
+                        <img src="./images/image_1.jpg" />
+                     </figure>
+                     <figure class="py-15">
+                        <img src="./images/image_1.jpg" />
+                     </figure>
+                     <figure class="py-15">
+                        <img src="./images/image_1.jpg" />
+                     </figure>
+                  </div>
+               </article>
+            </div>
+         </section>
+         <HeadingBanner
+            theme="secondary"
+            classes="py-65 pos-relative"
+            containerClasses="pos-relative py-65"
+            bgComponent={
+               <figure class="pos-absolute pin flex-col" style={{ backgroundImage: `url(./images/banner-image.jpg)` }}>
+                  <div class="h-full w-full bg-center bg-cover bg-primary opacity-25"></div>
+               </figure>
+            }>
+            <>
+               <div class="pos-absolute pin w-full h-full flex-row align-center f-color-secondary">
+                  <svg
+                     class="pos-absolute pin h-full w-full mx-auto"
+                     xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 184 184"
+                  >
+                     <path
+                        fill="currentColor"
+                        d="M-.063 91.993 91.93 0l91.994 91.993-91.994 91.994z"
+                     />
+                  </svg>
+               </div>
+               <div class="text-wrap-xs text-center pos-relative">
+                  <h3>SHOP</h3>
+                  <h2>baskets</h2>
+                  <a href="#" class="button sm">EXPLORE</a>
+               </div>
+            </>
+         </HeadingBanner>
+      </>,
+      document.getElementById('root')
+   );
+</script>
 
 </html>
