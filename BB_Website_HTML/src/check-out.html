@@ -3,14 +3,127 @@
 
 <head>
    @@include('./_includes/_head.html', {
-   "pageName": "404",
+   "pageName": "Checkout Details",
    "description": ""
    })
 </head>
 
 <body class="jsNavbarToggle is-close flex-col">
    <main class="flex-auto flex-col">
-      <h1>404</h1> <!-- Hero Carousel -->
+      <section class="heading-bar py-20 primary mb-40">
+         <div class="container sm:container-sm md:container-md lg:container-lg xl:container-xl xxl:container-xxl mx-auto">
+            <div class="text-wrap-xs text-center">
+               <h3>CHECKOUT DETAILS</h3>
+            </div>
+         </div>
+      </section>
+
+      <section class="pb-80">
+         <div class="container sm:container-sm md:container-md lg:container-lg xl:container-xl mx-auto">
+            <div class="mb-40">
+               <a class="link no-underline" href="product-details.html">BACK</a>
+            </div>
+         </div>
+         <div class="container sm:container-sm md:container-md lg:container-lg xl:container-xl mx-auto">
+            <form class="flex-row flex-wrap -m-20">
+               <section class="col-12 md:col-7 lg:col-8 p-20">
+                  <div class="flex-col -m-20">
+                     <label class="col-12 flex-col p-20">
+                        <h3 class="f-size-19 f-weight-bold f-color-secondary uppercase mb-5">FIRST NAME</h3>
+                        <input type="text" required placeholder="REQUIRED*" name="firstName" class="f-size-16 w-full py-14 px-5 flex-stretch focus:shadow-md transition-all border-b focus:pl-14 ">
+                     </label>
+                     <label class="col-12 flex-col p-20">
+                        <h3 class="f-size-19 f-weight-bold f-color-secondary uppercase mb-5">LAST NAME</h3>
+                        <input type="text" required placeholder="REQUIRED*" name="lastName" class="f-size-16 w-full py-14 px-5 flex-stretch focus:shadow-md transition-all border-b focus:pl-14 ">
+                     </label>
+                     <label class="col-12 flex-col p-20">
+                        <h3 class="f-size-19 f-weight-bold f-color-secondary uppercase mb-5">ADDRESS LINE 1</h3>
+                        <input type="text" placeholder="HOUSE NUMBER OR NAME" name="addressLine1" class="f-size-16 w-full py-14 px-5 flex-stretch focus:shadow-md transition-all border-b focus:pl-14 ">
+                     </label>
+                     <label class="col-12 flex-col p-20">
+                        <h3 class="f-size-19 f-weight-bold f-color-secondary uppercase mb-5">ADDRESS LINE 2</h3>
+                        <input type="text" placeholder="STREET" name="addressLine2" class="f-size-16 w-full py-14 px-5 flex-stretch focus:shadow-md transition-all border-b focus:pl-14 ">
+                     </label>
+                     <label class="col-12 flex-col p-20">
+                        <h3 class="f-size-19 f-weight-bold f-color-secondary uppercase mb-5">TOWN/CITY</h3>
+                        <input type="text" required placeholder="REQUIRED*" name="townCity" class="f-size-16 w-full py-14 px-5 flex-stretch focus:shadow-md transition-all border-b focus:pl-14 ">
+                     </label>
+                     <label class="col-12 flex-col p-20">
+                        <h3 class="f-size-19 f-weight-bold f-color-secondary uppercase mb-5">COUNTY</h3>
+                        <input type="text" required placeholder="REQUIRED*" name="county" class="f-size-16 w-full py-14 px-5 flex-stretch focus:shadow-md transition-all border-b focus:pl-14 ">
+                     </label>
+                     <label class="col-12 flex-col p-20">
+                        <h3 class="f-size-19 f-weight-bold f-color-secondary uppercase mb-5">POSTCODE</h3>
+                        <input type="text" required placeholder="REQUIRED*" name="postcode" class="f-size-16 w-full py-14 px-5 flex-stretch focus:shadow-md transition-all border-b focus:pl-14 ">
+                     </label>
+                     <label class="col-12 flex-col p-20">
+                        <h3 class="f-size-19 f-weight-bold f-color-secondary uppercase mb-5">COUNTRY</h3>
+                        <input type="text" required placeholder="REQUIRED*" name="country" class="f-size-16 w-full py-14 px-5 flex-stretch focus:shadow-md transition-all border-b focus:pl-14 ">
+                     </label>
+                     <label class="col-12 flex-col p-20">
+                        <h3 class="f-size-19 f-weight-bold f-color-secondary uppercase mb-5">MOBILE NUMBER</h3>
+                        <input type="text" required placeholder="REQUIRED*" name="mobileNumber" class="f-size-16 w-full py-14 px-5 flex-stretch focus:shadow-md transition-all border-b focus:pl-14 ">
+                     </label>
+                     <label class="col-12 flex-col p-20">
+                        <h3 class="f-size-19 f-weight-bold f-color-secondary uppercase mb-5">HOME NUMBER</h3>
+                        <input type="text" required placeholder="REQUIRED*" name="homeNumber" class="f-size-16 w-full py-14 px-5 flex-stretch focus:shadow-md transition-all border-b focus:pl-14 ">
+                     </label>
+                  </div>
+               </section>
+               <section class="col-12 md:col-5 lg:col-4 p-20 md:border-l">
+                  <div class="flex-col">
+                     <h3 class="f-size-19 f-weight-bold f-color-secondary uppercase mb-50">ORDER SUMMARY</h3>
+                     <div class="border-t p-20 flex-row justify-space-between uppercase">
+                        <p>DELIVERY</p>
+                        <b>£4.95</b>
+                     </div>
+                     <div class="border-t p-20 flex-row justify-space-between uppercase">
+                        <p>SUB TOTAL</p>
+                        <b>£20</b>
+                     </div>
+                     <div class="border-t p-20 flex-row justify-space-between uppercase">
+                        <p>TOTAL</p>
+                        <b>£24.95</b>
+                     </div>
+                     <div class="border-t py-20 flex-row justify-space-between uppercase">
+                        <button class="button bg-tertiary f-color-white w-full border-transparent f-weight-bold">
+                           <span>GO TO CHECKOUT</span>
+                        </button>
+                     </div>
+                     <h3 class="f-size-19 f-weight-bold f-color-secondary uppercase mb-20">Payment Method</h3>
+                     <div class="pb-20">
+                        <label class="w-auto custom-tick hide-tick secondary f-weight-bold uppercase">
+                           <input name="paymentMethod" type="radio" class="style-radio">
+                           <span class="d-inline-block tick">
+                              <span class="border border-2 rounded-full"></span>
+                           </span><span class="related-text flex-col">
+                              <span class="f-color-inherit">credit card</span>
+                              <div><img src="./images/PastedGraphic-4.png" /></div>
+                           </span>
+                        </label>
+                     </div>
+                     <div class="pb-20">
+                        <label class="w-auto custom-tick hide-tick secondary f-weight-bold uppercase">
+                           <input name="paymentMethod" type="radio" class="style-radio">
+                           <span class="d-inline-block tick">
+                              <span class="border border-2 rounded-full"></span>
+                           </span>
+                           <span class="related-text">
+                              <img class="icon-130" src="./images/PayPal.svg.png" />
+                           </span>
+                        </label>
+                     </div>
+
+                  </div>
+               </section>
+            </form>
+         </div>
+         <div class="container sm:container-sm md:container-md lg:container-lg xl:container-xl mx-auto">
+            <div class="mt-40">
+               <a class="link no-underline" href="product-details.html">BACK</a>
+            </div>
+         </div>
+      </section>
    </main>
    <script src="js/allScript.js"></script>
 </body>
