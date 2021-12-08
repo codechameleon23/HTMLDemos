@@ -48,7 +48,9 @@ const HeadingBanner = ({
   bgComponent,
 }) => {
   return (
-    <section className={`heading-banner ${theme} ${classes}`}>
+    <section
+      className={`heading-banner flex-col justify-center ${theme} ${classes}`}
+    >
       {bgComponent}
       <div
         className={`container sm:container-sm md:container-md lg:container-lg xl:container-xl xxl:container-xxl mx-auto ${containerClasses}`}
@@ -59,10 +61,15 @@ const HeadingBanner = ({
   );
 };
 
-const HeadingBar = ({ theme, children, classes }) => {
+const HeadingBar = ({ theme, children, classes, containerClasses }) => {
   return (
     <section className={`heading-bar py-20 ${theme} ${classes}`}>
-      <div class="container sm:container-sm md:container-md lg:container-lg xl:container-xl xxl:container-xxl mx-auto">
+      <div
+        className={`container ${
+          containerClasses ||
+          "sm:container-sm md:container-md lg:container-lg xl:container-xl xxl:container-xxl"
+        } mx-auto`}
+      >
         {children}
       </div>
     </section>
@@ -71,7 +78,7 @@ const HeadingBar = ({ theme, children, classes }) => {
 
 const ArticleCard = ({ theme, image, children, classes, isReversed }) => {
   return (
-    <section className={`article-card ${theme} mt-65 xl:mt-100 ${classes}`}>
+    <section className={`article-card ${theme} ${classes}`}>
       <div class="container sm:container-sm md:container-md lg:container-lg xl:container-xl mx-auto">
         <article
           className={`flex-row ${
@@ -105,7 +112,14 @@ const ArticleCard = ({ theme, image, children, classes, isReversed }) => {
   );
 };
 
-const ArticleFullCard = ({ theme, image, children, classes, isReversed }) => {
+const ArticleFullCard = ({
+  theme,
+  image,
+  imageChildren,
+  children,
+  classes,
+  isReversed,
+}) => {
   return (
     <section className={`article-full-card ${theme} pos-relative ${classes}`}>
       <div
@@ -113,12 +127,14 @@ const ArticleFullCard = ({ theme, image, children, classes, isReversed }) => {
           isReversed ? "pin-r pin-l-auto" : "pin-l pin-r-auto"
         }`}
       >
-        <div class="ratio ratio-1x1 md:ratio-16x9 lg:ratio-none pos-relative w-full h-full">
-          <img
-            className="pos-absolute pin object-cover h-full w-full"
-            src={image}
-          />
-        </div>
+        {imageChildren || (
+          <div class="ratio ratio-1x1 md:ratio-16x9 lg:ratio-none pos-relative w-full h-full">
+            <img
+              className="pos-absolute pin object-cover h-full w-full"
+              src={image}
+            />
+          </div>
+        )}
       </div>
       <div class="container sm:container-sm md:container-md lg:container-lg xl:container-xl mx-auto">
         <article
@@ -178,12 +194,10 @@ const MediaCard = ({
   return (
     <a
       href={link || "#"}
-      className={`media-card ${theme} flex-col ${classes} rollover-wrap opacity-parent-0 hover:opacity-parent-100 hover:bg-white flex-stretch flex-col transition-all no-underline hover:shadow-lg`}
+      className={`media-card ${theme} flex-col ${classes} hover:bg-white flex-stretch flex-col transition-all no-underline hover:shadow-lg`}
     >
       <figure
-        className={`ratio ${
-          imageRatio || "ratio-1x1"
-        } image-placeholder pos-relative bg-light flex-none oveflow-hidden ${imageClass}`}
+        className={`ratio ${imageRatio} image-placeholder pos-relative bg-light flex-none oveflow-hidden ${imageClass}`}
       >
         <div
           class="rollover-effect pos-absolute pin bg-center bg-cover"
@@ -191,9 +205,11 @@ const MediaCard = ({
         ></div>
         {rollOver}
       </figure>
-      <section className={`card-body pt-20 flex-auto flex-col`}>
-        {children}
-      </section>
+      {children ? (
+        <section className={`card-body pt-20 flex-auto flex-col`}>
+          {children}
+        </section>
+      ) : null}
     </a>
   );
 };

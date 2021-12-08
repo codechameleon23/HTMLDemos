@@ -46,7 +46,7 @@ const PROJECT_JS_LIST = [
   ROOT_JS_PATH+'/react/styled-components.min.js',
   ROOT_JS_PATH+'/react/babel.min.js',
   ROOT_JS_PATH+'/jquery-3.3.1.min.js',
-  // ROOT_JS_PATH+'/magnific.popup.min.js',
+  ROOT_JS_PATH+'/magnific.popup.min.js',
   // ROOT_JS_PATH+'/jquery.popupoverlay.js',
   // ROOT_JS_PATH+'/jquery.mapify.min.js',
   // ROOT_JS_PATH+'/jquery-doubletaptogo.min.js',
@@ -73,7 +73,7 @@ const PROJECT_JS_LIST = [
   SRC_JS_PATH+'/_bannerCarousel.js',
   SRC_JS_PATH+'/_itemCarousel.js',
   // SRC_JS_PATH+'/_popup.js',
-  // SRC_JS_PATH+'/_magnificPopup.js',
+  SRC_JS_PATH+'/_magnificPopup.js',
   SRC_JS_PATH+'/_aos.js',
   // SRC_JS_PATH+'/_accordion.js',
   // SRC_JS_PATH+'/_galleryFilter.js',
@@ -86,6 +86,7 @@ const PROJECT_JS_LIST = [
 
 const COMPONENTS_JS_LIST = [
   SRC_JS_PATH+'/allComponents.js',
+  SRC_JS_PATH+'/react-components.js',
 ]
 
 const PROJECT_PAGES_LIST = [
@@ -98,6 +99,15 @@ const PROJECT_PAGES_LIST = [
   './src/contact-us.html',
   './src/flexibuilder.html',
   './src/all-pages.html',
+  // React pages
+  './src/_react/index_react.html',
+  './src/_react/products_react.html',
+  './src/_react/product-details_react.html',
+  './src/_react/check-out_react.html',
+  './src/_react/news_react.html',
+  './src/_react/news-article_react.html',
+  './src/_react/contact-us_react.html',
+  './src/_react/flexibuilder_react.html',
 ]
 
 function CSS_OPERATION() {

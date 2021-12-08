@@ -8,7 +8,6 @@
       var jsItemCarouselPrv = carouselOuter.find('.jsCarouselPrv');
       var jsItemCarouselNxt = carouselOuter.find('.jsCarouselNxt');
       var isItemCarouselSingle = jsItemCarousel.children().length === 1;
-      console.log('isItemCarouselSingle', isItemCarouselSingle);
       jsItemCarousel.owlCarousel({
         stagePadding: 0,
         items: 1,
@@ -49,7 +48,6 @@
       var jsMultiCardCarouselPrv = carouselOuter.find('.jsCarouselPrv');
       var jsMultiCardCarouselNxt = carouselOuter.find('.jsCarouselNxt');
       var isMultiCardCarouselSingle = jsMultiCardCarousel.children().length === 1;
-      console.log('isMultiCardCarouselSingle', isMultiCardCarouselSingle);
       jsMultiCardCarousel.owlCarousel({
         stagePadding: 0,
         margin: 0,
@@ -73,9 +71,9 @@
           992: {
             items: 3,
           },
-          1024: {
-            items: 4,
-          }
+          // 1024: {
+          //   items: 4,
+          // }
         }
       });
       if(!isMultiCardCarouselSingle){

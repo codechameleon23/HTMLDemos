@@ -14,7 +14,7 @@
 }
 
 .link {
-  text-decoration: none;
+  // text-decoration: none;
   display: inline-block;
 
   &:hover {
@@ -30,6 +30,18 @@
   &.tertiary {
     color: $color-tertiary;
   }
+}
+
+.input, .select {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  // border-width: 1px;
+  // border-color: inherit;
+  // border-style: solid;
+  background-color: $color-white;
+  color: $color-primary;
+  letter-spacing: 0.15rem;
 }
 
 .button {
@@ -50,6 +62,7 @@
   font-weight: 500;
   padding: 1rem 2rem;
   border: 1px solid;
+  color: inherit;
 
   &.sm {
     font-size: 1.4rem;
@@ -59,6 +72,7 @@
   &:hover {
     background-color: $color-white;
     box-shadow: $shadow_lg;
+    color: $color-primary;
   }
 
   &.primary {
@@ -93,7 +107,7 @@
 
 .select {
   &:after {
-    color: $color-white;
+    color: inherit;
     top: calc(50% - 0.2rem);
     right: 1.2rem;
     width: 0.8rem;
@@ -108,7 +122,7 @@
     transform: translate(-50%, -50%);
     width: 2rem;
     height: 2rem;
-    background-color: $color-secondary;
+    // background-color: $color-secondary;
     border-radius: 9999px;
     pointer-events: none;
   }
@@ -125,16 +139,18 @@
     right: 0;
   }
   .owl-dots .owl-dot {
-    span {
-      background-color: $color-primary;
-      border: 1px solid white;
-      width: 1.3rem;
-      height: 1.3rem;
+    &, &:hover {
+      span {
+        background-color: transparent;
+        border: 2px solid white;
+        width: 1.3rem;
+        height: 1.3rem;
+      }
     }
     &.active {
       span {
-        background-color: $color-secondary;
-        border-color: $color-secondary;
+        background-color: $color-white;
+        border-color: $color-white;
       }
     }
   }
@@ -155,6 +171,20 @@
     ::marker {
       color: $color-primary;
     }
+  }
+}
+
+.hero-banner {
+  height: calc(90vh - #{$headerHeight});
+  @media (min-width: $bp_md) {
+   height: calc(90vh - #{$headerHeight_md});
+  }
+  @media (min-width: $bp_lg) {
+    height: auto;
+    max-height: calc(90vh - #{$headerHeight_lg});
+  }
+  @media (min-width: $bp_xl) {
+    max-height: calc(90vh - #{$headerHeight_xl});
   }
 }
 
@@ -182,6 +212,9 @@
     letter-spacing: 0.65rem;
   }
   @media (min-width: $bp_lg) {
+    &-md {
+      min-height: 60rem;
+    }
     h2 {
       font-size: 10.1rem;
     }
@@ -198,6 +231,9 @@
         color: $color-primary;
       }
     }
+    .diamond-shape {
+      color: $color-primary;
+    }
   }
   &.secondary {
     background-color: $color-secondary;
@@ -207,6 +243,9 @@
         background-color: $color-white;
         color: $color-secondary;
       }
+    }
+    .diamond-shape {
+      color: $color-secondary;
     }
   }
   &.tertiary {
@@ -218,6 +257,9 @@
         color: $color-tertiary;
       }
     }
+    .diamond-shape {
+      color: $color-tertiary;
+    }
   }
   &.quaternary {
     background-color: $color-quaternary;
@@ -228,6 +270,9 @@
         color: $color-quaternary;
       }
     }
+    .diamond-shape {
+      color: $color-quaternary;
+    }
   }
   &.light {
     background-color: $color-light;
@@ -236,6 +281,9 @@
         background-color: $color-primary;
         color: $color-light;
       }
+    }
+    .diamond-shape {
+      color: $color-light;
     }
   }
 }
@@ -340,10 +388,13 @@
 }
 
 .article-full-card {
-  h2 {
+  h2,
+  h3 {
     font-size: 3.2rem;
     text-transform: uppercase;
     font-weight: 600;
+  }
+  h2 {
     @media (min-width: $bp_lg) {
       font-size: 6.1rem;
     }
@@ -385,14 +436,12 @@
       font-weight: 600;
       text-transform: uppercase;
     }
-    h2,
-    .heading {
+    h2 {
       font-size: 2.55rem;
       font-weight: 500;
       text-transform: uppercase;
     }
-    h3,
-    .sub-heading {
+    h3 {
       font-size: 2rem;
       font-weight: 700;
       text-transform: uppercase;
@@ -637,5 +686,38 @@
     img {
       vertical-align: top;
     }
+  }
+}
+
+.table {
+  width: 100%;
+  th, td {
+    padding: 15px;
+    border: 1px solid;
+  }
+  th {
+    font-weight: 700;
+  }
+  td {
+    font-weight: 500;
+  }
+  &.primary {
+    background-color: $color-primary;
+    color: $color-white;
+  }
+  &.secondary {
+    background-color: $color-secondary;
+    color: $color-white;
+  }
+  &.tertiary {
+    background-color: $color-tertiary;
+    color: $color-white;
+  }
+  &.quaternary {
+    background-color: $color-quaternary;
+    color: $color-white;
+  }
+  &.light {
+    background-color: $color-light;
   }
 }
