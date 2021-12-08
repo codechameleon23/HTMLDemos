@@ -32,7 +32,8 @@
   }
 }
 
-.input, .select {
+.input,
+.select {
   font-size: 1.6rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -139,7 +140,8 @@
     right: 0;
   }
   .owl-dots .owl-dot {
-    &, &:hover {
+    &,
+    &:hover {
       span {
         background-color: transparent;
         border: 0.3rem solid white;
@@ -177,7 +179,7 @@
 .hero-banner {
   height: calc(90vh - #{$headerHeight});
   @media (min-width: $bp_md) {
-   height: calc(90vh - #{$headerHeight_md});
+    height: calc(90vh - #{$headerHeight_md});
   }
   @media (min-width: $bp_lg) {
     height: auto;
@@ -457,70 +459,70 @@
       font-size: 2.1rem;
       text-transform: uppercase;
     }
-    svg {
-      color: $color-primary;
-    }
+    // svg {
+    //   color: $color-primary;
+    // }
   }
-  &.primary {
-    .card-body {
-      h1,
-      h3,
-      h4,
-      .sub-heading {
-        color: $color-primary;
-      }
-    }
-    .roll-over {
-      svg {
-        color: $color-primary;
-      }
-    }
-  }
-  &.secondary {
-    .card-body {
-      h1,
-      h3,
-      h4,
-      .sub-heading {
-        color: $color-secondary;
-      }
-    }
-    .roll-over {
-      svg {
-        color: $color-secondary;
-      }
-    }
-  }
-  &.tertiary {
-    .card-body {
-      h1,
-      h3,
-      h4,
-      .sub-heading {
-        color: $color-tertiary;
-      }
-    }
-    .roll-over {
-      svg {
-        color: $color-tertiary;
-      }
-    }
-  }
-  &.quaternary {
-    .card-body {
-      h1,
-      h3,
-      h4,
-      .sub-heading {
-        color: $color-quaternary;
-      }
-    }
-    .roll-over {
-      svg {
-        color: $color-quaternary;
-      }
-    }
-  }
+  // &.primary {
+  //   .card-body {
+  //     h1,
+  //     h3,
+  //     h4,
+  //     .sub-heading {
+  //       color: $color-primary;
+  //     }
+  //   }
+  //   .roll-over {
+  //     svg {
+  //       color: $color-primary;
+  //     }
+  //   }
+  // }
+  // &.secondary {
+  //   .card-body {
+  //     h1,
+  //     h3,
+  //     h4,
+  //     .sub-heading {
+  //       color: $color-secondary;
+  //     }
+  //   }
+  //   .roll-over {
+  //     svg {
+  //       color: $color-secondary;
+  //     }
+  //   }
+  // }
+  // &.tertiary {
+  //   .card-body {
+  //     h1,
+  //     h3,
+  //     h4,
+  //     .sub-heading {
+  //       color: $color-tertiary;
+  //     }
+  //   }
+  //   .roll-over {
+  //     svg {
+  //       color: $color-tertiary;
+  //     }
+  //   }
+  // }
+  // &.quaternary {
+  //   .card-body {
+  //     h1,
+  //     h3,
+  //     h4,
+  //     .sub-heading {
+  //       color: $color-quaternary;
+  //     }
+  //   }
+  //   .roll-over {
+  //     svg {
+  //       color: $color-quaternary;
+  //     }
+  //   }
+  // }
 }
 
 .pagination {
@@ -691,7 +693,8 @@
 
 .table {
   width: 100%;
-  th, td {
+  th,
+  td {
     padding: 15px;
     border: 1px solid;
   }
@@ -719,5 +722,72 @@
   }
   &.light {
     background-color: $color-light;
+  }
+}
+
+.product-filter {
+  .custom-tick {
+    &.hide-tick {
+      .tick {
+        display: none;
+      }
+    }
+    &.primary {
+      & > input.style-radio:checked,
+      & > input[type="checkbox"].style-radio:checked,
+      & > input[type="radio"]:checked {
+        & + .tick {
+          &,
+          & + .related-text {
+            color: $color-primary;
+          }
+        }
+      }
+    }
+    &.secondary {
+      & > input.style-radio:checked,
+      & > input[type="checkbox"].style-radio:checked,
+      & > input[type="radio"]:checked {
+        & + .tick {
+          &,
+          & + .related-text {
+            color: $color-secondary;
+          }
+        }
+      }
+    }
+    &.tertiary {
+      & > input.style-radio:checked,
+      & > input[type="checkbox"].style-radio:checked,
+      & > input[type="radio"]:checked {
+        & + .tick {
+          &,
+          & + .related-text {
+            color: $color-tertiary;
+          }
+        }
+      }
+    }
+    &.quaternary {
+      & > input.style-radio:checked,
+      & > input[type="checkbox"].style-radio:checked,
+      & > input[type="radio"]:checked {
+        & + .tick {
+          &,
+          & + .related-text {
+            color: $color-quaternary;
+          }
+        }
+      }
+    }
+  }
+}
+
+.accordion-wrapper .accordion {
+  > .accordion-label > .toggle-sign {
+    transform: rotate(180deg);
+  }
+  &.is-open > .accordion-label > .toggle-sign {
+    transform: rotate(0deg);
   }
 }
