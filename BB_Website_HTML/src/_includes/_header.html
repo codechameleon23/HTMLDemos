@@ -1,57 +1,31 @@
-<header class="header w-full pos-fixed pin-t pin-x pt-15 pb-15 xl:pt-36 xl:pb-20 flex-col z-50 bg-white md:shadow-lg">
+<header class="header w-full pos-fixed pin-t pin-x flex-col z-50 bg-white md:shadow-lg">
    <div class="container lg:container-lg xl:container-xl xxl:container-xxl mx-auto">
-      <div class="flex-row align-center">
-         <a class="brand-logo mr-auto xl:-mt-30" href="index.html">
+      <div class="flex-col justify-center">
+         <a class="brand-logo lg:ml-auto mr-auto my-10" href="index.html">
             <span class="icon icon-logo-sm lg:icon-logo ratio-logo">
                <span>
-                  <img class="w-full h-full object-contain" src="./images/CM_Logo.png">
+                  <img class="w-full h-full object-contain" src="./images/brand-Logo.png">
                </span>
             </span>
          </a>
-         <div class="flex-row flex-wrap align-center justify-end xl:-m-5 pos-absolute pin-x pin-t-100 md:pos-static shadow-lg md:shadow-none">
-            <div class="xl:p-5 col-6 md:col-auto">
-               <a href="#" class="jsRequestValuationPopup_open button secondary custom-secondary auto-width w-full md:w-auto"><span>BOOK A VALUATION</span></a>
-            </div>
-            <div class="xl:p-5 col-6 md:col-auto xl:-mr-20">
-               <a href="#" class="jsSearchPropertyPopup_open button primary custom-primary with-icon auto-width w-full">
-                  <span class="flex-row align-center">
-                     Search Property
-                     <span class="icon icon-30 f-color-inherit ml-8 d-hidden xl:d-inline-block">
-                        <span>
-                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search" viewBox="0 0 24 24">
-                              <circle cx="11" cy="11" r="8"></circle>
-                              <path d="m21 21-4.35-4.35"></path>
-                            </svg>
-                        </span>
-                     </span>
-                  </span>
-               </a>
-            </div>
-            <nav class="
-               navbar 
-               pos-fixed 
-               pin-x 
-               z-30
-               bg-primary 
-               f-size-24
-               f-color-white
-               xl:f-size-15
-               xl:bg-transparent
-               xl:f-color-primary
-               xl:pin-none
-               xl:pos-static
-               xl:col-12
-               xl:p-5
+         <nav class="
+            navbar 
+            pos-fixed 
+            pin-x 
+            z-30
+            lg:pin-none
+            lg:pos-static
+            lg:mx-auto
             ">
-               <div class="container lg:container-lg xl:container-fluid mx-auto">
-                  <div class="flex-col xl:align-end">
-                     <ul class="list-reset flex-col xl:flex-row -mx-15 xl:-mx-10">
-                        <li class="@@if(context.buying){is-active}">
-                           <div class="submenu-trigger nav-link px-15 pt-15 pb-10 xl:px-8 flex-row align-center">
+               <div class="container lg:container-lg lg:container-fluid mx-auto">
+                  <div class="flex-col lg:align-end">
+                     <ul class="list-reset flex-col lg:flex-row -mx-15 lg:-mx-10">
+                        <li class="@@if(context.basket){is-active} px-15 lg:px-8">
+                           <div class="submenu-trigger nav-link pt-15 pb-15 flex-row align-center">
                               <span>
-                                 BUYING
+                                 BASKETS
                               </span>
-                              <span class="icon icon-18 xl:icon-15 ml-8 xl:ml-2 flex-none f-color-secondary">
+                              <span class="icon icon-18 lg:icon-15 ml-8 lg:ml-2 flex-none f-color-secondary">
                                  <span class="down-icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
                                  </span>
@@ -60,9 +34,9 @@
                                  </span>
                               </span>
                            </div>
-                           <div class="submenu pos-fixed pin-x z-40 bg-primary f-color-white">
-                              <div class="container lg:container-lg xl:container-xl xxl:container-xxl mx-auto">
-                                 <div class="p-15 flex-row align-center justify-space-between xl:d-hidden">
+                           <div class="submenu pos-fixed pin-x z-40">
+                              <div class="container lg:container-lg lg:container-xl xxl:container-xxl mx-auto">
+                                 <div class="p-15 flex-row align-center justify-space-between lg:d-hidden">
                                     <button class="back-button uppercase f-color-inherit flex-row align-center">
                                        <span class="icon icon-15 mr-8 flex-none f-color-secondary">
                                           <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="111 237 192 320">
@@ -75,8 +49,8 @@
                                  </div>
                                  <ul class="list-reset flex-col">
                                     <li class="border-b border-light">
-                                       <a href="about.html" class="text-wrap-xs px-20 py-20 xl:py-40">
-                                          <h3 class="f-size-24 xl:f-size-53">Landlords</h3>
+                                       <a href="about.html" class="text-wrap-xs px-20 py-20 lg:py-40">
+                                          <h3 class="f-size-24 lg:f-size-53">Landlords</h3>
                                           <div class="flex-row align-center">
                                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid</p>
                                              <span class="icon icon-10 flex-none ml-8 f-color-secondary">
@@ -86,8 +60,8 @@
                                        </a>
                                     </li>
                                     <li class="border-b border-light">
-                                       <a href="team.html" class="text-wrap-xs px-20 py-20 xl:py-40">
-                                          <h3 class="f-size-24 xl:f-size-53">Properties for rent</h3>
+                                       <a href="team.html" class="text-wrap-xs px-20 py-20 lg:py-40">
+                                          <h3 class="f-size-24 lg:f-size-53">Properties for rent</h3>
                                           <div class="flex-row align-center">
                                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do </p>
                                              <span class="icon icon-10 flex-none ml-8 f-color-secondary">
@@ -97,8 +71,8 @@
                                        </a>
                                     </li>
                                     <li class="border-b border-light">
-                                       <a href="about.html" class="text-wrap-xs px-20 py-20 xl:py-40">
-                                          <h3 class="f-size-24 xl:f-size-53">Tenant Fees</h3>
+                                       <a href="about.html" class="text-wrap-xs px-20 py-20 lg:py-40">
+                                          <h3 class="f-size-24 lg:f-size-53">Tenant Fees</h3>
                                           <div class="flex-row align-center">
                                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
                                              <span class="icon icon-10 flex-none ml-8 f-color-secondary">
@@ -108,8 +82,8 @@
                                        </a>
                                     </li>
                                     <li class="border-b border-light">
-                                       <a href="team.html" class="text-wrap-xs px-20 py-20 xl:py-40">
-                                          <h3 class="f-size-24 xl:f-size-53">Renting Process</h3>
+                                       <a href="team.html" class="text-wrap-xs px-20 py-20 lg:py-40">
+                                          <h3 class="f-size-24 lg:f-size-53">Renting Process</h3>
                                           <div class="flex-row align-center">
                                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ine</p>
                                              <span class="icon icon-10 flex-none ml-8 f-color-secondary">
@@ -122,81 +96,29 @@
                               </div>
                            </div>
                         </li>
-                        <li class="@@if(context.lettings){is-active}">
-                           <div class="submenu-trigger nav-link px-15 pt-15 pb-10 xl:px-8">LETTINGS</div>
+                        <li class="@@if(context.household){is-active} px-15 lg:px-8">
+                           <div class="submenu-trigger nav-link pt-15 pb-15">Household</div>
                         </li>
-                        <li class=" @@if(context.selling){is-active}">
-                           <a class="nav-link px-15 pt-15 pb-10 xl:px-8" href="selling.html">SELLING</a>
+                        <li class=" @@if(context.accessories){is-active} px-15 lg:px-8">
+                           <a class="nav-link pt-15 pb-15" href="selling.html">ACCESSORIES</a>
                         </li>
-                        <li class="@@if(context.about){is-active} @@if(context.team){is-active}">
-                           <div class="submenu-trigger nav-link px-15 pt-15 pb-10 xl:px-8 flex-row align-center">
-                              <span>
-                                 ABOUT US
-                              </span>
-                              <span class="icon icon-18 xl:icon-15 ml-8 xl:ml-2 flex-none f-color-secondary">
-                                 <span class="down-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
-                                 </span>
-                                 <span class="close-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>
-                                 </span>
-                              </span>
-                           </div>
-                           <div class="submenu pos-fixed pin-x z-40 bg-primary f-color-white">
-                              <div class="container lg:container-lg xl:container-xl xxl:container-xxl mx-auto">
-                                 <div class="p-15 flex-row align-center justify-space-between xl:d-hidden">
-                                    <button class="back-button uppercase f-color-inherit flex-row align-center">
-                                       <span class="icon icon-15 mr-8 flex-none f-color-secondary">
-                                          <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="111 237 192 320">
-                                             <path d="M303 269.4L270.7 237 111 397l159.7 160 32.3-32.4L175.7 397z" />
-                                          </svg>
-                                       </span>
-                                       Back
-                                    </button>
-                                    <h3>ABOUT US</h3>
-                                 </div>
-                                 <ul class="list-reset flex-col">
-                                    <li class="border-b border-light @@if(context.about){is-active}">
-                                       <a href="about.html" class="text-wrap-xs px-20 py-20 xl:py-40">
-                                          <h3 class="f-size-24 xl:f-size-53">About us</h3>
-                                          <div class="flex-row align-center">
-                                             <p>The leading estate agency for Salisbury and beyond.. </p>
-                                             <span class="icon icon-10 flex-none ml-8 f-color-secondary">
-                                                <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="111 237 192 320"><path d="M111 269.4l32.3-32.4L303 397 143.3 557 111 524.6 238.3 397z"/></svg>
-                                             </span>
-                                          </div>
-                                       </a>
-                                    </li>
-                                    <li class="border-b border-light @@if(context.team){is-active}">
-                                       <a href="team.html" class="text-wrap-xs px-20 py-20 xl:py-40">
-                                          <h3 class="f-size-24 xl:f-size-53">Our People</h3>
-                                          <div class="flex-row align-center">
-                                             <p>Salisbury’s award winning and number one estate agency.</p>
-                                             <span class="icon icon-10 flex-none ml-8 f-color-secondary">
-                                                <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="111 237 192 320"><path d="M111 269.4l32.3-32.4L303 397 143.3 557 111 524.6 238.3 397z"/></svg>
-                                             </span>
-                                          </div>
-                                       </a>
-                                    </li>
-                                 </ul>
-                              </div>
-                           </div>
+                        <li class=" @@if(context.news){is-active} px-15 lg:px-8">
+                           <a class="nav-link pt-15 pb-15" href="selling.html">news</a>
                         </li>
-                        <li class="@@if(context.localArea){is-active}">
-                           <div class="nav-link px-15 pt-15 pb-10 xl:px-8">LOCAL AREA</div>
+                        <li class="@@if(context.about){is-active} px-15 lg:px-8">
+                           <div class="nav-link pt-15 pb-15">about</div>
                         </li>
-                        <li class="@@if(context.register){is-active}">
-                           <a class="nav-link px-15 pt-15 pb-10 xl:px-8" href="#">REGISTER</a>
+                        <li class="@@if(context.contact){is-active} px-15 lg:px-8">
+                           <a class="nav-link pt-15 pb-15" href="#">contact</a>
                         </li>
-                        <li class="@@if(context.contact){is-active}">
-                           <a class="nav-link px-15 pt-15 pb-10 xl:px-8" href="contact.html">CONTACT</a>
+                        <li class="@@if(context.stockist){is-active} px-15 lg:px-8">
+                           <a class="nav-link pt-15 pb-15" href="#">become a stockist</a>
                         </li>
                      </ul>
                   </div>
                </div>
             </nav>
-         </div>
-         <div class="navbar-toggle f-color-primary d-inline-flex xl:d-hidden z-50 my-8 ml-8">
+         <div class="navbar-toggle f-color-primary d-inline-flex lg:d-hidden z-50 my-8 ml-8">
             <div class="icon hamburger pointer-events-auto transition-all">
                <div class="m-1 lg:m-1_5">
                   <span></span>
