@@ -40,11 +40,11 @@ const SRC_SELECT_JS = SRC_JS_PATH+"/**/*.js";
 const SRC_SELECT_IMG = SRC_IMG_PATH+"/**/*.*";
 
 const PROJECT_JS_LIST = [
-  ROOT_JS_PATH+'/react/react.production.min.js',
-  ROOT_JS_PATH+'/react/react-dom.production.min.js',
-  ROOT_JS_PATH+'/react/react-is.production.min.js',
-  ROOT_JS_PATH+'/react/styled-components.min.js',
-  ROOT_JS_PATH+'/react/babel.min.js',
+  // ROOT_JS_PATH+'/react/react.production.min.js',
+  // ROOT_JS_PATH+'/react/react-dom.production.min.js',
+  // ROOT_JS_PATH+'/react/react-is.production.min.js',
+  // ROOT_JS_PATH+'/react/styled-components.min.js',
+  // ROOT_JS_PATH+'/react/babel.min.js',
   ROOT_JS_PATH+'/jquery-3.3.1.min.js',
   ROOT_JS_PATH+'/magnific.popup.min.js',
   // ROOT_JS_PATH+'/jquery.popupoverlay.js',
@@ -66,7 +66,7 @@ const PROJECT_JS_LIST = [
   SRC_JS_PATH+'/_docReady.js',
   SRC_JS_PATH+'/_hamburgerToggle.js',
   SRC_JS_PATH+'/_subNavToggle.js',
-  // SRC_JS_PATH+'/_searchbarToggle.js',
+  SRC_JS_PATH+'/_searchbarToggle.js',
   // SRC_JS_PATH+'/_submenutoggle.js',
   // SRC_JS_PATH+'/_navbarDoubleTap.js',
   // SRC_JS_PATH+'/_subMenuDropdown.js',
@@ -84,10 +84,10 @@ const PROJECT_JS_LIST = [
   SRC_JS_PATH+'/_iphonePageHack.js',
 ];
 
-const COMPONENTS_JS_LIST = [
-  SRC_JS_PATH+'/allComponents.js',
-  SRC_JS_PATH+'/react-components.js',
-]
+// const COMPONENTS_JS_LIST = [
+//   SRC_JS_PATH+'/allComponents.js',
+//   SRC_JS_PATH+'/react-components.js',
+// ]
 
 const PROJECT_PAGES_LIST = [
   './src/index.html',
@@ -100,14 +100,14 @@ const PROJECT_PAGES_LIST = [
   './src/flexibuilder.html',
   './src/all-pages.html',
   // React pages
-  './src/_react/index_react.html',
-  './src/_react/products_react.html',
-  './src/_react/product-details_react.html',
-  './src/_react/check-out_react.html',
-  './src/_react/news_react.html',
-  './src/_react/news-article_react.html',
-  './src/_react/contact-us_react.html',
-  './src/_react/flexibuilder_react.html',
+  // './src/_react/index_react.html',
+  // './src/_react/products_react.html',
+  // './src/_react/product-details_react.html',
+  // './src/_react/check-out_react.html',
+  // './src/_react/news_react.html',
+  // './src/_react/news-article_react.html',
+  // './src/_react/contact-us_react.html',
+  // './src/_react/flexibuilder_react.html',
 ]
 
 function CSS_OPERATION() {
@@ -173,7 +173,7 @@ function JS_OPERATION() {
   return gulp
   .src(PROJECT_JS_LIST)
   .pipe(concat('allScript.js'))
-  .pipe(gulp.src(COMPONENTS_JS_LIST))
+  // .pipe(gulp.src(COMPONENTS_JS_LIST))
   .pipe(gulp.dest(DEST_JS_PATH))
   .pipe(browserSync.stream())
 }

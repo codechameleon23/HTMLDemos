@@ -61,6 +61,29 @@ button.mfp-arrow {
   }
 }
 
+.search {
+  &-bar {
+    max-height: 0;
+    overflow: hidden;
+    top: $headerHeight;
+    transition: $transition;
+    @media (min-width: $bp_lg) {
+      top: $headerHeight_lg;
+    }
+  }
+}
+.search-is-open {
+  .search {
+    &-toggle {
+      background-color: $color-secondary;
+      color: $color-white;
+    }
+    &-bar {
+      max-height: 10rem;
+    }
+  }
+}
+
 [class*="ratio"]:before {
   display: block;
   width: 100%;
@@ -237,16 +260,16 @@ button.mfp-arrow {
 
 .hero-banner {
   height: calc(90vh - #{$headerHeight});
-  @media (min-width: $bp_md) {
-    height: calc(90vh - #{$headerHeight_md});
-  }
+  // @media (min-width: $bp_md) {
+  //   height: calc(90vh - #{$headerHeight_md});
+  // }
   @media (min-width: $bp_lg) {
     height: auto;
     max-height: calc(90vh - #{$headerHeight_lg});
   }
-  @media (min-width: $bp_xl) {
-    max-height: calc(90vh - #{$headerHeight_xl});
-  }
+  // @media (min-width: $bp_xl) {
+  //   max-height: calc(90vh - #{$headerHeight_xl});
+  // }
 }
 
 .page-banner {

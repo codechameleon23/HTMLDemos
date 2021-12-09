@@ -1,7 +1,5 @@
-$headerHeight: 19.0rem;
-$headerHeight_md: 7.8rem;
-$headerHeight_lg: 8.2rem;
-$headerHeight_xl: 21.0rem;
+$headerHeight: 12.678rem;
+$headerHeight_lg: 20.8rem;
 
 .navbar {
   transition: all .35s 0s ease;
@@ -15,8 +13,8 @@ $headerHeight_xl: 21.0rem;
   }
 
   @media (min-width: $bp_md) {
-    top: $headerHeight_md;
-    height: calc(100vh - #{$headerHeight_md});
+    top: $headerHeight;
+    height: calc(100vh - #{$headerHeight});
   }
   
   @media (min-width: $bp_lg) {
@@ -81,7 +79,7 @@ $headerHeight_xl: 21.0rem;
       @media (min-width: $bp_lg) {
         overflow: auto;
         opacity: 1;
-        height: calc(100vh - #{$headerHeight_xl});
+        height: calc(100vh - #{$headerHeight_lg});
       }
     }
     .submenu-trigger {
@@ -110,8 +108,8 @@ $headerHeight_xl: 21.0rem;
   color: $color-primary;
   
   @media (min-width: $bp_md) {
-    top: $headerHeight_md;
-    height: calc(100vh - #{$headerHeight_md});
+    top: $headerHeight;
+    height: calc(100vh - #{$headerHeight});
   }
 
   @media (min-width: $bp_lg) {
@@ -120,7 +118,7 @@ $headerHeight_xl: 21.0rem;
   }
 
   @media (min-width: $bp_lg) {
-    top: $headerHeight_xl;
+    top: $headerHeight_lg;
     height: 0;
     opacity: 0;
     transform: translateX(0%);
@@ -179,6 +177,10 @@ $headerHeight_xl: 21.0rem;
 
 .jsNavbarToggle {
   &.is-open {
+    .navbar-toggle {
+      background-color: $color-secondary;
+      color: $color-white;
+    }
     .hamburger {
       position: relative;
       top: 0;
@@ -199,26 +201,26 @@ $headerHeight_xl: 21.0rem;
 main {
   margin-top: $headerHeight;
   @media (min-width: $bp_md) {
-   margin-top: $headerHeight_md;
+   margin-top: $headerHeight;
   }
   @media (min-width: $bp_lg) {
    margin-top: $headerHeight_lg;
   }
   @media (min-width: $bp_lg) {
-   margin-top: $headerHeight_xl;
+   margin-top: $headerHeight_lg;
   }
 }
 
 .hero-banner {
   height: calc(90vh - #{$headerHeight});
   @media (min-width: $bp_md) {
-   height: calc(90vh - #{$headerHeight_md});
+   height: calc(90vh - #{$headerHeight});
   }
   @media (min-width: $bp_lg) {
     height: auto;
     max-height: calc(90vh - #{$headerHeight_lg});
   }
   @media (min-width: $bp_lg) {
-    max-height: calc(90vh - #{$headerHeight_xl});
+    max-height: calc(90vh - #{$headerHeight_lg});
   }
 }
