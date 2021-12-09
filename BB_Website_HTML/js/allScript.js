@@ -479,7 +479,6 @@ if ($(".jsItemCarousel").length > 0) {
     setItemCarousel($(this));
   });
 }
-
 //  -------------------------------------------
 //  Multi Card carousel
 //  -------------------------------------------
@@ -498,17 +497,31 @@ if ($(".jsProductCarousel").length > 0) {
     var jsThumbCarousel = null;
     if (isItemCarousel.length > 0) {
       jsItemCarousel = setItemCarousel(isItemCarousel);
+      jsItemCarousel.on("changed.owl.carousel", function (event) {
+        jsThumbCarousel.trigger("to.owl.carousel", [event.item.index]);
+      });
     }
     if (isThumbCarousel.length > 0) {
       jsThumbCarousel = setItemCarousel(isThumbCarousel);
+      var carouselOuter = jsThumbCarousel.closest(".carousel-outer");
+      var jsMultiCardCarouselPrv = carouselOuter.find(".jsCarouselPrv");
+      var jsMultiCardCarouselNxt = carouselOuter.find(".jsCarouselNxt");
       isThumbCarousel.find(".item").on("click", function () {
-        // console.log('$(this).index()', $(this).data());
         jsItemCarousel.trigger("to.owl.carousel", [$(this).data().index]);
       });
+      jsThumbCarousel.on("changed.owl.carousel", function (event) {
+        if (event.item.index === 0) {
+          jsMultiCardCarouselPrv.css({ opacity: "0.5", PointerEvent: "none" });
+        } else {
+          jsMultiCardCarouselPrv.css({ opacity: "1", PointerEvent: "all" });
+        }
+        if (event.item.count - event.item.index === event.page.size) {
+          jsMultiCardCarouselNxt.css({ opacity: "0.5", PointerEvent: "none" });
+        } else {
+          jsMultiCardCarouselNxt.css({ opacity: "1", PointerEvent: "all" });
+        }
+      });
     }
-    jsThumbCarousel.on("changed.owl.carousel", function (event) {
-      console.log("event.item.index", event.item.index);
-    });
   });
 }
 
@@ -581,13 +594,10 @@ function setMultiCardCarousel(elm) {
         items: 3,
       },
     },
-    // initialized: function (event) {
-    //   console.log("ggggggggggggggggggg", event.page.count);
-    // },
   };
   var settings = Object.assign(defaultSettings, dataSettings);
+
   var carousel = jsMultiCardCarousel.owlCarousel(settings);
-  // console.log("carousel", carousel);
   if (!isMultiCardCarouselSingle) {
     if (jsMultiCardCarouselPrv) {
       jsMultiCardCarouselPrv.on("click", function () {
