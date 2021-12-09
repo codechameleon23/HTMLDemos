@@ -1,7 +1,7 @@
-$headerHeight: 11.96rem;
+$headerHeight: 19.0rem;
 $headerHeight_md: 7.8rem;
 $headerHeight_lg: 8.2rem;
-$headerHeight_xl: 15.8rem;
+$headerHeight_xl: 21.0rem;
 
 .navbar {
   transition: all .35s 0s ease;
@@ -44,7 +44,7 @@ $headerHeight_xl: 15.8rem;
     letter-spacing: 0.07em;
 
     .nav-link {
-      border-bottom: .1rem solid;
+      border-bottom: .4rem solid;
       border-bottom-color: transparent;
       transition: all .45s 0s ease-in-out;
     }
@@ -52,7 +52,6 @@ $headerHeight_xl: 15.8rem;
     &:hover, &.is-active, &.is-open {
       color: $color-secondary;
       .nav-link {
-        border-bottom-width: .4rem;
         border-bottom-color: $color-secondary;
       }
     }
@@ -108,6 +107,7 @@ $headerHeight_xl: 15.8rem;
   transform: translateX(100%);
   height: calc(100vh - #{$headerHeight});
   transition: all .35s 0s ease;
+  color: $color-primary;
   
   @media (min-width: $bp_md) {
     top: $headerHeight_md;
@@ -126,9 +126,9 @@ $headerHeight_xl: 15.8rem;
     transform: translateX(0%);
   }
 
-  > .container {
-    padding-top: 4rem;
-  }
+  // > .container {
+  //   padding-top: 4rem;
+  // }
 
   ul > li {
     border-bottom-color: $color-text;
