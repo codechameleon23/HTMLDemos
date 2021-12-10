@@ -92,7 +92,6 @@ $(document).ready(function () {
     var isBackClicked = elm.hasClass('back-button');
     var ulParent = elm.closest('ul');
     var liParent = elm.closest('li');
-    console.log('isBackClicked', isBackClicked);
     if(liParent.hasClass('is-open') || isBackClicked){
       ulParent.children('li').removeClass('is-open');
     }else{
