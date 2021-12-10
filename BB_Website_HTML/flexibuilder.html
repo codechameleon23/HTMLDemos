@@ -22,6 +22,227 @@
 </head>
 
 <body class="jsNavbarToggle is-close flex-col">
+  <!-- Header -->
+  <header class="header w-full pos-fixed pin-t pin-x flex-col pt-40 z-50 bg-white md:shadow-lg">
+    <div class="container lg:container-fluid mx-auto">
+      <div class="flex-row lg:flex-col align-start justify-center">
+        <a class="brand-logo mb-30 lg:ml-auto mr-auto" href="index.html">
+          <span class="icon icon-logo-sm lg:icon-logo ratio-logo">
+            <span>
+              <img class="w-full h-full object-contain" src="./images/brand-logo.png">
+            </span>
+          </span>
+        </a>
+        <div class="flex-row align-center justify-space-between lg:pos-fixed pin-x pin-t lg:w-full lg:p-10 lg:px-20 lg:f-size-16">
+          <div class="d-hidden lg:d-inline-block flex-row align-center">
+            <a class="no-underline hover:f-color-secondary" href="mailto:sales@basketbasket.co.uk">sales@basketbasket.co.uk</a>
+            <span class="f-color-secondary px-10">|</span>
+            <a class="no-underline hover:f-color-secondary" href="tel:01420 85112">01420 85112</a>
+          </div>
+          <div class="flex-row align-center">
+            <button class="p-10 ml-20 lg:ml-0 search-toggle f-color-inherit hover:bg-secondary hover:f-color-white flex-row align-center">
+              <i class="icon lg:icon-18 flex-col justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search" viewBox="0 0 24 24">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <path d="m21 21-4.35-4.35"></path>
+                </svg>
+              </i>
+              <span class="d-hidden lg:d-inline-block pl-10">Search</span>
+            </button>
+            <span class="f-color-secondary d-hidden lg:d-inline-block">|</span>
+            <button class="p-10 ml-20 lg:ml-0 f-color-inherit hover:bg-secondary hover:f-color-white flex-row align-center d-hidden lg:d-inline-block">
+              <span class="px-10 f-weight-medium">Stockist Login</span>
+            </button>
+            <span class="f-color-secondary d-hidden lg:d-inline-block">|</span>
+            <a href="check-out.html" class="p-10 ml-20 lg:ml-0 f-color-inherit d-inline-block hover:bg-secondary hover:f-color-white pos-relative">
+              <i class="icon lg:icon-18 flex-col justify-center">
+                <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.7 30.5">
+                  <path d="M28.1 28.7h-4L26 13.6h4.8l-2.7 15.1zM5 13.6h4.2l1.7 15.1H7.7L5 13.6zm7.7 15.1L11 13.6h5.5v15.1h-3.8zm5.7 0V13.6h5.7l-1.9 15.1h-3.8zm9.3-16.9L23.4.6c-.2-.5-.7-.7-1.2-.5-.5.2-.7.7-.5 1.2l4 10.6h-16l4.2-10.3c.2-.5 0-1-.5-1.2-.5-.2-1 0-1.2.5l-4.4 11H.9c-.5 0-.9.4-.9.9s.4.9.9.9h2.2l3 16.2c.1.4.5.7.9.7h21.9c.4 0 .8-.3.9-.8l2.8-16.2h2.3c.5 0 .9-.4.9-.9s-.4-.9-.9-.9h-7.2z" />
+                </svg>
+              </i>
+              <span class="icon icon-18 rounded-full bg-secondary pos-absolute pin-t pin-r -mt-2 -mr-2 f-color-white f-size-10 border shadow-md">
+                <b>10</b>
+              </span>
+            </a>
+            <div class="navbar-toggle p-10 ml-20 lg:ml-0 d-inline-flex lg:d-hidden z-50 hover:bg-secondary hover:f-color-white">
+              <i class="icon hamburger pointer-events-auto">
+                <div>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </i>
+            </div>
+          </div>
+        </div>
+        <nav class="navbar pos-fixed pin-x z-30 f-size-16 bg-white lg:pin-none lg:pos-static lg:mx-auto">
+          <div class="container lg:container-fluid mx-auto pt-15 pb-15 lg:pt-0 lg:pb-0">
+            <div class="flex-col lg:align-end">
+              <ul class="list-reset flex-col lg:flex-row -mx-15 lg:-mx-10 pos-relative">
+                <li class="px-15">
+                  <div class="submenu-trigger nav-link py-10 px-10 lg:px-0 flex-row align-center">
+                    <span>
+                      BASKETS
+                    </span>
+                    <span class="icon icon-18 lg:icon-15 ml-8 lg:ml-2 flex-none f-color-secondary">
+                      <span class="down-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down" viewBox="0 0 24 24">
+                          <path d="m6 9 6 6 6-6" />
+                        </svg>
+                      </span>
+                      <span class="close-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x" viewBox="0 0 24 24">
+                          <path d="M18 6 6 18M6 6l12 12" />
+                        </svg>
+                      </span>
+                    </span>
+                  </div>
+                  <!-- Submenu -->
+                  <div class="submenu pos-fixed pin-x pin-t pin-b z-40">
+                    <div class="container lg:container-lg mx-auto bg-white h-full lg:h-auto pt-15 pb-15 lg:shadow-lg">
+                      <div class="p-10 flex-row align-center justify-space-between lg:d-hidden">
+                        <button class="back-button uppercase f-color-inherit flex-row align-center f-weight-bold">
+                          <span class="icon icon-15 mr-8 flex-none f-color-secondary">
+                            <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="111 237 192 320">
+                              <path d="M303 269.4L270.7 237 111 397l159.7 160 32.3-32.4L175.7 397z" />
+                            </svg>
+                          </span>
+                          BASKETS
+                        </button>
+                      </div>
+                      <div class="flex-row">
+                        <div class="col-12 lg:col-4">
+                          <ul class="list-reset flex-col px-10">
+                            <li class="px-15">
+                              <a href="#" class="flex-row justify-space-between px-10 py-10 uppercase f-weight-medium lg:f-weight-bold">
+                                <span>Morocco</span>
+                              </a>
+                            </li>
+                            <li class="px-15">
+                              <a href="#" class="flex-row justify-space-between px-10 py-10 uppercase f-weight-medium lg:f-weight-bold">
+                                <span>Madagascar</span>
+                              </a>
+                            </li>
+                            <li class="px-15">
+                              <a href="#" class="flex-row justify-space-between px-10 py-10 uppercase f-weight-medium lg:f-weight-bold">
+                                <span>Ghana</span>
+                              </a>
+                            </li>
+                            <li class="px-15">
+                              <a href="#" class="flex-row justify-space-between px-10 py-10 uppercase f-weight-medium lg:f-weight-bold">
+                                <span>Shopping BasketS</span>
+                              </a>
+                            </li>
+                            <li class="px-15">
+                              <a href="#" class="flex-row justify-space-between px-10 py-10 uppercase f-weight-medium lg:f-weight-bold">
+                                <span>Beach BasketS</span>
+                              </a>
+                            </li>
+                            <li class="px-15">
+                              <a href="#" class="flex-row justify-space-between px-10 py-10 uppercase f-weight-medium lg:f-weight-bold">
+                                <span>Children’s</span>
+                              </a>
+                            </li>
+                            <li class="px-15">
+                              <a href="#" class="flex-row justify-space-between px-10 py-10 uppercase f-weight-medium lg:f-weight-bold">
+                                <span>Vegan</span>
+                              </a>
+                            </li>
+                            <li class="px-15">
+                              <a href="#" class="flex-row justify-space-between px-10 py-10 uppercase f-weight-medium lg:f-weight-bold">
+                                <span>SALE</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col-12 lg:col-8 d-hidden lg:d-inline-block">
+                          <ul class="list-reset flex-row">
+                            <li class="col-6 px-15">
+                              <a href="products.html" class="media-card w-full flex-col pb-10 rollover-wrap opacity-parent-0 hover:opacity-parent-100 hover:bg-white flex-stretch flex-col transition-all no-underline">
+                                <figure class="ratio ratio-1x1 image-placeholder pos-relative bg-light flex-none oveflow-hidden">
+                                  <div class="rollover-effect pos-absolute pin bg-center bg-contain bg-center" style="background-image: url('./images/images-2.png');"></div>
+                                </figure>
+                                <section class="card-body pt-20 flex-auto flex-col">
+                                  <div class="text-wrap f-weight-bold f-size-18 uppercase">
+                                    <p>GIFTS FEATURE</p>
+                                  </div>
+                                </section>
+                              </a>
+                            </li>
+                            <li class="col-6 px-15">
+                              <a href="products.html" class="media-card w-full flex-col pb-10 rollover-wrap opacity-parent-0 hover:opacity-parent-100 hover:bg-white flex-stretch flex-col transition-all no-underline">
+                                <figure class="ratio ratio-1x1 image-placeholder pos-relative bg-light flex-none oveflow-hidden">
+                                  <div class="rollover-effect pos-absolute pin bg-center bg-contain bg-center" style="background-image: url('./images/images-2.png');"></div>
+                                </figure>
+                                <section class="card-body pt-20 flex-auto flex-col">
+                                  <div class="text-wrap f-weight-bold f-size-18 uppercase">
+                                    <p>bEST SELLERS</p>
+                                  </div>
+                                </section>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="px-15">
+                  <a class="nav-link py-10 px-10 lg:px-0" href="#">Household</a>
+                </li>
+                <li class="px-15">
+                  <a class="nav-link py-10 px-10 lg:px-0" href="#">ACCESSORIES</a>
+                </li>
+                <li class="px-15">
+                  <a class="nav-link py-10 px-10 lg:px-0" href="news.html">news</a>
+                </li>
+                <li class="px-15">
+                  <a class="nav-link py-10 px-10 lg:px-0" href="#">About</a>
+                </li>
+                <li class="px-15">
+                  <a class="nav-link py-10 px-10 lg:px-0" href="contact-us.html">contact</a>
+                </li>
+                <li class="px-15">
+                  <a class="nav-link py-10 px-10 lg:px-0" href="#">become a stockist</a>
+                </li>
+              </ul>
+              <div class="lg:d-hidden">
+                <div class="border-b border-grey my-20"></div>
+                <ul class="list-reset flex-col lg:flex-row -mx-15 lg:-mx-10 pos-relative">
+                  <li class="px-15">
+                    <a class="px-10 py-10 f-color-secondary f-size-28 uppercase" href="#">Stockist Login</a>
+                  </li>
+                  <li class="px-15">
+                    <a class="px-10 py-10 f-color-secondary f-size-28 uppercase" href="contact-us.html">CONTACT US</a>
+                  </li>
+                  <li class="px-15">
+                    <a class="px-10 py-10 f-size-28" href="mailto:sales@basketbasket.co.uk">sales@basketbasket.co.uk</a>
+                  </li>
+                  <li class="px-15">
+                    <a class="px-10 py-10 f-size-28" href="tel:01420 85112">01420 85112</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <section class="w-full search-bar pos-fixed">
+    <form class="w-full flex-row shadow-inner bg-light">
+      <input type="text" placeholder="Search..." name="search" class="flex-auto p-20 flex-stretch focus:shadow-md transition-all" />
+      <button class="p-10 flex-none hover:bg-secondary hover:f-color-white">
+        <i class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
+          </svg>
+        </i>
+      </button>
+    </form>
+  </section>
   <main class="flex-auto flex-col">
     <section class="py-65">
       <div class="container sm:container-sm md:container-md lg:container-lg xl:container-xl mx-auto">
@@ -581,8 +802,9 @@
       </div>
     </section>
     <section class="mt-65 lg:mt-80 pos-relative bg-light">
-      <div class="js_media_Gallery_Popup"><a href="https://www.youtube.com/embed/ZL97w2nKMME" class="media-card undefined flex-col has-video rollover-wrap opacity-parent-75 hover:opacity-parent-100 hover:bg-white flex-stretch flex-col transition-all no-underline hover:shadow-lg">
-          <figure class="ratio ratio-5x2 image-placeholder pos-relative bg-light flex-none oveflow-hidden undefined">
+      <div class="js_media_Gallery_Popup">
+        <a href="https://www.youtube.com/embed/ZL97w2nKMME" class="media-card undefined flex-col has-video rollover-wrap opacity-parent-75 hover:opacity-parent-100 hover:bg-white flex-stretch flex-col transition-all no-underline hover:shadow-lg">
+          <figure class="ratio ratio-16x9 lg:ratio-5x2 image-placeholder pos-relative bg-light flex-none oveflow-hidden undefined">
             <div class="rollover-effect pos-absolute pin bg-center bg-cover" style="background-image: url(&quot;./images/banner-image.jpg&quot;);"></div>
             <div class="opacity-child pos-absolute pin h-full w-full flex-col justify-center align-center"><span class="play-button icon icon-80 rounded-full f-color-light hover:f-color-red shadow-md"><svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 98">
                   <path d="M79.9 45.5c-.2 2.6-.3 5.2-.6 7.8-1.3 9.9-2 21.1-13.4 24.4-13 3.7-26.8 5.8-38-5.8-3.2-3.4-6.3-6.9-10.5-11.4 2.3-17.9 9.8-32.6 27.6-40.3 20.7-8.8 36.9 2.9 34.9 25.3M51 .8c-8.3 1.7-16.2 6.8-23.6 11.4C9.8 23 5.8 42 .8 59.9c-3.1 11.3 3.1 22.1 11.9 27 18 9.9 37.7 14.7 58.6 8.2 9.1-2.8 15.9-8.3 18.9-17.2 3.8-11.2 6.6-22.7 9.8-34.1-.6-26.7-23.8-48.2-49-43" class="st0"></path>
@@ -590,17 +812,27 @@
                   <path fill="#fff" d="M50.2 59.9 69 46.5 44.2 28.9v35.3z"></path>
                 </svg></span></div>
           </figure>
-        </a></div>
+        </a>
+      </div>
     </section>
     <section class="article-full-card pos-relative mt-65 lg:mt-80 bg-light">
       <div class="col-12 lg:col-6 lg:pos-absolute pin-y pin-l pin-r-auto">
-        <div class="ratio ratio-1x1 md:ratio-16x9 lg:ratio-none pos-relative w-full h-full"><img class="pos-absolute pin object-cover h-full w-full" src="./images/banner-image.jpg"></div>
+        <a href="https://www.youtube.com/embed/ZL97w2nKMME" class="media-card flex-col has-video rollover-wrap opacity-parent-75 hover:opacity-parent-100 hover:bg-white flex-col transition-all no-underline h-full w-full">
+          <figure class="ratio ratio-16x9 lg:ratio-none image-placeholder pos-relative bg-light flex-none oveflow-hidden w-full h-full">
+            <div class="rollover-effect pos-absolute pin bg-center bg-cover" style="background-image: url(&quot;./images/banner-image.jpg&quot;);"></div>
+            <div class="opacity-child pos-absolute pin h-full w-full flex-col justify-center align-center"><span class="play-button icon icon-80 rounded-full f-color-light hover:f-color-red shadow-md"><svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 98">
+                  <path d="M79.9 45.5c-.2 2.6-.3 5.2-.6 7.8-1.3 9.9-2 21.1-13.4 24.4-13 3.7-26.8 5.8-38-5.8-3.2-3.4-6.3-6.9-10.5-11.4 2.3-17.9 9.8-32.6 27.6-40.3 20.7-8.8 36.9 2.9 34.9 25.3M51 .8c-8.3 1.7-16.2 6.8-23.6 11.4C9.8 23 5.8 42 .8 59.9c-3.1 11.3 3.1 22.1 11.9 27 18 9.9 37.7 14.7 58.6 8.2 9.1-2.8 15.9-8.3 18.9-17.2 3.8-11.2 6.6-22.7 9.8-34.1-.6-26.7-23.8-48.2-49-43" class="st0"></path>
+                  <path d="M50 90.5c21.2 0 38.5-17.2 38.5-38.5 0-21.2-17.2-38.5-38.5-38.5S11.5 30.8 11.5 52 28.8 90.5 50 90.5" class="st0"></path>
+                  <path fill="#fff" d="M50.2 59.9 69 46.5 44.2 28.9v35.3z"></path>
+                </svg></span></div>
+          </figure>
+        </a>
       </div>
       <div class="container sm:container-sm md:container-md lg:container-lg xl:container-xl mx-auto">
         <article class="col-12 lg:col-6 lg:pl-54 lg:ml-auto py-40 lg:py-80">
           <div class="text-wrap">
             <h3 class="f-color-secondary">Sentus, sed pecto elinpratimiu quissulvis etL</h3>
-            <p>Tum, ficaudela potili, con periame atuiu me coente, con di firterartem es sussoltum horbist inaris aus, firmact orenit ret que iaequitus acie it. Solicerecret videnena, dit, vas contra iam</p><a href="https://www.youtube.com/embed/ZL97w2nKMME" class="has-video secondary button">PLAY VIDEO</a>
+            <p>Tum, ficaudela potili, con periame atuiu me coente, con di firterartem es sussoltum horbist inaris aus, firmact orenit ret que iaequitus acie it. Solicerecret videnena, dit, vas contra iam</p><a href="https://www.youtube.com/embed/ZL97w2nKMME" class="has-video secondary button border">PLAY VIDEO</a>
           </div>
         </article>
       </div>
