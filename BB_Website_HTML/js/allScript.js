@@ -80,14 +80,6 @@ $(document).ready(function () {
       },225)
    }
 
-   // $(window).on('scroll', function () {
-   //    navBarClose();
-   // });
-
-   $(window).on('resize', function () {
-      navBarClose();
-   });
-
    $(".hamburger").on("click", function () {
       var jsNavbar = $(".jsNavbarToggle");
       jsNavbar.addClass("nav-transition");
@@ -97,6 +89,15 @@ $(document).ready(function () {
          navBarOpen();
       }
    });
+
+   // $(window).on('scroll', function () {
+   //    searchBarClose();
+   // });
+
+   $(window).on('resize', function () {
+      navBarClose();
+   });
+
 
 //  -------------------------------------------
 //  Submenu toggle
