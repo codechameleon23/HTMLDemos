@@ -56349,10 +56349,26 @@ button.mfp-arrow-right::after
     color: inherit;
 }
 
+.custom-select-styled:after
+{
+    -webkit-transition: all .35s 0s ease-out;
+            transition: all .35s 0s ease-out; 
+    -webkit-transform-origin: center;
+        -ms-transform-origin: center;
+            transform-origin: center;
+}
+
 .custom-select-styled:active,
 .custom-select-styled.active
 {
     box-shadow: 0 4px 6px -1px rgba(92, 51, 40, .45), 0 2px 4px -1px rgba(92, 51, 40, .06);
+}
+.custom-select-styled:active:after,
+.custom-select-styled.active:after
+{
+    -webkit-transform: rotate(-225deg);
+        -ms-transform: rotate(-225deg);
+            transform: rotate(-225deg);
 }
 
 .custom-select-options

@@ -919,15 +919,18 @@ button.mfp-arrow {
     height: auto;
   }
   &-styled {
+    &:after {
+      transform-origin: center;
+      transition: $transition;
+    }
     &:hover {
       // background-color: $color-light;
     }
     &:active, &.active {
       box-shadow: $shadow_md;
-      // &:after {
-      //   top: 9px;
-      //   border-color: transparent transparent $color-white transparent;
-      // }
+      &:after {
+        transform: rotate(-225deg);
+      }
     }
   }
   &-options {
