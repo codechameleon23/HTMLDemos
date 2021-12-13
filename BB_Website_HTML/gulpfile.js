@@ -59,6 +59,8 @@ const PROJECT_JS_LIST = [
   // ROOT_JS_PATH+'/feather.min.js',
   // ROOT_JS_PATH+'/moment.min.js',
   // ROOT_JS_PATH+'/jquery.inview.js',
+  ROOT_JS_PATH+'/light-slider.min.js',
+  ROOT_JS_PATH+'/photo-swipe.min.js',
 
   SRC_JS_PATH+'/_commonFunc.js',
   // SRC_JS_PATH+'/_snazzymaps.color.styles.js',
@@ -81,6 +83,7 @@ const PROJECT_JS_LIST = [
   // SRC_JS_PATH+'/_inView.js',
   // SRC_JS_PATH+'/_myScript.js',
   SRC_JS_PATH+'/_docReadyEnds.js',
+  SRC_JS_PATH+'/_productSlider.js',
   SRC_JS_PATH+'/_iphonePageHack.js',
 ];
 

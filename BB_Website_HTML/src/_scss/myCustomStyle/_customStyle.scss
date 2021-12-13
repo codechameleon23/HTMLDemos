@@ -869,3 +869,34 @@ button.mfp-arrow {
     box-shadow: $shadow_md;
   }
 }
+
+.imageGallery-wrapper {
+  .imageGallery li img {
+    width: 100%;
+    height: 100%;
+    background-color: $color-light;
+  }
+  .lSSlideWrapper {
+    &:before {
+      padding-top: 100% !important;
+    }
+    margin-bottom: 2.5rem;
+  }
+  .lSSlideOuter .lSPager.lSGallery li{
+    img{
+      transition: transform .35s ease-in-out;
+    }
+    &.active,
+    &:hover{
+      border-radius: 0rem;
+      border:.1rem solid $color-secondary;
+      background-color: $color-light;
+      img{
+        transform: scale(1.1);
+      }
+      > a {
+        opacity: .7;
+      }
+    }
+  }
+}
