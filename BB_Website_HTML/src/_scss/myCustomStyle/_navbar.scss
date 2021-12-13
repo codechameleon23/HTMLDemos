@@ -68,7 +68,7 @@ $headerHeight_lg: 21rem;
 
     & > a {
       text-decoration: none;
-      display: inline-block;
+      display: inline-flex;
     }
 
     & > a, 
@@ -235,5 +235,17 @@ main {
   }
   @media (min-width: $bp_lg) {
     max-height: calc(90vh - #{$headerHeight_lg});
+  }
+}
+
+.navbar ul > li > a {
+  .icon {
+    transform: rotate(-90deg);
+  }
+}
+
+.back-button {
+  .icon {
+    transform: rotate(90deg);
   }
 }

@@ -6401,6 +6401,18 @@ ol.list li:before
         height: auto; 
         max-height: 100%;
     }
+    .icon-28
+    {
+        width: 2.8rem;
+    }
+    .icon-28 svg,
+    .icon-28 img
+    {
+        width: 100%;
+        max-width: 2.8rem;
+        height: auto; 
+        max-height: 100%;
+    }
     .icon-30
     {
         width: 3rem;
@@ -14657,6 +14669,18 @@ ol.list li:before
     {
         width: 100%;
         max-width: 1.8rem;
+        height: auto; 
+        max-height: 100%;
+    }
+    .sm\:icon-28
+    {
+        width: 2.8rem;
+    }
+    .sm\:icon-28 svg,
+    .sm\:icon-28 img
+    {
+        width: 100%;
+        max-width: 2.8rem;
         height: auto; 
         max-height: 100%;
     }
@@ -22919,6 +22943,18 @@ ol.list li:before
         height: auto; 
         max-height: 100%;
     }
+    .md\:icon-28
+    {
+        width: 2.8rem;
+    }
+    .md\:icon-28 svg,
+    .md\:icon-28 img
+    {
+        width: 100%;
+        max-width: 2.8rem;
+        height: auto; 
+        max-height: 100%;
+    }
     .md\:icon-30
     {
         width: 3rem;
@@ -31175,6 +31211,18 @@ ol.list li:before
     {
         width: 100%;
         max-width: 1.8rem;
+        height: auto; 
+        max-height: 100%;
+    }
+    .lg\:icon-28
+    {
+        width: 2.8rem;
+    }
+    .lg\:icon-28 svg,
+    .lg\:icon-28 img
+    {
+        width: 100%;
+        max-width: 2.8rem;
         height: auto; 
         max-height: 100%;
     }
@@ -39437,6 +39485,18 @@ ol.list li:before
         height: auto; 
         max-height: 100%;
     }
+    .xl\:icon-28
+    {
+        width: 2.8rem;
+    }
+    .xl\:icon-28 svg,
+    .xl\:icon-28 img
+    {
+        width: 100%;
+        max-width: 2.8rem;
+        height: auto; 
+        max-height: 100%;
+    }
     .xl\:icon-30
     {
         width: 3rem;
@@ -47696,6 +47756,18 @@ ol.list li:before
         height: auto; 
         max-height: 100%;
     }
+    .xxl\:icon-28
+    {
+        width: 2.8rem;
+    }
+    .xxl\:icon-28 svg,
+    .xxl\:icon-28 img
+    {
+        width: 100%;
+        max-width: 2.8rem;
+        height: auto; 
+        max-height: 100%;
+    }
     .xxl\:icon-30
     {
         width: 3rem;
@@ -55690,7 +55762,10 @@ body[data-aos-easing='ease-in-out'] [data-aos],
 }
 .navbar ul > li > a
 {
-    display: inline-block; 
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display:         inline-flex; 
 
     text-decoration: none;
 }
@@ -55926,6 +56001,20 @@ main
     {
         max-height: calc(90vh - 21rem);
     }
+}
+
+.navbar ul > li > a .icon
+{
+    -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+}
+
+.back-button .icon
+{
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
 }
 
 /*Custom styling*/
@@ -56671,8 +56760,6 @@ button.mfp-arrow-right::after
 .table th,
 .table td
 {
-    padding: 15px;
-
     border: 1px solid;
 }
 .table.primary

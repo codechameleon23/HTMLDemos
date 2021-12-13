@@ -43,7 +43,7 @@
                      </span>
                   </div>
                </a>
-               <div class="navbar-toggle p-20 md:p-30 d-inline-flex lg:d-hidden z-50 hover:bg-secondary hover:f-color-white">
+               <div class="navbar-toggle p-20 md:p-30 d-inline-flex lg:d-hidden z-50 transition-all">
                   <i class="icon hamburger pointer-events-auto">
                      <div>
                         <span></span>
@@ -71,11 +71,11 @@
                   <ul class="list-reset flex-col lg:flex-row -mx-15 lg:-mx-10 pos-relative 
                      f-size-28 f-weight-bold f-spacing-sm lg:f-size-16 lg:f-weight-regular lg:f-spacing-md uppercase">
                      <li class="@@if(context.basket){is-active} px-15 ">
-                        <div class="submenu-trigger nav-link py-10 px-10 lg:px-0 flex-row align-center">
+                        <div class="submenu-trigger nav-link py-10 px-10 lg:px-0 flex-row align-center justify-space-between">
                            <span>
                               BASKETS
                            </span>
-                           <span class="icon icon-18 lg:icon-15 ml-8 lg:ml-2 flex-none f-color-secondary">
+                           <span class="icon icon-28 lg:icon-15 ml-8 lg:ml-2 flex-none f-color-secondary">
                               <span class="down-icon">
                                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                                     class="feather feather-chevron-down" viewBox="0 0 24 24">
@@ -92,12 +92,13 @@
                         </div>
                         <!-- Submenu -->
                         <div class="submenu pos-fixed pin-x pin-t pin-b z-40">
-                           <div class="container lg:container-lg mx-auto bg-white h-full lg:h-auto pt-15 pb-15 lg:shadow-lg">
+                           <div class="container-fluid lg:container-lg mx-auto bg-white h-full lg:h-auto pt-15 pb-15 lg:shadow-lg">
                               <div class="p-10 flex-row align-center justify-space-between lg:d-hidden">
                                  <button class="back-button uppercase f-color-inherit flex-row align-center f-weight-bold">
-                                    <span class="icon icon-15 mr-8 flex-none f-color-secondary">
-                                       <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="111 237 192 320">
-                                          <path d="M303 269.4L270.7 237 111 397l159.7 160 32.3-32.4L175.7 397z" />
+                                    <span class="icon icon-28 lg:icon-15 mr-8 flex-none f-color-secondary">
+                                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                          class="feather feather-chevron-down" viewBox="0 0 24 24">
+                                          <path d="m6 9 6 6 6-6" />
                                        </svg>
                                     </span>
                                     BASKETS
@@ -105,47 +106,111 @@
                               </div>
                               <div class="flex-row">
                                  <div class="col-12 lg:col-4">
-                                    <ul class="list-reset flex-col px-10 
+                                    <ul class="list-reset flex-col pl-20 lg:pl-0
                                        f-size-28 f-spacing-md f-weight-regular uppercase
                                        lg:f-weight-semiBold lg:f-size-19 lg:f-spacing-sm">
                                        <li class="px-15">
-                                          <a href="#" class="flex-row justify-space-between px-10 py-10">
+                                          <a href="#" class="flex-row justify-space-between px-10 py-10 w-full">
                                              <span>Morocco</span>
+                                             <span class="icon icon-28 lg:icon-15 ml-8 lg:ml-2 flex-none f-color-secondary lg:d-hidden">
+                                                <span class="down-icon">
+                                                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                      class="feather feather-chevron-down" viewBox="0 0 24 24">
+                                                      <path d="m6 9 6 6 6-6" />
+                                                   </svg>
+                                                </span>
+                                             </span>
                                           </a>
                                        </li>
                                        <li class="px-15">
-                                          <a href="#" class="flex-row justify-space-between px-10 py-10">
+                                          <a href="#" class="flex-row justify-space-between px-10 py-10 w-full">
                                              <span>Madagascar</span>
+                                             <span class="icon icon-28 lg:icon-15 ml-8 lg:ml-2 flex-none f-color-secondary lg:d-hidden">
+                                                <span class="down-icon">
+                                                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                      class="feather feather-chevron-down" viewBox="0 0 24 24">
+                                                      <path d="m6 9 6 6 6-6" />
+                                                   </svg>
+                                                </span>
+                                             </span>
                                           </a>
                                        </li>
                                        <li class="px-15">
-                                          <a href="#" class="flex-row justify-space-between px-10 py-10">
+                                          <a href="#" class="flex-row justify-space-between px-10 py-10 w-full">
                                              <span>Ghana</span>
+                                             <span class="icon icon-28 lg:icon-15 ml-8 lg:ml-2 flex-none f-color-secondary lg:d-hidden">
+                                                <span class="down-icon">
+                                                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                      class="feather feather-chevron-down" viewBox="0 0 24 24">
+                                                      <path d="m6 9 6 6 6-6" />
+                                                   </svg>
+                                                </span>
+                                             </span>
                                           </a>
                                        </li>
                                        <li class="px-15">
-                                          <a href="#" class="flex-row justify-space-between px-10 py-10">
+                                          <a href="#" class="flex-row justify-space-between px-10 py-10 w-full">
                                              <span>Shopping BasketS</span>
+                                             <span class="icon icon-28 lg:icon-15 ml-8 lg:ml-2 flex-none f-color-secondary lg:d-hidden">
+                                                <span class="down-icon">
+                                                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                      class="feather feather-chevron-down" viewBox="0 0 24 24">
+                                                      <path d="m6 9 6 6 6-6" />
+                                                   </svg>
+                                                </span>
+                                             </span>
                                           </a>
                                        </li>
                                        <li class="px-15">
-                                          <a href="#" class="flex-row justify-space-between px-10 py-10">
+                                          <a href="#" class="flex-row justify-space-between px-10 py-10 w-full">
                                              <span>Beach BasketS</span>
+                                             <span class="icon icon-28 lg:icon-15 ml-8 lg:ml-2 flex-none f-color-secondary lg:d-hidden">
+                                                <span class="down-icon">
+                                                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                      class="feather feather-chevron-down" viewBox="0 0 24 24">
+                                                      <path d="m6 9 6 6 6-6" />
+                                                   </svg>
+                                                </span>
+                                             </span>
                                           </a>
                                        </li>
                                        <li class="px-15">
-                                          <a href="#" class="flex-row justify-space-between px-10 py-10">
+                                          <a href="#" class="flex-row justify-space-between px-10 py-10 w-full">
                                              <span>Children’s</span>
+                                             <span class="icon icon-28 lg:icon-15 ml-8 lg:ml-2 flex-none f-color-secondary lg:d-hidden">
+                                                <span class="down-icon">
+                                                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                      class="feather feather-chevron-down" viewBox="0 0 24 24">
+                                                      <path d="m6 9 6 6 6-6" />
+                                                   </svg>
+                                                </span>
+                                             </span>
                                           </a>
                                        </li>
                                        <li class="px-15">
-                                          <a href="#" class="flex-row justify-space-between px-10 py-10">
+                                          <a href="#" class="flex-row justify-space-between px-10 py-10 w-full">
                                              <span>Vegan</span>
+                                             <span class="icon icon-28 lg:icon-15 ml-8 lg:ml-2 flex-none f-color-secondary lg:d-hidden">
+                                                <span class="down-icon">
+                                                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                      class="feather feather-chevron-down" viewBox="0 0 24 24">
+                                                      <path d="m6 9 6 6 6-6" />
+                                                   </svg>
+                                                </span>
+                                             </span>
                                           </a>
                                        </li>
                                        <li class="px-15">
-                                          <a href="#" class="flex-row justify-space-between px-10 py-10">
+                                          <a href="#" class="flex-row justify-space-between px-10 py-10 w-full">
                                              <span>SALE</span>
+                                             <span class="icon icon-28 lg:icon-15 ml-8 lg:ml-2 flex-none f-color-secondary lg:d-hidden">
+                                                <span class="down-icon">
+                                                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                      class="feather feather-chevron-down" viewBox="0 0 24 24">
+                                                      <path d="m6 9 6 6 6-6" />
+                                                   </svg>
+                                                </span>
+                                             </span>
                                           </a>
                                        </li>
                                     </ul>
@@ -169,7 +234,8 @@
                                           <a href="products.html"
                                              class="media-card w-full flex-col pb-10 rollover-wrap opacity-parent-0 hover:opacity-parent-100 hover:bg-white flex-stretch flex-col transition-all no-underline">
                                              <figure class="ratio ratio-1x1 image-placeholder pos-relative bg-light flex-none oveflow-hidden ">
-                                                <div class="rollover-effect pos-absolute pin bg-center bg-contain bg-center" style="background-image: url('./images/Morocco-Double-Handle-Basket-beach.jpg');"></div>
+                                                <div class="rollover-effect pos-absolute pin bg-center bg-contain bg-center"
+                                                   style="background-image: url('./images/Morocco-Double-Handle-Basket-beach.jpg');"></div>
                                              </figure>
                                              <section class="card-body pt-20 flex-auto flex-col">
                                                 <div class="text-wrap">
