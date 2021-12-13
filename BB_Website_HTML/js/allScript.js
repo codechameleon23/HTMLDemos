@@ -159,7 +159,7 @@ $(document).ready(function () {
         // animateIn: isIE11 || isIE10 ? "" : "fadeIn",
         // animateOut: isIE11 || isIE10 ? "" : "fadeOut",
         smartSpeed: 500,
-        autoplay: isAutoPlay,
+        // autoplay: isAutoPlay,
         autoplayTimeout: 4000,
         autoplayHoverPause: true,
       });

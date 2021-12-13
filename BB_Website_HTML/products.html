@@ -35,12 +35,12 @@
         </a>
         <div class="lg:container-xl lg:mx-auto flex-row align-center justify-space-between lg:pos-fixed pin-x pin-t lg:w-full lg:py-10 lg:f-size-16">
           <div class="d-hidden lg:d-inline-block flex-row align-center">
-            <a class="no-underline hover:f-color-secondary" href="mailto:sales@basketbasket.co.uk">sales@basketbasket.co.uk</a>
+            <a class="no-underline hover:f-color-secondary f-weight-medium" href="mailto:sales@basketbasket.co.uk">sales@basketbasket.co.uk</a>
             <span class="f-color-secondary px-10">|</span>
-            <a class="no-underline hover:f-color-secondary" href="tel:01420 85112">01420 85112</a>
+            <a class="no-underline hover:f-color-secondary f-weight-medium" href="tel:01420 85112">01420 85112</a>
           </div>
           <div class="flex-row align-center">
-            <button class="p-10 ml-20 lg:ml-0 search-toggle f-color-inherit hover:bg-secondary hover:f-color-white flex-row align-center">
+            <a href="javascript:void(0);" class="search-toggle no-underline hover:f-color-secondary f-weight-medium flex-row align-center px-10">
               <i class="icon lg:icon-18 flex-col justify-center">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search" viewBox="0 0 24 24">
                   <circle cx="11" cy="11" r="8"></circle>
@@ -48,13 +48,26 @@
                 </svg>
               </i>
               <span class="d-hidden lg:d-inline-block pl-10">Search</span>
-            </button>
-            <span class="f-color-secondary d-hidden lg:d-inline-block">|</span>
-            <button class="p-10 ml-20 lg:ml-0 f-color-inherit hover:bg-secondary hover:f-color-white flex-row align-center d-hidden lg:d-inline-block">
-              <span class="px-10 f-weight-medium">Stockist Login</span>
-            </button>
-            <span class="f-color-secondary d-hidden lg:d-inline-block">|</span>
-            <a href="check-out.html" class="p-10 ml-20 lg:ml-0 f-color-inherit d-inline-block hover:bg-secondary hover:f-color-white pos-relative">
+            </a>
+            <!-- <button class="p-10 ml-20 lg:ml-0 search-toggle f-color-inherit hover:bg-secondary hover:f-color-white flex-row align-center">
+                  <i class="icon lg:icon-18 flex-col justify-center">
+                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"
+                        viewBox="0 0 24 24">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                     </svg>
+                  </i>
+                  <span class="d-hidden lg:d-inline-block pl-10">Search</span>
+               </button> -->
+            <span class="f-color-secondary px-10">|</span>
+            <a href="#" class="no-underline hover:f-color-secondary hover:f-color-secondary f-weight-medium">
+              <span class="d-hidden lg:d-inline-block px-10">Stockist Login</span>
+            </a>
+            <!-- <button class="p-10 ml-20 lg:ml-0 f-color-inherit hover:bg-secondary hover:f-color-white flex-row align-center d-hidden lg:d-inline-block">
+                  <span class="px-10 f-weight-medium">Stockist Login</span>
+               </button> -->
+            <span class="f-color-secondary px-10">|</span>
+            <a href="check-out.html" class="no-underline hover:f-color-secondary hover:f-color-secondary f-weight-medium px-10">
               <i class="icon lg:icon-18 flex-col justify-center">
                 <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.7 30.5">
                   <path d="M28.1 28.7h-4L26 13.6h4.8l-2.7 15.1zM5 13.6h4.2l1.7 15.1H7.7L5 13.6zm7.7 15.1L11 13.6h5.5v15.1h-3.8zm5.7 0V13.6h5.7l-1.9 15.1h-3.8zm9.3-16.9L23.4.6c-.2-.5-.7-.7-1.2-.5-.5.2-.7.7-.5 1.2l4 10.6h-16l4.2-10.3c.2-.5 0-1-.5-1.2-.5-.2-1 0-1.2.5l-4.4 11H.9c-.5 0-.9.4-.9.9s.4.9.9.9h2.2l3 16.2c.1.4.5.7.9.7h21.9c.4 0 .8-.3.9-.8l2.8-16.2h2.3c.5 0 .9-.4.9-.9s-.4-.9-.9-.9h-7.2z" />
@@ -230,7 +243,7 @@
       </div>
     </div>
   </header>
-  <section class="w-full search-bar pos-fixed">
+  <section class="w-full search-bar pos-fixed z-10 transition-all">
     <form class="w-full flex-row shadow-lg bg-light mb-20">
       <input type="text" placeholder="Search..." name="search" class="flex-auto p-20 flex-stretch focus:shadow-md transition-all" />
       <button class="p-10 flex-none hover:bg-secondary hover:f-color-white">
@@ -402,7 +415,7 @@
                     <div class="rollover-effect pos-absolute pin bg-center bg-contain bg-center" style="background-image: url('./images/images-2.png');"></div>
                     <div class="roll-over opacity-child pos-absolute pin h-full w-full">
                       <div class="pos-relative h-full w-full py-65 flex-col f-color-tertiary">
-                        <svg class="diamond-shape h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 184 184">
+                        <svg class="diamond-shape f-color-tertiary-1 h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 184 184">
                           <path fill="currentColor" d="M-.063 91.993 91.93 0l91.994 91.993-91.994 91.994z"></path>
                         </svg>
                         <div class="pos-absolute pin flex-col justify-center align-center p-40 text-center">
@@ -429,7 +442,7 @@
                     <div class="rollover-effect pos-absolute pin bg-center bg-contain bg-center" style="background-image: url('./images/images-2.png');"></div>
                     <div class="roll-over opacity-child pos-absolute pin h-full w-full">
                       <div class="pos-relative h-full w-full py-65 flex-col f-color-tertiary">
-                        <svg class="diamond-shape h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 184 184">
+                        <svg class="diamond-shape f-color-tertiary-1 h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 184 184">
                           <path fill="currentColor" d="M-.063 91.993 91.93 0l91.994 91.993-91.994 91.994z"></path>
                         </svg>
                         <div class="pos-absolute pin flex-col justify-center align-center p-40 text-center">
@@ -456,7 +469,7 @@
                     <div class="rollover-effect pos-absolute pin bg-center bg-contain bg-center" style="background-image: url('./images/images-2.png');"></div>
                     <div class="roll-over opacity-child pos-absolute pin h-full w-full">
                       <div class="pos-relative h-full w-full py-65 flex-col f-color-tertiary">
-                        <svg class="diamond-shape h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 184 184">
+                        <svg class="diamond-shape f-color-tertiary-1 h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 184 184">
                           <path fill="currentColor" d="M-.063 91.993 91.93 0l91.994 91.993-91.994 91.994z"></path>
                         </svg>
                         <div class="pos-absolute pin flex-col justify-center align-center p-40 text-center">
@@ -483,7 +496,7 @@
                     <div class="rollover-effect pos-absolute pin bg-center bg-contain bg-center" style="background-image: url('./images/images-2.png');"></div>
                     <div class="roll-over opacity-child pos-absolute pin h-full w-full">
                       <div class="pos-relative h-full w-full py-65 flex-col f-color-tertiary">
-                        <svg class="diamond-shape h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 184 184">
+                        <svg class="diamond-shape f-color-tertiary-1 h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 184 184">
                           <path fill="currentColor" d="M-.063 91.993 91.93 0l91.994 91.993-91.994 91.994z"></path>
                         </svg>
                         <div class="pos-absolute pin flex-col justify-center align-center p-40 text-center">
@@ -510,7 +523,7 @@
                     <div class="rollover-effect pos-absolute pin bg-center bg-contain bg-center" style="background-image: url('./images/images-2.png');"></div>
                     <div class="roll-over opacity-child pos-absolute pin h-full w-full">
                       <div class="pos-relative h-full w-full py-65 flex-col f-color-tertiary">
-                        <svg class="diamond-shape h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 184 184">
+                        <svg class="diamond-shape f-color-tertiary-1 h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 184 184">
                           <path fill="currentColor" d="M-.063 91.993 91.93 0l91.994 91.993-91.994 91.994z"></path>
                         </svg>
                         <div class="pos-absolute pin flex-col justify-center align-center p-40 text-center">
@@ -537,7 +550,7 @@
                     <div class="rollover-effect pos-absolute pin bg-center bg-contain bg-center" style="background-image: url('./images/images-2.png');"></div>
                     <div class="roll-over opacity-child pos-absolute pin h-full w-full">
                       <div class="pos-relative h-full w-full py-65 flex-col f-color-tertiary">
-                        <svg class="diamond-shape h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 184 184">
+                        <svg class="diamond-shape f-color-tertiary-1 h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 184 184">
                           <path fill="currentColor" d="M-.063 91.993 91.93 0l91.994 91.993-91.994 91.994z"></path>
                         </svg>
                         <div class="pos-absolute pin flex-col justify-center align-center p-40 text-center">
@@ -564,7 +577,7 @@
                     <div class="rollover-effect pos-absolute pin bg-center bg-contain bg-center" style="background-image: url('./images/images-2.png');"></div>
                     <div class="roll-over opacity-child pos-absolute pin h-full w-full">
                       <div class="pos-relative h-full w-full py-65 flex-col f-color-tertiary">
-                        <svg class="diamond-shape h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 184 184">
+                        <svg class="diamond-shape f-color-tertiary-1 h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 184 184">
                           <path fill="currentColor" d="M-.063 91.993 91.93 0l91.994 91.993-91.994 91.994z"></path>
                         </svg>
                         <div class="pos-absolute pin flex-col justify-center align-center p-40 text-center">
@@ -591,7 +604,7 @@
                     <div class="rollover-effect pos-absolute pin bg-center bg-contain bg-center" style="background-image: url('./images/images-2.png');"></div>
                     <div class="roll-over opacity-child pos-absolute pin h-full w-full">
                       <div class="pos-relative h-full w-full py-65 flex-col f-color-tertiary">
-                        <svg class="diamond-shape h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 184 184">
+                        <svg class="diamond-shape f-color-tertiary-1 h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 184 184">
                           <path fill="currentColor" d="M-.063 91.993 91.93 0l91.994 91.993-91.994 91.994z"></path>
                         </svg>
                         <div class="pos-absolute pin flex-col justify-center align-center p-40 text-center">
@@ -618,7 +631,7 @@
                     <div class="rollover-effect pos-absolute pin bg-center bg-contain bg-center" style="background-image: url('./images/images-2.png');"></div>
                     <div class="roll-over opacity-child pos-absolute pin h-full w-full">
                       <div class="pos-relative h-full w-full py-65 flex-col f-color-tertiary">
-                        <svg class="diamond-shape h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 184 184">
+                        <svg class="diamond-shape f-color-tertiary-1 h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 184 184">
                           <path fill="currentColor" d="M-.063 91.993 91.93 0l91.994 91.993-91.994 91.994z"></path>
                         </svg>
                         <div class="pos-absolute pin flex-col justify-center align-center p-40 text-center">
