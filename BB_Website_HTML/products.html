@@ -258,17 +258,15 @@
           <section class="col-12 lg:col-4 xl:col-3 p-10">
             <form class="product-filter f-size-16 f-weight-bold flex-col">
               <div class="col-12 border-t">
-                <div class="select">
-                  <select name="enquiryType" class="w-full px-10 py-15 flex-stretch not-selected f-color-inherit f-weight-bold uppercase">
-                    <option value="">SORT BY:</option>
-                    <option>What's New</option>
-                    <option>Popularity</option>
-                    <option>Better Discount</option>
-                    <option>Price: High to Low</option>
-                    <option>Price: Low to High</option>
-                    <option>Customer Rating</option>
-                  </select>
-                </div>
+                <select name="enquiryType" class="jsCustomSelectDropdown w-full px-10 py-15 flex-stretch not-selected f-color-inherit f-weight-bold uppercase">
+                  <option value="hide">SORT BY:</option>
+                  <option value="new">What's New</option>
+                  <option value="popularity">Popularity</option>
+                  <option value="discount">Better Discount</option>
+                  <option value="hightLow">Price: High to Low</option>
+                  <option value="LowHigh">Price: Low to High</option>
+                  <option value="rating">Customer Rating</option>
+                </select>
               </div>
               <div class="col-12 border-t py-5 pl-10">
                 <label class="w-auto custom-tick secondary my-10 f-weight-bold uppercase">

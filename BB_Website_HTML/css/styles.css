@@ -56324,3 +56324,76 @@ button.mfp-arrow-right::after
 {
     opacity: .7;
 }
+
+.select-hidden
+{
+    display: none;
+    visibility: hidden;
+
+    padding-right: 10px;
+}
+
+.custom-select-wrapper
+{
+    font-size: 16px;
+
+    position: relative;
+
+    display: inline-block;
+
+    width: 100%;
+    height: auto; 
+
+    cursor: pointer;
+
+    color: inherit;
+}
+
+.custom-select-styled:active,
+.custom-select-styled.active
+{
+    box-shadow: 0 4px 6px -1px rgba(92, 51, 40, .45), 0 2px 4px -1px rgba(92, 51, 40, .06);
+}
+
+.custom-select-options
+{
+    position: absolute;
+    z-index: 999;
+    top: 100%;
+    right: 0;
+    left: 0;
+
+    display: none;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    background-color: #fff;
+    box-shadow: 0 6px 12px 6px rgba(3, 2, 1, .15);
+}
+.custom-select-options li
+{
+    margin: 0;
+    padding: 12px 0;
+
+    -webkit-transition: all .35s 0s ease-out;
+            transition: all .35s 0s ease-out; 
+    text-indent: 15px;
+
+    border-top: #fffaf1;
+}
+.custom-select-options li:hover
+{
+    background: #fffaf1;
+}
+.custom-select-options li.is-selected
+{
+    color: #fff;
+    background: #a52337;
+}
+.custom-select-options li[rel='hide']
+{
+    display: none;
+}

@@ -900,3 +900,64 @@ button.mfp-arrow {
     }
   }
 }
+
+
+// Custom Select dropdown
+.select-hidden {
+  display: none;
+  visibility: hidden;
+  padding-right: 10px;
+}
+.custom-select{
+  &-wrapper{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    font-size: 16px;
+    color: inherit;
+    width: 100%;
+    height: auto;
+  }
+  &-styled {
+    &:hover {
+      // background-color: $color-light;
+    }
+    &:active, &.active {
+      box-shadow: $shadow_md;
+      // &:after {
+      //   top: 9px;
+      //   border-color: transparent transparent $color-white transparent;
+      // }
+    }
+  }
+  &-options {
+    display: none; 
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: $color-white;
+    box-shadow: $shadow_lg;
+    li {
+      margin: 0;
+      padding: 12px 0;
+      text-indent: 15px;
+      border-top: $color-light;
+      transition: $transition;
+      &:hover {
+        background: $color-light;
+      }
+      &.is-selected {
+        color: $color-white;
+        background: $color-secondary;
+      }
+      &[rel="hide"] {
+        display: none;
+      }
+    }
+  }
+}

@@ -15,42 +15,42 @@ if ($(".jsMultiCardCarousel").length > 0) {
   });
 }
 
-if ($(".jsProductCarousel").length > 0) {
-  $(".jsProductCarousel").each(function () {
-    var jsProductCarousel = $(this);
-    var isItemCarousel = jsProductCarousel.find(".jsProductItemCarousel");
-    var isThumbCarousel = jsProductCarousel.find(".jsThumbmailCarousel");
-    var jsItemCarousel = null;
-    var jsThumbCarousel = null;
-    if (isItemCarousel.length > 0) {
-      jsItemCarousel = setItemCarousel(isItemCarousel);
-      jsItemCarousel.on("changed.owl.carousel", function (event) {
-        jsThumbCarousel.trigger("to.owl.carousel", [event.item.index]);
-      });
-    }
-    if (isThumbCarousel.length > 0) {
-      jsThumbCarousel = setItemCarousel(isThumbCarousel);
-      var carouselOuter = jsThumbCarousel.closest(".carousel-outer");
-      var jsMultiCardCarouselPrv = carouselOuter.find(".jsCarouselPrv");
-      var jsMultiCardCarouselNxt = carouselOuter.find(".jsCarouselNxt");
-      isThumbCarousel.find(".item").on("click", function () {
-        jsItemCarousel.trigger("to.owl.carousel", [$(this).data().index]);
-      });
-      jsThumbCarousel.on("changed.owl.carousel", function (event) {
-        if (event.item.index === 0) {
-          jsMultiCardCarouselPrv.css({ opacity: "0.5", PointerEvent: "none" });
-        } else {
-          jsMultiCardCarouselPrv.css({ opacity: "1", PointerEvent: "all" });
-        }
-        if (event.item.count - event.item.index === event.page.size) {
-          jsMultiCardCarouselNxt.css({ opacity: "0.5", PointerEvent: "none" });
-        } else {
-          jsMultiCardCarouselNxt.css({ opacity: "1", PointerEvent: "all" });
-        }
-      });
-    }
-  });
-}
+// if ($(".jsProductCarousel").length > 0) {
+//   $(".jsProductCarousel").each(function () {
+//     var jsProductCarousel = $(this);
+//     var isItemCarousel = jsProductCarousel.find(".jsProductItemCarousel");
+//     var isThumbCarousel = jsProductCarousel.find(".jsThumbmailCarousel");
+//     var jsItemCarousel = null;
+//     var jsThumbCarousel = null;
+//     if (isItemCarousel.length > 0) {
+//       jsItemCarousel = setItemCarousel(isItemCarousel);
+//       jsItemCarousel.on("changed.owl.carousel", function (event) {
+//         jsThumbCarousel.trigger("to.owl.carousel", [event.item.index]);
+//       });
+//     }
+//     if (isThumbCarousel.length > 0) {
+//       jsThumbCarousel = setItemCarousel(isThumbCarousel);
+//       var carouselOuter = jsThumbCarousel.closest(".carousel-outer");
+//       var jsMultiCardCarouselPrv = carouselOuter.find(".jsCarouselPrv");
+//       var jsMultiCardCarouselNxt = carouselOuter.find(".jsCarouselNxt");
+//       isThumbCarousel.find(".item").on("click", function () {
+//         jsItemCarousel.trigger("to.owl.carousel", [$(this).data().index]);
+//       });
+//       jsThumbCarousel.on("changed.owl.carousel", function (event) {
+//         if (event.item.index === 0) {
+//           jsMultiCardCarouselPrv.css({ opacity: "0.5", PointerEvent: "none" });
+//         } else {
+//           jsMultiCardCarouselPrv.css({ opacity: "1", PointerEvent: "all" });
+//         }
+//         if (event.item.count - event.item.index === event.page.size) {
+//           jsMultiCardCarouselNxt.css({ opacity: "0.5", PointerEvent: "none" });
+//         } else {
+//           jsMultiCardCarouselNxt.css({ opacity: "1", PointerEvent: "all" });
+//         }
+//       });
+//     }
+//   });
+// }
 
 function setItemCarousel(elm) {
   var jsItemCarousel = elm;
