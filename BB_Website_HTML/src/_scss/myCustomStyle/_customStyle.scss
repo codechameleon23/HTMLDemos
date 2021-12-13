@@ -74,10 +74,15 @@ button.mfp-arrow {
 .search-is-open {
   .search {
     &-toggle {
-      color: $color-secondary;
+      background-color: $color-secondary;
+      color: $color-white;
+      @media (min-width: $bp_lg) {
+        color: $color-secondary;
+        background-color: transparent;
+      }
     }
     &-bar {
-      max-height: 10rem;
+      max-height: 6rem;
     }
   }
 }
@@ -511,12 +516,6 @@ button.mfp-arrow {
 }
 
 .media-card {
-  // .card-body {
-  //   font-size: 1.7rem;
-  //   h1, h2, h3, h4 {
-  //    text-transform: uppercase;
-  //   }
-  // }
   .roll-over {
     transition: all 0.35s 0s ease-out;
     .title {
@@ -524,70 +523,7 @@ button.mfp-arrow {
       font-size: 2.1rem;
       text-transform: uppercase;
     }
-    // svg {
-    //   color: $color-primary;
-    // }
   }
-  // &.primary {
-  //   .card-body {
-  //     h1,
-  //     h3,
-  //     h4,
-  //     .sub-heading {
-  //       color: $color-primary;
-  //     }
-  //   }
-  //   .roll-over {
-  //     svg {
-  //       color: $color-primary;
-  //     }
-  //   }
-  // }
-  // &.secondary {
-  //   .card-body {
-  //     h1,
-  //     h3,
-  //     h4,
-  //     .sub-heading {
-  //       color: $color-secondary;
-  //     }
-  //   }
-  //   .roll-over {
-  //     svg {
-  //       color: $color-secondary;
-  //     }
-  //   }
-  // }
-  // &.tertiary {
-  //   .card-body {
-  //     h1,
-  //     h3,
-  //     h4,
-  //     .sub-heading {
-  //       color: $color-tertiary;
-  //     }
-  //   }
-  //   .roll-over {
-  //     svg {
-  //       color: $color-tertiary;
-  //     }
-  //   }
-  // }
-  // &.quaternary {
-  //   .card-body {
-  //     h1,
-  //     h3,
-  //     h4,
-  //     .sub-heading {
-  //       color: $color-quaternary;
-  //     }
-  //   }
-  //   .roll-over {
-  //     svg {
-  //       color: $color-quaternary;
-  //     }
-  //   }
-  // }
 }
 
 .pagination {
@@ -922,9 +858,6 @@ button.mfp-arrow {
     &:after {
       transform-origin: center;
       transition: $transition;
-    }
-    &:hover {
-      // background-color: $color-light;
     }
     &:active, &.active {
       box-shadow: $shadow_md;
