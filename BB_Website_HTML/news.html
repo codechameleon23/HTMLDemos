@@ -264,23 +264,34 @@
     <!-- Filter -->
     <section class="pt-65 lg:pt-80">
       <div class="container sm:container-sm md:container-md lg:container-lg xl:container-xl mx-auto">
-        <ul class="filter-tabs secondary text-center f-size-21 f-weight-medium f-spacing-md">
-          <li class="active">
-            <a hre="#">All</a>
-          </li>
-          <li><span>·</span></li>
-          <li>
-            <a hre="#">NEWS</a>
-          </li>
-          <li><span>·</span></li>
-          <li>
-            <a hre="#">EVENTS</a>
-          </li>
-          <li><span>·</span></li>
-          <li>
-            <a hre="#">PRESS</a>
-          </li>
-        </ul>
+        <div class="md:d-hidden">
+          <select name="enquiryType" class="jsCustomSelectDropdown w-full border px-10 py-15 flex-stretch not-selected f-color-inherit f-weight-bold uppercase">
+            <option value="-1">Filter By</option>
+            <option value="all">All</option>
+            <option value="news">NEWS</option>
+            <option value="events">EVENTS</option>
+            <option value="press">PRESS</option>
+          </select>
+        </div>
+        <div class="d-hidden md:d-inline-block w-full">
+          <ul class="filter-tabs secondary text-center f-size-16 md:f-size-21 f-weight-medium f-spacing-md mx-auto">
+            <li class="active">
+              <a hre="#">All</a>
+            </li>
+            <li><span class="mx-5 md:mx-15">·</span></li>
+            <li>
+              <a hre="#">NEWS</a>
+            </li>
+            <li><span class="mx-5 md:mx-15">·</span></li>
+            <li>
+              <a hre="#">EVENTS</a>
+            </li>
+            <li><span class="mx-5 md:mx-15">·</span></li>
+            <li>
+              <a hre="#">PRESS</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
     <!-- News listing -->
