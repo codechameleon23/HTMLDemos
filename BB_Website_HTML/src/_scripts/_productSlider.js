@@ -32,8 +32,6 @@ if ($('#imageGallery').length){//if element exists
         src: childImgSrcPath,
       })
     });
-  
-    console.log('galleryItems +++++++++++ ', galleryItems);
 
     galleryItems.forEach(function (item) {
       var newImg = new Image();

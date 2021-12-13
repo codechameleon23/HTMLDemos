@@ -2444,6 +2444,10 @@ ol.list li:before
     {
         font-size: 1.6rem;
     }
+    .f-size-16_5
+    {
+        font-size: 1.65rem;
+    }
     .f-size-17
     {
         font-size: 1.7rem;
@@ -6121,6 +6125,10 @@ ol.list li:before
     .container-article
     {
         max-width: 88rem;
+    }
+    .container-article-lg
+    {
+        max-width: 101rem;
     }
     /* Columns Classes */
     .grid-1 > .column
@@ -10695,6 +10703,10 @@ ol.list li:before
     {
         font-size: 1.6rem;
     }
+    .sm\:f-size-16_5
+    {
+        font-size: 1.65rem;
+    }
     .sm\:f-size-17
     {
         font-size: 1.7rem;
@@ -14372,6 +14384,10 @@ ol.list li:before
     .sm\:container-article
     {
         max-width: 88rem;
+    }
+    .sm\:container-article-lg
+    {
+        max-width: 101rem;
     }
     /* Columns Classes */
     .sm\:grid-1 > .column
@@ -18946,6 +18962,10 @@ ol.list li:before
     {
         font-size: 1.6rem;
     }
+    .md\:f-size-16_5
+    {
+        font-size: 1.65rem;
+    }
     .md\:f-size-17
     {
         font-size: 1.7rem;
@@ -22623,6 +22643,10 @@ ol.list li:before
     .md\:container-article
     {
         max-width: 88rem;
+    }
+    .md\:container-article-lg
+    {
+        max-width: 101rem;
     }
     /* Columns Classes */
     .md\:grid-1 > .column
@@ -27197,6 +27221,10 @@ ol.list li:before
     {
         font-size: 1.6rem;
     }
+    .lg\:f-size-16_5
+    {
+        font-size: 1.65rem;
+    }
     .lg\:f-size-17
     {
         font-size: 1.7rem;
@@ -30874,6 +30902,10 @@ ol.list li:before
     .lg\:container-article
     {
         max-width: 88rem;
+    }
+    .lg\:container-article-lg
+    {
+        max-width: 101rem;
     }
     /* Columns Classes */
     .lg\:grid-1 > .column
@@ -35448,6 +35480,10 @@ ol.list li:before
     {
         font-size: 1.6rem;
     }
+    .xl\:f-size-16_5
+    {
+        font-size: 1.65rem;
+    }
     .xl\:f-size-17
     {
         font-size: 1.7rem;
@@ -39125,6 +39161,10 @@ ol.list li:before
     .xl\:container-article
     {
         max-width: 88rem;
+    }
+    .xl\:container-article-lg
+    {
+        max-width: 101rem;
     }
     /* Columns Classes */
     .xl\:grid-1 > .column
@@ -43699,6 +43739,10 @@ ol.list li:before
     {
         font-size: 1.6rem;
     }
+    .xxl\:f-size-16_5
+    {
+        font-size: 1.65rem;
+    }
     .xxl\:f-size-17
     {
         font-size: 1.7rem;
@@ -47376,6 +47420,10 @@ ol.list li:before
     .xxl\:container-article
     {
         max-width: 88rem;
+    }
+    .xxl\:container-article-lg
+    {
+        max-width: 101rem;
     }
     /* Columns Classes */
     .xxl\:grid-1 > .column
@@ -56275,6 +56323,24 @@ button.mfp-arrow-right::after
     color: #cd4704;
 }
 
+.heading-banner.tertiary-1,
+.article-full-card.tertiary-1
+{
+    color: #fff; 
+    background-color: #e9502f;
+}
+.heading-banner.tertiary-1 .button:hover,
+.article-full-card.tertiary-1 .button:hover
+{
+    color: #e9502f; 
+    background-color: #fff;
+}
+.heading-banner.tertiary-1 .diamond-shape,
+.article-full-card.tertiary-1 .diamond-shape
+{
+    color: #e9502f;
+}
+
 .heading-banner.quaternary,
 .article-full-card.quaternary
 {
@@ -56699,11 +56765,32 @@ button.mfp-arrow-right::after
     {
         border-right: 1px solid;
     }
+    .footer-links.primary li:not(:last-child)
+    {
+        border-right-color: #5c3328;
+    }
+    .footer-links.secondary li:not(:last-child)
+    {
+        border-right-color: #a52337;
+    }
+    .footer-links.tertiary li:not(:last-child)
+    {
+        border-right-color: #cd4704;
+    }
+    .footer-links.quaternary li:not(:last-child)
+    {
+        border-right-color: #67401f;
+    }
 }
 
 .accordion-wrapper .accordion.is-open.focus\:shadow-md
 {
     box-shadow: 0 4px 6px -1px rgba(92, 51, 40, .45), 0 2px 4px -1px rgba(92, 51, 40, .06);
+}
+
+.imageGallery-wrapper .lSAction
+{
+    display: none !important;
 }
 
 .imageGallery-wrapper .imageGallery li img
@@ -56761,8 +56848,6 @@ button.mfp-arrow-right::after
 
 .custom-select-wrapper
 {
-    font-size: 16px;
-
     position: relative;
 
     display: inline-block;

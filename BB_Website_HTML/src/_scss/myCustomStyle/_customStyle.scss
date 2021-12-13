@@ -329,6 +329,19 @@ button.mfp-arrow {
       color: $color-tertiary;
     }
   }
+  &.tertiary-1 {
+    background-color: $color-tertiary-1;
+    color: $color-white;
+    .button {
+      &:hover {
+        background-color: $color-white;
+        color: $color-tertiary-1;
+      }
+    }
+    .diamond-shape {
+      color: $color-tertiary-1;
+    }
+  }
   &.quaternary {
     background-color: $color-quaternary;
     color: $color-white;
@@ -450,7 +463,6 @@ button.mfp-arrow {
   }
 }
 
-
 .testimonials-card {
   &.primary {
     background-color: $color-primary;
@@ -561,7 +573,8 @@ button.mfp-arrow {
       display: inline-block;
     }
 
-    &.active, &:hover {
+    &.active,
+    &:hover {
       a {
         font-weight: 700;
         cursor: default;
@@ -730,6 +743,26 @@ button.mfp-arrow {
     li:not(:last-child) {
       border-right: 1px solid;
     }
+    &.primary {
+      li:not(:last-child) {
+        border-right-color: $color-primary;
+      }
+    }
+    &.secondary {
+      li:not(:last-child) {
+        border-right-color: $color-secondary;
+      }
+    }
+    &.tertiary {
+      li:not(:last-child) {
+        border-right-color: $color-tertiary;
+      }
+    }
+    &.quaternary {
+      li:not(:last-child) {
+        border-right-color: $color-quaternary;
+      }
+    }
   }
 }
 
@@ -740,6 +773,10 @@ button.mfp-arrow {
 }
 
 .imageGallery-wrapper {
+  .lSAction {
+    display: none !important;
+  }
+
   .imageGallery li img {
     width: 100%;
     height: 100%;
@@ -751,25 +788,24 @@ button.mfp-arrow {
     }
     margin-bottom: 2.5rem;
   }
-  .lSSlideOuter .lSPager.lSGallery li{
-    img{
-      transition: transform .35s ease-in-out;
+  .lSSlideOuter .lSPager.lSGallery li {
+    img {
+      transition: transform 0.35s ease-in-out;
     }
     &.active,
-    &:hover{
+    &:hover {
       border-radius: 0rem;
-      border:.1rem solid $color-secondary;
+      border: 0.1rem solid $color-secondary;
       background-color: $color-light;
-      img{
+      img {
         transform: scale(1.1);
       }
       > a {
-        opacity: .7;
+        opacity: 0.7;
       }
     }
   }
 }
-
 
 // Custom Select dropdown
 .select-hidden {
@@ -777,12 +813,11 @@ button.mfp-arrow {
   visibility: hidden;
   padding-right: 10px;
 }
-.custom-select{
-  &-wrapper{
+.custom-select {
+  &-wrapper {
     cursor: pointer;
     display: inline-block;
     position: relative;
-    font-size: 16px;
     color: inherit;
     width: 100%;
     height: auto;
@@ -792,7 +827,8 @@ button.mfp-arrow {
       transform-origin: center;
       transition: $transition;
     }
-    &:active, &.active {
+    &:active,
+    &.active {
       box-shadow: $shadow_md;
       &:after {
         transform: rotate(-225deg);
@@ -800,7 +836,7 @@ button.mfp-arrow {
     }
   }
   &-options {
-    display: none; 
+    display: none;
     position: absolute;
     top: 100%;
     right: 0;

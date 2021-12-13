@@ -543,7 +543,6 @@ if ($(".jsCustomSelectDropdown").length > 0) {
     }
 
     var $listItems = $list.children("li");
-    console.log("$this", $this.val());
 
     $styledSelect.on("click", function (e) {
       e.stopPropagation();
@@ -664,8 +663,6 @@ if ($('#imageGallery').length){//if element exists
         src: childImgSrcPath,
       })
     });
-  
-    console.log('galleryItems +++++++++++ ', galleryItems);
 
     galleryItems.forEach(function (item) {
       var newImg = new Image();

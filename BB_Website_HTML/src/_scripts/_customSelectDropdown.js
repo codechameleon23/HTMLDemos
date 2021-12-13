@@ -27,7 +27,6 @@ if ($(".jsCustomSelectDropdown").length > 0) {
     }
 
     var $listItems = $list.children("li");
-    console.log("$this", $this.val());
 
     $styledSelect.on("click", function (e) {
       e.stopPropagation();
