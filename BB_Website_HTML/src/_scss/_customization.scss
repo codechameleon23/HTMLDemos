@@ -54,7 +54,7 @@ $orientations: (
 
 $baseFont: 'Raleway', $font_serif;
 $primaryFont: $baseFont;
-//$secondaryFont: 'Argesta', $font_serif;
+$secondaryFont: 'Montserrat', sans-serif;
 
 $defaultFont: $baseFont;
 $defaultTextColor: $color-text;
@@ -66,7 +66,7 @@ $defaultLetterSpacing: 0;
 $fontFamily: (
   //$fontFamilyClassNamePrefix "default" $defaultFont,
   $fontFamilyClassNamePrefix "primary" $primaryFont,
-  //$fontFamilyClassNamePrefix "secondary" $secondaryFont,
+  $fontFamilyClassNamePrefix "secondary" $secondaryFont,
 );
 
 $bp_xs: 460px;
@@ -161,6 +161,7 @@ $textColors: (
   $textColorsClassPrefix "orange" $color-orange 'states' 'no-parent' null,
   $textColorsClassPrefix "blue" $color-blue 'states' 'no-parent' null,
   $textColorsClassPrefix "green" $color-green 'states' 'no-parent' null,
+  $textColorsClassPrefix "grey" $color-grey 'states' 'no-parent' null,
 );
 
 
@@ -178,6 +179,7 @@ $fontSizes: (
   $fontSizesClassPrefix "23" 2.3rem null,
   $fontSizesClassPrefix "24" 2.4rem null,
   $fontSizesClassPrefix "25" 2.55rem null,
+  $fontSizesClassPrefix "27" 2.7rem null,
   $fontSizesClassPrefix "32" 3.2rem null,
   $fontSizesClassPrefix "41" 4.1rem null,
   $fontSizesClassPrefix "61" 6.1rem null,
@@ -189,9 +191,9 @@ $fontSizes: (
 
 $fontWeights: (
   $fontWeightsClassPrefix "inherit" inherit null,
-  $fontWeightsClassPrefix "hairline" 100 null,
-  //$fontWeightsClassPrefix "thin" 200 null,
-  //$fontWeightsClassPrefix "light" 300 'no-states',
+  // $fontWeightsClassPrefix "hairline" 100 null,
+  // $fontWeightsClassPrefix "thin" 200 null,
+  $fontWeightsClassPrefix "light" 300 'no-states',
   $fontWeightsClassPrefix "regular" 400 'states',
   $fontWeightsClassPrefix "medium" 500 'states',
   $fontWeightsClassPrefix "semiBold" 600 'states',
@@ -211,7 +213,8 @@ $lineHeights: (
 $letterSpacings: (
   // $letterSpacingsClassPrefix "tight" -0.05em,
   $letterSpacingsClassPrefix "base" $defaultLetterSpacing,
-  $letterSpacingsClassPrefix "md" 0.07em,
+  $letterSpacingsClassPrefix "md" 0.12em,
+  $letterSpacingsClassPrefix "lg" 0.25em,
   // $letterSpacingsClassPrefix "lg" 0.12rem,
   // $letterSpacingsClassPrefix "xl" 0.12rem,
   $letterSpacingsClassPrefix "xxl" 1.2rem,
