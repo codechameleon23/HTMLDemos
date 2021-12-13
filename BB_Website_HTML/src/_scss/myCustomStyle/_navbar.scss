@@ -1,4 +1,4 @@
-$headerHeight: 12.678rem;
+$headerHeight: 10.6rem;
 $headerHeight_lg: 21rem;
 
 .navbar {
@@ -41,10 +41,13 @@ $headerHeight_lg: 21rem;
     cursor: pointer;
     letter-spacing: 0.12em;
 
-    .nav-link {
-      border-bottom: .4rem solid;
-      border-bottom-color: transparent;
-      transition: all .45s 0s ease-in-out;
+    @media (min-width: $bp_lg) {
+
+      .nav-link {
+        border-bottom: .4rem solid;
+        border-bottom-color: transparent;
+        transition: all .45s 0s ease-in-out;
+      }
     }
     
     &:hover, &.is-active, &.is-open {
@@ -52,6 +55,12 @@ $headerHeight_lg: 21rem;
       @media (min-width: $bp_lg) {
         .nav-link {
           border-bottom-color: $color-secondary;
+        }
+      }
+    }
+    &.is-active, &.is-open {
+      @media (min-width: $bp_lg) {
+        .nav-link {
           font-weight: 700;
         }
       }

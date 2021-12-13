@@ -24,6 +24,7 @@
          navBarClose();
       } else {
          navBarOpen();
+         searchBarClose();
       }
    });
 
