@@ -472,7 +472,7 @@ button.mfp-arrow {
 .article-full-card {
   h2,
   h3 {
-    font-size: 3.2rem;
+    font-size: 4.1rem;
     text-transform: uppercase;
     font-weight: 600;
   }
@@ -484,7 +484,7 @@ button.mfp-arrow {
 }
 
 .testimonials-card {
-  font-size: 2.1rem;
+  // font-size: 2.1rem;
   h3 {
     font-weight: 700;
     letter-spacing: normal;
@@ -514,7 +514,7 @@ button.mfp-arrow {
   // .card-body {
   //   font-size: 1.7rem;
   //   h1, h2, h3, h4 {
-  //    text-transform: uppercase; 
+  //    text-transform: uppercase;
   //   }
   // }
   .roll-over {
@@ -653,45 +653,44 @@ button.mfp-arrow {
 .filter-tabs {
   list-style: none;
   display: flex;
+  align-items: center;
   justify-content: center;
   li {
-    font-size: 2.1rem;
-    font-weight: 500;
-    padding: 1.5rem;
-    position: relative;
-    cursor: pointer;
-    text-transform: uppercase;
-    display: inline-block;
-
-    &.active,
-    &:hover {
+    span {
       font-weight: 700;
-      cursor: default;
+    }
+    a {
+      font-size: 2.1rem;
+      padding: 1.5rem;
+      position: relative;
+      text-transform: uppercase;
+      display: inline-block;
+    }
+
+    &.active, &:hover {
+      a {
+        font-weight: 700;
+        cursor: default;
+      }
     }
     &.active {
-      border-bottom-width: 2px;
+      border-bottom-width: 0.3rem;
       border-bottom-style: solid;
     }
   }
   &.primary {
-    li {
-      &.active {
-        border-bottom-color: $color-primary;
-      }
+    li.active {
+      border-bottom-color: $color-primary;
     }
   }
   &.secondary {
-    li {
-      &.active {
-        border-bottom-color: $color-secondary;
-      }
+    li.active {
+      border-bottom-color: $color-secondary;
     }
   }
   &.tertiary {
-    li {
-      &.active {
-        border-bottom-color: $color-tertiary;
-      }
+    li.active {
+      border-bottom-color: $color-tertiary;
     }
   }
   &.quaternary {
