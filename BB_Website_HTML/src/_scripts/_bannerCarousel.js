@@ -5,7 +5,6 @@
     $(".jsBannerCarousel").each(function () {
       var jsBannerCarousel = $(this);
       var isAutoPlay = jsBannerCarousel.data('auto-play');
-      console.log('isAutoPlay', isAutoPlay);
       var carouselOuter = jsBannerCarousel.closest('.carousel-outer');
       var jsBannerCarouselPrv = carouselOuter.find('.jsCarouselPrv');
       var jsBannerCarouselNxt = carouselOuter.find('.jsCarouselNxt');
