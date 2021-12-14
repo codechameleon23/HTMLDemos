@@ -33,5 +33,7 @@
    // });
 
    $(window).on('resize', function () {
-      navBarClose();
+      if (getViewportWidth() > 991) {
+         navBarClose();
+      }
    });
