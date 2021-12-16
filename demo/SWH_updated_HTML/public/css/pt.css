@@ -151,10 +151,9 @@
   to { -webkit-transform: translateY(100%);
     transform: translateY(100%); } }
 
-@-webkit-keyframes moveFromBottom { to {} from { -webkit-transform: translateY(100%); } }
+@-webkit-keyframes moveFromBottom { from { -webkit-transform: translateY(100%); } to {-webkit-transform: translateY(0);} }
 
-@keyframes moveFromBottom { to {} from { -webkit-transform: translateY(100%);
-    transform: translateY(100%); } }
+@keyframes moveFromBottom { from { -webkit-transform: translateY(100%); transform: translateY(100%); } to { -webkit-transform: translateY(0); transform: translateY(0); } }
 
 @-webkit-keyframes fade { from { }
   to { opacity: .3; } }
