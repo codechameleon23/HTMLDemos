@@ -42,7 +42,7 @@ const SRC_SELECT_IMG = SRC_IMG_PATH+"/**/*.*";
 const PROJECT_JS_LIST = [
   ROOT_JS_PATH+'/jquery-3.3.1.min.js',
   // ROOT_JS_PATH+'/magnific.popup.min.js',
-  // ROOT_JS_PATH+'/jquery.popupoverlay.js',
+  ROOT_JS_PATH+'/jquery.popupoverlay.js',
   // ROOT_JS_PATH+'/jquery.mapify.min.js',
   // ROOT_JS_PATH+'/jquery-doubletaptogo.min.js',
   // ROOT_JS_PATH+'/owl.carousel.min.js',
@@ -50,7 +50,7 @@ const PROJECT_JS_LIST = [
   ROOT_JS_PATH+'/animate.on.scroll.min.js',
   // ROOT_JS_PATH+'/flatpickr.min.js',
   // ROOT_JS_PATH+'/ion.rangeSlider.min.js',
-  // ROOT_JS_PATH+'/stackedrows.min.js',
+  ROOT_JS_PATH+'/stackedrows.min.js',
   // ROOT_JS_PATH+'/feather.min.js',
   // ROOT_JS_PATH+'/moment.min.js',
 
@@ -64,12 +64,12 @@ const PROJECT_JS_LIST = [
   // SRC_JS_PATH+'/_subMenuDropdown.js',
   // SRC_JS_PATH+'/_bannerCarousel.js',
   // SRC_JS_PATH+'/_itemCarousel.js',
-  // SRC_JS_PATH+'/_popup.js',
+  SRC_JS_PATH+'/_popup.js',
   // SRC_JS_PATH+'/_magnificPopup.js',
   SRC_JS_PATH+'/_aos.js',
-  // SRC_JS_PATH+'/_accordion.js',
+  SRC_JS_PATH+'/_accordion.js',
   // SRC_JS_PATH+'/_galleryFilter.js',
-  // SRC_JS_PATH+'/_tableStackedRows.js',
+  SRC_JS_PATH+'/_tableStackedRows.js',
   SRC_JS_PATH+'/_myScript.js',
   SRC_JS_PATH+'/_docReadyEnds.js',
   SRC_JS_PATH+'/_iphonePageHack.js',
@@ -77,6 +77,7 @@ const PROJECT_JS_LIST = [
 
 const PROJECT_PAGES_LIST = [
   './src/index.html',
+  './src/summit.html',
 ]
 
 function CSS_OPERATION() {

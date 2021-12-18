@@ -21,6 +21,8 @@ $color-text: $color1;
 $color-primary: $color1;
 $color-secondary: $color2;
 $color-light: $color3;
+$color-light-1: mix(white, $color-primary, 70%);
+$color-light-2: mix(white, $color-primary, 80%);
 
 $color-text-placeholder: rgba($color-text, .5);
 $color-input-text: $color-primary;
@@ -82,6 +84,8 @@ $bgColors: (
   $bgColorsClassPrefix "secondary" $color-secondary 'states' 'no-parent' null,
   //$bgColorsClassPrefix "dark" $color-dark 'states' 'no-parent' null,
   $bgColorsClassPrefix "light" $color-light 'states' 'no-parent' null,
+  $bgColorsClassPrefix "light-1" $color-light-1 'states' 'no-parent' null,
+  $bgColorsClassPrefix "light-2" $color-light-2 'states' 'no-parent' null,
   //$bgColorsClassPrefix "black" $color-black 'states' 'no-parent' null,
   $bgColorsClassPrefix "white" $color-white 'states' 'no-parent' null,
   //$bgColorsClassPrefix "darker" $color-darker 'states' 'no-parent' null,
@@ -142,6 +146,7 @@ $fontSizes: (
   $fontSizesClassPrefix "inherit" inherit null,
   $fontSizesClassPrefix "16" 1.6rem null,
   $fontSizesClassPrefix "18" 1.8rem null,
+  $fontSizesClassPrefix "19" 1.9rem null,
   $fontSizesClassPrefix "20" 2.0rem null,
   $fontSizesClassPrefix "24" 2.4rem null,
   $fontSizesClassPrefix "28" 2.8rem null,
@@ -164,7 +169,7 @@ $fontWeights: (
 );
 
 $lineHeights: (
-  //$lineHeightsClassPrefix "none" 1,
+  $lineHeightsClassPrefix "none" 1,
   //$lineHeightsClassPrefix "tight" 1,
   //$lineHeightsClassPrefix "tight" 1.25,
   //$lineHeightsClassPrefix "normal" "normal",
@@ -184,6 +189,7 @@ $paddings: (
   $paddingsClassPrefix "5" .5rem,
   $paddingsClassPrefix "10" 1.0rem,
   $paddingsClassPrefix "15" 1.5rem,
+  $paddingsClassPrefix "20" 2.0rem,
   $paddingsClassPrefix "25" 2.5rem,
   $paddingsClassPrefix "35" 3.5rem,
   $paddingsClassPrefix "40" 4.0rem,
@@ -206,6 +212,7 @@ $margins: (
   $marginsClassPrefix "5" .5rem,
   $marginsClassPrefix "10" 1.0rem,
   $marginsClassPrefix "15" 1.5rem,
+  $marginsClassPrefix "20" 2.0rem,
   $marginsClassPrefix "25" 2.5rem,
   $marginsClassPrefix "35" 3.5rem,
   $marginsClassPrefix "40" 4.0rem,
@@ -227,6 +234,7 @@ $negativeMargin: (
   $negativeMarginClassPrefix "5" .5rem,
   $negativeMarginClassPrefix "10" 1.0rem,
   $negativeMarginClassPrefix "15" 1.5rem,
+  $negativeMarginClassPrefix "20" 2.0rem,
   $negativeMarginClassPrefix "25" 2.5rem,
   $negativeMarginClassPrefix "35" 3.5rem,
   $negativeMarginClassPrefix "40" 4.0rem,
@@ -264,7 +272,7 @@ $shadows: (
 $aspectRatiosClassNamePrefix: "ratio";
 $aspectRatios: (
   $aspectRatiosClassNamePrefix "logo" 656 217,
-  //$aspectRatiosClassNamePrefix "custom" 270 190,
+  $aspectRatiosClassNamePrefix "7x4" 7 4.22,
   $aspectRatiosClassNamePrefix "1x1" 1 1,
   //$aspectRatiosClassNamePrefix "3x2" 3 1,
   $aspectRatiosClassNamePrefix "4x3" 4 3,
@@ -276,11 +284,20 @@ $aspectRatios: (
 
 $columnCount: ();
 $columnCount: (0, 2, 4);
+
+$columnCountGapsClassPrefix: "col-gap";
+$columnCountGaps: (
+  $columnCountGapsClassPrefix "20" 2rem,
+  $columnCountGapsClassPrefix "30" 3rem,
+  $columnCountGapsClassPrefix "40" 4rem,
+);
+
 $hasColsSizes: ();
 
 //74,
 $iconsSizes: (
   $iconsSizesClassNamePrefix null 2.6rem,
+  $iconsSizesClassNamePrefix "16" 1.6rem,
   $iconsSizesClassNamePrefix "logo" 65.6rem,
   $iconsSizesClassNamePrefix "logo_sm" 31.0rem,
   //$iconsSizesClassNamePrefix "unstuck-design" 20.0rem,
@@ -303,7 +320,7 @@ $borderRadiusClassPrefix: "rounded";
 $borderRadiuses: (
   // $borderRadiusClassPrefix null 2px,
   $borderRadiusClassPrefix "full" 9999px,
-  // $borderRadiusClassPrefix "xs" 4px,
+  $borderRadiusClassPrefix "5" 5px,
 );
 
 // Container widths

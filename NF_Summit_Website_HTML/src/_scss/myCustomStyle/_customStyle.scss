@@ -82,22 +82,22 @@ a{
   }
 }
 
-//.img-rollover {
-//  overflow: hidden;
-//  .card-image, .play-button {
-//    transition: all .35s 0s;
-//  }
-//  .image-rollover-parent:hover &,
-//  &:hover {
-//    // background-size: 28rem;
-//    .card-image {
-//      transform: scale(1.045);
-//    }
-//    //.play-button{
-//    //  transform: scale(0.955);
-//    //}
-//  }
-//}
+.img-rollover {
+ overflow: hidden;
+ .card-image, .play-button {
+   transition: all .35s 0s;
+ }
+ .image-rollover-parent:hover &,
+ &:hover {
+   // background-size: 28rem;
+   .card-image {
+     transform: scale(1.045);
+   }
+   //.play-button{
+   //  transform: scale(0.955);
+   //}
+ }
+}
 
 
 .brand-logo,
@@ -364,4 +364,18 @@ nav ul li a.current {
 
 .container {
   width: calc(100% - 4rem);
+}
+
+
+.stripe{
+  .tbody {
+    .tr:nth-child(even){
+      background-color: $color-light-1;
+    }
+  }
+  .th, .td {
+    border-width: 0 0.1rem;
+    border-color: $color-light;
+    border-style: solid;
+  }
 }
