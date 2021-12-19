@@ -4509,6 +4509,10 @@ ol.list li:before
     {
         padding-top: 75%;
     }
+    .ratio-16x9:before
+    {
+        padding-top: 56.25%;
+    }
     .ratio-7x4:before
     {
         padding-top: 60.28571%;
@@ -9157,6 +9161,10 @@ ol.list li:before
     .sm\:ratio-4x3:before
     {
         padding-top: 75%;
+    }
+    .sm\:ratio-16x9:before
+    {
+        padding-top: 56.25%;
     }
     .sm\:ratio-7x4:before
     {
@@ -13807,6 +13815,10 @@ ol.list li:before
     {
         padding-top: 75%;
     }
+    .md\:ratio-16x9:before
+    {
+        padding-top: 56.25%;
+    }
     .md\:ratio-7x4:before
     {
         padding-top: 60.28571%;
@@ -18455,6 +18467,10 @@ ol.list li:before
     .lg\:ratio-4x3:before
     {
         padding-top: 75%;
+    }
+    .lg\:ratio-16x9:before
+    {
+        padding-top: 56.25%;
     }
     .lg\:ratio-7x4:before
     {
@@ -23105,6 +23121,10 @@ ol.list li:before
     {
         padding-top: 75%;
     }
+    .xl\:ratio-16x9:before
+    {
+        padding-top: 56.25%;
+    }
     .xl\:ratio-7x4:before
     {
         padding-top: 60.28571%;
@@ -27754,6 +27774,10 @@ ol.list li:before
     {
         padding-top: 75%;
     }
+    .xxl\:ratio-16x9:before
+    {
+        padding-top: 56.25%;
+    }
     .xxl\:ratio-7x4:before
     {
         padding-top: 60.28571%;
@@ -30799,6 +30823,60 @@ nav ul li a.current
 .tabs-collection .tabs-container:not(.active)
 {
     display: none;
+}
+
+.popup_visible .popup
+{
+    -webkit-animation: fade-in-fwd .6s cubic-bezier(.39, .575, .565, 1) both;
+            animation: fade-in-fwd .6s cubic-bezier(.39, .575, .565, 1) both;
+}
+
+.popup
+{
+    max-height: calc(100% - 2rem);
+}
+.popup_wrapper
+{
+    -webkit-perspective: 500px;
+            perspective: 500px;
+    -webkit-perspective-origin: 50% 50%;
+            perspective-origin: 50% 50%;
+}
+
+@-webkit-keyframes fade-in-fwd
+{
+    0%
+    {
+        -webkit-transform: translateZ(-20px);
+                transform: translateZ(-20px);
+
+        opacity: 0;
+    }
+    100%
+    {
+        -webkit-transform: translateZ(0);
+                transform: translateZ(0);
+
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-fwd
+{
+    0%
+    {
+        -webkit-transform: translateZ(-20px);
+                transform: translateZ(-20px);
+
+        opacity: 0;
+    }
+    100%
+    {
+        -webkit-transform: translateZ(0);
+                transform: translateZ(0);
+
+        opacity: 1;
+    }
 }
 
 /*Custom styling*/

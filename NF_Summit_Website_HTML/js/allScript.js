@@ -112,12 +112,15 @@ if($(".tabs-collection").length > 0){
   window.addEventListener("scroll", function (event) {
     var fromTop = window.scrollY + 10;
     Array.prototype.slice.call(mainNavLinks).forEach(function (link) {
-      var section = document.querySelector(link.hash);
-
-      if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
-        link.classList.add("current");
-      } else {
-        link.classList.remove("current");
+      if(link.hash){
+        var section = document.querySelector(link.hash);
+        if(section){
+          if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+            link.classList.add("current");
+          } else {
+            link.classList.remove("current");
+          }
+        }
       }
     });
   });
