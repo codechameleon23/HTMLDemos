@@ -379,3 +379,31 @@ nav ul li a.current {
     border-style: solid;
   }
 }
+
+.tabs-collection {
+  .tab {
+    .plus {
+      display: inline;
+    }
+    .down {
+      display: none;
+    }
+    &.active {
+      >  a {
+        background-color: $color-secondary;
+        color: $color-white;
+      }
+      .plus {
+        display: none;
+      }
+      .down {
+        display: inline;
+      }
+    }
+  }
+  .tabs-container {
+    &:not(.active) {
+      display: none;
+    }
+  }
+}
