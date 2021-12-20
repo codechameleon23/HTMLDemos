@@ -17,8 +17,6 @@ $breakPoint: null;
 @include getBorderColors();
 /* Font Weight classes */
 @include getFontWeightClasses();
-/* Border Radius classes */
-@include getBorderRadiusClasses();
 /* Letter Spacing classes */ 
 @include getLetterSpacingClasses();
 /* Line Height classes */ 
@@ -32,6 +30,8 @@ $breakPoint: null;
 
 @each $bp in $breakPoints {
   @media (min-width: #{nth($bp, 2)}) {
+    /* Border Radius classes */
+    @include getBorderRadiusClasses(nth($bp, 1));
     /* Border Style classes */
     @include getBorderStyleClasses(nth($bp, 1));
     /* Border Width classes */
