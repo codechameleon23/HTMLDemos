@@ -1,0 +1,315 @@
+<header class="header w-full pos-fixed pin-t pin-x flex-col z-50 bg-white">
+   <div class="container lg:container-xl mx-auto">
+      <div class="flex-row lg:flex-col align-start justify-center">
+         <a class="brand-logo mb-30 mt-20 lg:mt-40 lg:ml-auto mr-auto" href="index.html">
+            <span class="icon icon-logo-sm lg:icon-logo ratio-logo">
+               <span>
+                  <img class="w-full h-full object-contain" src="./images/brand-logo.png">
+               </span>
+            </span>
+         </a>
+         <div class="lg:container lg:container-xl lg:mx-auto flex-row align-center justify-space-between lg:pos-fixed pin-x pin-t lg:w-full lg:py-15 lg:f-size-16">
+            <div class="d-hidden lg:d-inline-block flex-row align-center">
+               <a class="no-underline hover:f-color-secondary f-weight-medium" href="mailto:sales@basketbasket.co.uk">sales@basketbasket.co.uk</a>
+               <span class="f-color-secondary px-10">|</span>
+               <a class="no-underline hover:f-color-secondary f-weight-medium" href="tel:01420 85112">01420 85112</a>
+            </div>
+            <div class="flex-row -mr-15 lg:mr-0">
+               <!-- Search -->
+               <a href="javascript:void(0);" class="search-toggle no-underline hover:f-color-secondary f-weight-medium flex-row align-center py-20 px-20 md:py-30 sm:px-30 lg:py-0 lg:px-10">
+                  <i class="icon lg:icon-18 flex-col justify-center">
+                     <svg xmlns="http://www.w3.org/2000/svg" class="my-auto" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"
+                        viewBox="0 0 24 24">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                     </svg>
+                  </i>
+                  <span class="d-hidden lg:d-inline-block pl-10">Search</span>
+               </a>
+               <span class="f-color-secondary px-10 d-hidden lg:d-inline-block">|</span>
+
+               <!-- Login -->
+               <a href="#" class="no-underline hover:f-color-secondary hover:f-color-secondary f-weight-medium d-hidden lg:d-inline-block py-20 px-20 md:py-30 sm:px-30 lg:py-0 lg:px-10">
+                  <span class="px-10">Stockist Login</span>
+               </a>
+               <span class="f-color-secondary px-10 d-hidden lg:d-inline-block">|</span>
+
+               <!-- Cart -->
+               <a href="check-out.html" class="no-underline hover:f-color-secondary hover:f-color-secondary f-weight-medium py-20 px-10 sm:py-30 lg:px-30 lg:py-0 lg:px-10">
+                  <div class="pos-relative">
+                     <i class="icon lg:icon-18 flex-col justify-center">
+                        <svg fill="currentColor" class="my-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.7 30.5">
+                           <path
+                              d="M28.1 28.7h-4L26 13.6h4.8l-2.7 15.1zM5 13.6h4.2l1.7 15.1H7.7L5 13.6zm7.7 15.1L11 13.6h5.5v15.1h-3.8zm5.7 0V13.6h5.7l-1.9 15.1h-3.8zm9.3-16.9L23.4.6c-.2-.5-.7-.7-1.2-.5-.5.2-.7.7-.5 1.2l4 10.6h-16l4.2-10.3c.2-.5 0-1-.5-1.2-.5-.2-1 0-1.2.5l-4.4 11H.9c-.5 0-.9.4-.9.9s.4.9.9.9h2.2l3 16.2c.1.4.5.7.9.7h21.9c.4 0 .8-.3.9-.8l2.8-16.2h2.3c.5 0 .9-.4.9-.9s-.4-.9-.9-.9h-7.2z" />
+                        </svg>
+                     </i>
+                     <span class="icon icon-18 -mt-5 -mr-5 rounded-full bg-secondary pos-absolute pin-t pin-r f-color-white f-size-10 border shadow-md">
+                        <b>10</b>
+                     </span>
+                  </div>
+               </a>
+
+               <!-- Hamburger menu -->
+               <div class="navbar-toggle py-20 px-20 md:p-30 d-inline-flex lg:d-hidden z-50 transition-all">
+                  <i class="icon icon-22 my-auto hamburger pointer-events-auto">
+                     <div>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                     </div>
+                  </i>
+               </div>
+            </div>
+         </div>
+
+         <nav class="
+            navbar 
+            pos-fixed 
+            pin-x 
+            z-30
+            bg-white
+            lg:pin-none
+            lg:pos-static
+            lg:mx-auto
+            ">
+            <div class="container lg:container-xl mx-auto pt-15 pb-15 lg:pt-0 lg:pb-0 lg:w-full">
+               <div class="flex-col lg:align-end">
+                  <ul class="list-reset flex-col lg:flex-row -mx-15 lg:-mx-10 pos-relative 
+                     f-size-22 f-weight-bold f-spacing-sm lg:f-size-16 lg:f-weight-regular lg:f-spacing-md uppercase">
+                     <li class="@@if(context.basket){is-active} px-15 ">
+                        <div class="submenu-trigger nav-link py-10 px-10 lg:px-0 flex-row align-center justify-space-between">
+                           <span>
+                              BASKETS
+                           </span>
+                           <span class="icon icon-28 lg:icon-15 ml-8 lg:ml-2 flex-none f-color-secondary">
+                              <span class="down-icon">
+                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-down" viewBox="0 0 24 24">
+                                    <path d="m6 9 6 6 6-6" />
+                                 </svg>
+                              </span>
+                              <span class="close-icon">
+                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"
+                                    viewBox="0 0 24 24">
+                                    <path d="M18 6 6 18M6 6l12 12" />
+                                 </svg>
+                              </span>
+                           </span>
+                        </div>
+                        <!-- Submenu -->
+                        <div class="submenu pos-fixed pin-x pin-t pin-b z-40 bg-white">
+                           <div class="container-fluid lg:container-lg mx-auto bg-white h-full lg:h-auto pt-15 pb-15 lg:shadow-lg">
+                              <div class="p-10 flex-row align-center justify-space-between lg:d-hidden">
+                                 <button class="back-button uppercase f-color-inherit flex-row align-center f-weight-bold">
+                                    <span class="icon icon-28 lg:icon-15 mr-8 flex-none f-color-secondary">
+                                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                          class="feather feather-chevron-down" viewBox="0 0 24 24">
+                                          <path d="m6 9 6 6 6-6" />
+                                       </svg>
+                                    </span>
+                                    BASKETS
+                                 </button>
+                              </div>
+                              <div class="flex-row">
+                                 <div class="col-12 lg:col-4">
+                                    <ul class="list-reset flex-col pl-20 lg:pl-0
+                                       f-size-22 f-spacing-md f-weight-regular uppercase
+                                       lg:f-weight-semiBold lg:f-size-19 lg:f-spacing-sm">
+                                       <li class="px-15">
+                                          <a href="#" class="flex-row justify-space-between px-10 py-10 w-full">
+                                             <span>Morocco</span>
+                                             <span class="icon icon-28 lg:icon-15 ml-8 lg:ml-2 flex-none f-color-secondary lg:d-hidden">
+                                                <span class="down-icon">
+                                                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                      class="feather feather-chevron-down" viewBox="0 0 24 24">
+                                                      <path d="m6 9 6 6 6-6" />
+                                                   </svg>
+                                                </span>
+                                             </span>
+                                          </a>
+                                       </li>
+                                       <li class="px-15">
+                                          <a href="#" class="flex-row justify-space-between px-10 py-10 w-full">
+                                             <span>Madagascar</span>
+                                             <span class="icon icon-28 lg:icon-15 ml-8 lg:ml-2 flex-none f-color-secondary lg:d-hidden">
+                                                <span class="down-icon">
+                                                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                      class="feather feather-chevron-down" viewBox="0 0 24 24">
+                                                      <path d="m6 9 6 6 6-6" />
+                                                   </svg>
+                                                </span>
+                                             </span>
+                                          </a>
+                                       </li>
+                                       <li class="px-15">
+                                          <a href="#" class="flex-row justify-space-between px-10 py-10 w-full">
+                                             <span>Ghana</span>
+                                             <span class="icon icon-28 lg:icon-15 ml-8 lg:ml-2 flex-none f-color-secondary lg:d-hidden">
+                                                <span class="down-icon">
+                                                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                      class="feather feather-chevron-down" viewBox="0 0 24 24">
+                                                      <path d="m6 9 6 6 6-6" />
+                                                   </svg>
+                                                </span>
+                                             </span>
+                                          </a>
+                                       </li>
+                                       <li class="px-15">
+                                          <a href="#" class="flex-row justify-space-between px-10 py-10 w-full">
+                                             <span>Shopping BasketS</span>
+                                             <span class="icon icon-28 lg:icon-15 ml-8 lg:ml-2 flex-none f-color-secondary lg:d-hidden">
+                                                <span class="down-icon">
+                                                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                      class="feather feather-chevron-down" viewBox="0 0 24 24">
+                                                      <path d="m6 9 6 6 6-6" />
+                                                   </svg>
+                                                </span>
+                                             </span>
+                                          </a>
+                                       </li>
+                                       <li class="px-15">
+                                          <a href="#" class="flex-row justify-space-between px-10 py-10 w-full">
+                                             <span>Beach BasketS</span>
+                                             <span class="icon icon-28 lg:icon-15 ml-8 lg:ml-2 flex-none f-color-secondary lg:d-hidden">
+                                                <span class="down-icon">
+                                                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                      class="feather feather-chevron-down" viewBox="0 0 24 24">
+                                                      <path d="m6 9 6 6 6-6" />
+                                                   </svg>
+                                                </span>
+                                             </span>
+                                          </a>
+                                       </li>
+                                       <li class="px-15">
+                                          <a href="#" class="flex-row justify-space-between px-10 py-10 w-full">
+                                             <span>Children’s</span>
+                                             <span class="icon icon-28 lg:icon-15 ml-8 lg:ml-2 flex-none f-color-secondary lg:d-hidden">
+                                                <span class="down-icon">
+                                                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                      class="feather feather-chevron-down" viewBox="0 0 24 24">
+                                                      <path d="m6 9 6 6 6-6" />
+                                                   </svg>
+                                                </span>
+                                             </span>
+                                          </a>
+                                       </li>
+                                       <li class="px-15">
+                                          <a href="#" class="flex-row justify-space-between px-10 py-10 w-full">
+                                             <span>Vegan</span>
+                                             <span class="icon icon-28 lg:icon-15 ml-8 lg:ml-2 flex-none f-color-secondary lg:d-hidden">
+                                                <span class="down-icon">
+                                                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                      class="feather feather-chevron-down" viewBox="0 0 24 24">
+                                                      <path d="m6 9 6 6 6-6" />
+                                                   </svg>
+                                                </span>
+                                             </span>
+                                          </a>
+                                       </li>
+                                       <li class="px-15">
+                                          <a href="#" class="flex-row justify-space-between px-10 py-10 w-full">
+                                             <span>SALE</span>
+                                             <span class="icon icon-28 lg:icon-15 ml-8 lg:ml-2 flex-none f-color-secondary lg:d-hidden">
+                                                <span class="down-icon">
+                                                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                      class="feather feather-chevron-down" viewBox="0 0 24 24">
+                                                      <path d="m6 9 6 6 6-6" />
+                                                   </svg>
+                                                </span>
+                                             </span>
+                                          </a>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <div class="col-12 lg:col-8 d-hidden lg:d-inline-block">
+                                    <ul class="list-reset flex-row">
+                                       <li class="col-6 px-15">
+                                          <a href="products.html"
+                                             class="media-card w-full flex-col pb-10 rollover-wrap opacity-parent-0 hover:opacity-parent-100 hover:bg-white flex-stretch flex-col transition-all no-underline">
+                                             <figure class="ratio ratio-1x1 image-placeholder pos-relative bg-light flex-none oveflow-hidden ">
+                                                <div class="rollover-effect pos-absolute pin bg-center bg-contain bg-center" style="background-image: url('./images/iStock-496060258.jpg');"></div>
+                                             </figure>
+                                             <section class="card-body pt-20 flex-auto flex-col">
+                                                <div class="text-wrap">
+                                                   <h3 class="f-size-19 f-weight-semiBold f-spacing-ms uppercase">GIFTS FEATURE</h3>
+                                                </div>
+                                             </section>
+                                          </a>
+                                       </li>
+                                       <li class="col-6 px-15">
+                                          <a href="products.html"
+                                             class="media-card w-full flex-col pb-10 rollover-wrap opacity-parent-0 hover:opacity-parent-100 hover:bg-white flex-stretch flex-col transition-all no-underline">
+                                             <figure class="ratio ratio-1x1 image-placeholder pos-relative bg-light flex-none oveflow-hidden ">
+                                                <div class="rollover-effect pos-absolute pin bg-center bg-contain bg-center"
+                                                   style="background-image: url('./images/Morocco-Double-Handle-Basket-beach.jpg');"></div>
+                                             </figure>
+                                             <section class="card-body pt-20 flex-auto flex-col">
+                                                <div class="text-wrap">
+                                                   <h3 class="f-size-19 f-weight-semiBold f-spacing-ms uppercase">bEST SELLERS</h3>
+                                                </div>
+                                             </section>
+                                          </a>
+                                       </li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </li>
+                     <li class="@@if(context.household){is-active} px-15 ">
+                        <a class="nav-link py-10 px-10 lg:px-0" href="#">Household</a>
+                     </li>
+                     <li class=" @@if(context.accessories){is-active} px-15 ">
+                        <a class="nav-link py-10 px-10 lg:px-0" href="#">ACCESSORIES</a>
+                     </li>
+                     <li class=" @@if(context.news){is-active} px-15 ">
+                        <a class="nav-link py-10 px-10 lg:px-0" href="news.html">news</a>
+                     </li>
+                     <li class="@@if(context.about){is-active} px-15 ">
+                        <a class="nav-link py-10 px-10 lg:px-0" href="#">About</a>
+                     </li>
+                     <li class="@@if(context.contact){is-active} px-15 ">
+                        <a class="nav-link py-10 px-10 lg:px-0" href="contact-us.html">contact</a>
+                     </li>
+                     <li class="@@if(context.stockist){is-active} px-15 ">
+                        <a class="nav-link py-10 px-10 lg:px-0" href="#">become a stockist</a>
+                     </li>
+                  </ul>
+                  <div class="lg:d-hidden">
+                     <div class="border-b border-grey my-20"></div>
+                     <ul class="list-reset flex-col lg:flex-row -mx-15 lg:-mx-10 pos-relative">
+                        <li class="px-15">
+                           <a class="px-10 py-10 f-color-secondary f-size-22 f-spacing-md uppercase" href="#">Stockist Login</a>
+                        </li>
+                        <li class="px-15">
+                           <a class="px-10 py-10 f-color-secondary f-size-22 f-spacing-md uppercase" href="contact-us.html">CONTACT US</a>
+                        </li>
+                        <li class="px-15">
+                           <a class="px-10 py-10 f-size-22 f-spacing-xs" href="mailto:sales@basketbasket.co.uk">sales@basketbasket.co.uk</a>
+                        </li>
+                        <li class="px-15">
+                           <a class="px-10 py-10 f-size-22 f-spacing-xs" href="tel:01420 85112">01420 85112</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </nav>
+      </div>
+   </div>
+</header>
+<section class="w-full search-bar pos-fixed z-10 transition-all shadow-md bg-light">
+   <form class="w-full flex-row shadow-inner-md pos-relative">
+      <input type="text" placeholder="Search..." name="search" class="f-size-14 f-weight-bold f-spacing-md uppercase w-full p-20 flex-stretch transition-all" />
+      <button class="p-10 flex-none f-color-inherit hover:bg-secondary hover:f-color-white pos-absolute pin-r pin-y">
+         <i class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"
+               viewBox="0 0 24 24">
+               <circle cx="11" cy="11" r="8"></circle>
+               <path d="m21 21-4.35-4.35"></path>
+            </svg>
+         </i>
+      </button>
+   </form>
+</section>

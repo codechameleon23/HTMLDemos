@@ -1,0 +1,412 @@
+$fontRelatedClassNamePrifix: 'f-';
+$fontFamilyClassNamePrefix: "#{$fontRelatedClassNamePrifix}family";
+$textColorsClassPrefix: "#{$fontRelatedClassNamePrifix}color";
+$fontSizesClassPrefix: "#{$fontRelatedClassNamePrifix}size";
+$fontWeightsClassPrefix: "#{$fontRelatedClassNamePrifix}weight";
+$lineHeightsClassPrefix: "#{$fontRelatedClassNamePrifix}height";
+$letterSpacingsClassPrefix: "#{$fontRelatedClassNamePrifix}spacing";
+
+/*ImportFontsonts*/
+ @import "./ImportFonts";
+
+$color-white: #ffffff;
+$color-black: #000000;
+$color-grey: #373636;
+$color-error: #dc2626;
+$color-success: #16a34a;
+$color-warning: #ca8a04;
+
+// brand colors
+$color1: #172042;
+$color2: #cc9440;
+$color3: #030c0f;
+$color4: #f0edee;
+
+$color-text: $color1;
+$color-primary: $color2;
+$color-primary-dark: mix(black, $color-primary, 10%);
+$color-dark: $color3;
+$color-light: $color4;
+
+// $color-text-placeholder: rgba($color-text, .8);
+$color-text-placeholder: $color-primary;
+$color-input-text: $color-primary;
+$defaultPlaceHolderColor: $color-text-placeholder;
+$color-placeholder: mix(white, $color-primary, 96%);
+
+$selectionTextColor: $color-primary;
+//$selectionTextBgColor: rgba($color-primary, .65);
+$selectionTextBgColor: rgba(invert($color-text), .65);
+//$selectionTextBgColor: rgba(#CF995F, .55);
+
+//-------------------------
+
+// $gridSizes: ();
+$orientations: (
+  // landscape\: "landscape",
+  // portrait\: "portrait"
+);
+
+$baseFont: 'roboto', $font_serif;
+$primaryFont: $baseFont;
+$secondaryFont: 'quicksand', sans-serif;
+
+$defaultFont: $baseFont;
+$defaultTextColor: $color-text;
+$defaultFontWeights: 300;
+$defaultFontSize: 1.8rem;
+$defaultFontHeight: 1.29;
+$defaultLetterSpacing: 0;
+
+$fontFamily: (
+  //$fontFamilyClassNamePrefix "default" $defaultFont,
+  $fontFamilyClassNamePrefix "primary" $primaryFont,
+  $fontFamilyClassNamePrefix "secondary" $secondaryFont,
+);
+
+$bp_xs: 460px;
+$bp_sm: 576px;
+$bp_md: 710px;
+$bp_lg: 992px;
+$bp_xl: 1200px;
+$bp_xxl: 1400px;
+$breakPoints: (
+  null 0, 
+  sm\: $bp_sm, 
+  md\: $bp_md, 
+  lg\: $bp_lg, 
+  xl\: $bp_xl,
+  xxl\: $bp_xxl
+);
+
+$states: (
+  null null,
+  hover\: ":hover",
+  focus\: ":focus",
+  focus-within\: ":focus-within",
+  // active\: null,
+);
+
+$gradient-1: linear-gradient(0deg, rgba(2,0,0,0.7) 0%, rgba(240,240,240,0.06) 60%, rgba(255,255,255,0) 100%);;
+$bgColors: (
+  $bgColorsClassPrefix "$color-placeholder" $color-placeholder 'states' 'no-parent' null,
+  $bgColorsClassPrefix "inherit" inherit 'states' 'no-parent' null,
+  $bgColorsClassPrefix "transparent" transparent 'states' 'no-parent' null,
+  $bgColorsClassPrefix "primary" $color-primary 'states' 'no-parent' null,
+  $bgColorsClassPrefix "primary-dark" $color-primary-dark 'states' 'no-parent' null,
+  $bgColorsClassPrefix "light" $color-light 'states' 'no-parent' null,
+  $bgColorsClassPrefix "dark" $color-dark 'states' 'no-parent' null,
+  $bgColorsClassPrefix "white" $color-white 'states' 'no-parent' null,
+  $bgColorsClassPrefix "black" $color-black 'states' 'no-parent' null,
+  $bgColorsClassPrefix "error" $color-error 'states' 'no-parent' null,
+  $bgColorsClassPrefix "success" $color-success 'states' 'no-parent' null,
+  $bgColorsClassPrefix "warning" $color-warning 'states' 'no-parent' null,
+);
+
+$shadowOverClassPrefix: "overlay";
+$shadowOver: (
+  //$shadowOverClassPrefix 'cover' $gradList-primary 'no-states',
+  // $shadowOverClassPrefix "grad-1" $gradient-1 'states' 'no-parent' null,
+  //$shadowOverClassPrefix 'grad-primary-to-right' $gradList-primary-to-right 'states',
+  //$shadowOverClassPrefix 'grad-secondary' $gradList-secondary 'states',
+  //$shadowOverClassPrefix 'grad-primary-reverse' $gradList-primary-reverse 'states',
+  //$shadowOverClassPrefix 'grad-secondary-reverse' $gradList-secondary-reverse 'states',
+  //$shadowOverClassPrefix 'solid-primary' $gradList-solid-primary 'states',
+  //$shadowOverClassPrefix 'solid-secondary' $gradList-solid-secondary 'states',
+  //$shadowOverClassPrefix "none" none 'no-states',
+);
+
+$themeColor: ();
+
+$borderColors: (
+  $borderColorsClassPrefix "inherit" inherit 'states' 'no-parent' null,
+  $borderColorsClassPrefix "transparent" transparent 'states' 'no-parent' null,
+  $borderColorsClassPrefix "primary" $color-primary 'states' 'no-parent' null,
+  $borderColorsClassPrefix "primary-dark" $color-primary-dark 'states' 'no-parent' null,
+  $borderColorsClassPrefix "light" $color-light 'states' 'no-parent' null,
+  $borderColorsClassPrefix "dark" $color-dark 'states' 'no-parent' null,
+  $borderColorsClassPrefix "white" $color-white 'states' 'no-parent' null,
+  $borderColorsClassPrefix "black" $color-black 'states' 'no-parent' null,
+  $borderColorsClassPrefix "error" $color-error 'states' 'no-parent' null,
+  $borderColorsClassPrefix "success" $color-success 'states' 'no-parent' null,
+  $borderColorsClassPrefix "warning" $color-warning 'states' 'no-parent' null,
+);
+
+$borderWidth: (
+  null 0.1rem 'states' 'no-parent',
+  1 0.1rem 'states' 'no-parent',
+  2 0.2rem 'states' 'no-parent',
+  3 0.3rem 'states' 'no-parent',
+  0 0rem 'no-states' 'no-parent',
+);
+
+
+$textColors: (
+  $textColorsClassPrefix "inherit" inherit 'states' 'no-parent' null,
+  $textColorsClassPrefix "default" $color-text 'states' 'no-parent' null,
+  $textColorsClassPrefix "primary" $color-primary 'states' 'no-parent' null,
+  $textColorsClassPrefix "primary-dark" $color-primary-dark 'states' 'no-parent' null,
+  $textColorsClassPrefix "light" $color-light 'states' 'no-parent' null,
+  $textColorsClassPrefix "dark" $color-dark 'states' 'no-parent' null,
+  $textColorsClassPrefix "white" $color-white 'states' 'no-parent' null,
+  $textColorsClassPrefix "black" $color-black 'states' 'no-parent' null,
+  $textColorsClassPrefix "error" $color-error 'states' 'no-parent' null,
+  $textColorsClassPrefix "success" $color-success 'states' 'no-parent' null,
+  $textColorsClassPrefix "warning" $color-warning 'states' 'no-parent' null,
+);
+
+
+// 15 16 18 19 21 22 23 24 27 31 32 61 96 112
+$fontSizes: (
+  $fontSizesClassPrefix "inherit" inherit null,
+  $fontSizesClassPrefix "8" 0.8rem null,
+  $fontSizesClassPrefix "10" 1.0rem null,
+  $fontSizesClassPrefix "12" 1.2rem null,
+  $fontSizesClassPrefix "14" 1.4rem null,
+  $fontSizesClassPrefix "16" 1.6rem null,
+  $fontSizesClassPrefix "20" 2.0rem null,
+  $fontSizesClassPrefix "24" 2.4rem null,
+  $fontSizesClassPrefix "28" 2.8rem null,
+  $fontSizesClassPrefix "32" 3.2rem null,
+  $fontSizesClassPrefix "36" 3.6rem null,
+  $fontSizesClassPrefix "42" 4.2rem null,
+  $fontSizesClassPrefix "44" 4.4rem null,
+  $fontSizesClassPrefix "48" 4.8rem null,
+  $fontSizesClassPrefix "52" 5.2rem null,
+  $fontSizesClassPrefix "58" 5.8rem null,
+  $fontSizesClassPrefix "64" 6.4rem null,
+  $fontSizesClassPrefix "68" 6.8rem null,
+  $fontSizesClassPrefix "72" 7.2rem null,
+);
+
+$fontWeights: (
+  $fontWeightsClassPrefix "inherit" inherit null,
+  // $fontWeightsClassPrefix "hairline" 100 null,
+  // $fontWeightsClassPrefix "thin" 200 null,
+  $fontWeightsClassPrefix "light" 300 'no-states',
+  $fontWeightsClassPrefix "regular" 400 'states',
+  $fontWeightsClassPrefix "medium" 500 'states',
+  $fontWeightsClassPrefix "semiBold" 600 'states',
+  $fontWeightsClassPrefix "bold" 700 'states',
+  //$fontWeightsClassPrefix "extraBold" 800 null,
+  //$fontWeightsClassPrefix "black" 900 null,
+);
+
+$lineHeights: (
+  $lineHeightsClassPrefix "none" 1,
+  $lineHeightsClassPrefix "tight" 1.2,
+  $lineHeightsClassPrefix "normal" "normal",
+  //$lineHeightsClassPrefix "ease" 1.6,
+  //$lineHeightsClassPrefix "loose" 2
+);
+
+$letterSpacings: (
+  // $letterSpacingsClassPrefix "tight" -0.05em,
+  $letterSpacingsClassPrefix "base" $defaultLetterSpacing,
+  $letterSpacingsClassPrefix "xs" 0.02em,
+  $letterSpacingsClassPrefix "sm" 0.10em,
+  $letterSpacingsClassPrefix "md" 0.14em,
+  $letterSpacingsClassPrefix "lg" 0.15em,
+  $letterSpacingsClassPrefix "xl" 0.25em,
+  $letterSpacingsClassPrefix "xxl" 1.2rem,
+);
+
+$paddings: (
+  $paddingsClassPrefix "1" 0.1rem,
+  $paddingsClassPrefix "2" 0.2rem,
+  $paddingsClassPrefix "4" 0.4rem,
+  $paddingsClassPrefix "8" 0.8rem,
+  $paddingsClassPrefix "12" 1.2rem,
+  $paddingsClassPrefix "16" 1.6rem,
+  $paddingsClassPrefix "20" 2.0rem,
+  $paddingsClassPrefix "24" 2.4rem,
+  $paddingsClassPrefix "28" 2.8rem,
+  $paddingsClassPrefix "32" 3.2rem,
+  $paddingsClassPrefix "36" 3.6rem,
+  $paddingsClassPrefix "40" 4.0rem,
+  $paddingsClassPrefix "64" 6.4rem,
+  $paddingsClassPrefix "72" 7.2rem,
+  $paddingsClassPrefix "96" 9.6rem,
+  $paddingsClassPrefix "0" 0,
+);
+
+$margins: (
+  $marginsClassPrefix "auto" auto,
+  $marginsClassPrefix "1" .1rem,
+  $marginsClassPrefix "2" .2rem,
+  $marginsClassPrefix "4" .4rem,
+  $marginsClassPrefix "8" 0.8rem,
+  $marginsClassPrefix "12" 1.2rem,
+  $marginsClassPrefix "16" 1.6rem,
+  $marginsClassPrefix "20" 2.0rem,
+  $marginsClassPrefix "24" 2.4rem,
+  $marginsClassPrefix "28" 2.8rem,
+  $marginsClassPrefix "32" 3.2rem,
+  $marginsClassPrefix "36" 3.6rem,
+  $marginsClassPrefix "40" 4.0rem,
+  $marginsClassPrefix "64" 6.4rem,
+  $marginsClassPrefix "72" 7.2rem,
+  $marginsClassPrefix "96" 9.6rem,
+  $marginsClassPrefix "0" 0,
+);
+
+$negativeMargin: (
+  $negativeMarginClassPrefix "1" 0.1rem,
+  $negativeMarginClassPrefix "2" 0.2rem,
+  $negativeMarginClassPrefix "4" 0.4rem,
+  $negativeMarginClassPrefix "8" 0.8rem,
+  $negativeMarginClassPrefix "12" 1.2rem,
+  $negativeMarginClassPrefix "16" 1.6rem,
+  $negativeMarginClassPrefix "20" 2.0rem,
+  $negativeMarginClassPrefix "24" 2.4rem,
+  $negativeMarginClassPrefix "28" 2.8rem,
+  $negativeMarginClassPrefix "32" 3.2rem,
+  $negativeMarginClassPrefix "36" 3.6rem,
+  $negativeMarginClassPrefix "40" 4.0rem,
+  $negativeMarginClassPrefix "64" 6.4rem,
+  $negativeMarginClassPrefix "72" 7.2rem,
+  $negativeMarginClassPrefix "96" 9.6rem,
+  $negativeMarginClassPrefix "0" 0,
+);
+
+$shadow: 0 1px 3px 0 rgba($color-primary, 0.10), 0 1px 2px 0 rgba($color-primary, 0.06);
+$shadow_md: 0 4px 6px -1px rgba($color-primary, 0.45), 0 2px 4px -1px rgba($color-primary, 0.06);
+$shadow_lg: 0 6px 12px 6px rgba(darken($color-primary, 25), 0.15);
+// $shadow_xl: 0 20px 25px -5px rgba($color-primary, 0.45), 0 10px 10px -5px rgba($color-primary, 0.04);
+// $shadow_2xl: 0 12px 50px 0px rgba($color-primary, 0.20);
+$shadow_inner: inset 0 1px 3px 0 rgba($color-primary, 0.10), inset  0 1px 2px 0 rgba($color-primary, 0.06);
+$shadow_inner_md: inset 0 4px 6px -1px rgba($color-primary, 0.45), inset 0 2px 4px -1px rgba($color-primary, 0.06);
+$shadow_inner_lg: inset 0 6px 12px 6px rgba(darken($color-primary, 25), 0.15);
+$shadow_outline: inset 0 2px 4px 0 rgba($color-primary, 0.06);
+
+$shadows: (
+  $shadowsClassPrefix null $shadow 'states',
+  $shadowsClassPrefix "md" $shadow_md 'states',
+  $shadowsClassPrefix "lg" $shadow_lg 'states',
+  //$shadowsClassPrefix "xl" $shadow_xl 'states',
+  //$shadowsClassPrefix "2xl" $shadow_2xl 'states',
+  $shadowsClassPrefix "inner" $shadow_inner 'states',
+  $shadowsClassPrefix "inner-md" $shadow_inner_md 'states',
+  $shadowsClassPrefix "inner-lg" $shadow_inner_lg 'states',
+  //$shadowsClassPrefix "outline" $shadow_outline 'states',
+  $shadowsClassPrefix "none" none 'states',
+);
+
+$aspectRatiosClassNamePrefix: "ratio";
+$aspectRatios: (
+  $aspectRatiosClassNamePrefix "logo" 184 95,
+  $aspectRatiosClassNamePrefix "1x1" 1 1,
+  $aspectRatiosClassNamePrefix "4x3" 4 3,
+  $aspectRatiosClassNamePrefix "16x9" 16 9,
+  //$aspectRatiosClassNamePrefix "3x2" 3 2,
+  $aspectRatiosClassNamePrefix "5x2" 5 2,
+  $aspectRatiosClassNamePrefix "screen" 1920 1080,
+  // $aspectRatiosClassNamePrefix "unstuck-design" 200 20,
+  $aspectRatiosClassNamePrefix "none" 1 0,
+);
+
+$columnCount: (0, 2, 3);
+
+$columnCountGapsClassPrefix: "col-gap";
+$columnCountGaps: (
+  $columnCountGapsClassPrefix "20" 2rem,
+  $columnCountGapsClassPrefix "30" 3rem,
+  $columnCountGapsClassPrefix "40" 4rem,
+);
+
+$hasColsSizes: (
+  $hasColsSizesClassNamePrefix null 5,
+);
+//74,
+$iconsSizes: (
+  $iconsSizesClassNamePrefix null 2.6rem,
+  $iconsSizesClassNamePrefix "8" 0.8rem,
+  $iconsSizesClassNamePrefix "16" 1.6rem,
+  $iconsSizesClassNamePrefix "20" 2.0rem,
+  $iconsSizesClassNamePrefix "24" 2.4rem,
+  $iconsSizesClassNamePrefix "32" 3.2rem,
+  $iconsSizesClassNamePrefix "40" 4.0rem,
+  $iconsSizesClassNamePrefix "64" 6.4rem,
+  // $iconsSizesClassNamePrefix "logo" 18.4rem,
+  // $iconsSizesClassNamePrefix "logo-sm" 11.0rem,
+  // $iconsSizesClassNamePrefix "unstuck-design" 19.5rem,
+  $iconsSizesClassNamePrefix "auto" 'auto'
+);
+
+ $opacities: (
+   $opacitiesClassPrefix "0" 0 "states",
+   $opacitiesClassPrefix "15" 0.15 "states",
+   $opacitiesClassPrefix "25" 0.25 "states",
+   $opacitiesClassPrefix "35" 0.35 "states",
+   $opacitiesClassPrefix "50" 0.5 "states",
+   $opacitiesClassPrefix "65" 0.65 "states",
+   $opacitiesClassPrefix "75" 0.75 "states",
+   $opacitiesClassPrefix "85" 0.85 "states",
+   $opacitiesClassPrefix "100" 1 "states",
+ );
+
+$borderRadiusClassPrefix: "rounded";
+$borderRadiuses: (
+  $borderRadiusClassPrefix null 0.2rem,
+  $borderRadiusClassPrefix "4" 0.4rem,
+  $borderRadiusClassPrefix "8" 0.8rem,
+  $borderRadiusClassPrefix "16" 1.6rem,
+  $borderRadiusClassPrefix "50" 50%,
+  $borderRadiusClassPrefix "full" 9999px,
+);
+
+// Container widths
+// $container_lg: 100rem;
+$container_article: 88rem;
+$container_article_lg: 101.0rem;
+$container_fluid: 100%;
+$container_sm: 57.6rem;
+$container_md: 71.0rem;
+$container_lg: 93.6rem;
+$container_xl: 120rem;
+$container_xxl: 140rem;
+
+$container_null: calc(100% - 3rem);
+$container: (
+  $containerClassPrefix null $container_null,
+  $containerClassPrefix "fluid" $container_fluid,
+  $containerClassPrefix "sm" $container_sm,
+  $containerClassPrefix "md" $container_md,
+  $containerClassPrefix "lg" $container_lg,
+  $containerClassPrefix "xl" $container_xl,
+  $containerClassPrefix "xxl" $container_xxl,
+  $containerClassPrefix "article" $container_article,
+  $containerClassPrefix "article-lg" $container_article_lg
+);
+
+// $zIndexs: (
+  // $zIndexsClassPrefix "auto" "auto",
+  // $zIndexsClassPrefix "0" 0,
+  // $zIndexsClassPrefix "10" 10,
+  // $zIndexsClassPrefix "20" 20,
+  // $zIndexsClassPrefix "30" 30,
+  // $zIndexsClassPrefix "40" 40,
+  // $zIndexsClassPrefix "50" 50,
+// );
+
+$iconThickNess: .06rem;
+$navbarBp: $bp_xl;
+$lineThickNess: 2px;
+
+// Range slider style
+// $trackHeight: 2px;
+// $trackWidth: 100%;
+// $trackColor: $color1;
+// $trackColorFocus: $color-black;
+// $trackBorderColor: transparent;
+// $trackBorderWidth: 0px;
+// $trackBorderRadius: 4px;
+
+// $thumbHeight: 24px;
+// $thumbWidth: $thumbHeight;
+// $thumbColor: $color-white;
+// $thumbBorderColor: $colorPink;
+// $thumbBorderWidth: 2px;
+// $thumbBorderRadius: 15px;
+
+$transition: all 0.35s 0s ease-out;

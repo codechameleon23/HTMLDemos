@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include('./_includes/_head.html', { "pageName": "Lobby", "description": ""
+    })
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="jsNavbarToggle is-close flex-col bg-dark f-color-light">
+    <div id="root" class="flex-auto flex-col"></div>
+  </body>
+  <script src="js/allScript.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/react-hook-form@7.26.1/dist/index.umd.min.js"></script>
+  <script src="https://unpkg.com/html-react-parser@latest/dist/html-react-parser.min.js"></script>
+  <script src="./components/Pages/LobbyPage.js" type="text/babel"></script>
+  <script src="./components/Navigation.js" type="text/babel"></script>
+  <script src="./components/ChatBox/index.js" type="text/babel"></script>
+  <script src="./components/ChatBox/DisplayChat.js" type="text/babel"></script>
+  <script src="./components/ChatBox/AddMessageForm.js" type="text/babel"></script>
+  <script src="./components/Forms/ErrorMessage.js" type="text/babel"></script>
+  <script type="text/babel">
+    console.log("window", window);
+    const { useLocation } = ReactRouterDOM;
+    const { pathname } = window.location;
+    const App = () => <LobbyPage />;
+    ReactDOM.render(<App />, document.querySelector("#root"));
+  </script>
+</html>
