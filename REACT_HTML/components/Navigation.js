@@ -1,22 +1,23 @@
 const Navigation = () => {
+  const { NavLink  } = ReactRouterDOM;
   const navLinks = [
     {
-      path: "/",
+      path: "/lobby",
       label: "Lobby",
       icon: "home",
     },
     {
-      path: "/auditorium.html",
+      path: "/auditorium",
       label: "Auditorium",
       icon: "desktop_windows",
     },
     {
-      path: "/exhibiton.html",
+      path: "/exhibiton",
       label: "Exhibiton",
       icon: "group",
     },
     {
-      path: "/lounge.html",
+      path: "/lounge",
       label: "Networking Lounge",
       icon: "weekend",
     },
@@ -26,31 +27,30 @@ const Navigation = () => {
       icon: "view_agenda",
     },
     {
-      path: "/appointments.html",
+      path: "/appointments",
       label: "Appointments",
       icon: "assignment",
     },
     {
-      path: "/",
+      path: "/login",
       label: "Logout",
       icon: "logout",
     },
   ];
   return (
-    <nav className="pos-fixed pin-x pin-b bg-dark">
-      <ul className="flex-row justify-center list-reset">
+    <nav className="pos-fixed z-10 pin-x pin-b bg-dark">
+      <ul className="flex-row justify-center list-reset f-size-14">
         {navLinks.map((navLink, index) => {
           return (
-            <li key={`${navLink.path}-${index}`} className="px-24 p-8">
-              <a
-                href={navLink.path}
-                className={`flex-col align-center no-underline hover:f-color-primary ${
-                  navLink.path === pathname ? "f-color-primary" : ""
-                }`}
+            <li key={`${navLink.path}-${index}`} className="px-16 p-8">
+              <NavLink 
+                activeClassName="f-color-primary"
+                to={navLink.path}
+                className="flex-col align-center no-underline hover:f-color-primary text-center"
               >
                 <span class="material-icons m-8">{navLink.icon}</span>
                 <span className="f-weight-medium">{navLink.label}</span>
-              </a>
+              </NavLink>
             </li>
           );
         })}

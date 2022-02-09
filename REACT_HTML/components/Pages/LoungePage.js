@@ -18,13 +18,13 @@ const LoungePage = () => {
       userName: "Ken Doe",
       message:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat doloribus perferendis fugiat alias placeat velit voluptatum non tempore sunt impedit repellendus, similique debitis asperiores consequatur, voluptate suscipit ab totam ex.",
-      type: "self",
+      type: "user",
     },
     {
       userName: "Hobbs Doe",
       message:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat doloribus perferendis fugiat alias placeat velit voluptatum non tempore sunt impedit repellendus, similique debitis asperiores consequatur, voluptate suscipit ab totam ex.",
-      type: "self",
+      type: "user",
     },
     {
       userName: "Lenny Doe",

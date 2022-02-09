@@ -1,4 +1,4 @@
-const Modal = ({ title, cover, children, onClose, sxClasses }) => {
+const Modal = ({ title, cover, children, onClose, style }) => {
   return (
     <>
       {cover && (
@@ -8,7 +8,8 @@ const Modal = ({ title, cover, children, onClose, sxClasses }) => {
         ></div>
       )}
       <div
-        className={`container container-md rounded-8 pos-absolute pin-tl-50 pin-tl50 z-10 bg-white flex-col m-auto pointer-events-all shadow-lg ${sxClasses}`}
+        style={{ ...style }}
+        className="modal container container-md flex-col rounded-8 bg-white pointer-events-all shadow-lg pos-fixed z-20"
       >
         <header className="p-8 bg-primary f-color-white f-weight-medium flex-row rounded-t-8">
           {title && <h3>{title}</h3>}
@@ -21,7 +22,7 @@ const Modal = ({ title, cover, children, onClose, sxClasses }) => {
             </span>
           </div>
         </header>
-        <div className="flex-auto p-8">{children}</div>
+        <div className="flex-auto flex-col p-8 overflow-auto">{children}</div>
       </div>
     </>
   );
