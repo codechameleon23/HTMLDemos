@@ -1,0 +1,128 @@
+<header class="header w-full pos-fixed pin-t pin-x flex-col z-50 bg-white">
+  <div class="flex-row lg:flex-col align-center justify-center">
+    <a
+      class="brand-logo my-10 lg:my-30 lg:ml-auto mr-auto"
+      title="@@websiteName"
+      href="index.html"
+    >
+      <span class="icon icon-logo-sm lg:icon-logo ratio-logo">
+        <span>
+          <img
+            class="w-full h-full object-contain"
+            src="./images/apprenticeships-in-Salisbury-logo.svg"
+          />
+        </span>
+      </span>
+    </a>
+
+    <!-- Search -->
+    <a
+      href="javascript:void(0);"
+      class="search-toggle no-underline hover:f-color-secondary flex-row align-center py-10 px-10 lg:d-hidden"
+    >
+      <i class="icon icon-22 flex-col justify-center">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="my-auto"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="feather feather-search"
+          viewBox="0 0 24 24"
+        >
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.35-4.35"></path>
+        </svg>
+      </i>
+    </a>
+
+    <!-- Hamburger menu -->
+    <div
+      class="navbar-toggle py-10 px-10 d-inline-flex lg:d-hidden z-50 transition-all"
+    >
+      <i class="icon icon-22 my-auto hamburger pointer-events-auto">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </i>
+    </div>
+
+    <nav
+      class="navbar pos-fixed pin-x z-30 bg-quaternary f-color-white lg:pin-none lg:pos-static w-full"
+    >
+      <div
+        class="container lg:container-xl mx-auto pt-15 pb-15 lg:pt-0 lg:pb-0 lg:w-full"
+      >
+        <div class="flex-col lg:align-center lg:justify-center">
+          <ul
+            class="list-reset flex-col lg:flex-row -mx-15 lg:-mx-10 pos-relative f-size-22 f-weight-medium f-spacing-sm lg:f-size-15 lg:f-spacing-md uppercase"
+          >
+            <li class="@@if(context.apprenticeships){is-active} px-15">
+              <a
+                class="nav-link py-20 px-20 lg:px-0"
+                href="apprenticeships.html"
+                >Apprenticeships</a
+              >
+            </li>
+            <li class="@@if(context.forEmployers){is-active} px-15">
+              <a class="nav-link py-20 px-20 lg:px-0" href="for-employers.html"
+                >For Employers</a
+              >
+            </li>
+            <li class="@@if(context.aboutUs){is-active} px-15">
+              <a class="nav-link py-20 px-20 lg:px-0" href="about-us.html"
+                >About Us</a
+              >
+            </li>
+            <li class="@@if(context.businessesListing){is-active} px-15">
+              <a
+                class="nav-link py-20 px-20 lg:px-0"
+                href="businesses-listing.html"
+                >Businesses Listing</a
+              >
+            </li>
+            <li class="@@if(context.news){is-active} px-15">
+              <a class="nav-link py-20 px-20 lg:px-0" href="news.html">News</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+<section
+  class="w-full search-bar pos-fixed z-10 transition-all shadow-md bg-light"
+>
+  <form class="w-full flex-row shadow-inner-md pos-relative">
+    <input
+      type="text"
+      placeholder="Search..."
+      name="search"
+      class="f-size-14 f-weight-medium f-spacing-md uppercase w-full p-20 flex-stretch transition-all"
+    />
+    <button
+      class="p-10 flex-none f-color-inherit hover:bg-secondary hover:f-color-white pos-absolute pin-r pin-y"
+    >
+      <i class="icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="feather feather-search"
+          viewBox="0 0 24 24"
+        >
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.35-4.35"></path>
+        </svg>
+      </i>
+    </button>
+  </form>
+</section>
