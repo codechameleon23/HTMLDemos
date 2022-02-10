@@ -103,26 +103,7 @@ const PROJECT_PAGES_LIST = [
   './src/news.html',
   './src/news-article.html',
   './src/flexibuilder.html',
-  
   './src/all-pages.html',
-  
-  './src/zz-index.html',
-  './src/zz-products.html',
-  './src/zz-product-details.html',
-  './src/zz-check-out.html',
-  './src/zz-news.html',
-  './src/zz-news-article.html',
-  './src/zz-contact-us.html',
-  './src/zz-flexibuilder.html',
-  // React pages
-  // './src/_react/index_react.html',
-  // './src/_react/products_react.html',
-  // './src/_react/product-details_react.html',
-  // './src/_react/check-out_react.html',
-  // './src/_react/news_react.html',
-  // './src/_react/news-article_react.html',
-  // './src/_react/contact-us_react.html',
-  // './src/_react/flexibuilder_react.html',
 ]
 
 function CSS_OPERATION() {
