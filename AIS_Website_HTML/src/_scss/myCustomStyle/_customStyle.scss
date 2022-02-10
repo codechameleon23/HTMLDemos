@@ -62,6 +62,19 @@
 // }
 
 .search {
+  &-toggle {
+    .close-icon {
+      display: none;
+    }
+    &.is-active{
+      .search-icon {
+        display: none;
+      }
+      .close-icon {
+        display: inline-block;
+      } 
+    }
+  }
   &-bar {
     max-height: 0;
     overflow: hidden;
@@ -555,7 +568,7 @@
     cursor: pointer;
     display: inline-block;
     position: relative;
-    color: inherit;
+    // color: inherit;
     width: 100%;
     height: auto;
   }
@@ -585,18 +598,19 @@
     background-color: $color-white;
     box-shadow: $shadow_lg;
     li {
+      color: inherit;
       margin: 0;
-      padding: 12px 0;
+      padding: 8px 0;
       text-indent: 15px;
       // border-top: $color-light;
       transition: $transition;
       &:hover {
         // background: $color-light;
-        color: $color-secondary;
+        color: $color-primary;
       }
       &.is-selected {
         color: $color-white;
-        background: $color-secondary;
+        background: $color-primary;
       }
       &[rel="hide"] {
         display: none;

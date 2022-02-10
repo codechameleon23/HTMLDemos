@@ -98,7 +98,7 @@ const PROJECT_PAGES_LIST = [
   './src/apprenticeships.html',
   './src/for-employers.html',
   './src/about-us.html',
-  './src/businesses-listing.html',
+  './src/businesses-listings.html',
   './src/business-details.html',
   './src/news.html',
   './src/news-article.html',
