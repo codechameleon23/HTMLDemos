@@ -40,9 +40,9 @@
 
     <!-- <nav class="navbar pos-fixed pin-x z-30 bg-quaternary f-color-white lg:pin-none lg:pos-static w-full"> -->
     <nav class="navbar sm:col-6 lg:col-12 flex-col justify-center pos-fixed lg:pos-static pin pin-l-auto z-40 lg:z-40 bg-quaternary f-color-white shadow-lg lg:shadow-none">
-      <div class="container lg:container-xl mx-auto pt-15 pb-15 lg:pt-0 lg:pb-0 lg:w-full">
+      <div class="container lg:container-xl mx-auto pt-15 pb-15 lg:pt-0 lg:pb-0 lg:w-full pos-relative">
         <div class="flex-col lg:align-center lg:justify-center">
-          <ul class="list-reset flex-col lg:flex-row -mx-15 lg:-mx-10 pos-relative f-size-22 f-weight-medium f-spacing-sm lg:f-size-15 lg:f-spacing-md uppercase">
+          <ul class="list-reset flex-col lg:flex-row -mx-15 pos-relative f-size-16 f-weight-medium f-spacing-md lg:f-spacing-md uppercase">
             <li class="@@if(context.apprenticeships){is-active} px-15">
               <a class="nav-link py-20 px-20 lg:px-0 d-inline-block" href="apprenticeships.html">Apprenticeships</a>
             </li>
@@ -57,6 +57,24 @@
             </li>
             <li class="@@if(context.news){is-active} px-15">
               <a class="nav-link py-20 px-20 lg:px-0 d-inline-block" href="news.html">News</a>
+            </li>
+            <li class="px-15 d-hidden lg:d-inline-block">
+              <a href="javascript:void(0);" class="search-toggle no-underline flex-row align-center py-10 px-10 mt-4">
+                <i class="icon icon-22 search-icon flex-col justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="my-auto" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-search" viewBox="0 0 24 24">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                  </svg>
+                </i>
+                <i class="icon icon-22 close-icon flex-col justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-x">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                  </svg>
+                </i>
+              </a>
             </li>
           </ul>
         </div>
