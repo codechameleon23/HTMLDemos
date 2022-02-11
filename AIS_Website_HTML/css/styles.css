@@ -620,23 +620,23 @@ ol.list li:before
 /*custome Select dropdown*/
 ::-webkit-input-placeholder
 {
-    color: #62cae3;
+    color: #373737;
 }
 
 ::-moz-placeholder
 {
     opacity: 1; 
-    color: #62cae3;
+    color: #373737;
 }
 
 :-ms-input-placeholder
 {
-    color: #62cae3;
+    color: #373737;
 }
 
 :-moz-placeholder
 {
-    color: #62cae3;
+    color: #373737;
 }
 
 .select
@@ -679,15 +679,15 @@ ol.list li:before
 .select select:invalid,
 .select select.not-selected
 {
-    color: #62cae3;
+    color: #373737;
 }
 .select select option
 {
-    color: #62cae3;
+    color: #373737;
 }
 .select select option[value='']
 {
-    color: #62cae3 !important;
+    color: #373737 !important;
 }
 
 /*custome Checkbox*/
@@ -2818,19 +2818,19 @@ ol.list li:before
     /* Bg Colors classes */
     .bg-$color-placeholder
     {
-        background-color: #f9fdfe;
+        background-color: #f7f7f7;
     }
     .hover\:bg-$color-placeholder:hover
     {
-        background-color: #f9fdfe;
+        background-color: #f7f7f7;
     }
     .focus\:bg-$color-placeholder:focus
     {
-        background-color: #f9fdfe;
+        background-color: #f7f7f7;
     }
     .focus-within\:bg-$color-placeholder:focus-within
     {
-        background-color: #f9fdfe;
+        background-color: #f7f7f7;
     }
     .bg-inherit
     {
@@ -9520,19 +9520,19 @@ ol.list li:before
     /* Bg Colors classes */
     .sm\:bg-$color-placeholder
     {
-        background-color: #f9fdfe;
+        background-color: #f7f7f7;
     }
     .sm\:hover\:bg-$color-placeholder:hover
     {
-        background-color: #f9fdfe;
+        background-color: #f7f7f7;
     }
     .sm\:focus\:bg-$color-placeholder:focus
     {
-        background-color: #f9fdfe;
+        background-color: #f7f7f7;
     }
     .sm\:focus-within\:bg-$color-placeholder:focus-within
     {
-        background-color: #f9fdfe;
+        background-color: #f7f7f7;
     }
     .sm\:bg-inherit
     {
@@ -16222,19 +16222,19 @@ ol.list li:before
     /* Bg Colors classes */
     .md\:bg-$color-placeholder
     {
-        background-color: #f9fdfe;
+        background-color: #f7f7f7;
     }
     .md\:hover\:bg-$color-placeholder:hover
     {
-        background-color: #f9fdfe;
+        background-color: #f7f7f7;
     }
     .md\:focus\:bg-$color-placeholder:focus
     {
-        background-color: #f9fdfe;
+        background-color: #f7f7f7;
     }
     .md\:focus-within\:bg-$color-placeholder:focus-within
     {
-        background-color: #f9fdfe;
+        background-color: #f7f7f7;
     }
     .md\:bg-inherit
     {
@@ -22924,19 +22924,19 @@ ol.list li:before
     /* Bg Colors classes */
     .lg\:bg-$color-placeholder
     {
-        background-color: #f9fdfe;
+        background-color: #f7f7f7;
     }
     .lg\:hover\:bg-$color-placeholder:hover
     {
-        background-color: #f9fdfe;
+        background-color: #f7f7f7;
     }
     .lg\:focus\:bg-$color-placeholder:focus
     {
-        background-color: #f9fdfe;
+        background-color: #f7f7f7;
     }
     .lg\:focus-within\:bg-$color-placeholder:focus-within
     {
-        background-color: #f9fdfe;
+        background-color: #f7f7f7;
     }
     .lg\:bg-inherit
     {
@@ -29626,19 +29626,19 @@ ol.list li:before
     /* Bg Colors classes */
     .xl\:bg-$color-placeholder
     {
-        background-color: #f9fdfe;
+        background-color: #f7f7f7;
     }
     .xl\:hover\:bg-$color-placeholder:hover
     {
-        background-color: #f9fdfe;
+        background-color: #f7f7f7;
     }
     .xl\:focus\:bg-$color-placeholder:focus
     {
-        background-color: #f9fdfe;
+        background-color: #f7f7f7;
     }
     .xl\:focus-within\:bg-$color-placeholder:focus-within
     {
-        background-color: #f9fdfe;
+        background-color: #f7f7f7;
     }
     .xl\:bg-inherit
     {
@@ -36328,19 +36328,19 @@ ol.list li:before
     /* Bg Colors classes */
     .xxl\:bg-$color-placeholder
     {
-        background-color: #f9fdfe;
+        background-color: #f7f7f7;
     }
     .xxl\:hover\:bg-$color-placeholder:hover
     {
-        background-color: #f9fdfe;
+        background-color: #f7f7f7;
     }
     .xxl\:focus\:bg-$color-placeholder:focus
     {
-        background-color: #f9fdfe;
+        background-color: #f7f7f7;
     }
     .xxl\:focus-within\:bg-$color-placeholder:focus-within
     {
-        background-color: #f9fdfe;
+        background-color: #f7f7f7;
     }
     .xxl\:bg-inherit
     {
@@ -47116,4 +47116,42 @@ main
 .h-50
 {
     height: 50%;
+}
+
+.inputfile
+{
+    position: absolute;
+    z-index: -1; 
+
+    overflow: hidden;
+
+    width: .1px;
+    height: .1px;
+
+    opacity: 0;
+}
+
+.inputfile + label
+{
+    display: inline-block;
+}
+
+.inputfile + label
+{
+    cursor: pointer;
+    /* "hand" cursor */
+}
+
+.custom-tick.large > input[type='checkbox'] + .tick
+{
+    width: 4.8rem; 
+    height: 4.8rem;
+}
+
+.custom-tick > input[type='checkbox'] + .tick span:after
+{
+    width: .8rem;
+    height: 2.6rem;
+
+    border-width: 0 .3rem .3rem 0;
 }

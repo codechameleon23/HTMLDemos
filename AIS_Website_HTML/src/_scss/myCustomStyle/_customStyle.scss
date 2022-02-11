@@ -686,3 +686,41 @@
 .h-50 {
   height: 50%;
 }
+
+
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.inputfile + label {
+  // font-size: 1.25em;
+  // font-weight: 700;
+  // color: white;
+  // background-color: black;
+  display: inline-block;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+  // background-color: red;
+}
+
+.inputfile + label {
+	cursor: pointer; /* "hand" cursor */
+}
+
+.custom-tick.large > input[type='checkbox'] + .tick {
+  height: 4.8rem;
+  width: 4.8rem;
+}
+
+.custom-tick > input[type='checkbox'] + .tick span:after {
+  height: 2.6rem;
+  width: .8rem;
+  border-width: 0 .3rem .3rem 0;
+}
