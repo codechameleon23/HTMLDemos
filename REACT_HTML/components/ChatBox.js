@@ -1,23 +1,21 @@
-// import DisplayChat from "./DisplayChat.js";
-// import AddMessageForm from "./DisplayChat.js";
-
-const ChatBox = ({ chatMessages }) => {
-  const { useState } = React;
-  const [messages, setMessages] = useState(chatMessages || []);
-  console.log("messages", messages);
+const ChatBox = ({ chatOnly, data, onUserSelect, onMessageSend }) => {
+  const { selectedUser, chats, allUsers } = data;
   const handleSubmit = (message) => {
-    setMessages((prevState) => [
-      ...prevState,
-      {
-        userName: "Mark Doe",
-        message: message,
-        type: "user",
-      },
-    ]);
+    onMessageSend(message);
   };
+
+  // const bgAvtars = (userName) => `https://ui-avatars.com/api/?size=64&name=${userName}`;
+
   return (
     <>
-      <DisplayChat chatMessages={messages} />
+      {!chatOnly && allUsers?.length > 0 && (
+        <ChatBoxUserList
+          users={allUsers}
+          selectedUserId={selectedUser?.id}
+          onSelect={onUserSelect}
+        />
+      )}
+      <DisplayChat chats={chats} />
       <AddMessageForm onSubmit={handleSubmit} />
     </>
   );

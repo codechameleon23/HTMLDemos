@@ -1,24 +1,14 @@
 const AuditoriumPage = () => {
   const { Link } = ReactRouterDOM;
-  const { useState } = React;
-  const [openChat, setOpenChat] = useState(false);
-  const chatData = [
-    {
-      userName: "Mark Doe",
-      message:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat doloribus perferendis fugiat alias placeat velit voluptatum non tempore sunt impedit repellendus, similique debitis asperiores consequatur, voluptate suscipit ab totam ex.",
-      type: "",
-    },
-    {
-      userName: "John Doe",
-      message:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat doloribus perferendis fugiat alias placeat velit voluptatum non tempore sunt impedit repellendus, similique debitis asperiores consequatur, voluptate suscipit ab totam ex.",
-      type: "",
-    },
+  const { useState, useEffect } = React;
+  const [setModal, setOpenModal] = useState(true);
+  const [chatData, setChatData] = useState({
+    chats: [],
+  });
+  const dummyQuestionChatData = [
     {
       userName: "Ken Doe",
-      message:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat doloribus perferendis fugiat alias placeat velit voluptatum non tempore sunt impedit repellendus, similique debitis asperiores consequatur, voluptate suscipit ab totam ex.",
+      message: "Lorem ipsum dolor sit amet.",
       type: "user",
     },
     {
@@ -28,12 +18,36 @@ const AuditoriumPage = () => {
       type: "user",
     },
     {
-      userName: "Lenny Doe",
+      userName: "Ken Doe",
+      message: "Lorem ipsum dolor sit amet.",
+      type: "user",
+    },
+    {
+      userName: "Hobbs Doe",
       message:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat doloribus perferendis fugiat alias placeat velit voluptatum non tempore sunt impedit repellendus, similique debitis asperiores consequatur, voluptate suscipit ab totam ex.",
-      type: "",
+      type: "user",
+    },
+    {
+      userName: "Ken Doe",
+      message: "Lorem ipsum dolor sit amet.",
+      type: "user",
+    },
+    {
+      userName: "Hobbs Doe",
+      message:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat doloribus perferendis fugiat alias placeat velit voluptatum non tempore sunt impedit repellendus, similique debitis asperiores consequatur, voluptate suscipit ab totam ex.",
+      type: "user",
     },
   ];
+
+  useEffect(() => {
+    setChatData((prevState) => ({
+      ...prevState,
+      chats: dummyQuestionChatData,
+    }));
+  }, []);
+
   const Video = () => (
     <div
       className="ratio-16x9 pos-absolute bg-dark border-4 border-dark rounded-8 overflow-hidden"
@@ -62,39 +76,52 @@ const AuditoriumPage = () => {
       </video>
     </div>
   );
+  const HandleMessageSend = (data) => {
+    console.log("HandleMessageSend", data);
+  };
   return (
-    <Layout
-      bodyChildren={
-        <>
-          {openChat && (
-            <Modal onClose={() => setOpenChat(false)}>
-              <ChatBox chatMessages={chatData} />
-            </Modal>
-          )}
-        </>
-      }
-    >
-      <section className="ratio-screen">
-        <div
-          className="pos-absolute pin bg-contain bg-no-repeat"
-          style={{
-            backgroundImage: 'URL("./images/auditorium_61f5286ae19a1.jpg")',
-          }}
-        >
-          <Video />
-        </div>
-        {!openChat && (
+    <>
+      <Layout>
+        <section className="ratio-screen">
           <div
-            onClick={() => setOpenChat(true)}
-            className="pos-fixed p-8 bg-primary f-color-white rounded-4 pin-l-auto pin-t-50 pin-t50 pin-r m-8 shadow-lg no-underline opacity-65 hover:opacity-100 transition-all cursor-pointer"
+            className="pos-absolute pin bg-contain bg-no-repeat"
+            style={{
+              backgroundImage: 'URL("./images/auditorium_61f5286ae19a1.jpg")',
+            }}
           >
-            <div className="flex-col text-center f-size-12 f-weight-medium">
-              <span class="material-icons">question_answer</span>
-              <span>Ask a Question</span>
-            </div>
+            <Video />
           </div>
-        )}
-      </section>
-    </Layout>
+          {!setModal && (
+            <div
+              onClick={() => setOpenModal(true)}
+              className="pos-fixed p-8 bg-primary f-color-white rounded-4 pin-l-auto pin-t-50 pin-t50 pin-r m-8 shadow-lg no-underline opacity-65 hover:opacity-100 transition-all cursor-pointer"
+            >
+              <div className="flex-col text-center f-size-12 f-weight-medium">
+                <span class="material-icons">question_answer</span>
+                <span>Ask a Question</span>
+              </div>
+            </div>
+          )}
+        </section>
+      </Layout>
+      {setModal && (
+        <Modal
+          cover
+          title="Help Desk"
+          onClose={() => setOpenModal(false)}
+          className="question-modal bg-white rounded-8 shadow-lg"
+        >
+          <div className="flex-stretch flex-col overflow-hidden pos-relative">
+            <ChatBox
+              data={chatData}
+              onMessageSend={HandleMessageSend}
+              style={{
+                height: "",
+              }}
+            />
+          </div>
+        </Modal>
+      )}
+    </>
   );
 };

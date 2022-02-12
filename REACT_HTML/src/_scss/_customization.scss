@@ -23,10 +23,21 @@ $color3: #030c0f;
 $color4: #f0edee;
 
 $color-text: $color1;
+
 $color-primary: $color2;
-$color-primary-dark: mix(black, $color-primary, 10%);
+$color-primary-light-100: mix(white, $color-primary, 15%);
+$color-primary-light-200: mix(white, $color-primary, 35%);
+$color-primary-light-300: mix(white, $color-primary, 55%);
+$color-primary-light-400: mix(white, $color-primary, 75%);
+$color-primary-dark-100: mix(black, $color-primary, 15%);
+$color-primary-dark-200: mix(black, $color-primary, 35%);
+$color-primary-dark-300: mix(black, $color-primary, 55%);
+$color-primary-dark-400: mix(black, $color-primary, 75%);
+
 $color-dark: $color3;
 $color-light: $color4;
+$color-light-100: mix(black, $color4, 15%);
+$color-light-200: mix(black, $color4, 35%);
 
 // $color-text-placeholder: rgba($color-text, .8);
 $color-text-placeholder: $color-primary;
@@ -53,8 +64,8 @@ $secondaryFont: 'quicksand', sans-serif;
 
 $defaultFont: $baseFont;
 $defaultTextColor: $color-text;
-$defaultFontWeights: 300;
-$defaultFontSize: 1.8rem;
+$defaultFontWeights: 400;
+$defaultFontSize: 1.4rem;
 $defaultFontHeight: 1.29;
 $defaultLetterSpacing: 0;
 
@@ -93,8 +104,17 @@ $bgColors: (
   $bgColorsClassPrefix "inherit" inherit 'states' 'no-parent' null,
   $bgColorsClassPrefix "transparent" transparent 'states' 'no-parent' null,
   $bgColorsClassPrefix "primary" $color-primary 'states' 'no-parent' null,
-  $bgColorsClassPrefix "primary-dark" $color-primary-dark 'states' 'no-parent' null,
+  $bgColorsClassPrefix "primary-light-100" $color-primary-light-100 'states' 'no-parent' null,
+  $bgColorsClassPrefix "primary-light-200" $color-primary-light-200 'states' 'no-parent' null,
+  $bgColorsClassPrefix "primary-light-300" $color-primary-light-300 'states' 'no-parent' null,
+  $bgColorsClassPrefix "primary-light-400" $color-primary-light-400 'states' 'no-parent' null,
+  $bgColorsClassPrefix "primary-dark-100" $color-primary-dark-100 'states' 'no-parent' null,
+  $bgColorsClassPrefix "primary-dark-200" $color-primary-dark-200 'states' 'no-parent' null,
+  $bgColorsClassPrefix "primary-dark-300" $color-primary-dark-300 'states' 'no-parent' null,
+  $bgColorsClassPrefix "primary-dark-400" $color-primary-dark-400 'states' 'no-parent' null,
   $bgColorsClassPrefix "light" $color-light 'states' 'no-parent' null,
+  $bgColorsClassPrefix "light-100" $color-light-100 'states' 'no-parent' null,
+  $bgColorsClassPrefix "light-200" $color-light-200 'states' 'no-parent' null,
   $bgColorsClassPrefix "dark" $color-dark 'states' 'no-parent' null,
   $bgColorsClassPrefix "white" $color-white 'states' 'no-parent' null,
   $bgColorsClassPrefix "black" $color-black 'states' 'no-parent' null,
@@ -122,8 +142,17 @@ $borderColors: (
   $borderColorsClassPrefix "inherit" inherit 'states' 'no-parent' null,
   $borderColorsClassPrefix "transparent" transparent 'states' 'no-parent' null,
   $borderColorsClassPrefix "primary" $color-primary 'states' 'no-parent' null,
-  $borderColorsClassPrefix "primary-dark" $color-primary-dark 'states' 'no-parent' null,
+  $borderColorsClassPrefix "primary-light-100" $color-primary-light-100 'states' 'no-parent' null,
+  $borderColorsClassPrefix "primary-light-200" $color-primary-light-200 'states' 'no-parent' null,
+  $borderColorsClassPrefix "primary-light-300" $color-primary-light-300 'states' 'no-parent' null,
+  $borderColorsClassPrefix "primary-light-400" $color-primary-light-400 'states' 'no-parent' null,
+  $borderColorsClassPrefix "primary-dark-100" $color-primary-dark-100 'states' 'no-parent' null,
+  $borderColorsClassPrefix "primary-dark-200" $color-primary-dark-200 'states' 'no-parent' null,
+  $borderColorsClassPrefix "primary-dark-300" $color-primary-dark-300 'states' 'no-parent' null,
+  $borderColorsClassPrefix "primary-dark-400" $color-primary-dark-400 'states' 'no-parent' null,
   $borderColorsClassPrefix "light" $color-light 'states' 'no-parent' null,
+  $borderColorsClassPrefix "light-100" $color-light-100 'states' 'no-parent' null,
+  $borderColorsClassPrefix "light-200" $color-light-200 'states' 'no-parent' null,
   $borderColorsClassPrefix "dark" $color-dark 'states' 'no-parent' null,
   $borderColorsClassPrefix "white" $color-white 'states' 'no-parent' null,
   $borderColorsClassPrefix "black" $color-black 'states' 'no-parent' null,
@@ -145,8 +174,17 @@ $textColors: (
   $textColorsClassPrefix "inherit" inherit 'states' 'no-parent' null,
   $textColorsClassPrefix "default" $color-text 'states' 'no-parent' null,
   $textColorsClassPrefix "primary" $color-primary 'states' 'no-parent' null,
-  $textColorsClassPrefix "primary-dark" $color-primary-dark 'states' 'no-parent' null,
+  $textColorsClassPrefix "primary-light-100" $color-primary-light-100 'states' 'no-parent' null,
+  $textColorsClassPrefix "primary-light-200" $color-primary-light-200 'states' 'no-parent' null,
+  $textColorsClassPrefix "primary-light-300" $color-primary-light-300 'states' 'no-parent' null,
+  $textColorsClassPrefix "primary-light-400" $color-primary-light-400 'states' 'no-parent' null,
+  $textColorsClassPrefix "primary-dark-100" $color-primary-dark-100 'states' 'no-parent' null,
+  $textColorsClassPrefix "primary-dark-200" $color-primary-dark-200 'states' 'no-parent' null,
+  $textColorsClassPrefix "primary-dark-300" $color-primary-dark-300 'states' 'no-parent' null,
+  $textColorsClassPrefix "primary-dark-400" $color-primary-dark-400 'states' 'no-parent' null,
   $textColorsClassPrefix "light" $color-light 'states' 'no-parent' null,
+  $textColorsClassPrefix "light-100" $color-light-100 'states' 'no-parent' null,
+  $textColorsClassPrefix "light-200" $color-light-200 'states' 'no-parent' null,
   $textColorsClassPrefix "dark" $color-dark 'states' 'no-parent' null,
   $textColorsClassPrefix "white" $color-white 'states' 'no-parent' null,
   $textColorsClassPrefix "black" $color-black 'states' 'no-parent' null,

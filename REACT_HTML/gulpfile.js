@@ -96,13 +96,13 @@ const PROJECT_JS_LIST = [
 // ]
 
 const PROJECT_PAGES_LIST = [
-  './src/login.html',
-  './src/signup.html',
+  // './src/login.html',
+  // './src/signup.html',
   './src/index.html',
-  './src/auditorium.html',
-  './src/exhibiton.html',
-  './src/lounge.html',
-  './src/appointments.html'
+  // './src/auditorium.html',
+  // './src/exhibiton.html',
+  // './src/lounge.html',
+  // './src/appointments.html'
 ]
 
 function CSS_OPERATION() {

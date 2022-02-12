@@ -17,7 +17,7 @@ const AddMessageForm = ({ onSubmit }) => {
     reset();
   };
   return (
-    <>
+    <div className="add-message">
       <form
         class="flex-row flex-none justify-center"
         onSubmit={handleSubmit(handleOnSubmit)}
@@ -28,21 +28,21 @@ const AddMessageForm = ({ onSubmit }) => {
               required: "Field shouln't be empty!",
             })}
             placeholder="Start typing..."
-            className={`bg-light f-size-14 w-full p-12 border-2 ${
+            className={`bg-light f-size-12 w-full p-12 border-2 ${
               errors.textMessage ? "border-error" : "border-primary"
-            }  rounded-4 focus:shadow-lg transition-all`}
+            } focus:shadow-lg transition-all`}
           ></textarea>
           {errors.textMessage && (
             <ErrorMessage error={errors.textMessage.message} />
           )}
         </div>
         <div className="flex-none flex-col">
-          <button className="bg-primary hover:bg-primary-dark f-color-white border-2 border-primary px-8 py-4 f-size-16 f-weight-medium capitalize rounded-4">
+          <button className="bg-primary hover:bg-primary-dark-100 f-color-white border-2 border-primary px-8 py-4 f-size-16 f-weight-medium capitalize">
             <span class="material-icons">send</span>
           </button>
         </div>
       </form>
-    </>
+    </div>
   );
 };
 
