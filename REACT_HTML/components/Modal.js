@@ -13,7 +13,7 @@ const Modal = ({ title, cover, children, onClose, style, className }) => {
           visibility: "visible",
           position: "fixed",
           overflow: "hidden",
-          zIndex: "100001",
+          zIndex: "40",
           width: "100%",
           height: "100%",
           top: "0px",

@@ -67,11 +67,15 @@
 
 .question-modal {
   position: fixed;
-  top: 50%;
+  top: 0;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  margin-bottom: 9.6rem;
+  
+  @media (min-width: $bp_lg) {
+    top: 50%;
+    margin-bottom: 9.6rem;
+  }
 
   @media (min-width: $bp_xl) {
     top: 0;
@@ -109,6 +113,7 @@
 
 .navbar {
   @media (max-width: $bp_lg) {
+    transition: $transition;
     &:not(.open-menu){
       transform: translateX(-100%);
     }

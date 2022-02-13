@@ -75,7 +75,7 @@ const AuditoriumPage = () => {
       {!openModal && (
         <div
           onClick={() => setOpenModal(true)}
-          className="pos-fixed p-8 bg-primary f-color-white rounded-4 pin-l-auto pin-t-50 pin-t50 pin-r m-8 shadow-lg no-underline opacity-65 hover:opacity-100 transition-all cursor-pointer"
+          className="pos-fixed p-8 bg-primary f-color-white rounded-4 pin-l-auto pin-b lg:pin-b-auto lg:pin-t-50 pin-t50 pin-r m-8 shadow-lg no-underline opacity-65 hover:opacity-100 transition-all cursor-pointer"
         >
           <div className="flex-col text-center f-size-12 f-weight-medium">
             <span class="material-icons">question_answer</span>

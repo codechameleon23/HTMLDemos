@@ -23,6 +23,12 @@ const Layout = ({ children }) => {
               </div>
             </Modal>
           )}
+          <div className="pos-fixed pin z-50 flex-row justify-center align-center bg-white text-center landscape:d-hidden">
+            <div className="text-wrap f-weight-medium">
+              <img src="./images/rotate.gif" />
+              <p>Switch to Landscape view</p>
+            </div>
+          </div>
         </>
       )}
     />

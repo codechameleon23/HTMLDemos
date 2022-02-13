@@ -6,7 +6,7 @@ const Navigation = () => {
   return pagePaths?.length > 0 ? (
     <>
       <div
-        className="navbar-toggle p-8 m-16 d-inline-flex lg:d-hidden z-50 transition-all f-color-white bg-primary rounded-4 pos-fixed pin-t pin-r"
+        className="navbar-toggle p-8 m-16 d-inline-flex lg:d-hidden z-40 transition-all f-color-white bg-primary rounded-4 pos-fixed pin-t pin-r"
         onClick={() => setOpenMenu(!openMenu)}
       >
         <i
@@ -23,7 +23,7 @@ const Navigation = () => {
         </i>
       </div>
       <nav
-        className={`navbar pos-fixed z-10 pin-t lg:pin-t-auto lg:pin-x pin-b f-color-light flex-col justify-center transition-all lg:pin-r ${
+        className={`navbar pos-fixed z-10 pin-t lg:pin-t-auto lg:pin-x pin-b f-color-light flex-col justify-center lg:pin-r ${
           openMenu ? "open-menu" : ""
         }`}
       >
@@ -35,7 +35,7 @@ const Navigation = () => {
                 <NavLink
                   activeClassName="f-color-primary"
                   to={navLink.path}
-                  className="flex-col align-center no-underline hover:f-color-primary text-center"
+                  className="flex-row lg:flex-col align-center no-underline hover:f-color-primary text-center"
                 >
                   <span class="material-icons m-8">{navLink.icon}</span>
                   <span>{navLink.label}</span>
