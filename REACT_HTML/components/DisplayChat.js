@@ -29,7 +29,7 @@ const DisplayChat = ({ chats }) => {
 
   return (
     <div className="chat-box-message-area">
-      <div className="flex-col">
+      <div className="flex-col w-full mt-auto">
         {isChat ? (
           <>
             {chats.map((chat, index) => {
