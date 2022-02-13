@@ -1,32 +1,4 @@
 const LobbyPage = () => {
-  const Video = () => (
-    <div
-      className="ratio-16x9 pos-absolute bg-dark border-4 border-dark rounded-8 overflow-hidden"
-      style={{
-        left: "49.8%",
-        width: "19.25%",
-        transform: "translate(-50%, 0)",
-        top: "30.2%",
-      }}
-    >
-      <video
-        className="pos-absolute pin"
-        width="100%"
-        // muted
-        preload="auto"
-        playsinline
-        autoplay
-        controls
-        loop
-      >
-        <source
-          src="https://d3ep09c8x21fmh.cloudfront.net/techgig/speedhire.mp4"
-          type="video/mp4"
-        />{" "}
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  );
   return (
     <Layout>
       <BackgroundCover image={"./images/lobby.jpg"}>
@@ -75,7 +47,16 @@ const LobbyPage = () => {
             height: "calc(7.6% + 1.6rem)",
           }}
         />
-        <Video />
+        <VideoFrame
+          url="https://d3ep09c8x21fmh.cloudfront.net/techgig/speedhire.mp4"
+          style={{
+            left: "49.8%",
+            width: "19.25%",
+            transform: "translate(-50%, 0)",
+            top: "30.2%",
+          }}
+          allow="autoplay"
+        />
       </BackgroundCover>
     </Layout>
   );
