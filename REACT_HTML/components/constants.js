@@ -20,7 +20,7 @@ const pagePaths = [
     icon: "weekend",
   },
   {
-    path: "javacsript:void(0);",
+    path: "?openModal=agenda",
     label: "Agenda",
     icon: "view_agenda",
   },

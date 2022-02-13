@@ -15,7 +15,7 @@ const LobbyPage = () => {
         // muted
         preload="auto"
         playsinline
-        // autoplay=""
+        autoplay
         controls
         loop
       >

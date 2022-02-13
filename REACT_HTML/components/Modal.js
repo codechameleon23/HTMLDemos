@@ -25,13 +25,7 @@ const Modal = ({ title, cover, children, onClose, style, className }) => {
           pointerEvents: "none",
         }}
       >
-        <div
-          className={`modal-wrapper ${className}`}
-          style={{
-            
-            ...style,
-          }}
-        >
+        <div className={`modal-wrapper ${className}`} style={style}>
           <div className="flex-col w-full flex-stretch">
             <header className="p-8 bg-primary f-color-white f-weight-medium flex-none flex-row rounded-t-8">
               {title && <h3>{title}</h3>}

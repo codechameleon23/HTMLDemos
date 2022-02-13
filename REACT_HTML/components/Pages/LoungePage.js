@@ -1,6 +1,6 @@
 const LoungePage = () => {
   const { useState, useEffect } = React;
-  const [openModal, setOpenModal] = useState(true);
+  const [openModal, setOpenModal] = useState(false);
   const [chatData, setChatData] = useState({
     selectedUser: null,
     chats: [],

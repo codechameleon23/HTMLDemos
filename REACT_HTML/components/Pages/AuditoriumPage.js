@@ -1,7 +1,7 @@
 const AuditoriumPage = () => {
-  const { Link } = ReactRouterDOM;
+  // const { Link } = ReactRouterDOM;
   const { useState, useEffect } = React;
-  const [setModal, setOpenModal] = useState(true);
+  const [openModal, setOpenModal] = useState(false);
   const [chatData, setChatData] = useState({
     chats: [],
   });
@@ -86,12 +86,12 @@ const AuditoriumPage = () => {
           <div
             className="pos-absolute pin bg-contain bg-no-repeat"
             style={{
-              backgroundImage: 'URL("./images/auditorium_61f5286ae19a1.jpg")',
+              backgroundImage: 'URL("./images/auditorium.jpg")',
             }}
           >
             <Video />
           </div>
-          {!setModal && (
+          {!openModal && (
             <div
               onClick={() => setOpenModal(true)}
               className="pos-fixed p-8 bg-primary f-color-white rounded-4 pin-l-auto pin-t-50 pin-t50 pin-r m-8 shadow-lg no-underline opacity-65 hover:opacity-100 transition-all cursor-pointer"
@@ -104,7 +104,7 @@ const AuditoriumPage = () => {
           )}
         </section>
       </Layout>
-      {setModal && (
+      {openModal && (
         <Modal
           cover
           title="Help Desk"

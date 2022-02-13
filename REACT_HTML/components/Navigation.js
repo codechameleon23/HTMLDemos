@@ -3,7 +3,6 @@ const Navigation = () => {
   // pagePaths id from  constant.js
   return pagePaths?.length > 0 ? (
     <nav className="pos-fixed z-10 pin-x pin-b bg-dark f-color-light">
-      
       <ul className="flex-row justify-center list-reset f-size-14">
         {pagePaths.map((navLink, index) => {
           return (
