@@ -71,7 +71,7 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  
+
   @media (min-width: $bp_lg) {
     top: 50%;
     margin-bottom: 9.6rem;
@@ -114,8 +114,45 @@
 .navbar {
   @media (max-width: $bp_lg) {
     transition: $transition;
-    &:not(.open-menu){
+    &:not(.open-menu) {
       transform: translateX(-100%);
+    }
+  }
+}
+
+.icon-button {
+  &:hover {
+    .label {
+      opacity: 1;
+      max-width: 30rem;
+    }
+  }
+  .label {
+    max-width: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: $transition;
+  }
+}
+
+.simple-table {
+  th,
+  td {
+    padding: 0.8rem;
+    &:last-child {
+      text-align: center;
+    }
+  }
+  thead {
+    tr {
+      background-color: $color-primary-dark-200;
+      color: $color-white;
+      text-transform: uppercase;
+    }
+  }
+  tbody {
+    tr:hover {
+      background-color: $color-primary-light-400;
     }
   }
 }

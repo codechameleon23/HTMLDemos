@@ -1,10 +1,21 @@
-const Modal = ({ title, cover, children, onClose, style, className }) => {
+const Modal = ({
+  title,
+  cover,
+  noblur,
+  children,
+  onClose,
+  style,
+  className,
+}) => {
   return (
     <>
       {cover && (
         <div
-          onClick={onClose}
-          className="pos-absolute pin bg-dark opacity-25"
+          style={{
+            zIndex: "39",
+          }}
+          onClick={!noblur ? onClose : null}
+          className="pos-absolute pin bg-white opacity-65"
         ></div>
       )}
       <div
@@ -28,7 +39,7 @@ const Modal = ({ title, cover, children, onClose, style, className }) => {
         <div className={`modal-wrapper ${className}`} style={style}>
           <div className="flex-col w-full flex-stretch">
             <header className="p-8 bg-primary f-color-white f-weight-medium flex-none flex-row rounded-t-8">
-              {title && <h3>{title}</h3>}
+              {title && <h3 className="f-size-24">{title}</h3>}
               <button
                 onClick={onClose}
                 className="cursor-pointer f-color-inherit ratio-1x1 icon-24 f-size-12 ml-auto"
