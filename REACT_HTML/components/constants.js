@@ -10,8 +10,8 @@ const pagePaths = [
     icon: "desktop_windows",
   },
   {
-    path: "/exhibiton",
-    label: "Exhibiton",
+    path: "/exhibition",
+    label: "Exhibition",
     icon: "group",
   },
   {

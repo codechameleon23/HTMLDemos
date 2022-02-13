@@ -1,61 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    @@include('./_includes/_head.html', { "pageName": "Speedhire Conclave",
-    "description": "" })
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-  </head>
-  <body class="jsNavbarToggle is-close flex-col">
-    <div id="root" class="flex-auto flex-col"></div>
-  </body>
-  <script src="js/allScript.js"></script>
-  <script src="https://unpkg.com/html-react-parser@latest/dist/html-react-parser.min.js"></script>
 
-  <script src="./components/constants.js" type="text/babel"></script>
-  <script src="./components/helpers.js" type="text/babel"></script>
-  <script src="./components/Layout.js" type="text/babel"></script>
-  <script src="./components/Modal.js" type="text/babel"></script>
-  <script src="./components/Navigation.js" type="text/babel"></script>
+<head>
+  @@include('./_includes/_head.html', { "pageName": "Speedhire Conclave",
+  "description": "" })
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
 
-  <script src="./components//DisplayChat.js" type="text/babel"></script>
-  <script src="./components/AddMessageForm.js" type="text/babel"></script>
-  <script src="./components/ChatBox.js" type="text/babel"></script>
-  <script src="./components/ChatBoxUserList.js" type="text/babel"></script>
-  <script src="./components/BackgroundCover.js" type="text/babel"></script>
-  <script src="./components/NavigationDots.js" type="text/babel"></script>
-  <script src="./components/VideoFrame.js" type="text/babel"></script>
+<body class="jsNavbarToggle is-close flex-col">
+  <div id="root" class="flex-auto flex-col"></div>
+</body>
+<script src="js/allScript.js"></script>
+<script src="https://unpkg.com/html-react-parser@latest/dist/html-react-parser.min.js"></script>
 
-  <script src="./components/LoginForm.js" type="text/babel"></script>
-  <script src="./components/SignupForm.js" type="text/babel"></script>
-  <script src="./components/ErrorMessage.js" type="text/babel"></script>
+<script src="./components/constants.js" type="text/babel"></script>
+<script src="./components/helpers.js" type="text/babel"></script>
+<script src="./components/Layout.js" type="text/babel"></script>
+<script src="./components/Modal.js" type="text/babel"></script>
+<script src="./components/Navigation.js" type="text/babel"></script>
 
-  <script src="./components/Pages/SignInSignUpPage.js" type="text/babel"></script>
-  <script src="./components/Pages/SignupPage.js" type="text/babel"></script>
-  <script src="./components/Pages/LobbyPage.js" type="text/babel"></script>
-  <script src="./components/Pages/AuditoriumPage.js" type="text/babel"></script>
-  <script src="./components/Pages/LoungePage.js" type="text/babel"></script>
+<script src="./components//DisplayChat.js" type="text/babel"></script>
+<script src="./components/AddMessageForm.js" type="text/babel"></script>
+<script src="./components/ChatBox.js" type="text/babel"></script>
+<script src="./components/ChatBoxUserList.js" type="text/babel"></script>
+<script src="./components/BackgroundCover.js" type="text/babel"></script>
+<script src="./components/NavigationDots.js" type="text/babel"></script>
+<script src="./components/VideoFrame.js" type="text/babel"></script>
 
-  <script type="text/babel">
-    // console.log("window", window);
-    // console.log("ReactRouterDOM", ReactRouterDOM);
-    const { Route, HashRouter, Redirect, Switch } = ReactRouterDOM;
-    const App = () => (
-      <HashRouter basename="">
-        <Switch>
-          <Route exact path="/">
-            <Redirect to="/lobby" />
-          </Route>
-          <Route path="/lobby" component={LobbyPage} />
-          <Route path="/login" component={SignInSignUpPage} />
-          <Route path="/signup" component={SignInSignUpPage} />
-          <Route path="/auditorium" component={AuditoriumPage} />
-          <Route path="/lounge" component={LoungePage} />
-        </Switch>
-      </HashRouter>
-    );
-    ReactDOM.render(<App />, document.querySelector("#root"));
-  </script>
+<script src="./components/LoginForm.js" type="text/babel"></script>
+<script src="./components/SignupForm.js" type="text/babel"></script>
+<script src="./components/ErrorMessage.js" type="text/babel"></script>
+
+<script src="./components/Pages/SignInSignUpPage.js" type="text/babel"></script>
+<script src="./components/Pages/SignupPage.js" type="text/babel"></script>
+<script src="./components/Pages/LobbyPage.js" type="text/babel"></script>
+<script src="./components/Pages/AuditoriumPage.js" type="text/babel"></script>
+<script src="./components/Pages/ExhibitionPage.js" type="text/babel"></script>
+<script src="./components/Pages/ExhibitionBoothPage.js" type="text/babel"></script>
+<script src="./components/Pages/LoungePage.js" type="text/babel"></script>
+<script src="./components/Pages/404.js" type="text/babel"></script>
+
+<script type="text/babel">
+  // console.log("window", window);
+  console.log("ReactRouterDOM", ReactRouterDOM);
+  const { Route, HashRouter, Redirect, Switch } = ReactRouterDOM;
+  const App = () => (
+    <HashRouter basename="">
+      <Switch>
+        <Route exact path="/">
+          <Redirect to="/lobby" />
+        </Route>
+        <Route path="/lobby" component={LobbyPage} />
+        <Route path="/login" component={SignInSignUpPage} />
+        <Route path="/signup" component={SignInSignUpPage} />
+        <Route path="/auditorium" component={AuditoriumPage} />
+        <Route path="/exhibition" exact component={ExhibitionPage} />
+        <Route path="/exhibition/:boothId" render={(props) => <ExhibitionBoothPage {...props} />} />
+        <Route path="/lounge" component={LoungePage} />
+        <Route path="*" component={NoPageFound} />
+      </Switch>
+    </HashRouter>
+  );
+  ReactDOM.render(<App />, document.querySelector("#root"));
+</script>
+
 </html>
