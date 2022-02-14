@@ -237,7 +237,11 @@
         </div>
       </div>
     </section>
-    <section class="divider mb-40">
+    <section class="divider mb-64"></section>
+    <section class="bg-tertiary">
+      <div class="map-banner pos-relative">
+        <div id="map-canvas" class="map pos-absolute pin h-full w-full flex-stretch"></div>
+      </div>
     </section>
   </main>
 </body>
@@ -358,5 +362,18 @@
   </div>
 </footer>
 <script src="js/allScript.js"></script>
+<script>
+  $('#map-canvas').mapify({
+    key: 'AIzaSyB1kmlnoOlwpHQQBvhhIL3joMAKpKq9Yoo',
+    points: [{
+      lat: 52.68260343357753,
+      lng: -1.8874158380622823,
+      marker: 'http://maps.google.com/mapfiles/ms/micons/red.png',
+      markerSize: [32, 32],
+      title: 'Busy Bees Childcare',
+    }],
+    zoom: 13,
+  });
+</script>
 
 </html>
