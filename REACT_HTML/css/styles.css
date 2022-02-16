@@ -67194,6 +67194,314 @@ body[data-aos-easing='ease-in-out'] [data-aos],
  * Flip animations:
  * flip-left, flip-right, flip-up, flip-down
  */
+/*navbar styling*/
+/*!
+ * https://github.com/YouCanBookMe/react-datetime
+ */
+.rdt
+{
+    position: relative;
+}
+
+.rdtPicker
+{
+    position: absolute;
+    z-index: 99999 !important;
+
+    display: none;
+
+    width: 250px;
+    margin-top: 1px;
+    padding: 4px;
+
+    border: 1px solid #f9f9f9; 
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+}
+
+.rdtOpen .rdtPicker
+{
+    display: block;
+}
+
+.rdtStatic .rdtPicker
+{
+    position: static; 
+
+    box-shadow: none;
+}
+
+.rdtPicker .rdtTimeToggle
+{
+    text-align: center;
+}
+
+.rdtPicker table
+{
+    width: 100%;
+    margin: 0;
+}
+
+.rdtPicker td,
+.rdtPicker th
+{
+    padding: .8rem; 
+
+    text-align: center;
+}
+
+.rdtPicker td
+{
+    cursor: pointer;
+}
+
+.rdtPicker .rdtTimeToggle:hover,
+.rdtPicker td.rdtDay:hover,
+.rdtPicker td.rdtHour:hover,
+.rdtPicker td.rdtMinute:hover,
+.rdtPicker td.rdtSecond:hover
+{
+    cursor: pointer; 
+
+    background: #eee;
+}
+
+.rdtPicker td.rdtNew,
+.rdtPicker td.rdtOld
+{
+    color: #999;
+}
+
+.rdtPicker td.rdtToday
+{
+    position: relative;
+}
+
+.rdtPicker td.rdtToday:before
+{
+    position: absolute;
+    right: 4px; 
+    bottom: 4px;
+
+    display: inline-block;
+
+    content: '';
+
+    border-top-color: rgba(0, 0, 0, .2);
+    border-bottom: 7px solid #cc9440;
+    border-left: 7px solid transparent;
+}
+
+.rdtPicker td.rdtActive,
+.rdtPicker td.rdtActive:hover
+{
+    color: #fff;
+    background-color: #cc9440;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .25);
+}
+
+.rdtPicker td.rdtActive.rdtToday:before
+{
+    border-bottom-color: #fff;
+}
+
+.rdtPicker td.rdtDisabled,
+.rdtPicker td.rdtDisabled:hover
+{
+    cursor: not-allowed; 
+
+    color: #999;
+    background: 0 0;
+}
+
+.rdtPicker td span.rdtOld
+{
+    color: #999;
+}
+
+.rdtPicker td span.rdtDisabled,
+.rdtPicker td span.rdtDisabled:hover
+{
+    cursor: not-allowed; 
+
+    color: #999;
+    background: 0 0;
+}
+
+.rdtPicker th
+{
+    border-bottom: 1px solid #f9f9f9;
+}
+
+.rdtPicker .dow
+{
+    font-weight: 600; 
+
+    width: 14.2857%;
+
+    cursor: default;
+
+    border-bottom: none;
+}
+
+.rdtPicker th.rdtSwitch
+{
+    width: 100px;
+}
+
+.rdtPicker th.rdtNext,
+.rdtPicker th.rdtPrev
+{
+    font-size: 21px;
+
+    vertical-align: top;
+}
+
+.rdtNext span,
+.rdtPrev span
+{
+    display: block;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; 
+
+    -webkit-touch-callout: none;
+}
+
+.rdtPicker th.rdtDisabled,
+.rdtPicker th.rdtDisabled:hover
+{
+    cursor: not-allowed; 
+
+    color: #999;
+    background: 0 0;
+}
+
+.rdtPicker thead tr:first-child th
+{
+    cursor: pointer;
+}
+
+.rdtPicker thead tr:first-child th:hover
+{
+    background: #eee;
+}
+
+.rdtPicker tfoot
+{
+    border-top: 1px solid #f9f9f9;
+}
+
+.rdtPicker button
+{
+    cursor: pointer; 
+
+    border: none;
+    background: 0 0;
+}
+
+.rdtPicker button:hover
+{
+    background-color: #eee;
+}
+
+.rdtPicker thead button
+{
+    width: 100%;
+    height: 100%;
+}
+
+td.rdtMonth,
+td.rdtYear
+{
+    width: 25%;
+    height: 50px;
+
+    cursor: pointer;
+}
+
+td.rdtMonth:hover,
+td.rdtYear:hover
+{
+    background: #eee;
+}
+
+.rdtCounters
+{
+    display: inline-block;
+}
+
+.rdtCounters > div
+{
+    float: left;
+}
+
+.rdtCounter
+{
+    height: 100px;
+}
+
+.rdtCounter
+{
+    width: 40px;
+}
+
+.rdtCounterSeparator
+{
+    line-height: 100px;
+}
+
+.rdtCounter .rdtBtn
+{
+    line-height: 40px;
+
+    display: block;
+
+    height: 40%;
+
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; 
+
+    -webkit-touch-callout: none;
+}
+
+.rdtCounter .rdtBtn:hover
+{
+    background: #eee;
+}
+
+.rdtCounter .rdtCount
+{
+    font-size: 1.2em; 
+
+    height: 20%;
+}
+
+.rdtMilli
+{
+    width: 48px; 
+    padding-left: 8px;
+
+    vertical-align: middle;
+}
+
+.rdtMilli input
+{
+    font-size: 1.2em;
+
+    width: 100%;
+    margin-top: 37px;
+}
+
+.rdtTime td
+{
+    cursor: default;
+}
 /*Custom styling*/
 .with-navigation
 {
@@ -67517,4 +67825,14 @@ body[data-aos-easing='ease-in-out'] [data-aos],
 .simple-table tbody tr:hover
 {
     background-color: #f2e4cf;
+}
+
+.material-icons.f-size-64
+{
+    font-size: 6.4rem;
+}
+
+.rdtPicker
+{
+    width: 100%;
 }

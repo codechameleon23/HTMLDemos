@@ -4,7 +4,6 @@
 <head>
   @@include('./_includes/_head.html', { "pageName": "Speedhire Conclave",
   "description": "" })
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 </head>
 
 <body class="jsNavbarToggle is-close flex-col">
@@ -12,6 +11,9 @@
 </body>
 <script src="js/allScript.js"></script>
 <script src="https://unpkg.com/html-react-parser@latest/dist/html-react-parser.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-datetime/2.16.1/react-datetime.min.js"></script>
+
 
 <script src="./components/constants.js" type="text/babel"></script>
 <script src="./components/helpers.js" type="text/babel"></script>
@@ -27,6 +29,7 @@
 <script src="./components/NavigationDots.js" type="text/babel"></script>
 <script src="./components/VideoFrame.js" type="text/babel"></script>
 <script src="./components/Tabel.js" type="text/babel"></script>
+<script src="./components/VideoCallSchedlerBox.js" type="text/babel"></script>
 
 <script src="./components/LoginForm.js" type="text/babel"></script>
 <script src="./components/SignupForm.js" type="text/babel"></script>
@@ -44,7 +47,7 @@
 
 <script type="text/babel">
   // console.log("window", window);
-  console.log("ReactRouterDOM", ReactRouterDOM);
+  // console.log("ReactRouterDOM", ReactRouterDOM);
   const { Route, HashRouter, Redirect, Switch } = ReactRouterDOM;
   const App = () => (
     <HashRouter basename="">
