@@ -51,6 +51,10 @@ const AuditoriumPage = () => {
   const HandleMessageSend = (data) => {
     console.log("HandleMessageSend", data);
   };
+
+  const handleReaction = (type) => {
+    console.log("reaction", type);
+  };
   return (
     <>
       <Layout>
@@ -72,6 +76,32 @@ const AuditoriumPage = () => {
           </div>
         </section>
       </Layout>
+      <div className="pos-fixed pin-t-50 pin-t50 pin-l pin-r-auto flex-col overflow-hidden">
+        <div className="pos-absolute pin bg-dark opacity-65 rounded-8"></div>
+        <div className="flex-col pos-relative">
+          <ReactionButton
+            className="p-8 f-size-42 hover:bg-primary-light-400 rounded-8"
+            type="clap"
+            onClick={handleReaction}
+          >
+            👏
+          </ReactionButton>
+          <ReactionButton
+            className="p-8 f-size-42 hover:bg-primary-light-400 rounded-8"
+            type="like"
+            onClick={handleReaction}
+          >
+            👍
+          </ReactionButton>
+          <ReactionButton
+            className="p-8 f-size-42 hover:bg-primary-light-400 rounded-8"
+            type="heart"
+            onClick={handleReaction}
+          >
+            ❤️
+          </ReactionButton>
+        </div>
+      </div>
       {!openModal && (
         <div
           onClick={() => setOpenModal(true)}

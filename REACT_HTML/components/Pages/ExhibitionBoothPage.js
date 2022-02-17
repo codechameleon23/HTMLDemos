@@ -85,11 +85,11 @@ const ExhibitionBoothPage = ({ match, history }) => {
 
   const Booths = {
     "booth-1": {
-      image: "./images/booth-1.jpg",
+      image: "../images/booth-1.jpg",
       video: "https://d3ep09c8x21fmh.cloudfront.net/techgig/speedhire.mp4",
     },
     "booth-2": {
-      image: "./images/booth-2.jpg",
+      image: "../images/booth-2.jpg",
       video: "https://d3ep09c8x21fmh.cloudfront.net/techgig/speedhire.mp4",
     },
   };
