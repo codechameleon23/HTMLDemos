@@ -76,25 +76,25 @@ const AuditoriumPage = () => {
           </div>
         </section>
       </Layout>
-      <div className="pos-fixed pin-t-50 pin-t50 pin-l pin-r-auto flex-col overflow-hidden">
+      <div className="pos-fixed pin-b lg:pin-b-50 lg:pin-b50 pin-l pin-r-auto flex-col overflow-hidden m-8">
         <div className="pos-absolute pin bg-dark opacity-65 rounded-8"></div>
-        <div className="flex-col pos-relative">
+        <div className="flex-row lg:flex-col pos-relative">
           <ReactionButton
-            className="p-8 f-size-42 hover:bg-primary-light-400 rounded-8"
+            className="m-4 p-8 f-size-32 hover:bg-primary-light-400 rounded-8"
             type="clap"
             onClick={handleReaction}
           >
             👏
           </ReactionButton>
           <ReactionButton
-            className="p-8 f-size-42 hover:bg-primary-light-400 rounded-8"
+            className="m-4 p-8 f-size-32 hover:bg-primary-light-400 rounded-8"
             type="like"
             onClick={handleReaction}
           >
             👍
           </ReactionButton>
           <ReactionButton
-            className="p-8 f-size-42 hover:bg-primary-light-400 rounded-8"
+            className="m-4 p-8 f-size-32 hover:bg-primary-light-400 rounded-8"
             type="heart"
             onClick={handleReaction}
           >
@@ -105,7 +105,7 @@ const AuditoriumPage = () => {
       {!openModal && (
         <div
           onClick={() => setOpenModal(true)}
-          className="pos-fixed p-8 bg-primary f-color-white rounded-4 pin-l-auto pin-b lg:pin-b-auto lg:pin-t-50 pin-t50 pin-r m-8 shadow-lg no-underline opacity-65 hover:opacity-100 transition-all cursor-pointer"
+          className="pos-fixed pin-b lg:pin-b-50 lg:pin-b50 pin-r p-8 bg-primary f-color-white rounded-4 m-8 shadow-lg no-underline opacity-65 hover:opacity-100 transition-all cursor-pointer"
         >
           <div className="flex-col text-center f-size-12 f-weight-medium">
             <span class="material-icons">question_answer</span>
