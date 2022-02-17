@@ -76,13 +76,14 @@ const AuditoriumPage = () => {
           </div>
         </section>
       </Layout>
-      <div className="pos-fixed pin-b lg:pin-b-50 lg:pin-b50 pin-l pin-r-auto flex-col overflow-hidden m-8">
+      <div className="pos-fixed pin-b lg:pin-b-50 lg:pin-b50 pin-l pin-r-auto flex-col m-8">
         <div className="pos-absolute pin bg-dark opacity-65 rounded-8"></div>
         <div className="flex-row lg:flex-col pos-relative">
           <ReactionButton
             className="m-4 p-8 f-size-32 hover:bg-primary-light-400 rounded-8"
             type="clap"
             onClick={handleReaction}
+            title="Applause"
           >
             👏
           </ReactionButton>
@@ -90,6 +91,7 @@ const AuditoriumPage = () => {
             className="m-4 p-8 f-size-32 hover:bg-primary-light-400 rounded-8"
             type="like"
             onClick={handleReaction}
+            title="Like it"
           >
             👍
           </ReactionButton>
@@ -97,6 +99,7 @@ const AuditoriumPage = () => {
             className="m-4 p-8 f-size-32 hover:bg-primary-light-400 rounded-8"
             type="heart"
             onClick={handleReaction}
+            title="Love it"
           >
             ❤️
           </ReactionButton>
@@ -105,9 +108,10 @@ const AuditoriumPage = () => {
       {!openModal && (
         <div
           onClick={() => setOpenModal(true)}
-          className="pos-fixed pin-b lg:pin-b-50 lg:pin-b50 pin-r p-8 bg-primary f-color-white rounded-4 m-8 shadow-lg no-underline opacity-65 hover:opacity-100 transition-all cursor-pointer"
+          className="pos-fixed pin-b lg:pin-b-50 lg:pin-b50 pin-r p-8 m-8 shadow-lg no-underline cursor-pointer"
         >
-          <div className="flex-col text-center f-size-12 f-weight-medium">
+          <div className="bg-dark lg:bg-primary pos-absolute pin bg-dark opacity-65 rounded-8"></div>
+          <div className="flex-col text-center f-size-12 f-weight-medium pos-relative f-color-white">
             <span class="material-icons">question_answer</span>
             <span>Ask a Question</span>
           </div>

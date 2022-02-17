@@ -5,6 +5,7 @@ const ReactionButton = ({
   className,
   style,
   onClick,
+  title,
 }) => {
   const floatingItem = emoji || children;
   const createParticle = (x, y) => {
@@ -66,7 +67,13 @@ const ReactionButton = ({
   };
 
   return (
-    <button className={className} type={type} style={style} onClick={Pop}>
+    <button
+      className={className}
+      type={type}
+      style={style}
+      onClick={Pop}
+      title={title}
+    >
       {children}
     </button>
   );
