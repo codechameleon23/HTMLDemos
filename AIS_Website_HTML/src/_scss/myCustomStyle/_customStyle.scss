@@ -81,13 +81,13 @@
     .close-icon {
       display: none;
     }
-    &.is-active{
+    &.is-active {
       .search-icon {
         display: none;
       }
       .close-icon {
         display: inline-block;
-      } 
+      }
     }
   }
   &-bar {
@@ -292,7 +292,6 @@
     min-height: 38rem;
   }
 }
-
 
 .card-banner {
   min-height: 46rem;
@@ -687,14 +686,13 @@
   height: 50%;
 }
 
-
 .inputfile {
-	width: 0.1px;
-	height: 0.1px;
-	opacity: 0;
-	overflow: hidden;
-	position: absolute;
-	z-index: -1;
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
 }
 
 .inputfile + label {
@@ -711,20 +709,44 @@
 }
 
 .inputfile + label {
-	cursor: pointer; /* "hand" cursor */
+  cursor: pointer; /* "hand" cursor */
 }
 
-.custom-tick.large > input[type='checkbox'] + .tick {
+.custom-tick.large > input[type="checkbox"] + .tick {
   height: 4.8rem;
   width: 4.8rem;
 }
 
-.custom-tick > input[type='checkbox'] + .tick span:after {
+.custom-tick > input[type="checkbox"] + .tick span:after {
   height: 2.6rem;
-  width: .8rem;
-  border-width: 0 .3rem .3rem 0;
+  width: 0.8rem;
+  border-width: 0 0.3rem 0.3rem 0;
 }
 
 .map-banner {
   min-height: 47.6rem;
+}
+
+// header.header {
+//   h
+// }
+@media (min-width: $bp_lg) {
+  header.header {
+    .brand-logo .icon {
+      transition: max-width 0.5s 0.3s ease-in-out;
+      max-width: 36rem;
+    }
+    ~ main {
+      margin-top: 22.031rem;
+      transition: margin-top 0.5s 0.3s ease-in-out;
+    }
+    &.shrink {
+      .brand-logo .icon {
+        max-width: 18rem;
+      }
+      ~ main {
+        margin-top: 16.871rem;
+      }
+    }
+  }
 }
