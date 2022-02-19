@@ -50003,6 +50003,13 @@ main
         -webkit-transition: max-width .5s .3s ease-in-out;
                 transition: max-width .5s .3s ease-in-out;
     }
+    header.header ~ .search-bar
+    {
+        top: 21.664rem; 
+
+        -webkit-transition: top .5s .3s ease-in-out, max-height .45s 0s ease-in-out;
+                transition: top .5s .3s ease-in-out, max-height .45s 0s ease-in-out;
+    }
     header.header ~ main
     {
         margin-top: 22.031rem;
@@ -50013,6 +50020,10 @@ main
     header.header.shrink .brand-logo .icon
     {
         max-width: 18rem;
+    }
+    header.header.shrink ~ .search-bar
+    {
+        top: 16.871rem;
     }
     header.header.shrink ~ main
     {

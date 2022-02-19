@@ -730,19 +730,27 @@
 // header.header {
 //   h
 // }
+$shrinkingTransition: 0.5s 0.3s ease-in-out;
 @media (min-width: $bp_lg) {
   header.header {
     .brand-logo .icon {
-      transition: max-width 0.5s 0.3s ease-in-out;
+      transition: max-width $shrinkingTransition;
       max-width: 36rem;
+    }
+    ~ .search-bar {
+      transition: top $shrinkingTransition, max-height .45s 0s ease-in-out;
+      top: 21.664rem;
     }
     ~ main {
       margin-top: 22.031rem;
-      transition: margin-top 0.5s 0.3s ease-in-out;
+      transition: margin-top $shrinkingTransition;
     }
     &.shrink {
       .brand-logo .icon {
         max-width: 18rem;
+      }
+      ~ .search-bar {
+        top: 16.871rem;
       }
       ~ main {
         margin-top: 16.871rem;
