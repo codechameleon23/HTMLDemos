@@ -49996,6 +49996,11 @@ main
 
 @media (min-width: 992px)
 {
+    header.header .brand-logo
+    {
+        -webkit-transition: margin .5s .3s ease-in-out;
+                transition: margin .5s .3s ease-in-out;
+    }
     header.header .brand-logo .icon
     {
         max-width: 36rem; 
@@ -50017,9 +50022,13 @@ main
         -webkit-transition: margin-top .5s .3s ease-in-out;
                 transition: margin-top .5s .3s ease-in-out;
     }
+    header.header.shrink .brand-logo
+    {
+        margin: 1rem 0;
+    }
     header.header.shrink .brand-logo .icon
     {
-        max-width: 18rem;
+        max-width: 22rem;
     }
     header.header.shrink ~ .search-bar
     {

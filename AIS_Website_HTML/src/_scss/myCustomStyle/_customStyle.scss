@@ -733,6 +733,9 @@
 $shrinkingTransition: 0.5s 0.3s ease-in-out;
 @media (min-width: $bp_lg) {
   header.header {
+    .brand-logo {
+      transition: margin $shrinkingTransition;
+    }
     .brand-logo .icon {
       transition: max-width $shrinkingTransition;
       max-width: 36rem;
@@ -746,8 +749,11 @@ $shrinkingTransition: 0.5s 0.3s ease-in-out;
       transition: margin-top $shrinkingTransition;
     }
     &.shrink {
+      .brand-logo {
+        margin: 1rem 0;
+      }
       .brand-logo .icon {
-        max-width: 18rem;
+        max-width: 22rem;
       }
       ~ .search-bar {
         top: 16.871rem;
