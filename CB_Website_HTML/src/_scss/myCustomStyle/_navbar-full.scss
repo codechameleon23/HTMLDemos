@@ -1,0 +1,44 @@
+$bp: $navbarBp;
+.navbar {
+  bottom: auto;
+}
+@media (min-width: $bp) {
+  .navbar {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .5s;
+
+    .nav-col {
+      opacity: 0;
+      transition: opacity .5s .5s ease-in-out;
+    }
+  }
+}
+
+.jsNavbarToggle.is-open {
+  .hamburger {
+    position: relative;
+    top: 0;
+    right: 0;
+    background-color: $color-secondary;
+  }
+  .navbar {
+    opacity: 1;
+    max-height: 88rem;
+
+    .nav-col {
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: $bp) {
+  .jsNavbarToggle.is-open {
+    .navbar {
+      .container {
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+    }
+  }
+}

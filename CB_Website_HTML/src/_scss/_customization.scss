@@ -1,0 +1,606 @@
+$fontRelatedClassNamePrifix: 'f-';
+$fontFamilyClassNamePrefix: "#{$fontRelatedClassNamePrifix}family";
+$textColorsClassPrefix: "#{$fontRelatedClassNamePrifix}color";
+$fontSizesClassPrefix: "#{$fontRelatedClassNamePrifix}size";
+$fontWeightsClassPrefix: "#{$fontRelatedClassNamePrifix}weight";
+$lineHeightsClassPrefix: "#{$fontRelatedClassNamePrifix}height";
+$letterSpacingsClassPrefix: "#{$fontRelatedClassNamePrifix}spacing";
+
+/*ImportFontsonts*/
+ @import "./ImportFonts";
+
+$color-white: #ffffff;
+$color-black: #000000;
+$color-grey: #373636;
+
+// brand colors
+$color1: #373636;
+$color2: mix(white, #e5e1d7, 60%);
+$color3: #5e5243;
+$color4: #f5b604;
+
+$color-text: $color1;
+$color-primary: $color3;
+$color-secondary: $color2;
+$color-highlight: $color4;
+
+// $color-text-placeholder: rgba($color-text, .8);
+$color-text-placeholder: $color-text;
+$color-input-text: $color-text;
+$defaultPlaceHolderColor: $color-text-placeholder;
+$color-placeholder: mix(white, $color-text, 96%);
+
+$selectionTextColor: $color-primary;
+//$selectionTextBgColor: rgba($color-primary, .65);
+$selectionTextBgColor: rgba(invert($color-text), .65);
+//$selectionTextBgColor: rgba(#CF995F, .55);
+
+//-------------------------
+
+// $gridSizes: ();
+$orientations: (
+  // landscape\: "landscape",
+  // portrait\: "portrait"
+);
+
+$baseFont: 'Baskervville', $font_serif;
+$primaryFont: $baseFont;
+// $secondaryFont: 'quicksand', sans-serif;
+
+$defaultFont: $baseFont;
+$defaultTextColor: $color-text;
+$defaultFontWeights: 400;
+$defaultFontSize: 2.5rem;
+$defaultFontHeight: 1.32;
+$defaultLetterSpacing: 0;
+
+$fontFamily: (
+  //$fontFamilyClassNamePrefix "default" $defaultFont,
+  $fontFamilyClassNamePrefix "primary" $primaryFont,
+  // $fontFamilyClassNamePrefix "secondary" $secondaryFont,
+);
+
+$bp_xs: 460px;
+$bp_sm: 576px;
+$bp_md: 710px;
+$bp_lg: 992px;
+$bp_xl: 1200px;
+$bp_xxl: 1400px;
+$breakPoints: (
+  null 0, 
+  sm\: $bp_sm, 
+  md\: $bp_md, 
+  lg\: $bp_lg, 
+  xl\: $bp_xl,
+  xxl\: $bp_xxl
+);
+
+$states: (
+  null null,
+  hover\: ":hover",
+  focus\: ":focus",
+  focus-within\: ":focus-within",
+  // active\: null,
+);
+
+$gradient-1: linear-gradient(0deg, rgba(2,0,0,0.7) 0%, rgba(240,240,240,0.06) 60%, rgba(255,255,255,0) 100%);;
+$bgColors: (
+  $bgColorsClassPrefix "$color-placeholder" $color-placeholder 'states' 'no-parent' null,
+  $bgColorsClassPrefix "inherit" inherit 'states' 'no-parent' null,
+  $bgColorsClassPrefix "transparent" transparent 'states' 'no-parent' null,
+  $bgColorsClassPrefix "primary" $color-primary 'states' 'no-parent' null,
+  $bgColorsClassPrefix "secondary" $color-secondary 'states' 'no-parent' null,
+  $bgColorsClassPrefix "highlight" $color-highlight 'states' 'no-parent' null,
+  $bgColorsClassPrefix "white" $color-white 'states' 'no-parent' null,
+  $bgColorsClassPrefix "black" $color-black 'states' 'no-parent' null,
+);
+
+$shadowOverClassPrefix: "overlay";
+$shadowOver: (
+  //$shadowOverClassPrefix 'cover' $gradList-primary 'no-states',
+  // $shadowOverClassPrefix "grad-1" $gradient-1 'states' 'no-parent' null,
+  //$shadowOverClassPrefix 'grad-primary-to-right' $gradList-primary-to-right 'states',
+  //$shadowOverClassPrefix 'grad-secondary' $gradList-secondary 'states',
+  //$shadowOverClassPrefix 'grad-primary-reverse' $gradList-primary-reverse 'states',
+  //$shadowOverClassPrefix 'grad-secondary-reverse' $gradList-secondary-reverse 'states',
+  //$shadowOverClassPrefix 'solid-primary' $gradList-solid-primary 'states',
+  //$shadowOverClassPrefix 'solid-secondary' $gradList-solid-secondary 'states',
+  //$shadowOverClassPrefix "none" none 'no-states',
+);
+
+$themeColor: ();
+
+$borderColors: (
+  $borderColorsClassPrefix "inherit" inherit 'states' 'no-parent' null,
+  $borderColorsClassPrefix "transparent" transparent 'states' 'no-parent' null,
+  $borderColorsClassPrefix "primary" $color-primary 'states' 'no-parent' null,
+  $borderColorsClassPrefix "secondary" $color-secondary 'states' 'no-parent' null,
+  $borderColorsClassPrefix "highlight" $color-highlight 'states' 'no-parent' null,
+  $borderColorsClassPrefix "white" $color-white 'states' 'no-parent' null,
+  $borderColorsClassPrefix "black" $color-black 'states' 'no-parent' null,
+);
+
+$borderWidth: (
+  null 0.1rem 'states' 'no-parent',
+  1 0.1rem 'states' 'no-parent',
+  2 0.2rem 'states' 'no-parent',
+  3 0.3rem 'states' 'no-parent',
+  0 0rem 'no-states' 'no-parent',
+);
+
+
+$textColors: (
+  $textColorsClassPrefix "inherit" inherit 'states' 'no-parent' null,
+  $textColorsClassPrefix "default" $color-text 'states' 'no-parent' null,
+  $textColorsClassPrefix "primary" $color-primary 'states' 'no-parent' null,
+  $textColorsClassPrefix "secondary" $color-secondary 'states' 'no-parent' null,
+  $textColorsClassPrefix "highlight" $color-highlight 'states' 'no-parent' null,
+  $textColorsClassPrefix "white" $color-white 'states' 'no-parent' null,
+  $textColorsClassPrefix "black" $color-black 'states' 'no-parent' null,
+);
+
+
+// 15 16 18 19 21 22 23 24 27 31 32 61 96 112
+$fontSizes: (
+  $fontSizesClassPrefix "inherit" inherit null,
+  $fontSizesClassPrefix "default" $defaultFontSize null,
+  $fontSizesClassPrefix "xs-500" 0.8rem null,
+
+  $fontSizesClassPrefix "sm-100" 1.0rem null,
+  $fontSizesClassPrefix "sm-200" 1.2rem null,
+  $fontSizesClassPrefix "sm-300" 1.4rem null,
+  $fontSizesClassPrefix "sm-400" 1.6rem null,
+  $fontSizesClassPrefix "sm-500" 1.8rem null,
+
+  $fontSizesClassPrefix "2sm-100" 2.0rem null,
+  $fontSizesClassPrefix "2sm-200" 2.2rem null,
+  $fontSizesClassPrefix "2sm-300" 2.4rem null,
+  $fontSizesClassPrefix "2sm-400" 2.6rem null,
+  $fontSizesClassPrefix "2sm-500" 2.8rem null,
+
+  $fontSizesClassPrefix "md-100" 3.0rem null,
+  $fontSizesClassPrefix "md-200" 3.2rem null,
+  $fontSizesClassPrefix "md-300" 3.4rem null,
+  $fontSizesClassPrefix "md-400" 3.6rem null,
+  $fontSizesClassPrefix "md-500" 3.8rem null,
+
+  $fontSizesClassPrefix "2md-100" 4.0rem null,
+  $fontSizesClassPrefix "2md-200" 4.2rem null,
+  $fontSizesClassPrefix "2md-300" 4.4rem null,
+  $fontSizesClassPrefix "2md-400" 4.6rem null,
+  $fontSizesClassPrefix "2md-500" 4.8rem null,
+
+  $fontSizesClassPrefix "lg-100" 5.0rem null,
+  $fontSizesClassPrefix "lg-200" 5.2rem null,
+  $fontSizesClassPrefix "lg-300" 5.4rem null,
+  $fontSizesClassPrefix "lg-400" 5.6rem null,
+  $fontSizesClassPrefix "lg-500" 5.8rem null,
+
+  $fontSizesClassPrefix "2lg-100" 6.0rem null,
+  $fontSizesClassPrefix "2lg-200" 6.2rem null,
+  $fontSizesClassPrefix "2lg-300" 6.4rem null,
+  $fontSizesClassPrefix "2lg-400" 6.6rem null,
+  $fontSizesClassPrefix "2lg-500" 6.8rem null,
+
+  $fontSizesClassPrefix "xl-100" 7.0rem null,
+  $fontSizesClassPrefix "xl-200" 7.2rem null,
+  $fontSizesClassPrefix "xl-300" 7.4rem null,
+  $fontSizesClassPrefix "xl-400" 7.6rem null,
+  $fontSizesClassPrefix "xl-500" 7.8rem null,
+
+  $fontSizesClassPrefix "2xl-100" 8.0rem null,
+  $fontSizesClassPrefix "2xl-200" 8.2rem null,
+  $fontSizesClassPrefix "2xl-300" 8.4rem null,
+  $fontSizesClassPrefix "2xl-400" 8.6rem null,
+  $fontSizesClassPrefix "2xl-500" 8.8rem null,
+);
+
+$fontWeights: (
+  $fontWeightsClassPrefix "inherit" inherit null, //null / state / no-state
+  $fontWeightsClassPrefix "hairline" 100 null,
+  $fontWeightsClassPrefix "thin" 200 null,
+  $fontWeightsClassPrefix "light" 300 null,
+  $fontWeightsClassPrefix "regular" 400 null,
+  $fontWeightsClassPrefix "medium" 500 null,
+  $fontWeightsClassPrefix "semiBold" 600 null,
+  $fontWeightsClassPrefix "bold" 700 null,
+  $fontWeightsClassPrefix "extraBold" 800 null,
+  $fontWeightsClassPrefix "black" 900 null,
+);
+
+$lineHeights: (
+  $lineHeightsClassPrefix "none" 1,
+  $lineHeightsClassPrefix "tight" 1.2,
+  $lineHeightsClassPrefix "normal" "normal",
+  //$lineHeightsClassPrefix "ease" 1.6,
+  //$lineHeightsClassPrefix "loose" 2
+);
+
+$letterSpacings: (
+  // $letterSpacingsClassPrefix "tight" -0.05em,
+  $letterSpacingsClassPrefix "base" $defaultLetterSpacing,
+  $letterSpacingsClassPrefix "xs" 0.02em,
+  $letterSpacingsClassPrefix "sm" 0.08em,
+  $letterSpacingsClassPrefix "md" 0.125em,
+  $letterSpacingsClassPrefix "lg" 0.162em,
+  $letterSpacingsClassPrefix "xl" 0.20em,
+  $letterSpacingsClassPrefix "xxl" 1.2rem,
+);
+
+$paddings: (
+  $paddingsClassPrefix "xs-100" 0.1rem,
+  $paddingsClassPrefix "xs-200" 0.2rem,
+  $paddingsClassPrefix "xs-300" 0.4rem,
+  $paddingsClassPrefix "xs-400" 0.6rem,
+  $paddingsClassPrefix "xs-500" 0.8rem,
+
+  $paddingsClassPrefix "sm-100" 1.0rem,
+  $paddingsClassPrefix "sm-200" 1.2rem,
+  $paddingsClassPrefix "sm-300" 1.4rem,
+  $paddingsClassPrefix "sm-400" 1.6rem,
+  $paddingsClassPrefix "sm-500" 1.8rem,
+  
+  $paddingsClassPrefix "2sm-100" 2.0rem,
+  $paddingsClassPrefix "2sm-200" 2.2rem,
+  $paddingsClassPrefix "2sm-300" 2.4rem,
+  $paddingsClassPrefix "2sm-400" 2.6rem,
+  $paddingsClassPrefix "2sm-500" 2.8rem,
+  
+  $paddingsClassPrefix "md-100" 3.0rem,
+  $paddingsClassPrefix "md-200" 3.2rem,
+  $paddingsClassPrefix "md-300" 3.4rem,
+  $paddingsClassPrefix "md-400" 3.6rem,
+  $paddingsClassPrefix "md-500" 3.8rem,
+  
+  $paddingsClassPrefix "2md-100" 4.0rem,
+  $paddingsClassPrefix "2md-200" 4.2rem,
+  $paddingsClassPrefix "2md-300" 4.4rem,
+  $paddingsClassPrefix "2md-400" 4.6rem,
+  $paddingsClassPrefix "2md-500" 4.8rem,
+  
+  $paddingsClassPrefix "lg-100" 5.0rem,
+  $paddingsClassPrefix "lg-200" 5.2rem,
+  $paddingsClassPrefix "lg-300" 5.4rem,
+  $paddingsClassPrefix "lg-400" 5.6rem,
+  $paddingsClassPrefix "lg-500" 5.8rem,
+  
+  $paddingsClassPrefix "2lg-100" 6.0rem,
+  $paddingsClassPrefix "2lg-200" 6.2rem,
+  $paddingsClassPrefix "2lg-300" 6.4rem,
+  $paddingsClassPrefix "2lg-400" 6.6rem,
+  $paddingsClassPrefix "2lg-500" 6.8rem,
+  
+  $paddingsClassPrefix "xl-100" 7.0rem,
+  $paddingsClassPrefix "xl-200" 7.2rem,
+  $paddingsClassPrefix "xl-300" 7.4rem,
+  $paddingsClassPrefix "xl-400" 7.6rem,
+  $paddingsClassPrefix "xl-500" 7.8rem,
+  
+  $paddingsClassPrefix "2xl-100" 8.0rem,
+  $paddingsClassPrefix "2xl-200" 8.2rem,
+  $paddingsClassPrefix "2xl-300" 8.4rem,
+  $paddingsClassPrefix "2xl-400" 8.6rem,
+  $paddingsClassPrefix "2xl-500" 8.8rem,
+
+  $paddingsClassPrefix "0" 0,
+);
+
+$margins: (
+  $marginsClassPrefix "auto" auto,
+
+  $marginsClassPrefix "xs-100" 0.1rem,
+  $marginsClassPrefix "xs-200" 0.2rem,
+  $marginsClassPrefix "xs-300" 0.4rem,
+  $marginsClassPrefix "xs-400" 0.6rem,
+  $marginsClassPrefix "xs-500" 0.8rem,
+
+  $marginsClassPrefix "sm-100" 1.0rem,
+  $marginsClassPrefix "sm-200" 1.2rem,
+  $marginsClassPrefix "sm-300" 1.4rem,
+  $marginsClassPrefix "sm-400" 1.6rem,
+  $marginsClassPrefix "sm-500" 1.8rem,
+  
+  $marginsClassPrefix "2sm-100" 2.0rem,
+  $marginsClassPrefix "2sm-200" 2.2rem,
+  $marginsClassPrefix "2sm-300" 2.4rem,
+  $marginsClassPrefix "2sm-400" 2.6rem,
+  $marginsClassPrefix "2sm-500" 2.8rem,
+  
+  $marginsClassPrefix "md-100" 3.0rem,
+  $marginsClassPrefix "md-200" 3.2rem,
+  $marginsClassPrefix "md-300" 3.4rem,
+  $marginsClassPrefix "md-400" 3.6rem,
+  $marginsClassPrefix "md-500" 3.8rem,
+  
+  $marginsClassPrefix "2md-100" 4.0rem,
+  $marginsClassPrefix "2md-200" 4.2rem,
+  $marginsClassPrefix "2md-300" 4.4rem,
+  $marginsClassPrefix "2md-400" 4.6rem,
+  $marginsClassPrefix "2md-500" 4.8rem,
+  
+  $marginsClassPrefix "lg-100" 5.0rem,
+  $marginsClassPrefix "lg-200" 5.2rem,
+  $marginsClassPrefix "lg-300" 5.4rem,
+  $marginsClassPrefix "lg-400" 5.6rem,
+  $marginsClassPrefix "lg-500" 5.8rem,
+  
+  $marginsClassPrefix "2lg-100" 6.0rem,
+  $marginsClassPrefix "2lg-200" 6.2rem,
+  $marginsClassPrefix "2lg-300" 6.4rem,
+  $marginsClassPrefix "2lg-400" 6.6rem,
+  $marginsClassPrefix "2lg-500" 6.8rem,
+  
+  $marginsClassPrefix "xl-100" 7.0rem,
+  $marginsClassPrefix "xl-200" 7.2rem,
+  $marginsClassPrefix "xl-300" 7.4rem,
+  $marginsClassPrefix "xl-400" 7.6rem,
+  $marginsClassPrefix "xl-500" 7.8rem,
+  
+  $marginsClassPrefix "2xl-100" 8.0rem,
+  $marginsClassPrefix "2xl-200" 8.2rem,
+  $marginsClassPrefix "2xl-300" 8.4rem,
+  $marginsClassPrefix "2xl-400" 8.6rem,
+  $marginsClassPrefix "2xl-500" 8.8rem,
+
+  $marginsClassPrefix "0" 0,
+);
+
+$negativeMargin: (
+
+  $negativeMarginClassPrefix "xs-100" 0.1rem,
+  $negativeMarginClassPrefix "xs-200" 0.2rem,
+  $negativeMarginClassPrefix "xs-300" 0.4rem,
+  $negativeMarginClassPrefix "xs-400" 0.6rem,
+  $negativeMarginClassPrefix "xs-500" 0.8rem,
+
+  $negativeMarginClassPrefix "sm-100" 1.0rem,
+  $negativeMarginClassPrefix "sm-200" 1.2rem,
+  $negativeMarginClassPrefix "sm-300" 1.4rem,
+  $negativeMarginClassPrefix "sm-400" 1.6rem,
+  $negativeMarginClassPrefix "sm-500" 1.8rem,
+  
+  $negativeMarginClassPrefix "2sm-100" 2.0rem,
+  $negativeMarginClassPrefix "2sm-200" 2.2rem,
+  $negativeMarginClassPrefix "2sm-300" 2.4rem,
+  $negativeMarginClassPrefix "2sm-400" 2.6rem,
+  $negativeMarginClassPrefix "2sm-500" 2.8rem,
+  
+  $negativeMarginClassPrefix "md-100" 3.0rem,
+  $negativeMarginClassPrefix "md-200" 3.2rem,
+  $negativeMarginClassPrefix "md-300" 3.4rem,
+  $negativeMarginClassPrefix "md-400" 3.6rem,
+  $negativeMarginClassPrefix "md-500" 3.8rem,
+  
+  $negativeMarginClassPrefix "2md-100" 4.0rem,
+  $negativeMarginClassPrefix "2md-200" 4.2rem,
+  $negativeMarginClassPrefix "2md-300" 4.4rem,
+  $negativeMarginClassPrefix "2md-400" 4.6rem,
+  $negativeMarginClassPrefix "2md-500" 4.8rem,
+  
+  $negativeMarginClassPrefix "lg-100" 5.0rem,
+  $negativeMarginClassPrefix "lg-200" 5.2rem,
+  $negativeMarginClassPrefix "lg-300" 5.4rem,
+  $negativeMarginClassPrefix "lg-400" 5.6rem,
+  $negativeMarginClassPrefix "lg-500" 5.8rem,
+  
+  $negativeMarginClassPrefix "2lg-100" 6.0rem,
+  $negativeMarginClassPrefix "2lg-200" 6.2rem,
+  $negativeMarginClassPrefix "2lg-300" 6.4rem,
+  $negativeMarginClassPrefix "2lg-400" 6.6rem,
+  $negativeMarginClassPrefix "2lg-500" 6.8rem,
+  
+  $negativeMarginClassPrefix "xl-100" 7.0rem,
+  $negativeMarginClassPrefix "xl-200" 7.2rem,
+  $negativeMarginClassPrefix "xl-300" 7.4rem,
+  $negativeMarginClassPrefix "xl-400" 7.6rem,
+  $negativeMarginClassPrefix "xl-500" 7.8rem,
+  
+  $negativeMarginClassPrefix "2xl-100" 8.0rem,
+  $negativeMarginClassPrefix "2xl-200" 8.2rem,
+  $negativeMarginClassPrefix "2xl-300" 8.4rem,
+  $negativeMarginClassPrefix "2xl-400" 8.6rem,
+  $negativeMarginClassPrefix "2xl-500" 8.8rem,
+
+  $negativeMarginClassPrefix "0" 0,
+);
+
+$shadow: 0 1px 3px 0 rgba($color-black, 0.10), 0 1px 2px 0 rgba($color-black, 0.06);
+$shadow_md: 0 4px 6px -1px rgba($color-black, 0.45), 0 2px 4px -1px rgba($color-black, 0.06);
+$shadow_lg: 0 6px 12px 6px rgba(darken($color-black, 25), 0.15);
+$shadow_inner: inset 0 1px 3px 0 rgba($color-black, 0.10), inset  0 1px 2px 0 rgba($color-black, 0.06);
+// $shadow_outline: inset 0 2px 4px 0 rgba($color-black, 0.06);
+
+$shadows: (
+  $shadowsClassPrefix null $shadow 'states',
+  $shadowsClassPrefix "md" $shadow_md 'states',
+  $shadowsClassPrefix "lg" $shadow_lg 'states',
+  //$shadowsClassPrefix "xl" $shadow_xl 'states',
+  //$shadowsClassPrefix "2xl" $shadow_2xl 'states',
+  $shadowsClassPrefix "inner" $shadow_inner 'states',
+  //$shadowsClassPrefix "outline" $shadow_outline 'states',
+  $shadowsClassPrefix "none" none 'states',
+);
+
+$aspectRatiosClassNamePrefix: "ratio";
+$aspectRatios: (
+  $aspectRatiosClassNamePrefix "logo" 131 116,
+  $aspectRatiosClassNamePrefix "1x1" 1 1,
+  $aspectRatiosClassNamePrefix "4x3" 4 3,
+  $aspectRatiosClassNamePrefix "5x2" 5 2,
+  $aspectRatiosClassNamePrefix "16x9" 16 9,
+  $aspectRatiosClassNamePrefix "unstuck-design" 164.5 12,
+  $aspectRatiosClassNamePrefix "leave" 410 620,
+  $aspectRatiosClassNamePrefix "none" 1 0,
+);
+
+$columnCount: (0, 2, 3);
+
+$columnCountGapsClassPrefix: "col-gap";
+$columnCountGaps: (
+  $columnCountGapsClassPrefix "2sm-100" 2.0rem,
+  $columnCountGapsClassPrefix "md-100" 3.0rem,
+  $columnCountGapsClassPrefix "2md-100" 4.0rem,
+);
+
+$hasColsSizes: (
+  $hasColsSizesClassNamePrefix null 5,
+);
+//74,
+$iconsSizes: (
+  $iconsSizesClassNamePrefix null $defaultFontSize,
+
+  $iconsSizesClassNamePrefix "xs-500" 0.8rem null,
+
+  $iconsSizesClassNamePrefix "sm-100" 1.0rem null,
+  $iconsSizesClassNamePrefix "sm-200" 1.2rem null,
+  $iconsSizesClassNamePrefix "sm-300" 1.4rem null,
+  $iconsSizesClassNamePrefix "sm-400" 1.6rem null,
+  $iconsSizesClassNamePrefix "sm-500" 1.8rem null,
+
+  $iconsSizesClassNamePrefix "2sm-100" 2.0rem null,
+  $iconsSizesClassNamePrefix "2sm-200" 2.2rem null,
+  $iconsSizesClassNamePrefix "2sm-300" 2.4rem null,
+  $iconsSizesClassNamePrefix "2sm-400" 2.6rem null,
+  $iconsSizesClassNamePrefix "2sm-500" 2.8rem null,
+
+  $iconsSizesClassNamePrefix "md-100" 3.0rem null,
+  $iconsSizesClassNamePrefix "md-200" 3.2rem null,
+  $iconsSizesClassNamePrefix "md-300" 3.4rem null,
+  $iconsSizesClassNamePrefix "md-400" 3.6rem null,
+  $iconsSizesClassNamePrefix "md-500" 3.8rem null,
+
+  $iconsSizesClassNamePrefix "2md-100" 4.0rem null,
+  $iconsSizesClassNamePrefix "2md-200" 4.2rem null,
+  $iconsSizesClassNamePrefix "2md-300" 4.4rem null,
+  $iconsSizesClassNamePrefix "2md-400" 4.6rem null,
+  $iconsSizesClassNamePrefix "2md-500" 4.8rem null,
+
+  $iconsSizesClassNamePrefix "lg-100" 5.0rem null,
+  $iconsSizesClassNamePrefix "lg-200" 5.2rem null,
+  $iconsSizesClassNamePrefix "lg-300" 5.4rem null,
+  $iconsSizesClassNamePrefix "lg-400" 5.6rem null,
+  $iconsSizesClassNamePrefix "lg-500" 5.8rem null,
+
+  $iconsSizesClassNamePrefix "2lg-100" 6.0rem null,
+  $iconsSizesClassNamePrefix "2lg-200" 6.2rem null,
+  $iconsSizesClassNamePrefix "2lg-300" 6.4rem null,
+  $iconsSizesClassNamePrefix "2lg-400" 6.6rem null,
+  $iconsSizesClassNamePrefix "2lg-500" 6.8rem null,
+
+  $iconsSizesClassNamePrefix "xl-100" 7.0rem null,
+  $iconsSizesClassNamePrefix "xl-200" 7.2rem null,
+  $iconsSizesClassNamePrefix "xl-300" 7.4rem null,
+  $iconsSizesClassNamePrefix "xl-400" 7.6rem null,
+  $iconsSizesClassNamePrefix "xl-500" 7.8rem null,
+
+  $iconsSizesClassNamePrefix "2xl-100" 8.0rem null,
+  $iconsSizesClassNamePrefix "2xl-200" 8.2rem null,
+  $iconsSizesClassNamePrefix "2xl-300" 8.4rem null,
+  $iconsSizesClassNamePrefix "2xl-400" 8.6rem null,
+  $iconsSizesClassNamePrefix "2xl-500" 8.8rem null,
+  
+  $iconsSizesClassNamePrefix "logo" 13rem,
+  $iconsSizesClassNamePrefix "logo-sm" 18rem,
+  $iconsSizesClassNamePrefix "unstuck-design" 16.5rem,
+  $iconsSizesClassNamePrefix "auto" 'auto',
+);
+
+ $opacities: (
+   $opacitiesClassPrefix "0" 0 "states",
+   $opacitiesClassPrefix "15" 0.15 null,
+   $opacitiesClassPrefix "25" 0.25 null,
+   $opacitiesClassPrefix "35" 0.35 null,
+   $opacitiesClassPrefix "50" 0.5 null,
+   $opacitiesClassPrefix "65" 0.65 null,
+   $opacitiesClassPrefix "75" 0.75 null,
+   $opacitiesClassPrefix "85" 0.85 null,
+   $opacitiesClassPrefix "100" 1 "states"
+ );
+
+$borderRadiusClassPrefix: "rounded";
+$borderRadiuses: (
+  $borderRadiusClassPrefix null 9999px,
+  
+  $borderRadiusClassPrefix "xs-200" 0.2rem,
+  $borderRadiusClassPrefix "xs-300" 0.4rem,
+  $borderRadiusClassPrefix "xs-400" 0.6rem,
+  $borderRadiusClassPrefix "xs-500" 0.8rem,
+  
+  $borderRadiusClassPrefix "sm-100" 1.0rem,
+  $borderRadiusClassPrefix "sm-200" 1.2rem,
+  $borderRadiusClassPrefix "sm-300" 1.4rem,
+  $borderRadiusClassPrefix "sm-400" 1.6rem,
+  $borderRadiusClassPrefix "sm-500" 1.8rem,
+
+  $borderRadiusClassPrefix "0" 0,
+);
+
+// Container widths
+// $container_lg: 100rem;
+$container_article: 88rem;
+$container_article_lg: 101.0rem;
+$container_fluid: 100%;
+$container_sm: 57.6rem;
+$container_md: 71.0rem;
+$container_lg: 93.6rem;
+$container_xl: 120rem;
+$container_xxl: 140rem;
+
+$container_null: calc(100% - 3rem);
+$container: (
+  $containerClassPrefix null $container_null,
+  $containerClassPrefix "fluid" $container_fluid,
+  $containerClassPrefix "sm" $container_sm,
+  $containerClassPrefix "md" $container_md,
+  $containerClassPrefix "lg" $container_lg,
+  $containerClassPrefix "xl" $container_xl,
+  $containerClassPrefix "xxl" $container_xxl,
+  $containerClassPrefix "article" $container_article,
+  $containerClassPrefix "article-lg" $container_article_lg
+);
+
+$zIndexs: (
+  $zIndexsClassPrefix "auto" "auto",
+  $zIndexsClassPrefix "0" 0,
+  
+  $zIndexsClassPrefix "zxs-100" 1,
+  $zIndexsClassPrefix "zxs-200" 2,
+  $zIndexsClassPrefix "zxs-300" 4,
+  $zIndexsClassPrefix "zxs-400" 6,
+  $zIndexsClassPrefix "zxs-500" 8,
+  
+  $zIndexsClassPrefix "zsm-100" 10,
+  $zIndexsClassPrefix "zsm-200" 20,
+  $zIndexsClassPrefix "zsm-300" 40,
+  $zIndexsClassPrefix "zsm-400" 60,
+  $zIndexsClassPrefix "zsm-500" 80,
+  
+  $zIndexsClassPrefix "zmd-100" 100,
+  $zIndexsClassPrefix "zmd-200" 200,
+  $zIndexsClassPrefix "zmd-300" 400,
+  $zIndexsClassPrefix "zmd-400" 600,
+  $zIndexsClassPrefix "zmd-500" 800,
+
+);
+
+$iconThickNess: .06rem;
+$navbarBp: $bp_lg;
+$lineThickNess: 2px;
+
+// Range slider style
+// $trackHeight: 2px;
+// $trackWidth: 100%;
+// $trackColor: $color1;
+// $trackColorFocus: $color-black;
+// $trackBorderColor: transparent;
+// $trackBorderWidth: 0px;
+// $trackBorderRadius: 4px;
+
+// $thumbHeight: 24px;
+// $thumbWidth: $thumbHeight;
+// $thumbColor: $color-white;
+// $thumbBorderColor: $colorPink;
+// $thumbBorderWidth: 2px;
+// $thumbBorderRadius: 15px;
+
+$transition: all 0.35s 0s ease-out;
