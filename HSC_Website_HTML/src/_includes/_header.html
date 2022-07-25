@@ -1,0 +1,15 @@
+<header class="header w-full flex-col z-sm-500 pos-absolute pin-x pin-t">
+  <div class="flex-row lg:flex-col align-center justify-center pt-md-100 pb-md-100">
+    <a class="brand-logo ml-auto mr-auto" title="@@websiteName" href="index.html">
+      <span class="icon icon-logo-sm lg:icon-logo ratio-logo">
+        <span class="pos-absolute pin bg-contain bg-center bg-no-repeat" style="background-image: url('./images/brand-logo.svg');"></span>
+      </span>
+    </a>
+  </div>
+</header>
+
+@@if(context.pixelmatch){
+<div class="pos-absolute pin-t pin-x pin-b-auto overflow-visible z-40 opacity-25 text-center pointer-events-none">
+  <img src="@@pixelmatch" class="pointer-events-none" style="outline: 1px solid red;" />
+</div>
+}
