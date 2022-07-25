@@ -32,7 +32,8 @@
   @each $ar in $aspectRatios {
     .#{$bp}#{nth($ar, 1)}-#{nth($ar, 2)} {
       &:before {
-        padding-top: (nth($ar, 4) / nth($ar, 3)) * 100%;
+        // padding-top: (nth($ar, 4) / nth($ar, 3)) * 100%;
+        padding-top: calc((#{nth($ar, 4)} / #{nth($ar, 3)}) * 100%);
       }
     }
   }
