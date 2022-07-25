@@ -14,7 +14,7 @@ const gulp = require("gulp"),
   svgo = require('gulp-svgo');
 
 const WEBSITE_NAME = 'Spire Homecare';
-const PROJECT_NAME = 'HSC_Website_HTML';
+const PROJECT_NAME = 'SHC_Website_HTML';
 const PROJECT_PATH = ".";
 
 const DEST_CSS_PATH = PROJECT_PATH+"/css";
