@@ -40,55 +40,7 @@
           <h2 class="f-size-lg-100 md:f-size-lg-200 f-weight-medium f-color-primary text-center" data-aos="fade-up" data-aos-delay="300">
             Why our clients choose us
           </h2>
-          <div class="flex-row flex-wrap -m-sm-200">
-            <div class="col-12 md:col-6 lg:col-4 p-sm-200">
-              <a href="#" class="flex-stretch flex-col no-underline bg-white p-2md-100">
-                <div class="text-wrap text-center">
-                  <p>My elderly father, living alone in his own home, needed care during an intensive period of laser treatment and radiotherapy. He has until now been extremely independent and was therefore reluctant to accept care of any kind. Spire Homecare have been tactful, sympathetic and ...</p>
-                  <span class="button f-size-2sm-200 f-weight-semiBold f-color-primary hover:f-color-secondary border-b-6 border-primary">Read more</span>
-                </div>
-              </a>
-            </div>
-            <div class="col-12 md:col-6 lg:col-4 p-sm-200">
-              <a href="#" class="flex-stretch flex-col no-underline bg-white p-2md-100">
-                <div class="text-wrap text-center">
-                  <p>My elderly father, living alone in his own home, needed care during an intensive period of laser treatment and radiotherapy. He has until now been extremely independent and was therefore reluctant to accept care of any kind. Spire Homecare have been tactful, sympathetic and ...</p>
-                  <span class="button f-size-2sm-200 f-weight-semiBold f-color-primary hover:f-color-secondary border-b-6 border-primary">Read more</span>
-                </div>
-              </a>
-            </div>
-            <div class="col-12 md:col-6 lg:col-4 p-sm-200">
-              <a href="#" class="flex-stretch flex-col no-underline bg-white p-2md-100">
-                <div class="text-wrap text-center">
-                  <p>My elderly father, living alone in his own home, needed care during an intensive period of laser treatment and radiotherapy. He has until now been extremely independent and was therefore reluctant to accept care of any kind. Spire Homecare have been tactful, sympathetic and ...</p>
-                  <span class="button f-size-2sm-200 f-weight-semiBold f-color-primary hover:f-color-secondary border-b-6 border-primary">Read more</span>
-                </div>
-              </a>
-            </div>
-            <div class="col-12 md:col-6 lg:col-4 p-sm-200">
-              <a href="#" class="flex-stretch flex-col no-underline bg-white p-2md-100">
-                <div class="text-wrap text-center">
-                  <p>My elderly father, living alone in his own home, needed care during an intensive period of laser treatment and radiotherapy. He has until now been extremely independent and was therefore reluctant to accept care of any kind. Spire Homecare have been tactful, sympathetic and ...</p>
-                  <span class="button f-size-2sm-200 f-weight-semiBold f-color-primary hover:f-color-secondary border-b-6 border-primary">Read more</span>
-                </div>
-              </a>
-            </div>
-            <div class="col-12 md:col-6 lg:col-4 p-sm-200">
-              <a href="#" class="flex-stretch flex-col no-underline bg-white p-2md-100">
-                <div class="text-wrap text-center">
-                  <p>My elderly father, living alone in his own home, needed care during an intensive period of laser treatment and radiotherapy. He has until now been extremely independent and was therefore reluctant to accept care of any kind. Spire Homecare have been tactful, sympathetic and ...</p>
-                  <span class="button f-size-2sm-200 f-weight-semiBold f-color-primary hover:f-color-secondary border-b-6 border-primary">Read more</span>
-                </div>
-              </a>
-            </div>
-            <div class="col-12 md:col-6 lg:col-4 p-sm-200">
-              <a href="#" class="flex-stretch flex-col no-underline bg-white p-2md-100">
-                <div class="text-wrap text-center">
-                  <p>My elderly father, living alone in his own home, needed care during an intensive period of laser treatment and radiotherapy. He has until now been extremely independent and was therefore reluctant to accept care of any kind. Spire Homecare have been tactful, sympathetic and ...</p>
-                  <span class="button f-size-2sm-200 f-weight-semiBold f-color-primary hover:f-color-secondary border-b-6 border-primary">Read more</span>
-                </div>
-              </a>
-            </div>
+          <div id="testimonialCards" class="flex-row flex-wrap -m-sm-200">
           </div>
         </div>
       </div>
@@ -121,7 +73,7 @@
                     <span class="border border-white bg-white border-2 rounded"></span>
                   </span>
                   <span class="related-text f-color-primary">
-                    <span class="">I have read and agree to your</span> <a href="#" class="underline f-color-inherit f-weight-inherit hover:f-color-secondary">privacy policy</a>
+                    <span class="">I have read and agree to your</span> <a href="#" class="underline f-color-inherit f-weight-inherit hover:f-color-secondary transition-all">privacy policy</a>
                   </span>
                 </label>
               </div>
@@ -181,5 +133,37 @@
   </div>
 </footer>
 <script src="js/allScript.js"></script>
+<script src="./components/testimonialCard.js" type="text/babel"></script>
+<script type="text/babel">
+  const App = () => (
+      <TestimonialCard data={[
+         {
+            quote: "My elderly father, living alone in his own home, needed care during an intensive period of laser treatment and radiotherapy. He has until now been extremely independent and was therefore reluctant to accept care of any kind. Spire Homecare have been tactful, sympathetic and",
+            author: "Mr Mackenzie-Bell"
+         },
+         {
+            quote: "Very friendly and professional company. From the first conversation they have gone above and beyond for my Nan. Excellent care.",
+            author: "Mrs Byrant"
+         },
+         {
+            quote: "A very supportive and caring agency always focussed on the individual needs of the person. Carers are polite and endeavour to respect the needs of the client. It is pleasing to note the respect and support given to my sister who has a Learning Disability so that she can remain as independent as possible",
+            author: "Mrs Grint"
+         },
+         {
+            quote: "I find Spire Homecare management team efficient and helpful, all ways ready to sort out any problems quickly. I would recommend Spire Homecare to family and friends. Mother-in-law Freda likes all the carers that tend her all our friendly and caring",
+            author: "Mr Lyness"
+         },
+         {
+            quote: "A very supportive and caring agency always focussed on the individual needs of the person. Carers are polite and endeavour to respect the needs of the client. It is pleasing to note the respect and support given to my sister who has a Learning Disability so that she can remain as independent as",
+            author: "Mr Mackenzie-Bell"
+         },
+         {
+            quote: "Very friendly and professional company. From the first conversation they have gone above and beyond for my Nan. Excellent care.",
+            author: "Mrs Byrant"
+         },
+      ]} />
+   );
+   ReactDOM.render(<App />, document.querySelector("#testimonialCards"));
+</script>
 
 </html>

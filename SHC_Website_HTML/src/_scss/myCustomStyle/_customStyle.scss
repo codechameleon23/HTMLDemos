@@ -48,8 +48,13 @@ h1, h2, h3, h4, h5, h6 {
   // }
 
   &:hover {
-    // background-color: $color-white;
-    // box-shadow: $shadow_md;
+    background-color: $color-white;
+    // box-shadow: $shadow_lg;
+    // font-size: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
     // color: $color-primary;
   }
 
@@ -94,6 +99,19 @@ h1, h2, h3, h4, h5, h6 {
     ::marker {
       color: $color-secondary;
     }
+  }
+}
+
+::marker {
+  color: $color-primary;
+  .primary & {
+    color: $color-primary;
+  }
+  .secondary & {
+    color: $color-secondary;
+  }
+  .white & {
+    color: $color-white;
   }
 }
 
@@ -229,24 +247,14 @@ h1, h2, h3, h4, h5, h6 {
 // }
 
 .footer-artwork {
+  &, &-2 {
+    background-position: center bottom;
+    padding-bottom: calc(20% + 4rem);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  &-2{
+    background-image: url('../images/landscape-footer-artwork-2.svg');
+  }
   background-image: url('../images/landscape-footer-artwork.svg');
-  background-position: center bottom;
-  padding-bottom: 17.2%;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  // @media (min-width: $bp_sm) {
-  //   padding-bottom: 12rem;
-  // }
-  // @media (min-width: $bp_md) {
-  //   padding-bottom: 15rem;
-  // }
-  // @media (min-width: $bp_lg) {
-  //   padding-bottom: 18rem;
-  // }
-  // @media (min-width: $bp_xl) {
-  //   padding-bottom: 22rem;
-  // }
-  // @media (min-width: $bp_xxl) {
-  //   padding-bottom: 26rem;
-  // }
 }
