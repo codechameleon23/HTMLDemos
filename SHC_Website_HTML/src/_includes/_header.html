@@ -1,10 +1,109 @@
 <header class="header w-full flex-col z-sm-500 pos-absolute pin-x pin-t">
-  <div class="flex-row lg:flex-col align-center justify-center pt-md-100 pb-md-100">
-    <a class="brand-logo ml-auto mr-auto" title="@@websiteName" href="index.html">
-      <span class="icon icon-logo-sm lg:icon-logo ratio-logo">
-        <span class="pos-absolute pin bg-contain bg-center bg-no-repeat" style="background-image: url('./images/brand-logo.svg');"></span>
-      </span>
-    </a>
+  <div class="container lg:container-xl mx-auto pos-relative">
+    <div class="flex-row align-center pt-md-100 pb-md-100">
+      <a class="brand-logo mr-auto" title="@@websiteName" href="index.html">
+        <span class="icon icon-logo-sm lg:icon-logo ratio-logo">
+          @@if(context.home){
+          <img src="./images/brand-logo.svg" />
+          }
+          @@if(!context.home){
+          <img src="./images/brand-logo-dark.svg" />
+          }
+
+        </span>
+      </a>
+      <nav class="navbar
+              col-12
+              flex-col
+              flex-stretch
+              justify-center
+              pos-fixed
+              pin
+              pin-l-auto
+              z-50
+              bg-primary
+              f-color-secondary
+              shadow-lg
+              pl-2sm-100
+
+              md:col-6
+
+              lg:mx-auto
+              lg:col-auto
+              lg:pos-static
+              lg:bg-transparent
+              lg:shadow-none
+              lg:f-color-inherit
+              lg:px-2md-100
+           ">
+        <ul class="list-reset md:flex-row justify-space-between capitalize">
+          <li class="@@if(context.home){is-active} px-2sm-100 lg:d-hidden">
+            <a class="f-color-inherit f-size-2sm-200 lg:f-size-sm-500 no-underline py-sm-100 d-inline-block" href="index.html">
+              <i class="icon icon-2sm-400">
+                <svg stroke="currentColor" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+                  <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+                    d="M80 212v236a16 16 0 0 0 16 16h96V328a24 24 0 0 1 24-24h80a24 24 0 0 1 24 24v136h96a16 16 0 0 0 16-16V212" />
+                  <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M480 256 266.89 52c-5-5.28-16.69-5.34-21.78 0L32 256m368-77V64h-48v69" />
+                </svg>
+              </i>
+            </a>
+          </li>
+          <li class="@@if(context.homecare){is-active} px-2sm-100">
+            <a class="f-color-inherit f-size-2sm-200 lg:f-size-sm-500 no-underline py-sm-100 d-inline-block" href="homecare.html">homecare</a>
+          </li>
+          <li class="px-2sm-100">
+            <a class="f-color-inherit f-size-2sm-200 lg:f-size-sm-500 no-underline py-sm-100 d-inline-block" href="#">Live in care</a>
+          </li>
+          <li class="@@if(context.about){is-active} px-2sm-100">
+            <a class="f-color-inherit f-size-2sm-200 lg:f-size-sm-500 no-underline py-sm-100 d-inline-block" href="about.html">About</a>
+          </li>
+          <li class="@@if(context.testimonials){is-active} px-2sm-100">
+            <a class="f-color-inherit f-size-2sm-200 lg:f-size-sm-500 no-underline py-sm-100 d-inline-block" href="testimonials.html">testimonials</a>
+          </li>
+          <li class="@@if(context.jobs){is-active} px-2sm-100">
+            <a class="f-color-inherit f-size-2sm-200 lg:f-size-sm-500 no-underline py-sm-100 d-inline-block" href="jobs.html">Care jobs</a>
+          </li>
+          <li class="@@if(context.service){is-active} px-2sm-100">
+            <a class="f-color-inherit f-size-2sm-200 lg:f-size-sm-500 no-underline py-sm-100 d-inline-block" href="service.html">Service user charter</a>
+          </li>
+          <li class="@@if(context.contact){is-active} px-2sm-100">
+            <a class="f-color-inherit f-size-2sm-200 lg:f-size-sm-500 no-underline py-sm-100 d-inline-block" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="flex-row justify-center -mx-xs-300 ml-auto">
+        <a title="Facebook" href="#" class="f-color-primary mx-xs-300 hover:f-color-secondary hover:shadow-lg rounded icon icon-2sm-400 transition-all">
+          <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.4 25.4">
+            <path
+              d="M16 13.2h-2.3v5.7h-2.3v-5.7h-2v-2.3h1.9V9.6c0-.8.3-1.6.8-2.2.6-.6 1.2-.9 2-.9H16v2.3h-1.9c-.1 0-.2.1-.3.2-.1.1-.1.3-.1.5v1.2H16v2.5zm9.4-.5c0-1.8-.3-3.4-1-4.9-.7-1.5-1.6-2.9-2.7-4-1.1-1.2-2.5-2.1-4-2.7-1.5-.7-3.2-1-4.9-1S9.3.3 7.7 1c-1.5.7-2.9 1.6-4 2.7-1.1 1.2-2 2.5-2.7 4-.7 1.6-1 3.3-1 5s.3 3.4 1 4.9c.7 1.5 1.6 2.9 2.7 4s2.5 2 4 2.7c1.5.7 3.2 1 4.9 1s3.4-.3 4.9-1c1.5-.7 2.9-1.6 4-2.7s2-2.5 2.7-4c.8-1.5 1.2-3.1 1.2-4.9">
+            </path>
+          </svg>
+        </a>
+        <a title="Instagram" href="#" class="f-color-primary mx-xs-300 hover:f-color-secondary hover:shadow-lg rounded icon icon-2sm-400 transition-all">
+          <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44.3 44.3">
+            <defs>
+              <path id="a" d="M0 0h44.3v44.3H0z"></path>
+            </defs>
+            <clipPath id="b">
+              <use xlink:href="#a" overflow="visible"></use>
+            </clipPath>
+            <path
+              d="M26.3 22.1c0-2.3-1.9-4.2-4.2-4.2-2.3 0-4.2 1.9-4.2 4.2s1.9 4.2 4.2 4.2c2.3-.1 4.2-1.9 4.2-4.2m3.2-6c0 .6-.5 1.1-1.1 1.1-.6 0-1.1-.5-1.1-1.1 0-.6.5-1.1 1.1-1.1.6 0 1.1.5 1.1 1.1m-1.5 6c0 3.2-2.6 5.8-5.8 5.8-3.2 0-5.8-2.6-5.8-5.8s2.6-5.8 5.8-5.8c3.2-.1 5.8 2.5 5.8 5.8m3.7 4.6v-9.1s0-1.3-.7-2.6c-.8-1.6-2.3-2.4-4.3-2.4h-9.1s-1.3 0-2.6.7c-1.6.8-2.4 2.3-2.4 4.3v9.1s0 1.3.7 2.6c.8 1.6 2.3 2.4 4.3 2.4h9.1s1.3 0 2.6-.7c1.6-.8 2.4-2.2 2.4-4.3m1.7 0c0 3.4-1.8 5.1-3.4 5.9-1.6.8-3.2.8-3.3.8h-9.1c-3.4 0-5.1-1.8-5.9-3.4-.8-1.6-.8-3.2-.8-3.3v-9.1c0-3.4 1.8-5.1 3.4-5.9 1.6-.8 3.2-.8 3.3-.8h9.1c3.4 0 5.1 1.8 5.9 3.4.8 1.6.8 3.2.8 3.3v9.1zm10.9-4.6C44.3 9.9 34.4 0 22.1 0 9.9 0 0 9.9 0 22.1c0 12.2 9.9 22.1 22.1 22.1 12.3.1 22.2-9.8 22.2-22.1"
+              clip-path="url(#b)"></path>
+          </svg>
+        </a>
+        <div class="navbar-toggle f-color-primary mx-xs-300 d-inline-flex lg:d-hidden z-50 transition-all">
+          <i class="icon icon-2sm-400 my-auto hamburger pointer-events-auto">
+            <div>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </i>
+        </div>
+      </div>
+    </div>
   </div>
 </header>
 
