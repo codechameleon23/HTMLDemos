@@ -21,9 +21,8 @@
                <h2 class="f-size-lg-100 md:f-size-lg-200 f-weight-medium f-color-primary text-center" data-aos="fade-up" data-aos-delay="300">
                   Why our clients choose us
                </h2>
-               <div id="testimonialCards" class="flex-row flex-wrap -m-sm-200">
+               <div id="testimonialWrapper" class="flex-row flex-wrap -m-sm-200">
                </div>
-
             </div>
          </div>
       </section>
@@ -79,7 +78,34 @@
 @@include('./_includes/_footer.html', {})
 <script src="js/allScript.js"></script>
 <script type="text/babel">
-   const TestimonialCard = ({ data }) => {
+   const { useState } = React;
+   const testimonialData = [
+      {
+         quote: "My elderly father, living alone in his own home, needed care during an intensive period of laser treatment and radiotherapy. He has until now been extremely independent and was therefore reluctant to accept care of any kind. Spire Homecare have been tactful, sympathetic and have provided the expert advice we needed during this difficult period. They have adjusted the care arrangements as my father's needs changed, often with little warning, and all the staff without exception have been efficient, professional and supportive. The carers themselves have been kind, extremely competent and very patient as I know they have been challenged over these last few months!",
+         author: "Mr Mackenzie-Bell"
+      },
+      {
+         quote: "Very friendly and professional company. From the first conversation they have gone above and beyond for my Nan. Excellent care.",
+         author: "Mrs Byrant"
+      },
+      {
+         quote: "A very supportive and caring agency always focussed on the individual needs of the person. Carers are polite and endeavour to respect the needs of the client. It is pleasing to note the respect and support given to my sister who has a Learning Disability so that she can remain as independent as possible",
+         author: "Mrs Grint"
+      },
+      {
+         quote: "I find Spire Homecare management team efficient and helpful, all ways ready to sort out any problems quickly. I would recommend Spire Homecare to family and friends. Mother-in-law Freda likes all the carers that tend her all our friendly and caring",
+         author: "Mr Lyness"
+      },
+      {
+         quote: "A very supportive and caring agency always focussed on the individual needs of the person. Carers are polite and endeavour to respect the needs of the client. It is pleasing to note the respect and support given to my sister who has a Learning Disability so that she can remain as independent as",
+         author: "Mr Mackenzie-Bell"
+      },
+      {
+         quote: "Very friendly and professional company. From the first conversation they have gone above and beyond for my Nan. Excellent care.",
+         author: "Mrs Byrant"
+      },
+   ];
+   const TestimonialCard = ({ data, onClick }) => {
       return (
          <>
             {data.map((item, index) => {
@@ -89,14 +115,17 @@
                const trimmedString = isLong
                   ? quote.substr(0, stringLength - 1) + "..."
                   : quote;
+               const aosDelay = (index + 1) * 100;
                return (
                   <div
                      key={`testimonial-${index}`}
                      class="col-12 md:col-6 lg:col-4 p-sm-200 flex-col"
+                     data-aos="fade-up" data-aos-delay={aosDelay > 300 ? aosDelay - 300 : aosDelay} data-aos-duration="700"
                   >
                      <a
+                        onClick={() => onClick(index)}
                         href="#"
-                        class="flex-stretch flex-col no-underline bg-white p-2md-100 flex-auto hover:shadow-lg transition-all"
+                        class="jsTestimonialsPopup_open flex-stretch flex-col no-underline bg-white p-2md-100 flex-auto hover:shadow-lg transition-all"
                      >
                         <div class="text-wrap text-center f-height-ease">
                            <p>{trimmedString}</p>
@@ -114,35 +143,86 @@
          </>
       );
    };
-   const App = () => (
-      <TestimonialCard data={[
-         {
-            quote: "My elderly father, living alone in his own home, needed care during an intensive period of laser treatment and radiotherapy. He has until now been extremely independent and was therefore reluctant to accept care of any kind. Spire Homecare have been tactful, sympathetic and",
-            author: "Mr Mackenzie-Bell"
-         },
-         {
-            quote: "Very friendly and professional company. From the first conversation they have gone above and beyond for my Nan. Excellent care.",
-            author: "Mrs Byrant"
-         },
-         {
-            quote: "A very supportive and caring agency always focussed on the individual needs of the person. Carers are polite and endeavour to respect the needs of the client. It is pleasing to note the respect and support given to my sister who has a Learning Disability so that she can remain as independent as possible",
-            author: "Mrs Grint"
-         },
-         {
-            quote: "I find Spire Homecare management team efficient and helpful, all ways ready to sort out any problems quickly. I would recommend Spire Homecare to family and friends. Mother-in-law Freda likes all the carers that tend her all our friendly and caring",
-            author: "Mr Lyness"
-         },
-         {
-            quote: "A very supportive and caring agency always focussed on the individual needs of the person. Carers are polite and endeavour to respect the needs of the client. It is pleasing to note the respect and support given to my sister who has a Learning Disability so that she can remain as independent as",
-            author: "Mr Mackenzie-Bell"
-         },
-         {
-            quote: "Very friendly and professional company. From the first conversation they have gone above and beyond for my Nan. Excellent care.",
-            author: "Mrs Byrant"
-         },
-      ]} />
-   );
-   ReactDOM.render(<App />, document.querySelector("#testimonialCards"));
+   const TestimonialPopup = ({ data, onChange, selected }) => {
+      const total = data.length - 1;
+      return (
+         <div id="jsTestimonialsPopup" class="d-hidden container container-sm md:container-lg popup shadow-lg bg-white mx-xs my-xs">
+            <div class="flex-col w-full flex-stretch popup-wrap">
+               <button class="jsTestimonialsPopup_close pos-absolute pin-t pin-r z-xs-100 d-inline-block f-weight-regular capitalize hover:f-color-white hover:bg-primary ml-auto transition-all">
+                  <span class="fcolor-inherit icon icon-lg-100">
+                     <span class="p-sm-400">
+                        <svg class="search-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 224.512 224.512" fill="currentColor">
+                           <path d="M224.507 6.997L217.521 0 112.256 105.258 6.998 0 .005 6.997l105.258 105.257L.005 217.512l6.993 7L112.256 119.24l105.265 105.272 6.986-7-105.258-105.258z"></path>
+                        </svg>
+                     </span>
+                  </span>
+               </button>
+               <div class="popup-body bg-white pos-relative p-2md-100">
+                  <div class="flex-col pos-relative px-2sm-100 pos-relative">
+                     <button onClick={() => {
+                        const newIndex = selected - 1;
+                        onChange(newIndex < 0 ? total : newIndex)
+                     }}
+                        class="pin-l pos-absolute z-sm-300 pin-t-50 pin-t50 -ml-2md-100">
+                        <div class="icon icon-2md-500 rounded-full f-color-secondary hover:bg-primary hover:f-color-white hover:shadow-md rounded transition-all">
+                           <span class="flex-col p-sm-100 m-auto">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.3 48.2">
+                                 <defs>
+                                    <path id="a" d="M0 0h28.3v48.2H0z" />
+                                 </defs>
+                                 <path fill="none" stroke="currentColor" stroke-width="6" d="m26.2 2.1-22 22 22 22" />
+                              </svg>
+                           </span>
+                        </div>
+                     </button>
+                     <div>
+                        {data.map((item, index) => {
+                           const { quote, author } = item;
+                           return index === selected ? (
+                              <div class="item my-sm-100" data-aos="fade-in" data-aos-delay="200">
+                                 <blockquote class="text-wrap text-center">
+                                    <p>{quote}</p>
+                                    <footer class="f-weight-semiBold">{author}</footer>
+                                 </blockquote>
+                              </div>
+                           ) : null
+                        })}
+                     </div>
+                     <button onClick={() => {
+                        const newIndex = selected + 1;
+                        console.log('newIndex', newIndex);
+                        onChange(newIndex > total ? 0 : newIndex)
+                     }}
+
+                        class="pin-r pos-absolute z-sm-300 pin-t-50 pin-t50 -mr-2md-100">
+                        <div class="icon icon-2md-500 rounded-full f-color-secondary hover:bg-primary hover:f-color-white hover:shadow-md rounded transition-all">
+                           <span class="flex-col p-sm-100 m-auto">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.3 48.2">
+                                 <defs>
+                                    <path id="a" d="M0 0h28.3v48.2H0z" />
+                                 </defs>
+                                 <path fill="none" stroke="currentColor" stroke-width="6" d="m2.1 46.1 22-22-22-22" />
+                              </svg>
+                           </span>
+                        </div>
+                     </button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      )
+   }
+
+   const TestimonialWrapper = () => {
+      const [testimonialIndex, setTestimonialIndex] = useState(0);
+      return (
+         <>
+            <TestimonialCard data={testimonialData} onClick={(index) => setTestimonialIndex(index)} />
+            <TestimonialPopup data={testimonialData} onChange={(index) => setTestimonialIndex(index)} selected={testimonialIndex} />
+         </>
+      )
+   }
+   ReactDOM.render(<TestimonialWrapper />, document.querySelector("#testimonialWrapper"));
 </script>
 
 </html>
