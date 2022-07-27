@@ -247,17 +247,20 @@ h1, h2, h3, h4, h5, h6 {
 // }
 
 .footer-artwork {
-  &, &-2 {
-    background-position: center bottom;
-    padding-bottom: calc(20% + 4rem);
-    background-repeat: no-repeat;
-    background-size: 100%;
+  &, &-blank {
+    padding-bottom: calc(20% - 4rem);
     margin-bottom: -0.1rem;
   }
+  &, &-2 {
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url('../images/landscape-footer-artwork.svg');
+  }
   &-2{
+    padding-bottom: calc(20% + 4rem);
     background-image: url('../images/landscape-footer-artwork-2.svg');
   }
-  background-image: url('../images/landscape-footer-artwork.svg');
 }
 
 .popup_visible .popup {
