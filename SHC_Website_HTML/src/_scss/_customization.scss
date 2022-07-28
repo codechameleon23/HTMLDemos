@@ -34,10 +34,10 @@ $color-sky-200: $color6;
 $color-sky-300: $color7;
 $color-sky-400: $color8;
 
-$color-text-placeholder: rgba($color-text, .5);
-// $color-text-placeholder: $color-text;
+// $color-text-placeholder: rgba($color-text, .5);
+$color-text-placeholder: $color-primary;
 $color-input-text: $color-text;
-$defaultPlaceHolderColor: $color-text-placeholder;
+$defaultPlaceHolderColor: mix(white, $color-text-placeholder, 20%);
 $color-placeholder: mix(white, $color-text, 96%);
 
 $selectionTextColor: $color-primary;
@@ -152,6 +152,7 @@ $textColors: (
   $textColorsClassPrefix "primary" $color-primary 'states' 'parent' null,
   $textColorsClassPrefix "secondary" $color-secondary 'states' 'parent' null,
   $textColorsClassPrefix "highlight" $color-highlight 'states' 'no-parent' null,
+  $textColorsClassPrefix "light" $defaultPlaceHolderColor 'states' 'no-parent' null,
   $textColorsClassPrefix "white" $color-white 'states' 'no-parent' null,
   $textColorsClassPrefix "black" $color-black 'states' 'no-parent' null,
   $textColorsClassPrefix "sky-100" $color-sky-100 'states' 'no-parent' null,
