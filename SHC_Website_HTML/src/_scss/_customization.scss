@@ -20,7 +20,7 @@ $color3: #7fb9e6;
 $color4: #586e1c;
 $color5: #9AD2EF;
 $color6: #9DDCF9;
-$color7: #C7E8FB;
+$color7: #AAE1FA;
 $color8: #ABD8F4;
 $color-grey-light-1: #dee6ec;
 $color-grey-light-2: #eef2f5;
@@ -93,7 +93,7 @@ $states: (
   // active\: null,
 );
 
-$gradient-1: linear-gradient(0deg, rgba(2,0,0,0.7) 0%, rgba(240,240,240,0.06) 60%, rgba(255,255,255,0) 100%);;
+$gradient-1: linear-gradient(180deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 50%);
 $bgColors: (
   $bgColorsClassPrefix "$color-placeholder" $color-placeholder 'states' 'no-parent' null,
   $bgColorsClassPrefix "inherit" inherit 'states' 'no-parent' null,
@@ -109,11 +109,12 @@ $bgColors: (
   $bgColorsClassPrefix "sky-200" $color-sky-200 'states' 'no-parent' null,
   $bgColorsClassPrefix "sky-300" $color-sky-300 'states' 'no-parent' null,
   $bgColorsClassPrefix "sky-400" $color-sky-400 'states' 'no-parent' null,
+  $bgColorsClassPrefix "overlay-white" $gradient-1 'states' 'no-parent' 'background',
 );
 
 $shadowOverClassPrefix: "overlay";
 $shadowOver: (
-  //$shadowOverClassPrefix 'cover' $gradList-primary 'no-states',
+  // $shadowOverClassPrefix 'white' $gradient-1 'no-states',
   // $shadowOverClassPrefix "grad-1" $gradient-1 'states' 'no-parent' null,
   //$shadowOverClassPrefix 'grad-primary-to-right' $gradList-primary-to-right 'states',
   //$shadowOverClassPrefix 'grad-secondary' $gradList-secondary 'states',
