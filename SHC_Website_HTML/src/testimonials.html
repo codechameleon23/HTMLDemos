@@ -16,10 +16,10 @@
    <main class="flex-auto flex-col mt-header-sm lg:mt-header">
       <div class="pos-relative">
          <!-- Why our clients choose us -->
-         <section class="pt-large-100 pos-relative">
+         <section class="py-lg-100 lg:py-large-100 pos-relative">
             <div class="container sm:container-sm md:container-md lg:container-lg xl:container-xl mx-auto">
                <div class="pos-absolute pin">
-                  <span class="pos-absolute pin bg-center-top bg-cover bg-no-repeat flip-x opacity-65" style="background-image: url('./images/landscape-skyline-spire-artwork.svg');"></span>
+                  <span class="pos-absolute pin bg-center-top bg-cover bg-no-repeat flip-x opacity-65" style="background-image: url('./images/landscape-skyline-spire-artwork-4.svg');"></span>
                   <span class="pos-absolute pin bg-center bg-repeat-x bg-100-y" style="background-image: url('./images/gradient-transparent-bg.png');"></span>
                </div>
                <div class="text-wrap-lg pos-relative" data-aos="fade" data-aos-delay="100">
@@ -36,7 +36,7 @@
          <section class="section-group pos-relative">
             <div class="pos-absolute pin bg-center-bottom bg-cover bg-no-repeat" style="background-image: url('./images/landscape-skyline-spire-artwork-2.svg'); background-position: center 99%;">
             </div>
-            <section class="py-large-100 pos-relative">
+            <section class="py-lg-100 lg:py-large-100 pos-relative">
                <div class="container sm:container-sm md:container-md lg:container-lg xl:container-xl mx-auto">
                   <div class="flex-row flex-wrap -m-2sm-100" data-aos="fade" data-aos-delay="100">
                      <div class="col-12 lg:col-6 p-2sm-100 lg:pr-2xl-100 pos-relative">
@@ -134,19 +134,21 @@
                      <a
                         onClick={() => onClick(index)}
                         href="#"
-                        class="jsTestimonialsPopup_open flex-stretch flex-col no-underline bg-white flex-auto hover:shadow-lg transition-all ratio ratio-1x1"
+                        class="jsTestimonialsPopup_open flex-stretch flex-col no-underline bg-white flex-auto hover:shadow-lg transition-all"
                      >
-                        <div class="pos-absolute pin p-2sm-100 md:p-2md-100 flex-col">
-                           <div class="text-wrap text-center f-height-ease flex-auto flex-col align-center">
-                              <div class="text-wrap flex-auto">
-                                 <p>{trimmedString}</p>
-                                 {!isLong ? <p class="f-weight-semiBold">{author}</p> : null}
+                        <div class="ratio xl:ratio-1x1">
+                           <div class="xl:pos-absolute pin p-2md-100 flex-col">
+                              <div class="text-wrap text-center f-height-ease flex-auto flex-col align-center">
+                                 <div class="text-wrap flex-auto">
+                                    <p>{trimmedString}</p>
+                                    {!isLong ? <p class="f-weight-semiBold">{author}</p> : null}
+                                 </div>
+                                 {isLong ? (
+                                    <span class="mt-auto button f-size-2sm-200 f-weight-semiBold f-color-primary hover:f-color-secondary border-b-6 border-primary">
+                                       Read more
+                                    </span>
+                                 ) : null}
                               </div>
-                              {isLong ? (
-                                 <span class="mt-auto button f-size-2sm-200 f-weight-semiBold f-color-primary hover:f-color-secondary border-b-6 border-primary">
-                                    Read more
-                                 </span>
-                              ) : null}
                            </div>
                         </div>
                      </a>
