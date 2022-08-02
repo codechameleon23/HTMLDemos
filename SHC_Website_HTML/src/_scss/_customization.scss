@@ -18,7 +18,7 @@ $color1: #4a4a49;
 $color2: #5b83a0;
 $color3: #7fb9e6;
 $color4: #586e1c;
-$color5: #9AD2EF;
+$color5: #CDEBFA;
 $color6: #9DDCF9;
 $color7: #AAE1FA;
 $color8: #ABD8F4;
@@ -33,6 +33,8 @@ $color-sky-100: $color5;
 $color-sky-200: $color6;
 $color-sky-300: $color7;
 $color-sky-400: $color8;
+
+// CDEBFA
 
 $color-text-placeholder: rgba($color-text, .5);
 // $color-text-placeholder: $color-text;
@@ -94,6 +96,7 @@ $states: (
 );
 
 $gradient-1: linear-gradient(180deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 50%);
+$gradient-sky: linear-gradient(180deg, rgba(255,255,255,0) 60%, rgba(205,235,250,1) 80%);
 $bgColors: (
   $bgColorsClassPrefix "$color-placeholder" $color-placeholder 'states' 'no-parent' null,
   $bgColorsClassPrefix "inherit" inherit 'states' 'no-parent' null,
@@ -110,6 +113,7 @@ $bgColors: (
   $bgColorsClassPrefix "sky-300" $color-sky-300 'states' 'no-parent' null,
   $bgColorsClassPrefix "sky-400" $color-sky-400 'states' 'no-parent' null,
   $bgColorsClassPrefix "overlay-white" $gradient-1 'states' 'no-parent' 'background',
+  $bgColorsClassPrefix "overlay-sky-100" $gradient-sky 'states' 'no-parent' 'background',
 );
 
 $shadowOverClassPrefix: "overlay";
