@@ -1,0 +1,186 @@
+h1, h2 {
+  line-height: 1.025;
+}
+h3, h4, h5, h6 {
+  line-height: 1.25;
+}
+
+[class*="ratio"]:before {
+  display: block;
+  width: 100%;
+  content: "";
+  pointer-events: none;
+}
+
+.link {
+  // text-decoration: none;
+  display: inline-block;
+
+  &:hover {
+    font-weight: 700;
+  }
+
+  &.primary {
+    color: $color-primary;
+  }
+  &.secondary {
+    color: $color-secondary;
+  }
+}
+
+.button {
+  align-items: center;
+  justify-content: center;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  line-height: 1.2;
+  // font-family: $primaryFont;
+  transition: $transition;
+  text-align: center;
+  text-transform: uppercase;
+  // font-size: 1.6rem;
+  letter-spacing: 0.130em;
+  // font-weight: 500;
+  padding: .9rem 2.2rem;
+
+  // &.sm {
+  //   font-size: 1.4rem;
+  //   padding: 0.6rem 2rem;
+  // }
+
+  &:hover {
+    // background-color: $color-white;
+    box-shadow: $shadow_lg;
+    // font-size: 2rem;
+    // padding-left: 1rem;
+    // padding-right: 1rem;
+    // margin-left: -1rem;
+    // margin-right: -1rem;
+    // color: $color-primary;
+  }
+
+  &.primary {
+    background-color: $color-primary;
+  }
+  &.secondary {
+    background-color: $color-secondary;
+  }
+}
+
+.select {
+  &:after {
+    color: inherit;
+    top: calc(50% - 0.2rem);
+    right: 1.2rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+    width: 2rem;
+    height: 2rem;
+    // background-color: $color-secondary;
+    border-radius: 9999px;
+    pointer-events: none;
+  }
+}
+
+.list {
+  &.primary {
+    ::marker {
+      color: $color-primary;
+    }
+  }
+  &.secondary {
+    ::marker {
+      color: $color-secondary;
+    }
+  }
+}
+
+::marker {
+  color: $color-primary;
+  .primary & {
+    color: $color-primary;
+  }
+  .secondary & {
+    color: $color-secondary;
+  }
+  .white & {
+    color: $color-white;
+  }
+}
+
+.owl-theme .owl-dots .owl-dot.active span, 
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: $color-tertiary;
+}
+
+// Custom Select dropdown
+// .select-hidden {
+//   display: none;
+//   visibility: hidden;
+//   padding-right: 10px;
+// }
+// .custom-select {
+//   &-wrapper {
+//     cursor: pointer;
+//     display: inline-block;
+//     position: relative;
+//     // color: inherit;
+//     width: 100%;
+//     height: auto;
+//   }
+//   &-styled {
+//     &:after {
+//       transform-origin: center;
+//       transition: $transition;
+//     }
+//     &:active,
+//     &.active {
+//       box-shadow: $shadow_md;
+//       &:after {
+//         transform: rotate(-225deg);
+//       }
+//     }
+//   }
+//   &-options {
+//     display: none;
+//     position: absolute;
+//     top: 100%;
+//     right: 0;
+//     left: 0;
+//     z-index: 999;
+//     margin: 0;
+//     padding: 0;
+//     list-style: none;
+//     background-color: $color-white;
+//     box-shadow: $shadow_lg;
+//     li {
+//       color: inherit;
+//       margin: 0;
+//       padding: 8px 0;
+//       text-indent: 15px;
+//       // border-top: $color-light;
+//       transition: $transition;
+//       &:hover {
+//         // background: $color-light;
+//         color: $color-primary;
+//       }
+//       &.is-selected {
+//         color: $color-white;
+//         background: $color-primary;
+//       }
+//       &[rel="hide"] {
+//         display: none;
+//       }
+//     }
+//   }
+// }

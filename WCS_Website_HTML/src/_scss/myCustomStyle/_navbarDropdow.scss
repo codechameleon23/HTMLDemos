@@ -1,0 +1,212 @@
+// For dropdown
+$bp: $navbarBp;
+
+.jsNavbarToggle {
+   &.is-open {
+      @media all and (max-width: $bp) {
+         .navbar {
+            opacity: 1;
+            transform: translateX(0);
+         }
+         .hamburger{
+            // color: $colorWhite;
+            // position: fixed;
+            // margin: 1rem 1rem;
+            // top: 0;
+            // bottom: auto;
+         }
+      }
+   }
+}
+
+.navbar{
+   li{
+      display: flex;
+
+      > a {
+         display: flex;
+         align-items: center;
+      }
+   }
+   > ul {
+      > li {
+         // display: flex;
+         // flex-direction: column;
+      }
+   }
+
+   @media (max-width: $navbarBp){
+      max-width: 34rem;
+      transform: translateX(110%);
+      left: auto;
+      right: 0;
+      width: calc(100% - 5rem);
+      ul{
+         &.is-open{
+            > li{
+               &.this-open{
+                  > .dropdown{
+                     margin-left: -100%;
+                  }
+               }
+            }  
+         }
+      }
+      .dropdown {
+         width: 100%;
+         position: absolute;
+         left: 100%;
+         top: 0;
+         bottom: 0;
+         transition: all .7s 0s ease-in-out;
+         z-index: 1;
+      }
+      .submenuOpen,
+      .submenuBack {
+         img {
+            vertical-align: text-top;
+         }
+      }
+      .submenuBack{
+         > .icon {
+            transform: rotate(180deg);
+         }
+      }
+      .submenuOpen{
+         // display: inline-block;
+         // margin-left: auto;
+      }
+
+      > ul{
+         flex: auto;
+         overflow: auto;
+         overflow-x: hidden;
+         position: relative;
+      }
+      
+      .nav-transition & {
+         transition: all .7s .2s ease-in-out;
+      }
+      
+   }
+   @media (min-width: $navbarBp){
+      .submenuBack{
+         display: none;
+      }
+      > ul{
+         // list-reset flex-row xl:flex-stretch overflow-hidden xl:overflow-visible
+         list-style: none;
+         display: flex;
+         flex: 1 1 auto;
+
+         > li{
+            // flex-stretch flex-col hover:bg-primary hover:fcolor-white
+            position: relative;
+            // flex: auto;
+            display: flex;
+            // flex-direction: column;
+
+            > div > .submenuOpen{
+               display: none;
+            }
+
+            > a{
+               // xl:text-center xl:flex-stretch xl:flex-row xl:align-center xl:justify-center
+               text-align: center;
+               flex: 1 1 auto;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               width: 100%;
+               display: inline-flex;
+            }
+            &:after {
+               content: "";
+               position: absolute;
+               width: 100%;
+               max-width: 0px;
+               height: 0.2rem;
+               color: $color-secondary;
+               box-shadow: 0.4rem 0.4rem 0.4rem 0px inset;
+               left: 50%;
+               transform: translateX(-50%);
+               bottom: .5rem;
+               border-radius: 0.5rem;
+               transition: max-width 0.35s ease-in-out 0s;
+            }
+            &:hover,
+            &.is-active {
+               &:after {
+                  max-width: 100%;
+               }
+            }
+         }
+      }
+
+      .submenuOpen{
+         transform: rotate(90deg);
+         display: none;
+         // padding: 0;
+         // width: 1rem;
+         // display: flex;
+         // margin-top: .4rem;
+         // img{
+         //    width: 100%;
+         // }
+      }
+      
+
+      ul > li {
+         > .dropdown{
+            max-height: 0;
+            opacity: 0;
+            transition: all 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            li{
+               opacity: 0;
+            }
+            .submenuOpen{
+               // margin-left: auto;
+            }
+         }
+         &:hover{
+            >.dropdown {
+               opacity: 1;
+               max-height: 100rem;
+               overflow: visible;
+               li{
+                  opacity: 1;
+                  position: relative;
+               }
+            }
+         }
+      }
+
+      .dropdown {
+         width: 65rem;
+         z-index: 40;
+         overflow: hidden;
+         max-height: 100rem;
+         position: absolute;
+         top: 100%;
+         transition: all .7s 0s ease-in-out;
+         transform: translateX(-50%);
+         left: 50%;
+         @media (min-width: $bp-xl){
+            width: 75rem;
+         }
+
+         &:after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 1rem;
+            border-color: transparent transparent $color-primary transparent;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+         }
+      }
+   }
+}
