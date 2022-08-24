@@ -131,6 +131,54 @@ h3, h4, h5, h6 {
   background: $color-tertiary;
 }
 
+.wide-image {
+  width: 100%;
+
+  @media (max-width: $bp_md) {
+    & > figure {
+      width: calc(100vw + 0.2rem);
+      transform: translateX(-50%);
+      left: 50%;
+    }
+  }
+
+  @media (min-width: $bp_md) {
+    width: 50%;
+    position: absolute;
+    top: 0;
+    right: auto;
+    bottom: 0;
+    left: 0;
+  }
+  @media (min-width: $bp_xl) {
+    width: calc(100vw / 2.77);
+  }
+  @media (min-width: $bp_xxl) {
+    width: calc(100vw / 2.69);
+  }
+
+}
+
+.unstuck-link {
+  overflow: visible !important;
+}
+
+.banner {
+  @media (min-width: $bp_md) {
+    background-size: 123%;
+  }
+  .rings {
+    transform: translate(5rem, 5rem);
+  }
+}
+
+.rings-left {
+  transform: translateX(-8rem);
+}
+.rings-right {
+  transform: translateX(8rem) scale(-1);
+}
+
 
 
 // Custom Select dropdown

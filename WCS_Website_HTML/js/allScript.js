@@ -190,10 +190,7 @@ function setMultiCardCarousel(elm) {
       },
       710: {
         items: 2,
-      },
-      1480: {
-        items: 3,
-      },
+      }
     },
   };
   var settings = Object.assign(defaultSettings, dataSettings);
