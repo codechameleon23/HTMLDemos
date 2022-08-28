@@ -1,0 +1,127 @@
+@mixin appearAnimationType1($bp: $breakPoint) {
+  .on-appear-animation {
+    @for $i from 0 to 4 {
+      @if($i + 1==4) {
+        &_#{$i + 1} {
+          animation: fadeInFwd 1.2s #{.5 + ($i*.25)}s ease-out both;
+        }
+      }
+
+      @else {
+        &_#{$i + 1} {
+          animation: slideInFwdBottom 0.6s #{.5 + ($i*.15)}s ease-out both;
+        }
+      }
+    }
+  } 
+}
+
+
+*[class*='on-appear-'] {
+	// opacity: 0;
+}
+
+.add-animation {
+	*[class*='on-appear-'] {
+		opacity: 1;
+	}
+}
+
+//  Carousel animations
+.is-open {
+  .on-appear-animation {
+    @for $i from 0 to 3 {
+      &_#{$i + 1} {
+        animation: fadeInFwd 1.2s #{.45 + ($i*.1)}s ease-out both;
+      }
+    }
+  }
+}
+
+.is-carousel {
+  &.owl-carousel .owl-stage {
+    margin-left: .2rem;
+  }
+}
+
+.banner-carousel {
+  .active {
+    .on-appear-animation {
+      @for $i from 0 to 3 {
+        &_#{$i + 1} {
+          animation: slideInFwdBottom 1.2s #{.45 + ($i*.1)}s ease-out both;
+        }
+      }
+    }
+  }
+}
+
+.add-animation{
+  &.in-view-animation{
+    @include appearAnimationType1();
+  }
+}
+
+// Animation functions
+
+// .fadeInRight {
+//   animation: fadeInRight 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+// }
+
+// @keyframes fadeInRight {
+//   0% {
+//     transform: translateX(50px);
+//     opacity: 0;
+//   }
+
+//   100% {
+//     transform: translateX(0);
+//     opacity: 1;
+//   }
+// }
+
+// .slideInFwdBottom {
+//   animation: slideInFwdBottom 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+// }
+
+// @keyframes slideInFwdBottom {
+//   0% {
+//     transform: translateZ(-100px) translateY(100px);
+//     opacity: 0;
+//   }
+
+//   100% {
+//     transform: translateZ(0) translateY(0);
+//     opacity: 1;
+//   }
+// }
+
+// .fadeInFwd {
+//   animation: fadeInFwd 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+// }
+
+// @keyframes fadeInFwd {
+//   0% {
+//     transform: translateZ(-80px);
+//     opacity: 0;
+//   }
+
+//   100% {
+//     transform: translateZ(0);
+//     opacity: 1;
+//   }
+// }
+
+// .rotateInCenter {
+//   animation: rotateInCenter 0.6s linear infinite;
+// }
+
+// @keyframes rotateInCenter {
+//   from {
+//     transform: rotate(0deg);
+//   }
+
+//   to {
+//     transform: rotate(-360deg);
+//   }
+// }
