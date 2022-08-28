@@ -413,44 +413,6 @@
 
 }(jQuery));
 
-//  ~~~~~~~~~~~~~~ Scripts starts ~~~~~~~~~~~~~~
-
-//  -------------------------------------------
-//  Check if IE
-//  -------------------------------------------
-var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
-var isIE10 = navigator.userAgent.match(/MSIE 10/i);
-//  -------------------------------------------
-//  Get View port width
-//  -------------------------------------------
-function getViewportWidth() {
-  if (window.innerWidth) {
-    return window.innerWidth;
-  } else if (document.body && document.body.offsetWidth) {
-    return document.body.offsetWidth;
-  } else {
-    return 0;
-  }
-}
-$(document).ready(function () {
-//  -------------------------------------------
-//  Textillate
-//  -------------------------------------------
-   jQuery(".responsive-title").fitText(0.4);
-//  -------------------------------------------
-//  Textillate
-//  -------------------------------------------
-   $('.tlt').textillate({});
-//  -------------------------------------------
-//  Animate on scroll
-//  -------------------------------------------
-  AOS.init({
-    duration: 1000,
-    once: true,
-    // easing: 'ease-in-out',
-    anchorPlacement: 'center-bottom',
-  });
-});
 //  -------------------------------------------
 //  iPhone page refresh on browser back button
 //  -------------------------------------------
