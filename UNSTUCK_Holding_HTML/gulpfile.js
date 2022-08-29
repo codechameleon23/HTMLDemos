@@ -63,9 +63,9 @@ const PROJECT_JS_LIST = [
   // ROOT_JS_PATH+'/light-slider.min.js',
   // ROOT_JS_PATH+'/photo-swipe.min.js',
   // ROOT_JS_PATH+'/barba.umd.js',
-  ROOT_JS_PATH+'/jquery.fittext.js',
-  ROOT_JS_PATH+'/jquery.lettering.js',
-  ROOT_JS_PATH+'/jquery.textillate.js',
+  // ROOT_JS_PATH+'/jquery.fittext.js',
+  // ROOT_JS_PATH+'/jquery.lettering.js',
+  // ROOT_JS_PATH+'/jquery.textillate.js',
 
   // SRC_JS_PATH+'/_commonFunc.js',
   // SRC_JS_PATH+'/_snazzymaps.color.styles.js',

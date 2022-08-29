@@ -81,36 +81,41 @@
     </section>
   </main>
 </body>
-<script src="js/allScript.js"></script>
+<script src="./js/allScript.js"></script>
 <script>
   Pace.on('done', function() {
     AOS.init({
       duration: 1000,
       once: true,
-      // easing: 'ease-in-out',
+      easing: 'ease-in-out',
       anchorPlacement: 'center-bottom',
     });
-    $('.tlt').textillate({});
-    jQuery(".responsive-title").fitText(0.4);
+    if ($('.unstuck-tm').length > 0) {
+      setTimeout(function() {
+        $('.unstuck-tm').addClass('add-animation');
+      }, 500)
+    }
     var allPictures = $('.picture-slider').find('picture');
-    $('.picture-slider').css({
-      opacity: 1
-    });
-    var index = 0;
-    var totalPictures = allPictures.length;
-    var imageSlider = setInterval(function() {
-      if (index < totalPictures - 1) {
-        index = index + 1;
-      } else {
-        index = 0;
-      }
-      $('.picture-slider picture').css({
-        zIndex: 0
+    if (allPictures.length > 0) {
+      $('.picture-slider').css({
+        opacity: 1
       });
-      $('.picture-slider picture').eq(index).css({
-        zIndex: 1
-      });
-    }, 350);
+      var index = 0;
+      var totalPictures = allPictures.length;
+      var imageSlider = setInterval(function() {
+        if (index < totalPictures - 1) {
+          index = index + 1;
+        } else {
+          index = 0;
+        }
+        $('.picture-slider picture').css({
+          zIndex: 0
+        });
+        $('.picture-slider picture').eq(index).css({
+          zIndex: 1
+        });
+      }, 350);
+    }
   })
 </script>
 

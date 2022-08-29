@@ -13,42 +13,51 @@
    @@include('./_includes/_header.html', {
    "information": "true",
    })
-   <main class="flex-auto flex-col justify-end pos-absolute pin" data-aos="fade" data-aos-delay="100">
-      <section>
-         <div class="container sm:container-sm md:container-md lg:container-lg xl:container-xl xxl:container-xxl mx-auto">
-            <div class="col-12">
-               <div class="display-title responsive-title f-weight-bold f-height-tight text-center">
-                  <h1 data-in-effect="animate__animated animate__slideInUp animate__fast" class="tlt">Unstuck</h1>
-               </div>
-            </div>
+   <section class="pos-fixed pin-b pin-x mb-20 lg:mb-60 overflow-hidden">
+      <div class="container sm:container-sm md:container-md lg:container-lg xl:container-xl xxl:container-xxl mx-auto">
+         <div class="col-12 ratio-unstuck-tm">
+            <ul class="list-reset unstuck-tm pos-absolute pin flex-row">
+               <li class="flex-auto pin-t-100 pos-relative transition-all"><img class="w-full" src="./images/latter-U.png" /></li>
+               <li class="flex-auto pin-t-100 pos-relative transition-all"><img class="w-full" src="./images/latter-n.png" /></li>
+               <li class="flex-auto pin-t-100 pos-relative transition-all"><img class="w-full" src="./images/latter-s.png" /></li>
+               <li class="flex-auto pin-t-100 pos-relative transition-all" style="margin-left: -0.44%;"><img class="w-full" src="./images/latter-t.png" /></li>
+               <li class="flex-auto pin-t-100 pos-relative transition-all"><img class="w-full" src="./images/latter-u-small.png" /></li>
+               <li class="flex-auto pin-t-100 pos-relative transition-all"><img class="w-full" src="./images/latter-c.png" /></li>
+               <li class="flex-auto pin-t-100 pos-relative transition-all"><img class="w-full" src="./images/latter-k.png" /></li>
+            </ul>
          </div>
-      </section>
-   </main>
+      </div>
+   </section>
 </body>
-<script src="js/allScript.js"></script>
+<script src="./js/allScript.js"></script>
 <script>
    Pace.on('done', function () {
       AOS.init({
          duration: 1000,
          once: true,
-         // easing: 'ease-in-out',
+         easing: 'ease-in-out',
          anchorPlacement: 'center-bottom',
       });
-      $('.tlt').textillate({});
-      jQuery(".responsive-title").fitText(0.4);
+      if($('.unstuck-tm').length > 0){
+         setTimeout(function(){
+          $('.unstuck-tm').addClass('add-animation');
+         }, 500)
+      }
       var allPictures = $('.picture-slider').find('picture');
-      $('.picture-slider').css({ opacity: 1 });
-      var index = 0;
-      var totalPictures = allPictures.length;
-      var imageSlider = setInterval(function () {
-         if (index < totalPictures - 1) {
-            index = index + 1;
-         } else {
-            index = 0;
-         }
-         $('.picture-slider picture').css({ zIndex: 0 });
-         $('.picture-slider picture').eq(index).css({ zIndex: 1 });
-      }, 350);
+      if(allPictures.length > 0){
+         $('.picture-slider').css({ opacity: 1 });
+         var index = 0;
+         var totalPictures = allPictures.length;
+         var imageSlider = setInterval(function () {
+            if (index < totalPictures - 1) {
+               index = index + 1;
+            } else {
+               index = 0;
+            }
+            $('.picture-slider picture').css({ zIndex: 0 });
+            $('.picture-slider picture').eq(index).css({ zIndex: 1 });
+         }, 350);
+      }
    })
 </script>
 
