@@ -358,40 +358,44 @@
 
 @mixin getObjectPositionsClasses($bp: $breakPoint) {
   .#{$bp}object {
-    &-bottom {
-      object-position: bottom;
-    }
-
-    &-center {
-      object-position: center;
-    }
-
     &-left {
       object-position: left;
     }
-
-    &-left-bottom {
-      object-position: left bottom;
+    &-center {
+      object-position: center;
     }
-
-    &-left-top {
-      object-position: left top;
-    }
-
     &-right {
       object-position: right;
     }
-
-    &-right-bottom {
-      object-position: right bottom;
+    &-top {
+      object-position: top;
     }
-
+    &-bottom {
+      object-position: bottom;
+    }
+    &-left-top {
+      object-position: left top;
+    }
+    &-left-center {
+      object-position: left center;
+    }
+    &-left-bottom {
+      object-position: left bottom;
+    }
     &-right-top {
       object-position: right top;
     }
-
-    &-top {
-      object-position: top;
+    &-right-center {
+      object-position: right center;
+    }
+    &-right-bottom {
+      object-position: right bottom;
+    }
+    &-top-center {
+      object-position: top center;
+    }
+    &-bottom-center {
+      object-position: bottom center;
     }
   }
 }
