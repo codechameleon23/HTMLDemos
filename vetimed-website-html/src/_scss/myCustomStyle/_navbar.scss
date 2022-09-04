@@ -1,0 +1,82 @@
+$headerHeight: 7rem;
+$headerHeight_lg: 21.664rem;
+
+.navbar {
+  ul > li {
+    &:after {
+      display: none;
+    }
+    > a {
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        max-width: 0px;
+        // height: 0.2rem;
+        color: $color-secondary;
+        border-bottom: 0.6rem solid;
+        top: calc(100% + 0rem);
+        left: 1.25rem;
+        // border-radius: 0.5rem;
+        transition: all 0.35s ease-in-out 0s;
+        opacity: 0;
+        @media (min-width: $bp) {
+          left: 50%;
+          transform: translateX(-50%);
+          top: calc(100% - 0.8rem);
+          color: $color-primary;
+        }
+      }
+    }
+    &.is-active,
+    &:hover {
+      > a {
+        @media (min-width: $bp) {
+          //color: $color-dark;
+        }
+        @media (max-width: $bp) {
+          color: $color-white;
+          &:after {
+            left: 0;
+            transform: translateX(0);
+          }
+        }
+        &:after {
+          opacity: 1;
+          max-width: calc(100% - 0rem);
+        }
+      }
+    }
+  }
+  @media all and (max-width: $navbarBp) {
+    max-width: calc(100% - 0rem);
+  }
+}
+
+.jsNavbarToggle {
+  &.is-open {
+    .navbar-toggle {
+      // background-color: $color-secondary;
+      color: $color-white;
+    }
+    .hamburger {
+      position: relative;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+
+main {
+  margin-top: $headerHeight;
+  @media (min-width: $bp_md) {
+    margin-top: $headerHeight;
+  }
+  @media (min-width: $bp_lg) {
+    margin-top: $headerHeight_lg;
+  }
+  @media (min-width: $bp_lg) {
+    margin-top: $headerHeight_lg;
+  }
+}
