@@ -18,24 +18,7 @@
    }
    })
    <main class="flex-auto flex-col">
-      <!-- Hero banner -->
-      <!-- <section class="" data-aos="fade-in" data-aos-delay="200">
-         <section class="w-full carousel-outer mx-auto pos-relative">
-            <div data-auto-play="true" data-loop="true" data-dots="false" data-animateIn="slideInUp" data-animateOut="slideOutDown" class="jsBannerCarousel is-carousel owl-carousel owl-theme">
-               <div class="item bg-primary">
-                  <div class="container md:container-md lg:container-lg xl:container-xl mx-auto">
-                     <div class="ratio-7x3"></div>
-                  </div>
-               </div>
-               <div class="item bg-primary-light">
-                  <div class="container md:container-md lg:container-lg xl:container-xl mx-auto">
-                     <div class="ratio-7x3"></div>
-                  </div>
-               </div>
-            </div>
-         </section>
-      </section> -->
-      <section class="pos-relative" data-aos="fade-in" data-aos-delay="200">
+      <section class="pos-relative bg-primary-xlight" data-aos="fade-in" data-aos-delay="200">
          <div class="picture-slider pos-absolute pin">
             <figure class="pos-absolute pin bg-auto bg-no-repeat bg-center-bottom is-active" style="background-image: url('./images/dog-face.png');"></figure>
             <figure class="pos-absolute pin bg-auto bg-no-repeat bg-center-bottom" style="background-image: url('./images/cat-face.png');"></figure>
@@ -45,8 +28,32 @@
             <figure class="pos-absolute pin bg-auto bg-no-repeat bg-center-bottom" style="background-image: url('./images/hamster-face.png');"></figure>
             <figure class="pos-absolute pin bg-auto bg-no-repeat bg-center-bottom" style="background-image: url('./images/pig-face.png');"></figure>
          </div>
-         <div class="container md:container-md lg:container-lg xl:container-xl mx-auto">
-            <div class="ratio-7x3"></div>
+         <div class="container md:container-md xl:container-xl mx-auto pos-relative z-10">
+            <div class="ratio-4x3 lg:ratio-7x3"></div>
+            <div class="pos-absolute pin py-60 text-center">
+               <div class="text-wrap-lg">
+                  <h1 class="f-size-24 lg:f-size-36 f-color-primary f-height-ease">PET MEDICATION AND PRODUCTS ONLINE <br />
+                     <strong>FAST, FRIENDLY & RELIABLE</strong>
+                  </h1>
+                  <div class="pos-relative container-article mx-auto">
+                     <form class="flex-row bg-white">
+                        <i class="icon icon-60 flex-none">
+                           <span class="p-10">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="my-auto" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                 viewBox="0 0 24 24">
+                                 <circle cx="11" cy="11" r="8"></circle>
+                                 <path d="m21 21-4.35-4.35"></path>
+                              </svg>
+                           </span>
+                        </i>
+                        <div class="p-10 flex-auto flex-col">
+                           <input type="text" placeholder="WHAT ARE YOU LOOKING FOR?" name="search" class="uppercase w-full p-10" />
+                        </div>
+                        <button class="button uppercase rounded-10 bg-default f-color-white f-size-18 px-20 py-20 flex-none">Search</button>
+                     </form>
+                  </div>
+               </div>
+            </div>
          </div>
       </section>
 
@@ -443,18 +450,19 @@
 <script src="./js/allScript.js"></script>
 <script>
    var allPictures = $('.picture-slider').find('figure');
-    if (allPictures.length > 0) {
+   if (allPictures.length > 0) {
       var index = 0;
       var totalPictures = allPictures.length;
-      var imageSlider = setInterval(function() {
-        if (index < totalPictures - 1) {
-          index = index + 1;
-        } else {
-          index = 0;
-        }
-        $('.picture-slider figure').removeClass('is-active');
-        $('.picture-slider figure').eq(index).addClass('is-active');
+      var imageSlider = setInterval(function () {
+         if (index < totalPictures - 1) {
+            index = index + 1;
+         } else {
+            index = 0;
+         }
+         $('.picture-slider figure').removeClass('is-active');
+         $('.picture-slider figure').eq(index).addClass('is-active');
       }, 5000);
-    }
+   }
 </script>
+
 </html>
