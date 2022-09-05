@@ -341,3 +341,17 @@ h6 {
     background-image: url('../images/circle-icon-secondary-xlight.svg');
   }
 }
+
+.picture-slider {
+  overflow: hidden;
+  figure {
+    transform: translateY(100%);
+    transition: all 0.5s ease-in-out;
+    z-index: 0;
+    &.is-active {
+      transform: translateY(0);
+      transition: all 0.8s 0.5s ease-in-out;
+      z-index: 1;
+    }
+  }
+}

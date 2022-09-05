@@ -130,12 +130,12 @@ $(document).ready(function () {
   if ($(".jsBannerCarousel").length > 0) {
     $(".jsBannerCarousel").each(function () {
       var jsBannerCarousel = $(this);
-      var isAutoPlay = jsBannerCarousel.data('auto-play');
       var carouselOuter = jsBannerCarousel.closest('.carousel-outer');
       var jsBannerCarouselPrv = carouselOuter.find('.jsCarouselPrv');
       var jsBannerCarouselNxt = carouselOuter.find('.jsCarouselNxt');
       var isBannerCarouselSingle = jsBannerCarousel.children().length === 1;
-      jsBannerCarousel.owlCarousel({
+      var dataSettings = jsBannerCarousel.data();
+      var defaultSettings = {
         center: true,
         items: 1,
         stagePadding: 0,
@@ -146,13 +146,15 @@ $(document).ready(function () {
         pullDrag: !isBannerCarouselSingle,
         nav: false,
         dots: true,
-        // animateIn: isIE11 || isIE10 ? "" : "fadeIn",
-        // animateOut: isIE11 || isIE10 ? "" : "fadeOut",
+        animateIn: "slideInUp",
+        animateOut: "fadeOut",
         smartSpeed: 500,
-        autoplay: isAutoPlay,
+        autoplay: true,
         autoplayTimeout: 4000,
         autoplayHoverPause: true,
-      });
+      };
+      var settings = Object.assign(defaultSettings, dataSettings);
+      jsBannerCarousel.owlCarousel(settings);
       if(!isBannerCarouselSingle){
         if (jsBannerCarouselPrv) {
           jsBannerCarouselPrv.on('click', function () {
