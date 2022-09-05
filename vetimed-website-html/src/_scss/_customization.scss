@@ -488,16 +488,16 @@ $negativeMargin: (
   $negativeMarginClassPrefix "0" 0,
 );
 
-$shadow: 0 1px 3px 0 rgba($color-primary, 0.10), 0 1px 2px 0 rgba($color-primary, 0.06);
-$shadow_md: 0 4px 6px -1px rgba($color-primary, 0.45), 0 2px 4px -1px rgba($color-primary, 0.06);
-$shadow_lg: 0 6px 12px 6px rgba(darken($color-primary, 25), 0.15);
-$shadow_inner: inset 0 1px 3px 0 rgba($color-primary, 0.10), inset  0 1px 2px 0 rgba($color-primary, 0.06);
-// $shadow_outline: inset 0 2px 4px 0 rgba($color-primary, 0.06);
+$shadow: 0 1px 3px 0 rgba($color-grey, 0.10), 0 1px 2px 0 rgba($color-grey, 0.06);
+$shadow_md: 0 4px 6px -1px rgba($color-grey, 0.45), 0 2px 4px -1px rgba($color-grey, 0.06);
+$shadow_lg: 0 6px 12px 6px rgba(darken($color-grey, 25), 0.15);
+$shadow_inner: inset 0 1px 3px 0 rgba($color-grey, 0.10), inset  0 1px 2px 0 rgba($color-grey, 0.06);
+// $shadow_outline: inset 0 2px 4px 0 rgba($color-grey, 0.06);
 
 $shadows: (
   // $shadowsClassPrefix null $shadow 'states',
-  // $shadowsClassPrefix "md" $shadow_md 'states',
-  // $shadowsClassPrefix "lg" $shadow_lg 'states',
+  $shadowsClassPrefix "md" $shadow_md 'states',
+  $shadowsClassPrefix "lg" $shadow_lg 'states',
   //$shadowsClassPrefix "xl" $shadow_xl 'states',
   //$shadowsClassPrefix "2xl" $shadow_2xl 'states',
   // $shadowsClassPrefix "inner" $shadow_inner 'states',
@@ -517,7 +517,7 @@ $aspectRatios: (
   $aspectRatiosClassNamePrefix "7x3" 7 2.92,
   $aspectRatiosClassNamePrefix "16x9" 16 9,
   $aspectRatiosClassNamePrefix "16x9" 16 9,
-  $aspectRatiosClassNamePrefix "unstuck-design" 195 14.33,
+  $aspectRatiosClassNamePrefix "unstuck-design" 165 13,
   $aspectRatiosClassNamePrefix "custom-1" 530 450,
   // $aspectRatiosClassNamePrefix "splitter" 205.3 552.7,
   $aspectRatiosClassNamePrefix "none" 1 0,
@@ -597,9 +597,8 @@ $iconsSizes: (
   $iconsSizesClassNamePrefix "158" 15.8rem null,
 
   $iconsSizesClassNamePrefix "logo" 24.9rem,
-  $iconsSizesClassNamePrefix "logo-lg" 32.4rem,
-  $iconsSizesClassNamePrefix "logo-sm" 18.0rem,
-  $iconsSizesClassNamePrefix "unstuck-design" 20.2rem,
+  $iconsSizesClassNamePrefix "logo-sm" 12.0rem,
+  $iconsSizesClassNamePrefix "unstuck-design" 16.5rem,
   $iconsSizesClassNamePrefix "auto" 'auto',
 );
 
