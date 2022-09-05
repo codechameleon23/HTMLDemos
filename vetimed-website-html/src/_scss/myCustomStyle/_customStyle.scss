@@ -1,3 +1,7 @@
+body {
+  background-color: $color-primary-xlight;
+}
+
 h1,
 h2 {
   line-height: 1.025;
@@ -41,9 +45,9 @@ h6 {
   transition: $transition;
   text-align: center;
   text-transform: uppercase;
-  // font-size: 1.6rem;
+  // font-size: 1.8rem;
   letter-spacing: 0.13em;
-  font-weight: 500;
+  // font-weight: 500;
   // padding: 1.2rem 4rem;
 
   // &.sm {
@@ -272,5 +276,68 @@ h6 {
     &-bar {
       max-height: 5.6rem;
     }
+  }
+}
+
+.floating-tag {
+  transform: rotate(10deg);
+}
+
+.speech-bubble, .circle {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.speech-bubble {
+  &.primary {
+    background-image: url('../images/bubble-icon.svg');
+  }
+  &.primary-medium {
+    background-image: url('../images/bubble-icon-medium.svg');
+  }
+  &.primary-light {
+    background-image: url('../images/bubble-icon-light.svg');
+  }
+  &.primary-xlight {
+    background-image: url('../images/bubble-icon-xlight.svg');
+  }
+  &.primary-highlight {
+    background-image: url('../images/bubble-icon-highlight.svg');
+  }
+  &.tilt-left {
+    transform: rotate (-10deg)
+  }
+  &.tilt-right{
+    transform: scaleX(-1) rotate(-10deg);
+  }
+}
+
+.circle {
+  &.primary {
+    background-image: url('../images/circle-icon.svg');
+  }
+  &.primary-medium {
+    background-image: url('../images/circle-icon-medium.svg');
+  }
+  &.primary-light {
+    background-image: url('../images/circle-icon-light.svg');
+  }
+  &.primary-xlight {
+    background-image: url('../images/circle-icon-xlight.svg');
+  }
+  &.highlight {
+    background-image: url('../images/circle-icon-highlight.svg');
+  }
+  &.secondary {
+    background-image: url('../images/circle-icon-secondary.svg');
+  }
+  &.secondary-medium {
+    background-image: url('../images/circle-icon-secondary-medium.svg');
+  }
+  &.secondary-light {
+    background-image: url('../images/circle-icon-secondary-light.svg');
+  }
+  &.secondary-xlight {
+    background-image: url('../images/circle-icon-secondary-xlight.svg');
   }
 }
