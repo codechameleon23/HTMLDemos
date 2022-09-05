@@ -74,6 +74,56 @@ $(document).ready(function () {
       }
    });
 
+
+//  -------------------------------------------
+//  Submenu toggle
+//  -------------------------------------------
+  $('.submenu-trigger, .back-button').on('click', function(e){
+    var elm = $(this);
+    var isBackClicked = elm.hasClass('back-button');
+    var ulParent = elm.closest('ul');
+    var liParent = elm.closest('li');
+    if(liParent.hasClass('is-open') || isBackClicked){
+      ulParent.children('li').removeClass('is-open');
+    }else{
+      ulParent.children('li').removeClass('is-open');
+      liParent.addClass('is-open');
+    }
+  });
+
+  // $('.back-button').on('click', function(e){
+  //   var elm = $(this);
+  //   var liParent = elm.closest('li');
+  //   if(!liParent.hasClass('is-open')){
+  //     liParent.addClass('is-open');
+  //   }else{
+  //     liParent.removeClass('is-open');
+  //   }
+  // });
+//  -------------------------------------------
+// Toggle search bar
+//  -------------------------------------------
+  // Close
+  function searchBarClose() {
+    $(".search-toggle").removeClass("is-active");
+    $(".jsNavbarToggle").removeClass("search-is-open");
+  }
+  // Open
+  function searchBarOpen() {
+    $(".search-toggle").addClass("is-active");
+    $(".jsNavbarToggle").addClass("search-is-open");
+  }
+
+  $('.search-toggle').on('click', function () {
+    if ($(this).hasClass("is-active")) {
+      searchBarClose();
+    } else {
+      navBarClose();
+      setTimeout(function () {
+        searchBarOpen();
+      }, 225);
+    }
+  });
 //  -------------------------------------------
 //  Banner carousel
 //  -------------------------------------------
