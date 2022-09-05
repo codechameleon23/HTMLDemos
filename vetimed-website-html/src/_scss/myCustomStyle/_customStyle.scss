@@ -242,7 +242,31 @@ h6 {
   }
 }
 
-header + main {
-  
-  margin-top: 21.744rem;
+.search {
+  &-bar {
+    max-height: 0;
+    overflow: hidden;
+    top: $headerHeight_sm;
+    @media (min-width: $bp_md) {
+      top: $headerHeight_md;
+    }
+    @media (min-width: $bp_lg) {
+      top: $headerHeight_lg;
+    }
+  }
+}
+.search-is-open {
+  .search {
+    &-toggle {
+      background-color: $color-secondary;
+      color: $color-white;
+      @media (min-width: $bp_lg) {
+        color: $color-secondary;
+        background-color: transparent;
+      }
+    }
+    &-bar {
+      max-height: 5.6rem;
+    }
+  }
 }
