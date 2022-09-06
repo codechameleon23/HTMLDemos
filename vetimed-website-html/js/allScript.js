@@ -480,7 +480,7 @@ if (allPictures.length > 0) {
       }
       $('.picture-slider figure').removeClass('is-active');
       $('.picture-slider figure').eq(index).addClass('is-active');
-   }, 4000);
+   }, 5500);
 }
 
 if ($(".filter-toggle").length > 0) {
@@ -491,6 +491,16 @@ if ($(".filter-toggle").length > 0) {
       $("body").addClass("filter-open");
     };
   });
+}
+
+if($('.hello-bar').length > 0){
+  setTimeout(function(){
+    $('body').addClass('hello-bar-open');
+  }, 3000)
+
+  $('.hello-bar-close').on('click', function(){
+    $('body').removeClass('hello-bar-open');
+  })
 }
 
 });

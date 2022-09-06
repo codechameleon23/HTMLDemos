@@ -79687,8 +79687,6 @@ body[data-aos-easing='ease-in-out'] [data-aos],
 {
     .navbar
     {
-        max-width: 50%;
-
         pointer-events: none;
     }
 }
@@ -79698,6 +79696,7 @@ body[data-aos-easing='ease-in-out'] [data-aos],
     {
         top: calc(8.95rem + .2rem);
 
+        max-width: 50%;
         height: calc(100vh - 8.95rem);
     }
 }
@@ -79707,6 +79706,7 @@ body[data-aos-easing='ease-in-out'] [data-aos],
     {
         top: calc(21.588rem + .2rem);
 
+        max-width: unset;
         height: calc(100vh - 21.588rem);
     }
 }
@@ -80419,8 +80419,8 @@ h6
 {
     z-index: 0; 
 
-    -webkit-transition: all .5s ease-in-out;
-            transition: all .5s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+            transition: all 1s ease-in-out;
     -webkit-transform: translateY(100%);
         -ms-transform: translateY(100%);
             transform: translateY(100%);
@@ -80429,8 +80429,8 @@ h6
 {
     z-index: 1; 
 
-    -webkit-transition: all .8s .5s ease-in-out;
-            transition: all .8s .5s ease-in-out;
+    -webkit-transition: all 1.35s .5s ease-in-out;
+            transition: all 1.35s .5s ease-in-out;
     -webkit-transform: translateY(0);
         -ms-transform: translateY(0);
             transform: translateY(0);
@@ -80591,4 +80591,51 @@ h6
     -webkit-transform: translateX(0) translateY(0);
         -ms-transform: translateX(0) translateY(0);
             transform: translateX(0) translateY(0);
+}
+
+.hello-bar
+{
+    overflow: hidden;
+
+    max-height: 0;
+}
+
+body.hello-bar-open
+{
+    margin-top: 4.088rem;
+}
+body.hello-bar-open header
+{
+    margin-top: 4.088rem;
+}
+body.hello-bar-open .hello-bar
+{
+    max-height: 10rem;
+}
+body.hello-bar-open .navbar .is-open .submenu
+{
+    height: calc(100vh - 3.712rem);
+}
+@media (min-width: 710px)
+{
+    body.hello-bar-open .navbar .is-open .submenu
+    {
+        height: calc(100vh - 3.712rem);
+    }
+}
+@media (min-width: 992px)
+{
+    body.hello-bar-open .navbar .is-open .submenu
+    {
+        top: 25.676rem;
+
+        height: calc(100vh - 17.5rem);
+    }
+}
+@media (min-width: 992px)
+{
+    body.hello-bar-open .navbar .is-open .submenu
+    {
+        top: 25.676rem;
+    }
 }

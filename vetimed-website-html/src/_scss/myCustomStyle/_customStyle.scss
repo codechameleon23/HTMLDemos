@@ -347,11 +347,11 @@ h6 {
   overflow: hidden;
   figure {
     transform: translateY(100%);
-    transition: all 0.5s ease-in-out;
+    transition: all 1s ease-in-out;
     z-index: 0;
     &.is-active {
       transform: translateY(0);
-      transition: all 0.8s 0.5s ease-in-out;
+      transition: all 1.35s 0.5s ease-in-out;
       z-index: 1;
     }
   }
@@ -474,4 +474,36 @@ h6 {
 }
 .popup_visible #jsPrescriptionPopup {
   transform: translateX(0) translateY(0);
+}
+
+$helloBarH : 4.088rem;
+
+.hello-bar {
+  overflow: hidden;
+  max-height: 0;
+}
+
+body.hello-bar-open {
+  margin-top: $helloBarH;
+  header {
+    margin-top: $helloBarH;
+  }
+
+  .hello-bar {
+    max-height: 10rem;
+  }
+
+  .navbar .is-open .submenu {
+    height: calc(100vh - #{$headerHeight_sm - $helloBarH});
+    @media (min-width: $bp_md) {
+      height: calc(100vh - #{$headerHeight_sm - $helloBarH});
+    }
+    @media (min-width: $bp_lg) {
+      top: $headerHeight_lg + $helloBarH;
+      height: calc(100vh - #{$headerHeight_lg - $helloBarH});
+    }
+    @media (min-width: $bp_lg) {
+      top: $headerHeight_lg + $helloBarH;
+    }
+  }
 }

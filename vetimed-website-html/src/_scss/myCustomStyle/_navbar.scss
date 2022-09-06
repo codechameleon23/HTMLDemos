@@ -10,17 +10,19 @@ $headerHeight_lg: $header_lg;
   margin-left: auto;
   
   @media (max-width: $bp_lg) {
-    max-width: 50%;
+    // max-width: 50%;
     pointer-events: none;
     // transform: translateY(-100%);
   }
   
   @media (min-width: $bp_md) {
+    max-width: 50%;
     top: calc(#{$headerHeight_md} + 0.2rem);
     height: calc(100vh - #{$headerHeight_md});
   }
   
   @media (min-width: $bp_lg) {
+    max-width: unset;
     top: calc(#{$headerHeight_lg} + 0.2rem);
     height: calc(100vh - #{$headerHeight_lg});
   }

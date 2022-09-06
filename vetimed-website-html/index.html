@@ -24,10 +24,10 @@
 <body class="jsNavbarToggle is-close flex-col">
   <!-- Header -->
   <header class="header w-full flex-col z-100 pos-fixed pin-x pin-t bg-primary-xlight shadow-md lg:shadow-none">
-    <div class="container md:container-md lg:container-lg xl:container-xl mx-auto pt-16 pb-16 lg:pt-36 lg:pb-34 pos-relative">
+    <div class="header-container container md:container-md lg:container-lg xl:container-xl mx-auto pt-16 pb-16 lg:pt-36 lg:pb-34 pos-relative transition-all">
       <div class="flex-row align-center lg:align-end justify-space-between">
         <div class="lg:mx-auto">
-          <a href="index.html" title="Vetimed" class="d-inline-block ratio-logo icon-logo-sm md:icon-logo-md lg:icon-logo">
+          <a href="index.html" title="Vetimed" class="brand-logo d-inline-block ratio-logo icon-logo-sm md:icon-logo-md lg:icon-logo">
             <img class="pos-absolute pin object-contain" src="./images/vatimed-logo.png" alt="Vatimed" />
           </a>
         </div>
@@ -286,25 +286,44 @@
       </div>
     </nav>
   </header>
+  <section class="hello-bar pos-fixed pin-t pin-x z-100 transition-all">
+    <div class="py-10 bg-primary f-color-white">
+      <div class="container md:container-md xl:container-xl mx-auto">
+        <div class="text-wrap text-center">
+          <marquee scrollamount="10" onmouseover="this.stop()" onmouseout="this.start()" class="uppercase"><strong>CHRISTMAS DELIVERY</strong> - LAST ORDERS 12 NOON DECEMBER 23RD</marquee>
+        </div>
+      </div>
+      <button class="hello-bar-close button bg-inherit f-color-inherit pos-absolute pin-r pin-t">
+        <i class="f-color-inherit icon icon-40">
+          <span class="p-16">
+            <svg version="1.1" stroke="currentColor" stroke-width="1.6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.9 17.9" xml:space="preserve">
+              <line class="st0" x1="17.2" y1="0.7" x2="0.7" y2="17.2" />
+              <line class="st0" x1="17.2" y1="17.2" x2="0.7" y2="0.7" />
+            </svg>
+          </span>
+        </i>
+      </button>
+    </div>
+  </section>
   <main class="flex-auto flex-col">
     <section class="pos-relative bg-primary-xlight" data-aos="fade-in" data-aos-delay="200">
       <div class="picture-slider pos-absolute pin">
-        <figure class="pos-absolute pin bg-auto bg-no-repeat bg-center-bottom is-active" style="background-image: url('./images/dog-face.png');"></figure>
-        <figure class="pos-absolute pin bg-auto bg-no-repeat bg-center-bottom" style="background-image: url('./images/cat-face.png');"></figure>
-        <figure class="pos-absolute pin bg-auto bg-no-repeat bg-center-bottom" style="background-image: url('./images/horse-face.png');"></figure>
-        <figure class="pos-absolute pin bg-auto bg-no-repeat bg-center-bottom" style="background-image: url('./images/bird-face.png');"></figure>
-        <figure class="pos-absolute pin bg-auto bg-no-repeat bg-center-bottom" style="background-image: url('./images/rabbit-face.png');"></figure>
-        <figure class="pos-absolute pin bg-auto bg-no-repeat bg-center-bottom" style="background-image: url('./images/hamster-face.png');"></figure>
-        <figure class="pos-absolute pin bg-auto bg-no-repeat bg-center-bottom" style="background-image: url('./images/pig-face.png');"></figure>
+        <figure class="pos-absolute pin bg-auto bg-no-repeat bg-center-bottom opacity-35 md:opacity-100 is-active" style="background-image: url('./images/dog-face.png');"></figure>
+        <figure class="pos-absolute pin bg-auto bg-no-repeat bg-center-bottom opacity-35 md:opacity-100" style="background-image: url('./images/cat-face.png');"></figure>
+        <figure class="pos-absolute pin bg-auto bg-no-repeat bg-center-bottom opacity-35 md:opacity-100" style="background-image: url('./images/horse-face.png');"></figure>
+        <figure class="pos-absolute pin bg-auto bg-no-repeat bg-center-bottom opacity-35 md:opacity-100" style="background-image: url('./images/bird-face.png');"></figure>
+        <figure class="pos-absolute pin bg-auto bg-no-repeat bg-center-bottom opacity-35 md:opacity-100" style="background-image: url('./images/rabbit-face.png');"></figure>
+        <figure class="pos-absolute pin bg-auto bg-no-repeat bg-center-bottom opacity-35 md:opacity-100" style="background-image: url('./images/hamster-face.png');"></figure>
+        <figure class="pos-absolute pin bg-auto bg-no-repeat bg-center-bottom opacity-35 md:opacity-100" style="background-image: url('./images/pig-face.png');"></figure>
       </div>
       <div class="container md:container-md xl:container-xl mx-auto pos-relative z-10">
-        <div class="ratio-4x3 xl:ratio-7x3"></div>
-        <div class="pos-absolute pin py-60 text-center">
+        <div class="ratio-4x3 xl:ratio-7x3 d-hidden md:d-inline-block"></div>
+        <div class="md:pos-absolute pin py-60 text-center">
           <div class="text-wrap-lg">
             <h1 class="f-size-24 lg:f-size-36 f-color-primary f-height-ease">PET MEDICATION AND PRODUCTS ONLINE <br />
               <strong>FAST, FRIENDLY & RELIABLE</strong>
             </h1>
-            <div class="pos-relative container-article mx-auto">
+            <div class="pos-relative container-article mx-auto pr-10">
               <form class="flex-row bg-white">
                 <i class="icon icon-60 flex-none">
                   <span class="p-10">
@@ -317,7 +336,7 @@
                 <div class="p-10 flex-auto flex-col">
                   <input type="text" placeholder="WHAT ARE YOU LOOKING FOR?" name="search" class="uppercase w-full p-10" />
                 </div>
-                <button class="button uppercase rounded-10 bg-default f-color-white f-size-18 px-20 py-20 flex-none">Search</button>
+                <button class="button uppercase rounded-10 bg-default f-color-white f-size-18 px-20 py-20 flex-none -mr-10">Search</button>
               </form>
             </div>
           </div>
