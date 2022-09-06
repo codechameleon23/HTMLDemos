@@ -1,0 +1,91 @@
+// Custom Select dropdown
+$customSelectPrimaryColor: $color-primary !default;
+$customSelectPrimaryColorHover: $color-primary !default;
+.select-hidden {
+   display: none;
+   visibility: hidden;
+   padding-right: 10px;
+ }
+ .custom-select {
+   &-wrapper {
+     cursor: pointer;
+     display: inline-block;
+     position: relative;
+     color: inherit;
+     width: 100%;
+     height: auto;
+   }
+   &-styled {
+     &:after {
+       transform-origin: center;
+       transition: $transition;
+     }
+     &:active,
+     &.active {
+       box-shadow: $shadow_lg;
+       &:after {
+         transform: rotate(-225deg);
+       }
+     }
+   }
+   &-options {
+     display: none;
+     position: absolute;
+     top: 100%;
+     right: 0;
+     left: 0;
+     z-index: 999;
+     margin: 0;
+     padding: 0;
+     list-style: none;
+     background-color: $color-white;
+     box-shadow: $shadow_lg;
+     li {
+       margin: 0;
+       padding: 12px 0;
+       text-indent: 15px;
+      //  border-top: $color-light;
+       transition: $transition;
+       &:hover {
+        //  background: $color-light;
+         color: $customSelectPrimaryColorHover;
+       }
+       &.is-selected {
+         color: $color-white;
+         background: $customSelectPrimaryColor;
+       }
+       &[rel="hide"] {
+         display: none;
+       }
+     }
+   }
+ }
+ 
+ .custom-number {
+   position: relative;
+   .quantity {
+     &-nav {
+       position: absolute;
+       right: 0;
+       top: 0;
+       bottom: 0;
+       display: flex;
+       flex-direction: column;
+     }
+     &-button {
+       flex: 1;
+       padding: 0 1.5rem;
+       background-color: $customSelectPrimaryColor;
+       color: $color-white;
+       line-height: 1;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       user-select: none;
+       font-weight: bold;
+       &:hover {
+         background-color: $customSelectPrimaryColorHover;
+       }
+     }
+   }
+ }

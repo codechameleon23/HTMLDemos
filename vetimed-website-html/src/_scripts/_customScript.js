@@ -15,6 +15,21 @@
 //   });
 // }
 
+var allPictures = $('.picture-slider').find('figure');
+if (allPictures.length > 0) {
+   var index = 0;
+   var totalPictures = allPictures.length;
+   var imageSlider = setInterval(function () {
+      if (index < totalPictures - 1) {
+         index = index + 1;
+      } else {
+         index = 0;
+      }
+      $('.picture-slider figure').removeClass('is-active');
+      $('.picture-slider figure').eq(index).addClass('is-active');
+   }, 4000);
+}
+
 if ($(".filter-toggle").length > 0) {
   $(".filter-toggle").on("click", function () {
     if ($("body").hasClass("filter-open")) {

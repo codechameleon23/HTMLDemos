@@ -796,21 +796,5 @@
   </section>
 </body>
 <script src="./js/allScript.js"></script>
-<script>
-  var allPictures = $('.picture-slider').find('figure');
-  if (allPictures.length > 0) {
-    var index = 0;
-    var totalPictures = allPictures.length;
-    var imageSlider = setInterval(function() {
-      if (index < totalPictures - 1) {
-        index = index + 1;
-      } else {
-        index = 0;
-      }
-      $('.picture-slider figure').removeClass('is-active');
-      $('.picture-slider figure').eq(index).addClass('is-active');
-    }, 5000);
-  }
-</script>
 
 </html>
