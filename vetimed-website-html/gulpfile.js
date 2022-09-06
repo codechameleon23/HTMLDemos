@@ -82,7 +82,7 @@ const PROJECT_JS_LIST = [
   // SRC_JS_PATH+'/_navbarDoubleTap.js',
   // SRC_JS_PATH+'/_subMenuDropdown.js',
   // SRC_JS_PATH+'/_bannerCarousel.js',
-  // SRC_JS_PATH+'/_itemCarousel.js',
+  SRC_JS_PATH+'/_itemCarousel.js',
   SRC_JS_PATH+'/_popup.js',
   SRC_JS_PATH+'/_magnificPopup.js',
   SRC_JS_PATH+'/_aos.js',
