@@ -94,18 +94,18 @@ h6 {
 //   }
 // }
 
-// .list {
-//   &.primary {
-//     ::marker {
-//       color: $color-primary;
-//     }
-//   }
-//   &.secondary {
-//     ::marker {
-//       color: $color-secondary;
-//     }
-//   }
-// }
+.list {
+  &.primary {
+    ::marker {
+      color: $color-primary;
+    }
+  }
+  &.secondary {
+    ::marker {
+      color: $color-secondary;
+    }
+  }
+}
 
 // ::marker {
 //   color: $color-primary;
@@ -460,4 +460,18 @@ h6 {
       }
     }
   }
+}
+
+#jsPrescriptionPopup_background {
+  transition: all 0.3s 0.3s;
+}
+#jsPrescriptionPopup,
+#jsPrescriptionPopup_wrapper {
+  transition: all 0.3s ease-out;
+}
+#jsPrescriptionPopup {
+  transform: translateX(0) translateY(-40%);
+}
+.popup_visible #jsPrescriptionPopup {
+  transform: translateX(0) translateY(0);
 }

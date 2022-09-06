@@ -80109,6 +80109,16 @@ h6
     box-shadow: 0 6px 12px 6px rgba(0, 0, 0, .15);
 }
 
+.list.primary ::marker
+{
+    color: #00403c;
+}
+
+.list.secondary ::marker
+{
+    color: #f0b766;
+}
+
 .unstuck-link
 {
     overflow: visible !important;
@@ -80494,4 +80504,31 @@ h6
 .imageGallery-wrapper .lSSlideOuter .lSPager.lSGallery li:hover > a
 {
     opacity: .7;
+}
+
+#jsPrescriptionPopup_background
+{
+    -webkit-transition: all .3s .3s;
+            transition: all .3s .3s;
+}
+
+#jsPrescriptionPopup,
+#jsPrescriptionPopup_wrapper
+{
+    -webkit-transition: all .3s ease-out;
+            transition: all .3s ease-out;
+}
+
+#jsPrescriptionPopup
+{
+    -webkit-transform: translateX(0) translateY(-40%);
+        -ms-transform: translateX(0) translateY(-40%);
+            transform: translateX(0) translateY(-40%);
+}
+
+.popup_visible #jsPrescriptionPopup
+{
+    -webkit-transform: translateX(0) translateY(0);
+        -ms-transform: translateX(0) translateY(0);
+            transform: translateX(0) translateY(0);
 }
