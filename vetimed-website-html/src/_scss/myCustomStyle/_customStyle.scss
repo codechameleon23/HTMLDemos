@@ -355,3 +355,50 @@ h6 {
     }
   }
 }
+
+[data-aos='zoom-in-up'] {
+  transform: translate3d(0, $aos-distance, 0) scale(.6);
+}
+
+[data-aos='zoom-in-down'] {
+  transform: translate3d(0, -$aos-distance, 0) scale(.6);
+}
+
+[data-aos='zoom-in-right'] {
+  transform: translate3d(-$aos-distance, 0, 0) scale(.6);
+}
+
+[data-aos='zoom-in-left'] {
+  transform: translate3d($aos-distance, 0, 0) scale(.6);
+}
+
+.pagination {
+  a {
+    &:not(:last-child) {
+      border-right: 1px solid;
+    }
+    &.is-active {
+      font-weight: 600;
+    }
+  }
+}
+
+.accordion.is-open .accordion-label{
+  font-weight: 600;
+}
+
+@media (max-width: $bp_lg) {
+  .filter-panel {
+    transform: translateX(calc(-100% - 2rem));
+  }
+  
+  .filter-open {
+    .filter-panel {
+      transform: translateX(0);
+    }
+    .filter-toggle {
+      background-color: $color-primary;
+    }
+  }
+
+}

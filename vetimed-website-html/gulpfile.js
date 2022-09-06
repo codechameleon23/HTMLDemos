@@ -95,7 +95,7 @@ const PROJECT_JS_LIST = [
   // SRC_JS_PATH+'/_customNumInput.js',
   // SRC_JS_PATH+'/_simpleSelectDropdownEmptyStateajs',
   // SRC_JS_PATH+'/_activeNavlinkOnScroll.js',
-  // SRC_JS_PATH+'/_customScript.js',
+  SRC_JS_PATH+'/_customScript.js',
   SRC_JS_PATH+'/_docReadyEnds.js',
   // SRC_JS_PATH+'/_paceEnd.js',
   SRC_JS_PATH+'/_productSlider.js',
