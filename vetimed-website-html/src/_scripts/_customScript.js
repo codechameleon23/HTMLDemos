@@ -43,7 +43,7 @@ if ($(".filter-toggle").length > 0) {
 if($('.hello-bar').length > 0){
   setTimeout(function(){
     $('body').addClass('hello-bar-open');
-  }, 3000)
+  }, 1500)
 
   $('.hello-bar-close').on('click', function(){
     $('body').removeClass('hello-bar-open');

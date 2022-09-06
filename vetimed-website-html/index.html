@@ -23,8 +23,8 @@
 
 <body class="jsNavbarToggle is-close flex-col">
   <!-- Header -->
-  <header class="header w-full flex-col z-100 pos-fixed pin-x pin-t bg-primary-xlight shadow-md lg:shadow-none">
-    <div class="header-container container md:container-md lg:container-lg xl:container-xl mx-auto pt-16 pb-16 lg:pt-36 lg:pb-34 pos-relative transition-all">
+  <header class="header w-full flex-col z-100 pos-fixed pin-x pin-t bg-primary-xlight shadow-lg lg:shadow-none">
+    <div class="container md:container-md lg:container-lg xl:container-xl mx-auto pt-16 pb-16 lg:pt-36 lg:pb-34 pos-relative">
       <div class="flex-row align-center lg:align-end justify-space-between">
         <div class="lg:mx-auto">
           <a href="index.html" title="Vetimed" class="brand-logo d-inline-block ratio-logo icon-logo-sm md:icon-logo-md lg:icon-logo">
@@ -33,7 +33,7 @@
         </div>
         <div class="lg:pos-absolute pin-r">
           <div class="flex-row align-center -m-4">
-            <a title="Facebook" href="#" class="m-4 icon icon-30 bg-primary-light f-color-white rounded icon icon-30 transition-all">
+            <a title="Account" href="#" class="m-4 icon icon-30 bg-primary-light f-color-white rounded icon icon-30 transition-all">
               <span class="p-6">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
                   <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
@@ -41,10 +41,18 @@
                 </svg>
               </span>
             </a>
-            <a title="Basket" href="#" class="m-4 icon icon-30 bg-primary f-color-white rounded icon icon-30 transition-all">
+            <a title="Basket" href="#" class="m-4 icon icon-30 bg-primary-medium f-color-white rounded icon icon-30 transition-all">
               <span class="p-6">
                 <svg fill="currentColor" class="my-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.7 30.5">
                   <path d="M28.1 28.7h-4L26 13.6h4.8l-2.7 15.1zM5 13.6h4.2l1.7 15.1H7.7L5 13.6zm7.7 15.1L11 13.6h5.5v15.1h-3.8zm5.7 0V13.6h5.7l-1.9 15.1h-3.8zm9.3-16.9L23.4.6c-.2-.5-.7-.7-1.2-.5-.5.2-.7.7-.5 1.2l4 10.6h-16l4.2-10.3c.2-.5 0-1-.5-1.2-.5-.2-1 0-1.2.5l-4.4 11H.9c-.5 0-.9.4-.9.9s.4.9.9.9h2.2l3 16.2c.1.4.5.7.9.7h21.9c.4 0 .8-.3.9-.8l2.8-16.2h2.3c.5 0 .9-.4.9-.9s-.4-.9-.9-.9h-7.2z"></path>
+                </svg>
+              </span>
+            </a>
+            <a title="Search" href="#" class="search-toggle lg:d-hidden m-4 icon icon-30 bg-primary f-color-white rounded icon icon-30 transition-all">
+              <span class="p-6">
+                <svg xmlns="http://www.w3.org/2000/svg" class="my-auto" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <path d="m21 21-4.35-4.35"></path>
                 </svg>
               </span>
             </a>
@@ -65,8 +73,8 @@
       </div>
     </div>
     <nav class="bg-primary-medium f-color-white navbar pos-absolute pin-x z-30 lg:pin-none lg:pos-static lg:mx-auto lg:w-full shadow-lg lg:shadow-none">
-      <div class="container lg:container-xl mx-auto pt-16 pb-16 lg:pt-0 lg:pb-0 lg:w-full">
-        <div class="flex-col">
+      <div class="container lg:container-xl mx-auto pt-16 pb-16 lg:pt-0 lg:pb-0">
+        <div class="flex-col lg:flex-row">
           <ul class="list-reset flex-col lg:flex-row pos-relative">
             <li class="">
               <div class="submenu-trigger nav-link py-16 px-16 flex-row align-center justify-space-between">
@@ -285,6 +293,27 @@
         </div>
       </div>
     </nav>
+    <section class="search-bar pos-absolute pin-x pin-t-100">
+      <div class="container container-fluid lg:container-lg xl:container-xl mx-auto">
+        <div class="flex-row lg:justify-end">
+          <form class="flex-row bg-white rounded-4 lg:my-10 pr-4 ml-auto shadow-inner transition-all w-full lg:w-auto lg:-mt-40">
+            <div class="flex-auto flex-col">
+              <input type="text" placeholder="Search" name="search" class="uppercase w-full p-8 f-size-12" />
+            </div>
+            <button class="button uppercase rounded-4 overflow-hidden hover:bg-default hover:f-color-white transition-all">
+              <i class="icon icon-24">
+                <span class="p-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="my-auto" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                  </svg>
+                </span>
+              </i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
   </header>
   <section class="hello-bar pos-fixed pin-t pin-x z-100 transition-all">
     <div class="py-10 bg-primary f-color-white">

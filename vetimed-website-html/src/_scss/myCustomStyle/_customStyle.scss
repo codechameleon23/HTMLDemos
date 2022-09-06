@@ -250,31 +250,17 @@ h6 {
   min-height: unset;
 }
 
-.search {
-  &-bar {
+@media (max-width: $bp_lg) {
+  .search-bar {
     max-height: 0;
     overflow: hidden;
-    top: $headerHeight_sm;
-    @media (min-width: $bp_md) {
-      top: $headerHeight_md;
-    }
-    @media (min-width: $bp_lg) {
-      top: $headerHeight_lg;
-    }
+    transition: max-height 0.5s ease-out;
   }
-}
-.search-is-open {
-  .search {
-    &-toggle {
-      background-color: $color-secondary;
-      color: $color-white;
-      @media (min-width: $bp_lg) {
-        color: $color-secondary;
-        background-color: transparent;
-      }
-    }
-    &-bar {
+  .search-is-open {
+    .search-bar {
+      transform: translateY(0);
       max-height: 5.6rem;
+      transition: max-height 0.5s ease-in;
     }
   }
 }
