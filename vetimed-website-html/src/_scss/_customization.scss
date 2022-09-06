@@ -68,7 +68,7 @@ $defaultFont: $baseFont;
 $defaultTextColor: $color-text;
 $defaultFontWeights: 400;
 $defaultFontSize: 1.8rem;
-$defaultFontHeight: 1.25;
+$defaultFontHeight: 1.025;
 $defaultLetterSpacing: 0.05rem;
 
 $fontFamily: (
@@ -92,6 +92,10 @@ $breakPoints: (
   xl\: $bp_xl,
   // xxl\: $bp_xxl
 );
+
+$header_sm: 7.8rem;
+$header_md: 8.95rem;
+$header_lg: 21.588rem;
 
 $states: (
   null null,
@@ -340,9 +344,9 @@ $paddings: (
 
   $paddingsClassPrefix "100" 10.0rem,
 
-  $paddingsClassPrefix "header" 21.994rem,
-  $paddingsClassPrefix "header-md" 8.9rem,
-  $paddingsClassPrefix "header-sm" 7.8rem,
+  $paddingsClassPrefix "header" $header_sm,
+  $paddingsClassPrefix "header-md" $header_md,
+  $paddingsClassPrefix "header-sm" $header_sm,
 
   $paddingsClassPrefix "0" 0,
 );
@@ -412,9 +416,9 @@ $margins: (
 
   $marginsClassPrefix "100" 10.0rem,
 
-  $marginsClassPrefix "header" 21.994rem,
-  $marginsClassPrefix "header-md" 8.9rem,
-  $marginsClassPrefix "header-sm" 7.8rem,
+  $marginsClassPrefix "header" $header_sm,
+  $marginsClassPrefix "header-md" $header_md,
+  $marginsClassPrefix "header-sm" $header_sm,
 
   $marginsClassPrefix "0" 0,
 );
@@ -483,9 +487,9 @@ $negativeMargin: (
 
   $negativeMarginClassPrefix "100" 10.0rem,
 
-  $negativeMarginClassPrefix "header" 21.994rem,
-  $negativeMarginClassPrefix "header-md" 8.9rem,
-  $negativeMarginClassPrefix "header-sm" 7.8rem,
+  $negativeMarginClassPrefix "header" $header_sm,
+  $negativeMarginClassPrefix "header-md" $header_md,
+  $negativeMarginClassPrefix "header-sm" $header_sm,
 
   $negativeMarginClassPrefix "0" 0,
 );
@@ -600,6 +604,7 @@ $iconsSizes: (
   $iconsSizesClassNamePrefix "130" 13.0rem null,
   $iconsSizesClassNamePrefix "144" 14.4rem null,
   $iconsSizesClassNamePrefix "158" 15.8rem null,
+  $iconsSizesClassNamePrefix "168" 16.8rem null,
   $iconsSizesClassNamePrefix "204" 20.4rem null,
 
   $iconsSizesClassNamePrefix "250" 25rem null,
