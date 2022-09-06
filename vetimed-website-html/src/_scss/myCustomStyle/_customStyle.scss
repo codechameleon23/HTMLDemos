@@ -288,14 +288,17 @@ h6 {
   &.primary-xlight {
     background-image: url("../images/bubble-icon-xlight.svg");
   }
-  &.primary-highlight {
+  &.highlight {
     background-image: url("../images/bubble-icon-highlight.svg");
   }
   &.tilt-left {
-    transform: rotate (-10deg);
+    transform: rotate(-10deg);
   }
   &.tilt-right {
     transform: scaleX(-1) rotate(-10deg);
+  }
+  &.flip-x {
+    transform: scaleX(-1);
   }
 }
 
@@ -494,5 +497,31 @@ body.hello-bar-open {
     @media (min-width: $bp_lg) {
       top: $headerHeight_lg + $helloBarH;
     }
+  }
+}
+
+.our-team-banner {
+  .bird-icon {
+    width: 8%;
+    margin-left: 1%;
+  }
+  .small-exotic-icon {
+    width: 14%;
+    margin-left: 1%;
+  }
+  .farm-animal-icon {
+    width: 23%;
+    margin-left: 1%;
+  }
+  .cat-icon {
+    width: 13%;
+    margin-left: 1%;
+  }
+  .dog-icon {
+    width: 15%;
+    margin-left: 1%;
+  }
+  .horse-icon {
+    width: 22%;
   }
 }
