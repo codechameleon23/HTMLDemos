@@ -507,7 +507,7 @@ if ($('#imageGallery').length){//if element exists
         // auto : true,
         adaptiveHeight: true,
         item:1,
-        thumbItem:4,
+        thumbItem:5,
         pause: 3000,
         thumbMargin: 14,
         easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
