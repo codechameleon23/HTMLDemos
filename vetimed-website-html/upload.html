@@ -399,7 +399,7 @@
             <p>Please upload a scan of the documents. You can upload pdf, jpg, png file formats. Files should be under 5Mb in size. If you have more than one prescription, click "Add Another" to pload a further scan.</p>
             <p><strong>Plase note:</strong> Photographs are not accespted via this form. You can email us a photo if it's a good quality image showing the whole document.</p>
             <form class="-m-10 f-size-18">
-              <div class="col-count-2 col-gap-0">
+              <div class="col-count-0 md:col-count-2 col-gap-0">
                 <div class="col-12 flex-col p-10">
                   <input type="text" placeholder="Order No." name="orderNumber" class="uppercase bg-white w-full p-10 flex-stretch focus:shadow-lg transition-all">
                 </div>
@@ -410,12 +410,10 @@
                   <input type="text" placeholder="Phone" name="phone" class="uppercase bg-white w-full p-10 flex-stretch focus:shadow-lg transition-all">
                 </div>
                 <div class="col-12 flex-col p-10">
-                  <textarea rows="6" style="resize: none; min-height: 17.6rem;" placeholder="Message" name="message" class="uppercase bg-white w-full p-10 flex-stretch focus:shadow-lg transition-all"></textarea>
+                  <textarea rows="6" style="resize: none; min-height: 16.2rem;" placeholder="Message" name="message" class="uppercase bg-white w-full p-10 flex-stretch focus:shadow-lg transition-all"></textarea>
                 </div>
               </div>
-              <div class="col-12 flex-col p-10">
-                <input type="file" placeholder="Upload prescription" name="prescription" class="uppercase bg-white w-full p-10 flex-stretch focus:shadow-lg transition-all">
-              </div>
+              <div id="MultiFileUpload" class="col-12 flex-col"></div>
             </form>
             <div class="f-color-default border-default border-2 border-dashed p-20">
               <div class="text-wrap text-center f-size-20">
@@ -506,5 +504,67 @@
   </main>
 </body>
 <script src="./js/allScript.js"></script>
+<script type="text/babel">
+  const { useState } = React;
+   const UploadField = ({ index, onRemove }) => {
+      const [fileName, setFileName] = useState("");
+
+      const selectFileName = (event) => {
+         const targetValue = event.target.value;
+         const fileName = targetValue.match(
+            /[\/\\]([\w\d\s\.\-\(\)]+)$/
+         )[1];
+         console.log('fileName', fileName);
+         setFileName(fileName || "")
+      }
+
+      const isFileName = !!fileName;
+      console.log('isFileName', isFileName);
+
+      return (
+         <div key={`uploadField.${index}`} class="col-12 flex-row p-10">
+            <div class="pos-relative flex-row flex-auto">
+               <input onChange={(event) => selectFileName(event)} accept="image/jpeg,image/png,application/pdf" type="file" placeholder="Upload prescription" name={`prescription.${index}`} class="opacity-0 uppercase bg-white w-full p-10 flex-stretch focus:shadow-lg transition-all" />
+               <div class="pos-absolute pin p-10 flex-row pointer-events-none bg-white f-color-default">
+                  <div class="flex-row flex-auto justify-space-between mr-20 truncate">
+                     <span class="uppercase f-color-placeholder truncate">{fileName || 'Upload prescription'}</span>
+                     {!fileName ? <span class="d-hidden md:d-inline-block"><em>No File Selected</em></span> : null}
+                  </div>
+                  <div class="button flex-none f-color-white bg-grey-light f-size-18 px-10 py-10 -m-10">
+                     <span class="d-hidden md:d-inline-block">Browse</span>
+                     <i class="icon md:d-hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal">
+                           <circle cx="12" cy="12" r="1"></circle>
+                           <circle cx="19" cy="12" r="1"></circle>
+                           <circle cx="5" cy="12" r="1"></circle>
+                        </svg>
+                     </i>
+                  </div>
+               </div>
+            </div>
+            {(isFileName || index > 0) && (
+               <div onClick={onRemove} class="button flex-none bg-default f-color-white hover:shadow-lg f-size-18 px-20 py-10 flex-row align-center">
+                  <span>x</span>
+               </div>
+            )}
+         </div>
+      )
+   };
+   const MultiFileUpload = () => {
+      const [fields, setFields] = useState([0]);
+      return (
+         <>{fields.length > 0 ? (
+            fields.map((fieldIndex) => <UploadField index={fieldIndex} onRemove={() => setFields([...fields].filter((i) => i !== fieldIndex))} />)
+         ) : (
+            <UploadField index={0} onRemove={() => setFields([0])} />
+         )}
+            <div class="col-12 flex-row justify-end p-10">
+               <div onClick={() => setFields([...fields, fields.length])} class="button f-color-white border-2 hover:shadow-lg f-size-18 px-20 py-10">Add Another</div>
+            </div>
+         </>
+      )
+   };
+   ReactDOM.render(<MultiFileUpload />, document.querySelector("#MultiFileUpload"));
+</script>
 
 </html>
