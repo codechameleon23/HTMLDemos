@@ -454,18 +454,30 @@ h6 {
   }
 }
 
-#jsPrescriptionPopup_background {
+#jsPrescriptionPopup_background,
+#jsHeroSearchPopup_background {
   transition: all 0.3s 0.3s;
 }
 #jsPrescriptionPopup,
-#jsPrescriptionPopup_wrapper {
+#jsPrescriptionPopup_wrapper,
+#jsHeroSearchPopup,
+#jsHeroSearchPopup_wrapper {
   transition: all 0.3s ease-out;
 }
-#jsPrescriptionPopup {
-  transform: translateX(0) translateY(-40%);
+#jsPrescriptionPopup,
+#jsHeroSearchPopup {
+  transform: translateX(0) translateY(-20%);
 }
-.popup_visible #jsPrescriptionPopup {
+.popup_visible #jsPrescriptionPopup,
+.popup_visible #jsHeroSearchPopup {
   transform: translateX(0) translateY(0);
+}
+
+#jsHeroSearchPopup_wrapper {
+  width: 100%;
+  left: 0 !important;
+  display: flex;
+  justify-content: center;
 }
 
 $helloBarH : 4.088rem;
@@ -497,6 +509,10 @@ body.hello-bar-open {
     @media (min-width: $bp_lg) {
       top: $headerHeight_lg + $helloBarH;
     }
+  }
+
+  #jsHeroSearchPopup_wrapper {
+    margin-top: -#{$helloBarH};
   }
 }
 

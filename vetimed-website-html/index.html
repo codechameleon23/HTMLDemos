@@ -335,7 +335,7 @@
     </div>
   </section>
   <main class="flex-auto flex-col">
-    <section class="pos-relative bg-primary-xlight" data-aos="fade-in" data-aos-delay="200">
+    <section class="pos-relative z-1 bg-primary-xlight" data-aos="fade-in" data-aos-delay="200">
       <div class="picture-slider pos-absolute pin">
         <figure class="pos-absolute pin bg-auto bg-no-repeat bg-center-bottom opacity-35 md:opacity-100 is-active" style="background-image: url('./images/dog-face.png');"></figure>
         <figure class="pos-absolute pin bg-auto bg-no-repeat bg-center-bottom opacity-35 md:opacity-100" style="background-image: url('./images/cat-face.png');"></figure>
@@ -352,22 +352,132 @@
             <h1 class="f-size-24 lg:f-size-36 f-color-primary f-height-ease">PET MEDICATION AND PRODUCTS ONLINE <br />
               <strong>FAST, FRIENDLY & RELIABLE</strong>
             </h1>
-            <div class="pos-relative container-article mx-auto pr-10">
-              <form class="flex-row bg-white">
-                <i class="icon icon-60 flex-none">
-                  <span class="p-10">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="my-auto" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                      <circle cx="11" cy="11" r="8"></circle>
-                      <path d="m21 21-4.35-4.35"></path>
-                    </svg>
-                  </span>
-                </i>
-                <div class="p-10 flex-auto flex-col">
-                  <input type="text" placeholder="WHAT ARE YOU LOOKING FOR?" name="search" class="uppercase w-full p-10" />
+            <form class="pos-relative container-article mx-auto pr-10">
+              <!-- Hero search with result popup -->
+              <div id="jsHeroSearch_wrapper" class="pos-relative">
+                <div class="col-12 md:col-10 xl:col-7 flex-row align-center bg-white mx-auto focus-within:shadow-lg transition-all">
+                  <i class="icon icon-20 flex-none f-color-placeholder ml-10">
+                    <span class="">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="my-auto" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                      </svg>
+                    </span>
+                  </i>
+                  <div class="md:py-10 flex-auto flex-col">
+                    <input type="text" placeholder="WHAT ARE YOU LOOKING FOR?" name="search" class="uppercase w-full p-10" />
+                  </div>
+                  <a href="#jsHeroSearchPopup" class="jsHeroSearchPopup_open button uppercase rounded-10 bg-default f-color-white f-size-18 p-10 md:p-20 flex-none -mr-10">
+                    <span class="d-hidden md:d-inline-block">Search</span>
+                    <i class="icon icon-30 flex-none md:d-hidden">
+                      <span class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="my-auto" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                          <circle cx="11" cy="11" r="8"></circle>
+                          <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                      </span>
+                    </i>
+                  </a>
                 </div>
-                <button class="button uppercase rounded-10 bg-default f-color-white f-size-18 px-20 py-20 flex-none -mr-10">Search</button>
-              </form>
-            </div>
+                <section id="jsHeroSearchPopup" class="container md:container-md lg:container-lg mx-auto bg-primary-light p-20 shadow-lg">
+                  <div class="bg-white pt-30 md:pt-40 pb-20 md:pb-30 px-20 md:px-40 pos-relative text-left">
+                    <button class="jsHeroSearchPopup_close pos-absolute pin-t pin-r z-10 d-inline-block hover:bg-primary-medium hover:f-color-white ml-auto transition-all">
+                      <i class="f-color-inherit icon icon-30">
+                        <span class="p-8">
+                          <svg version="1.1" stroke="currentColor" stroke-width="1.6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.9 17.9" xml:space="preserve">
+                            <line class="st0" x1="17.2" y1="0.7" x2="0.7" y2="17.2" />
+                            <line class="st0" x1="17.2" y1="17.2" x2="0.7" y2="0.7" />
+                          </svg>
+                        </span>
+                      </i>
+                    </button>
+                    <div class="flex-row flex-wrap -m-20">
+                      <div class="col-12 md:col-6">
+                        <a href="product-details.html" class="rollover-wrap no-underline flex-row hover:f-color-parent p-20 hover:bg-primary-xlight transition-all">
+                          <figure class="icon-80 lg:icon-130 ratio-1x1 bg-white mr-10">
+                            <div class="rollover-effect pos-absolute pin bg-center bg-contain bg-no-repeat" style="background-image: url('./images/productimage-picture-4cyte-epiitalis-forte-gel-for-dogs-100ml-10517_jpg_350x209_q85.jpg');"></div>
+                          </figure>
+                          <div class="f-color-child-primary-medium transition-all">
+                            <p>4CYTE Epiitalis Forte Gel for Dogs 100ml</p>
+                            <p class="f-color-inherit">
+                              <span><strong>£ 40.99</strong></span>
+                            </p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-12 md:col-6">
+                        <a href="product-details.html" class="rollover-wrap no-underline flex-row hover:f-color-parent p-20 hover:bg-primary-xlight transition-all">
+                          <figure class="icon-80 lg:icon-130 ratio-1x1 bg-white mr-10">
+                            <div class="rollover-effect pos-absolute pin bg-center bg-contain bg-no-repeat" style="background-image: url('./images/productimage-2.jpg');"></div>
+                          </figure>
+                          <div class="f-color-child-primary-medium transition-all">
+                            <p>Adaptil Collar Medium / Large Dog 70cm</p>
+                            <p class="f-color-inherit">
+                              <span><strong>£22.13</strong></span>
+                            </p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-12 md:col-6">
+                        <a href="product-details.html" class="rollover-wrap no-underline flex-row hover:f-color-parent p-20 hover:bg-primary-xlight transition-all">
+                          <figure class="icon-80 lg:icon-130 ratio-1x1 bg-white mr-10">
+                            <div class="rollover-effect pos-absolute pin bg-center bg-contain bg-no-repeat" style="background-image: url('./images/productimage-picture-advantage-small-cats-dogs-and-rabbits-4kg-3174_JPG_350x209_q85.jpg');"></div>
+                          </figure>
+                          <div class="f-color-child-primary-medium transition-all">
+                            <p>Advantage Small Cats, Dogs and Rabbits &lt; 4kg</p>
+                            <p class="f-color-inherit">
+                              <span><strong>£20.15</strong></span>
+                            </p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-12 md:col-6">
+                        <a href="product-details.html" class="rollover-wrap no-underline flex-row hover:f-color-parent p-20 hover:bg-primary-xlight transition-all">
+                          <figure class="icon-80 lg:icon-130 ratio-1x1 bg-white mr-10">
+                            <div class="rollover-effect pos-absolute pin bg-center bg-contain bg-no-repeat" style="background-image: url('./images/productimage-picture-advantix-for-dogs-9375_jpg_350x209_q85.jpg');"></div>
+                          </figure>
+                          <div class="f-color-child-primary-medium transition-all">
+                            <p>Adaptil Collar Medium / Large Dog 70cm</p>
+                            <p class="f-color-inherit">
+                              <span><strong>£28.73</strong></span>
+                            </p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-12 md:col-6">
+                        <a href="product-details.html" class="rollover-wrap no-underline flex-row hover:f-color-parent p-20 hover:bg-primary-xlight transition-all">
+                          <figure class="icon-80 lg:icon-130 ratio-1x1 bg-white mr-10">
+                            <div class="rollover-effect pos-absolute pin bg-center bg-contain bg-no-repeat" style="background-image: url('./images/productimage-picture-advocate-for-dogs-and-cats-9378_jpg_350x209_q85.jpg');"></div>
+                          </figure>
+                          <div class="f-color-child-primary-medium transition-all">
+                            <p>Advocate for Dogs and Cats</p>
+                            <p class="f-color-inherit">
+                              <span><strong>£41.50</strong></span>
+                            </p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-12 md:col-6">
+                        <a href="product-details.html" class="rollover-wrap no-underline flex-row hover:f-color-parent p-20 hover:bg-primary-xlight transition-all">
+                          <figure class="icon-80 lg:icon-130 ratio-1x1 bg-white mr-10">
+                            <div class="rollover-effect pos-absolute pin bg-center bg-contain bg-no-repeat" style="background-image: url('./images/productimage-picture-aktivait-9446_jpg_350x209_q85.jpg');"></div>
+                          </figure>
+                          <div class="f-color-child-primary-medium transition-all">
+                            <p>Aktivait</p>
+                            <p class="f-color-inherit">
+                              <span><strong>£44.53</strong></span>
+                            </p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-12 p-20 flex-row justify-end">
+                        <a href="#" class="button uppercase bg-secondary f-color-white f-size-20 f-weight-medium px-20 py-10">More results</a>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -853,5 +963,17 @@
   </section>
 </body>
 <script src="./js/allScript.js"></script>
+<script>
+  $(document).ready(function() {
+    $('#jsHeroSearchPopup').popup({
+      type: 'tooltip',
+      tooltipanchor: $('#jsHeroSearch_wrapper'),
+      offsetleft: 0,
+      offsettop: 0,
+      vertical: 'bottom',
+      horizontal: 'center'
+    });
+  })
+</script>
 
 </html>

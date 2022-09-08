@@ -82179,31 +82179,53 @@ h6
     opacity: .7;
 }
 
-#jsPrescriptionPopup_background
+#jsPrescriptionPopup_background,
+#jsHeroSearchPopup_background
 {
     -webkit-transition: all .3s .3s;
             transition: all .3s .3s;
 }
 
 #jsPrescriptionPopup,
-#jsPrescriptionPopup_wrapper
+#jsPrescriptionPopup_wrapper,
+#jsHeroSearchPopup,
+#jsHeroSearchPopup_wrapper
 {
     -webkit-transition: all .3s ease-out;
             transition: all .3s ease-out;
 }
 
-#jsPrescriptionPopup
+#jsPrescriptionPopup,
+#jsHeroSearchPopup
 {
-    -webkit-transform: translateX(0) translateY(-40%);
-        -ms-transform: translateX(0) translateY(-40%);
-            transform: translateX(0) translateY(-40%);
+    -webkit-transform: translateX(0) translateY(-20%);
+        -ms-transform: translateX(0) translateY(-20%);
+            transform: translateX(0) translateY(-20%);
 }
 
-.popup_visible #jsPrescriptionPopup
+.popup_visible #jsPrescriptionPopup,
+.popup_visible #jsHeroSearchPopup
 {
     -webkit-transform: translateX(0) translateY(0);
         -ms-transform: translateX(0) translateY(0);
             transform: translateX(0) translateY(0);
+}
+
+#jsHeroSearchPopup_wrapper
+{
+    left: 0 !important;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+
+    width: 100%;
+
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .hello-bar
@@ -82251,6 +82273,10 @@ body.hello-bar-open .navbar .is-open .submenu
     {
         top: 25.991rem;
     }
+}
+body.hello-bar-open #jsHeroSearchPopup_wrapper
+{
+    margin-top: -4.088rem;
 }
 
 .our-team-banner .bird-icon
