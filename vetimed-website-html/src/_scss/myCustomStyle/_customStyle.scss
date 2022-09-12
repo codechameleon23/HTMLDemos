@@ -4,14 +4,14 @@ body {
 
 h1,
 h2 {
-  line-height: 1.025;
+  letter-spacing: 0.15rem;
 }
-h3,
-h4,
-h5,
-h6 {
-  line-height: 1.25;
-}
+// h3,
+// h4,
+// h5,
+// h6 {
+//   line-height: 1.25;
+// }
 
 [class*="ratio"]:before {
   display: block;
@@ -291,15 +291,15 @@ h6 {
   &.highlight {
     background-image: url("../images/bubble-icon-highlight.svg");
   }
-  &.tilt-left {
-    transform: rotate(-10deg);
-  }
-  &.tilt-right {
-    transform: scaleX(-1) rotate(-10deg);
-  }
-  &.flip-x {
-    transform: scaleX(-1);
-  }
+}
+.flip-x {
+  transform: scaleX(-1);
+}
+.tilt-left {
+  transform: rotate(-10deg);
+}
+.tilt-right {
+  transform: scaleX(-1) rotate(-10deg);
 }
 
 .circle {
@@ -454,6 +454,11 @@ h6 {
   }
 }
 
+
+.popup_wrapper {
+  z-index: 90 !important;
+}
+
 #jsPrescriptionPopup_background,
 #jsHeroSearchPopup_background {
   transition: all 0.3s 0.3s;
@@ -467,6 +472,9 @@ h6 {
 #jsPrescriptionPopup,
 #jsHeroSearchPopup {
   transform: translateX(0) translateY(-20%);
+}
+#jsPrescriptionPopup {
+  vertical-align: top !important;
 }
 .popup_visible #jsPrescriptionPopup,
 .popup_visible #jsHeroSearchPopup {
@@ -485,6 +493,16 @@ $helloBarH : 4.088rem;
 .hello-bar {
   overflow: hidden;
   max-height: 0;
+}
+
+.popup_wrapper {
+  margin-top: $headerHeight_sm;
+  @media (min-width: $bp_md) {
+    margin-top: headerHeight_md;
+  }
+  @media (min-width: $bp_lg) {
+    margin-top: $headerHeight_lg;
+  }
 }
 
 body.hello-bar-open {
@@ -514,30 +532,47 @@ body.hello-bar-open {
   #jsHeroSearchPopup_wrapper {
     margin-top: -#{$helloBarH};
   }
+
+  .popup_wrapper {
+    margin-top: $header_sm + $helloBarH;
+    @media (min-width: $bp_md) {
+      margin-top: $header_md + $helloBarH;
+    }
+    @media (min-width: $bp_lg) {
+      margin-top: $header_lg + $helloBarH;
+    }
+  }
 }
 
 .our-team-banner {
   .bird-icon {
-    width: 8%;
-    margin-left: 1%;
+    width: 7.19%;
+    // margin-left: 0.5%;
   }
   .small-exotic-icon {
-    width: 14%;
-    margin-left: 1%;
+    width: 11.68%;
+    // margin-left: 0.5%;
   }
   .farm-animal-icon {
-    width: 23%;
-    margin-left: 1%;
+    width: 23.48%;
+    // margin-left: 0.5%;
   }
   .cat-icon {
-    width: 13%;
-    margin-left: 1%;
+    width: 14.38%;
+    // margin-left: 0.5%;
   }
   .dog-icon {
-    width: 15%;
-    margin-left: 1%;
+    width: 16.62%;
+    // margin-left: 0.5%;
   }
   .horse-icon {
-    width: 22%;
+    width: 23.60%;
   }
+}
+
+.dotted-spaced {
+  background-image: linear-gradient(to right, $color-text 70%, rgba($color-white, 0) 0%);
+  background-position: top;
+  background-size: 1rem 0.2rem;
+  background-repeat: repeat-x;
 }

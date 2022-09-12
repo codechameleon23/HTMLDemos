@@ -22,8 +22,9 @@ $color5: #f0b766;
 $color6: #f4cd94;
 $color7: #faead1;
 $color8: #fdf9f0;
-$color9: #f39492;
+$color9: #f29487;
 $color-grey-light: #b9b9b7;
+$color-grey-medium: #4f4f4f;
 $color-grey-dark: #3c3c3a;
 
 $color-text: $color-grey;
@@ -126,6 +127,7 @@ $bgColors: (
   $bgColorsClassPrefix "black" $color-black 'states' 'no-parent' null,
   $bgColorsClassPrefix "grey" $color-grey 'states' 'no-parent' null,
   $bgColorsClassPrefix "grey-light" $color-grey-light 'states' 'no-parent' null,
+  $bgColorsClassPrefix "grey-medium" $color-grey-medium 'states' 'no-parent' null,
   $bgColorsClassPrefix "grey-dark" $color-grey-dark 'states' 'no-parent' null,
 );
 
@@ -161,6 +163,7 @@ $borderColors: (
   $borderColorsClassPrefix "black" $color-black 'states' 'no-parent' null,
   $borderColorsClassPrefix "grey" $color-grey 'states' 'no-parent' null,
   $borderColorsClassPrefix "grey-light" $color-grey-light 'states' 'no-parent' null,
+  $borderColorsClassPrefix "grey-medium" $color-grey-medium 'states' 'no-parent' null,
   $borderColorsClassPrefix "grey-dark" $color-grey-dark 'states' 'no-parent' null,
 );
 
@@ -190,6 +193,7 @@ $textColors: (
   $textColorsClassPrefix "black" $color-black 'states' 'no-parent' null,
   $textColorsClassPrefix "grey" $color-grey 'states' 'no-parent' null,
   $textColorsClassPrefix "grey-light" $color-grey-light 'states' 'no-parent' null,
+  $textColorsClassPrefix "grey-medium" $color-grey-medium 'states' 'no-parent' null,
   $textColorsClassPrefix "grey-dark" $color-grey-dark 'states' 'no-parent' null,
   $textColorsClassPrefix "placeholder" $color-text-placeholder 'states' 'no-parent' null,
 );
@@ -496,7 +500,7 @@ $negativeMargin: (
 );
 
 $shadow: 0 1px 3px 0 rgba($color-grey, 0.10), 0 1px 2px 0 rgba($color-grey, 0.06);
-$shadow_md: 0 4px 6px -1px rgba($color-grey, 0.45), 0 2px 4px -1px rgba($color-grey, 0.06);
+$shadow_md: 0 4px 16px -1px rgba($color-grey, 0.15), 0 2px 2px -1px rgba($color-grey, 0.06);
 $shadow_lg: 0 6px 12px 6px rgba(darken($color-grey, 25), 0.15);
 $shadow_inner: inset 0 1px 3px 0 rgba($color-grey, 0.10), inset  0 1px 2px 0 rgba($color-grey, 0.06);
 // $shadow_outline: inset 0 2px 4px 0 rgba($color-grey, 0.06);
@@ -522,7 +526,8 @@ $aspectRatios: (
   $aspectRatiosClassNamePrefix "5x2" 5 2,
   // $aspectRatiosClassNamePrefix "7x3" 7 3,
   $aspectRatiosClassNamePrefix "7x3" 7 2.92,
-  $aspectRatiosClassNamePrefix "16x9" 16 9,
+  $aspectRatiosClassNamePrefix "7x272" 7 2.72,
+  $aspectRatiosClassNamePrefix "9x3" 9 2.92,
   $aspectRatiosClassNamePrefix "16x9" 16 9,
   $aspectRatiosClassNamePrefix "unstuck-design" 165 13,
   $aspectRatiosClassNamePrefix "custom-1" 530 450,
@@ -614,6 +619,7 @@ $iconsSizes: (
   $iconsSizesClassNamePrefix "204" 20.4rem null,
 
   $iconsSizesClassNamePrefix "250" 25rem null,
+  $iconsSizesClassNamePrefix "268" 26.8rem null,
   $iconsSizesClassNamePrefix "logo" 24.9rem,
   $iconsSizesClassNamePrefix "logo-md" 15.0rem,
   $iconsSizesClassNamePrefix "logo-sm" 12.0rem,
@@ -693,6 +699,7 @@ $zIndexs: (
   $zIndexsClassPrefix "400" 400,
   $zIndexsClassPrefix "600" 600,
   $zIndexsClassPrefix "800" 800,
+  $zIndexsClassPrefix "1000" 1000,
 
 );
 

@@ -31,9 +31,9 @@
          </div>
          <div class="container md:container-md lg:container-lg xl:container-xl mx-auto">
             <div class="flex-row flex-wrap">
-               <div class="col-12 mb-40 md:mb-0 md:col-6 md:pr-20 lg:pr-30" data-aos="fade" data-aos-delay="100">
+               <div class="col-12 mb-40 md:mb-0 md:col-6 md:pr-20 lg:pr-30">
                   <div class="imageGallery-wrapper">
-                     <ul id="imageGallery" class="imageGallery jsPopupGallery">
+                     <ul id="imageGallery" class="imageGallery jsPopupGallery" data-aos="fade" data-aos-delay="100">
                         <li data-thumb="./images/productimage.jpg" data-src="./images/productimage.jpg">
                            <a class="JsMagnificItem opacity-parent-100 lg:opacity-parent-0 hover:opacity-parent-100">
                               <img class="img-res" src="./images/productimage.jpg" />
@@ -52,7 +52,7 @@
                      </ul>
                   </div>
                </div>
-               <div class="col-12 md:col-6 md:pl-20 lg:pl-30" data-aos="fade-up" data-aos-delay="200">
+               <div class="col-12 md:col-6 md:pl-20 lg:pl-30" data-aos="fade" data-aos-delay="200">
                   <div class="text-wrap">
                      <h2 class="f-size-30 f-weight-semiBold">Adaptil Calm Starter Pack (Plug-in and Cartridge)</h2>
                      <h3 class="f-size-28 f-weight-semiBold">£21.68 <span class="f-size-18 f-weight-regular">(inc vat)</span></h3>
@@ -80,8 +80,8 @@
                               <i class="icon icon-42 bg-white bg-contain bg-center bg-no-repeat" style="background-image: url('./images/dog-thumb.png');">
                            </div>
                            <div class="p-10 flex-auto">
-                              <a href="#" class="jsPrescriptionPopup_open button uppercase bg-secondary f-color-white f-size-12 f-weight-medium px-20 py-10 flex-row w-full">
-                                 <i class="icon icon-22 mr-8">
+                              <a href="#" class="jsPrescriptionPopup_open button uppercase bg-secondary f-color-white f-size-12 f-weight-medium px-10 py-10 flex-row justify-center w-full">
+                                 <i class="icon icon-22 mr-20">
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" viewBox="0 0 77.2 86.4">
                                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3.457"
                                           d="M63.9 73H57v0h6.9zm-3.5 3.4h0v-6.9h0v6.9zm-3.4-51h0c0-5.1-4.1-9.2-9.2-9.2H29.4c-5.1 0-9.2 4.1-9.2 9.2 0 0-4-21 12.5-22.1 4.6-.3 10.6 4 15.8 4 5.2 0 8.6-5.5 8.6-5.5v23.6zM46.3 46.9v-2.3c-2.4 1.4-5.1 2.3-7.7 2.3-2.6 0-5.2-.8-7.7-2.3v2.3c0 3.4-2.1 6.1-4.6 6.1 0 6.8 5.5 31.7 12.3 31.7 6.8 0 12.3-24.9 12.3-31.7-2.5 0-4.6-2.7-4.6-6.1zm1.5-30.7H29.4c-5.1 0-9.2 4.1-9.2 9.2 0 11.9 9.4 21.5 18.4 21.5 9 0 18.4-9.6 18.4-21.5 0-5.1-4.1-9.2-9.2-9.2zm27.7 68.5V74.6c0-10.1-7.9-17.4-18.4-20L50.9 53c0 6.8-5.5 12.3-12.3 12.3-6.8 0-12.3-5.5-12.3-12.3l-6.1 1.5c-10.6 2.6-18.4 9.8-18.4 20v10.1h73.7z">
@@ -103,11 +103,18 @@
                         <div class="flex-row flex-wrap align-center">
                            <div class="p-10 flex-none">
                               <div class="jsCustomNumberInput">
-                                 <input type="number" min="0" value="1" placeholder="" name="quantity" class="quantityInput bg-white icon-108 px-10 py-8 flex-stretch focus:shadow-lg transition-all" />
+                                 <input type="number" min="0" max="10" value="1" placeholder="" name="quantity" class="quantityInput bg-white icon-108 px-10 py-8 flex-stretch focus:shadow-lg transition-all" />
                               </div>
                            </div>
                            <div class="p-10 flex-auto">
-                              <button class="uppercase button f-size-16 f-weight-medium bg-primary-medium f-color-white py-10 px-20 w-full">ADD TO BASKET</button>
+                              <button class="uppercase button f-size-16 f-weight-medium bg-primary-medium f-color-white py-10 px-10 w-full">
+                                 <i class="icon icon-22 mr-20">
+                                    <svg fill="currentColor" class="my-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.7 30.5">
+                                       <path d="M28.1 28.7h-4L26 13.6h4.8l-2.7 15.1zM5 13.6h4.2l1.7 15.1H7.7L5 13.6zm7.7 15.1L11 13.6h5.5v15.1h-3.8zm5.7 0V13.6h5.7l-1.9 15.1h-3.8zm9.3-16.9L23.4.6c-.2-.5-.7-.7-1.2-.5-.5.2-.7.7-.5 1.2l4 10.6h-16l4.2-10.3c.2-.5 0-1-.5-1.2-.5-.2-1 0-1.2.5l-4.4 11H.9c-.5 0-.9.4-.9.9s.4.9.9.9h2.2l3 16.2c.1.4.5.7.9.7h21.9c.4 0 .8-.3.9-.8l2.8-16.2h2.3c.5 0 .9-.4.9-.9s-.4-.9-.9-.9h-7.2z"></path>
+                                    </svg>
+                                 </i>
+                                 <span>ADD TO BASKET</span>
+                              </button>
                            </div>
                         </div>
                   </div>
@@ -115,8 +122,11 @@
                </div>
             </div>
          </div>
-         </div>
       </section>
+
+      <!-- Spacialites -->
+      @@include('./_includes/_specialities.html', {})
+
 
       <!-- Description / Ordering / Reviews -->
       <section class="py-40 bg-white">
@@ -124,25 +134,25 @@
             <div data-togglable="true" data-close-others="true" class="accordion-tabs-wrapper accordion-wrapper w-full -m-4">
                <div class="toggle-tabs flex-row justify-start -m-4">
                   <div class="accordion w-auto p-4 is-open">
-                     <button data-filterby="item_1" class="accordion-toggle pt-10 pb-12 px-16 bg-primary-xlight transition-all">
-                        <p class="f-size-20 f-weight-semiBold">Description</p>
+                     <button data-filterby="item_1" class="accordion-toggle pt-10 pb-12 px-40 bg-primary-xlight transition-all">
+                        <p class="f-size-20 f-weight-medium f-spacing-md">Description</p>
                      </button>
                   </div>
                   <div class="accordion w-auto p-4">
-                     <button data-filterby="item_2" class="accordion-toggle pt-10 pb-12 px-16 bg-primary-xlight transition-all">
-                        <p class="f-size-20 f-weight-semiBold">Ordering</p>
+                     <button data-filterby="item_2" class="accordion-toggle pt-10 pb-12 px-40 bg-primary-xlight transition-all">
+                        <p class="f-size-20 f-weight-medium f-spacing-md">Ordering</p>
                      </button>
                   </div>
                   <div class="accordion w-auto p-4">
-                     <button data-filterby="item_3" class="accordion-toggle pt-10 pb-12 px-16 bg-primary-xlight transition-all">
-                        <p class="f-size-20 f-weight-semiBold">Reviews</p>
+                     <button data-filterby="item_3" class="accordion-toggle pt-10 pb-12 px-40 bg-primary-xlight transition-all">
+                        <p class="f-size-20 f-weight-medium f-spacing-md">Reviews</p>
                      </button>
                   </div>
                </div>
                <div class="toggle-content -m-4">
                   <div class="accordion p-4 is-open">
-                     <div data-filterby="item_1" class="accordion-toggle accordion-label px-16 pt-2 pb-6 bg-primary-xlight">
-                        <p class="f-size-20 f-weight-semiBold">Description</p>
+                     <div data-filterby="item_1" class="accordion-toggle accordion-label px-40 pt-2 pb-6 bg-primary-xlight">
+                        <p class="f-size-20 f-weight-medium f-spacing-md">Description</p>
                         <span class="toggle-sign flex-none icon icon-40 f-color-inherit transition-all">
                            <span class="p-4">
                               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="" stroke-linejoin="round"
@@ -153,8 +163,8 @@
                         </span>
                      </div>
                      <div class="accordion-content transition-all">
-                        <div class="answer p-16">
-                           <div class="text-wrap-xs">
+                        <div class="answer p-16 lg:col-8">
+                           <div class="text-wrap">
                               <h2 class="f-size-26"><strong>Description</strong></h2>
                               <p>Adaptil Diffuser is a plug-in device which helps stop or prevent fear and stress related signs in puppies and adult dogs. It mimics the properties of the natural
                                  appeasing pheromone from the lactating bitch, the function of which is to reassure the offspring.</p>
@@ -174,8 +184,8 @@
                      </div>
                   </div>
                   <div class="accordion p-4">
-                     <div data-filterby="item_2" class="accordion-toggle accordion-label px-16 pt-2 pb-6 bg-primary-xlight">
-                        <p class="f-size-20 f-weight-semiBold">Ordering</p>
+                     <div data-filterby="item_2" class="accordion-toggle accordion-label px-40 pt-2 pb-6 bg-primary-xlight">
+                        <p class="f-size-20 f-weight-medium f-spacing-md">Ordering</p>
                         <span class="toggle-sign flex-none icon icon-40 f-color-inherit transition-all">
                            <span class="p-4">
                               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="" stroke-linejoin="round"
@@ -186,8 +196,8 @@
                         </span>
                      </div>
                      <div class="accordion-content transition-all">
-                        <div class="answer p-16">
-                           <div class="text-wrap-xs">
+                        <div class="answer p-16 lg:col-8">
+                           <div class="text-wrap">
                               <h2 class="f-size-26"><strong>Ordering</strong></h2>
                               <p>Adaptil Diffuser is a plug-in device which helps stop or prevent fear and stress related signs in puppies and adult dogs. It mimics the properties of the natural
                                  appeasing pheromone from the lactating bitch, the function of which is to reassure the offspring.</p>
@@ -207,8 +217,8 @@
                      </div>
                   </div>
                   <div class="accordion p-4">
-                     <div data-filterby="item_3" class="accordion-toggle accordion-label px-16 pt-2 pb-6 bg-primary-xlight">
-                        <p class="f-size-20 f-weight-semiBold">Reviews</p>
+                     <div data-filterby="item_3" class="accordion-toggle accordion-label px-40 pt-2 pb-6 bg-primary-xlight">
+                        <p class="f-size-20 f-weight-medium f-spacing-md">Reviews</p>
                         <span class="toggle-sign flex-none icon icon-40 f-color-inherit transition-all">
                            <span class="p-4">
                               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="" stroke-linejoin="round"
@@ -219,8 +229,8 @@
                         </span>
                      </div>
                      <div class="accordion-content transition-all">
-                        <div class="answer p-16">
-                           <div class="text-wrap-xs">
+                        <div class="answer p-16 lg:col-8">
+                           <div class="text-wrap">
                               <h2 class="f-size-26"><strong>Reviews</strong></h2>
                               <p>Adaptil Diffuser is a plug-in device which helps stop or prevent fear and stress related signs in puppies and adult dogs. It mimics the properties of the natural
                                  appeasing pheromone from the lactating bitch, the function of which is to reassure the offspring.</p>
@@ -244,18 +254,15 @@
          </div>
       </section>
 
-      <!-- Spacialites -->
-      @@include('./_includes/_specialities.html', {})
-
-      <!-- Sign up for news and secial offers -->
+      <!-- Sign up for news and special offers -->
       @@include('./_includes/_sign-up.html', {})
 
       <!-- Root element of PhotoSwipe. Must have class pswp. -->
       @@include('./_includes/_product-slider-zoom.html', {})
-      
+
       <!-- prescription popup -->
       @@include('./_includes/_prescription-popup.html', {})
-      
+
 
    </main>
    <!-- Footer -->

@@ -4,7 +4,7 @@
 if ($(".jsCustomSelectDropdown").length > 0) {
   $(".jsCustomSelectDropdown").each(function () {
     var $this = $(this);
-      numberOfOptions = $this.children("option").length;
+    var numberOfOptions = $this.children("option").length;
     var classesList = $this
       .attr("class")
       .replace("jsCustomSelectDropdown", "custom-select-styled select");

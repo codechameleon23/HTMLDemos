@@ -577,7 +577,11 @@ function setMultiCardCarousel(elm) {
 //  -------------------------------------------
 //  Popup
 //  -------------------------------------------
-   $('.popup').popup({opacity: 0.7});
+   $('.popup').popup({
+      opacity: 0,
+      background: false,
+      absolute: true
+   });
 //  -------------------------------------------
 //  Magnific Popup : Gallery
 //  -------------------------------------------
@@ -752,7 +756,7 @@ if ($('.js_media_Gallery_Popup').length > 0) { //if element exists
 if ($(".jsCustomSelectDropdown").length > 0) {
   $(".jsCustomSelectDropdown").each(function () {
     var $this = $(this);
-      numberOfOptions = $this.children("option").length;
+    var numberOfOptions = $this.children("option").length;
     var classesList = $this
       .attr("class")
       .replace("jsCustomSelectDropdown", "custom-select-styled select");

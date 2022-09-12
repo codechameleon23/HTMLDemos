@@ -1,4 +1,8 @@
 //  -------------------------------------------
 //  Popup
 //  -------------------------------------------
-   $('.popup').popup({opacity: 0.7});
+   $('.popup').popup({
+      opacity: 0,
+      background: false,
+      absolute: true
+   });
