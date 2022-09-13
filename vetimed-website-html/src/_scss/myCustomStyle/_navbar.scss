@@ -17,13 +17,13 @@ $headerHeight_lg: $header_lg;
   
   @media (min-width: $bp_md) {
     max-width: 50%;
-    top: calc(#{$headerHeight_md} + 0.2rem);
+    top: calc(#{$headerHeight_md} + 0rem);
     height: calc(100vh - #{$headerHeight_md});
   }
   
   @media (min-width: $bp_lg) {
     max-width: unset;
-    top: calc(#{$headerHeight_lg} + 0.2rem);
+    top: calc(#{$headerHeight_lg} + 0rem);
     height: calc(100vh - #{$headerHeight_lg});
   }
 
@@ -111,18 +111,17 @@ $headerHeight_lg: $header_lg;
   top: 0;
   transform: translateX(100%);
   height: calc(100vh - #{$headerHeight_sm});
-  transition: all .35s 0s ease;
+  transition: opacity .65s 0s ease-in-out, transform .65s 0s ease-in-out, top .65s 0s ease-in-out;
   color: $color-primary;
   
   @media (min-width: $bp_md) {
-    // top: $headerHeight_sm;
     height: calc(100vh - #{$headerHeight_sm});
   }
 
-  @media (min-width: $bp_lg) {
-    top: $headerHeight_lg;
-    height: calc(100vh - #{$headerHeight_lg});
-  }
+  // @media (min-width: $bp_lg) {
+  //   top: $headerHeight_lg;
+  //   height: calc(100vh - #{$headerHeight_lg});
+  // }
 
   @media (min-width: $bp_lg) {
     top: $headerHeight_lg;
@@ -165,7 +164,7 @@ $headerHeight_lg: $header_lg;
 
     .navbar{
       pointer-events: all;
-      overflow: auto;
+      // overflow: auto;
       opacity: 1;
       @media (max-width: $bp_lg) {
         // transform: translateY(0%);

@@ -580,7 +580,7 @@ function setMultiCardCarousel(elm) {
    $('.popup').popup({
       opacity: 0,
       background: false,
-      absolute: true
+      // absolute: true
    });
 //  -------------------------------------------
 //  Magnific Popup : Gallery

@@ -254,13 +254,13 @@ h2 {
   .search-bar {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s ease-out;
+    transition: max-height 0.65s ease-out;
   }
   .search-is-open {
     .search-bar {
       transform: translateY(0);
       max-height: 5.6rem;
-      transition: max-height 0.5s ease-in;
+      transition: max-height 0.65s ease-in;
     }
   }
 }
@@ -496,13 +496,32 @@ $helloBarH : 4.088rem;
   max-height: 0;
 }
 
-.popup_wrapper {
+// .popup_wrapper {
+//   margin-top: $headerHeight_sm;
+//   @media (min-width: $bp_md) {
+//     margin-top: $headerHeight_md;
+//   }
+//   @media (min-width: $bp_lg) {
+//     margin-top: $headerHeight_lg;
+//   }
+// }
+
+body, 
+header,
+.hello-bar {
+  transition: all .65s 0s ease-in-out;
+}
+
+#jsPrescriptionPopup_wrapper {
   margin-top: $headerHeight_sm;
+  max-height: calc(100vh - #{$headerHeight_sm});
   @media (min-width: $bp_md) {
-    margin-top: headerHeight_md;
+    margin-top: $headerHeight_md;
+    max-height: calc(100vh - #{$headerHeight_md});
   }
   @media (min-width: $bp_lg) {
     margin-top: $headerHeight_lg;
+    max-height: calc(100vh - #{$headerHeight_lg});
   }
 }
 
@@ -513,7 +532,16 @@ body.hello-bar-open {
   }
 
   .hello-bar {
-    max-height: 10rem;
+    max-height: 6rem;
+  }
+
+  .submenu {
+    @media (min-width: $bp_lg) {
+      top: $headerHeight_lg + $helloBarH;
+    }
+    @media (min-width: $bp_lg) {
+      top: $headerHeight_lg + $helloBarH;
+    }
   }
 
   .navbar .is-open .submenu {
@@ -534,13 +562,16 @@ body.hello-bar-open {
     margin-top: -#{$helloBarH};
   }
 
-  .popup_wrapper {
-    margin-top: $header_sm + $helloBarH;
+  #jsPrescriptionPopup_wrapper {
+    margin-top: $headerHeight_sm + $helloBarH;
+    max-height: calc(100vh - #{$headerHeight_sm - $helloBarH});
     @media (min-width: $bp_md) {
-      margin-top: $header_md + $helloBarH;
+      margin-top: $headerHeight_md + $helloBarH;
+      max-height: calc(100vh - #{$headerHeight_md - $helloBarH});
     }
     @media (min-width: $bp_lg) {
-      margin-top: $header_lg + $helloBarH;
+      margin-top: $headerHeight_lg + $helloBarH;
+      max-height: calc(100vh - #{$headerHeight_lg - $helloBarH});
     }
   }
 }
