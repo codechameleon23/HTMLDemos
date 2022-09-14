@@ -542,7 +542,7 @@ h2 {
 body, 
 header,
 .hello-bar {
-  transition: all .65s 0s ease-in-out;
+  transition: $transition;
 }
 
 #jsPrescriptionPopup_wrapper {
@@ -638,11 +638,11 @@ body {
     &.header-shrink {
       header > .header-container {
         max-height: 0;
-        transition: $transitionFast;
+        transition: $transition;
       }
       main {
         margin-top: $header_shrink;
-        transition: $transitionFast;
+        transition: $transition;
       }
       #jsHeroSearchPopup_wrapper {
         margin-top: -#{$navbar_height};
