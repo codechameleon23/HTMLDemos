@@ -17,3 +17,15 @@ function getViewportWidth() {
     return 0;
   }
 }
+
+var jsNavbar = $(".jsNavbarToggle");
+
+function removeResizeAnimation (){
+  setTimeout(function () {
+    jsNavbar.removeClass("resize-transition");
+ }, 1000);
+}
+
+function addResizeAnimation (){
+  jsNavbar.addClass("resize-transition");
+}

@@ -500,101 +500,9 @@ h2 {
   justify-content: center;
 }
 
-$helloBarH : 4.088rem;
-
 .hello-bar {
   overflow: hidden;
   max-height: 0;
-}
-
-body, 
-header,
-.hello-bar {
-  transition: all .65s 0s ease-in-out;
-}
-
-#jsPrescriptionPopup_wrapper {
-  margin-top: $headerHeight_sm;
-  max-height: calc(100vh - #{$headerHeight_sm});
-  @media (min-width: $bp_md) {
-    margin-top: $headerHeight_md;
-    max-height: calc(100vh - #{$headerHeight_md});
-  }
-  @media (min-width: $bp_lg) {
-    margin-top: $headerHeight_lg;
-    max-height: calc(100vh - #{$headerHeight_lg});
-  }
-}
-.filter-panel {
-  @media (max-width: $bp_md) {
-    margin-top: $headerHeight_sm;
-    max-height: calc(100vh - #{$headerHeight_sm});
-  }
-  @media (max-width: $bp_lg) {
-    margin-top: $headerHeight_md;
-    max-height: calc(100vh - #{$headerHeight_md});
-  }
-}
-
-body.hello-bar-open {
-  margin-top: $helloBarH;
-  header {
-    margin-top: $helloBarH;
-  }
-
-  .hello-bar {
-    max-height: 6rem;
-  }
-
-  .submenu {
-    @media (min-width: $bp_lg) {
-      top: $headerHeight_lg + $helloBarH;
-    }
-    @media (min-width: $bp_lg) {
-      top: $headerHeight_lg + $helloBarH;
-    }
-  }
-
-  .navbar .is-open .submenu {
-    height: calc(100vh - #{$headerHeight_sm - $helloBarH});
-    @media (min-width: $bp_md) {
-      height: calc(100vh - #{$headerHeight_sm - $helloBarH});
-    }
-    @media (min-width: $bp_lg) {
-      top: $headerHeight_lg + $helloBarH;
-      height: calc(100vh - #{$headerHeight_lg - $helloBarH});
-    }
-    @media (min-width: $bp_lg) {
-      top: $headerHeight_lg + $helloBarH;
-    }
-  }
-
-  #jsHeroSearchPopup_wrapper {
-    margin-top: -#{$helloBarH};
-  }
-
-  #jsPrescriptionPopup_wrapper {
-    margin-top: $headerHeight_sm + $helloBarH;
-    max-height: calc(100vh - #{$headerHeight_sm + $helloBarH});
-    @media (min-width: $bp_md) {
-      margin-top: $headerHeight_md + $helloBarH;
-      max-height: calc(100vh - #{$headerHeight_md + $helloBarH});
-    }
-    @media (min-width: $bp_lg) {
-      margin-top: $headerHeight_lg + $helloBarH;
-      max-height: calc(100vh - #{$headerHeight_lg + $helloBarH});
-    }
-  }
-  .filter-panel {
-    @media (max-width: $bp_md) {
-      margin-top: $headerHeight_sm + $helloBarH;
-      max-height: calc(100vh - #{$headerHeight_sm + $helloBarH});
-    }
-    @media (max-width: $bp_lg) {
-      margin-top: $headerHeight_md + $helloBarH;
-      max-height: calc(100vh - #{$headerHeight_md + $helloBarH});
-    }
-  }
 }
 
 .our-team-banner {
@@ -628,4 +536,130 @@ body.hello-bar-open {
   background-position: top;
   background-size: 1rem 0.2rem;
   background-repeat: repeat-x;
+}
+
+
+body, 
+header,
+.hello-bar {
+  transition: all .65s 0s ease-in-out;
+}
+
+#jsPrescriptionPopup_wrapper {
+  margin-top: $headerHeight_sm;
+  max-height: calc(100vh - #{$headerHeight_sm});
+  @media (min-width: $bp_md) {
+    margin-top: $headerHeight_md;
+    max-height: calc(100vh - #{$headerHeight_md});
+  }
+  @media (min-width: $bp_lg) {
+    margin-top: $headerHeight_lg;
+    max-height: calc(100vh - #{$headerHeight_lg});
+  }
+}
+.filter-panel {
+  @media (max-width: $bp_md) {
+    margin-top: $headerHeight_sm;
+    max-height: calc(100vh - #{$headerHeight_sm});
+  }
+  @media (max-width: $bp_lg) {
+    margin-top: $headerHeight_md;
+    max-height: calc(100vh - #{$headerHeight_md});
+  }
+}
+
+body {
+  &.hello-bar-open {
+    margin-top: $helloBarH;
+    header {
+      margin-top: $helloBarH;
+    }
+  
+    .hello-bar {
+      max-height: 6rem;
+    }
+  
+    .submenu {
+      @media (min-width: $bp_lg) {
+        top: $headerHeight_lg + $helloBarH;
+      }
+      @media (min-width: $bp_lg) {
+        top: $headerHeight_lg + $helloBarH;
+      }
+    }
+  
+    .navbar .is-open .submenu {
+      height: calc(100vh - #{$headerHeight_sm - $helloBarH});
+      @media (min-width: $bp_md) {
+        height: calc(100vh - #{$headerHeight_sm - $helloBarH});
+      }
+      @media (min-width: $bp_lg) {
+        top: $headerHeight_lg + $helloBarH;
+        height: calc(100vh - #{$headerHeight_lg - $helloBarH});
+      }
+      @media (min-width: $bp_lg) {
+        top: $headerHeight_lg + $helloBarH;
+      }
+    }
+  
+    #jsHeroSearchPopup_wrapper {
+      margin-top: -#{$helloBarH};
+    }
+  
+    #jsPrescriptionPopup_wrapper {
+      margin-top: $headerHeight_sm + $helloBarH;
+      max-height: calc(100vh - #{$headerHeight_sm + $helloBarH});
+      @media (min-width: $bp_md) {
+        margin-top: $headerHeight_md + $helloBarH;
+        max-height: calc(100vh - #{$headerHeight_md + $helloBarH});
+      }
+      @media (min-width: $bp_lg) {
+        margin-top: $headerHeight_lg + $helloBarH;
+        max-height: calc(100vh - #{$headerHeight_lg + $helloBarH});
+      }
+    }
+    .filter-panel {
+      @media (max-width: $bp_md) {
+        margin-top: $headerHeight_sm + $helloBarH;
+        max-height: calc(100vh - #{$headerHeight_sm + $helloBarH});
+      }
+      @media (max-width: $bp_lg) {
+        margin-top: $headerHeight_md + $helloBarH;
+        max-height: calc(100vh - #{$headerHeight_md + $helloBarH});
+      }
+    }
+  }
+
+  @media (min-width: $bp_lg) {
+    header > .header-container {
+      max-height: $header_top_height;
+      overflow: hidden;
+    }
+    &.header-shrink {
+      header > .header-container {
+        max-height: 0;
+        transition: $transitionFast;
+      }
+      main {
+        margin-top: $header_shrink;
+        transition: $transitionFast;
+      }
+      #jsHeroSearchPopup_wrapper {
+        margin-top: -#{$navbar_height};
+      }
+      #jsPrescriptionPopup_wrapper {
+        margin-top: $navbar_height;
+        max-height: calc(100vh - #{$navbar_height});
+      }
+      &.hello-bar-open {
+        #jsHeroSearchPopup_wrapper {
+          margin-top: -#{$navbar_height + $helloBarH + 1.2rem};
+        }
+        #jsPrescriptionPopup_wrapper {
+          margin-top: $navbar_height + $helloBarH;
+          max-height: calc(100vh - #{$navbar_height + $helloBarH});
+        }
+      }
+    }
+  }
 }
