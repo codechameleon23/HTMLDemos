@@ -365,8 +365,19 @@ h2 {
   }
 }
 
-.accordion.is-open .accordion-label {
-  font-weight: 600;
+.accordion-wrapper .accordion {
+  .accordion-label > .toggle-sign {
+    .close {
+      transform: rotate(0deg);
+      transform-origin: center;
+    }
+  }
+  &.is-open > .accordion-label > .toggle-sign {
+    transform: rotate(0);
+    .close {
+      transform: rotate(90deg);
+    }
+  }
 }
 
 @media (max-width: $bp_lg) {
@@ -496,16 +507,6 @@ $helloBarH : 4.088rem;
   max-height: 0;
 }
 
-// .popup_wrapper {
-//   margin-top: $headerHeight_sm;
-//   @media (min-width: $bp_md) {
-//     margin-top: $headerHeight_md;
-//   }
-//   @media (min-width: $bp_lg) {
-//     margin-top: $headerHeight_lg;
-//   }
-// }
-
 body, 
 header,
 .hello-bar {
@@ -522,6 +523,16 @@ header,
   @media (min-width: $bp_lg) {
     margin-top: $headerHeight_lg;
     max-height: calc(100vh - #{$headerHeight_lg});
+  }
+}
+.filter-panel {
+  @media (max-width: $bp_md) {
+    margin-top: $headerHeight_sm;
+    max-height: calc(100vh - #{$headerHeight_sm});
+  }
+  @media (max-width: $bp_lg) {
+    margin-top: $headerHeight_md;
+    max-height: calc(100vh - #{$headerHeight_md});
   }
 }
 
@@ -564,14 +575,24 @@ body.hello-bar-open {
 
   #jsPrescriptionPopup_wrapper {
     margin-top: $headerHeight_sm + $helloBarH;
-    max-height: calc(100vh - #{$headerHeight_sm - $helloBarH});
+    max-height: calc(100vh - #{$headerHeight_sm + $helloBarH});
     @media (min-width: $bp_md) {
       margin-top: $headerHeight_md + $helloBarH;
-      max-height: calc(100vh - #{$headerHeight_md - $helloBarH});
+      max-height: calc(100vh - #{$headerHeight_md + $helloBarH});
     }
     @media (min-width: $bp_lg) {
       margin-top: $headerHeight_lg + $helloBarH;
-      max-height: calc(100vh - #{$headerHeight_lg - $helloBarH});
+      max-height: calc(100vh - #{$headerHeight_lg + $helloBarH});
+    }
+  }
+  .filter-panel {
+    @media (max-width: $bp_md) {
+      margin-top: $headerHeight_sm + $helloBarH;
+      max-height: calc(100vh - #{$headerHeight_sm + $helloBarH});
+    }
+    @media (max-width: $bp_lg) {
+      margin-top: $headerHeight_md + $helloBarH;
+      max-height: calc(100vh - #{$headerHeight_md + $helloBarH});
     }
   }
 }

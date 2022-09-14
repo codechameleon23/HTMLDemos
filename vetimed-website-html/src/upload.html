@@ -219,6 +219,8 @@
       @@include('./_includes/_sign-up.html', {})
 
    </main>
+   <!-- Footer -->
+   @@include('./_includes/_footer.html', {})
 </body>
 <script src="./js/allScript.js"></script>
 <script type="text/babel">
@@ -236,7 +238,6 @@
       }
 
       const isFileName = !!fileName;
-      console.log('isFileName', isFileName);
 
       return (
          <div key={`uploadField.${index}`} class="col-12 flex-row p-10">
@@ -270,11 +271,12 @@
    const MultiFileUpload = () => {
       const [fields, setFields] = useState([0]);
       return (
-         <>{fields.length > 0 ? (
-            fields.map((fieldIndex) => <UploadField index={fieldIndex} onRemove={() => setFields([...fields].filter((i) => i !== fieldIndex))} />)
-         ) : (
-            <UploadField index={0} onRemove={() => setFields([0])} />
-         )}
+         <>
+            {fields.length > 0 ? (
+               fields.map((fieldIndex) => <UploadField index={fieldIndex} onRemove={() => setFields([...fields].filter((i) => i !== fieldIndex))} />)
+            ) : (
+               <UploadField index={0} onRemove={() => setFields([0])} />
+            )}
             <div class="col-12 flex-row justify-end p-10">
                <div onClick={() => setFields([...fields, fields.length])} class="button f-color-white border-2 hover:shadow-lg f-size-18 px-20 py-10">Add Another</div>
             </div>
