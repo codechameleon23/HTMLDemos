@@ -431,6 +431,7 @@ $(document).ready(function () {
       searchBarClose();
     } else {
       navBarClose();
+      filterPanelClose();
       setTimeout(function () {
         searchBarOpen();
       }, 225);
@@ -590,6 +591,10 @@ function setMultiCardCarousel(elm) {
       opacity: 0,
       background: false,
       // absolute: true
+      onopen: function() {
+         searchBarClose();
+         filterPanelClose();
+       }
    });
 //  -------------------------------------------
 //  Magnific Popup : Gallery
@@ -898,6 +903,13 @@ if ($(".jsCustomNumberInput").length > 0) {
     });
   }
   
+function filterPanelClose() {
+  $("body").removeClass("filter-open");
+}
+function filterPanelOpen() {
+  $("body").addClass("filter-open");
+}
+
 var lastScrollTop = 0;
 if (!isIE11) {
   $(window).on("scroll", function () {
@@ -930,14 +942,16 @@ if (allPictures.length > 0) {
    }, 5500);
 }
 
+
 if ($(".filter-toggle").length > 0) {
   $(".filter-toggle").on("click", function () {
     if ($("body").hasClass("filter-open")) {
-      $("body").removeClass("filter-open");
       removeResizeAnimation();
+      filterPanelClose();
     } else {
       addResizeAnimation();
-      $("body").addClass("filter-open");
+      searchBarClose();
+      filterPanelOpen();
     };
   });
 }

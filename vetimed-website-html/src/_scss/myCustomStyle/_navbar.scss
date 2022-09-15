@@ -1,12 +1,8 @@
-$headerHeight_sm: $header_sm;
-$headerHeight_md: $header_md;
-$headerHeight_lg: $header_lg;
-
 .navbar {
   // transition: all .35s 0s ease;
   opacity: 0;
-  top: $headerHeight_sm;
-  height: calc(100vh - #{$headerHeight_sm});
+  top: $header_sm;
+  height: calc(100vh - #{$header_sm});
   margin-left: auto;
   
   @media (max-width: $bp_lg) {
@@ -17,14 +13,14 @@ $headerHeight_lg: $header_lg;
   
   @media (min-width: $bp_md) {
     max-width: 50%;
-    top: calc(#{$headerHeight_md} + 0rem);
-    height: calc(100vh - #{$headerHeight_md});
+    top: calc(#{$header_md} + 0rem);
+    height: calc(100vh - #{$header_md});
   }
   
   @media (min-width: $bp_lg) {
     max-width: unset;
-    top: calc(#{$headerHeight_lg} + 0rem);
-    height: calc(100vh - #{$headerHeight_lg});
+    top: calc(#{$header_lg} + 0rem);
+    height: calc(100vh - #{$header_lg});
   }
 
   @media (min-width: $bp_lg) {
@@ -85,7 +81,7 @@ $headerHeight_lg: $header_lg;
         overflow: auto;
         opacity: 1;
         height: auto;
-        max-height: calc(100vh - #{$headerHeight_lg});
+        max-height: calc(100vh - #{$header_lg});
       }
     }
     .submenu-trigger {
@@ -107,24 +103,24 @@ $headerHeight_lg: $header_lg;
 .submenu {
   opacity: 0;
   overflow: hidden;
-  // top: $headerHeight_sm;
+  // top: $header_sm;
   top: 0;
   transform: translateX(100%);
-  height: calc(100vh - #{$headerHeight_sm});
+  height: calc(100vh - #{$header_sm});
   transition: opacity .65s 0s ease-in-out, transform .65s 0s ease-in-out, top .65s 0s ease-in-out;
   color: $color-primary;
   
   @media (min-width: $bp_md) {
-    height: calc(100vh - #{$headerHeight_sm});
+    height: calc(100vh - #{$header_sm});
   }
 
   // @media (min-width: $bp_lg) {
-  //   top: $headerHeight_lg;
-  //   height: calc(100vh - #{$headerHeight_lg});
+  //   top: $header_lg;
+  //   height: calc(100vh - #{$header_lg});
   // }
 
   @media (min-width: $bp_lg) {
-    top: $headerHeight_lg;
+    top: $header_lg;
     height: 0;
     opacity: 0;
     transform: translateX(0%);
@@ -186,11 +182,11 @@ $headerHeight_lg: $header_lg;
 }
 
 main {
-  margin-top: $headerHeight_sm;
+  margin-top: $header_sm;
   @media (min-width: $bp_md) {
-    margin-top: $headerHeight_md;
+    margin-top: $header_md;
   }
   @media (min-width: $bp_lg) {
-    margin-top: $headerHeight_lg;
+    margin-top: $header_lg;
   }
 }

@@ -259,7 +259,7 @@ h2 {
   .search-is-open {
     .search-bar {
       transform: translateY(0);
-      max-height: 5.6rem;
+      max-height: $searchbar_height;
       transition: max-height 0.65s ease-in;
     }
   }
@@ -546,29 +546,32 @@ header,
 }
 
 #jsPrescriptionPopup_wrapper {
-  margin-top: $headerHeight_sm;
-  max-height: calc(100vh - #{$headerHeight_sm});
+  margin-top: $header_sm;
+  max-height: calc(100vh - #{$header_sm});
   @media (min-width: $bp_md) {
-    margin-top: $headerHeight_md;
-    max-height: calc(100vh - #{$headerHeight_md});
+    margin-top: $header_md;
+    max-height: calc(100vh - #{$header_md});
   }
   @media (min-width: $bp_lg) {
-    margin-top: $headerHeight_lg;
-    max-height: calc(100vh - #{$headerHeight_lg});
+    margin-top: $header_lg;
+    max-height: calc(100vh - #{$header_lg});
   }
 }
 .filter-panel {
   @media (max-width: $bp_md) {
-    margin-top: $headerHeight_sm;
-    max-height: calc(100vh - #{$headerHeight_sm});
+    margin-top: $header_sm;
+    max-height: calc(100vh - #{$header_sm});
   }
   @media (max-width: $bp_lg) {
-    margin-top: $headerHeight_md;
-    max-height: calc(100vh - #{$headerHeight_md});
+    margin-top: $header_md;
+    max-height: calc(100vh - #{$header_md});
   }
 }
 
 body {
+  main {
+    transition: $transition;
+  }
   &.hello-bar-open {
     margin-top: $helloBarH;
     header {
@@ -581,24 +584,24 @@ body {
   
     .submenu {
       @media (min-width: $bp_lg) {
-        top: $headerHeight_lg + $helloBarH;
+        top: $header_lg + $helloBarH;
       }
       @media (min-width: $bp_lg) {
-        top: $headerHeight_lg + $helloBarH;
+        top: $header_lg + $helloBarH;
       }
     }
   
     .navbar .is-open .submenu {
-      height: calc(100vh - #{$headerHeight_sm - $helloBarH});
+      height: calc(100vh - #{$header_sm - $helloBarH});
       @media (min-width: $bp_md) {
-        height: calc(100vh - #{$headerHeight_sm - $helloBarH});
+        height: calc(100vh - #{$header_sm - $helloBarH});
       }
       @media (min-width: $bp_lg) {
-        top: $headerHeight_lg + $helloBarH;
-        height: calc(100vh - #{$headerHeight_lg - $helloBarH});
+        top: $header_lg + $helloBarH;
+        height: calc(100vh - #{$header_lg - $helloBarH});
       }
       @media (min-width: $bp_lg) {
-        top: $headerHeight_lg + $helloBarH;
+        top: $header_lg + $helloBarH;
       }
     }
   
@@ -607,25 +610,40 @@ body {
     }
   
     #jsPrescriptionPopup_wrapper {
-      margin-top: $headerHeight_sm + $helloBarH;
-      max-height: calc(100vh - #{$headerHeight_sm + $helloBarH});
+      margin-top: $header_sm + $helloBarH;
+      max-height: calc(100vh - #{$header_sm + $helloBarH});
       @media (min-width: $bp_md) {
-        margin-top: $headerHeight_md + $helloBarH;
-        max-height: calc(100vh - #{$headerHeight_md + $helloBarH});
+        margin-top: $header_md + $helloBarH;
+        max-height: calc(100vh - #{$header_md + $helloBarH});
       }
       @media (min-width: $bp_lg) {
-        margin-top: $headerHeight_lg + $helloBarH;
-        max-height: calc(100vh - #{$headerHeight_lg + $helloBarH});
+        margin-top: $header_lg + $helloBarH;
+        max-height: calc(100vh - #{$header_lg + $helloBarH});
       }
     }
     .filter-panel {
-      @media (max-width: $bp_md) {
-        margin-top: $headerHeight_sm + $helloBarH;
-        max-height: calc(100vh - #{$headerHeight_sm + $helloBarH});
-      }
       @media (max-width: $bp_lg) {
-        margin-top: $headerHeight_md + $helloBarH;
-        max-height: calc(100vh - #{$headerHeight_md + $helloBarH});
+        margin-top: $header_md + $helloBarH;
+        max-height: calc(100vh - #{$header_md + $helloBarH});
+      }
+      @media (max-width: $bp_md) {
+        margin-top: $header_sm + $helloBarH;
+        max-height: calc(100vh - #{$header_sm + $helloBarH});
+      }
+    }
+  }
+  
+  @media (max-width: $bp_lg) {
+    &.search-is-open {
+      main {
+        margin-top: #{$header_md + $searchbar_height};
+      }
+    }
+  }
+  @media (max-width: $bp_md) {
+    &.search-is-open {
+      main {
+        margin-top: #{$header_sm + $searchbar_height};
       }
     }
   }
@@ -642,7 +660,6 @@ body {
       }
       main {
         margin-top: $header_shrink;
-        transition: $transition;
       }
       #jsHeroSearchPopup_wrapper {
         margin-top: -#{$navbar_height};

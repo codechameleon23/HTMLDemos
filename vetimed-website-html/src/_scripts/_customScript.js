@@ -1,3 +1,10 @@
+function filterPanelClose() {
+  $("body").removeClass("filter-open");
+}
+function filterPanelOpen() {
+  $("body").addClass("filter-open");
+}
+
 var lastScrollTop = 0;
 if (!isIE11) {
   $(window).on("scroll", function () {
@@ -30,14 +37,16 @@ if (allPictures.length > 0) {
    }, 5500);
 }
 
+
 if ($(".filter-toggle").length > 0) {
   $(".filter-toggle").on("click", function () {
     if ($("body").hasClass("filter-open")) {
-      $("body").removeClass("filter-open");
       removeResizeAnimation();
+      filterPanelClose();
     } else {
       addResizeAnimation();
-      $("body").addClass("filter-open");
+      searchBarClose();
+      filterPanelOpen();
     };
   });
 }

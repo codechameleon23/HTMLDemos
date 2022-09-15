@@ -83456,7 +83456,7 @@ h2
     }
     .search-is-open .search-bar
     {
-        max-height: 5.6rem;
+        max-height: 7.8rem;
 
         -webkit-transition: max-height .65s ease-in;
                 transition: max-height .65s ease-in; 
@@ -83905,6 +83905,12 @@ header,
     }
 }
 
+body main
+{
+    -webkit-transition: all .65s 0s ease-in-out;
+            transition: all .65s 0s ease-in-out;
+}
+
 body.hello-bar-open
 {
     margin-top: 4.1rem;
@@ -83983,6 +83989,14 @@ body.hello-bar-open #jsPrescriptionPopup_wrapper
         margin-top: 26.003rem;
     }
 }
+@media (max-width: 992px)
+{
+    body.hello-bar-open .filter-panel
+    {
+        max-height: calc(100vh - 13.05rem); 
+        margin-top: 13.05rem;
+    }
+}
 @media (max-width: 710px)
 {
     body.hello-bar-open .filter-panel
@@ -83991,12 +84005,20 @@ body.hello-bar-open #jsPrescriptionPopup_wrapper
         margin-top: 11.9rem;
     }
 }
+
 @media (max-width: 992px)
 {
-    body.hello-bar-open .filter-panel
+    body.search-is-open main
     {
-        max-height: calc(100vh - 13.05rem); 
-        margin-top: 13.05rem;
+        margin-top: 16.75rem;
+    }
+}
+
+@media (max-width: 710px)
+{
+    body.search-is-open main
+    {
+        margin-top: 15.6rem;
     }
 }
 
@@ -84018,9 +84040,6 @@ body.hello-bar-open #jsPrescriptionPopup_wrapper
     body.header-shrink main
     {
         margin-top: 15.403rem;
-
-        -webkit-transition: all .65s 0s ease-in-out;
-                transition: all .65s 0s ease-in-out;
     }
     body.header-shrink #jsHeroSearchPopup_wrapper
     {

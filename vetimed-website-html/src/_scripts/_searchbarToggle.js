@@ -17,6 +17,7 @@
       searchBarClose();
     } else {
       navBarClose();
+      filterPanelClose();
       setTimeout(function () {
         searchBarOpen();
       }, 225);
