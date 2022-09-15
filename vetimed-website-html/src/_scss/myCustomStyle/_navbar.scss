@@ -107,8 +107,11 @@
   top: 0;
   transform: translateX(100%);
   height: calc(100vh - #{$header_sm});
-  transition: opacity .65s 0s ease-in-out, transform .65s 0s ease-in-out, top .65s 0s ease-in-out;
   color: $color-primary;
+  
+  @media (max-width: $bp_lg) {
+    transition: opacity .65s 0s ease-in-out, transform .65s 0s ease-in-out, top .65s 0s ease-in-out;
+  }
   
   @media (min-width: $bp_md) {
     height: calc(100vh - #{$header_sm});

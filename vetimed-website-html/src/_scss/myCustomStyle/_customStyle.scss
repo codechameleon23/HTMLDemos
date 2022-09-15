@@ -306,6 +306,15 @@ h2 {
   &.default {
     background-image: url("../images/circle-icon-default.svg");
   }
+  &.grey-light {
+    background-image: url("../images/circle-icon-grey-light.svg");
+  }
+  &.grey-medium {
+    background-image: url("../images/circle-icon-grey-medium.svg");
+  }
+  &.grey-dark {
+    background-image: url("../images/circle-icon-grey-dark.svg");
+  }
   &.primary {
     background-image: url("../images/circle-icon.svg");
   }
@@ -532,10 +541,16 @@ h2 {
 }
 
 .dotted-spaced {
-  background-image: linear-gradient(to right, $color-text 70%, rgba($color-white, 0) 0%);
-  background-position: top;
-  background-size: 1rem 0.2rem;
-  background-repeat: repeat-x;
+  background-image: linear-gradient(to bottom, $color-text 70%, rgba($color-white, 0) 0%);
+  background-position: left;
+  background-size: 0.2rem 1rem;
+  background-repeat: repeat-y;
+  @media (min-width: $bp_md) {
+    background-image: linear-gradient(to right, $color-text 70%, rgba($color-white, 0) 0%);
+    background-position: top;
+    background-size: 1rem 0.2rem;
+    background-repeat: repeat-x;
+  }
 }
 
 
@@ -592,13 +607,13 @@ body {
     }
   
     .navbar .is-open .submenu {
-      height: calc(100vh - #{$header_sm - $helloBarH});
+      height: calc(100vh - #{$header_sm + $helloBarH});
       @media (min-width: $bp_md) {
-        height: calc(100vh - #{$header_sm - $helloBarH});
+        height: calc(100vh - #{$header_sm + $helloBarH});
       }
       @media (min-width: $bp_lg) {
         top: $header_lg + $helloBarH;
-        height: calc(100vh - #{$header_lg - $helloBarH});
+        height: calc(100vh - #{$header_lg + $helloBarH});
       }
       @media (min-width: $bp_lg) {
         top: $header_lg + $helloBarH;
@@ -661,6 +676,13 @@ body {
       main {
         margin-top: $header_shrink;
       }
+      .navbar .submenu {
+        top: $navbar_height;
+        transition: $transition;
+      }
+      .navbar .is-open .submenu {
+        height: calc(100vh - #{$navbar_height});
+      }
       #jsHeroSearchPopup_wrapper {
         margin-top: -#{$navbar_height};
       }
@@ -669,6 +691,12 @@ body {
         max-height: calc(100vh - #{$navbar_height});
       }
       &.hello-bar-open {
+        .navbar .submenu {
+          top: $navbar_height + $helloBarH;
+        }
+        .navbar .is-open .submenu {
+          height: calc(100vh - #{$navbar_height + $helloBarH});
+        }
         #jsHeroSearchPopup_wrapper {
           margin-top: -#{$navbar_height + $helloBarH + 1.2rem};
         }
