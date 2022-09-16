@@ -250,20 +250,20 @@ h2 {
   min-height: unset;
 }
 
-@media (max-width: $bp_lg) {
-  .search-bar {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.65s ease-out;
-  }
-  .search-is-open {
-    .search-bar {
-      transform: translateY(0);
-      max-height: $searchbar_height;
-      transition: max-height 0.65s ease-in;
-    }
-  }
-}
+// @media (max-width: $bp_lg) {
+//   .search-bar {
+//     max-height: 0;
+//     overflow: hidden;
+//     transition: max-height 0.65s ease-out;
+//   }
+//   .search-is-open {
+//     .search-bar {
+//       transform: translateY(0);
+//       max-height: $searchbar_height;
+//       transition: max-height 0.65s ease-in;
+//     }
+//   }
+// }
 
 .floating-tag {
   transform: rotate(10deg);
@@ -651,20 +651,20 @@ body {
     }
   }
   
-  @media (max-width: $bp_lg) {
-    &.search-is-open {
-      main {
-        margin-top: #{$header_md + $searchbar_height};
-      }
-    }
-  }
-  @media (max-width: $bp_md) {
-    &.search-is-open {
-      main {
-        margin-top: #{$header_sm + $searchbar_height};
-      }
-    }
-  }
+  // @media (max-width: $bp_lg) {
+  //   &.search-is-open {
+  //     main {
+  //       margin-top: #{$header_md + $searchbar_height};
+  //     }
+  //   }
+  // }
+  // @media (max-width: $bp_md) {
+  //   &.search-is-open {
+  //     main {
+  //       margin-top: #{$header_sm + $searchbar_height};
+  //     }
+  //   }
+  // }
 
   @media (min-width: $bp_lg) {
     header > .header-container {

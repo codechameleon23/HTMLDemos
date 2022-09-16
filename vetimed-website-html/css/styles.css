@@ -97876,6 +97876,8 @@ body[data-aos-easing='ease-in-out'] [data-aos],
 {
     .navbar
     {
+        max-width: 100%;
+
         pointer-events: none;
     }
 }
@@ -97885,7 +97887,7 @@ body[data-aos-easing='ease-in-out'] [data-aos],
     {
         top: calc(8.95rem + 0rem);
 
-        max-width: 50%;
+        max-width: 80%;
         height: calc(100vh - 8.95rem);
     }
 }
@@ -98446,29 +98448,6 @@ h2
 .hamburger
 {
     min-height: unset;
-}
-
-@media (max-width: 992px)
-{
-    .search-bar
-    {
-        overflow: hidden;
-
-        max-height: 0;
-
-        -webkit-transition: max-height .65s ease-out;
-                transition: max-height .65s ease-out;
-    }
-    .search-is-open .search-bar
-    {
-        max-height: 7.8rem;
-
-        -webkit-transition: max-height .65s ease-in;
-                transition: max-height .65s ease-in; 
-        -webkit-transform: translateY(0);
-            -ms-transform: translateY(0);
-                transform: translateY(0);
-    }
 }
 
 .floating-tag
@@ -99041,22 +99020,6 @@ body.hello-bar-open #jsPrescriptionPopup_wrapper
     {
         max-height: calc(100vh - 11.9rem); 
         margin-top: 11.9rem;
-    }
-}
-
-@media (max-width: 992px)
-{
-    body.search-is-open main
-    {
-        margin-top: 16.75rem;
-    }
-}
-
-@media (max-width: 710px)
-{
-    body.search-is-open main
-    {
-        margin-top: 15.6rem;
     }
 }
 
