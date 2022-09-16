@@ -77,9 +77,9 @@ function setMultiCardCarousel(elm) {
     autoplayHoverPause: true,
     responsive: {
       0: {
-        items: 1,
-      },
-      576: {
+      //   items: 1,
+      // },
+      // 576: {
         items: 2,
       },
       710: {

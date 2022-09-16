@@ -72,15 +72,16 @@
                 </svg>
               </span>
             </a>
-            <a title="Search" href="javascript:void(0);" class="search-toggle lg:d-hidden icon icon-32 m-4 f-color-white rounded hover:shadow-lg transition-all">
-              <div class="circle primary-medium pos-absolute pin"></div>
-              <span class="p-6 pos-absolute pin">
-                <svg xmlns="http://www.w3.org/2000/svg" class="my-auto" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                  <circle cx="11" cy="11" r="8"></circle>
-                  <path d="m21 21-4.35-4.35"></path>
-                </svg>
-              </span>
-            </a>
+            <!-- <a title="Search" href="javascript:void(0);" class="search-toggle lg:d-hidden icon icon-32 m-4 f-color-white rounded hover:shadow-lg transition-all">
+                  <div class="circle primary-medium pos-absolute pin"></div>
+                  <span class="p-6 pos-absolute pin">
+                     <svg xmlns="http://www.w3.org/2000/svg" class="my-auto" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"
+                           viewBox="0 0 24 24">
+                           <circle cx="11" cy="11" r="8"></circle>
+                           <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                  </span>
+               </a> -->
             <div class="icon icon-32 navbar-toggle m-4 f-color-white d-inline-flex lg:d-hidden z-50 rounded hover:shadow-lg transition-all">
               <div class="circle secondary pos-absolute pin"></div>
               <span class="p-6 pos-absolute pin">
@@ -319,8 +320,8 @@
         </div>
       </div>
     </nav>
-    <section class="search-bar lg:pos-absolute pin-x pin-t-100 bg-primary-medium">
-      <div class="container container-fluid lg:container-lg xl:container-xl mx-auto p-16 lg:p-0">
+    <section class="d-hidden lg:d-inline-block search-bar lg:pos-absolute pin-x pin-t-100 bg-primary-medium">
+      <div class="container container-fluid lg:container-lg xl:container-xl mx-auto p-0">
         <div class="flex-row lg:justify-end">
           <form class="lg:icon-268 flex-row bg-white rounded-4 lg:my-10 ml-auto shadow-inner w-full lg:w-auto lg:-mt-44">
             <div class="flex-auto flex-col">
@@ -352,17 +353,17 @@
         <figure class="pos-absolute pin bg-auto bg-no-repeat bg-center-bottom" style="background-image: url('./images/hamster-face.png');"></figure>
         <figure class="pos-absolute pin bg-auto bg-no-repeat bg-center-bottom" style="background-image: url('./images/pig-face.png');"></figure>
       </div>
-      <div class="container md:container-md xl:container-xl mx-auto pos-relative z-10">
+      <div class="container md:container-md xl:container-xl mx-auto pos-relative z-10 pt-78 md:pt-0">
         <div class="ratio-4x3 xl:ratio-7x3 d-hidden md:d-inline-block"></div>
         <div class="md:pos-absolute pin pt-50 pb-50 text-center">
           <div class="text-wrap-lg">
             <h1 class="f-size-36 f-color-primary">PET MEDICATION AND PRODUCTS ONLINE <br />
               <strong>FAST, FRIENDLY & RELIABLE</strong>
             </h1>
-            <form class="d-hidden lg:d-inline-block pos-relative container md:container-article mx-auto pr-10">
+            <form class="container-fluid md:container-article mx-auto pr-10">
               <!-- Hero search with result popup -->
-              <div id="jsHeroSearch_wrapper" class="pos-relative">
-                <div class="col-12 md:col-10 xl:col-8 flex-row align-center bg-white mx-auto focus-within:shadow-lg transition-all">
+              <div id="jsHeroSearch_wrapper" class="pos-absolute pin-t pin-x md:pos-relative bg-primary-medium md:bg-transparent p-16 md:p-0 -mx-16 md:mx-0">
+                <div class="col-12 md:col-10 xl:col-8 flex-row align-center rounded-10 bg-white mx-auto focus-within:shadow-lg transition-all">
                   <i class="icon icon-22 flex-none f-color-placeholder ml-10">
                     <span class="">
                       <svg xmlns="http://www.w3.org/2000/svg" class="my-auto" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
@@ -374,7 +375,7 @@
                   <div class="md:py-10 flex-auto flex-col">
                     <input type="text" placeholder="WHAT ARE YOU LOOKING FOR?" name="search" class="uppercase w-full p-10 f-size-12 md:f-size-18" />
                   </div>
-                  <a href="#jsHeroSearchPopup" class="jsHeroSearchPopup_open button uppercase rounded-10 bg-default f-color-white f-size-18 p-10 md:p-20 flex-none -mr-10">
+                  <a href="#jsHeroSearchPopup" class="jsHeroSearchPopup_open button uppercase rounded-10 md:bg-default md:f-color-white f-size-18 p-8 md:p-20 flex-none md:-mr-10">
                     <span class="d-hidden md:d-inline-block">Search</span>
                     <i class="icon icon-30 flex-none md:d-hidden">
                       <span class="">
@@ -477,7 +478,7 @@
                           </div>
                         </a>
                       </div>
-                      <div class="col-12 p-20 flex-row justify-end">
+                      <div class="col-12 p-20 flex-row justify-center sm:justify-end">
                         <a href="#" class="button uppercase bg-secondary f-color-white f-size-20 f-weight-medium px-20 py-10">More results</a>
                       </div>
                     </div>
@@ -493,8 +494,8 @@
     <!-- Spacialites -->
     <section class="bg-primary f-color-white py-34">
       <div class="container md:container-md lg:container-lg xl:container-xl mx-auto md:px-50">
-        <div class="flex-row flex-wrap -m-20">
-          <div class="col-12 sm:col-6 xl:col-3 p-20" data-aos="fade" data-aos-delay="100">
+        <div class="flex-row flex-wrap -m-10 sm:-m-20">
+          <div class="col-12 xs:col-6 xl:col-3 p-10 sm:p-20" data-aos="fade" data-aos-delay="100">
             <section class="flex-row align-center lg:justify-center">
               <i class="icon icon-40 mr-20 flex-none">
                 <span class="flex-col justify-center align-center">
@@ -503,13 +504,13 @@
                   </svg>
                 </span>
               </i>
-              <div class="text-wrap uppercase f-size-16 f-spacing-md">
+              <div class="text-wrap uppercase f-size-12 sm:f-size-16 f-spacing-md">
                 <p>We are run by experianced vets</p>
               </div>
             </section>
           </div>
           <span class="d-hidden md:d-inline-block -ml-1 flex-none border-r-1 my-24"></span>
-          <div class="col-12 sm:col-6 xl:col-3 p-20" data-aos="fade" data-aos-delay="200">
+          <div class="col-12 xs:col-6 xl:col-3 p-10 sm:p-20" data-aos="fade" data-aos-delay="200">
             <section class="flex-row align-center lg:justify-center">
               <i class="icon icon-40 mr-20 flex-none">
                 <span class="flex-col justify-center align-center">
@@ -518,13 +519,13 @@
                   </svg>
                 </span>
               </i>
-              <div class="text-wrap uppercase f-size-16 f-spacing-md">
+              <div class="text-wrap uppercase f-size-12 sm:f-size-16 f-spacing-md">
                 <p>FULLY ACCREDITED VET PHARMACY</p>
               </div>
             </section>
           </div>
           <span class="d-hidden xl:d-inline-block -ml-1 flex-none border-r-1 my-24"></span>
-          <div class="col-12 sm:col-6 xl:col-3 p-20" data-aos="fade" data-aos-delay="300">
+          <div class="col-12 xs:col-6 xl:col-3 p-10 sm:p-20" data-aos="fade" data-aos-delay="300">
             <section class="flex-row align-center lg:justify-center">
               <i class="icon icon-40 mr-20 flex-none">
                 <span class="flex-col justify-center align-center">
@@ -533,13 +534,13 @@
                   </svg>
                 </span>
               </i>
-              <div class="text-wrap uppercase f-size-16 f-spacing-md">
+              <div class="text-wrap uppercase f-size-12 sm:f-size-16 f-spacing-md">
                 <p>Genuine UK pet medicine</p>
               </div>
             </section>
           </div>
           <span class="d-hidden md:d-inline-block -ml-1 flex-none border-r-1 my-24"></span>
-          <div class="col-12 sm:col-6 xl:col-3 p-20" data-aos="zoom-in" data-aos-delay="400">
+          <div class="col-12 xs:col-6 xl:col-3 p-10 sm:p-20" data-aos="zoom-in" data-aos-delay="400">
             <section class="flex-row align-center lg:justify-center">
               <i class="icon icon-40 mr-20 flex-none">
                 <span class="flex-col justify-center align-center">
@@ -548,7 +549,7 @@
                   </svg>
                 </span>
               </i>
-              <div class="text-wrap uppercase f-size-16 f-spacing-md">
+              <div class="text-wrap uppercase f-size-12 sm:f-size-16 f-spacing-md">
                 <p>FREE DELIVERY ORDERS OVER £29</p>
               </div>
             </section>
@@ -563,9 +564,9 @@
           <h2 class="uppercase f-size-30 f-color-primary">LATEST OFFERS</h2>
         </hgroup>
         <div class="flex-row flex-wrap -m-8">
-          <div class="col-12 sm:col-6 p-8 flex-col" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-12 xs:col-6 p-8 flex-col" data-aos="fade-up" data-aos-delay="100">
             <a href="#" class="rollover-wrap no-underline flex-col flex-auto">
-              <figure class="ratio-4x3 sm:ratio-1x1 md:ratio-4x3">
+              <figure class="ratio-5x2 xs:ratio-1x1 md:ratio-4x3">
                 <div class="rollover-effect pos-absolute pin bg-center bg-cover" style="background-image: url('./images/iStock-954338790.jpg');"></div>
                 <div class="d-hidden lg:d-inline-flex pos-absolute pin-b pin-t-auto pin-x justify-center">
                   <div class="uppercase button bg-primary-light f-size-16 md:f-size-22 f-color-white py-10 px-10 md:px-20">Best sellers - save 45%</div>
@@ -580,13 +581,13 @@
                 </div>
               </figure>
               <div class="lg:d-hidden flex-col md:align-center flex-auto bg-primary-light">
-                <div class="uppercase button -size-16 md:f-size-22 f-color-white py-10 px-10 md:px-20">Best sellers - save 45%</div>
+                <div class="uppercase button f-size-16 md:f-size-22 f-color-white py-10 px-10 md:px-20">Best sellers - save 45%</div>
               </div>
             </a>
           </div>
-          <div class="col-12 sm:col-6 p-8 flex-col" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-12 xs:col-6 p-8 flex-col" data-aos="fade-up" data-aos-delay="200">
             <a href="#" class="rollover-wrap no-underline flex-col flex-auto">
-              <figure class="ratio-4x3 sm:ratio-1x1 md:ratio-4x3">
+              <figure class="ratio-5x2 xs:ratio-1x1 md:ratio-4x3">
                 <div class="rollover-effect pos-absolute pin bg-center bg-cover" style="background-image: url('./images/iStock-535984885.jpg');"></div>
                 <div class="d-hidden lg:d-inline-flex pos-absolute pin-b pin-t-auto pin-x justify-center">
                   <div class="uppercase button bg-primary-medium f-size-16 md:f-size-22 f-color-white py-10 px-20">Flea & Worming - save 60%</div>
@@ -601,13 +602,13 @@
                 </div>
               </figure>
               <div class="lg:d-hidden flex-col md:align-center flex-auto bg-primary-medium">
-                <div class="uppercase button f-size-16 md:f-size-22 f-color-white py-10 px-20">Flea & Worming - save 60%</div>
+                <div class="uppercase button f-size-16 md:f-size-22 f-color-white py-10 px-10 md:px-20">Flea & Worming - save 60%</div>
               </div>
             </a>
           </div>
-          <div class="col-12 sm:col-6 p-8 flex-col" data-aos="fade-up" data-aos-delay="300">
+          <div class="col-12 xs:col-6 p-8 flex-col" data-aos="fade-up" data-aos-delay="300">
             <a href="#" class="rollover-wrap no-underline flex-col flex-auto">
-              <figure class="ratio-4x3 sm:ratio-1x1 md:ratio-4x3">
+              <figure class="ratio-5x2 xs:ratio-1x1 md:ratio-4x3">
                 <div class="rollover-effect pos-absolute pin bg-center bg-cover" style="background-image: url('./images/iStock-691815758.jpg');"></div>
                 <div class="d-hidden lg:d-inline-flex pos-absolute pin-b pin-t-auto pin-x justify-center">
                   <div class="uppercase button bg-primary-medium f-size-16 md:f-size-22 f-color-white py-10 px-20">save 40% - toys & treats</div>
@@ -622,18 +623,18 @@
                 </div>
               </figure>
               <div class="lg:d-hidden flex-col md:align-center flex-auto bg-primary-medium">
-                <div class="uppercase button f-size-16 md:f-size-22 f-color-white py-10 px-20">save 40% - toys & treats</div>
+                <div class="uppercase button f-size-16 md:f-size-22 f-color-white py-10 px-10 md:px-20">save 40% - toys & treats</div>
               </div>
             </a>
           </div>
-          <div class="col-12 sm:col-6 p-8 flex-col" data-aos="fade-up" data-aos-delay="400">
+          <div class="col-12 xs:col-6 p-8 flex-col" data-aos="fade-up" data-aos-delay="400">
             <a href="#" class="rollover-wrap no-underline flex-col flex-auto">
-              <figure class="ratio-4x3 sm:ratio-1x1 md:ratio-4x3">
+              <figure class="ratio-5x2 xs:ratio-1x1 md:ratio-4x3">
                 <div class="rollover-effect pos-absolute pin bg-center bg-cover" style="background-image: url('./images/iStock-1155030342.jpg');"></div>
                 <div class="d-hidden lg:d-inline-flex pos-absolute pin-b pin-t-auto pin-x justify-center">
                   <div class="uppercase button bg-primary-light f-size-16 md:f-size-22 f-color-white py-10 px-10 md:px-20">Special offers - save 60%</div>
                 </div>
-                <div class="rounded f-color-primary-light icon scon-80 lg:icon-124 pos-absolute pin-t pin-r m-24">
+                <div class="rounded f-color-primary-light icon icon-80 lg:icon-124 pos-absolute pin-t pin-r m-24">
                   <div class="circle primary-light pos-absolute pin"></div>
                   <div class="floating-tag f-color-white pos-absolute pin flex-col justify-center align-center">
                     <span class="uppercase lg:f-size-24">
@@ -643,7 +644,7 @@
                 </div>
               </figure>
               <div class="lg:d-hidden flex-col md:align-center flex-auto bg-primary-light">
-                <div class="uppercase button -size-16 md:f-size-22 f-color-white py-10 px-10 md:px-20">Special offers - save 60%</div>
+                <div class="uppercase button f-size-16 md:f-size-22 f-color-white py-10 px-10 md:px-20">Special offers - save 60%</div>
               </div>
             </a>
           </div>
@@ -654,7 +655,7 @@
       </div>
     </section>
     <!-- Got a question just ask -->
-    <section class="bg-primary-xlight py-82">
+    <section class="bg-primary-xlight py-58 lg:py-82">
       <div class="container md:container-md lg:container-article mx-auto">
         <article class="text-wrap-xs text-center f-size-24">
           <h2 class="f-weight-semiBold">Got a question just ask...</h2>
@@ -668,14 +669,14 @@
       <hgroup class="bg-primary-light f-color-white text-center text-wrap d-inline-block w-full py-24">
         <h2 class="uppercase f-size-28 text-center">Pet prescriptions - <strong>3 simple steps</strong></h2>
       </hgroup>
-      <div class="container sm:container-sm md:container-md lg:container-xl mx-auto my-58 px-0 lg:px-88">
+      <div class="container sm:container-sm lg:container-xl mx-auto my-58 px-0 lg:px-88">
         <div class="flex-row flex-wrap -m-20 lg:-m-40">
           <article class="col-12 lg:col-4 pl-160 lg:pl-20 pr-20 py-40 lg:py-20 lg:pl-40 lg:pr-40 lg:py-40 pos-relative" data-aos="fade" data-aos-delay="100">
+            <span class="lg:d-hidden dotted-spaced pos-absolute pin-t-50 pin-b pin-l ml-82 pl-2" data-aos="fade-in" data-aos-delay="200"></span>
             <div class="text-wrap lg:text-center">
               <h2 class="uppercase lg:f-size-22 f-weight-semiBold f-color-grey-medium">PLACE<br /> YOUR ORDER</h2>
               <div class="pos-absolute pin-l pin-t-50 pin-t50 lg:pin-t0 lg:pin-t-auto lg:pos-relative ml-20 lg:-mx-20 lg:-mx-40">
-                <span class="d-hidden lg:d-inline-block pos-absolute pin-t-50 pin-t50 dotted-spaced pb-2 col-6 pin-r" data-aos="fade-in" data-aos-delay="700"></span>
-                <span class="lg:d-hidden dotted-spaced pos-absolute h-full pin-l-50 pl-2 pin-t-100" data-aos="fade-in" data-aos-delay="700"></span>
+                <span class="d-hidden lg:d-inline-block pos-absolute pin-t-50 pin-t50 dotted-spaced pb-2 col-6 pin-r" data-aos="fade-in" data-aos-delay="200"></span>
                 <div class="lg:d-hidden icon icon-40 circle grey-medium pos-absolute pin-t pin-l z-1">
                   <span class="pos-absolute pin f-weight-semoBold f-color-white">1</span>
                 </div>
@@ -692,11 +693,11 @@
             </div>
           </article>
           <article class="col-12 lg:col-4 pl-160 lg:pl-20 pr-20 py-40 lg:py-20 lg:pl-40 lg:pr-40 lg:py-40 pos-relative" data-aos="fade" data-aos-delay="300">
+            <span class="lg:d-hidden dotted-spaced pos-absolute pin-y pin-l ml-82 pl-2" data-aos="fade-in" data-aos-delay="400"></span>
             <div class="text-wrap lg:text-center">
               <h2 class="uppercase lg:f-size-22 f-weight-semiBold f-color-grey-medium">UPLOAD<br /> PRESCRIPTION</h2>
               <div class="pos-absolute pin-l pin-t-50 pin-t50 lg:pin-t0 lg:pin-t-auto lg:pos-relative ml-20 lg:-mx-20 lg:-mx-40">
-                <span class="d-hidden lg:d-inline-block pos-absolute pin-t-50 pin-t50 dotted-spaced pb-2 pin-x" data-aos="fade-in" data-aos-delay="700"></span>
-                <span class="lg:d-hidden dotted-spaced pos-absolute h-full pin-l-50 pl-2 pin-t-100" data-aos="fade-in" data-aos-delay="700"></span>
+                <span class="d-hidden lg:d-inline-block pos-absolute pin-t-50 pin-t50 dotted-spaced pb-2 pin-x" data-aos="fade-in" data-aos-delay="400"></span>
                 <div class="lg:d-hidden icon icon-40 circle grey-medium pos-absolute pin-t pin-l z-1">
                   <span class="pos-absolute pin f-weight-semoBold f-color-white">2</span>
                 </div>
@@ -713,11 +714,11 @@
             </div>
           </article>
           <article class="col-12 lg:col-4 pl-160 lg:pl-20 pr-20 py-40 lg:py-20 lg:pl-40 lg:pr-40 lg:py-40 pos-relative" data-aos="fade" data-aos-delay="500">
+            <span class="lg:d-hidden dotted-spaced pos-absolute pin-t pin-b-50 pin-l ml-82 pl-2" data-aos="fade-in" data-aos-delay="400"></span>
             <div class="text-wrap lg:text-center">
               <h2 class="uppercase lg:f-size-22 f-weight-semiBold f-color-grey-medium">CHECK &<br /> DISPATCH</h2>
               <div class="pos-absolute pin-l pin-t-50 pin-t50 lg:pin-t0 lg:pin-t-auto lg:pos-relative ml-20 lg:-mx-20 lg:-mx-40">
-                <span class="d-hidden lg:d-inline-block pos-absolute pin-t-50 pin-t50 dotted-spaced pb-2 col-6 pin-l" data-aos="fade-in" data-aos-delay="700"></span>
-                <span class="lg:d-hidden pos-absolute pin-l-50 lg:pin-l-auto lg:pin-t-50 pin-t50 dotted-spaced pl-2 lg:pl-0 lg:pb-2 h-full lg:col-6 pin-l" data-aos="fade-in" data-aos-delay="700"></span>
+                <span class="d-hidden lg:d-inline-block pos-absolute pin-t-50 pin-t50 dotted-spaced pb-2 col-6 pin-l" data-aos="fade-in" data-aos-delay="600"></span>
                 <div class="lg:d-hidden icon icon-40 circle grey-medium pos-absolute pin-t pin-l z-1">
                   <span class="pos-absolute pin f-weight-semoBold f-color-white">3</span>
                 </div>
@@ -739,14 +740,13 @@
       </div>
     </section>
     <!-- Trustpilot -->
-    <section class="mt-86">
-      <!-- section spacer-->
-    </section>
-    <section class="pos-relative">
-      <figure class="pos-absolute pin bg-center bg-cover bg-no-repeat opacity-35 lg:opacity-100" style="background-image: url('./images/iStock-1091027372.jpg');"></figure>
+    <section class="pos-relative md:mt-86 md:mb-52">
+      <figure class="d-hidden md:d-inline-block pos-absolute pin bg-center-top bg-cover bg-no-repeat" style="background-image: url('./images/iStock-1091027372.jpg');"></figure>
+      <figure class="md:d-hidden pos-absolute pin bg-100-y bg-cover bg-no-repeat" style="background-image: url('./images/iStock-1091027372_crop.jpg');"></figure>
+      <div class="ratio-4x3 md:ratio-none md:d-hidden"></div>
       <div class="container md:container-md lg:container-lg xl:container-xl mx-auto py-100 pos-relative">
         <div class="flex-row">
-          <div class="col-12 lg:col-6 lg:ml-auto pos-relative">
+          <div class="col-12 md:col-6 md:ml-auto pos-relative">
             <div class="text-wrap-lg text-center">
               <img class="icon-250" src="./images/trustpilot-logo.png" />
               <h2 class="f-size-54 f-weight-semiBold">Rated No.1 for pets on Trustpilot</h2>
@@ -759,17 +759,14 @@
         </div>
       </div>
     </section>
-    <section class="mb-52">
-      <!-- section spacer-->
-    </section>
     <!-- Featured products -->
     <section class="py-58">
-      <div class="container md:container-md lg:container-lg xl:container-xl mx-auto lg:px-68">
+      <div class="container md:container-md lg:container-lg xl:container-xl mx-auto px-24 lg:px-68">
         <hgroup class="text-center text-wrap d-inline-block w-full pb-40">
           <h2 class="uppercase f-size-30 f-color-primary">Featured products</h2>
         </hgroup>
-        <section class="carousel-wrapper carousel-outer flex-col pos-relative sm:px-xxl-500 pos-relative" data-aos="fade" data-aos-delay="300">
-          <button class="jsCarouselPrv pin-l pos-absolute z-30 pin-t-100 mt-40 sm:mb-0 sm:pin-t pin-l-50 sm:pin-l -ml-40 lg:-ml-72 sm:mt-160 lg:mt-100">
+        <section class="carousel-wrapper carousel-outer flex-col pos-relative pos-relative" data-aos="fade" data-aos-delay="300">
+          <button class="jsCarouselPrv pin-l pos-absolute z-30 mt-40 mb-0 pin-t pin-l -ml-40 lg:-ml-72 mt-100">
             <div class="icon icon-40 lg:icon-72 f-color-default hover:bg-primary hover:f-color-white hover:shadow-md transition-all">
               <span class="flex-col p-4 lg:p-10 m-auto">
                 <svg fill="none" stroke="currentColor" stroke-width=".706" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" viewBox="0 0 26.7 52.4">
@@ -779,7 +776,7 @@
             </div>
           </button>
           <div class="jsMultiCardCarousel is-carousel owl-carousel owl-theme" data-margin="20" data-autoplay="false">
-            <a href="#" class="rollover-wrap no-underline flex-col text-center">
+            <a href="product-details.html" class="rollover-wrap no-underline flex-col text-center">
               <figure class="ratio-1x1 bg-white">
                 <div class="rollover-effect pos-absolute pin bg-center bg-contain bg-no-repeat" style="background-image: url('./images/productimage-picture-animology-flea-and-tick-shampoo-250ml-10321_jpg_350x209_q85.jpg');"></div>
               </figure>
@@ -791,7 +788,7 @@
                 </p>
               </div>
             </a>
-            <a href="#" class="rollover-wrap no-underline flex-col text-center">
+            <a href="product-details.html" class="rollover-wrap no-underline flex-col text-center">
               <figure class="ratio-1x1 bg-white">
                 <div class="rollover-effect pos-absolute pin bg-center bg-contain bg-no-repeat" style="background-image: url('./images/productimage-picture-4cyte-epiitalis-forte-gel-for-horses-1litre-10521_jpg_350x209_q85.jpg');"></div>
               </figure>
@@ -803,7 +800,7 @@
                 </p>
               </div>
             </a>
-            <a href="#" class="rollover-wrap no-underline flex-col text-center">
+            <a href="product-details.html" class="rollover-wrap no-underline flex-col text-center">
               <figure class="ratio-1x1 bg-white">
                 <div class="rollover-effect pos-absolute pin bg-center bg-contain bg-no-repeat" style="background-image: url('./images/productimage-picture-beco-recycled-plastic-catnip-toys-crab-10645_jpg_350x209_q85.jpg');"></div>
               </figure>
@@ -815,7 +812,7 @@
                 </p>
               </div>
             </a>
-            <a href="#" class="rollover-wrap no-underline flex-col text-center">
+            <a href="product-details.html" class="rollover-wrap no-underline flex-col text-center">
               <figure class="ratio-1x1 bg-white">
                 <div class="rollover-effect pos-absolute pin bg-center bg-contain bg-no-repeat" style="background-image: url('./images/productimage-picture-fleascreen-combo-spot-on-for-small-dogs-2-10kg-x-3-pipettes-8680_jpg_350x209_q85.jpg');"></div>
               </figure>
@@ -828,7 +825,7 @@
               </div>
             </a>
           </div>
-          <button class="jsCarouselNxt pin-r pos-absolute z-30 pin-t-100 mt-40 sm:mb-0 sm:pin-t pin-r-50 sm:pin-r -mr-40 lg:-mr-72 sm:mt-160 lg:mt-100">
+          <button class="jsCarouselNxt pin-r pos-absolute z-30 mt-40 mb-0 pin-t pin-r -mr-40 lg:-mr-72 mt-100">
             <div class="icon icon-40 lg:icon-72 f-color-default hover:bg-primary hover:f-color-white hover:shadow-md transition-all">
               <span class="flex-col p-4 lg:p-10 m-auto">
                 <svg fill="none" stroke="currentColor" stroke-width=".706" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" viewBox="0 0 26.7 52.4">
@@ -845,11 +842,11 @@
     </section>
     <!-- Sign up for news and special offers -->
     <section class="bg-primary-light f-color-white pt-80 sm:pt-160 lg:pt-60 xl:pt-44 pb-44 pos-relative">
-      <div class="pos-absolute z-1 pin-l pin-t -mt-30 ml-40 xl:ml-60" data-aos="zoom-in" data-aos-delay="100">
-        <div class="ratio-speech-bubble tilt-left icon-108 sm:icon-204">
+      <div class="pos-absolute z-1 pin-l pin-t -mt-80 ml-20 xl:ml-60" data-aos="zoom-in" data-aos-delay="100">
+        <div class="ratio-speech-bubble tilt-left icon-130 xs:icon-158 sm:icon-204">
           <span class="speech-bubble primary pos-absolute pin"></span>
           <h2 class="pos-absolute pin flex-col justify-center align-center -mt-20">
-            <span class="uppercase f-color-white f-size-22 sm:f-size-42" style="margin-top: 10%;"><strong>MEOW</strong></span>
+            <span class="uppercase f-color-white f-size-24 sm:f-size-42" style="margin-top: 10%;"><strong>MEOW</strong></span>
           </h2>
         </div>
       </div>
@@ -881,11 +878,11 @@
           </div>
         </form>
       </div>
-      <div class="pos-absolute z-1 pin-t pin-r xl:pin-t-auto xl:pin-b -mt-30 xl:mt-auto lg:-mb-30 mr-40 xl:mr-60" data-aos="zoom-in" data-aos-delay="300">
-        <div class="ratio-speech-bubble tilt-right icon-108 sm:icon-204">
+      <div class="pos-absolute z-1 pin-t pin-r xl:pin-t-auto xl:pin-b -mt-80 xl:mt-auto lg:-mb-30 mr-20 xl:mr-60" data-aos="zoom-in" data-aos-delay="300">
+        <div class="ratio-speech-bubble tilt-right icon-130 xs:icon-158 sm:icon-204">
           <span class="speech-bubble primary-medium pos-absolute pin"></span>
           <h2 class="pos-absolute pin flex-col flip-x justify-center align-center -mt-20">
-            <span class="uppercase f-color-white f-size-22 sm:f-size-42" style="margin-top: 10%;"><strong>OINK!</strong></span>
+            <span class="uppercase f-color-white f-size-24 sm:f-size-42" style="margin-top: 10%;"><strong>OINK!</strong></span>
           </h2>
         </div>
       </div>
@@ -895,13 +892,13 @@
   <footer class="py-30 lg:py-54 bg-primary-xlight f-size-16">
     <div class="container sm:container-sm md:container-md lg:container-lg xl:container-xl mx-auto">
       <div class="flex-row flex-wrap justify-center lg:justify-space-between -m-10 xl:-m-20">
-        <div class="p-10 xl:p-20 w-full text-center sm:text-left lg:w-auto">
+        <div class="p-10 xl:p-20 w-full text-center xs:text-left lg:w-auto">
           <a href="index.html" title="Vetimed" class="d-inline-block ratio-logo icon-logo-sm xl:icon-logo">
             <img class="pos-absolute pin object-contain" src="./images/vetimed-logo.svg" alt="Vatimed" />
           </a>
         </div>
-        <div class="p-10 xl:p-20 col-12 sm:col-6 md:col-4 lg:col-auto">
-          <ul class="-m-4 flex-col text-center sm:text-left md:justify-end list-reset">
+        <div class="p-10 xl:p-20 col-12 xs:col-6 md:col-4 lg:col-auto">
+          <ul class="-m-4 flex-col text-center xs:text-left md:justify-end list-reset">
             <li class="p-4"><a class="no-underline hover:f-color-secondary transition-all" href="#">Create Account</a></li>
             <li class="p-4"><a class="no-underline hover:f-color-secondary transition-all" href="#">Email / Phone</a></li>
             <li class="p-4"><a class="no-underline hover:f-color-secondary transition-all" href="#">Delivery / Return</a></li>
@@ -909,7 +906,7 @@
             <li class="p-4">
               <div class="text-wrap-xs">
                 <h3 class="f-color-primary-medium"><strong>Follow us...</strong></h3>
-                <div class="flex-row justify-center sm:justify-start -m-4">
+                <div class="flex-row justify-center xs:justify-start -m-4">
                   <a title="Facebook" href="#" class="m-4 f-color-primary-light hover:f-color-secondary icon icon-30 transition-all">
                     <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.4 25.4">
                       <path d="M16 13.2h-2.3v5.7h-2.3v-5.7h-2v-2.3h1.9V9.6c0-.8.3-1.6.8-2.2.6-.6 1.2-.9 2-.9H16v2.3h-1.9c-.1 0-.2.1-.3.2-.1.1-.1.3-.1.5v1.2H16v2.5zm9.4-.5c0-1.8-.3-3.4-1-4.9-.7-1.5-1.6-2.9-2.7-4-1.1-1.2-2.5-2.1-4-2.7-1.5-.7-3.2-1-4.9-1S9.3.3 7.7 1c-1.5.7-2.9 1.6-4 2.7-1.1 1.2-2 2.5-2.7 4-.7 1.6-1 3.3-1 5s.3 3.4 1 4.9c.7 1.5 1.6 2.9 2.7 4s2.5 2 4 2.7c1.5.7 3.2 1 4.9 1s3.4-.3 4.9-1c1.5-.7 2.9-1.6 4-2.7s2-2.5 2.7-4c.8-1.5 1.2-3.1 1.2-4.9">
@@ -938,12 +935,12 @@
             </li>
           </ul>
         </div>
-        <div class="p-10 xl:p-20 col-12 sm:col-6 md:col-5 lg:col-auto">
-          <ul class="-m-4 flex-col text-center sm:text-left md:justify-end list-reset">
+        <div class="p-10 xl:p-20 col-12 xs:col-6 md:col-5 lg:col-auto">
+          <ul class="-m-4 flex-col text-center xs:text-left md:justify-end list-reset">
             <li class="p-4"><a class="no-underline hover:f-color-secondary transition-all" href="#">Term & Conditions</a></li>
             <li class="p-4"><a class="no-underline hover:f-color-secondary transition-all" href="#">Privacy cookies & privacy</a></li>
             <li class="p-4"><a class="no-underline hover:f-color-secondary transition-all" href="#">cookie settings</a></li>
-            <li class="p-4 flex-row justify-center sm:justify-start">
+            <li class="p-4 flex-row justify-center xs:justify-start">
               <div class="d-hidden md:d-inline-block flex-auto swap-order">
                 <div class="text-wrap-xs">
                   <h3 class="f-color-primary-medium"><strong>We accept</strong></h3>
@@ -969,10 +966,10 @@
             </li>
           </ul>
         </div>
-        <div class="md:d-hidden p-10 xl:p-20 col-12 sm:col-6 md:col-5 lg:col-auto">
+        <div class="md:d-hidden p-10 xl:p-20 col-12 xs:col-6 md:col-5 lg:col-auto">
           <div class="text-wrap-xs">
-            <h3 class="f-color-primary-medium text-center sm:text-left"><strong>We accept</strong></h3>
-            <div class="flex-row flex-wrap justify-center sm:justify-start -m-4">
+            <h3 class="f-color-primary-medium text-center xs:text-left"><strong>We accept</strong></h3>
+            <div class="flex-row sm:flex-wrap justify-center xs:justify-start -m-4">
               <div class="p-4">
                 <img src="./images/cc_1.jpg" />
               </div>
@@ -988,8 +985,8 @@
             </div>
           </div>
         </div>
-        <div class="p-10 xl:p-20 col-12 sm:col-6 md:col-3 lg:col-auto">
-          <div class="flex-col sm:flex-row md:flex-col align-center text-wrap -m-4">
+        <div class="p-10 xl:p-20 col-12 xs:col-6 md:col-3 lg:col-auto">
+          <div class="flex-col xs:flex-row md:flex-col align-center text-wrap -m-4">
             <div class="p-4">
               <img class="icon-144" src="./images/vmd-logo.png" />
             </div>
@@ -1001,13 +998,13 @@
       </div>
     </div>
   </footer>
-  <section class="p-10 bg-primary f-size-14 f-color-white mb-20">
+  <section class="p-10 bg-primary f-size-12 sm:f-size-14 f-color-white mb-20">
     <div class="container-fluid sm:container-sm md:container-md lg:container-lg xl:container-xl xxl:container-xxl mx-auto">
-      <div class="flex-row flex-wrap justify-space-between -m-8">
-        <div class="p-8">
+      <div class="flex-row flex-wrap justify-center text-center xs:justify-space-between -m-4">
+        <d4v class="p-4">
           <span>Copyright © 2022 Vetimed</span>
-        </div>
-        <div class="p-8">
+        </d4v>
+        <div class="p-4">
           <a class="icon-unstuck-design ratio-unstuck-design unstuck-link hover:f-color-secondary no-underline transition-all d-inline-block" href="http://unstuckdesign.com/" target="_blank">
             <span class="pos-absolute pin">
               <svg class="unstuck-design" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 191 14.1">

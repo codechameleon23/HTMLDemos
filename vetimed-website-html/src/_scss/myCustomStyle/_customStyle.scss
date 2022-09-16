@@ -350,11 +350,14 @@ h2 {
     transform: translateY(100%);
     transition: all 1s ease-in-out;
     z-index: 0;
-    background-size: 48rem auto;
+    background-size: calc(100% - 4rem) auto;
     &.is-active {
       transform: translateY(0);
       transition: all 1.35s 0.5s ease-in-out;
       z-index: 1;
+    }
+    @media (min-width: $bp_sm) {
+      background-size: 48rem auto;
     }
   }
 }

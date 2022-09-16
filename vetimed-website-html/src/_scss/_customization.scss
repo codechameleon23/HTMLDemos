@@ -78,7 +78,7 @@ $fontFamily: (
   // $fontFamilyClassNamePrefix "secondary" $secondaryFont,
 );
 
-$bp_xs: 460px;
+$bp_xs: 340px;
 $bp_sm: 576px;
 $bp_md: 710px;
 $bp_lg: 992px;
@@ -86,7 +86,7 @@ $bp_xl: 1200px;
 $bp_xxl: 1536px;
 $breakPoints: (
   null 0, 
-  // xs\: $bp_xs, 
+  xs\: $bp_xs, 
   sm\: $bp_sm, 
   md\: $bp_md, 
   lg\: $bp_lg, 
@@ -667,16 +667,18 @@ $borderRadiuses: (
 $container_article: 88rem;
 $container_2lg: 106rem;
 // $container_fluid: 100%;
+// $container_xs: 32.0rem;
 $container_sm: 57.6rem;
 // $container_md: 71.0rem;
 // $container_lg: 99.2rem;
 $container_xl: 120rem;
 // $container_xxl: 140rem;
 
-$container_null: calc(100% - 8rem);
+$container_null: calc(100% - 3.2rem);
 $container: (
   $containerClassPrefix null $container_null,
   $containerClassPrefix "fluid" $container_fluid,
+  // $containerClassPrefix "xs" $container_xs,
   $containerClassPrefix "sm" $container_sm,
   $containerClassPrefix "md" $container_md,
   $containerClassPrefix "lg" $container_lg,
