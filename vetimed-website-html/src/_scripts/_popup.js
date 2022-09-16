@@ -6,7 +6,7 @@
       background: false,
       // absolute: true
       onopen: function() {
-         searchBarClose();
+         // searchBarClose();
          filterPanelClose();
        }
    });

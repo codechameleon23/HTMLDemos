@@ -45,7 +45,7 @@ if ($(".filter-toggle").length > 0) {
       filterPanelClose();
     } else {
       addResizeAnimation();
-      searchBarClose();
+      // searchBarClose();
       filterPanelOpen();
     };
   });

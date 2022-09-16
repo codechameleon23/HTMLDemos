@@ -372,7 +372,7 @@ $(document).ready(function () {
          navBarClose();
       } else {
          navBarOpen();
-         searchBarClose();
+         // searchBarClose();
       }
    });
 
@@ -412,31 +412,6 @@ $(document).ready(function () {
   //     liParent.removeClass('is-open');
   //   }
   // });
-//  -------------------------------------------
-// Toggle search bar
-//  -------------------------------------------
-  // Close
-  function searchBarClose() {
-    $(".search-toggle").removeClass("is-active");
-    $(".jsNavbarToggle").removeClass("search-is-open");
-  }
-  // Open
-  function searchBarOpen() {
-    $(".search-toggle").addClass("is-active");
-    $(".jsNavbarToggle").addClass("search-is-open");
-  }
-
-  $('.search-toggle').on('click', function () {
-    if ($(this).hasClass("is-active")) {
-      searchBarClose();
-    } else {
-      navBarClose();
-      filterPanelClose();
-      setTimeout(function () {
-        searchBarOpen();
-      }, 225);
-    }
-  });
 //  -------------------------------------------
 //  Item carousel
 //  -------------------------------------------
@@ -595,7 +570,7 @@ function setMultiCardCarousel(elm) {
       background: false,
       // absolute: true
       onopen: function() {
-         searchBarClose();
+         // searchBarClose();
          filterPanelClose();
        }
    });
@@ -953,7 +928,7 @@ if ($(".filter-toggle").length > 0) {
       filterPanelClose();
     } else {
       addResizeAnimation();
-      searchBarClose();
+      // searchBarClose();
       filterPanelOpen();
     };
   });
