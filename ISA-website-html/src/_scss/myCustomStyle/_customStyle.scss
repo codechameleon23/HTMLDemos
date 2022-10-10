@@ -1,0 +1,204 @@
+body {
+  background-color: $color-white;
+}
+
+h1,
+h2 {
+  letter-spacing: 0.15rem;
+}
+// h3,
+// h4,
+// h5,
+// h6 {
+//   line-height: 1.25;
+// }
+
+[class*="ratio"]:before {
+  display: block;
+  width: 100%;
+  content: "";
+  pointer-events: none;
+}
+
+.link {
+  // text-decoration: none;
+  display: inline-block;
+
+  &:hover {
+    font-weight: 700;
+  }
+
+  &.primary {
+    color: $color-primary;
+  }
+}
+
+.button {
+  align-items: center;
+  justify-content: center;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  // position: relative;
+  // line-height: 1.2;
+  // font-family: $primaryFont;
+  transition: $transition;
+  text-align: center;
+  // text-transform: uppercase;
+  // font-size: 1.8rem;
+  letter-spacing: 0.06em;
+  // font-weight: 500;
+  // padding: 1.2rem 4rem;
+
+  // &.sm {
+  //   font-size: 1.4rem;
+  //   padding: 0.6rem 2rem;
+  // }
+
+  &:hover {
+    box-shadow: $shadow_lg;
+  }
+}
+
+
+.list {
+  &.primary {
+    ::marker {
+      color: $color-primary;
+    }
+  }
+  &.secondary {
+    ::marker {
+      color: $color-secondary;
+    }
+  }
+  &.tertiary {
+    ::marker {
+      color: $color-tertiary;
+    }
+  }
+}
+
+// ::marker {
+//   color: $color-primary;
+//   .primary & {
+//     color: $color-primary;
+//   }
+//   .secondary & {
+//     color: $color-secondary;
+//   }
+//   .white & {
+//     color: $color-white;
+//   }
+// }
+
+.unstuck-link {
+  overflow: visible !important;
+}
+
+.accordion-wrapper {
+  .accordion {
+    &.is-open {
+      > .accordion-label {
+        + .accordion-content {
+          > .answer {
+            animation: fadeInUp 0.45s ease-in-out both;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(0.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+
+.img-rollover
+{
+  overflow: hidden;
+}
+.img-rollover .card-image,
+.img-rollover .play-button
+{
+  transition: $transition;
+}
+.image-rollover-parent:hover .img-rollover .card-image,
+.img-rollover:hover .card-image
+{
+  transform: scale(1.045);
+}
+
+.hero-banner {
+  height: 100vh;
+  max-height: 74.5rem;
+  @media (min-width: $bp_xl) {
+    min-height: 74.5rem;
+  }
+}
+
+.jsItemCarousel {
+  &.owl-theme .owl-dots {
+    text-align: left;
+    
+    .owl-dot span {
+      background-color: $color-white;
+    }
+    .owl-dot.active span, 
+    .owl-dot:hover span {
+      background-color: $color-primary;
+    }
+  }
+}
+
+.accordion-wrapper {
+  .accordion {
+    &.is-open {
+      > .accordion-label {
+        + .accordion-content {
+          > .answer {
+            animation: fadeInUp 0.45s ease-in-out both;
+          }
+        }
+      }
+    }
+  }
+}
+
+.illustaredMap {
+  &.is-active {
+    margin-top: -1rem;
+  }
+}
+
+.googleMap {
+  color: $color-text;
+  &.is-active {
+    margin-top: -1rem;
+    background-color: $color-secondary;
+    color: $color-white;
+  }
+}
+
+.zoomist-wrapper {
+  background-color: transparent;
+  .zoomist-slider {
+    top: auto;
+    bottom: 0;
+  }
+}
+
+.zoomist-slider {
+  top: auto;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
