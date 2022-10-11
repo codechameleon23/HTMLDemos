@@ -95463,10 +95463,34 @@ h2
 
 @media (min-width: 992px)
 {
-    .accordion-wrapper .toggle-content .accordion > .accordion-label
+    .tabs-accordion.accordion-wrapper .toggle-content .accordion > .accordion-label
     {
         display: none;
     }
+}
+
+.accordion-wrapper .accordion .accordion-label .toggle-sign-plus .close
+{
+    -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transform-origin: center;
+        -ms-transform-origin: center;
+            transform-origin: center;
+}
+
+.accordion-wrapper .accordion.is-open > .accordion-label .toggle-sign-plus
+{
+    -webkit-transform: rotate(0);
+        -ms-transform: rotate(0);
+            transform: rotate(0);
+}
+
+.accordion-wrapper .accordion.is-open > .accordion-label .toggle-sign-plus .close
+{
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
 }
 
 .illustaredMap.is-active

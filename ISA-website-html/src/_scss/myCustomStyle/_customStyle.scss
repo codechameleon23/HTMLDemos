@@ -194,9 +194,24 @@ h2 {
 }
 
 @media (min-width: $bp_lg) {
-  .accordion-wrapper .toggle-content .accordion > .accordion-label {
+  .tabs-accordion.accordion-wrapper .toggle-content .accordion > .accordion-label {
     display: none;
   }
+}
+
+.accordion-wrapper .accordion .accordion-label .toggle-sign-plus .close
+{
+  transform: rotate(0deg);
+  transform-origin: center;
+}
+
+.accordion-wrapper .accordion.is-open > .accordion-label .toggle-sign-plus
+{
+  transform: rotate(0);
+}
+.accordion-wrapper .accordion.is-open > .accordion-label .toggle-sign-plus .close
+{
+  transform: rotate(90deg);
 }
 
 .illustaredMap {
