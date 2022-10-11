@@ -565,7 +565,10 @@ function setMultiCardCarousel(elm) {
       710: {
         items: 3,
       },
-      1024: {
+      // 1024: {
+      //   items: 3,
+      // },
+      1200: {
         items: 4,
       }
     },
@@ -960,11 +963,11 @@ if (!isIE11) {
     scroll = $(window).scrollTop();
     if (scroll > lastScrollTop && scroll > 10) {
       // downscroll code
-      $("body").addClass("header-shrink");
+      // $("body").addClass("header-shrink");
     } else if (scroll < lastScrollTop) {
       // upscroll code
       if (scroll <= 100) {
-        $("body").removeClass("header-shrink");
+        // $("body").removeClass("header-shrink");
       }
     }
     lastScrollTop = scroll;
