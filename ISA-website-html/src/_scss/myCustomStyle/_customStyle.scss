@@ -245,10 +245,6 @@ h2 {
   justify-content: center;
 }
 
-.loading-cover {
-  animation: fadeOut .75s 100ms ease-in both;
-}
-
 .bg-anim {
   animation: bg-anim 20s ease-in-out both infinite alternate;
 }
@@ -261,5 +257,18 @@ h2 {
   100% {
     background-size: 100% 100%;
     background-position: 0% 0%;
+  }  
+}
+
+.loading-cover {
+  animation: loadOut .75s 500ms ease-in both;
+}
+
+@keyframes loadOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
