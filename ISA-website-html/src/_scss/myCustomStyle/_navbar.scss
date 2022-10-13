@@ -12,7 +12,7 @@
   }
   
   @media (min-width: $bp_md) {
-    max-width: 90%;
+    // max-width: 90%;
     top: calc(#{$header_md} + 0rem);
     height: calc(100vh - #{$header_md});
   }
@@ -28,17 +28,16 @@
     opacity: 1;
     top: unset;
   }
-
-  &, .submenu {
-    > .container {
-      @media (max-width: $bp_lg) {
-        // padding-top: 1.5rem;
-        // padding-bottom: 1.5rem;
-      }
-    }
-  }
       
   ul > li {
+
+    &:hover,
+    &.is-open,
+    &.is-active {
+      & .nav-link {
+        color: $color-secondary;
+      }
+    }
     
     @media (min-width: $bp_lg) {
       .nav-link {
@@ -48,7 +47,6 @@
       &.is-open,
       &.is-active {
         & .nav-link {
-          background-color: $color-white;
           color: $color-primary;
         }
       }
@@ -74,8 +72,8 @@
       @media (min-width: $bp_lg) {
         overflow: auto;
         opacity: 1;
-        height: auto;
-        max-height: calc(100vh - #{$header_lg});
+        // height: auto;
+        // max-height: calc(100vh - #{$header_lg});
       }
     }
     .submenu-trigger {
@@ -98,30 +96,26 @@
   opacity: 0;
   overflow: hidden;
   // top: $header_sm;
-  top: 0;
+  // top: 0;
   transform: translateX(100%);
-  height: calc(100vh - #{$header_sm});
-  color: $color-primary;
+  // height: calc(100vh - #{$header_sm});
+  // color: $color-primary;
   
   @media (max-width: $bp_lg) {
     transition: opacity .65s 0s ease-in-out, transform .65s 0s ease-in-out, top .65s 0s ease-in-out;
   }
   
-  @media (min-width: $bp_md) {
-    height: calc(100vh - #{$header_sm});
+  ul li {
+    &:hover,
+    &.is-active {
+      & a {
+        color: $color-secondary;
+      }
+    }
+    &:not(.is-active) i {
+      opacity: 0;
+    }
   }
-
-  // @media (min-width: $bp_lg) {
-  //   top: $header_lg;
-  //   height: calc(100vh - #{$header_lg});
-  // }
-
-  @media (min-width: $bp_lg) {
-    top: $header_lg;
-    height: 0;
-    opacity: 0;
-    transform: translateX(0%);
-  }  
 }
 
 .submenu-trigger {
