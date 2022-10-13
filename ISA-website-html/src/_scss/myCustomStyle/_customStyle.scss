@@ -245,6 +245,17 @@ h2 {
   justify-content: center;
 }
 
-.parallax {
-  // background-size: 50%;
+.bg-anim {
+  animation: bg-anim 12s linear both infinite alternate;
+}
+
+@keyframes bg-anim {
+  0% {
+    background-size: 100% 120%;
+    background-position-y: 10%;
+  }
+  100% {
+    background-size: 100% 100%;
+    background-position-y: 0%;
+  }
 }

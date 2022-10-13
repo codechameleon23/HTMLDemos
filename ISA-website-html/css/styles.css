@@ -95658,3 +95658,37 @@ h2
     -ms-flex-pack: center;
             justify-content: center;
 }
+
+.bg-anim
+{
+    -webkit-animation: bg-anim 12s linear both infinite alternate;
+            animation: bg-anim 12s linear both infinite alternate;
+}
+
+@-webkit-keyframes bg-anim
+{
+    0%
+    {
+        background-position-y: 10%; 
+        background-size: 100% 120%;
+    }
+    100%
+    {
+        background-position-y: 0; 
+        background-size: 100% 100%;
+    }
+}
+
+@keyframes bg-anim
+{
+    0%
+    {
+        background-position-y: 10%; 
+        background-size: 100% 120%;
+    }
+    100%
+    {
+        background-position-y: 0; 
+        background-size: 100% 100%;
+    }
+}
