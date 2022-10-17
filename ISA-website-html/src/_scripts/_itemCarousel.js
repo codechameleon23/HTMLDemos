@@ -80,10 +80,10 @@ function setMultiCardCarousel(elm) {
       //   items: 1,
       // },
       // 576: {
-        items: 2,
+        items: 1,
       },
       710: {
-        items: 3,
+        items: 2,
       },
       // 1024: {
       //   items: 3,
