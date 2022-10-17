@@ -50,7 +50,8 @@ const PROJECT_JS_LIST = [
   ROOT_JS_PATH+'/magnific.popup.min.js',
   ROOT_JS_PATH+'/jquery.popupoverlay.js',
   ROOT_JS_PATH+'/jquery.mapify.min.js',
-  ROOT_JS_PATH+'/zoomist.min.js',
+  // ROOT_JS_PATH+'/zoomist.min.js',
+  ROOT_JS_PATH+'/jquery.zoomtoo.min.js',
   // ROOT_JS_PATH+'/jquery-doubletaptogo.min.js',
   ROOT_JS_PATH+'/owl.carousel.min.js',
   // ROOT_JS_PATH+'/mCustomScrollbar.min.js',
@@ -100,7 +101,8 @@ const PROJECT_JS_LIST = [
   SRC_JS_PATH+'/_docReadyEnds.js',
   // SRC_JS_PATH+'/_paceEnd.js',
   SRC_JS_PATH+'/_productSlider.js',
-  SRC_JS_PATH+'/_zoomist.js',
+  // SRC_JS_PATH+'/_zoomist.js',
+  SRC_JS_PATH+'/_zoomToo.js',
   SRC_JS_PATH+'/_iphonePageHack.js',
 ];
 

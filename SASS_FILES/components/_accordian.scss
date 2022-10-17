@@ -26,7 +26,7 @@
           opacity: 1;
   
           >.answer {
-            animation: fade-in 0.3s 0.3s ease-in-out both;
+            animation: answerfadeInUp 0.3s 0.3s ease-in-out both;
           }
         }
         >.toggle-sign {
@@ -41,5 +41,16 @@
       // transition: all 0.3s 0s ease-in-out;
       opacity: 0;
     }
+  }
+}
+
+@keyframes answerfadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(0.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0rem);
   }
 }
