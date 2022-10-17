@@ -277,28 +277,17 @@ h2 {
   }
 }
 
-// .tabs-accordion.accordion-wrapper .toggle-content {
-//   @media (min-width: $bp_lg) {
-//     .accordion {
-//       &.is-open{
-//         >.accordion-label{
-//           +.accordion-content {
-//             >.answer {
-//               animation: answerfadeInUp 0.5s 0.5s ease-in-out both;
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-// @keyframes answerfadeInUp {
-//   0% {
-//     opacity: 0;
-//     transform: translateY(0.5rem);
-//   }
-//   100% {
-//     opacity: 1;
-//     transform: translateY(0rem);
-//   }
-// }
+// IOS
+@supports (-webkit-touch-callout: none) {
+  /* CSS specific to iOS devices */ 
+  .parallax {
+    background-attachment: unset;
+  }
+}
+
+@supports not (-webkit-touch-callout: none) {
+  /* CSS for other than iOS devices */ 
+  .parallax {
+    background-attachment: fixed;
+  }
+}
