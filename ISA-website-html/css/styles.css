@@ -99410,10 +99410,17 @@ body[data-aos-easing='ease-in-out'] [data-aos],
 
 .navbar .nav-link
 {
+    position: relative; 
+
     -webkit-box-flex: 1;
     -webkit-flex: auto;
         -ms-flex: auto;
             flex: auto;
+}
+
+.navbar .nav-link-has-menu
+{
+    cursor: default;
 }
 
 .navbar .nav-link-toogle
@@ -99428,7 +99435,9 @@ body[data-aos-easing='ease-in-out'] [data-aos],
     display:         flex;
             flex-direction: column;
 
-    height: 100%; 
+    height: 100%;
+
+    pointer-events: none; 
 
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -99464,6 +99473,16 @@ body[data-aos-easing='ease-in-out'] [data-aos],
             transform: translateY(-50%);
 
     opacity: 0;
+}
+
+.navbar li > .nav-link-group > .nav-link .icon
+{
+    opacity: 0;
+}
+
+.navbar li.is-active > .nav-link-group > .nav-link .icon
+{
+    opacity: 1;
 }
 
 .navbar li > .nav-link-group > .nav-link-toogle > .icon .close-icon
@@ -99546,6 +99565,23 @@ body[data-aos-easing='ease-in-out'] [data-aos],
     -webkit-transform: translateX(0%);
         -ms-transform: translateX(0%);
             transform: translateX(0%);
+}
+
+.navbar li.is-active
+{
+    color: #00495e;
+}
+@media (min-width: 992px)
+{
+    .navbar li.is-active
+    {
+        color: #e99700;
+    }
+}
+
+.navbar li .drop-menu-holder li.is-active
+{
+    color: #00495e;
 }
 
 @media (min-width: 992px)

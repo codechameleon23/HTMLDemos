@@ -402,7 +402,7 @@ $(document).ready(function () {
 //  -------------------------------------------
 $(document).ready(function () {
   // toggle submenu 
-  $('.navbar .nav-link-toogle').on('click', function(e){
+  $('.navbar .nav-link-has-menu').on('click', function(e){
     var elm = $(this);
     var liParent = elm.closest('li');
     if(!liParent.hasClass('is-open') && liParent.find('.dropdown')){

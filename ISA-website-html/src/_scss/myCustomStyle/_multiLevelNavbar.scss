@@ -7,6 +7,11 @@
 
    .nav-link {
       flex: auto;
+      position: relative;
+   }
+
+   .nav-link-has-menu {
+      cursor: default;
    }
 
    .nav-link-toogle {
@@ -17,6 +22,7 @@
       top: 0;
       right: 0;
       height: 100%;
+      pointer-events: none;
    }
 }
 
@@ -35,6 +41,12 @@
    &.is-open > .nav-link-group > .nav-link-toogle > .icon .down-icon {
       transform: translateY(-50%);
       opacity: 0;
+   }
+   > .nav-link-group > .nav-link .icon {
+      opacity: 0;
+   }
+   &.is-active > .nav-link-group > .nav-link .icon {
+      opacity: 1;
    }
 }
 
@@ -89,10 +101,19 @@
    &.is-open > .drop-menu-holder > .drop-menu {
       transform: translateX(0%);
    }
+   &.is-active {
+      color: $color-secondary; 
+      @media (min-width: $bp_lg) {
+         color: $color-primary;
+      }
+   }
+   .drop-menu-holder li.is-active {
+      color: $color-secondary; 
+   }
 }
 
 .navbar > ul > li > .drop-menu-holder {
    @media (min-width: $bp_lg) {
       width: 50%;
    }
-   }
+}
