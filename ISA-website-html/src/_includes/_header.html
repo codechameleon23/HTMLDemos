@@ -39,7 +39,7 @@
             lg:-mb-30
             lg:-mr-28">
             <ul class="list-reset flex-col lg:flex-row justify-end pos-relative f-size-28 lg:f-size-20 mt-40 lg:mt-0">
-               <li class="@@if(context.home){is-active} hover:f-color-primary">
+               <li class="@@if(context.home){is-active} lg:hover:f-color-primary">
                   <div class="nav-link-group lg:hover:f-color-primary transition-all-1">
                      <a class="nav-link py-10 px-12 lg:py-28 lg:px-28" href="index.html">
                         <span class="d-inline-block pos-relative">
@@ -54,7 +54,7 @@
                      </a>
                   </div>
                </li>
-               <li class="@@if(context.about){is-active} hover:f-color-primary">
+               <li class="@@if(context.about){is-active} lg:hover:f-color-primary">
                   <div class="nav-link-group lg:hover:f-color-primary transition-all-1">
                      <a class="nav-link py-10 px-12 lg:py-28 lg:px-28" href="#">
                         <span class="d-inline-block pos-relative">
@@ -69,7 +69,7 @@
                      </a>
                   </div>
                </li>
-               <li class="@@if(context.services){is-active} hover:f-color-primary">
+               <li class="@@if(context.services){is-active} lg:hover:f-color-primary">
                   <div class="nav-link-group lg:hover:f-color-primary transition-all-1">
                      <div class="nav-link nav-link-has-menu py-10 px-12 lg:py-28 lg:px-28">
                         <span class="d-inline-block pos-relative">
@@ -82,39 +82,22 @@
                            </i>
                         </span>
                      </div>
-                     <div class="nav-link-toogle">
-                        <span class="icon icon-28 lg:icon-16 ml-8 lg:ml-2 flex-none f-color-inherit">
-                           <span class="down-icon">
-                              <svg class="lg:d-hidden" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                 <path d="m9 18 6-6-6-6" />
-                              </svg>
-                              <svg class="d-hidden lg:d-inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                 <path d="m6 9 6 6 6-6" />
-                              </svg>
-                           </span>
-                           <span class="close-icon">
-                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                 <path d="M18 6 6 18M6 6l12 12"></path>
-                              </svg>
-                           </span>
-                        </span>
-                     </div>
                   </div>
                   <div class="drop-menu-holder f-weight-light f-size-28 xl:f-size-48">
                      <ul class="drop-menu bg-primary f-color-white p-20 list-reset">
                         <li class="go-back f-size-20 lg:f-size-30 mb-12">
-                           <div class="nav-link-group hover:f-color-secondary transition-all-1">
+                           <div class="nav-link-group lg:hover:f-color-secondary transition-all-1">
                               <span class="icon icon-20 mr-8 lg:mr-2 flex-none f-color-inherit">
                                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                     <path d="m15 18-6-6 6-6" />
                                  </svg>
                               </span>
-                              <span>Services</span>
+                              <span>services</span>
                            </div>
                         </li>
                         <li class="@@if(context.tax){is-active}">
-                           <div class="nav-link-group hover:f-color-secondary transition-all-1">
-                              <div class="nav-link nav-link-has-menu py-10 py-8">
+                           <div class="nav-link-group lg:hover:f-color-secondary transition-all-1">
+                              <a class="nav-link py-10 py-8" href="#">
                                  <span class="d-inline-block pos-relative">
                                     Tax
                                     <i class="icon icon-14 ratio-1x1 ml-8 lg:ml-2 flex-none f-color-inherit d-inline-block pos-absolute pin-t pin-r pin-b-auto -mt-2 -mr-10">
@@ -124,85 +107,12 @@
                                        </svg>
                                     </i>
                                  </span>
-                              </div>
-                              <div class="nav-link-toogle">
-                                 <span class="icon icon-20 ml-8 lg:ml-2 flex-none f-color-inherit">
-                                    <span class="down-icon">
-                                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" class="feather feather-chevron-right" viewBox="0 0 24 24">
-                                          <path d="m9 18 6-6-6-6" />
-                                       </svg>
-                                    </span>
-                                    <span class="close-icon">
-                                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                          <path d="M18 6 6 18M6 6l12 12"></path>
-                                       </svg>
-                                    </span>
-                                 </span>
-                              </div>
-                           </div>
-                           <div class="drop-menu-holder f-weight-light f-size-28 xl:f-size-36">
-                              <ul class="drop-menu bg-primary f-color-white p-20 list-reset">
-                                 <li class="go-back f-size-20 lg:f-size-30 mb-12">
-                                    <div class="nav-link-group hover:f-color-secondary transition-all-1">
-                                       <span class="icon icon-20 mr-8 lg:mr-2 flex-none f-color-inherit">
-                                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                             <path d="m15 18-6-6 6-6" />
-                                          </svg>
-                                       </span>
-                                       <span>Tax</span>
-                                    </div>
-                                 </li>
-                                 <li class="@@if(context.individuals){is-active}">
-                                    <div class="nav-link-group hover:f-color-secondary transition-all-1">
-                                       <a class="nav-link py-10 py-8" href="#">
-                                          <span class="d-inline-block pos-relative">
-                                             Individuals + Landlords
-                                             <i class="icon icon-14 ratio-1x1 ml-8 lg:ml-2 flex-none f-color-inherit d-inline-block pos-absolute pin-t pin-r pin-b-auto -mt-2 -mr-10">
-                                                <svg class="pos-absolute pin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.687 22.687">
-                                                   <path transform="rotate(45 3.952 9.54)" fill="currentColor"
-                                                      d="M10.442 6.657 0 11.162a1.7 1.7 0 0 1 .429-.807l2.02-2.109 6.873-7.09L10.442 0l1.118 1.154 8.992 9.279a1.7 1.7 0 0 1 .357.743Z" data-name="Path 1953" />
-                                                </svg>
-                                             </i>
-                                          </span>
-                                       </a>
-                                    </div>
-                                 </li>
-                                 <li class="@@if(context.businesses){is-active}">
-                                    <div class="nav-link-group hover:f-color-secondary transition-all-1">
-                                       <a class="nav-link py-10 py-8" href="#">
-                                          <span class="d-inline-block pos-relative">
-                                             Businesses
-                                             <i class="icon icon-14 ratio-1x1 ml-8 lg:ml-2 flex-none f-color-inherit d-inline-block pos-absolute pin-t pin-r pin-b-auto -mt-2 -mr-10">
-                                                <svg class="pos-absolute pin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.687 22.687">
-                                                   <path transform="rotate(45 3.952 9.54)" fill="currentColor"
-                                                      d="M10.442 6.657 0 11.162a1.7 1.7 0 0 1 .429-.807l2.02-2.109 6.873-7.09L10.442 0l1.118 1.154 8.992 9.279a1.7 1.7 0 0 1 .357.743Z" data-name="Path 1953" />
-                                                </svg>
-                                             </i>
-                                          </span>
-                                       </a>
-                                    </div>
-                                 </li>
-                                 <li class="@@if(context.profit){is-active}">
-                                    <div class="nav-link-group hover:f-color-secondary transition-all-1">
-                                       <a class="nav-link py-10 py-8" href="#">
-                                          <span class="d-inline-block pos-relative">
-                                             Not for Profit
-                                             <i class="icon icon-14 ratio-1x1 ml-8 lg:ml-2 flex-none f-color-inherit d-inline-block pos-absolute pin-t pin-r pin-b-auto -mt-2 -mr-10">
-                                                <svg class="pos-absolute pin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.687 22.687">
-                                                   <path transform="rotate(45 3.952 9.54)" fill="currentColor"
-                                                      d="M10.442 6.657 0 11.162a1.7 1.7 0 0 1 .429-.807l2.02-2.109 6.873-7.09L10.442 0l1.118 1.154 8.992 9.279a1.7 1.7 0 0 1 .357.743Z" data-name="Path 1953" />
-                                                </svg>
-                                             </i>
-                                          </span>
-                                       </a>
-                                    </div>
-                                 </li>
-                              </ul>
+                              </a>
                            </div>
                         </li>
                         <li class="@@if(context.accounting){is-active}">
-                           <div class="nav-link-group hover:f-color-secondary transition-all-1">
-                              <div class="nav-link nav-link-has-menu py-10 py-8">
+                           <div class="nav-link-group lg:hover:f-color-secondary transition-all-1">
+                              <a class="nav-link py-10 py-8" href="#">
                                  <span class="d-inline-block pos-relative">
                                     Accounting
                                     <i class="icon icon-14 ratio-1x1 ml-8 lg:ml-2 flex-none f-color-inherit d-inline-block pos-absolute pin-t pin-r pin-b-auto -mt-2 -mr-10">
@@ -212,85 +122,12 @@
                                        </svg>
                                     </i>
                                  </span>
-                              </div>
-                              <div class="nav-link-toogle">
-                                 <span class="icon icon-20 ml-8 lg:ml-2 flex-none f-color-inherit">
-                                    <span class="down-icon">
-                                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" class="feather feather-chevron-right" viewBox="0 0 24 24">
-                                          <path d="m9 18 6-6-6-6" />
-                                       </svg>
-                                    </span>
-                                    <span class="close-icon">
-                                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                          <path d="M18 6 6 18M6 6l12 12"></path>
-                                       </svg>
-                                    </span>
-                                 </span>
-                              </div>
-                           </div>
-                           <div class="drop-menu-holder f-weight-light f-size-28 xl:f-size-36">
-                              <ul class="drop-menu bg-primary f-color-white p-20 list-reset">
-                                 <li class="go-back f-size-20 lg:f-size-30 mb-12">
-                                    <div class="nav-link-group hover:f-color-secondary transition-all-1">
-                                       <span class="icon icon-20 mr-8 lg:mr-2 flex-none f-color-inherit">
-                                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                             <path d="m15 18-6-6 6-6" />
-                                          </svg>
-                                       </span>
-                                       <span>Accounting</span>
-                                    </div>
-                                 </li>
-                                 <li class="@@if(context.individuals){is-active}">
-                                    <div class="nav-link-group hover:f-color-secondary transition-all-1">
-                                       <a class="nav-link py-10 py-8" href="#">
-                                          <span class="d-inline-block pos-relative">
-                                             Individuals + Landlords
-                                             <i class="icon icon-14 ratio-1x1 ml-8 lg:ml-2 flex-none f-color-inherit d-inline-block pos-absolute pin-t pin-r pin-b-auto -mt-2 -mr-10">
-                                                <svg class="pos-absolute pin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.687 22.687">
-                                                   <path transform="rotate(45 3.952 9.54)" fill="currentColor"
-                                                      d="M10.442 6.657 0 11.162a1.7 1.7 0 0 1 .429-.807l2.02-2.109 6.873-7.09L10.442 0l1.118 1.154 8.992 9.279a1.7 1.7 0 0 1 .357.743Z" data-name="Path 1953" />
-                                                </svg>
-                                             </i>
-                                          </span>
-                                       </a>
-                                    </div>
-                                 </li>
-                                 <li class="@@if(context.businesses){is-active}">
-                                    <div class="nav-link-group hover:f-color-secondary transition-all-1">
-                                       <a class="nav-link py-10 py-8" href="#">
-                                          <span class="d-inline-block pos-relative">
-                                             Businesses
-                                             <i class="icon icon-14 ratio-1x1 ml-8 lg:ml-2 flex-none f-color-inherit d-inline-block pos-absolute pin-t pin-r pin-b-auto -mt-2 -mr-10">
-                                                <svg class="pos-absolute pin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.687 22.687">
-                                                   <path transform="rotate(45 3.952 9.54)" fill="currentColor"
-                                                      d="M10.442 6.657 0 11.162a1.7 1.7 0 0 1 .429-.807l2.02-2.109 6.873-7.09L10.442 0l1.118 1.154 8.992 9.279a1.7 1.7 0 0 1 .357.743Z" data-name="Path 1953" />
-                                                </svg>
-                                             </i>
-                                          </span>
-                                       </a>
-                                    </div>
-                                 </li>
-                                 <li class="@@if(context.profit){is-active}">
-                                    <div class="nav-link-group hover:f-color-secondary transition-all-1">
-                                       <a class="nav-link py-10 py-8" href="#">
-                                          <span class="d-inline-block pos-relative">
-                                             Not for Profit
-                                             <i class="icon icon-14 ratio-1x1 ml-8 lg:ml-2 flex-none f-color-inherit d-inline-block pos-absolute pin-t pin-r pin-b-auto -mt-2 -mr-10">
-                                                <svg class="pos-absolute pin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.687 22.687">
-                                                   <path transform="rotate(45 3.952 9.54)" fill="currentColor"
-                                                      d="M10.442 6.657 0 11.162a1.7 1.7 0 0 1 .429-.807l2.02-2.109 6.873-7.09L10.442 0l1.118 1.154 8.992 9.279a1.7 1.7 0 0 1 .357.743Z" data-name="Path 1953" />
-                                                </svg>
-                                             </i>
-                                          </span>
-                                       </a>
-                                    </div>
-                                 </li>
-                              </ul>
+                              </a>
                            </div>
                         </li>
                         <li class="@@if(context.navigation){is-active}">
-                           <div class="nav-link-group hover:f-color-secondary transition-all-1">
-                              <div class="nav-link nav-link-has-menu py-10 py-8">
+                           <div class="nav-link-group lg:hover:f-color-secondary transition-all-1">
+                              <a class="nav-link py-10 py-8" href="#">
                                  <span class="d-inline-block pos-relative">
                                     Navigation
                                     <i class="icon icon-14 ratio-1x1 ml-8 lg:ml-2 flex-none f-color-inherit d-inline-block pos-absolute pin-t pin-r pin-b-auto -mt-2 -mr-10">
@@ -300,86 +137,13 @@
                                        </svg>
                                     </i>
                                  </span>
-                              </div>
-                              <div class="nav-link-toogle">
-                                 <span class="icon icon-20 ml-8 lg:ml-2 flex-none f-color-inherit">
-                                    <span class="down-icon">
-                                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" class="feather feather-chevron-right" viewBox="0 0 24 24">
-                                          <path d="m9 18 6-6-6-6" />
-                                       </svg>
-                                    </span>
-                                    <span class="close-icon">
-                                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                          <path d="M18 6 6 18M6 6l12 12"></path>
-                                       </svg>
-                                    </span>
-                                 </span>
-                              </div>
-                           </div>
-                           <div class="drop-menu-holder f-weight-light f-size-28 xl:f-size-36">
-                              <ul class="drop-menu bg-primary f-color-white p-20 list-reset">
-                                 <li class="go-back f-size-20 lg:f-size-30 mb-12">
-                                    <div class="nav-link-group hover:f-color-secondary transition-all-1">
-                                       <span class="icon icon-20 mr-8 lg:mr-2 flex-none f-color-inherit">
-                                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                             <path d="m15 18-6-6 6-6" />
-                                          </svg>
-                                       </span>
-                                       <span>Navigation</span>
-                                    </div>
-                                 </li>
-                                 <li class="@@if(context.individuals){is-active}">
-                                    <div class="nav-link-group hover:f-color-secondary transition-all-1">
-                                       <a class="nav-link py-10 py-8" href="#">
-                                          <span class="d-inline-block pos-relative">
-                                             Individuals + Landlords
-                                             <i class="icon icon-14 ratio-1x1 ml-8 lg:ml-2 flex-none f-color-inherit d-inline-block pos-absolute pin-t pin-r pin-b-auto -mt-2 -mr-10">
-                                                <svg class="pos-absolute pin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.687 22.687">
-                                                   <path transform="rotate(45 3.952 9.54)" fill="currentColor"
-                                                      d="M10.442 6.657 0 11.162a1.7 1.7 0 0 1 .429-.807l2.02-2.109 6.873-7.09L10.442 0l1.118 1.154 8.992 9.279a1.7 1.7 0 0 1 .357.743Z" data-name="Path 1953" />
-                                                </svg>
-                                             </i>
-                                          </span>
-                                       </a>
-                                    </div>
-                                 </li>
-                                 <li class="@@if(context.businesses){is-active}">
-                                    <div class="nav-link-group hover:f-color-secondary transition-all-1">
-                                       <a class="nav-link py-10 py-8" href="#">
-                                          <span class="d-inline-block pos-relative">
-                                             Businesses
-                                             <i class="icon icon-14 ratio-1x1 ml-8 lg:ml-2 flex-none f-color-inherit d-inline-block pos-absolute pin-t pin-r pin-b-auto -mt-2 -mr-10">
-                                                <svg class="pos-absolute pin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.687 22.687">
-                                                   <path transform="rotate(45 3.952 9.54)" fill="currentColor"
-                                                      d="M10.442 6.657 0 11.162a1.7 1.7 0 0 1 .429-.807l2.02-2.109 6.873-7.09L10.442 0l1.118 1.154 8.992 9.279a1.7 1.7 0 0 1 .357.743Z" data-name="Path 1953" />
-                                                </svg>
-                                             </i>
-                                          </span>
-                                       </a>
-                                    </div>
-                                 </li>
-                                 <li class="@@if(context.profit){is-active}">
-                                    <div class="nav-link-group hover:f-color-secondary transition-all-1">
-                                       <a class="nav-link py-10 py-8" href="#">
-                                          <span class="d-inline-block pos-relative">
-                                             Not for Profit
-                                             <i class="icon icon-14 ratio-1x1 ml-8 lg:ml-2 flex-none f-color-inherit d-inline-block pos-absolute pin-t pin-r pin-b-auto -mt-2 -mr-10">
-                                                <svg class="pos-absolute pin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.687 22.687">
-                                                   <path transform="rotate(45 3.952 9.54)" fill="currentColor"
-                                                      d="M10.442 6.657 0 11.162a1.7 1.7 0 0 1 .429-.807l2.02-2.109 6.873-7.09L10.442 0l1.118 1.154 8.992 9.279a1.7 1.7 0 0 1 .357.743Z" data-name="Path 1953" />
-                                                </svg>
-                                             </i>
-                                          </span>
-                                       </a>
-                                    </div>
-                                 </li>
-                              </ul>
+                              </a>
                            </div>
                         </li>
                      </ul>
                   </div>
                </li>
-               <li class="@@if(context.resources){is-active} hover:f-color-primary">
+               <li class="@@if(context.resources){is-active} lg:hover:f-color-primary">
                   <div class="nav-link-group lg:hover:f-color-primary transition-all-1">
                      <a class="nav-link py-10 px-12 lg:py-28 lg:px-28" href="#">
                         <span class="d-inline-block pos-relative">
@@ -394,7 +158,7 @@
                      </a>
                   </div>
                </li>
-               <li class="@@if(context.findUs){is-active} hover:f-color-primary">
+               <li class="@@if(context.findUs){is-active} lg:hover:f-color-primary">
                   <div class="nav-link-group lg:hover:f-color-primary transition-all-1">
                      <a class="nav-link py-10 px-12 lg:py-28 lg:px-28" href="find-us.html">
                         <span class="d-inline-block pos-relative">

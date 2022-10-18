@@ -47,7 +47,7 @@ h2 {
   // text-transform: uppercase;
   font-size: 1.9rem;
   letter-spacing: 0.06em;
-  // font-weight: 500;
+  font-weight: 600;
   // padding: 1.2rem 4rem;
 
   // &.sm {
@@ -57,6 +57,9 @@ h2 {
 
   &:hover {
     box-shadow: $shadow_lg;
+    &.bg-primary {
+      color: $color-secondary;
+    }
   }
 }
 
@@ -292,29 +295,6 @@ h2 {
   }
   @media (min-width: $bp_xl) {
     margin-top: $header_lg;
-  }
-}
-
-.navbar {
-  top: $header_sm;
-  @media all and (max-width: $bp) {
-    max-width: unset;
-  }
-  @media (min-width: $bp_md) {
-    top: $header_md;
-  }
-  @media (min-width: $bp_xl) {
-    top: $header_lg;
-  }
-}
-
-.navbar > ul > li > .drop-menu-holder {
-  top: 0;
-  @media (min-width: $bp_lg) {
-    top: $header_md;
-  }
-  @media (min-width: $bp_xl) {
-    top: $header_lg;
   }
 }
 

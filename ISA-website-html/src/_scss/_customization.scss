@@ -132,9 +132,7 @@ $states: (
   // active\: null,
 );
 
-$gradient-1: linear-gradient(180deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 50%);
-$gradient-sky: linear-gradient(180deg, rgba(255,255,255,0) 60%, rgba(205,235,250,1) 80%);
-$gradient-footer: linear-gradient(0deg, rgba(88,110,28,1) 5px, rgba(205,235,250,1) 15px);
+$gradient-1: linear-gradient(180deg, rgba($color-secondary, 0) 40%, rgba($color-secondary, 1) 100%);
 $bgColors: (
   $bgColorsClassPrefix "$color-placeholder" $color-placeholder 'states' 'no-parent' null,
   $bgColorsClassPrefix "inherit" inherit 'states' 'no-parent' null,
@@ -159,7 +157,7 @@ $bgColors: (
 
 $shadowOverClassPrefix: "overlay";
 $shadowOver: (
-  // $shadowOverClassPrefix 'white' $gradient-1 'no-states',
+  $shadowOverClassPrefix 'secondary' $gradient-1 'no-states',
   // $shadowOverClassPrefix "grad-1" $gradient-1 'states' 'no-parent' null,
   //$shadowOverClassPrefix 'grad-primary-to-right' $gradList-primary-to-right 'states',
   //$shadowOverClassPrefix 'grad-secondary' $gradList-secondary 'states',
@@ -538,11 +536,11 @@ $negativeMargin: (
   $negativeMarginClassPrefix "0" 0,
 );
 
-$shadow: 0 1px 3px 0 rgba($color-grey, 0.10), 0 1px 2px 0 rgba($color-grey, 0.06);
-$shadow_md: 0 4px 16px -1px rgba($color-grey, 0.15), 0 2px 2px -1px rgba($color-grey, 0.06);
-$shadow_lg: 0 6px 12px 6px rgba(darken($color-grey, 25), 0.15);
-$shadow_inner: inset 0 1px 3px 0 rgba($color-grey, 0.10), inset  0 1px 2px 0 rgba($color-grey, 0.06);
-// $shadow_outline: inset 0 2px 4px 0 rgba($color-grey, 0.06);
+$shadow: 0 1px 3px 0 rgba($color-secondary, 0.10), 0 1px 2px 0 rgba($color-secondary, 0.06);
+$shadow_md: 0 4px 16px -1px rgba($color-secondary, 0.15), 0 2px 2px -1px rgba($color-secondary, 0.06);
+$shadow_lg: 0 6px 12px 6px rgba(darken($color-secondary, 50), 0.15);
+$shadow_inner: inset 0 1px 3px 0 rgba($color-secondary, 0.10), inset  0 1px 2px 0 rgba($color-secondary, 0.06);
+// $shadow_outline: inset 0 2px 4px 0 rgba($color-secondary, 0.06);
 
 $shadows: (
   // $shadowsClassPrefix null $shadow 'states',

@@ -72,7 +72,7 @@ function setMultiCardCarousel(elm) {
     nav: false,
     dots: false,
     smartSpeed: 500,
-    // autoplay: true,
+    autoplay: true,
     autoplayTimeout: 4000,
     autoplayHoverPause: true,
     responsive: {
