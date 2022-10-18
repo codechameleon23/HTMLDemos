@@ -45,8 +45,11 @@
    > .nav-link-group > .nav-link .icon {
       opacity: 0;
    }
-   &.is-active > .nav-link-group > .nav-link .icon {
-      opacity: 1;
+   &:hover,
+   &.is-active {
+      > .nav-link-group > .nav-link .icon {
+         opacity: 1;
+      }
    }
 }
 
