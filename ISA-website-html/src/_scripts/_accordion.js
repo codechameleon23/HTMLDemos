@@ -67,13 +67,11 @@
       var targetTab = item.find('[data-filterby="' + elmAttr + '"]').closest('.accordion');
 
       if (togglable && targetTab.hasClass("is-open")) {
-        console.log('togglable', togglable);
         if (closeOthers) {
           targetAccordions.removeClass('is-open');
         }
         targetTab.removeClass("is-open");
       } else {
-        console.log('closeOthers', closeOthers);
         if (closeOthers) {
           targetAccordions.removeClass('is-open');
         }

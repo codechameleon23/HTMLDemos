@@ -9,7 +9,6 @@
       var jsBannerCarouselNxt = carouselOuter.find('.jsCarouselNxt');
       var isBannerCarouselSingle = jsBannerCarousel.children().length === 1;
       var dataSettings = jsBannerCarousel.data();
-      console.log('dataSettings', dataSettings);
       var defaultSettings = {
         center: true,
         items: 1,

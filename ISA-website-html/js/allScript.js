@@ -431,7 +431,6 @@ $(document).ready(function () {
       var jsBannerCarouselNxt = carouselOuter.find('.jsCarouselNxt');
       var isBannerCarouselSingle = jsBannerCarousel.children().length === 1;
       var dataSettings = jsBannerCarousel.data();
-      console.log('dataSettings', dataSettings);
       var defaultSettings = {
         center: true,
         items: 1,
@@ -547,7 +546,7 @@ function setMultiCardCarousel(elm) {
     nav: false,
     dots: false,
     smartSpeed: 500,
-    // autoplay: true,
+    autoplay: true,
     autoplayTimeout: 4000,
     autoplayHoverPause: true,
     responsive: {
@@ -774,13 +773,11 @@ if ($('.js_media_Gallery_Popup').length > 0) { //if element exists
       var targetTab = item.find('[data-filterby="' + elmAttr + '"]').closest('.accordion');
 
       if (togglable && targetTab.hasClass("is-open")) {
-        console.log('togglable', togglable);
         if (closeOthers) {
           targetAccordions.removeClass('is-open');
         }
         targetTab.removeClass("is-open");
       } else {
-        console.log('closeOthers', closeOthers);
         if (closeOthers) {
           targetAccordions.removeClass('is-open');
         }
@@ -886,7 +883,6 @@ Array.prototype.forEach.call(inputs, function (input) {
     }
 
     if (fileName) {
-      console.log('fileName', fileName);
       label.querySelector("span").innerHTML = fileName;
     } else {
       label.innerHTML = labelVal;
@@ -1028,9 +1024,7 @@ if ($('#imageGallery').length){//if element exists
     });
 
     var openPhotoSwipe = function () {
-       console.log('xdSdadas', document.querySelectorAll('.pswp'));
       var pswpElement = document.querySelectorAll('.pswp')[0];
-      // console.log('galleryItems', galleryItems);
       var items = galleryItems;
       var options = {
           index: parseInt(imageGallery.getCurrentSlideCount() - 1) || 0,

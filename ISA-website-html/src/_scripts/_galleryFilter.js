@@ -4,7 +4,6 @@
   var activeClass = "is-active";
   if ($('.filter_parent').length) { //if element exists
     $('.filter_tab').on('click', function () {
-      console.log('innnnn');
 
       $filter_parent = $(this).closest('.filter_parent');
       $filterBy = $(this).attr('data-filterby');
@@ -29,7 +28,6 @@
 
   //filter function
   function filtered(fp) {
-    console.log('innaaASas')
     if (fp && fp.find('.filter_tab.is-active').length) {
       fp.find('.filter_obj').removeClass('filtered');
       filterBy = [];

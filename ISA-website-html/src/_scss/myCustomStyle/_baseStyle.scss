@@ -51,6 +51,13 @@ a{
     transition: $transition-1;
   }
 }
+.transition-all-md {
+  &,
+  *[class*="hover\:"],
+  *[class*="focus\:"] {
+    transition: $transition-md;
+  }
+}
 
 @media (max-width: $navbarBp){
   .resize-transition .navbar, 

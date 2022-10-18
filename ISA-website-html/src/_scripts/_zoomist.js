@@ -13,7 +13,7 @@ new Zoomist(myZoomist, {
   // event
   on: {
     ready() {
-      console.log('Zoomist ready!')
+      // console.log('Zoomist ready!')
     }
   }
 })
