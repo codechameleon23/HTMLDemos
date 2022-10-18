@@ -14,13 +14,3 @@
       liParent.addClass('is-open');
     }
   });
-
-  // $('.back-button').on('click', function(e){
-  //   var elm = $(this);
-  //   var liParent = elm.closest('li');
-  //   if(!liParent.hasClass('is-open')){
-  //     liParent.addClass('is-open');
-  //   }else{
-  //     liParent.removeClass('is-open');
-  //   }
-  // });

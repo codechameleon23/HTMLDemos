@@ -12,31 +12,87 @@
    .nav-link-toogle {
       display: flex;
       flex-direction: column;
+      position: absolute;
+      justify-content: center;
+      top: 0;
+      right: 0;
+      height: 100%;
    }
 }
 
 
 .navbar li {
-   .nav-link-group > .nav-link-toogle .down-icon,
-   .nav-link-group > .nav-link-toogle .close-icon {
+   > .nav-link-group > .nav-link-toogle > .icon .down-icon,
+   > .nav-link-group > .nav-link-toogle > .icon .close-icon {
       transition: $transition;
    }
-   .nav-link-group > .nav-link-toogle .down-icon {
+   > .nav-link-group > .nav-link-toogle > .icon .down-icon {
       opacity: 1;
    }
-   &.is-open .nav-link-group > .nav-link-toogle .down-icon {
+   &.is-open {
+      z-index: 1;
+   }
+   &.is-open > .nav-link-group > .nav-link-toogle > .icon .down-icon {
       transform: translateY(-50%);
       opacity: 0;
    }
 }
 
 .navbar li {
-   .nav-link-group > .nav-link-toogle .close-icon {
+   > .nav-link-group > .nav-link-toogle > .icon .close-icon {
       transform: translateY(0%);
       opacity: 0;
    }
-   &.is-open .nav-link-group > .nav-link-toogle .close-icon {
-      transform: translateY(-100%);
+   &.is-open > .nav-link-group > .nav-link-toogle > .icon .close-icon {
+      transform: translateY(-50%);
       opacity: 1;
    }
 }
+
+
+// nav custom style
+.drop-menu-holder {
+   position: fixed;
+   overflow: auto;
+   height: 100vh;
+   max-height: 74.5rem;
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+   top: 0;
+   left: auto;
+   right: 0;
+   pointer-events: none;
+   width: 100%;
+   @media (min-width: $bp_lg) {
+      min-height: 74.5rem;
+   }
+   > .drop-menu {
+      pointer-events: all;
+      transition: $transition;
+      transform: translateX(100%);
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      flex: auto;
+      overflow-x: hidden;
+      overflow-y: auto;
+      // @media (min-width: $bp_lg) {
+      //    max-width: 50vw;
+      // }
+   }
+}
+
+.navbar li {
+   &.is-open > .drop-menu-holder > .drop-menu {
+      transform: translateX(0%);
+   }
+}
+
+.navbar > ul > li > .drop-menu-holder {
+   @media (min-width: $bp_lg) {
+      width: 50%;
+   }
+   }

@@ -23,7 +23,7 @@
 
 <body class="jsNavbarToggle is-close flex-col pos-relative">
   <!-- Header -->
-  <header class="header w-full flex-col z-100 pos-static bg-white shadow-lg lg:shadow-none">
+  <header class="header w-full flex-col z-100 pos-absolute bg-white shadow-lg lg:shadow-none">
     <div class="container md:container-md lg:container-lg xl:container-xl xxl:container-xxl mx-auto lg:pos-relative">
       <div class="flex-row lg:align-end justify-space-between py-30">
         <a href="index.html" title="IS Accountancy" class="brand-logo d-inline-block ratio-logo icon-logo-main-sm md:icon-logo-main-md xl:icon-logo-main">
@@ -46,85 +46,200 @@
             </span>
           </div>
         </div>
-        <nav class="bg-primary f-color-white lg:bg-white lg:f-color-primary-dark navbar pos-absolute pin-x z-30 lg:pin-none lg:pos-static lg:ml-auto lg:w-auto shadow-lg lg:shadow-none lg:-mb-30 lg:-mr-28">
-          <ul class="list-reset flex-col lg:flex-row justify-end pos-relative f-size-28 lg:f-size-20 mt-64 lg:mt-0">
-            <li class="">
-              <a class="nav-link py-10 px-20 lg:py-30 lg:px-28" href="index.html">home</a>
-            </li>
-            <li class="">
-              <a class="nav-link py-10 px-20 lg:py-30 lg:px-28" href="#">about us</a>
-            </li>
-            <li class="">
-              <div class="submenu-trigger nav-link py-10 px-20 lg:py-30 lg:px-28 flex-row pos-relative">
-                <span>
-                  services
-                </span>
-                <i class="icon-14 ratio-1x1 ml-8 lg:ml-2 flex-none f-color-inherit d-inline-block pos-absolute pin-t pin-r pin-b-auto mt-24 mr-14">
-                  <svg class="pos-absolute pin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.687 22.687">
-                    <path transform="rotate(45 3.952 9.54)" fill="currentColor" d="M10.442 6.657 0 11.162a1.7 1.7 0 0 1 .429-.807l2.02-2.109 6.873-7.09L10.442 0l1.118 1.154 8.992 9.279a1.7 1.7 0 0 1 .357.743Z" data-name="Path 1953" />
-                  </svg>
-                </i>
+        <nav class="bg-primary f-color-white lg:bg-white lg:f-color-primary-dark navbar pos-fixed pin-x pin-b z-30 shadow-lg lg:pos-static lg:pin-none lg:pos-static lg:ml-auto lg:w-auto lg:shadow-none lg:-mb-30 lg:-mr-20">
+          <ul class="list-reset flex-col lg:flex-row justify-end pos-relative f-size-28 lg:f-size-20 mt-40 lg:mt-0">
+            <li class="hover:f-color-primary">
+              <div class="nav-link-group hover:f-color-secondary transition-all-1">
+                <a class="nav-link py-10 px-12 lg:py-28 lg:px-20" href="index.html">home</a>
               </div>
-              <!-- Submenu -->
-              <div class="submenu hero-banner lg:w-screen f-size-14 lg:f-size-30 bg-primary f-color-white pos-fixed pin-l pin-r pin-t pin-b lg:pos-absolute lg:pin-r-auto lg:pin-b-auto lg:pin-t-100 z-40">
-                <div class="bg-primary">
-                  <div class="container-fluid h-full lg:h-auto pt-16 pb-16">
-                    <div class="pt-10 px-20 flex-row align-center justify-end lg:d-hidden">
-                      <button class="back-button uppercase f-color-inherit flex-row align-center f-weight-bold">
-                        <span class="icon icon-28 lg:icon-16 mr-8 flex-none">
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down" viewBox="0 0 24 24">
-                            <path d="m6 9 6 6 6-6" />
-                          </svg>
-                        </span>
-                        Back
-                      </button>
-                    </div>
-                    <div class="px-30 py-20">
-                      <div class="text-wrap">
-                        <h3 class="f-size-20 lg:f-size-30">services</h3>
-                        <ul class="list-reset f-weight-light f-size-28 xl:f-size-50">
-                          <li class="">
-                            <a class="d-inline-block py-10 pr-30 pos-relative hover:f-color-secondary transition-all-1" href="./tax-services.html">
-                              <span>Tax</span>
-                              <i class="icon-16 ratio-1x1 ml-8 lg:ml-2 flex-none f-color-inherit d-inline-block pos-absolute pin-t pin-r pin-b-auto mt-8 mr-10">
-                                <svg class="pos-absolute pin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.687 22.687">
-                                  <path transform="rotate(45 3.952 9.54)" fill="currentColor" d="M10.442 6.657 0 11.162a1.7 1.7 0 0 1 .429-.807l2.02-2.109 6.873-7.09L10.442 0l1.118 1.154 8.992 9.279a1.7 1.7 0 0 1 .357.743Z" data-name="Path 1953" />
-                                </svg>
-                              </i>
-                            </a>
-                          </li>
-                          <li class="">
-                            <a class="d-inline-block py-10 pr-30 pos-relative hover:f-color-secondary transition-all-1" href="./accounting-services.html">
-                              <span>Accounting</span>
-                              <i class="icon-16 ratio-1x1 ml-8 lg:ml-2 flex-none f-color-inherit d-inline-block pos-absolute pin-t pin-r pin-b-auto mt-14 mr-10">
-                                <svg class="pos-absolute pin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.687 22.687">
-                                  <path transform="rotate(45 3.952 9.54)" fill="currentColor" d="M10.442 6.657 0 11.162a1.7 1.7 0 0 1 .429-.807l2.02-2.109 6.873-7.09L10.442 0l1.118 1.154 8.992 9.279a1.7 1.7 0 0 1 .357.743Z" data-name="Path 1953" />
-                                </svg>
-                              </i>
-                            </a>
-                          </li>
-                          <li class="">
-                            <a class="d-inline-block py-10 pr-30 pos-relative hover:f-color-secondary transition-all-1" href="./navigation-services.html">
-                              <span>Navigation</span>
-                              <i class="icon-16 ratio-1x1 ml-8 lg:ml-2 flex-none f-color-inherit d-inline-block pos-absolute pin-t pin-r pin-b-auto mt-14 mr-10">
-                                <svg class="pos-absolute pin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.687 22.687">
-                                  <path transform="rotate(45 3.952 9.54)" fill="currentColor" d="M10.442 6.657 0 11.162a1.7 1.7 0 0 1 .429-.807l2.02-2.109 6.873-7.09L10.442 0l1.118 1.154 8.992 9.279a1.7 1.7 0 0 1 .357.743Z" data-name="Path 1953" />
-                                </svg>
-                              </i>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
+            </li>
+            <li class="hover:f-color-primary">
+              <div class="nav-link-group hover:f-color-secondary transition-all-1">
+                <a class="nav-link py-10 px-12 lg:py-28 lg:px-20" href="#">about us</a>
+              </div>
+            </li>
+            <li class="hover:f-color-primary">
+              <div class="nav-link-group hover:f-color-secondary transition-all-1">
+                <a class="nav-link py-10 px-12 lg:py-28 lg:px-20" href="index.html">services</a>
+                <div class="nav-link-toogle">
+                  <span class="icon icon-28 lg:icon-16 ml-8 lg:ml-2 flex-none f-color-inherit">
+                    <span class="down-icon">
+                      <svg class="lg:d-hidden" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="m9 18 6-6-6-6" />
+                      </svg>
+                      <svg class="d-hidden lg:d-inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="m6 9 6 6 6-6" />
+                      </svg>
+                    </span>
+                    <span class="close-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M18 6 6 18M6 6l12 12"></path>
+                      </svg>
+                    </span>
+                  </span>
                 </div>
               </div>
+              <div class="drop-menu-holder f-weight-light f-size-28 xl:f-size-48">
+                <ul class="drop-menu bg-primary f-color-white p-20 list-reset">
+                  <li class="f-size-20 lg:f-size-30 mb-12">
+                    <span>services</span>
+                  </li>
+                  <li class="">
+                    <div class="nav-link-group hover:f-color-secondary transition-all-1">
+                      <a class="nav-link py-10 py-8" href="index.html">Tax</a>
+                      <div class="nav-link-toogle">
+                        <span class="icon icon-20 ml-8 lg:ml-2 flex-none f-color-inherit">
+                          <span class="down-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" class="feather feather-chevron-right" viewBox="0 0 24 24">
+                              <path d="m9 18 6-6-6-6" />
+                            </svg>
+                          </span>
+                          <span class="close-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                              <path d="M18 6 6 18M6 6l12 12"></path>
+                            </svg>
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="drop-menu-holder f-weight-light f-size-28 xl:f-size-36">
+                      <ul class="drop-menu bg-primary f-color-white p-20 list-reset">
+                        <li class="go-back f-size-20 lg:f-size-30 mb-12">
+                          <div class="nav-link-group hover:f-color-secondary transition-all-1">
+                            <span class="icon icon-20 mr-8 lg:mr-2 flex-none f-color-inherit">
+                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path d="m15 18-6-6 6-6" />
+                              </svg>
+                            </span>
+                            <span>Tax</span>
+                          </div>
+                        </li>
+                        <li class="">
+                          <div class="nav-link-group hover:f-color-secondary transition-all-1">
+                            <a class="nav-link py-10 py-8" href="#">Individuals + Landlords</a>
+                          </div>
+                        </li>
+                        <li class="">
+                          <div class="nav-link-group hover:f-color-secondary transition-all-1">
+                            <a class="nav-link py-10 py-8" href="#">Businesses</a>
+                          </div>
+                        </li>
+                        <li class="">
+                          <div class="nav-link-group hover:f-color-secondary transition-all-1">
+                            <a class="nav-link py-10 py-8" href="#">Not for Profit</a>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="">
+                    <div class="nav-link-group hover:f-color-secondary transition-all-1">
+                      <a class="nav-link py-10 py-8" href="index.html">Accounting</a>
+                      <div class="nav-link-toogle">
+                        <span class="icon icon-20 ml-8 lg:ml-2 flex-none f-color-inherit">
+                          <span class="down-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" class="feather feather-chevron-right" viewBox="0 0 24 24">
+                              <path d="m9 18 6-6-6-6" />
+                            </svg>
+                          </span>
+                          <span class="close-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                              <path d="M18 6 6 18M6 6l12 12"></path>
+                            </svg>
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="drop-menu-holder f-weight-light f-size-28 xl:f-size-36">
+                      <ul class="drop-menu bg-primary f-color-white p-20 list-reset">
+                        <li class="go-back f-size-20 lg:f-size-30 mb-12">
+                          <div class="nav-link-group hover:f-color-secondary transition-all-1">
+                            <span class="icon icon-20 mr-8 lg:mr-2 flex-none f-color-inherit">
+                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path d="m15 18-6-6 6-6" />
+                              </svg>
+                            </span>
+                            <span>Accounting</span>
+                          </div>
+                        </li>
+                        <li class="">
+                          <div class="nav-link-group hover:f-color-secondary transition-all-1">
+                            <a class="nav-link py-10 py-8" href="#">Individuals + Landlords</a>
+                          </div>
+                        </li>
+                        <li class="">
+                          <div class="nav-link-group hover:f-color-secondary transition-all-1">
+                            <a class="nav-link py-10 py-8" href="#">Businesses</a>
+                          </div>
+                        </li>
+                        <li class="">
+                          <div class="nav-link-group hover:f-color-secondary transition-all-1">
+                            <a class="nav-link py-10 py-8" href="#">Not for Profit</a>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="">
+                    <div class="nav-link-group hover:f-color-secondary transition-all-1">
+                      <a class="nav-link py-10 py-8" href="index.html">Navigation</a>
+                      <div class="nav-link-toogle">
+                        <span class="icon icon-20 ml-8 lg:ml-2 flex-none f-color-inherit">
+                          <span class="down-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" class="feather feather-chevron-right" viewBox="0 0 24 24">
+                              <path d="m9 18 6-6-6-6" />
+                            </svg>
+                          </span>
+                          <span class="close-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                              <path d="M18 6 6 18M6 6l12 12"></path>
+                            </svg>
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="drop-menu-holder f-weight-light f-size-28 xl:f-size-36">
+                      <ul class="drop-menu bg-primary f-color-white p-20 list-reset">
+                        <li class="go-back f-size-20 lg:f-size-30 mb-12">
+                          <div class="nav-link-group hover:f-color-secondary transition-all-1">
+                            <span class="icon icon-20 mr-8 lg:mr-2 flex-none f-color-inherit">
+                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path d="m15 18-6-6 6-6" />
+                              </svg>
+                            </span>
+                            <span>Navigation</span>
+                          </div>
+                        </li>
+                        <li class="">
+                          <div class="nav-link-group hover:f-color-secondary transition-all-1">
+                            <a class="nav-link py-10 py-8" href="#">Individuals + Landlords</a>
+                          </div>
+                        </li>
+                        <li class="">
+                          <div class="nav-link-group hover:f-color-secondary transition-all-1">
+                            <a class="nav-link py-10 py-8" href="#">Businesses</a>
+                          </div>
+                        </li>
+                        <li class="">
+                          <div class="nav-link-group hover:f-color-secondary transition-all-1">
+                            <a class="nav-link py-10 py-8" href="#">Not for Profit</a>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </li>
-            <li class="">
-              <a class="nav-link py-10 px-20 lg:py-30 lg:px-28" href="#">resources</a>
+            <li class="hover:f-color-primary">
+              <div class="nav-link-group hover:f-color-secondary transition-all-1">
+                <a class="nav-link py-10 px-12 lg:py-28 lg:px-20" href="#">resources</a>
+              </div>
             </li>
-            <li class="is-active">
-              <a class="nav-link py-10 px-20 lg:py-30 lg:px-28" href="find-us.html">find us</a>
+            <li class="hover:f-color-primary">
+              <div class="nav-link-group hover:f-color-secondary transition-all-1">
+                <a class="nav-link py-10 px-12 lg:py-28 lg:px-20" href="find-us.html">find us</a>
+              </div>
             </li>
           </ul>
         </nav>

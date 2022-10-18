@@ -277,25 +277,60 @@ h2 {
   }
 }
 
-// // IOS
-// @supports (-webkit-touch-callout: none) {
-//   /* CSS specific to iOS devices */ 
-//   .parallax {
-//     background-attachment: unset;
-//   }
-// }
-
-// @supports not (-webkit-touch-callout: none) {
-//   /* CSS for other than iOS devices */ 
-//   .parallax {
-//     background-attachment: fixed;
-//   }
-// }
-
 .clip-path {
   clip-path: inset(0 0 0 0);
 }
 
 .airplane-fixed {
   width: 43.4rem;
+}
+
+.header + main {
+  margin-top: $header_sm;
+  @media (min-width: $bp_md) {
+    margin-top: $header_md;
+  }
+  @media (min-width: $bp_xl) {
+    margin-top: $header_lg;
+  }
+}
+
+.navbar {
+  top: $header_sm;
+  @media all and (max-width: $bp) {
+    max-width: unset;
+  }
+  @media (min-width: $bp_md) {
+    top: $header_md;
+  }
+  @media (min-width: $bp_xl) {
+    top: $header_lg;
+  }
+}
+
+.navbar > ul > li > .drop-menu-holder {
+  top: 0;
+  @media (min-width: $bp_lg) {
+    top: $header_md;
+  }
+  @media (min-width: $bp_xl) {
+    top: $header_lg;
+  }
+}
+
+.jsNavbarToggle {
+  &.is-open, &.menu-open {
+    .header {
+      position: fixed;
+    }
+  }
+  &.is-open {
+     @media all and (max-width: $bp) {
+        .hamburger {
+           position: relative;
+           top: 0;
+           right: 0;
+        }
+     }
+  }
 }
