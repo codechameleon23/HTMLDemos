@@ -181,11 +181,10 @@
     </section>
     <!-- maps -->
     <section class="pos-relative pb-90 pt-40" data-aos="fade-in" data-aos-delay="200">
-      <div class="container md:container-md lg:container-lg mx-auto pb-60">
-        <div id="zoomistFrame" data-zoomist-src="./images/ISA_ILLUSTRATED_MAP-1.svg"></div>
-        <!-- <div id="zoomTooFrame" class="ratio-1x1 lg:ratio-illustrated-map">
-               <img class="pos-absolute pin w-full h-full" src="./images/ISA_ILLUSTRATED_MAP-1.svg" data-src="./images/ISA_ILLUSTRATED_MAP-1.svg" />
-            </div> -->
+      <div class="container md:container-md lg:container-lg mx-auto">
+        <div id="photoSwipeFrame" class="ratio-illustrated-map">
+          <img class="pos-absolute pin w-full h-full" src="./images/ISA_ILLUSTRATED_MAP-1.svg" data-src="./images/ISA_ILLUSTRATED_MAP-large.jpg" />
+        </div>
       </div>
       <div id="map-canvas" class="d-hidden map pos-absolute pin h-full w-full flex-stretch z-10"></div>
       <div class="flex-row justify-center pos-absolute pin-b pin-x z-10">
@@ -275,6 +274,49 @@
         </div>
       </section>
     </section>
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+      <!-- Background of PhotoSwipe. It's a separate element, as animating opacity is faster than rgba(). -->
+      <div class="pswp__bg"></div>
+      <!-- Slides wrapper with overflow:hidden. -->
+      <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+        <div class="pswp__container">
+          <!-- don't modify these 3 pswp__item elements, data is added later on -->
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+          <div class="pswp__top-bar">
+            <!--  Controls are self-explanatory. Order can be changed. -->
+            <div class="pswp__counter"></div>
+            <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+            <button class="pswp__button pswp__button--share" title="Share"></button>
+            <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+            <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+            <!-- element will get class pswp__preloader--active when preloader is running -->
+            <div class="pswp__preloader">
+              <div class="pswp__preloader__icn">
+                <div class="pswp__preloader__cut">
+                  <div class="pswp__preloader__donut"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+            <div class="pswp__share-tooltip"></div>
+          </div>
+          <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+          </button>
+          <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+          </button>
+          <div class="pswp__caption">
+            <div class="pswp__caption__center"></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
   <section class="pt-60">
     <!-- footer gap -->
@@ -349,6 +391,44 @@
     }],
     zoom: 14,
   });
+
+  var imageGallery;
+  window.onload = function() {
+    imageGallery = $('#photoSwipeFrame');
+    var galleryItems = [];
+    $('#photoSwipeFrame img').each(function() {
+      var childImgSrcPath = $(this).attr("data-src");
+      galleryItems.push({
+        src: childImgSrcPath,
+      })
+    });
+
+    galleryItems.forEach(function(item) {
+      var newImg = new Image();
+      newImg.onload = function() {
+        item.w = newImg.width;
+        item.h = newImg.height;
+      };
+      newImg.src = item.src;
+    });
+    var openPhotoSwipe = function() {
+      var pswpElement = document.querySelectorAll('.pswp')[0];
+      var items = galleryItems;
+      var options = {
+        index: 0,
+        shareEl: false,
+        clickToCloseNonZoomable: false,
+        history: false,
+        closeOnScroll: false
+      }
+      var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+      gallery.init();
+    };
+
+    $('#photoSwipeFrame img').on('click', function() {
+      openPhotoSwipe();
+    });
+  }
 </script>
 
 </html>

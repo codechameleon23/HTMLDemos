@@ -29,11 +29,10 @@
 
       <!-- maps -->
       <section class="pos-relative pb-90 pt-40" data-aos="fade-in" data-aos-delay="200">
-         <div class="container md:container-md lg:container-lg mx-auto pb-60">
-            <div id="zoomistFrame" data-zoomist-src="./images/ISA_ILLUSTRATED_MAP-1.svg"></div>
-            <!-- <div id="zoomTooFrame" class="ratio-1x1 lg:ratio-illustrated-map">
-               <img class="pos-absolute pin w-full h-full" src="./images/ISA_ILLUSTRATED_MAP-1.svg" data-src="./images/ISA_ILLUSTRATED_MAP-1.svg" />
-            </div> -->
+         <div class="container md:container-md lg:container-lg mx-auto">
+            <div id="photoSwipeFrame" class="ratio-illustrated-map">
+               <img class="pos-absolute pin w-full h-full" src="./images/ISA_ILLUSTRATED_MAP-1.svg" data-src="./images/ISA_ILLUSTRATED_MAP-large.jpg" />
+            </div>
          </div>
          <div id="map-canvas" class="d-hidden map pos-absolute pin h-full w-full flex-stretch z-10"></div>
          <div class="flex-row justify-center pos-absolute pin-b pin-x z-10">
@@ -126,6 +125,7 @@
          </section>
       </section>
 
+      @@include('./_includes/_product-slider-zoom.html', {})
    </main>
    <section class="pt-60">
       <!-- footer gap -->
@@ -146,6 +146,44 @@
       }],
       zoom: 14,
    });
+
+   var imageGallery;
+   window.onload = function() {
+      imageGallery = $('#photoSwipeFrame');
+      var galleryItems = [];
+      $('#photoSwipeFrame img').each(function(){
+         var childImgSrcPath = $(this).attr("data-src");
+         galleryItems.push({
+            src: childImgSrcPath,
+         })
+      });
+
+      galleryItems.forEach(function (item) {
+         var newImg = new Image();
+         newImg.onload = function () {
+         item.w = newImg.width;
+         item.h = newImg.height;
+         };
+         newImg.src = item.src;
+      });
+      var openPhotoSwipe = function () {
+         var pswpElement = document.querySelectorAll('.pswp')[0];
+         var items = galleryItems;
+         var options = {
+            index: 0,
+            shareEl: false,
+            clickToCloseNonZoomable: false,
+            history: false,
+            closeOnScroll: false
+         }
+         var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+         gallery.init();
+      };
+      
+      $('#photoSwipeFrame img').on('click', function(){
+         openPhotoSwipe();
+      });
+   }
 </script>
 
 </html>

@@ -102,7 +102,7 @@ const PROJECT_JS_LIST = [
   SRC_JS_PATH+'/_docReadyEnds.js',
   // SRC_JS_PATH+'/_paceEnd.js',
   SRC_JS_PATH+'/_productSlider.js',
-  SRC_JS_PATH+'/_zoomist.js',
+  // SRC_JS_PATH+'/_zoomist.js',
   // SRC_JS_PATH+'/_zoomToo.js',
   SRC_JS_PATH+'/_iphonePageHack.js',
 ];
