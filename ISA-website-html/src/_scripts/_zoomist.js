@@ -1,7 +1,7 @@
 //  -------------------------------------------
 //  Zoomist
 //  -------------------------------------------
-const myZoomist = document.querySelector('#my-zoomist')
+const myZoomist = document.querySelector('#zoomistFrame')
 new Zoomist(myZoomist, {
   // optional parameters
   maxRatio: 4,
