@@ -333,3 +333,32 @@ h2 {
 }
 
 .zoom-in {cursor: zoom-in;}
+
+@media (-webkit-min-device-pixel-ratio: 1.1), (-webkit-min-device-pixel-ratio: 1.09375), (min-resolution: 105dpi), (min-resolution: 1.1dppx) {
+  .pswp--svg .pswp__button, .pswp--svg .pswp__button--arrow--left:before, .pswp--svg .pswp__button--arrow--right:before {
+      background-image: url(../images/default-skin.png);
+  }
+}
+
+.pswp__button--zoom {
+  display: block;
+}
+
+.pswp__caption__center {
+  max-width: unset;
+}
+
+.photoSwipeFrame:after {
+  content: "Click images for more detail";
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, .65);
+  color: #000 !important;
+  font-size: 15px !important;
+  z-index: 9999 !important;
+  white-space: nowrap;
+  pointer-events: none;
+}
