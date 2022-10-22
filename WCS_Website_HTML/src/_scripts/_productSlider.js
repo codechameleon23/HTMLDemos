@@ -45,7 +45,6 @@ if ($('#imageGallery').length){//if element exists
     });
 
     var openPhotoSwipe = function () {
-       console.log('xdSdadas', document.querySelectorAll('.pswp'));
       var pswpElement = document.querySelectorAll('.pswp')[0];
       // console.log('galleryItems', galleryItems);
       var items = galleryItems;

@@ -15,6 +15,97 @@ if ($(".jsMultiCardCarousel").length > 0) {
   });
 }
 
+function setItemCarousel(elm, customSettings) {
+  var jsItemCarousel = elm;
+  var carouselOuter = jsItemCarousel.closest(".carousel-outer");
+  var jsItemCarouselPrv = carouselOuter.find(".jsCarouselPrv");
+  var jsItemCarouselNxt = carouselOuter.find(".jsCarouselNxt");
+  var isItemCarouselSingle = jsItemCarousel.children().length === 1;
+  var dataSettings = jsItemCarousel.data();
+  var defaultSettings = {
+    stagePadding: 0,
+    items: 1,
+    margin: 10,
+    loop: !isItemCarouselSingle,
+    mouseDrag: !isItemCarouselSingle,
+    touchDrag: !isItemCarouselSingle,
+    pullDrag: !isItemCarouselSingle,
+    nav: false,
+    dots: true,
+    autoHeight: true
+  };
+  var settings = Object.assign(defaultSettings, customSettings, dataSettings);
+  if (!isItemCarouselSingle) {
+    if (jsItemCarouselPrv) {
+      jsItemCarouselPrv.on("click", function () {
+        carouselOuter.find(jsItemCarousel).trigger("prev.owl.carousel");
+      });
+    }
+    if (jsItemCarouselNxt) {
+      jsItemCarouselNxt.on("click", function () {
+        carouselOuter.find(jsItemCarousel).trigger("next.owl.carousel");
+      });
+    }
+  }
+  if (isItemCarouselSingle) {
+    jsItemCarouselPrv.css({ display: "none" });
+    jsItemCarouselNxt.css({ display: "none" });
+  }
+  return jsItemCarousel.owlCarousel(settings);
+}
+
+function setMultiCardCarousel(elm, customSettings) {
+  var jsMultiCardCarousel = elm;
+  var carouselOuter = jsMultiCardCarousel.closest(".carousel-outer");
+  var jsMultiCardCarouselPrv = carouselOuter.find(".jsCarouselPrv");
+  var jsMultiCardCarouselNxt = carouselOuter.find(".jsCarouselNxt");
+  var isMultiCardCarouselSingle = jsMultiCardCarousel.children().length === 1;
+  var dataSettings = jsMultiCardCarousel.data();
+  var defaultSettings = {
+    stagePadding: 0,
+    margin: 0,
+    loop: !isMultiCardCarouselSingle,
+    mouseDrag: !isMultiCardCarouselSingle,
+    touchDrag: !isMultiCardCarouselSingle,
+    pullDrag: !isMultiCardCarouselSingle,
+    nav: false,
+    dots: false,
+    smartSpeed: 500,
+    // autoplay: true,
+    autoplayTimeout: 4000,
+    autoplayHoverPause: true,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      710: {
+        items: 2,
+      }
+    },
+  };
+  var settings = Object.assign(defaultSettings, customSettings, dataSettings);
+
+  var carousel = jsMultiCardCarousel.owlCarousel(settings);
+  if (!isMultiCardCarouselSingle) {
+    if (jsMultiCardCarouselPrv) {
+      jsMultiCardCarouselPrv.on("click", function () {
+        carouselOuter.find(jsMultiCardCarousel).trigger("prev.owl.carousel");
+      });
+    }
+    if (jsMultiCardCarouselNxt) {
+      jsMultiCardCarouselNxt.on("click", function () {
+        carouselOuter.find(jsMultiCardCarousel).trigger("next.owl.carousel");
+      });
+    }
+  }
+  if (isMultiCardCarouselSingle) {
+    jsMultiCardCarouselPrv.css({ display: "none" });
+    jsMultiCardCarouselNxt.css({ display: "none" });
+  }
+  return carousel;
+}
+
+
 // if ($(".jsProductCarousel").length > 0) {
 //   $(".jsProductCarousel").each(function () {
 //     var jsProductCarousel = $(this);
@@ -51,92 +142,3 @@ if ($(".jsMultiCardCarousel").length > 0) {
 //     }
 //   });
 // }
-
-function setItemCarousel(elm) {
-  var jsItemCarousel = elm;
-  var carouselOuter = jsItemCarousel.closest(".carousel-outer");
-  var jsItemCarouselPrv = carouselOuter.find(".jsCarouselPrv");
-  var jsItemCarouselNxt = carouselOuter.find(".jsCarouselNxt");
-  var isItemCarouselSingle = jsItemCarousel.children().length === 1;
-  var dataSettings = jsItemCarousel.data();
-  var defaultSettings = {
-    stagePadding: 0,
-    items: 1,
-    margin: 10,
-    loop: !isItemCarouselSingle,
-    mouseDrag: !isItemCarouselSingle,
-    touchDrag: !isItemCarouselSingle,
-    pullDrag: !isItemCarouselSingle,
-    nav: false,
-    dots: false,
-  };
-  var settings = Object.assign(defaultSettings, dataSettings);
-  if (!isItemCarouselSingle) {
-    if (jsItemCarouselPrv) {
-      jsItemCarouselPrv.on("click", function () {
-        carouselOuter.find(jsItemCarousel).trigger("prev.owl.carousel");
-      });
-    }
-    if (jsItemCarouselNxt) {
-      jsItemCarouselNxt.on("click", function () {
-        carouselOuter.find(jsItemCarousel).trigger("next.owl.carousel");
-      });
-    }
-  }
-  if (isItemCarouselSingle) {
-    jsItemCarouselPrv.css({ display: "none" });
-    jsItemCarouselNxt.css({ display: "none" });
-  }
-  return jsItemCarousel.owlCarousel(settings);
-}
-
-function setMultiCardCarousel(elm) {
-  var jsMultiCardCarousel = elm;
-  var carouselOuter = jsMultiCardCarousel.closest(".carousel-outer");
-  var jsMultiCardCarouselPrv = carouselOuter.find(".jsCarouselPrv");
-  var jsMultiCardCarouselNxt = carouselOuter.find(".jsCarouselNxt");
-  var isMultiCardCarouselSingle = jsMultiCardCarousel.children().length === 1;
-  var dataSettings = jsMultiCardCarousel.data();
-  var defaultSettings = {
-    stagePadding: 0,
-    margin: 0,
-    loop: !isMultiCardCarouselSingle,
-    mouseDrag: !isMultiCardCarouselSingle,
-    touchDrag: !isMultiCardCarouselSingle,
-    pullDrag: !isMultiCardCarouselSingle,
-    nav: false,
-    dots: false,
-    smartSpeed: 500,
-    // autoplay: true,
-    autoplayTimeout: 4000,
-    autoplayHoverPause: true,
-    responsive: {
-      0: {
-        items: 1,
-      },
-      710: {
-        items: 2,
-      }
-    },
-  };
-  var settings = Object.assign(defaultSettings, dataSettings);
-
-  var carousel = jsMultiCardCarousel.owlCarousel(settings);
-  if (!isMultiCardCarouselSingle) {
-    if (jsMultiCardCarouselPrv) {
-      jsMultiCardCarouselPrv.on("click", function () {
-        carouselOuter.find(jsMultiCardCarousel).trigger("prev.owl.carousel");
-      });
-    }
-    if (jsMultiCardCarouselNxt) {
-      jsMultiCardCarouselNxt.on("click", function () {
-        carouselOuter.find(jsMultiCardCarousel).trigger("next.owl.carousel");
-      });
-    }
-  }
-  if (isMultiCardCarouselSingle) {
-    jsMultiCardCarouselPrv.css({ display: "none" });
-    jsMultiCardCarouselNxt.css({ display: "none" });
-  }
-  return carousel;
-}

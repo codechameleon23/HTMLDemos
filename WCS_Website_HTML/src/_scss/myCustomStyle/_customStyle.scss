@@ -13,11 +13,12 @@ h3, h4, h5, h6 {
 }
 
 .link {
-  // text-decoration: none;
+  text-decoration: none;
   display: inline-block;
-
+  border-bottom: 1px solid transparent;
+  transition: $transition;
   &:hover {
-    font-weight: 700;
+    border-color: inherit;
   }
 
   &.primary {
@@ -180,65 +181,59 @@ h3, h4, h5, h6 {
 }
 
 
+.theme-secondary {
+  &.owl-theme {
+    .owl-dots .owl-dot span {
+      background: $color-grey;
+    }
+    .owl-dots .owl-dot.active span,
+    .owl-dots .owl-dot:hover span {
+      background: $color-secondary;
+    }
+  }
+}
 
-// Custom Select dropdown
-// .select-hidden {
-//   display: none;
-//   visibility: hidden;
-//   padding-right: 10px;
-// }
-// .custom-select {
-//   &-wrapper {
-//     cursor: pointer;
-//     display: inline-block;
-//     position: relative;
-//     // color: inherit;
-//     width: 100%;
-//     height: auto;
-//   }
-//   &-styled {
-//     &:after {
-//       transform-origin: center;
-//       transition: $transition;
-//     }
-//     &:active,
-//     &.active {
-//       box-shadow: $shadow_md;
-//       &:after {
-//         transform: rotate(-225deg);
-//       }
-//     }
-//   }
-//   &-options {
-//     display: none;
-//     position: absolute;
-//     top: 100%;
-//     right: 0;
-//     left: 0;
-//     z-index: 999;
-//     margin: 0;
-//     padding: 0;
-//     list-style: none;
-//     background-color: $color-white;
-//     box-shadow: $shadow_lg;
-//     li {
-//       color: inherit;
-//       margin: 0;
-//       padding: 8px 0;
-//       text-indent: 15px;
-//       // border-top: $color-light;
-//       transition: $transition;
-//       &:hover {
-//         // background: $color-light;
-//         color: $color-primary;
-//       }
-//       &.is-selected {
-//         color: $color-white;
-//         background: $color-primary;
-//       }
-//       &[rel="hide"] {
-//         display: none;
-//       }
-//     }
-//   }
-// }
+.accordion-wrapper .accordion.is-open > .accordion-label .toggle-sign {
+  transform: rotate(-45deg);
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.1), (-webkit-min-device-pixel-ratio: 1.09375), (min-resolution: 105dpi), (min-resolution: 1.1dppx)
+{
+    .pswp--svg .pswp__button,
+    .pswp--svg .pswp__button--arrow--left:before,
+    .pswp--svg .pswp__button--arrow--right:before
+    {
+        background-image: url(../images/default-skin.png);
+    }
+}
+
+.pswp__caption__center
+{
+    max-width: unset;
+}
+
+.imageSwipeGallery:after
+{
+    font-size: 15px !important;
+
+    position: absolute;
+    z-index: 9999 !important;
+    bottom: 0;
+    left: 50%;
+
+    display: block;
+
+    content: 'Click images for more detail';
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    white-space: nowrap;
+    pointer-events: none; 
+
+    color: #000 !important;
+    background-color: rgba(255, 255, 255, .65);
+}
+
+.imageSwipeGallery > li img {
+  cursor: zoom-in;
+}

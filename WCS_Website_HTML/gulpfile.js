@@ -60,7 +60,7 @@ const PROJECT_JS_LIST = [
   // ROOT_JS_PATH+'/moment.min.js',
   // ROOT_JS_PATH+'/jquery.inview.js',
   // ROOT_JS_PATH+'/light-slider.min.js',
-  // ROOT_JS_PATH+'/photo-swipe.min.js',
+  ROOT_JS_PATH+'/photo-swipe.min.js',
 
   SRC_JS_PATH+'/_commonFunc.js',
   // SRC_JS_PATH+'/_snazzymaps.color.styles.js',
@@ -77,7 +77,7 @@ const PROJECT_JS_LIST = [
   // SRC_JS_PATH+'/_popup.js',
   // SRC_JS_PATH+'/_magnificPopup.js',
   SRC_JS_PATH+'/_aos.js',
-  // SRC_JS_PATH+'/_accordion.js',
+  SRC_JS_PATH+'/_accordion.js',
   // SRC_JS_PATH+'/_galleryFilter.js',
   // SRC_JS_PATH+'/_tableStackedRows.js',
   // SRC_JS_PATH+'/_inView.js',
@@ -86,7 +86,7 @@ const PROJECT_JS_LIST = [
   // SRC_JS_PATH+'/_customNumInput.js',
   // SRC_JS_PATH+'/_simpleSelectDropdownEmptyStateajs',
   // SRC_JS_PATH+'/_activeNavlinkOnScroll.js',
-  // SRC_JS_PATH+'/_customScript.js',
+  SRC_JS_PATH+'/_customScript.js',
   SRC_JS_PATH+'/_docReadyEnds.js',
   // SRC_JS_PATH+'/_productSlider.js',
   SRC_JS_PATH+'/_iphonePageHack.js',
@@ -98,7 +98,16 @@ const PROJECT_JS_LIST = [
 // ]
 
 const PROJECT_PAGES_LIST = [
+  './src/all-pages.html',
   './src/index.html',
+  './src/how-it-works.html',
+  './src/courses.html',
+  './src/course-details.html',
+  './src/gallery.html',
+  './src/showcase.html',
+  './src/about.html',
+  './src/contact.html',
+  './src/flexibuider.html',
 ]
 
 function CSS_OPERATION() {
