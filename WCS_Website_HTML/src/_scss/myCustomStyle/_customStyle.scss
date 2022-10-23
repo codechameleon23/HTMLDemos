@@ -181,14 +181,27 @@ h3, h4, h5, h6 {
 }
 
 
-.theme-secondary {
-  &.owl-theme {
-    .owl-dots .owl-dot span {
-      background: $color-grey;
+.theme {
+  &-primary {
+    &.owl-theme {
+      .owl-dots .owl-dot span {
+        background: $color-grey;
+      }
+      .owl-dots .owl-dot.active span,
+      .owl-dots .owl-dot:hover span {
+        background: $color-primary;
+      }
     }
-    .owl-dots .owl-dot.active span,
-    .owl-dots .owl-dot:hover span {
-      background: $color-secondary;
+  }
+  &-secondary {
+    &.owl-theme {
+      .owl-dots .owl-dot span {
+        background: $color-grey;
+      }
+      .owl-dots .owl-dot.active span,
+      .owl-dots .owl-dot:hover span {
+        background: $color-secondary;
+      }
     }
   }
 }
@@ -236,4 +249,13 @@ h3, h4, h5, h6 {
 
 .imageSwipeGallery > li img {
   cursor: zoom-in;
+}
+
+.flip-x {
+  transform: scale(-1);
+}
+
+.hero-banner {
+  height: 100vh;
+  max-height: 59.4rem;
 }
