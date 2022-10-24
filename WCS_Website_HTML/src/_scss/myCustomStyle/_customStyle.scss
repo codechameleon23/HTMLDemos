@@ -268,3 +268,31 @@ h3, h4, h5, h6 {
     }
   }
 }
+
+@media (max-width: $bp_lg) {
+  .navbar ul > li.is-active > a, 
+  .navbar ul > li:hover > a {
+      color: inherit;
+  }
+  .navbar ul > li > a:after {
+    top: calc(100% - 0.8rem);
+  }
+}
+
+.navbar ul > li {
+  & > a:after {
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 0;
+    height: 1rem;
+    background-image: url('../images/nav-active-primary.svg');
+  }
+
+  &.active-secondary > a:after {
+    background-image: url('../images/nav-active-secondary.svg');
+  }
+  &.active-tertiary > a:after {
+    background-image: url('../images/nav-active-tertiary.svg');
+  }
+}

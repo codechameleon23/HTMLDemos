@@ -7028,6 +7028,40 @@ h6
     }
 }
 
+@media (max-width: 992px)
+{
+    .navbar ul > li.is-active > a,
+    .navbar ul > li:hover > a
+    {
+        color: inherit;
+    }
+    .navbar ul > li > a:after
+    {
+        top: calc(100% - .8rem);
+    }
+}
+
+.navbar ul > li > a:after
+{
+    height: 1rem;
+
+    border: 0;
+    background-image: url('../images/nav-active-primary.svg'); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+}
+
+.navbar ul > li.active-secondary > a:after
+{
+    background-image: url('../images/nav-active-secondary.svg');
+}
+
+.navbar ul > li.active-tertiary > a:after
+{
+    background-image: url('../images/nav-active-tertiary.svg');
+}
+
 /* Font Family classes */
 .f-family-primary
 {
