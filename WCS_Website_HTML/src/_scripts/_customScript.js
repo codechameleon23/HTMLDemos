@@ -63,7 +63,6 @@ if ($('.imageSwipeGallery').length){//if element exists
 
     var openPhotoSwipe = function (clickedIndex) {
       var pswpElement = document.querySelectorAll('.pswp')[0];
-      // console.log('galleryItems', galleryItems);
       var items = galleryItems;
       var options = {
           index: clickedIndex || 0,
@@ -80,10 +79,6 @@ if ($('.imageSwipeGallery').length){//if element exists
       openPhotoSwipe($(this).index());
     });
 }
-
-// if($(".doubleTapActive").length > 0){
-//   $(".doubleTapActive").doubleTapToGo();
-// }
 
 if($(".hover-tap").length > 0){
   $(".hover-tap").on("click", function(){
