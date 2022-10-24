@@ -81,6 +81,13 @@ if ($('.imageSwipeGallery').length){//if element exists
     });
 }
 
-if($(".doubleTapActive").length > 0){
-  $(".doubleTapActive").doubleTapToGo();
+// if($(".doubleTapActive").length > 0){
+//   $(".doubleTapActive").doubleTapToGo();
+// }
+
+if($(".hover-tap").length > 0){
+  $(".hover-tap").on("click", function(){
+    $(".hover-tap").removeClass('hovered-tapped');
+    $(this).addClass('hovered-tapped');
+  }); 
 }
