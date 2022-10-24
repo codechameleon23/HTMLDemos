@@ -80,3 +80,7 @@ if ($('.imageSwipeGallery').length){//if element exists
       openPhotoSwipe($(this).index());
     });
 }
+
+if($(".doubleTapActive").length > 0){
+  $(".doubleTapActive").doubleTapToGo();
+}
