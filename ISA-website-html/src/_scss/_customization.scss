@@ -377,8 +377,9 @@ $paddings: (
   $paddingsClassPrefix "250" 25.0rem,
 
   $paddingsClassPrefix "header" $header_sm,
-  $paddingsClassPrefix "header-md" $header_md,
   $paddingsClassPrefix "header-sm" $header_sm,
+  $paddingsClassPrefix "header-md" $header_md,
+  $paddingsClassPrefix "header-lg" $header_lg,
 
   $paddingsClassPrefix "0" 0,
 );
@@ -454,8 +455,9 @@ $margins: (
   $marginsClassPrefix "250" 15.0rem,
 
   $marginsClassPrefix "header" $header_sm,
-  $marginsClassPrefix "header-md" $header_md,
   $marginsClassPrefix "header-sm" $header_sm,
+  $marginsClassPrefix "header-md" $header_md,
+  $marginsClassPrefix "header-lg" $header_lg,
 
   $marginsClassPrefix "0" 0,
 );
@@ -530,20 +532,22 @@ $negativeMargin: (
   $negativeMarginClassPrefix "250" 15.0rem,
 
   $negativeMarginClassPrefix "header" $header_sm,
-  $negativeMarginClassPrefix "header-md" $header_md,
   $negativeMarginClassPrefix "header-sm" $header_sm,
+  $negativeMarginClassPrefix "header-md" $header_md,
+  $negativeMarginClassPrefix "header-lg" $header_lg,
 
   $negativeMarginClassPrefix "0" 0,
 );
 
-$shadow: 0 1px 3px 0 rgba($color-secondary, 0.10), 0 1px 2px 0 rgba($color-secondary, 0.06);
+$shadow: 0.3rem 0.3rem 0.4rem -0.1rem $color-black;
 $shadow_md: 0 4px 16px -1px rgba($color-secondary, 0.15), 0 2px 2px -1px rgba($color-secondary, 0.06);
 $shadow_lg: 0 6px 12px 6px rgba(darken($color-secondary, 50), 0.15);
 $shadow_inner: inset 0 1px 3px 0 rgba($color-secondary, 0.10), inset  0 1px 2px 0 rgba($color-secondary, 0.06);
 // $shadow_outline: inset 0 2px 4px 0 rgba($color-secondary, 0.06);
+$text-shadow: 2px 2px 6px $color-secondary-dark;
 
 $shadows: (
-  // $shadowsClassPrefix null $shadow 'states',
+  $shadowsClassPrefix null $shadow 'states',
   $shadowsClassPrefix "md" $shadow_md 'states',
   $shadowsClassPrefix "lg" $shadow_lg 'states',
   //$shadowsClassPrefix "xl" $shadow_xl 'states',
@@ -569,6 +573,7 @@ $aspectRatios: (
   $aspectRatiosClassNamePrefix "illustrated-map" 1600 1122,
   $aspectRatiosClassNamePrefix "isa-arrow" 150 80.25,
   $aspectRatiosClassNamePrefix "isa-arrow-hr" 80.25 150,
+  $aspectRatiosClassNamePrefix "play-icon" 46.8 52,
   $aspectRatiosClassNamePrefix "none" 1 0,
 );
 

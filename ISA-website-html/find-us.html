@@ -23,7 +23,7 @@
 
 <body class="jsNavbarToggle is-close flex-col pos-relative">
   <!-- Header -->
-  <header class="header w-full flex-col z-100 pos-absolute bg-white shadow-lg lg:shadow-none">
+  <header class="header w-full flex-col z-100 pos-fixed pin-t pin-x bg-white shadow-lg lg:shadow-none">
     <div class="container md:container-md lg:container-lg xl:container-xl xxl:container-xxl mx-auto lg:pos-relative">
       <div class="flex-row lg:align-end justify-space-between py-30">
         <a href="index.html" title="IS Accountancy" class="brand-logo d-inline-block ratio-logo icon-logo-main-sm md:icon-logo-main-md xl:icon-logo-main">
@@ -31,7 +31,7 @@
         </a>
         <div class="lg:pos-absolute pin-t pin-r xl:mt-30">
           <div class="d-hidden md:d-inline-block">
-            <a href="#" class="button f-weight-semiBold bg-primary f-color-white py-8 xl:py-13 px-30">Get in touch</a>
+            <a href="#" class="button f-weight-semiBold bg-primary f-color-white hover:f-color-secondary py-8 xl:py-13 px-30">Get in touch</a>
           </div>
           <div class="icon icon-32 navbar-toggle d-inline-flex lg:d-hidden z-50 rounded transition-all ml-auto">
             <span class="p-2 pos-absolute pin">
@@ -91,8 +91,15 @@
               </div>
               <div class="drop-menu-holder f-weight-light f-size-28 xl:f-size-48">
                 <ul class="drop-menu bg-primary f-color-white p-20 list-reset">
-                  <li class="f-size-20 lg:f-size-30 mb-12">
-                    <span>services</span>
+                  <li class="go-back f-size-20 lg:f-size-30 mb-12">
+                    <div class="flex-row align-center">
+                      <i class="icon icon-24 lg:d-hidden ratio-1x1 mr-8 flex-none f-color-inherit d-inline-block">
+                        <svg class="pos-absolute pin" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                          <path d="m11 17-5-5 5-5M18 17l-5-5 5-5" />
+                        </svg>
+                      </i>
+                      <span>services</span>
+                    </div>
                   </li>
                   <li class="">
                     <div class="nav-link-group lg:hover:f-color-secondary transition-all-1">
@@ -183,13 +190,13 @@
     <section class="pos-relative pb-90 pt-40" data-aos="fade-in" data-aos-delay="200">
       <div class="container md:container-md lg:container-lg mx-auto">
         <div class="photoSwipeFrame ratio-illustrated-map zoom-in pos-relative">
-          <img class="photoSwipeImage pos-absolute pin w-full h-full" src="./images/ISA_ILLUSTRATED_MAP-1.svg" data-src="./images/ISA_ILLUSTRATED_MAP-large.jpg" />
+          <img class="photoSwipeImage pos-absolute pin w-full h-full" src="./images/ISA_ILLUSTRATED_MAP-1.svg" data-index="1" data-src="./images/ISA_ILLUSTRATED_MAP-large.jpg" />
         </div>
       </div>
       <div id="map-canvas" class="d-hidden map pos-absolute pin h-full w-full flex-stretch z-10"></div>
       <div class="flex-row justify-center pos-absolute pin-b pin-x z-10">
-        <button class="illustaredMap button bg-primary f-color-white px-20 py-20 transition-all is-active">Illustrated Map</button>
-        <button class="googleMap button bg-secondary-light px-20 py-20 transition-all">Google Map</button>
+        <button class="illustaredMap f-weight-semiBold f-spacing-sm bg-primary f-color-white px-20 py-20 transition-all is-active cursor-pointer">Illustrated Map</button>
+        <button class="googleMap f-weight-semiBold f-spacing-sm bg-secondary-light px-20 py-20 transition-all cursor-pointer">Google Map</button>
       </div>
     </section>
     <!-- Get in touch -->
@@ -197,8 +204,8 @@
       <div class="container sm:container-sm lg:container-article xl:container-xl xxl:container-xxl mx-auto">
         <div class="flex-row flex-wrap">
           <div class="col-12 lg:col-6 lg:border-r-2 lg:pr-40 xl:pr-58 js_media_Gallery_Popup" data-aos="fade-in" data-aos-delay="200">
-            <div class="photoSwipeFrame">
-              <img class="photoSwipeImage" src="./images/map-artwork-@2x.jpg" data-src="./images/map-artwork-@2x.jpg" />
+            <div class="photoSwipeFrame find-up-map">
+              <img class="photoSwipeImage" src="./images/ISA-Illustrated-map-salisbury-map-find-us-here-rgb-oct22-small.jpg" data-index="2" data-src="./images/ISA-Illustrated-map-salisbury-map-find-us-here-rgb-oct22.jpg" />
             </div>
           </div>
           <div class="col-12 lg:col-6 pt-40 lg:pt-0 lg:pl-40 xl:pl-90" data-aos="fade-up" data-aos-delay="400">
@@ -209,8 +216,8 @@
                 <a href="mail:info@isaccountancy.co.uk" class="d-inline-block no-underline hover:f-color-secondary transition-all"><b>e:</b> info@isaccountancy.co.uk</a>
               </div>
               <div class="flex-row f-size-18">
-                <a href="mail:info@isaccountancy.co.uk" class="button f-color-white hover:bg-secondary border hover:border-secondary py-24 px-30 mr-20">Email us</a>
-                <a href="#" class="button f-color-white hover:bg-secondary border hover:border-secondary py-24 px-30 mr-20">Book a call</a>
+                <a href="mail:info@isaccountancy.co.uk" class="button f-color-white border hover:border-white hover:f-color-secondary py-24 px-30 mr-20">Email us</a>
+                <a href="#" class="button f-color-white border hover:border-white hover:f-color-secondary py-24 px-30 mr-20">Book a call</a>
               </div>
               <div class="text-wrap-xs">
                 <h3 class="f-weight-extraBold">Registered Office:</h3>
@@ -261,14 +268,14 @@
                 <span class="d-inline-block tick f-color-primary">
                   <span class="border border-white bg-white border-2 rounded"></span>
                 </span>
-                <span class="related-text f-color-light hover:f-color-primary">
+                <span class="related-text f-color-light hover:f-color-primary transition-all">
                   <span class="f-color-light">I have read and agree to your</span>
-                  <a href="#" class="underline f-color-inherit f-weight-inherit border-b border-transparent transition-all">Terms and Conditions Policy</a>
+                  <a href="#" class="underline f-color-inherit f-weight-inherit border-b border-transparent">Terms and Conditions Policy</a>
                 </span>
               </label>
             </div>
             <div class="col-12 p-6 mt-10">
-              <button class="button f-weight-semiBold bg-primary f-color-white py-24 px-30">Submit details</button>
+              <button class="button f-weight-semiBold bg-primary f-color-white hover:f-color-secondary py-24 px-30">Submit details</button>
             </div>
           </form>
         </div>
@@ -326,7 +333,7 @@
       <div class="flex-row flex-wrap lg:justify-space-between -m-20">
         <div class="col-12 lg:col-5 p-20 text-left">
           <div class="flex-col lg:flex-row flex-wrap align-center text-wrap text-center lg:text-left justify-center lg:justify-start">
-            <a href="index.html" title="IS Accountancy" class="d-inline-block ratio-1x1 icon-logo-sm xl:icon-logo-md">
+            <a href="index.html" title="IS Accountancy" class="brand-logo ratio-1x1 icon-logo-sm xl:icon-logo-md">
               <img class="pos-absolute pin object-contain" src="./images/isa-logo-white.svg" alt="IS Accountancy" />
             </a>
             <div class="text-wrap-xs f-size-16 xl:f-size-22 lg:pl-20">
@@ -337,21 +344,21 @@
         </div>
         <div class="col-12 lg:col-5 p-20 text-center xs:text-right">
           <div class="text-wrap text-center lg:text-right">
-            <h2 class="xl:f-size-24">Chartered Accountants + Your Business Advisors</h2>
-            <a href="#" class="button f-size-16 xl:f-size-22 f-weight-semiBold bg-primary f-color-white py-20 px-20">Start your accounting journey</a>
+            <h2 class="xl:f-size-24">Chartered Accountants<br class="sm:d-hidden" /> + Your Business Advisors</h2>
+            <a href="#" class="button f-size-16 xl:f-size-22 f-weight-semiBold bg-primary f-color-white hover:f-color-secondary py-20 px-20">Start your accounting journey</a>
           </div>
         </div>
       </div>
       <div class="flex-row lg:flex-row-reverse flex-wrap justify-center lg:justify-space-between -m-10 xl:-m-20">
         <div class="col-12 sm:col-10 lg:col-5 p-20 text-center lg:text-right mt-auto">
-          <div class="flex-row flex-wrap align-end -m-10">
-            <div class="col-4 p-10">
+          <div class="flex-row flex-wrap align-end p-10 sm:-m-16 lg:-m-10">
+            <div class="col-4 p-10 sm:p-16 lg:p-10">
               <img src="./images/b1g1-logo.png" />
             </div>
-            <div class="col-4 p-10">
+            <div class="col-4 p-10 sm:p-16 lg:p-10">
               <img src="./images/icrew-logo.png" />
             </div>
-            <div class="col-4 p-10">
+            <div class="col-4 p-10 sm:p-16 lg:p-10">
               <img src="./images/XERO SILVER PARTNER LOGOS RGB colour for light or white bkgds-01.svg" />
             </div>
           </div>
@@ -365,9 +372,9 @@
               <li class="p-8"><a href="#" class="no-underline d-inline-block hover:f-color-primary transition-all">Terms</a></li>
               <li class="p-8"><a href="#" class="no-underline d-inline-block hover:f-color-primary transition-all">Website Design</a></li>
             </ul>
-            <p>IS Accountancy is a trading name of Ian Sheekey Accountancy Limited<br />
+            <p>IS Accountancy is a trading name of<br class="sm:d-hidden" /> Ian Sheekey Accountancy Limited<br />
               Registered company number 12703862 in England & Wales<br />
-              Registered Office: Suite 204, Warner House, 123 Castle Street, Salisbury, SP1 3TB<br />
+              Registered Office: Suite 204, Warner House,<br class="sm:d-hidden" /> 123 Castle Street, Salisbury, SP1 3TB<br />
               A member of the ICAEW Practice Assurance Scheme
             </p>
             <p>&copy; 2022 Ian Sheekey Accountancy Limited</p>
@@ -391,9 +398,9 @@
     zoom: 14,
   });
 
-  // var imageGallery;
+  var imageGallery;
   window.onload = function() {
-    // imageGallery = $('.photoSwipeFrame');
+    imageGallery = $('.photoSwipeFrame');
     var galleryItems = [];
     $('.photoSwipeFrame .photoSwipeImage').each(function() {
       var childImgSrcPath = $(this).attr("data-src");
@@ -411,11 +418,13 @@
       };
       newImg.src = item.src;
     });
-    var openPhotoSwipe = function() {
+    var openPhotoSwipe = function(clickedIndex) {
       var pswpElement = document.querySelectorAll('.pswp')[0];
       var items = galleryItems;
+      var openIndex = clickedIndex ? clickedIndex - 1 : (parseInt(imageGallery.getCurrentSlideCount() - 1) || 0);
+      console.log('openIndex', openIndex);
       var options = {
-        index: 0,
+        index: openIndex,
         shareEl: false,
         clickToCloseNonZoomable: false,
         history: false,
@@ -426,7 +435,7 @@
     };
 
     $('.photoSwipeFrame .photoSwipeImage').on('click', function() {
-      openPhotoSwipe();
+      openPhotoSwipe($(this).data('index'));
     });
   }
 </script>
