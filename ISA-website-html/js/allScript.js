@@ -547,10 +547,11 @@ function setMultiCardCarousel(elm) {
     pullDrag: !isMultiCardCarouselSingle,
     nav: false,
     dots: false,
-    smartSpeed: 500,
+    fluidSpeed: 5000,
     autoplay: true,
     autoplayTimeout: 4000,
     autoplayHoverPause: true,
+    slideSpeed: 1000,
     responsive: {
       0: {
       //   items: 1,
