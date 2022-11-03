@@ -100153,7 +100153,13 @@ body[data-aos-easing='ease-in-out'] [data-aos],
         position: absolute;
         top: 100%; 
         left: 0;
+    }
+}
 
+@media (min-width: 1200px)
+{
+    .navbar > ul > li > .drop-menu-holder
+    {
         width: calc(50vw + 1rem);
     }
 }
@@ -100412,28 +100418,21 @@ h2
 
 .hero-banner
 {
-    height: calc(100vh - 12.216rem);
-    max-height: 74.5rem;
+    height: 100vh;
+    max-height: calc(100vh - 12.216rem);
 }
 @media (min-width: 710px)
 {
     .hero-banner
     {
-        height: calc(100vh - 13.252rem);
-    }
-}
-@media (min-width: 992px)
-{
-    .hero-banner
-    {
-        height: calc(100vh - 16.022rem);
+        max-height: calc(100vh - 13.252rem);
     }
 }
 @media (min-width: 1200px)
 {
     .hero-banner
     {
-        min-height: 74.5rem;
+        max-height: calc(100vh - 16.022rem);
     }
 }
 

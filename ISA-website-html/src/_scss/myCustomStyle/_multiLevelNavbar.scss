@@ -97,6 +97,7 @@
       flex: auto;
       overflow-x: hidden;
       overflow-y: auto;
+      // margin: 0 0 1.5rem 1.5rem;
       // @media (min-width: $bp_lg) {
       //    max-width: 50vw;
       // }
@@ -159,8 +160,14 @@
    }
    .navbar > ul > li > .drop-menu-holder {
       position: absolute;
-      width: calc(50vw + 1rem);
+      // width: calc(50vw + 1rem);
       left: 0;
       top: 100%;
+   }
+}
+
+@media (min-width: $bp_xl) {
+   .navbar > ul > li > .drop-menu-holder {
+      width: calc(50vw + 1rem);
    }
 }

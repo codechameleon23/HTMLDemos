@@ -116,17 +116,18 @@ h2 {
 }
 
 .hero-banner {
-  height: calc(100vh - #{$header_sm});
-  max-height: 74.5rem;
+  height: 100vh;
+  max-height: calc(100vh - #{$header_sm});
+  // max-height: 74.5rem;
   @media (min-width: $bp_md) {
-    height: calc(100vh - #{$header_md});
-  }
-  @media (min-width: $bp_lg) {
-    height: calc(100vh - #{$header_lg });
+    max-height: calc(100vh - #{$header_md});
   }
   @media (min-width: $bp_xl) {
-    min-height: 74.5rem;
+    max-height: calc(100vh - #{$header_lg});
   }
+  // @media (min-width: $bp_xl) {
+  //   min-height: 74.5rem;
+  // }
 }
 
 .jsItemCarousel {

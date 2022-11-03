@@ -46,8 +46,8 @@
     var closeOthers = item.data('close-others');
     var seturl = item.data('seturl');
     var scrollAdjust = item.data('scroll-adjust');
-
-    // var tabNo = attr.split('_')[1];
+    
+    var tabNo = attr.split('_')[1];
     var attrname = attr.split('_')[0];
 
     var paramVal = url_obj[attrname];
@@ -81,7 +81,8 @@
 
       if (scrollAdjust && getViewportWidth() < 991) {
         setTimeout(function () {
-          var targetTabOffset = targetTab.last().offset().top;
+          var headerHeight = $('header').outerHeight(true);
+          var targetTabOffset = targetTab.last().offset().top - headerHeight;
           $("html, body").animate({
             scrollTop: targetTabOffset
           }, 'slow');
