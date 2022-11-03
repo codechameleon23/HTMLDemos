@@ -113,7 +113,18 @@
       }
    }
    .drop-menu-holder li.is-active {
-      color: $color-secondary; 
+      > .nav-link-group > .nav-link {
+         color: $color-secondary; 
+      }
+      > .sub-nav-list > li {
+         color: $color-white;
+      }
+      > .sub-nav-list > li {
+         &:hover,
+         &.is-active {
+            color: $color-secondary;
+         }
+      }
    }
 }
 

@@ -100077,7 +100077,18 @@ body[data-aos-easing='ease-in-out'] [data-aos],
     }
 }
 
-.navbar li .drop-menu-holder li.is-active
+.navbar li .drop-menu-holder li.is-active > .nav-link-group > .nav-link
+{
+    color: #00495e;
+}
+
+.navbar li .drop-menu-holder li.is-active > .sub-nav-list > li
+{
+    color: #fff;
+}
+
+.navbar li .drop-menu-holder li.is-active > .sub-nav-list > li:hover,
+.navbar li .drop-menu-holder li.is-active > .sub-nav-list > li.is-active
 {
     color: #00495e;
 }
@@ -100784,4 +100795,23 @@ body > main
 .sub-nav-list ::marker
 {
     color: inherit;
+}
+
+.plane-position
+{
+    margin-top: calc(12.216rem + 12.5%);
+}
+@media (min-width: 710px)
+{
+    .plane-position
+    {
+        margin-top: calc(13.252rem + 12.5%);
+    }
+}
+@media (min-width: 992px)
+{
+    .plane-position
+    {
+        margin-top: calc(16.022rem + 12.5%);
+    }
 }
