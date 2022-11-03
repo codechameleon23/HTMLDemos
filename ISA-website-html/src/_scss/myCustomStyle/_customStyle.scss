@@ -411,3 +411,20 @@ body > main {
     margin-top: calc(#{$header_lg} + #{$header_lg});
   }
 }
+
+.text-link {
+  font-weight: 600;
+  transition: $transition;
+  &, &.secondary {
+    text-decoration-color: $color-secondary;
+    &:hover {
+     color: $color-secondary; 
+    }
+  }
+  &, &.primary {
+    text-decoration-color: $color-primary;
+    &:hover {
+      color: $color-primary; 
+     }
+  }
+}
