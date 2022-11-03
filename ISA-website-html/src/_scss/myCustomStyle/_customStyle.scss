@@ -400,11 +400,14 @@ body > main {
 }
 
 .plane-position {
-  margin-top: calc(#{$header_sm} + 12.5%);
+  margin-top: calc(#{$header_sm} + #{$header_sm});
   @media (min-width: $bp_md) {
-    margin-top: calc(#{$header_md} + 12.5%);
+    margin-top: calc(#{$header_md} + #{$header_md});
   }
   @media (min-width: $bp_lg) {
-    margin-top: calc(#{$header_lg} + 12.5%);
+    margin-top: calc(#{$header_lg} + #{$header_lg / 2});
+  }
+  @media (min-width: $bp_xl) {
+    margin-top: calc(#{$header_lg} + #{$header_lg});
   }
 }
