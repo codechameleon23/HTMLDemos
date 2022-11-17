@@ -40,11 +40,11 @@ const SRC_SELECT_JS = SRC_JS_PATH+"/**/*.js";
 const SRC_SELECT_IMG = SRC_IMG_PATH+"/**/*.*";
 
 const PROJECT_JS_LIST = [
-  ROOT_JS_PATH+'/react/react.production.min.js',
-  ROOT_JS_PATH+'/react/react-dom.production.min.js',
+  // ROOT_JS_PATH+'/react/react.production.min.js',
+  // ROOT_JS_PATH+'/react/react-dom.production.min.js',
   // ROOT_JS_PATH+'/react/react-is.production.min.js',
   // ROOT_JS_PATH+'/react/styled-components.min.js',
-  ROOT_JS_PATH+'/react/babel.min.js',
+  // ROOT_JS_PATH+'/react/babel.min.js',
   ROOT_JS_PATH+'/jquery-3.3.1.min.js',
   ROOT_JS_PATH+'/magnific.popup.min.js',
   ROOT_JS_PATH+'/jquery.popupoverlay.js',
