@@ -415,17 +415,27 @@ body > main {
 
 .text-link {
   font-weight: 600;
-  transition: $transition;
+  &, & .icon {
+    transition: $transition-1;
+  }
   &, &.secondary {
     text-decoration-color: $color-secondary;
     &:hover {
-     color: $color-secondary; 
+      color: $color-secondary; 
+      .icon {
+        color: $color-secondary; 
+        box-shadow: $shadow;
+     }
     }
   }
   &, &.primary {
     text-decoration-color: $color-primary;
     &:hover {
       color: $color-primary; 
+      .icon {
+        color: $color-secondary; 
+        box-shadow: $shadow;
+      }
      }
   }
 }

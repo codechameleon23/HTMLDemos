@@ -100081,18 +100081,13 @@ body[data-aos-easing='ease-in-out'] [data-aos],
     }
 }
 
-.navbar li .drop-menu-holder li.is-active > .nav-link-group > .nav-link
-{
-    color: #00495e;
-}
-
-.navbar li .drop-menu-holder li.is-active > .sub-nav-list > li
+.navbar li .drop-menu-holder li > .sub-nav-list > li
 {
     color: #fff;
 }
 
-.navbar li .drop-menu-holder li.is-active > .sub-nav-list > li:hover,
-.navbar li .drop-menu-holder li.is-active > .sub-nav-list > li.is-active
+.navbar li .drop-menu-holder li > .sub-nav-list > li:hover,
+.navbar li .drop-menu-holder li > .sub-nav-list > li.is-active
 {
     color: #00495e;
 }
@@ -100829,9 +100824,12 @@ body > main
 .text-link
 {
     font-weight: 600;
-
-    -webkit-transition: all .35s 0s ease-in;
-            transition: all .35s 0s ease-in;
+}
+.text-link,
+.text-link .icon
+{
+    -webkit-transition: all .15s 0s ease-in;
+            transition: all .15s 0s ease-in;
 }
 .text-link,
 .text-link.secondary
@@ -100844,6 +100842,12 @@ body > main
 {
     color: #00495e;
 }
+.text-link:hover .icon,
+.text-link.secondary:hover .icon
+{
+    color: #00495e;
+    box-shadow: .3rem .3rem .4rem -.1rem #000;
+}
 .text-link,
 .text-link.primary
 {
@@ -100854,4 +100858,10 @@ body > main
 .text-link.primary:hover
 {
     color: #e99700;
+}
+.text-link:hover .icon,
+.text-link.primary:hover .icon
+{
+    color: #00495e;
+    box-shadow: .3rem .3rem .4rem -.1rem #000;
 }
