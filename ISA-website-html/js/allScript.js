@@ -953,6 +953,8 @@ function filterPanelOpen() {
 }
 
 var lastScrollTop = 0;
+var airplaneFixed = $('.airplane-fixed');
+var airplaneFixedTop = airplaneFixed.offset().top ;
 if (!isIE11) {
   $(window).on("scroll", function () {
     scroll = $(window).scrollTop();
@@ -966,6 +968,9 @@ if (!isIE11) {
       }
     }
     lastScrollTop = scroll;
+    airplaneFixed.css({
+      marginTop: scroll
+    })
   });
 }
 
