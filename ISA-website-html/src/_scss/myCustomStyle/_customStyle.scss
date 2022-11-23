@@ -453,3 +453,27 @@ body > main {
     }
   }
 }
+
+
+.when-shrink {
+  display: none;
+}
+.header-shrink {
+  @media (min-width: $bp_lg) {
+    .when-not-shrink {
+      display: none;
+    }
+    .when-shrink {
+      display: inline-block;
+    }
+  }
+
+  header .container > div {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  nav {
+    margin-bottom: 0;
+  }
+}
