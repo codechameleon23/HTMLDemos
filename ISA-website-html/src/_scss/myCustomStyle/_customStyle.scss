@@ -255,7 +255,9 @@ h2 {
 
 .bg-anim {
   animation: bg-anim-mobile 20s ease-in-out both infinite alternate;
+  // background-size: auto 100%;
   @media (min-width: $bp_lg) {
+    // background-size: 120% 120%;
     animation: bg-anim 20s ease-in-out both infinite alternate;
   }
 }
@@ -273,7 +275,7 @@ h2 {
 
 @keyframes bg-anim-mobile {
   0% {
-    background-size: auto 120%;
+    background-size: auto 102%;
     background-position: 10% 10%;
   }
   100% {
@@ -300,7 +302,10 @@ h2 {
 }
 
 .airplane-fixed {
-  width: 43.4rem;
+  width: 70%;
+  @media (min-width: $bp_sm) {
+    width: 43.4rem;
+  }
 }
 
 body > main {
@@ -411,7 +416,7 @@ body > main {
   // @media (min-width: $bp_xl) {
   //   margin-top: calc(#{$header_lg} + #{$header_lg});
   // }
- padding-top: calc(#{$header_sm});
+ padding-top: calc(#{$header_sm / 2});
   @media (min-width: $bp_md) {
     padding-top: calc(#{$header_md});
   }
@@ -423,12 +428,21 @@ body > main {
   }
 }
 
-.text-link {
-  font-weight: 600;
+.text-link, .text-link-group {
   &, & .icon {
     transition: $transition-1;
   }
-  &, &.secondary {
+  &, &.primary {
+    text-decoration-color: $color-primary;
+    &:hover {
+      color: $color-primary;
+      .icon {
+        color: $color-secondary; 
+        box-shadow: $shadow;
+      }
+     }
+  }
+  &.secondary {
     text-decoration-color: $color-secondary;
     &:hover {
       color: $color-secondary; 
@@ -437,15 +451,5 @@ body > main {
         box-shadow: $shadow;
      }
     }
-  }
-  &, &.primary {
-    text-decoration-color: $color-primary;
-    &:hover {
-      color: $color-primary; 
-      .icon {
-        color: $color-secondary; 
-        box-shadow: $shadow;
-      }
-     }
   }
 }
