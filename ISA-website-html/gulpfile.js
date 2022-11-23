@@ -137,7 +137,7 @@ function CSS_OPERATION() {
 function CSS_PURIFY() {
   return gulp
     .src(DEST_SELECT_CSS)
-    .pipe(purify([DEST_SELECT_JS, DEST_SELECT_HTML]))
+    // .pipe(purify([DEST_SELECT_JS, DEST_SELECT_HTML]))
     .pipe(cleanCSS({format: 'keep-breaks'}))
     // .pipe(beautify.css({
     //   indent_size: 2
