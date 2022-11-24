@@ -459,21 +459,20 @@ body > main {
   display: none;
 }
 .header-shrink {
-  @media (min-width: $bp_lg) {
-    .when-not-shrink {
-      display: none;
-    }
-    .when-shrink {
-      display: inline-block;
-    }
+  .when-not-shrink {
+    display: none;
   }
-
+  .when-shrink {
+    display: inline-block;
+  }
   header .container > div {
     padding-top: 0;
     padding-bottom: 0;
+    align-items: center;
   }
-
-  nav {
-    margin-bottom: 0;
+  @media (min-width: $bp_lg) {
+    nav {
+      margin-bottom: 0;
+    }
   }
 }
