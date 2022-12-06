@@ -305,6 +305,19 @@ h2 {
   width: 70%;
   @media (min-width: $bp_sm) {
     width: 43.4rem;
+
+    @media (min-width: $bp_lg) {
+      height: calc(100% - 20rem);
+      .plane-position {
+        &, .ratio-1x1 {
+          height: 100%;
+        }
+        .ratio-1x1 {
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+      }
+    }
   }
 }
 
@@ -426,6 +439,9 @@ body > main {
   // @media (min-width: $bp_xl) {
   //   padding-top: calc(#{$header_lg});
   // }
+
+
+
 }
 
 .text-link, .text-link-group {
